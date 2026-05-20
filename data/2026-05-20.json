@@ -1,0 +1,484 @@
+{
+  "date": "2026-05-20",
+  "papers": [
+    {
+      "id": "W7161568543",
+      "title": "Pesantren-Based Food Estate: Integrating Agrarian Reform, Islamic Principles, and Food Security in Indonesia",
+      "authors": [
+        "Ujang Maman",
+        "Achmad Tjachja Nugraha",
+        "Zulmaneri Manir",
+        "Iwan Aminuddin",
+        "Lilis Imamah Icdayati",
+        "Holil Nawawi",
+        "Gunawan Prayitno"
+      ],
+      "publishedAt": "2026-05-18T12:00:00.000Z",
+      "url": "https://doi.org/10.36956/rwae.v7i2.2781",
+      "pdfUrl": "https://journals.nasspublishing.com/index.php/rwae/article/download/2781/1347",
+      "categories": [
+        "openalex",
+        "Food security",
+        "Business",
+        "Corporate governance",
+        "Stewardship (theology)"
+      ],
+      "abstract": "Indonesia’s food estate policy was launched to mitigate the decline of agricultural land, address population growth, and enhance food self-sufficiency amid limited farmland capacity. However, the conventional model—dominated by corporate control—has often marginalized smallholders and reduced rural employment opportunities. This study proposes an alternative food estate model that broadens farmers’ access to land and promotes inclusive rural development through the involvement of pesantren (Islamic boarding schools) as institutional managers. Employing a mixed-methods approach that integrates literature review, in-depth interviews, and farmer surveys, the research investigates the feasibility of pesantren-based governance on redistributed state land. The model envisions state land allocation to pesantren, which then implement al-musaqoh (yield-sharing) partnerships with local farmers. Farmer perceptions were assessed using a Likert scale and analyzed through Importance–Performance Analysis (IPA). The findings reveal that pesantren possess strong potential to act as mediating institutions that combine moral legitimacy, social capital, and managerial capacity in food estate governance. Nonetheless, improvements remain necessary in pre-cultivation, cultivation, and support systems to ensure operational efficiency. By embedding Islamic principles of justice, cooperation, and stewardship within agrarian reform, this model bridges state agricultural policy with community-based religious institutions. The study contributes to the discourse on sustainable food governance by offering a faith-based institutional innovation that harmonizes productivity, equity, and cultural legitimacy.",
+      "summary": {
+        "gist": "本研究は、インドネシアにおける従来の企業主導型フードエステート政策が抱える課題に対し、イスラム寄宿学校「プサントレン」を基盤とした代替モデルを提案し、その実現可能性を検証したものである。プサントレンは、農地改革とイスラム原則を統合し、食料安全保障と包摂的な農村開発を促進する上で、強力な仲介機関としての潜在力を持つことを明らかにした。",
+        "novelty": "従来のフードエステート政策が中小農家を疎外してきた問題に対し、本研究はプサントレンを制度的管理者として組み込むことで、農地改革、イスラム原則、食料安全保障を統合する新たなモデルを提示した点に新規性がある。これは、国家の農業政策と地域社会に根差した宗教機関を結びつけ、生産性、公平性、文化的正当性を調和させる信仰に基づく制度的イノベーションとして、持続可能な食料ガバナンスに関する研究空白を埋めるものだ。",
+        "method": "本研究は、文献レビュー、詳細なインタビュー、農家調査を統合した混合研究法を採用している。具体的には、プサントレンが再分配された国有地を管理し、地域農家とイスラムの収益分配契約である「アル・ムサコ」に基づくパートナーシップを構築するモデルの実現可能性を検証した。農家の認識はリッカート尺度を用いて評価され、重要度-達成度分析（IPA）によって分析された。",
+        "results": "分析の結果、プサントレンはフードエステートのガバナンスにおいて、道徳的正当性、社会関係資本、および経営能力を兼ね備えた仲介機関として強力な潜在力を持つことが明らかになった。しかしながら、運営効率を確保するためには、作付け前、作付け中、および支援システムにおいて改善が必要であることも示唆された。"
+      },
+      "doi": "10.36956/rwae.v7i2.2781",
+      "source": "openalex",
+      "titleJa": "インドネシアにおける「プサントレン」を基盤としたフードエステート：農地改革、イスラム原則、食料安全保障の統合",
+      "journal": "Research on World Agricultural Economy"
+    },
+    {
+      "id": "W7161560280",
+      "title": "Corn Stover: Revisiting of the Opportunities and Barriers of Its Composition, Bioenergy Applications, and Sustainability",
+      "authors": [
+        "Anthony Amotoe‐Bondzie",
+        "Isaac Slaven",
+        "Kelly J. Best",
+        "Nichole Hugo"
+      ],
+      "publishedAt": "2026-05-18T12:00:00.000Z",
+      "url": "https://doi.org/10.59978/ar04020007",
+      "pdfUrl": "https://sccpress.com/ars/article/download/241/450",
+      "categories": [
+        "openalex",
+        "Biofuel",
+        "Sustainability",
+        "Digestate",
+        "Biorefinery"
+      ],
+      "abstract": "Corn Stover (CS), rich in lignocellulosic materials, poses challenges in biodegradability, necessitating pretreatment methods to enhance biofuel yields. Biogasification through anaerobic digestion and bioethanol production via fermentation are promising pathways, though both face technical barriers, particularly in pretreatment efficiency and enzyme limitations. Economic factors, including high feedstock collection and transportation costs, hinder large-scale adoption. The environmental implications of CS removal, such as soil nutrient depletion and erosion risks, highlight the need for balanced residue management practices. Technological advancements, such as improved pretreatment techniques, biomass densification, and co-digestion strategies, have shown potential to enhance process efficiency and reduce costs. However, integrating circular economy principles by valorizing co-products like lignin and digestate further strengthens the sustainability of CS utilization. This review examines the composition of CS, its applications in bioenergy, and the environmental and economic considerations associated with its use. Future research directions emphasize genetic and process innovations to boost biogas and bioethanol yields, scalable industrial applications, and policy frameworks that support large-scale deployment. Ultimately, CS holds significant promise in contributing to global renewable energy goals, provided that technological, economic, and environmental challenges are effectively addressed.",
+      "summary": {
+        "gist": "コーンストーバー（CS）は再生可能エネルギー源として大きな可能性を秘めているが、その大規模な利用には技術的、経済的、環境的な課題が伴う。本研究は、これらの多角的な課題を克服し、持続可能な利用を促進するための戦略的アプローチの必要性を強調している。",
+        "novelty": "本研究は、コーンストーバーのバイオエネルギー利用に関する既存の知見を、その組成、バイオエネルギー応用、および環境・経済的側面という多角的な視点から統合的に再検討した点に新規性がある。これにより、技術的、経済的、環境的な障壁を包括的に整理し、持続可能な利用に向けた将来の研究および政策課題を明確化した。",
+        "method": "本研究は、コーンストーバーの組成、バイオエネルギー応用、およびその利用に伴う環境的・経済的側面に関する既存の学術文献を対象としたレビュー分析である。特定のデータセットや計量経済学的モデルを用いた実証分析は実施されていない。",
+        "results": "分析の結果、コーンストーバーはリグノセルロース系バイオマスとしてバイオガス化やバイオエタノール生産に有望な原料である一方、生分解性の低さ、前処理効率、酵素の限界といった技術的障壁が存在することが明らかになった。また、原料の収集・輸送コストの高さが経済的障壁となり、土壌養分枯渇や浸食リスクが環境的課題として指摘された。これらの課題に対し、前処理技術の改善、バイオマス高密度化、共消化戦略などの技術的進歩が効率向上とコスト削減に寄与する可能性があり、さらにリグニンや消化液といった副産物の価値化を通じたサーキュラーエコノミー原則の統合が持続可能性を強化すると結論付けられた。"
+      },
+      "doi": "10.59978/ar04020007",
+      "source": "openalex",
+      "titleJa": "コーンストーバーのバイオエネルギー利用：組成、応用、持続可能性における機会と障壁の再検討",
+      "journal": "Agricultural & Rural Studies"
+    },
+    {
+      "id": "W7161556786",
+      "title": "Demarcation of Suitable Land for Rice Cultivation Using GIS-based Multi-Criteria Decision Analysis: A Case Study in Southern Highlands Province of Papua New Guinea",
+      "authors": [
+        "Einstein Den",
+        "Sailesh Samanta"
+      ],
+      "publishedAt": "2026-05-18T12:00:00.000Z",
+      "url": "https://doi.org/10.46488/nept.2026.v25i02.d1850",
+      "pdfUrl": "https://doi.org/10.46488/nept.2026.v25i02.d1850",
+      "categories": [
+        "openalex",
+        "Geography",
+        "New guinea",
+        "Land use",
+        "Agroforestry"
+      ],
+      "abstract": "Papua New Guinea (PNG) has abundant land resources that are not fully utilized. Rice is a key food staple in urban areas and some rural regions. The demand for rice products remains high in Papua New Guinea due to changes in dietary preferences. Despite substantial consumption levels, rice is the principal imported crop grain, addressing the needs of a rapidly growing population. Maximizing the potential of land resources is crucial for properly assessing and categorizing land for specific purposes. This research project aims to address this pressing concern through land suitability analysis. An approach incorporating a multi-criteria decision analysis (MCDA) was employed to define and evaluate land suitability for rice cultivation. This research was conducted in the Southern Highlands Province, which is prominently located in the center of mainland Papua New Guinea (PNG). Fourteen parameters, including soil depth, texture, drainage, nitrogen, phosphorus, potassium, pH, cation exchange capacity, topographic wetness index, land use and land cover, altitude, slope, aspect, rainfall, and temperature, were selected and analyzed further through Pairwise Comparison to derive weights and ranks. The resulting output from the MCDA was categorized into five distinct classes: unsuitable land with extreme limitations, unsuitable land with severe limitations, suitable land with moderate limitations, suitable land with minor limitations, and appropriate land with negligible limitations. According to the findings, approximately 29.59% of the study area is ideal for rice cultivation. Although applied exclusively to the rice crop, this technique holds potential for adaptation to various crops.",
+      "summary": {
+        "gist": "本研究は、パプアニューギニア南部高地州において、GISベースの多基準意思決定分析（MCDA）を適用し、稲作に適した土地を画定した。その結果、調査地域の約29.59%が稲作に理想的な土地であると結論付けた。",
+        "novelty": "パプアニューギニアは豊富な土地資源を持つ一方で、食料需要の増加に伴い米の輸入に大きく依存している。本研究は、未利用の土地資源を有効活用するため、これまで十分に評価されていなかった同国の南部高地州における稲作適地を、GISベースの多基準意思決定分析を用いて客観的に特定した点で新規性がある。",
+        "method": "本研究は、パプアニューギニア南部高地州を対象に、GISベースの多基準意思決定分析（MCDA）を採用した。土壌深度、土性、排水性、窒素、リン、カリウム、pH、陽イオン交換容量、地形湿潤指数、土地利用・土地被覆、標高、傾斜、方位、降水量、気温の14のパラメータを選定し、ペアワイズ比較を通じて各パラメータの重みとランクを導出した。このMCDAの結果に基づき、土地を5つの適性クラスに分類した。",
+        "results": "分析の結果、調査地域の約29.59%が稲作にとって理想的な土地であると判明した。MCDAによって分類された5つの適性クラスのうち、「極めて制限の少ない適切な土地」に該当する地域がこの割合を占めることを示している。この知見は、パプアニューギニアにおける米の国内生産拡大に向けた土地利用計画の策定に貢献する可能性を示唆している。"
+      },
+      "doi": "10.46488/nept.2026.v25i02.d1850",
+      "source": "openalex",
+      "titleJa": "GISベースの多基準意思決定分析を用いたパプアニューギニアにおける稲作適地の画定",
+      "journal": "Nature Environment and Pollution Technology"
+    },
+    {
+      "id": "W7161041987",
+      "title": "Assessing Ferry Ro-Ro as Tol Laut’s Alternative Cargo Carrier for Inter-Island Trade",
+      "authors": [
+        "Abdy Kurniawan",
+        "Sri Hardianto",
+        "Nur Endah Retno Wuryandari",
+        "Anasta Wirawan",
+        "Achmad Andhika Kharisma"
+      ],
+      "publishedAt": "2026-05-16T12:00:00.000Z",
+      "url": "https://doi.org/10.5109/7429616",
+      "pdfUrl": "https://doi.org/10.5109/7429616",
+      "categories": [
+        "openalex",
+        "Business",
+        "Subsidy",
+        "Government (linguistics)",
+        "Distribution (mathematics)"
+      ],
+      "abstract": "Economic development in Indonesia is currently unequal and more concentrated in western regions such as Java and Sumatra. Nusa Tenggara Timur (NTT) has high economic potency from fishery, tourism, mining, and livestock products. High inflation and price disparity become ecomomy problem which dominated by volatile food inflation and administered prices. To support equitable development by enhancing economic interaction between regions through inter-island trade, the government initiated the Tol Laut program in the underdeveloped, remote, outermost, and border areas (3TP) to reduce price disparities through subsidizing sea transportation services. This research aims to analyse the utilization of ferry ro-ro as alternative for Tol Laut’s cargo carrier by analyzing logistic processes, logistic cost, supply-demand, and price disparity. The analysis result shows that Jangkar-Kupang ferry route which connected East Java and NTT can be utilize as new Tol Laut alternative route which has advantages such as high frequency, ability to bridge inter-island door to door logistic distribution, and cumulatively can increase market size of Tol Laut’s cargo as foundation to control price disparity and promote return cargo as sustainable inter island trade. Government agencies need to build collaboration to control the distribution of Tol laut’s cargo to end user.",
+      "summary": {
+        "gist": "本研究は、インドネシアの離島間貿易における価格格差是正を目的とした「Tol Laut」プログラムの代替貨物輸送手段として、フェリーRo-Ro船の活用可能性を分析したものである。その結果、東ジャワとNTTを結ぶJangkar-Kupangフェリー航路が、Tol Lautの新たな代替ルートとして有効であり、地域間の経済格差是正に貢献する可能性を示した。",
+        "novelty": "従来の先行研究が、インドネシア政府の「Tol Laut」プログラムによる海上輸送補助金政策の直接的な効果や課題に焦点を当ててきたのに対し、本研究は、フェリーRo-Ro船という新たな視点から、既存の政策枠組みにおける代替貨物輸送手段としての可能性を体系的に評価した点に新規性がある。特に、フェリーRo-Ro船が持つ高頻度性や離島間のドア・ツー・ドア物流を可能にする特性、さらにはTol Laut貨物の市場規模拡大と復路貨物促進への貢献という側面を明らかにし、地域間貿易の持続可能性向上に向けた新たな政策的示唆を提供した。",
+        "method": "本研究では、インドネシアの離島間貿易における物流プロセス、物流コスト、需給バランス、および価格格差の多角的な分析を通じて、フェリーRo-Ro船の貨物輸送手段としての利用可能性を評価した。具体的な手法としては、東ジャワとNusa Tenggara Timur (NTT) を結ぶJangkar-Kupangフェリー航路を対象としたケーススタディを実施し、その運用実態と経済的効果を詳細に検討したものである。計量経済学的なモデルの適用については明記されていないが、物流データや市場価格データの定性的・定量的な分析が用いられたと推察される。",
+        "results": "分析の結果、東ジャワとNTTを結ぶJangkar-Kupangフェリー航路が、Tol Lautプログラムの新たな代替ルートとして高い潜在力を持つことが示された。この航路は、高頻度な運航、離島間のドア・ツー・ドア物流を可能にする能力、そしてTol Laut貨物の市場規模を累積的に拡大させる効果といった利点を有している。これらは、価格格差の是正と復路貨物の促進を通じた持続可能な離島間貿易の基盤を構築する上で重要である。したがって、政府機関は、Tol Laut貨物の最終利用者への流通を管理するために、連携を強化する必要があることが示唆された。"
+      },
+      "doi": "10.5109/7429616",
+      "source": "openalex",
+      "titleJa": "インドネシア離島間貿易におけるフェリーRo-Ro船の「Tol Laut」代替貨物輸送手段としての評価",
+      "journal": "Evergreen"
+    },
+    {
+      "id": "W7160988041",
+      "title": "Sustainable Rice Production Using Green Manufacturing to Reduce the Risk of Flooding",
+      "authors": [
+        "Vina Eka Aristya",
+        "Tri Martini",
+        "Amarulla Octavian",
+        "Cuk Supriyadi Ali Nandar",
+        "Turnad Lenggo Ginta",
+        "Forita Dyah Arianti",
+        "Sri Minarsih",
+        "Pamungkas Buana Putra",
+        "Ni Wayan Mutia Dewi Artawati",
+        "Ratna Etie Puspita Dewi"
+      ],
+      "publishedAt": "2026-05-16T12:00:00.000Z",
+      "url": "https://doi.org/10.5109/7429617",
+      "pdfUrl": "https://doi.org/10.5109/7429617",
+      "categories": [
+        "openalex",
+        "Sustainability",
+        "Agriculture",
+        "Production (economics)",
+        "Flooding (psychology)"
+      ],
+      "abstract": "Sustainable rice production is critical, especially in flood-prone areas, as it addresses food security while minimizing environmental impacts. The soil's elevated salt content is one of the primary cultivation issues in rice fields along the coast, which can lead to a decrease in yield and can even result in crop failure. The study aimed to integrate green manufacturing practices, which can significantly reduce flood risk and increase resilience in rice farming. The on-farm research was on the north coast of Semarang, a stretch of rice fields affected by floods, covering an area of 50 hectares. The multi-aspect sustainability analysis methodology complements the assessment results to obtain a production system with a sustainability index. The average value of total sustainability was 67.65, which means that rice farming in Semarang has a fairly sustainable status. Factors prioritized for improvement to improve the sustainability status of rice cultivation were environmental aspects (gap 9.67), economic aspects (gap 8.33), and social institutions (gap 6.54). The leverage factors of rice farming in the socio-institutional aspect were farmer age (sensitivity max 0.33 and sensitivity value 0.67) and rice farming experience (sensitivity max 0.20 and sensitivity value 0.60). Demonstration plot of high-salinity-resistant rice varieties using Biosalin1 and Biosalin2. Planting salinity-tolerant varieties was the most efficient way to reduce the negative impact of flooding caused by seawater rising to the ground level. Green manufacturing practices include low-external-input and sustainable agriculture, which utilize organic fertilizers and integrated pest management. The practice of using agricultural equipment that uses alternative fuels from plastic waste can save energy and lower emissions to minimize the carbon footprint of sustainable rice production.",
+      "summary": {
+        "gist": "本研究は、インドネシア・スマランの洪水常襲地域における稲作の持続可能性を評価し、緑の製造業の実践が洪水リスク軽減とレジリエンス向上に貢献することを示した。特に、塩分耐性品種の導入と有機肥料や代替燃料利用といったグリーンマニュファクチャリングの統合が、環境負荷を低減しつつ生産性を維持する上で有効であると結論付けている。",
+        "novelty": "従来の研究が個別の持続可能性要因に焦点を当てがちであったのに対し、本研究は緑の製造業という包括的な概念を稲作システムに統合し、洪水リスク軽減とレジリエンス向上という複合的な課題に対応する実践的アプローチを提示した点に新規性がある。特に、沿岸部の高塩分土壌という具体的な制約条件下での持続可能性評価と、その改善に向けた具体的なレバレッジ要因の特定は、既存研究の空白を埋めるものだ。",
+        "method": "本研究は、インドネシア・スマラン北海岸の洪水被害を受けた50ヘクタールの水田を対象としたオンファームリサーチを実施した。分析手法としては、マルチアスペクト持続可能性分析を用いて生産システムの持続可能性指数を評価し、改善優先順位の高い要因を特定した。また、高塩分耐性イネ品種（Biosalin1およびBiosalin2）を用いたデモンストレーションプロットを設置し、緑の製造業の実践として低外部投入持続可能農業（有機肥料、総合的病害虫管理）やプラスチック廃棄物由来代替燃料を使用する農業機械の導入効果を検証した。",
+        "results": "分析の結果、スマランにおける稲作の総持続可能性指数は平均67.65であり、「かなり持続可能」な状態にあることが示された。持続可能性向上のために優先的に改善すべき要因は、環境側面（ギャップ9.67）、経済側面（ギャップ8.33）、社会制度側面（ギャップ6.54）であった。社会制度側面における主要なレバレッジ要因として、農家の年齢（感度最大0.33、感度値0.67）と稲作経験（感度最大0.20、感度値0.60）が特定された。さらに、塩分耐性品種の栽培が海水位上昇による洪水の影響を軽減する最も効率的な方法であり、緑の製造業の実践がエネルギー節約、排出量削減、カーボンフットプリント最小化に寄与することが明らかになった。"
+      },
+      "doi": "10.5109/7429617",
+      "source": "openalex",
+      "titleJa": "グリーンマニュファクチャリングを用いた持続可能な稲作による洪水リスク軽減",
+      "journal": "Evergreen"
+    },
+    {
+      "id": "W7161406002",
+      "title": "Migration as Livelihood Strategy: A Mixed Methods Study of Household Welfare in Bagmati Province, Nepal",
+      "authors": [
+        "Jeeb Narayan Kafle",
+        "Nasiruddin Molla"
+      ],
+      "publishedAt": "2026-05-15T12:00:00.000Z",
+      "url": "https://doi.org/10.59857/t3p06y43",
+      "pdfUrl": "https://besra-journals.net/index.php/ijabs/article/download/203/160",
+      "categories": [
+        "openalex",
+        "Livelihood",
+        "Remittance",
+        "Vocational education",
+        "Diversification (marketing strategy)"
+      ],
+      "abstract": "The study explores the role of migration in improving household livelihoods and reduce poverty focusing on Bagmati province of Nepal. The research employs a mixed methods approach combining quantitative surveys and qualitative interviews to analyze the impact of migration on household welfare, resilience, and economic outcomes. The study also focuses on household livelihoods, remittance allocation, and implications for livelihood diversification and rural sustainability. The key findings show that the livelihood level could be increased from migration and the lack of vocational skills training and availability of limited employment opportunities are the primary causes of the increasing trend of migration in Nepal. Policy recommendations focusing on sufficient vocational training opportunities to needy youths, awareness creation on migration regarding benefits, risks, and remittance utilization in productive investment to generate incomes at the community level.",
+      "summary": {
+        "gist": "本研究は、ネパールのバグマティ州を対象に、移住が家計の生計向上と貧困削減に果たす役割を検証したものであり、移住が家計の生計水準を高める可能性を示唆している。",
+        "novelty": "従来の移住研究が特定の側面に着目しがちであったのに対し、本研究は混合研究法を用いることで、移住が家計の厚生、レジリエンス、経済的成果に与える複合的な影響を包括的に分析している点に新規性がある。特に、家計の生計、送金の配分、そして生計多様化と農村の持続可能性への示唆に焦点を当てることで、移住の多角的な側面を深く掘り下げ、既存研究の空白を埋めるものだ。",
+        "method": "本研究は、ネパールのバグマティ州を対象に、混合研究法を採用している。具体的には、定量的調査と定性的インタビューを組み合わせることで、移住が家計の厚生、レジリエンス、経済的成果に与える影響を分析した。また、家計の生計、送金の配分、生計多様化と農村の持続可能性への示唆についても焦点を当てた分析を実施している。",
+        "results": "分析の結果、移住によって家計の生計水準が向上する可能性が示された。また、ネパールにおける移住増加の主要因は、職業訓練機会の不足と限られた雇用機会の存在であることが明らかになった。"
+      },
+      "doi": "10.59857/t3p06y43",
+      "source": "openalex",
+      "titleJa": "ネパール・バグマティ州における生計戦略としての移住：家計厚生に関する混合研究",
+      "journal": "International Journal of Advanced Business Studies"
+    },
+    {
+      "id": "W7161484909",
+      "title": "The traditional coffee agroecosystem in Chiapas: a systemic analysis of its ecological, productive, and sociocultural relevance",
+      "authors": [
+        "Francisco Guevara-Hernández",
+        "Luis Alberto Somá-Alvarez",
+        "Manuel Alejandro La O-Arias",
+        "Pedro Cadena-Íñiguez",
+        "Deb Ra Aryal",
+        "Flora Bonazzi-Piasentin"
+      ],
+      "publishedAt": "2026-05-15T12:00:00.000Z",
+      "url": "https://doi.org/10.32854/eth0bz65",
+      "pdfUrl": "https://mail.revista-agroproductividad.org/index.php/agroproductividad/article/download/3750/3085",
+      "categories": [
+        "openalex",
+        "Sociocultural evolution",
+        "Agroecosystem",
+        "Conceptualization",
+        "SWOT analysis"
+      ],
+      "abstract": "Objective: To analyze the traditional coffee agroecosystem in Chiapas from a systemic perspective to understand its ecological, productive, and sociocultural dimensions and to identify the relationships that explain its functioning and resilience. Design/methodology/approach: A structured documentary review with a systemic and rational–deductive orientation was conducted using 42 scientific sources. The analysis was organized around ecological, productive, and sociocultural criteria and incorporated a SWOT matrix to synthesize the strengths, weaknesses, opportunities, and threats of shade-grown coffee systems in Chiapas and the Frailesca region. Results: Three core attributes of the agroecosystem were identified: structural diversity, ecological and productive multifunctionality, and smallholder management supported by local knowledge. These characteristics contribute to productive stability and socioecological resilience. The review also revealed tensions associated with socio-environmental disturbances, phytosanitary vulnerability, and outmigration of young people. The SWOT matrix highlighted opportunities linked to differentiated coffees, the cultural value of the crop, and the role of shade in biodiversity conservation. Research limitations/implications: The study relies on secondary sources and exposes gaps in systemic analyses of coffee production in the Frailesca region. Nevertheless, the review enabled the development of an integrative conceptualization of the agroecosystem and underscores the relevance of holistic approaches that articulate ecological, productive, social, and economic dimensions to guide future research and public policy. Findings/conclusions: The traditional coffee agroecosystem constitutes a complex system whose resilience is grounded in the interaction among diversity, multifunctionality, and smallholder management. Ensuring its long-term sustainability requires integrated strategies that strengthen ecological management, cultural preservation, and access to more equitable markets",
+      "summary": {
+        "gist": "本論文は、チアパスの伝統的コーヒー農業生態系が、構造的多様性、生態学的・生産的多機能性、地域知識に支えられた小規模農家管理の相互作用により、高い生産的安定性と社会生態学的レジリエンスを持つ複雑系であることを明らかにした。その長期的な持続可能性には、生態学的管理、文化保存、より公平な市場へのアクセスを強化する統合戦略が不可欠であると結論付けている。",
+        "novelty": "本研究は、フライレスカ地域におけるコーヒー生産のシステム分析に関する既存の研究空白を埋めるものであり、生態学的、生産的、社会文化的側面を統合したホリスティックなアプローチを通じて、伝統的コーヒー農業生態系の機能とレジリエンスを説明する関係性を統合的に概念化した点に新規性がある。",
+        "method": "本研究は、42の科学的情報源を用いた構造化された文献レビューであり、システム的かつ合理的・演繹的アプローチを採用している。分析は生態学的、生産的、社会文化的基準を中心に構成され、チアパスおよびフライレスカ地域のシェードグロウンコーヒーシステムの強み、弱み、機会、脅威を統合的に評価するためにSWOT分析を組み込んだ。",
+        "results": "分析の結果、伝統的コーヒー農業生態系の主要属性として、構造的多様性、生態学的・生産的多機能性、地域知識に支えられた小規模農家管理の3点が特定され、これらが生産的安定性と社会生態学的レジリエンスに寄与することを示した。同時に、社会環境的撹乱、植物病害脆弱性、若年層の移住といった課題も指摘し、SWOT分析を通じて差別化されたコーヒー、作物の文化的価値、生物多様性保全におけるシェードの役割といった機会を強調した。"
+      },
+      "doi": "10.32854/eth0bz65",
+      "source": "openalex",
+      "titleJa": "チアパスにおける伝統的コーヒー農業生態系の生態学的・生産的・社会文化的関連性のシステム分析",
+      "journal": "Agro Productividad"
+    },
+    {
+      "id": "W7161479311",
+      "title": "IMPACT OF ARTISANAL GOLD MINING ON FARMING ACTIVITIES IN SELECTED LOCAL GOVERNMENT AREAS OF NIGER STATE, NIGERIA",
+      "authors": [
+        "Isah Shamsudeen",
+        "BILYAMINU IDRIS KADANDANI",
+        "Usman A. Usman"
+      ],
+      "publishedAt": "2026-05-15T12:00:00.000Z",
+      "url": "https://doi.org/10.70382/nijhcsr.v12i6.024",
+      "pdfUrl": "https://nightingalepublications.com/index.php/nijhcsr/article/download/465/456",
+      "categories": [
+        "openalex",
+        "Agriculture",
+        "Livelihood",
+        "Gold mining",
+        "Food security"
+      ],
+      "abstract": "This study examines the impact of artisanal gold mining on farming activities in selected Local Government Areas of Niger State, specifically Bosso, Chanchaga, Shiroro, and Paikoro. The research was motivated by increasing concerns about mining encroachment on agricultural land, rising production costs, and farmland degradation, which threaten food security and rural livelihoods. Data were collected from 384 farmers registered with the Niger State Agricultural and Mechanization Development Authority (NAMDA) using structured questionnaires and interviews, with the sample size determined using the Salant and Dillman sampling frame. The study employed descriptive statistics and logistic regression analysis guided by the Cobb–Douglas production framework to examine the relationship between artisanal mining activities, farmland availability, and cost of agricultural productivity. The findings reveal that artisanal gold mining significantly undermines farming activities in the study area. Land encroachment, tenure insecurity, and population pressure were strongly associated with declining farmland availability (OR = 3.15, p &lt; 0.01). In addition, labour diversion, soil degradation, and rising input costs significantly increased the cost of agricultural production (OR = 12.80, p &lt; 0.01). The study concludes that unregulated artisanal gold mining poses serious risks to sustainable agriculture, food security, and rural livelihoods in Niger State. The study recommends that policymakers, community leaders should enforce land use policies, designation of agricultural protection zones as well as youth empowerment and farmer miner conflict resolution initiatives.",
+      "summary": {
+        "gist": "本研究は、ナイジェリアのニジェール州における零細金採掘が農業活動に与える影響を分析し、それが持続可能な農業、食料安全保障、および農村の生計に深刻なリスクをもたらすことを明らかにした。",
+        "novelty": "従来の研究が零細採掘の農業への影響を一般的に論じる中、本研究はナイジェール州の特定の地方政府地域における零細金採掘が農業活動に与える具体的な影響を実証的に分析し、土地の利用可能性の低下と農業生産コストの増加という観点から、そのメカニズムを明らかにした点で新規性がある。",
+        "method": "本研究は、ナイジェール州のボッソ、チャンチャガ、シロロ、パイコロの各地方政府地域において、ナイジェール州農業機械化開発局（NAMDA）に登録された384名の農家から、構造化された質問票とインタビューを通じてデータを収集した。サンプルサイズはSalant and Dillmanのサンプリングフレームを用いて決定された。分析には記述統計とロジスティック回帰分析が用いられ、コブ・ダグラス生産関数フレームワークに基づいて、零細採掘活動、農地の利用可能性、および農業生産コストの関係が検証された。",
+        "results": "分析の結果、零細金採掘が調査地域の農業活動を著しく阻害していることが判明した。具体的には、土地の不法占拠、土地所有権の不安定さ、および人口圧力が農地の利用可能性の低下と強く関連しており（オッズ比 = 3.15, p < 0.01）、労働力の転用、土壌劣化、および投入コストの上昇が農業生産コストを大幅に増加させていることが示された（オッズ比 = 12.80, p < 0.01）。これらの結果は、規制されていない零細金採掘がナイジェール州における持続可能な農業、食料安全保障、および農村の生計に深刻なリスクをもたらすことを示唆している。"
+      },
+      "doi": "10.70382/nijhcsr.v12i6.024",
+      "source": "openalex",
+      "titleJa": "ナイジェリア・ニジェール州における零細金採掘が農業活動に与える影響",
+      "journal": "International Journal of Humanities and Cultural Studies Research"
+    },
+    {
+      "id": "W7161245206",
+      "title": "The impact of adoption intensity of climate change adaptation strategies on livelihood outcomes of smallholder cocoa farmers in Ghana",
+      "authors": [
+        "Prince Kwadwo Amoako",
+        "Enoch Kwame Tham-Agyekum",
+        "John-Eudes Andivi Bakang",
+        "Lawrence Kwabena Brobbey",
+        "David Boansi",
+        "Prince Asiedu",
+        "Joyceline Adom Frimpong"
+      ],
+      "publishedAt": "2026-05-15T12:00:00.000Z",
+      "url": "https://doi.org/10.1007/s44274-026-00743-y",
+      "pdfUrl": "https://link.springer.com/content/pdf/10.1007/s44274-026-00743-y.pdf",
+      "categories": [
+        "openalex",
+        "Livelihood",
+        "Business",
+        "Climate change",
+        "Climate change adaptation"
+      ],
+      "abstract": "Given the growing impact of climate variability on agricultural output, it is essential to understand how adaptation strategies can sustain the livelihoods of smallholder cocoa farmers. This study identifies the adaptation strategies employed by cocoa farmers and determines the impact of adoption intensity of the strategies on their income and food security using cross-sectional data from 600 respondents in the Ashanti, Western, and Western North regions of Ghana. A doubly robust multivalued inverse probability weighted regression adjustment (MIPWRA) procedure was employed on food security (food consumption score) and income. From the estimation procedure, we observe that cocoa farmers who adopted a moderate or high number of adaptation strategies experienced statistically significant improvements in income per hectare (about 5–12%) and food consumption scores (about 11–15%) compared with those who adopted few strategies. The result indicates that employing multiple adaptation strategies is associated with better livelihood outcomes, particularly in terms of income generation and food security. Policies that promote broader adoption and diffusion of adaptation strategies are needed to boost cocoa productivity, improve food security, increase incomes, and enhance the adaptive capacity among cocoa farmers in Ghana.",
+      "summary": {
+        "gist": "この論文は、ガーナの小規模カカオ農家が採用する気候変動適応戦略の多様性が、彼らの所得と食料安全保障といった生計指標に与える影響を定量的に明らかにした。具体的には、複数の適応戦略を複合的に採用する農家ほど、所得と食料安全保障が有意に向上することを示している。",
+        "novelty": "従来の研究が単一の適応戦略の効果に焦点を当てがちであったのに対し、本研究は適応戦略の「採用強度」、すなわち複数の戦略を組み合わせる効果に着目した点に新規性がある。これにより、気候変動に対する農家の適応行動が、生計改善にいかに寄与するかを多角的に評価し、研究の空白を埋めるものとなっている。特に、MIPWRAという頑健な計量経済学的手法を用いることで、選択バイアスを考慮したより信頼性の高い因果効果の推定を試みている点も特筆される。",
+        "method": "本研究では、ガーナのアシャンティ州、西部州、西部北部州の小規模カカオ農家600名を対象とした横断的データを用いた。分析には、多値処理における処置効果を推定するために、二重に頑健な多値逆確率加重回帰調整（MIPWRA）法を採用した。この手法により、適応戦略の採用強度（少数の戦略、中程度の戦略、多数の戦略）が、所得（ヘクタールあたりの所得）と食料安全保障（食料消費スコア）に与える因果効果を推定した。",
+        "results": "分析の結果、少数の適応戦略しか採用していない農家と比較して、中程度または多数の適応戦略を採用しているカカオ農家は、ヘクタールあたりの所得が約5〜12%増加し、食料消費スコアが約11〜15%向上することが統計的に有意に示された。この結果は、複数の気候変動適応戦略を複合的に導入することが、特に所得創出と食料安全保障の観点から、より良い生計結果と関連していることを強く示唆している。"
+      },
+      "doi": "10.1007/s44274-026-00743-y",
+      "source": "openalex",
+      "titleJa": "ガーナの小規模カカオ農家における気候変動適応戦略の採用強度が生計に与える影響",
+      "journal": "Discover Environment"
+    },
+    {
+      "id": "W7161273995",
+      "title": "Crop establishment-irrigation interactions driven rice (Oryza sativa L.) performance and water productivity",
+      "authors": [
+        "Moneesa Bashir",
+        "M. Anwar Bhat",
+        "Tauseef Ahmad Bhat",
+        "Eajaz Ahmad Dar",
+        "Tahir Ahmad Sheikh",
+        "Aijaz Nazir",
+        "Umer Yousuf Parray",
+        "Arun Karnwal",
+        "A. M. Almoayyad",
+        "Abdel Razzaq Al‐Tawaha"
+      ],
+      "publishedAt": "2026-05-15T12:00:00.000Z",
+      "url": "https://doi.org/10.1038/s41598-026-53265-1",
+      "pdfUrl": "https://www.nature.com/articles/s41598-026-53265-1_reference.pdf",
+      "categories": [
+        "openalex",
+        "Agronomy",
+        "Crop",
+        "Oryza sativa",
+        "Environmental science"
+      ],
+      "abstract": "Excessive water use in flooded irrigation systems poses a significant challenge in rice cultivation. Therefore, it is essential to adopt irrigation management techniques that conserve water, enhance water productivity, and address water scarcity. This experiment aimed to evaluate the yield and water productivity of various crop establishment methods combined with different irrigation management techniques. The experiment was designed using a split-plot layout with three replications. The main plots comprised three crop establishment techniques: the System of Rice Intensification (SRI), Direct Seeding (DSR), and Transplanting (TPR). The five irrigation regimes were randomized to the subplots implemented, including: continuous submergence (flooding) up to a depth of 3 cm (I1); irrigation application of 24 L m− 2 four days after the ponded water had disappeared during crop growth (I2); irrigation application of 24 L m− 2 four days after the ponded water disappeared until panicle initiation, followed by submergence until the dough stage (I3); irrigation application of 24 L m− 2 four days after the disappearance of ponded water until flowering, then submergence until the dough stage (I4); and saturation throughout until the dough stage (I5). The Shalimar Rice-4 variety was utilized for the study. The results indicated that the SRI method of crop establishment yielded the highest grain yields of 7.72 t ha^-1 and 7.93 t ha^-1, alongside straw yields of 9.64 t ha^-1 and 9.98 t ha^-1, in the years 2021 and 2022, respectively. Furthermore, the highest total crop water productivity was observed in the saturation treatment compared with continuous flooding. Consequently, the System of Rice Intensification with saturation emerged as the most efficient irrigation strategy, as it retained the highest total crop water productivity under the temperate conditions of Kashmir.",
+      "summary": {
+        "gist": "本研究は、稲作における栽培様式と灌漑管理の組み合わせが収量および水利用効率に与える影響を評価したものであり、カシミール地方の温帯条件下では、System of Rice Intensification（SRI）と飽和灌漑の組み合わせが最も効率的な戦略であることを明らかにした。この組み合わせは、高い穀物収量と優れた総作物水利用効率を両立させることを示した。",
+        "novelty": "従来の稲作研究では、栽培様式または灌漑管理のいずれか一方に焦点を当てた研究が多いが、本研究は、複数の栽培様式と多様な灌漑管理技術の組み合わせが稲の生育、収量、および水利用効率に及ぼす相互作用を体系的に評価した点に新規性がある。特に、水資源制約が課題となる地域において、収量と水利用効率を同時に最大化する最適な統合戦略を実証的に特定したことは、今後の持続可能な稲作技術開発に貢献する研究空白を埋めるものだ。",
+        "method": "本研究では、2021年と2022年の2年間、カシミール地方の温帯条件下で圃場実験を実施した。実験は3反復の分割区画法（split-plot layout）で設計され、主区にはSystem of Rice Intensification（SRI）、直播（DSR）、移植（TPR）の3種類の栽培様式を配置した。副区には、連続湛水、湛水消失後4日ごとの灌漑、出穂期まで湛水消失後4日ごとの灌漑後に湛水、開花期まで湛水消失後4日ごとの灌漑後に湛水、および生育期間全体を通じた飽和状態維持の5種類の灌漑管理技術をランダムに割り当てた。供試品種はShalimar Rice-4である。",
+        "results": "分析の結果、栽培様式ではSRIが最も高い収量を示し、2021年には穀物収量7.72 t ha^-1、藁収量9.64 t ha^-1を、2022年には穀物収量7.93 t ha^-1、藁収量9.98 t ha^-1を記録した。灌漑管理に関しては、連続湛水と比較して、飽和状態を維持する処理（I5）が最も高い総作物水利用効率をもたらすことが判明した。これらの結果から、カシミール地方の温帯条件下において、System of Rice Intensification（SRI）と飽和灌漑の組み合わせが、高い収量と優れた水利用効率を両立させる最も効率的な灌漑戦略であると結論付けられる。"
+      },
+      "doi": "10.1038/s41598-026-53265-1",
+      "source": "openalex",
+      "titleJa": "稲作における栽培様式と灌漑管理の相互作用が収量および水利用効率に与える影響",
+      "journal": "Scientific Reports"
+    },
+    {
+      "id": "W7161231526",
+      "title": "Stewards to the obscure: repositioning the ecological agency of culinary knowledge through the Uraali Kuruma tribe of Southern India",
+      "authors": [
+        "Aarcha Pradeep",
+        "M. Subbulakshmi"
+      ],
+      "publishedAt": "2026-05-15T12:00:00.000Z",
+      "url": "https://doi.org/10.3389/fsufs.2026.1810849",
+      "pdfUrl": "https://www.frontiersin.org/journals/sustainable-food-systems/articles/10.3389/fsufs.2026.1810849/pdf",
+      "categories": [
+        "openalex",
+        "Indigenous",
+        "Stewardship (theology)",
+        "Sustainability",
+        "Traditional knowledge"
+      ],
+      "abstract": "The current discourse on ecological governance and sustainability often concludes at the point of cultivation. The post-harvest practices that mark the actual outcome of the agricultural labor are overlooked, particularly the act of cooking and sharing. Even though these practices play a major role in sustaining and transmitting the traditional food knowledge, they are often dismissed as daily household chores. This study examines the ecological significance of indigenous culinary knowledge within the contemporary sustainability discourse. The study focuses on the interrelationship between culinary traditions, ecological knowledge, and sustainable development. The objective of the study is to analyze how everyday culinary practices contribute to ecological stewardship and food-system resilience, particularly within indigenous communities. This research seeks to establish the above concept through a single-case exploratory study of the Noorang initiative in Wayanad, Kerala, as it explores the indigenous culinary practices. The study examines the interrelation between ecological restoration, local knowledge, and collective agency in Noorang through the theories of culinary ecology and political ecology. Culinary ecology views cooking, sharing, and remembering as part of environmental stewardship and knowledge transfer. It argues that agriculture and the revival of endangered crops do not mark the end of ecological activity but rather form part of continuous cultural reinterpretation, which enhances the importance of environmental practices. The emphasis of political ecology on land and agricultural power dynamics becomes insufficient as the study progresses. It leaves culinary knowledge underexplored, and this particular gap is highlighted through the theory of culinary ecology focusing on the cultural and sensory aspects of food. The study also stresses the SDG2 metrics on food sovereignty. It explores the food system through a culinary lens and cultural grounding through the findings derived from analyzing Noorang. The ecological activity can be said to be complete only when the products of cultivation undergo the process of cooking and become food.",
+      "summary": {
+        "gist": "この論文は、収穫後の料理や食の共有といった日常的な食実践が、伝統的な食知識の維持と伝達において重要な役割を果たすにもかかわらず、従来の生態学的ガバナンスの議論において見過ごされてきた点を指摘する。そして、南インドの先住民族の事例を通じて、料理知識が持つ生態学的意義と、それが生態系管理および食料システムレジリエンスにいかに貢献するかを明らかにしている。",
+        "novelty": "従来の生態学的ガバナンスや持続可能性に関する議論が栽培段階で終結し、収穫後の料理実践を単なる家事として軽視してきた研究空白を埋めるものだ。本研究は、料理生態学の理論を援用し、料理、共有、記憶といった行為を環境管理と知識伝達の一部と捉えることで、食料システムにおける料理知識の生態学的役割を再定義している。特に、政治生態学が土地や農業の権力力学に焦点を当て、料理知識を未探求のままにしてきたギャップを、文化・感覚的側面から補完する点で新規性を持つ。",
+        "method": "本研究は、インドのケララ州ワイナードにおける「Noorangイニシアチブ」を対象とした単一事例探索的研究である。このイニシアチブにおける先住民族の料理実践を深く掘り下げ、生態系回復、地域知識、および集団的エージェンシー間の相互関係を分析している。理論的枠組みとしては、料理、共有、記憶を環境管理と知識伝達の一部と見なす「料理生態学」と、土地および農業の権力力学に焦点を当てる「政治生態学」を併用している。特に、料理生態学は、栽培が生態学的活動の終わりではなく、継続的な文化的再解釈の一部であると主張し、食料主権に関するSDG2の指標も強調しながら、料理の視点と文化的根拠を通じて食料システムを探求している。",
+        "results": "分析の結果、栽培された生産物が料理の過程を経て「食」となることで初めて生態学的活動が完結すると結論付けている。このことは、日常的な料理実践が、先住民族コミュニティにおける生態系管理と食料システムレジリエンスに不可欠な貢献を果たすことを示唆している。具体的には、料理知識が伝統的な食料知識の維持と伝達を可能にし、それが地域生態系の保全と持続可能な食料供給に直接的に結びつくメカニズムを明らかにしている。"
+      },
+      "doi": "10.3389/fsufs.2026.1810849",
+      "source": "openalex",
+      "titleJa": "料理知識の生態学的役割の再評価：南インドのウラーリ・クルマ族の事例から",
+      "journal": "Frontiers in Sustainable Food Systems"
+    },
+    {
+      "id": "W7161248360",
+      "title": "ADOPTION OF MOBILE-BASED INFORMATION SYSTEM FOR DIGITAL INCLUSION OF SUGARCANE FARMERS IN INDIA",
+      "authors": [
+        "Ritik Kumar",
+        "Anuj Tomar",
+        "Anu Sharma",
+        "Rakesh Singh Negi"
+      ],
+      "publishedAt": "2026-05-15T12:00:00.000Z",
+      "url": "https://doi.org/10.29121/shodhkosh.v7.i7s.2026.7908",
+      "pdfUrl": "https://www.granthaalayahpublication.org/Arts-Journal/ShodhKosh/article/download/7908/7460",
+      "categories": [
+        "openalex",
+        "Inclusion (mineral)",
+        "Nonprobability sampling",
+        "Business",
+        "Information system"
+      ],
+      "abstract": "Across the global South, smallholder farmers face problems accessing information that limits their ability to participate fully in rural development. Mobile-based information systems can act as a catalyst for the digital inclusion of farmers and can improve their social, economic, and informational capacities. The study applied the Socio-technical system theory to analyse the adoption of information systems among farmers for their digital inclusion. The study adopted a descriptive research design, and the multi-stage purposive sampling was used for collecting data from 320 smallholder farmers in the region. Result highlights that the socio-economic characteristics of farmers are corelated with the adoption of information systems among farmers. In addition, they face challenges such as affordability, digital literacy and trust in adopting the information system. Finally, the findings of study have significant implications for researchers studying the relationship between society and technology and for policymakers designing digital policies related to the digital inclusion of rural communities.",
+      "summary": {
+        "gist": "本研究は、インドのサトウキビ小規模農家におけるデジタル包摂を目的としたモバイル情報システム（MBIS）の導入実態を社会技術システム理論に基づき分析したものであり、農家の社会経済的特性がMBIS導入と関連すること、および導入における費用、デジタルリテラシー、信頼といった課題が存在することを明らかにした。",
+        "novelty": "従来の研究がモバイル情報システムの導入要因を一般的に論じる傾向がある中、本研究はインドのサトウキビ小規模農家という特定の文脈において、デジタル包摂の観点から社会技術システム理論を適用し、その導入実態と阻害要因を詳細に分析した点に新規性がある。これにより、グローバルサウスにおける特定の作物生産者層のデジタル格差解消に向けた技術導入研究の空白を埋めるものだ。",
+        "method": "本研究は記述的調査デザインを採用し、多段階目的的サンプリング法を用いて、インドのサトウキビ小規模農家320名からデータを収集した。収集されたデータに基づき、社会技術システム理論の枠組みを用いて、農家の情報システム導入実態が分析された。",
+        "results": "分析の結果、農家の社会経済的特性がモバイル情報システムの導入と有意に関連していることが示された。また、農家は情報システム導入において、費用負担能力、デジタルリテラシー、およびシステムに対する信頼といった課題に直面していることが明らかになった。これらの知見は、社会と技術の関係性を研究する者、および農村コミュニティのデジタル包摂に関する政策を立案する者にとって重要な示唆を与えるものだ。"
+      },
+      "doi": "10.29121/shodhkosh.v7.i7s.2026.7908",
+      "source": "openalex",
+      "titleJa": "インドにおけるサトウキビ小規模農家のデジタル包摂に向けたモバイル情報システムの導入",
+      "journal": "ShodhKosh Journal of Visual and Performing Arts"
+    },
+    {
+      "id": "W7161256965",
+      "title": "Regional differentiation of changes in pig livestock procurement in Poland in 1999–2022 in the context of economic and environmental conditions",
+      "authors": [
+        "Anna Olszańska",
+        "Anna Sylwia Kowalska",
+        "Klaudia Paskudzka",
+        "Joanna Szymańska"
+      ],
+      "publishedAt": "2026-05-15T12:00:00.000Z",
+      "url": "https://doi.org/10.34659/eis.2026.97.2.1143",
+      "pdfUrl": "https://ekonomiaisrodowisko.pl/journal/article/download/1143/1035",
+      "categories": [
+        "openalex",
+        "Livestock",
+        "Agriculture",
+        "Context (archaeology)",
+        "Procurement"
+      ],
+      "abstract": "The aim of the study was to identify and analyse regional differentiation in the changes in pig livestock procurement in Poland between 1999 and 2022, as well as to indicate the main economic and environmental factors determining these changes. The research was based on data from the Statistics Poland (GUS), the National Research Institute of Agricultural and Food Economics (IERiGŻ- PIB), the Ministry of Climate and Environment (MKiŚ), and the Chief Veterinary Inspectorate (GIW). Descriptive and comparative statistics, along with the method of standard deviations from the mean value for a given year, were applied to assess the procurement intensity in relation to agricultural land area. During the analysed period, production became increasingly concentrated in selected voivodeships- namely Wielkopolskie, Pomorskie, Łódzkie, and Mazowieckie- accompanied by a decline in the importance of western and southern regions. The observed changes were driven by economic factors, including the decrease in the number of small and medium- sized farms and the growing import of piglets, as well as by environmental pressures and the spread of African swine fever (ASF). The findings highlight the need to implement pig farming technologies that mitigate environmental impacts, to strengthen strategies for combating ASF, and to promote the principles of sustainable development.",
+      "summary": {
+        "gist": "本研究は、1999年から2022年にかけてのポーランドにおける豚家畜調達の地域差とその変遷を特定し、その主要な経済的および環境的決定要因を明らかにした。分析の結果、豚家畜生産は特定の県に集約が進む一方で、西部および南部の地域の重要性が低下している実態が示された。",
+        "novelty": "本研究は、1999年から2022年という長期にわたるポーランドの豚家畜調達における地域差の変遷を、経済的要因と環境的要因の両面から包括的に分析した点に新規性がある。これにより、従来の断片的な知見に対し、生産集約化の動態とその背景にある複合的な要因を統合的に理解するための新たな視点を提供している。",
+        "method": "本研究は、ポーランド統計局（GUS）、国立農業・食料経済研究所（IERiGŻ- PIB）、気候・環境省（MKiŚ）、主任獣医検査官（GIW）のデータを用いて、1999年から2022年までの期間を対象としている。分析手法としては、記述統計、比較統計に加え、農業用地面積に対する調達強度を評価するために、特定の年の平均値からの標準偏差を用いる手法が適用された。",
+        "results": "分析の結果、調査期間中に豚家畜生産はヴィエルコポルスカ県、ポモージェ県、ウッチ県、マゾフシェ県といった特定の県に集約が進み、一方で西部および南部の地域の重要性は低下したことが明らかになった。これらの変化は、中小規模農場の減少や子豚輸入の増加といった経済的要因に加え、環境負荷の増大やアフリカ豚熱（ASF）の蔓延といった環境・疾病要因によって引き起こされている。この知見は、環境負荷を軽減する豚飼養技術の導入、ASF対策の強化、および持続可能な開発原則の推進の必要性を示唆している。"
+      },
+      "doi": "10.34659/eis.2026.97.2.1143",
+      "source": "openalex",
+      "titleJa": "ポーランドにおける豚家畜調達の地域差とその経済・環境要因：1999-2022年の分析",
+      "journal": "Economics and Environment"
+    },
+    {
+      "id": "W7161147274",
+      "title": "Research to Evaluate the Impact of the Rural Development Investment Support Program in the Aydın Region",
+      "authors": [
+        "Fatih Karaman",
+        "Ferit Çobanoğlu"
+      ],
+      "publishedAt": "2026-05-14T12:00:00.000Z",
+      "url": "https://doi.org/10.31679/adamakademi.1553438",
+      "pdfUrl": "https://dergipark.org.tr/en/download/article-file/4229237",
+      "categories": [
+        "openalex",
+        "Business",
+        "Profitability index",
+        "Investment (military)",
+        "Productivity"
+      ],
+      "abstract": "This study aims to evaluate the contribution of the Rural Development Investment Support Program (RDISP) to the agricultural sector and its impact on farmers in Aydın province. The main material of the research is the data obtained from the questionnaire application forms, which were conducted as personal interviews with the selected producers from the districts of Çine, Karpuzlu, Germencik, and Sultanhisar, where the support program is implemented. In the survey study, 46 producers who benefited from the support for tools and machinery under the RDISP in 2022 and 2023 were interviewed. Questions were asked to the producers under different main headings related to the support program. The producers were asked questions about the employment of workers before and after the support, the productivity of products and the profitability of the business, the impact of the support program on the purchase of tools and machinery, what should be done to ensure that the RDISP is implemented and becomes more successful, the advantages and disadvantages of the program in question, and the answers received were examined in the context of the study.",
+      "summary": {
+        "gist": "本研究は、トルコのアydın県における農村開発投資支援プログラム（RDISP）が農業部門および農家にもたらす貢献と影響を評価することを目的としている。具体的には、本プログラムが農家の雇用、生産性、収益性、および農機具購入に与える影響を多角的に分析している。",
+        "novelty": "既存研究では、特定の地域における農村開発支援プログラムの実態とその受益農家への具体的な影響に関する詳細な評価は限定的である。本研究は、アydın県という特定の地域に焦点を当て、RDISPの受益農家から直接得られた一次データを用いて、プログラムの多角的な影響を実証的に分析することで、地域レベルでの政策効果評価に関する研究の空白を埋めるものだ。",
+        "method": "本研究では、アydın県のÇine、Karpuzlu、Germencik、Sultanhisarの各地区において、2022年および2023年にRDISPの農機具支援を受けた農家46名を対象に、個人面接形式のアンケート調査を実施し、一次データを収集している。調査では、支援前後の雇用状況、生産物の生産性、事業の収益性、農機具購入への影響、プログラムの改善点、およびその利点・欠点に関する質問がなされ、得られた回答が分析の主要な材料となっている。具体的な計量経済学的手法については言及されていない。",
+        "results": "本アブストラクトからは、具体的な分析結果や定量的な推定値は示されていない。しかし、調査を通じて、RDISPが農家の雇用、生産性、収益性、農機具購入に与える影響、およびプログラムの改善点や利点・欠点に関する農家の認識が詳細に検討されたことが示唆されている。"
+      },
+      "doi": "10.31679/adamakademi.1553438",
+      "source": "openalex",
+      "titleJa": "アydın県における農村開発投資支援プログラムが農業部門に与える影響評価に関する研究",
+      "journal": "ADAM AKADEMİ Sosyal Bilimler Dergisi"
+    },
+    {
+      "id": "W7161020276",
+      "title": "Scenario modeling of grain production potential in conditions of military risk: the case of Ukraine",
+      "authors": [
+        "Yuliia Zavadska",
+        "Iatsenko Oleksandr",
+        "Mariantonietta Fiore",
+        "Yatsenko Olha",
+        "Khrystenko Olha",
+        "Lyskova Lesia"
+      ],
+      "publishedAt": "2026-05-13T12:00:00.000Z",
+      "url": "https://doi.org/10.3389/fsufs.2026.1737907",
+      "pdfUrl": "https://www.frontiersin.org/journals/sustainable-food-systems/articles/10.3389/fsufs.2026.1737907/pdf",
+      "categories": [
+        "openalex",
+        "Resilience (materials science)",
+        "Production (economics)",
+        "Business",
+        "Autoregressive integrated moving average"
+      ],
+      "abstract": "This paper examines the transformation of Ukraine’s grain sector under the conditions of the full-scale war and its implications for global food security. Using annual data from 2000 to 2023, we forecast grain production potential for 2025–2026 carrying out ARIMA models (a non-seasonal specification within the SARIMA family). To support interpretation under heightened uncertainty, the results are discussed through three military-risk scenarios -low, medium, and high—that differ in the severity of constraints on agricultural operations and export logistics. The study finds that even under the high-risk scenario, Ukraine retains the capacity to supply over 5% of global grain exports. We argue that the key determinants of sector resilience include technological modernization, institutional support, and logistical adaptation. Additionally, an integrated scenario matrix is developed to link strategic priorities, implementation levers, and financing sources for grain-sector modernization. Four vectors for strengthening long-term resilience are identified: economic, technological, institutional, and European integration. The findings suggest that a coordinated, multi-vector strategy can help offset wartime losses and support Ukraine’s integration into the European market with higher value added and greater resistance to external shocks.",
+      "summary": {
+        "gist": "本論文は、ウクライナの穀物部門が全面戦争下においてもグローバルな食料供給において重要な役割を維持する能力を有し、その回復力が技術的近代化、制度的支援、および物流適応に大きく依存することを明らかにしている。",
+        "novelty": "先行研究が戦時下の農業生産に焦点を当てる中で、本研究はウクライナの穀物部門における軍事リスクの具体的なシナリオに基づいた将来予測を行い、それがグローバルな食料安全保障に与える影響を定量的に評価した点で新規性を持つ。特に、ARIMAモデルを用いて2025年から2026年の生産ポテンシャルを予測し、低・中・高の3つの軍事リスクシナリオ下でその解釈を深めている。さらに、戦略的優先事項、実施手段、資金源を統合したシナリオマトリックスを開発し、長期的な回復力強化のための多角的なベクトルを特定している点も、従来の分析には見られない貢献である。",
+        "method": "分析には2000年から2023年までの年次データが用いられた。計量経済学的手法として、SARIMAファミリー内の非季節性仕様であるARIMAモデルを適用し、2025年から2026年の穀物生産ポテンシャルを予測している。この予測結果は、農業活動および輸出物流に対する制約の厳しさに応じて設定された、低、中、高の3つの軍事リスクシナリオを通じて解釈されている。",
+        "results": "分析の結果、高リスクシナリオ下においてもウクライナが世界の穀物輸出の5%以上を供給する能力を保持していることが判明した。穀物部門の回復力の主要な決定要因は、技術的近代化、制度的支援、および物流適応であると結論付けている。また、穀物部門の近代化に向けた戦略的優先事項、実施手段、資金源を連携させる統合シナリオマトリックスが開発され、経済的、技術的、制度的、欧州統合という4つの長期的な回復力強化ベクトルが特定された。これらの知見は、協調的な多角的戦略が戦時中の損失を相殺し、より高い付加価値と外部ショックへの耐性を持つウクライナの欧州市場への統合を支援することを示唆している。"
+      },
+      "doi": "10.3389/fsufs.2026.1737907",
+      "source": "openalex",
+      "titleJa": "軍事リスク下におけるウクライナの穀物生産ポテンシャルに関するシナリオ分析",
+      "journal": "Frontiers in Sustainable Food Systems"
+    }
+  ]
+}

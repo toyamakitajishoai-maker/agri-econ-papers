@@ -2,15 +2,21 @@ name: Daily Paper Update
 
 on:
   schedule:
-    - cron: "0 21 * * *"
+    # 毎朝 7:00 JST = 22:00 UTC（前日）
+    - cron: "0 22 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: daily-paper-update
+  cancel-in-progress: false
+
 jobs:
   update-papers:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -19,15 +25,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+          cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Fetch papers
         env:
-          ARXIV_COOLDOWN_MS: "15000"
           OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO }}
           UNPAYWALL_EMAIL: ${{ secrets.UNPAYWALL_EMAIL }}
+          MAX_PAPERS: "5"
         run: npm run fetch
 
       - name: Summarize papers
@@ -35,11 +42,16 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: npm run summarize
 
+      - name: Extract key figures from PDFs
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: npm run figures
+
       - name: Commit and push data updates
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/*.json
+          git add data/*.json public/figures/*.png
           if git diff --cached --quiet; then
             echo "No data changes to commit."
             exit 0

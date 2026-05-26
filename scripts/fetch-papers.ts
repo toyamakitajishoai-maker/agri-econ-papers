@@ -1,5 +1,5 @@
 import { config as loadEnv } from "dotenv";
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile } from "node:fs/promises";
 
 loadEnv({ path: ".env.local" });
 loadEnv();
@@ -9,6 +9,7 @@ import type { ArxivPaper } from "@/lib/arxiv";
 import { dedupeByArxivId, filterAgriculturePapers } from "@/lib/filter";
 import { fetchOpenAlexRecentWorks } from "@/lib/openAlex";
 import { fetchSemanticScholarArxivPapers } from "@/lib/semanticScholar";
+import { writeJsonFileAtomic } from "@/lib/safeWriteJson";
 import type { Paper } from "@/lib/types";
 import { lookupOpenAccessPdfUrl } from "@/lib/unpaywall";
 
@@ -25,7 +26,7 @@ const OPENALEX_SEARCH = "agricultural economics food security rural farm land po
 const SEMANTIC_DELAY_MS = 2000;
 const UNPAYWALL_GAP_MS = 280;
 
-const MAX_PAPERS = 15;
+const MAX_PAPERS = Number(process.env.MAX_PAPERS ?? 5);
 
 function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -94,7 +95,7 @@ async function updateIndex(dateString: string) {
 
   const nextDates = [dateString, ...dates.filter((d) => d !== dateString)].slice(0, 30);
 
-  await writeFile(indexPath, JSON.stringify({ dates: nextDates }, null, 2), "utf-8");
+  await writeJsonFileAtomic(indexPath, { dates: nextDates });
 }
 
 async function fetchArxivPool(now: Date): Promise<ArxivPaper[]> {
@@ -230,7 +231,7 @@ async function main() {
   );
 
   const outputPath = `${DATA_DIR}/${today}.json`;
-  await writeFile(outputPath, JSON.stringify({ date: today, papers }, null, 2), "utf-8");
+  await writeJsonFileAtomic(outputPath, { date: today, papers });
   await updateIndex(today);
 
   console.log(`Saved ${papers.length} papers to ${outputPath} (OpenAlex + arXiv + 補助ソース)`);

@@ -16,7 +16,7 @@
   - `data/YYYY-MM-DD.json`
   - `data/index.json`（過去30日の日付一覧）
 - 配信:
-  - GitHub Actions で毎朝6:00 JSTに自動更新
+  - GitHub Actions で毎朝7:00 JSTに自動更新（論文5件・要約・図表）
   - Vercelで自動デプロイ
 
 ## 2. ローカル実行手順
@@ -58,6 +58,12 @@ AI要約:
 npm run summarize
 ```
 
+図表抽出（PDFから主要図1枚）:
+
+```bash
+npm run figures
+```
+
 ## 4. Gemini APIキーの取得方法
 
 1. [Google AI Studio](https://aistudio.google.com/app/apikey) を開く  
@@ -90,11 +96,12 @@ npm run summarize
 - OpenAlex の検索語・期間: `scripts/fetch-papers.ts` の `OPENALEX_SEARCH` と `OPENALEX_LOOKBACK_DAYS`
 - 取得対象カテゴリの変更: `scripts/fetch-papers.ts` の `TARGET_CATEGORIES`
 - 農業系キーワードの変更: `lib/filter.ts` の `AGRI_KEYWORDS`
-- 取得件数の変更: `scripts/fetch-papers.ts` 内の `slice(0, 15)` や API の `limit`
+- 取得件数の変更: `scripts/fetch-papers.ts` の `MAX_PAPERS`（既定5件。環境変数 `MAX_PAPERS` でも指定可）
 - 要約フォーマットやプロンプトの変更: `lib/gemini.ts`
 
 ## 8. GitHub Actions の実行タイミング
 
 - ファイル: `.github/workflows/daily-update.yml`
-- 定期実行: `0 21 * * *`（UTC）= 毎朝 6:00 JST
-- 手動実行: `workflow_dispatch` 対応
+- 定期実行: `0 22 * * *`（UTC）= 毎朝 7:00 JST
+- 処理内容: 論文取得 → 要約 → 図表抽出 → `data/` と `public/figures/` をコミット
+- 手動実行: GitHub の Actions タブ → Daily Paper Update → Run workflow

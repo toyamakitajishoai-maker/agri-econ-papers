@@ -48,6 +48,7 @@ export function getSummarySections(summary: PaperSummary | LegacyPaperSummary): 
       { title: "新規性", body: summary.novelty },
       { title: "手法", body: summary.method },
       { title: "結果", body: summary.results },
+      ...(summary.figures?.trim() ? [{ title: "図表", body: summary.figures }] : []),
     ];
   }
 

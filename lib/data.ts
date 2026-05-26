@@ -86,14 +86,28 @@ export async function getTodayPapers(): Promise<{
 }
 
 export async function getPaperById(id: string): Promise<Paper | null> {
-  const dates = await getAvailableDates();
+  const ctx = await getPaperWithSiblings(id);
+  return ctx?.paper ?? null;
+}
+
+/** 同一日の論文リストとあわせて取得（関連記事用） */
+export async function getPaperWithSiblings(
+  id: string
+): Promise<{ paper: Paper; date: string; siblings: Paper[] } | null> {
   const normalizedId = decodeURIComponent(id);
+  const indexDates = await getAvailableDates();
+  const diskDates = await listStoredDatesDescending();
+  const dates = [...new Set([...indexDates, ...diskDates])].sort((a, b) => b.localeCompare(a));
 
   for (const date of dates) {
     const papers = await getDailyPapers(date);
-    const found = papers.find((paper) => paper.id === normalizedId);
-    if (found) {
-      return found;
+    const index = papers.findIndex((p) => p.id === normalizedId);
+    if (index >= 0) {
+      return {
+        paper: papers[index],
+        date,
+        siblings: papers.filter((_, i) => i !== index),
+      };
     }
   }
 

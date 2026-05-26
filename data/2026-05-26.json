@@ -1,0 +1,195 @@
+{
+  "date": "2026-05-26",
+  "papers": [
+    {
+      "id": "W7162205795",
+      "title": "Sustainable Livestock Systems to Improve Human Health, Nutrition, and Economic Status – An Article Review",
+      "authors": [
+        "Abey Sobrepeńa",
+        "Aldrees Ansary Guro",
+        "Reymard Galarrita"
+      ],
+      "publishedAt": "2026-05-24T12:00:00.000Z",
+      "url": "https://doi.org/10.65339/ijsair.v2.i2.481",
+      "pdfUrl": "https://www.ijsair.com/index.php/ijsair/article/download/575/555",
+      "categories": [
+        "openalex",
+        "Livestock",
+        "Sustainability",
+        "Livelihood",
+        "Natural resource economics"
+      ],
+      "abstract": "Sustainability issues related to livestock have been discussed primarily with an emphasis on their environmental effects without sufficient consideration for nutrition and other socio-economic factors. The purpose of this article review is to analyze the paper by Varijakshapanicker et al. (2019) that highlights the potential of livestock as a critical resource in enhancing the health of humans, food and nutritional security, and economic stability in developing countries. In the reviewed paper, the authors make use of the results obtained in the areas of nutrition science, environmental science, and developmental economics to elaborate on the role of livestock as an asset in terms of providing livelihood opportunities in rural areas, ecosystem services, and converting non-food biomass resources to food products. At the same time, the paper identifies several problems, including greenhouse gas emissions, inequitable distribution of food resources, and sociocultural obstacles associated with the consumption of animal-source foods. In summary, the paper provides a vital contribution to the literature through its balanced approach to sustainability that accounts for both environmental and nutritional factors.",
+      "summary": {
+        "gist": "本論文は、Varijakshapanicker et al. (2019) の論文をレビューし、家畜が開発途上国における人間の健康、食料・栄養安全保障、経済安定を向上させる重要な資源である可能性を明らかにしています。同時に、温室効果ガス排出や食料資源の不公平な分配といった課題も指摘し、環境と栄養の両面を考慮した持続可能性へのバランスの取れたアプローチの重要性を強調しています。",
+        "novelty": "従来の家畜に関する持続可能性の議論が環境影響に偏りがちであったのに対し、本レビュー対象論文は栄養やその他の社会経済的要因への影響を十分に考慮していなかった研究の空白を埋めています。栄養科学、環境科学、開発経済学の知見を統合することで、家畜が農村部の生計機会、生態系サービス、非食料バイオマスから食料への転換といった多角的な資産としての役割を提示している点が新規性です。",
+        "method": "本論文は、特定の調査地域や対象農家数、調査期間を直接分析したものではなく、Varijakshapanicker et al. (2019) の論文をレビューする形式をとっています。レビュー対象論文は、栄養科学、環境科学、開発経済学といった複数の分野からの既存研究結果を統合し、家畜の役割と課題について考察しています。具体的な計量経済学的手法やデータ分析は、レビュー対象論文に依拠しています。",
+        "results": "レビュー対象論文は、家畜が農村地域での生計機会の提供、生態系サービスの創出、非食料バイオマス資源から食料製品への転換を通じて、人間の健康、食料・栄養安全保障、経済安定を向上させる資産であることを示しています。一方で、温室効果ガス排出、食料資源の不公平な分配、動物性食品の消費に関連する社会文化的障害といった問題点も特定しています。このバランスの取れたアプローチは、持続可能性に関する文献に重要な貢献をしていると結論付けています。",
+        "figures": "アブストラクトに図表の記述なし"
+      },
+      "doi": "10.65339/ijsair.v2.i2.481",
+      "source": "openalex",
+      "journal": "International Journal of Sustainability and Advanced Integrated Research",
+      "titleJa": "持続可能な家畜システムが人間の健康、栄養、経済状況を改善する可能性に関する論文レビュー",
+      "catchTitle": "家畜は環境負荷だけではない？",
+      "hook": "家畜が人間の健康、栄養、経済に与える多面的な影響について、最新の研究が明らかにしています。",
+      "keyFigure": {
+        "imagePath": "/figures/W7162205795.png",
+        "page": 2,
+        "caption": "本研究の背景と目的、そして持続可能な家畜システムが人間の健康、栄養、経済状況を改善する可能性について説明しています。",
+        "extractedAt": "2026-05-26T01:16:36.481Z"
+      }
+    },
+    {
+      "id": "W7161974967",
+      "title": "Plural policing in rural contexts: a GPS-based evaluation of multi-entity patrols against fruit theft",
+      "authors": [
+        "Mamoru Amemiya",
+        "Ai Suzuki",
+        "Takahito Shimada",
+        "Hideharu Kurita"
+      ],
+      "publishedAt": "2026-05-22T12:00:00.000Z",
+      "url": "https://doi.org/10.1057/s41284-026-00543-2",
+      "pdfUrl": "https://link.springer.com/content/pdf/10.1057/s41284-026-00543-2.pdf",
+      "categories": [
+        "openalex",
+        "Plural",
+        "Airport security",
+        "Business",
+        "Organised crime"
+      ],
+      "abstract": "This study examined the efficacy of multi-entity collaborative patrols in rural contexts through a quantitative analysis of GPS-tracked patrol activities aimed at preventing agricultural theft. We tracked patrols conducted by six organizations in two Japanese municipalities during the 2023 fruit harvest season. We found significant differences in patrol characteristics across spatial scale, movement patterns, temporal distribution, and physical route properties. Furthermore, the diverse patrol entities substantially improved both the temporal and spatial coverage. This study contributes to rural criminology and plural policing research by introducing GPS-based quantitative assessment techniques. The results indicate the value of plural policing approaches in rural contexts, where collaboration among entities with complementary operational characteristics can maximize limited resources for crime prevention.",
+      "summary": {
+        "gist": "本研究は、農村地域における果物盗難防止を目的とした複数主体による共同パトロールの有効性を、GPS追跡データを用いて定量的に評価しました。その結果、多様な主体によるパトロールが時間的・空間的カバー範囲を大幅に改善することが明らかになりました。",
+        "novelty": "従来の農村犯罪学や複数主体による警備に関する研究では、GPSベースの定量的な評価手法が導入されていませんでした。本研究は、この研究の空白を埋めるものであり、補完的な運用特性を持つ複数の組織が連携することで、限られた資源を最大限に活用できることを示しています。",
+        "method": "本研究では、2023年の果物収穫期に日本の2つの自治体で、6つの組織が実施したパトロール活動をGPSで追跡しました。このGPS追跡データを用いて、パトロールの空間的規模、移動パターン、時間的分布、物理的な経路特性における差異を分析し、多様なパトロール主体が時間的および空間的カバー範囲に与える影響を評価しました。",
+        "results": "分析の結果、パトロールの特性には空間的規模、移動パターン、時間的分布、物理的経路特性において組織間で有意な差があることが判明しました。さらに、多様なパトロール主体が連携することで、時間的および空間的カバー範囲が大幅に改善されることが示されました。このことは、農村地域における複数主体による警備アプローチの価値を示唆しており、補完的な運用特性を持つ組織間の連携が犯罪防止のための限られた資源を最大化できることを示しています。",
+        "figures": "アブストラクトに図表の記述なし"
+      },
+      "doi": "10.1057/s41284-026-00543-2",
+      "source": "openalex",
+      "journal": "Security Journal",
+      "titleJa": "農村地域における複数主体による警備活動：果物盗難防止のためのGPSベース評価",
+      "catchTitle": "果物盗難、複数警備で防げるか？",
+      "hook": "農村での果物盗難対策として、複数の組織が連携して行う警備活動の効果をGPSデータで分析しました。",
+      "keyFigure": {
+        "imagePath": "/figures/W7161974967.png",
+        "page": 8,
+        "caption": "様々な組織によるパトロールと滞在地点の分布を地図で示しています。",
+        "extractedAt": "2026-05-26T01:16:42.278Z"
+      }
+    },
+    {
+      "id": "W7162132175",
+      "title": "Impact of National Fadama Development Project III on Wellbeing of Farming Households in Delta State, Nigeria",
+      "authors": [
+        "Ogheneakpobor Oyıbo",
+        "Florence Amara Uzoka",
+        "Festus Udoka Uchegbu"
+      ],
+      "publishedAt": "2026-05-22T12:00:00.000Z",
+      "url": "https://doi.org/10.33462/jotaf.1724413",
+      "pdfUrl": "https://dergipark.org.tr/en/download/article-file/4979320",
+      "categories": [
+        "openalex",
+        "Livelihood",
+        "Agriculture",
+        "Poverty",
+        "Socioeconomics"
+      ],
+      "abstract": "National fadama development project (NFDP) III has been implemented by the World Bank, Federal and states Governments of Nigeria to resolve, among others, issues relating to wellbeing. However, NFDP III extent of contribution to farming households’ wellbeing has not been sufficiently researched. Thus, this research looked into NFDP III impact on wellbeing of farming households in Delta State, Nigeria. Multi-stage sampling procedure was used to select 108 respondents (NFDP III beneficiaries). Interview schedule was used to obtain data on respondents demographic and enterprise characteristics, participation status in NFDP III, food security, reduced vulnerability to poverty, livelihood outcome and wellbeing. Data were analyzed with descriptive statistics, Chi-square, Pearson Product Moment Correlation, independent samples t-test, and multiple linear regression at α0.05. Majority were females (54.6%), married (75.9%) and non-members of social groups (52.8%). Crop farming/production (59.3%) was the predominant` non-NFDP III enterprise. The mean extension contact per year, farm size, farming experience, income from NFDP III enterprises and income from Non-NFDP III enterprises were 3.0 ± 4.0 yearly, 2.8 ± 4.3 ha, 27.0 ± 14.0 years, ₦2,442,022.00 ± 1,897,935.00 yearly, and ₦2,257,828.00 ± 3,925,102.00 yearly, respectively. Approximately 58.0% of the beneficiaries had inadequate participation in NFDP III, 54.6% were food secure, 53.7% had less vulnerability to poverty and 52.8% had high livelihood outcome. Over 56.0% had high wellbeing. The food security of farming households with high (34.4 ± 9.0) and low (29.3 ± 8.6) participation in NFDP III differed significantly (t=-2.96). Farming households with high participation (-2.9 ± 9.4) in NFDP III had less vulnerability to poverty than those with low participation (-7.3 ± 12.9). Farming households with high participation (34.3 ± 12.5) in NFDP III had high livelihood outcome than those with low participation (26.9 ± 14.1). Membership of social group (χ2 = 7.48), reduced vulnerability to poverty (r = 0.18), and income from non-NFDP III enterprises (r = 0.18) were all positively correlated with NFDP III beneficiaries wellbeing. Wellbeing of farming households with high (89.8±19.48) and low (81.2±20.86) participation in NFDP III differed significantly (t=-2.18). Predictors of wellbeing were mostly food security (β=-4.79), vulnerability to poverty (β=-2.75), livelihood outcome (β=4.65) and participation status (β=0.43). Farming households with high participation in NFDP III had better wellbeing than those with low participation. NFDP III improved the wellbeing of farming households in Delta State, Nigeria.",
+      "summary": {
+        "gist": "本研究は、ナイジェリアのデルタ州において、世界銀行などが実施する国家ファダマ開発プロジェクトIII（NFDP III）が農業世帯の幸福に与える影響を分析しました。その結果、NFDP IIIへの参加度が高い農業世帯ほど、食料安全保障、貧困脆弱性の低減、生計の成果、そして全体的な幸福度が高いことが明らかになりました。",
+        "novelty": "これまでの研究では、NFDP IIIが農業世帯の幸福にどの程度貢献しているかについて十分に調査されていませんでした。本研究は、このギャップを埋めるため、NFDP IIIの受益者を対象に、プロジェクトへの参加が食料安全保障や貧困脆弱性、生計の成果、そして総合的な幸福に及ぼす具体的な影響を実証的に分析した点に新規性があります。",
+        "method": "本研究では、ナイジェリアのデルタ州において、多段階抽出法を用いてNFDP IIIの受益者108名を対象にデータを収集しました。調査期間は明記されていませんが、回答者の人口統計学的特性、事業特性、NFDP IIIへの参加状況、食料安全保障、貧困脆弱性の低減、生計の成果、幸福に関するデータを面接調査票を用いて取得しています。データの分析には、記述統計、カイ二乗検定、ピアソン積率相関係数、独立標本t検定、および重回帰分析がα0.05の有意水準で用いられました。",
+        "results": "分析の結果、NFDP IIIへの参加度が高い農業世帯は、低い世帯と比較して食料安全保障が有意に高く（高参加群34.4±9.0、低参加群29.3±8.6、t=-2.96）、貧困への脆弱性が低いことが示されました。また、高参加群は低参加群よりも生計の成果が高く（高参加群34.3±12.5、低参加群26.9±14.1）、全体的な幸福度も有意に高いことが判明しました（高参加群89.8±19.48、低参加群81.2±20.86、t=-2.18）。幸福度の予測因子としては、食料安全保障（β=-4.79）、貧困脆弱性（β=-2.75）、生計の成果（β=4.65）、および参加状況（β=0.43）が挙げられ、NFDP IIIがデルタ州の農業世帯の幸福を向上させたことが示唆されます。",
+        "figures": "アブストラクトに図表の記述なし"
+      },
+      "doi": "10.33462/jotaf.1724413",
+      "source": "openalex",
+      "journal": "Tekirdağ Ziraat Fakültesi Dergisi",
+      "titleJa": "ナイジェリア・デルタ州における国家ファダマ開発プロジェクトIIIが農業世帯の幸福に与える影響",
+      "catchTitle": "農業プロジェクト、幸福度を高める？",
+      "hook": "ナイジェリアの農業開発プロジェクトが、農家の食料安全保障や貧困脆弱性の軽減にどう貢献したのかを明らかにしています。",
+      "keyFigure": {
+        "imagePath": "/figures/W7162132175.png",
+        "page": 8,
+        "caption": "本研究の参加者の企業活動への参加状況と、その平均値および標準偏差を示した表です。",
+        "extractedAt": "2026-05-26T01:16:50.203Z"
+      }
+    },
+    {
+      "id": "W7162096050",
+      "title": "Agribusiness Model Based on Creating Shared Value in Optimizing Nonproductive Land in Plantation Areas",
+      "authors": [
+        "Kharisma Arta",
+        "A. C. Tridakusumah",
+        "Iwan Setiawan"
+      ],
+      "publishedAt": "2026-05-22T12:00:00.000Z",
+      "url": "https://doi.org/10.59188/eduvest.v6i5.53178",
+      "pdfUrl": "https://eduvest.greenvest.co.id/index.php/edv/article/download/53178/5341",
+      "categories": [
+        "openalex",
+        "Agribusiness",
+        "Business",
+        "Social capital",
+        "Stakeholder"
+      ],
+      "abstract": "This research examines the economic and social impacts of the Plantation Community Empowerment Program (PMDK) and develops a Creating Shared Value (CSV)-based agribusiness model through the optimization of non-productive land in plantation areas. Although the application of CSV in agribusiness has increased, studies that explain the integrated mechanisms linking land optimization, community empowerment, and agribusiness systems remain limited. This research employed a qualitative case study approach at PTPN I Regional 2, Indonesia, involving 16 key informants from company management, field officers, local communities, and village government representatives. Data were collected through in-depth interviews, field observations, and documentation involving key stakeholders and analyzed using triangulation techniques. The findings reveal that the PMDK program increased land utilization by 60–70% and community income by 60–150%, with some cases reaching up to threefold growth. The program also improved access to agribusiness activities, reduced land conflicts, and strengthened social relations. However, constraints persist in capital access, human resource capacity, and market integration. This study proposes an integrative CSV-based agribusiness empowerment model that positions non-productive land as a strategic entry point for generating shared economic and social value. The findings contribute by offering a more comprehensive framework that links resource optimization, stakeholder collaboration, and agribusiness system integration in plantation-based rural development",
+      "summary": {
+        "gist": "本研究は、プランテーション地域におけるコミュニティエンパワーメントプログラム（PMDK）が、非生産的土地の最適化を通じて経済的・社会的にいかに貢献するかを検証し、共有価値創造（CSV）に基づくアグリビジネスモデルを提示しています。",
+        "novelty": "従来の研究では、アグリビジネスにおけるCSVの応用は増えているものの、土地の最適化、コミュニティのエンパワーメント、およびアグリビジネスシステムを統合的に結びつけるメカニズムを説明する研究は限られていました。本研究は、これらの要素を包括的に連結する枠組みを提示することで、この研究の空白を埋めています。",
+        "method": "本研究は、インドネシアのPTPN I Regional 2を対象とした質的なケーススタディ手法を用いています。企業経営者、現場担当者、地域コミュニティ、村政府代表者からなる16名の主要な情報提供者に対し、詳細なインタビュー、現地観察、文書調査を通じてデータを収集しました。データ分析には、複数の情報源を照合するトライアンギュレーション手法が用いられています。",
+        "results": "PMDKプログラムは、非生産的土地の利用率を60〜70%増加させ、コミュニティの収入を60〜150%向上させ、一部のケースでは最大3倍の成長を達成したことが明らかになりました。また、本プログラムはアグリビジネス活動へのアクセスを改善し、土地紛争を減少させ、社会関係を強化する効果も示しています。しかし、資本アクセス、人材能力、市場統合における制約が依然として存在することが指摘されています。本研究は、非生産的土地を共有経済的・社会的価値を創出するための戦略的な出発点と位置づける、統合的なCSVベースのアグリビジネスエンパワーメントモデルを提案しています。",
+        "figures": "アブストラクトに図表の記述なし"
+      },
+      "doi": "10.59188/eduvest.v6i5.53178",
+      "source": "openalex",
+      "journal": "Eduvest - Journal Of Universal Studies",
+      "titleJa": "プランテーション地域における非生産的土地最適化を通じた共有価値創造型アグリビジネスモデル",
+      "catchTitle": "遊休地活用で地域活性化？",
+      "hook": "プランテーションの非生産的土地を有効活用するプログラムが、地域社会に経済的・社会的利益をもたらすメカニズムを解明しています。"
+    },
+    {
+      "id": "W7162093761",
+      "title": "Effect of Rural Road Infrastructure on Livelihood Outcomes of Small-Scale Farmers: The Contribution of Non-Farm Enterprises",
+      "authors": [
+        "Stellah Riunguh",
+        "M Sakwa",
+        "Assumpta Kagiri"
+      ],
+      "publishedAt": "2026-05-22T12:00:00.000Z",
+      "url": "https://doi.org/10.61424/rjbe.v4i2.820",
+      "pdfUrl": "https://bluemarkpublishers.com/index.php/RJBE/article/download/820/655",
+      "categories": [
+        "openalex",
+        "Livelihood",
+        "Business",
+        "Outreach",
+        "Rural area"
+      ],
+      "abstract": "This study looked at how Kenyan small-scale farmers' livelihood outcomes were affected by non-farm enterprises that resulted from the construction of rural road infrastructure. The study used a descriptive survey design to determine the association between rural road infrastructure and livelihood outcomes of small-scale farmers. It was based on the Sustainable Livelihood Framework and driven by a pragmatic research ethic. Further, the study employed cluster sampling to select households residing within a kilometer of the road corridor under study; thus, a sample of 395 houses was selected to provide data for the study. The two measures of the study's operationalization of non-farm enterprises were access to non-farm credit and income diversification. The majority of respondents reported greater engagement in non-farm economic activities after the rural road was constructed, indicating that the expansion of rural road infrastructure improved prospects for livelihood diversification. Farmers reported being involved in value-adding projects, small-scale trading, and dairy-related businesses. Through expanded outreach by lending organizations and financial institutions, improved road accessibility also made non-farm financing more accessible. The results also showed that access to economic opportunities, dietary diversity, and household income stability were all positively impacted by rural road infrastructure. However, because many households reported inadequate savings capacity and concerns about future livelihood security, the study also found that improvements in current economic conditions were not always accompanied by improved long-term financial resilience. According to regression analysis, small-scale farmers' livelihood outcomes were statistically significantly impacted by non-farm enterprises due to rural road infrastructure. However, the results also showed a negative relationship between household food security, non-farm credit availability, and income diversification, indicating a possible trade-off between non-farm activities and agricultural output. The study concluded that by encouraging non-farm enterprises, increasing market accessibility, and boosting small-scale farmers' financial inclusion, rural road infrastructure plays a crucial role in facilitating rural economic development. In order to support sustainable rural livelihoods, the study recommends making consistent investments in all-weather rural road infrastructure, growing rural non-farm enterprise support mechanisms, bolstering rural financial services, and developing policies that strike a balance between agricultural productivity and livelihood diversification.",
+      "summary": {
+        "gist": "本研究は、ケニアにおける農村道路インフラの整備が、非農業事業の活性化を通じて小規模農家の生計に与える影響を明らかにしました。具体的には、道路整備が非農業クレジットへのアクセスや所得多様化を促進し、経済機会、食料多様性、家計所得の安定にプラスの影響をもたらすことを示しています。",
+        "novelty": "本研究は、農村道路インフラが小規模農家の生計に与える影響を、非農業事業の貢献という視点から具体的に分析した点で新規性があります。特に、非農業クレジットへのアクセスと所得多様化を非農業事業の指標として操作化し、これらの経路を通じて生計改善が起こるメカニズムを検証した点は、従来の枠組みを深掘りするものです。",
+        "method": "本研究は、ケニアの農村地域に居住する小規模農家を対象に記述的調査デザインを採用しました。研究対象地域内の道路回廊から1km以内に居住する世帯をクラスターサンプリングにより抽出し、合計395世帯からデータを収集しました。分析には回帰分析が用いられ、非農業クレジットへのアクセスと所得多様化を非農業事業の指標として、農家の生計成果との関連性を検証しています。",
+        "results": "分析の結果、農村道路インフラは経済機会へのアクセス、食料多様性、家計所得の安定にプラスの影響を与えることが示されました。特に、回帰分析により、農村道路インフラに起因する非農業事業が小規模農家の生計成果に統計的に有意な影響を与えることが明らかになっています。しかし、家計の食料安全保障、非農業クレジットの利用可能性、所得多様化の間には負の関係も示され、非農業活動と農業生産性の間にトレードオフが存在する可能性が示唆されました。このことから、農村道路インフラは農村経済発展を促進する上で重要な役割を果たすものの、長期的な財政的レジリエンスの改善には課題があることが示唆されています。",
+        "figures": "アブストラクトに図表の記述なし"
+      },
+      "doi": "10.61424/rjbe.v4i2.820",
+      "source": "openalex",
+      "journal": "Research journal in business and economics.",
+      "titleJa": "農村道路インフラが小規模農家の生計に与える影響：非農業事業の貢献",
+      "catchTitle": "道路整備で農家の暮らしはどう変わる？",
+      "hook": "ケニアの小規模農家は、農村道路の整備によって非農業事業が活性化し、生計が多様化していることが明らかになりました。",
+      "keyFigure": {
+        "imagePath": "/figures/W7162093761.png",
+        "page": 8,
+        "caption": "農村道路インフラと小規模農家の生計成果の関係を示す回帰分析の結果が示されています。",
+        "extractedAt": "2026-05-26T01:16:58.767Z"
+      }
+    }
+  ]
+}

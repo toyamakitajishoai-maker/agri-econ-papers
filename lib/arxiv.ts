@@ -43,7 +43,7 @@ function buildCategoryQuery(categories: string[]): string {
 
 function stripXml(value: string): string {
   return value
-    .replace(/<!\[CDATA\[(.*?)\]\]>/gs, "$1")
+    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
     .replace(/<[^>]+>/g, "")
     .replace(/\s+/g, " ")
     .trim();

@@ -1,4 +1,4 @@
-import { fetchArxivPapersSince } from "@/lib/arxiv";
+import { fetchArxivPapersSince, type ArxivPaper } from "@/lib/arxiv";
 import { dedupeByArxivId, filterAgriculturePapers } from "@/lib/filter";
 
 const TARGET_CATEGORIES = ["econ.GN", "econ.EM", "q-fin.EC"];
@@ -10,7 +10,7 @@ async function main() {
   const widestSince = new Date(now.getTime() - ARXIV_FETCH_HOURS * 60 * 60 * 1000);
   const arxivRawFull = await fetchArxivPapersSince(TARGET_CATEGORIES, widestSince, 100, now);
 
-  let fetched = [];
+  let fetched: ArxivPaper[] = [];
   for (const hours of ARXIV_LOOKBACK_HOURS) {
     const since = new Date(now.getTime() - hours * 60 * 60 * 1000);
     fetched = arxivRawFull.filter((paper) => {

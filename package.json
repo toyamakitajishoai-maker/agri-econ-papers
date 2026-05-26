@@ -3,12 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "sh -c 'for p in 3000 3001 3002 3003; do lsof -ti :$p | xargs kill -9 2>/dev/null || true; done; rm -rf .next && next dev -H 127.0.0.1 -p 3000'",
+    "dev:clean": "npm run dev",
+    "serve": "npm run build && next start -H 127.0.0.1 -p 3000",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "fetch": "tsx scripts/fetch-papers.ts",
     "summarize": "tsx scripts/summarize.ts",
+    "figures": "tsx scripts/extract-figures.ts",
     "fetch:sample": "tsx scripts/sample-fetch.ts",
     "summarize:sample": "tsx scripts/sample-summarize.ts",
     "export:csv": "tsx scripts/export-papers-csv.ts",
@@ -17,6 +20,7 @@
   "dependencies": {
     "dotenv": "^16.4.5",
     "next": "14.2.35",
+    "pdf-to-img": "^6.1.0",
     "react": "^18",
     "react-dom": "^18"
   },

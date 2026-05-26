@@ -3,8 +3,8 @@ import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "農業経済 論文ダイジェスト",
-  description: "農業経済分野の最新論文を毎朝AI要約で読むためのサイト",
+  title: "今日の研究を、3分で。",
+  description: "論文ではなく、発見を読む。農業・食・農村の最新研究を、小説のように気軽に。",
 };
 
 export default function RootLayout({
@@ -14,23 +14,29 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className="min-h-screen bg-stone-50 text-stone-900 antialiased dark:bg-stone-950 dark:text-stone-100">
-        <header className="border-b border-stone-200 bg-white/90 backdrop-blur dark:border-stone-800 dark:bg-stone-900/90">
-          <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-4 sm:px-6">
-            <Link href="/" className="text-lg font-semibold tracking-tight">
-              農業経済 論文ダイジェスト
+      <body className="min-h-screen bg-[#faf8f5] font-sans text-[#1a1f1c] antialiased">
+        <header className="sticky top-0 z-30 border-b border-[#ebe7df]/80 bg-[#faf8f5]/90 backdrop-blur-md">
+          <div className="mx-auto flex w-full max-w-3xl items-center justify-between px-4 py-4 sm:px-6">
+            <Link href="/" className="group">
+              <span className="block font-serif text-lg font-semibold tracking-tight text-[#1a1f1c]">
+                今日の研究
+              </span>
+              <span className="block text-[10px] tracking-[0.18em] text-[#8a908a]">3 MIN READ</span>
             </Link>
-            <nav className="flex items-center gap-4 text-sm">
-              <Link className="hover:underline" href="/">
-                今日の論文
+            <nav className="flex items-center gap-5 text-sm text-[#5c635c]">
+              <Link className="transition hover:text-[#2f4a3a]" href="/">
+                きょう
               </Link>
-              <Link className="hover:underline" href="/archive">
-                アーカイブ
+              <Link className="transition hover:text-[#2f4a3a]" href="/archive">
+                これまで
               </Link>
             </nav>
           </div>
         </header>
-        <main className="mx-auto w-full max-w-5xl px-4 py-6 sm:px-6 sm:py-8">{children}</main>
+        <main className="mx-auto w-full max-w-3xl px-4 py-8 sm:px-6 sm:py-10">{children}</main>
+        <footer className="border-t border-[#ebe7df] py-8 text-center text-xs text-[#9a9f9a]">
+          <p>学術論文をもとに、読みやすく編集しています。</p>
+        </footer>
       </body>
     </html>
   );

@@ -14,7 +14,6 @@ const GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models
 const GEMINI_FETCH_TIMEOUT_MS = Number(process.env.GEMINI_FETCH_TIMEOUT_MS ?? 90_000);
 import { downloadPdfForPaper, downloadPdfFromUrl, type PdfResolveInput } from "@/lib/pdfResolve";
 
-const MAX_PDF_BYTES = 15 * 1024 * 1024;
 const MAX_PAGES_TO_SCAN = 10;
 const PAGE_RENDER_SCALE = 1.1;
 const FIGURES_DIR = path.join(process.cwd(), "public", "figures");

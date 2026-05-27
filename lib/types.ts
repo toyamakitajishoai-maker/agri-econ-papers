@@ -7,6 +7,8 @@ export type PaperSummary = {
   method: string;
   /** 結果 */
   results: string;
+  /** なぜそうなるのか（因果・メカニズム・経路の説明） */
+  why?: string;
   /** 主要な図表の説明（アブストラクト等から。数値・軸・比較対象を含む） */
   figures?: string;
 };
@@ -18,16 +20,14 @@ export type PredictionQuiz = {
   explanation: string;
 };
 
-/** 信頼度・エビデンス（0〜100 のゲージ表示用） */
-export type EvidenceProfile = {
-  /** 1（弱い）〜5（強い） */
-  level: number;
-  levelLabel: string;
-  sampleSize: string;
-  studyDesign: string;
-  dataQuality: number;
-  externalValidity: number;
-  notes?: string;
+/** 専門用語の解説（要約本文中の語にホバー/タップで意味表示） */
+export type GlossaryTerm = {
+  /** 要約本文に登場する形（マッチ用） */
+  term: string;
+  /** 任意：日本語訳・別表記 */
+  reading?: string;
+  /** 一般読者向けの平易な解説（1〜2文） */
+  definition: string;
 };
 
 export type KeyFigure = {
@@ -58,14 +58,21 @@ export type Paper = {
   source?: "arxiv" | "openalex";
   /** 掲載誌名（OpenAlex 等から取得） */
   journal?: string;
+  /** 収集時に割り当てた分野ラベル（例: 気候・環境） */
+  field?: string;
   /** 読者向け短縮見出し（Gemini 生成、20〜32字目安） */
   catchTitle?: string;
   /** 1文フック（Gemini 生成） */
   hook?: string;
   /** 記事冒頭の予想クイズ */
   quiz?: PredictionQuiz;
-  /** エビデンス・サンプルサイズの可視化用 */
-  evidence?: EvidenceProfile;
+  /** 専門用語の解説（要約本文中の語をホバー/タップで補足） */
+  glossary?: GlossaryTerm[];
+  /**
+   * PDF本文に研究の限界の記述がある場合のみ（Gemini が抜粋）。
+   * 空文字 = 処理済みだが該当記述なし。undefined = 未処理（旧データ）
+   */
+  limitations?: string;
   /** PDF から抽出した主要図（1枚） */
   keyFigure?: KeyFigure;
 };

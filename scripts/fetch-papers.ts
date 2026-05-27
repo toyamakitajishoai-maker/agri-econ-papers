@@ -5,28 +5,40 @@ loadEnv({ path: ".env.local" });
 loadEnv();
 
 import { fetchArxivPapersSince } from "@/lib/arxiv";
+import { fetchArxivPapersFromRss } from "@/lib/arxivRss";
 import type { ArxivPaper } from "@/lib/arxiv";
-import { dedupeByArxivId, filterAgriculturePapers } from "@/lib/filter";
+import { dedupeByArxivId } from "@/lib/filter";
+import {
+  inferTopicForPaper,
+  mergeArxivCategories,
+  pickRandomTopics,
+  shuffleInPlace,
+  type FetchTopic,
+} from "@/lib/fetchTopics";
 import { fetchOpenAlexRecentWorks } from "@/lib/openAlex";
 import { fetchSemanticScholarArxivPapers } from "@/lib/semanticScholar";
 import { writeJsonFileAtomic } from "@/lib/safeWriteJson";
 import type { Paper } from "@/lib/types";
-import { lookupOpenAccessPdfUrl } from "@/lib/unpaywall";
+import { resolvePdfUrl } from "@/lib/pdfResolve";
+import { extractPdfTextExcerpt } from "@/lib/extractPdfText";
 
-const TARGET_CATEGORIES = ["econ.GN", "econ.EM", "q-fin.EC"];
 const DATA_DIR = "data";
 
-/** arXiv 補完用（1回のAPIで取得し、窓はメモリ上で絞る） */
 const ARXIV_FETCH_HOURS = 720;
 const ARXIV_LOOKBACK_HOURS = [24, 72, 168, 336, 720];
 
 const OPENALEX_LOOKBACK_DAYS = 90;
-const OPENALEX_SEARCH = "agricultural economics food security rural farm land policy";
+const TOPICS_PER_FETCH = Number(process.env.TOPICS_PER_FETCH ?? 5);
+const OPENALEX_PER_TOPIC = Number(process.env.OPENALEX_PER_TOPIC ?? 20);
 
 const SEMANTIC_DELAY_MS = 2000;
 const UNPAYWALL_GAP_MS = 280;
+const OPENALEX_GAP_MS = 400;
+const ARXIV_MAX_RESULTS = Number(process.env.ARXIV_MAX_RESULTS ?? 80);
+const SEMANTIC_LIMIT = Number(process.env.SEMANTIC_LIMIT ?? 25);
 
 const MAX_PAPERS = Number(process.env.MAX_PAPERS ?? 5);
+const CANDIDATE_POOL_SIZE = Math.max(MAX_PAPERS * 10, 50);
 
 function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -41,7 +53,6 @@ function getTodayJstString(): string {
   }).format(new Date());
 }
 
-/** JST 基準で N 日前の日付 YYYY-MM-DD */
 function getJstDateMinusDays(days: number): string {
   const ms = Date.now() - days * 24 * 60 * 60 * 1000;
   return new Intl.DateTimeFormat("en-CA", {
@@ -52,18 +63,16 @@ function getJstDateMinusDays(days: number): string {
   }).format(new Date(ms));
 }
 
-function emptySummary(abstract: string, mode: "pending" | "fallback" = "pending") {
-  const placeholder =
-    mode === "fallback" ? "同分野の新着（農業キーワード未一致）" : "要約準備中";
+function emptySummary(abstract: string) {
   return {
-    gist: placeholder,
+    gist: "要約準備中",
     novelty: abstract,
     method: abstract,
     results: abstract,
   };
 }
 
-function toPaperSchema(input: ArxivPaper, summaryMode: "pending" | "fallback" = "pending"): Paper {
+function toPaperSchema(input: ArxivPaper): Paper {
   const source = input.source ?? "arxiv";
   return {
     id: input.id,
@@ -74,10 +83,19 @@ function toPaperSchema(input: ArxivPaper, summaryMode: "pending" | "fallback" = 
     pdfUrl: input.pdfUrl,
     categories: input.categories,
     abstract: input.abstract,
-    summary: emptySummary(input.abstract, summaryMode),
+    summary: emptySummary(input.abstract),
     doi: input.doi,
     source,
     journal: input.journal,
+    field: input.field,
+  };
+}
+
+function tagTopic(paper: ArxivPaper, topic: FetchTopic): ArxivPaper {
+  return {
+    ...paper,
+    field: topic.labelJa,
+    categories: [`topic:${topic.id}`, topic.labelJa, ...paper.categories],
   };
 }
 
@@ -94,69 +112,139 @@ async function updateIndex(dateString: string) {
   }
 
   const nextDates = [dateString, ...dates.filter((d) => d !== dateString)].slice(0, 30);
-
   await writeJsonFileAtomic(indexPath, { dates: nextDates });
 }
 
-async function fetchArxivPool(now: Date): Promise<ArxivPaper[]> {
-  const widestSince = new Date(now.getTime() - ARXIV_FETCH_HOURS * 60 * 60 * 1000);
-  try {
-    return await fetchArxivPapersSince(TARGET_CATEGORIES, widestSince, 100, now);
-  } catch (error) {
-    console.warn("arXiv の取得に失敗しました（スキップします）。", error);
-    return [];
-  }
-}
-
-function pickArxivWindowed(
-  arxivRawFull: ArxivPaper[],
-  now: Date
-): { filtered: ArxivPaper[]; usedKeywordFallback: boolean } {
-  let arxivFiltered: ArxivPaper[] = [];
-  const lastArxivRaw = arxivRawFull;
-  let usedKeywordFallback = false;
-
+function pickArxivInTimeWindow(arxivRawFull: ArxivPaper[], now: Date): ArxivPaper[] {
   for (const hours of ARXIV_LOOKBACK_HOURS) {
     const since = new Date(now.getTime() - hours * 60 * 60 * 1000);
     const inWindow = arxivRawFull.filter((paper) => {
       if (!paper.publishedAt) return false;
       return new Date(paper.publishedAt) >= since;
     });
-    arxivFiltered = dedupeByArxivId(filterAgriculturePapers(inWindow));
-    if (arxivFiltered.length > 0) {
-      break;
+    if (inWindow.length > 0) {
+      return dedupeByArxivId(inWindow);
     }
   }
-
-  if (arxivFiltered.length === 0 && lastArxivRaw.length > 0) {
-    console.warn(
-      "arXiv: 農業キーワード未一致のため、対象カテゴリの新着をフォールバックで採用します。"
-    );
-    arxivFiltered = dedupeByArxivId(lastArxivRaw)
-      .slice(0, MAX_PAPERS)
-      .map((p) => ({ ...p, source: "arxiv" as const }));
-    usedKeywordFallback = true;
-  }
-
-  return {
-    filtered: arxivFiltered.map((p) => ({ ...p, source: p.source ?? ("arxiv" as const) })),
-    usedKeywordFallback,
-  };
+  return dedupeByArxivId(arxivRawFull);
 }
 
-async function enrichPdfFromUnpaywall(papers: ArxivPaper[], email: string): Promise<void> {
-  for (const paper of papers) {
-    if (!paper.doi) continue;
-    try {
-      const pdfUrl = await lookupOpenAccessPdfUrl(paper.doi, email);
-      if (pdfUrl) {
-        paper.pdfUrl = pdfUrl;
-      }
-    } catch (error) {
-      console.warn(`Unpaywall skip (${paper.doi}):`, error);
+/**
+ * arXiv API は1日1回の fetch で **1リクエストのみ**（429対策）。
+ * 複数分野のカテゴリを OR でまとめて取得する。
+ */
+async function fetchArxivForTopics(topics: FetchTopic[], now: Date): Promise<ArxivPaper[]> {
+  if (topics.length === 0) return [];
+
+  const categories = mergeArxivCategories(topics);
+  const widestSince = new Date(now.getTime() - ARXIV_FETCH_HOURS * 60 * 60 * 1000);
+
+  let raw: ArxivPaper[] = [];
+  try {
+    raw = await fetchArxivPapersSince(categories, widestSince, ARXIV_MAX_RESULTS, now, {
+      softFail: true,
+      maxAttempts: 4,
+    });
+  } catch (error) {
+    console.warn("  arXiv API スキップ:", error);
+  }
+
+  if (raw.length === 0) {
+    console.log("  arXiv API が使えないため RSS フィードから取得します…");
+    raw = await fetchArxivPapersFromRss(topics, 25);
+  }
+
+  const windowed = pickArxivInTimeWindow(raw, now);
+  const tagged = windowed.map((p) => tagTopic(p, inferTopicForPaper(p, topics)));
+  console.log(
+    `  arXiv 合計: ${raw.length}件 → 期間内 ${windowed.length}件 [${topics.map((t) => t.labelJa).join("、")}]`
+  );
+  return dedupeByArxivId(tagged);
+}
+
+function shortTitle(paper: ArxivPaper): string {
+  const t = paper.title.trim();
+  return t.length > 52 ? `${t.slice(0, 52)}…` : t;
+}
+
+/**
+ * 出所が辿れない論文を弾く（著者不明・URLなし・DOIもID もないもの）
+ */
+function hasTraceableOrigin(paper: ArxivPaper): { ok: boolean; reason?: string } {
+  const authorsClean = paper.authors
+    .map((a) => a.trim())
+    .filter((a) => a && a.toLowerCase() !== "unknown" && a !== "不明");
+  if (authorsClean.length === 0) return { ok: false, reason: "著者不明" };
+  if (!paper.url?.trim() && !paper.doi?.trim()) return { ok: false, reason: "出典URL/DOIなし" };
+  if (!paper.title?.trim()) return { ok: false, reason: "タイトルなし" };
+  return { ok: true };
+}
+
+async function selectPapersWithDownloadablePdf(
+  candidates: ArxivPaper[],
+  max: number
+): Promise<ArxivPaper[]> {
+  const selected: ArxivPaper[] = [];
+  let dlFail = 0;
+  let extractFail = 0;
+  let tooShort = 0;
+  let originFail = 0;
+
+  for (const paper of candidates) {
+    if (selected.length >= max) break;
+
+    const origin = hasTraceableOrigin(paper);
+    if (!origin.ok) {
+      originFail += 1;
+      console.log(`  [スキップ] ${origin.reason}: ${shortTitle(paper)}`);
+      continue;
     }
+
+    const resolved = await resolvePdfUrl({
+      doi: paper.doi,
+      pdfUrl: paper.pdfUrl,
+      id: paper.id,
+      source: paper.source,
+    });
+    if (resolved) paper.pdfUrl = resolved;
+
+    /** ダウンロード + 本文抽出まで確認（本文がない論文を弾く） */
+    const result = await extractPdfTextExcerpt({
+      doi: paper.doi,
+      pdfUrl: paper.pdfUrl,
+      id: paper.id,
+      source: paper.source,
+    });
+
+    if (result.excerpt && result.pdfUrl) {
+      paper.pdfUrl = result.pdfUrl;
+      selected.push(paper);
+      const field = paper.field ?? "";
+      console.log(
+        `  [採用] ${field ? `[${field}] ` : ""}${shortTitle(paper)}（本文 ${result.chars ?? result.excerpt.length}字）`
+      );
+    } else {
+      const reason =
+        result.failureReason === "download-failed"
+          ? "PDFダウンロード失敗"
+          : result.failureReason === "too-short"
+            ? `本文 ${result.chars ?? 0}字しか取れず`
+            : "本文抽出に失敗";
+      if (result.failureReason === "download-failed") dlFail += 1;
+      else if (result.failureReason === "too-short") tooShort += 1;
+      else extractFail += 1;
+      const detail = result.detail ? ` — ${result.detail.slice(0, 80)}` : "";
+      console.log(`  [スキップ] ${reason}${detail}: ${shortTitle(paper)}`);
+    }
+
     await sleep(UNPAYWALL_GAP_MS);
   }
+
+  console.log(
+    `PDF検証: 採用 ${selected.length}件 / スキップ ${dlFail + extractFail + tooShort + originFail}件` +
+      `（著者不明等 ${originFail} / ダウンロード失敗 ${dlFail} / 抽出失敗 ${extractFail} / 本文短すぎ ${tooShort}）`
+  );
+  return selected;
 }
 
 async function main() {
@@ -165,76 +253,97 @@ async function main() {
 
   const mailto = (process.env.OPENALEX_MAILTO ?? process.env.UNPAYWALL_EMAIL ?? "").trim();
   const unpaywallEmail = (process.env.UNPAYWALL_EMAIL ?? process.env.OPENALEX_MAILTO ?? "").trim();
-
   const now = new Date();
-  const merged: ArxivPaper[] = [];
+  const topics = pickRandomTopics(TOPICS_PER_FETCH);
 
-  /* ----- 主ソース: OpenAlex（メールアドレス必須: API利用マナー） ----- */
+  console.log(
+    `本日の収集分野（ランダム ${topics.length}件）: ${topics.map((t) => t.labelJa).join("、")}`
+  );
+
+  const candidates: ArxivPaper[] = [];
+
+  if (!unpaywallEmail) {
+    console.warn("UNPAYWALL_EMAIL（または OPENALEX_MAILTO）がないと PDF 解決が弱くなります。");
+  }
+
+  /* ----- arXiv を最初に1回だけ（OpenAlex の前。429 が出にくい） ----- */
+  const arxivTopics = pickRandomTopics(Math.min(4, topics.length));
+  console.log(`  arXiv 分野（1リクエストに統合）: ${arxivTopics.map((t) => t.labelJa).join("、")}`);
+  const arxivPapers = await fetchArxivForTopics(arxivTopics, now);
+  candidates.push(...arxivPapers);
+
   if (mailto) {
-    try {
-      const fromPublicationDate = getJstDateMinusDays(OPENALEX_LOOKBACK_DAYS);
-      const openAlexRaw = await fetchOpenAlexRecentWorks({
-        mailto,
-        fromPublicationDate,
-        searchQuery: OPENALEX_SEARCH,
-        perPage: 50,
-      });
-
-      let oaFiltered = dedupeByArxivId(filterAgriculturePapers(openAlexRaw));
-      if (oaFiltered.length === 0 && openAlexRaw.length > 0) {
-        console.warn("OpenAlex: 農業キーワード未一致のため、検索上位をフォールバックで採用します。");
-        oaFiltered = dedupeByArxivId(openAlexRaw).slice(0, MAX_PAPERS);
+    const fromPublicationDate = getJstDateMinusDays(OPENALEX_LOOKBACK_DAYS);
+    for (const topic of topics) {
+      try {
+        const openAlexRaw = await fetchOpenAlexRecentWorks({
+          mailto,
+          fromPublicationDate,
+          searchQuery: topic.openAlexQuery,
+          perPage: OPENALEX_PER_TOPIC,
+        });
+        candidates.push(...openAlexRaw.map((p) => tagTopic(p, topic)));
+        console.log(`  OpenAlex [${topic.labelJa}]: ${openAlexRaw.length}件`);
+      } catch (error) {
+        console.warn(`  OpenAlex [${topic.labelJa}] スキップ:`, error);
       }
-
-      const oaPick = oaFiltered.slice(0, MAX_PAPERS);
-      if (unpaywallEmail) {
-        await enrichPdfFromUnpaywall(oaPick, unpaywallEmail);
-      } else {
-        console.warn("UNPAYWALL_EMAIL（または OPENALEX_MAILTO）がないため、OA PDF の自動解決をスキップします。");
-      }
-      merged.push(...oaPick);
-    } catch (error) {
-      console.warn("OpenAlex の取得に失敗しました（arXiv 等で補完します）。", error);
+      await sleep(OPENALEX_GAP_MS);
     }
   } else {
-    console.warn(
-      "OPENALEX_MAILTO または UNPAYWALL_EMAIL を .env.local に設定すると、OpenAlex から論文を取得します（推奨）。"
+    console.warn("OPENALEX_MAILTO を .env.local に設定すると、多分野からの収集が安定します。");
+  }
+
+  /* ----- Semantic Scholar（arXiv API 失敗時は arXiv ID 付き論文を多めに補完） ----- */
+  const semanticTopics =
+    arxivPapers.length === 0
+      ? shuffleInPlace([...topics]).slice(0, Math.min(3, topics.length))
+      : [topics[Math.floor(Math.random() * topics.length)]];
+
+  try {
+    await sleep(SEMANTIC_DELAY_MS);
+    for (const semanticTopic of semanticTopics) {
+      const semanticRaw = await fetchSemanticScholarArxivPapers(
+        semanticTopic.semanticQuery,
+        SEMANTIC_LIMIT
+      );
+      candidates.push(
+        ...dedupeByArxivId(
+          semanticRaw.map((p) => tagTopic({ ...p, source: "arxiv" as const }, semanticTopic))
+        )
+      );
+      console.log(`  Semantic Scholar [${semanticTopic.labelJa}]: ${semanticRaw.length}件`);
+      await sleep(1000);
+    }
+    if (arxivPapers.length === 0 && semanticTopics.length > 1) {
+      console.log("  （arXiv API が使えなかったため Semantic Scholar で arXiv 論文を補完しました）");
+    }
+  } catch (error) {
+    console.warn("Semantic Scholar fetch skipped:", error);
+  }
+
+  const pool = shuffleInPlace(dedupeByArxivId(candidates)).slice(0, CANDIDATE_POOL_SIZE);
+  console.log(`候補 ${pool.length}件（シャッフル済み）から PDF取得可能な論文を最大 ${MAX_PAPERS} 件選びます…`);
+
+  const finalList = await selectPapersWithDownloadablePdf(pool, MAX_PAPERS);
+
+  if (finalList.length === 0) {
+    throw new Error(
+      "PDF本文を取得できる論文が1件もありませんでした。\n" +
+        "→ Python の PyMuPDF が入っているか確認してください: `pip install pymupdf`"
     );
   }
 
-  /* ----- 補完: arXiv ----- */
-  const needArxiv = Math.max(0, MAX_PAPERS - merged.length);
-  if (needArxiv > 0) {
-    const arxivRawFull = await fetchArxivPool(now);
-    const { filtered } = pickArxivWindowed(arxivRawFull, now);
-    merged.push(...filtered.slice(0, needArxiv));
+  if (finalList.length < MAX_PAPERS) {
+    console.warn(`PDF本文取得可能 ${finalList.length} 件のみ（目標 ${MAX_PAPERS} 件）`);
   }
 
-  /* ----- 補完: Semantic Scholar（arXiv ID 付きのみ） ----- */
-  const needSemantic = Math.max(0, MAX_PAPERS - merged.length);
-  if (needSemantic > 0) {
-    try {
-      await sleep(SEMANTIC_DELAY_MS);
-      const semanticRaw = await fetchSemanticScholarArxivPapers("agricultural economics", 20);
-      const semanticFiltered = dedupeByArxivId(
-        filterAgriculturePapers(semanticRaw.map((p) => ({ ...p, source: "arxiv" as const })))
-      );
-      merged.push(...semanticFiltered.slice(0, needSemantic));
-    } catch (error) {
-      console.warn("Semantic Scholar fetch skipped:", error);
-    }
-  }
-
-  const finalList = dedupeByArxivId(merged).slice(0, MAX_PAPERS);
-  const papers = finalList.map((p) =>
-    toPaperSchema(p, filterAgriculturePapers([p]).length === 0 ? "fallback" : "pending")
-  );
+  const papers = finalList.map((p) => toPaperSchema(p));
 
   const outputPath = `${DATA_DIR}/${today}.json`;
   await writeJsonFileAtomic(outputPath, { date: today, papers });
   await updateIndex(today);
 
-  console.log(`Saved ${papers.length} papers to ${outputPath} (OpenAlex + arXiv + 補助ソース)`);
+  console.log(`Saved ${papers.length} papers (多分野・PDF検証済み) to ${outputPath}`);
 }
 
 main().catch((error) => {

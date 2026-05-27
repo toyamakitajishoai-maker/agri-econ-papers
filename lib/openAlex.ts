@@ -31,6 +31,14 @@ type OpenAlexWork = {
   abstract_inverted_index?: Record<string, number[]> | null;
   authorships?: Array<{ author?: { display_name?: string | null } | null }>;
   concepts?: Array<{ display_name?: string | null }>;
+  open_access?: {
+    is_oa?: boolean;
+    oa_url?: string | null;
+  } | null;
+  best_oa_location?: {
+    pdf_url?: string | null;
+    url?: string | null;
+  } | null;
   primary_location?: {
     pdf_url?: string | null;
     landing_page_url?: string | null;
@@ -64,9 +72,18 @@ function workToPaper(work: OpenAlexWork): ArxivPaper | null {
 
   const url = doi ? `https://doi.org/${doi}` : rawId;
 
-  const pdfFromOpenAlex = work.primary_location?.pdf_url?.trim();
+  const pdfCandidates = [
+    work.primary_location?.pdf_url?.trim(),
+    work.open_access?.oa_url?.trim(),
+    work.best_oa_location?.pdf_url?.trim(),
+    work.best_oa_location?.url?.trim(),
+  ].filter((u): u is string => Boolean(u && /^https?:\/\//i.test(u)));
+
   const pdfUrl =
-    pdfFromOpenAlex && /^https?:\/\//i.test(pdfFromOpenAlex) ? pdfFromOpenAlex : "";
+    pdfCandidates.find((u) => /\.pdf(\?|$)|\/download\/|\/content\/pdf\//i.test(u)) ??
+    pdfCandidates.find((u) => !/doi\.org\//i.test(u)) ??
+    pdfCandidates[0] ??
+    "";
 
   const journalFromSource = (work.primary_location?.source?.display_name ?? "").trim();
   const journalRaw = (work.primary_location?.raw_source_name ?? "").trim();

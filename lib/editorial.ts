@@ -15,6 +15,7 @@ export type EditorialView = {
     novelty: string;
     method: string;
     results: string;
+    why?: string;
     figures?: string;
   };
 };
@@ -120,20 +121,23 @@ export function getRelevance(paper: Paper): string {
 }
 
 export function getTags(paper: Paper, max = 4): string[] {
+  const tags: string[] = [];
+  if (paper.field?.trim()) tags.push(paper.field.trim());
+
   const fromCats = paper.categories
-    .filter((c) => c !== "openalex" && !c.startsWith("arxiv"))
+    .filter((c) => c !== "openalex" && !c.startsWith("topic:") && !c.startsWith("arxiv"))
     .map((c) => TAG_LABELS[c] ?? c)
-    .filter(Boolean);
+    .filter((c) => c && c !== paper.field);
 
   const journal = getJournalLabel(paper);
-  const tags = [...fromCats];
+  tags.push(...fromCats);
   if (journal.includes("arXiv")) tags.push("プレプリント");
   else if (journal !== "掲載誌情報なし") tags.push("査読論文");
 
-  const unique = [...new Set(tags)];
-  if (unique.length >= 2) return unique.slice(0, max);
+  const unique = [...new Set(tags)].filter(Boolean);
+  if (unique.length >= 1) return unique.slice(0, max);
 
-  return ["農業", "食と農村", "今日の研究", "3分で読む"].slice(0, max);
+  return ["今日の研究", "3分で読む"].slice(0, max);
 }
 
 export function getReadMinutes(paper: Paper): number {
@@ -154,6 +158,7 @@ function getSections(paper: Paper): EditorialView["sections"] {
       novelty: s.novelty,
       method: s.method,
       results: s.results,
+      why: s.why,
       figures: s.figures,
     };
   }

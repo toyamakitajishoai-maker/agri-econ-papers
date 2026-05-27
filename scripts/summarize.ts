@@ -4,6 +4,8 @@ import { readFile } from "node:fs/promises";
 loadEnv({ path: ".env.local" });
 loadEnv();
 
+import { extractPdfTextExcerpt } from "@/lib/extractPdfText";
+import { isWeakPdfUrl, resolvePdfUrl } from "@/lib/pdfResolve";
 import { summarizeAbstractWithGemini } from "@/lib/gemini";
 import { writeJsonFileAtomic } from "@/lib/safeWriteJson";
 import { isAcademicSummary } from "@/lib/summary";
@@ -53,7 +55,9 @@ function needsSummarize(paper: Paper): boolean {
   if (!paper.catchTitle?.trim() || !paper.hook?.trim()) return true;
   if (!s.figures?.trim()) return true;
   if (!paper.quiz?.question) return true;
-  if (!paper.evidence?.level) return true;
+  if (paper.pdfUrl?.trim() && paper.limitations === undefined) return true;
+  if (!paper.glossary?.length) return true;
+  if (!s.why?.trim()) return true;
   if (paper.abstract && (novelty === paper.abstract || results === paper.abstract)) return true;
   return false;
 }
@@ -116,23 +120,71 @@ async function main() {
     console.log(`[${processed + 1}/${toProcess}] 要約中: ${shortTitle}`);
     const started = Date.now();
 
-    const result = await summarizeAbstractWithGemini(toArxivPaper(paper), apiKey, 3);
+    let pdfExcerpt: string | null = null;
+    let resolvedPdfUrl = paper.pdfUrl?.trim() ?? "";
+    if (!resolvedPdfUrl || isWeakPdfUrl(resolvedPdfUrl)) {
+      const resolved = await resolvePdfUrl({
+        doi: paper.doi,
+        pdfUrl: paper.pdfUrl,
+        id: paper.id,
+        source: paper.source,
+      });
+      if (resolved) resolvedPdfUrl = resolved;
+    }
+
+    if (resolvedPdfUrl) {
+      console.log("  PDF本文を取得中…");
+      const pdfResult = await extractPdfTextExcerpt({
+        doi: paper.doi,
+        pdfUrl: resolvedPdfUrl,
+        id: paper.id,
+        source: paper.source,
+      });
+      pdfExcerpt = pdfResult.excerpt;
+      if (pdfResult.pdfUrl) resolvedPdfUrl = pdfResult.pdfUrl;
+      if (pdfExcerpt) {
+        console.log(`  PDF抜粋: ${pdfExcerpt.length}字 (${resolvedPdfUrl.slice(0, 56)}…)`);
+      } else {
+        const reasonText =
+          pdfResult.failureReason === "download-failed"
+            ? "PDFダウンロード失敗"
+            : pdfResult.failureReason === "too-short"
+              ? `本文が短すぎ（${pdfResult.chars ?? 0}字）`
+              : pdfResult.failureReason === "disabled"
+                ? "PDF利用が無効化されています"
+                : "本文抽出に失敗";
+        const detail = pdfResult.detail ? ` — ${pdfResult.detail.slice(0, 160)}` : "";
+        console.log(`  PDF抜粋: 取得できず（${reasonText}${detail}）`);
+      }
+    }
+
+    const result = await summarizeAbstractWithGemini(toArxivPaper(paper), apiKey, 3, pdfExcerpt);
     processed += 1;
     summarizedPapers.push({
       ...paper,
+      pdfUrl: resolvedPdfUrl || paper.pdfUrl,
       titleJa: result.titleJa ?? paper.titleJa,
       catchTitle: result.catchTitle ?? paper.catchTitle,
       hook: result.hook ?? paper.hook,
       quiz: result.quiz ?? paper.quiz,
-      evidence: result.evidence ?? paper.evidence,
+      limitations: pdfExcerpt ? (result.limitations ?? "") : paper.limitations,
+      glossary: result.glossary ?? paper.glossary,
       summary: result.summary,
     });
 
     const elapsedSec = ((Date.now() - started) / 1000).toFixed(1);
-    console.log(`  → 完了 (${elapsedSec}s) catchTitle: ${result.catchTitle ? "あり" : "なし"}`);
+    const limNote = pdfExcerpt
+      ? result.limitations?.trim()
+        ? "限界:あり"
+        : "限界:記述なし"
+      : "";
+    const glossaryNote = result.glossary?.length ? ` 用語:${result.glossary.length}件` : "";
+    console.log(
+      `  → 完了 (${elapsedSec}s) catchTitle: ${result.catchTitle ? "あり" : "なし"}${limNote ? ` ${limNote}` : ""}${glossaryNote}`
+    );
 
     await saveProgress();
-    await sleep(1000);
+    await sleep(Number(process.env.SUMMARIZE_GAP_MS ?? 2500));
   }
 
   console.log(

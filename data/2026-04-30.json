@@ -21,17 +21,37 @@
       ],
       "abstract": "Introduction Non-timber forest products such as bush mango ( Irvingia gabonensis ) are critical to rural economies in West Africa, yet their harvesting remains poorly understood in terms of economic returns and sustainability. Methods This study assessed the harvesting and economic potential of I. gabonensis in Edo State, Nigeria, using a purposive survey of 79 harvesters. Data were analysed through descriptive statistics, correlation, and regression, complemented with thematic analysis of qualitative responses. Results The results showed that harvesting is predominantly male-driven (68%), with a mean respondent age of 41 years, an average household size of 6, and a mean harvesting experience of 11 years. The activity was seasonal, occurring mainly from June to September, with an average weekly harvest volume of 124 kg per household. Regression analysis indicated that household size (β = 0.28, p &amp;lt; 0.05), years of experience (β = 0.32, p &amp;lt; 0.01), and access to productive trees (β = 0.41, p &amp;lt; 0.01) were significant predictors of profitability (R² = 0.47). Profitability analysis indicated that on average, each household earned a gross margin of 1 ₦103,800 (USD 71.5) per season, corresponding to a rate of return on investment of 91%. Constraints included limited access to trees (63%), declining yields (56%), and overdependence on wild stocks (72%). Discussion These findings highlight that sustainable harvesting and domestication of I. gabonensis can serve as Nature-Based Solutions (NbS), enhancing ecosystem services and promoting climate-resilient livelihoods in forest-dependent communities. The study concludes that I. gabonensis harvesting is economically viable but ecologically vulnerable, and that it requires domestication, sustainable practices, and improved access rights to secure its future contribution to rural incomes.",
       "summary": {
-        "gist": "本研究は、ナイジェリアのエド州におけるブッシュマンゴー（Irvingia gabonensis）の収穫活動が経済的に実行可能である一方で、生態学的に脆弱な状況にあることを明らかにしました。持続可能な収穫方法の導入と栽培化が、農村所得への将来的な貢献を確保するために不可欠であると結論付けています。",
-        "novelty": "従来のブッシュマンゴーに関する研究では、その経済的リターンと持続可能性の側面が十分に解明されていませんでした。本研究は、ナイジェリアのエド州における収穫者の視点から、具体的な経済指標と収穫活動の特性を詳細に分析することで、この研究の空白を埋め、持続可能な管理に向けた具体的な示唆を提供している点が新規性です。",
-        "method": "本研究では、ナイジェリアのエド州において、ブッシュマンゴーの収穫者79名を対象とした意図的抽出調査を実施しました。データは記述統計、相関分析、回帰分析を用いて定量的に分析され、さらに質的回答のテーマ分析によって補完されています。分析対象期間は主にブッシュマンゴーの収穫期である6月から9月です。",
-        "results": "分析の結果、ブッシュマンゴーの収穫活動は主に男性によって行われ（68%）、平均年齢は41歳、平均世帯規模は6人、平均収穫経験は11年であることが示されました。収穫は季節的で、主に6月から9月にかけて行われ、1世帯あたりの平均週次収穫量は124kgでした。回帰分析では、世帯規模（β = 0.28, p < 0.05）、経験年数（β = 0.32, p < 0.01）、および生産的な樹木へのアクセス（β = 0.41, p < 0.01）が収益性（R² = 0.47）の有意な予測因子であることが判明しました。収益性分析では、各世帯が1シーズンあたり平均103,800ナイラ（約71.5米ドル）の粗利益を得ており、これは91%の投資収益率に相当します。主な制約としては、樹木へのアクセス制限（63%）、収穫量の減少（56%）、野生資源への過度な依存（72%）が挙げられました。これらの結果は、ブッシュマンゴーの収穫が経済的に実行可能である一方で、生態学的な脆弱性を抱えていることを示唆しています。"
+        "gist": "本研究は、ナイジェリアのエド州におけるブッシュマンゴー（Irvingia gabonensis）の収穫活動が経済的に実行可能であるものの、生態学的に脆弱であり、持続可能な管理と栽培化が必要であることを明らかにしています。この活動は、森林に依存するコミュニティの生計向上に貢献する可能性を秘めていることが示唆されました。",
+        "novelty": "これまでの研究では、西アフリカの農村経済において重要な非木材林産物であるブッシュマンゴーの収穫について、その経済的収益性と持続可能性に関する理解が不足していました。本研究は、このギャップを埋めるため、ナイジェリアのエド州を対象に、収穫者の視点から経済的潜在力と課題を包括的に分析した点で新規性があります。",
+        "method": "本研究は、ナイジェリアのエド州において、ブッシュマンゴーの収穫者79名を対象とした意図的抽出による調査を実施しました。データは記述統計、相関分析、回帰分析を用いて分析され、質的回答のテーマ分析によって補完されています。調査期間やデータ収集年はアブストラクトに明記されていませんが、収穫活動が主に6月から9月に行われる季節性を持つことが示されています。",
+        "results": "分析の結果、収穫活動は主に男性（68%）によって行われ、回答者の平均年齢は41歳、平均世帯規模は6人、平均収穫経験は11年でした。回帰分析では、世帯規模（β = 0.28, p < 0.05）、経験年数（β = 0.32, p < 0.01）、生産性のある樹木へのアクセス（β = 0.41, p < 0.01）が収益性に対して有意な正の影響を与えることが示され、モデルの決定係数（R²）は0.47でした。収益性分析によると、各世帯は1シーズンあたり平均103,800ナイラ（約71.5米ドル）の粗利益を得ており、これは91%の投資収益率に相当します。主な制約としては、樹木へのアクセス制限（63%）、収穫量の減少（56%）、野生株への過度な依存（72%）が挙げられています。これらの結果は、ブッシュマンゴーの栽培化と持続可能な収穫が、森林依存コミュニティにおける気候変動に強い生計を支える自然ベースの解決策となり得ることを示唆しています。",
+        "figures": "アブストラクトに図表の記述なし"
       },
       "doi": "10.3389/fevo.2026.1799425",
       "source": "openalex",
       "journal": "Frontiers in Ecology and Evolution",
       "titleJa": "ナイジェリア・エド州におけるイビンギア・ガボネンシス（ブッシュマンゴー）の収穫と経済的可能性",
-      "catchTitle": "ブッシュマンゴー、儲かるのに危うい？",
-      "hook": "西アフリカの農村経済を支えるブッシュマンゴーの収穫が、経済的にどれほど重要で、どのような課題を抱えているのかを明らかにしています。"
+      "catchTitle": "ブッシュマンゴー収穫は儲かる？持続性の課題",
+      "hook": "西アフリカの農村経済を支えるブッシュマンゴーの収穫は、経済的に有望な一方で、生態学的な脆弱性を抱えていることが明らかになりました。",
+      "quiz": {
+        "question": "ナイジェリアにおけるブッシュマンゴー収穫の主な課題は何ですか？",
+        "options": [
+          "野生株への過度な依存と収穫量の減少",
+          "市場価格の不安定さ",
+          "労働力不足"
+        ],
+        "correctIndex": 0,
+        "explanation": "アブストラクトによると、主な制約は野生株への過度な依存（72%）と収穫量の減少（56%）です。これらが持続可能性を脅かしています。"
+      },
+      "evidence": {
+        "level": 3,
+        "levelLabel": "観察研究（横断調査）",
+        "sampleSize": "収穫者79名",
+        "studyDesign": "アンケート調査＋回帰分析",
+        "dataQuality": 75,
+        "externalValidity": 60,
+        "notes": "特定の州の小規模サンプルに基づくため、結果の一般化には注意が必要です。"
+      }
     },
     {
       "id": "W7157260355",
@@ -52,17 +72,37 @@
       ],
       "abstract": "Non-Timber Forest Products (NTFPs) represent a significant but often overlooked interface between forestry, agricultural systems, and rural livelihoods. The present article reconstructs NTFPs as core resources to sustainable and equitable futures through their capacity for promoting conservation while improving wellbeing among people. Here, we have discussed seven different thematic groups with India as the case study and hot-spot place. This includes forest foods, medicinal botanicals, bee products, exudates, green timber substitutes, oilseeds and forest fats, and emerging superfoods. Each cluster describes how forests supply sustenance in areas of nutrition, health, income, and identity. The examination moves beyond the list of products to explore how livelihoods, institutions, and markets organize their value. From the tendu leave collectors in Madhya Pradesh to the lac cultivators of Jharkhand and honey collectors in Sundarbans’, all these groups show how traditional practices can support cultural diversity as well as foster the environment. Over-harvesting, spoilage, and inaccessibility to the market are predicaments that continue to jeopardize these livelihoods. In this review article, we reported the ways in which new ideas such as freeze-dried herbs, green bamboo laminates, and blockchain-traceable honey are helping to bring about change. Here we focused on sustainable methodologies to maintain ecological balance such that science and traditional knowledge can walk hand in hand nourishing forests as much as people occupying the forests.",
       "summary": {
-        "gist": "本論文は、インドにおける非木材林産物（NTFPs）が、生態学的持続可能性の促進と農村住民の福祉向上を両立させる上で、中心的な資源となり得ることを明らかにしています。",
-        "novelty": "従来のNTFPsに関する研究が製品のリスト化に留まる傾向があったのに対し、本論文はNTFPsが栄養、健康、収入、アイデンティティといった多岐にわたる側面で人々の生活を支えるメカニズムを、具体的な7つのテーマ群を通じて包括的に分析している点が新規性です。さらに、過剰採取や市場アクセスといった課題に対する新しい解決策にも焦点を当て、科学と伝統的知識の融合による持続可能な管理手法を提示することで、研究の空白を埋めています。",
-        "method": "本論文は、インドを事例研究の対象とし、非木材林産物を「森林食料」「薬用植物」「蜂製品」「滲出物」「グリーン木材代替品」「油糧種子および森林脂肪」「新興スーパーフード」の7つのテーマ群に分類して議論しています。具体的な計量経済学的モデルやデータ分析手法は用いられておらず、既存の文献や事例に基づいたレビュー形式のアプローチを採用し、各テーマ群がどのように生態系保全と農村の生計向上に寄与しているかを定性的に分析しています。",
-        "results": "分析の結果、インドの非木材林産物は、マディヤ・プラデーシュ州のテンドゥ葉採取者やジャールカンド州のラック栽培者、スンダルバンズの蜂蜜採取者などの事例を通じて、伝統的な慣行が生計を支え、文化的多様性を維持し、環境を育むことを示しています。一方で、過剰採取、品質劣化、市場へのアクセス困難といった課題がこれらの生計を脅かしていることも指摘されています。しかし、フリーズドライハーブ、グリーン竹積層材、ブロックチェーンで追跡可能な蜂蜜といった新しいアイデアが、これらの課題を克服し、生態学的バランスを維持しながら、科学と伝統的知識を融合させた持続可能な管理手法を導入する可能性を示唆しています。"
+        "gist": "本論文は、インドにおける非木材林産物（NTFPs）が、森林保全と地域住民の福祉向上を両立させるための中心的な資源であることを明らかにしています。NTFPsが栄養、健康、収入、文化的多様性といった多岐にわたる側面で、いかに持続可能で公平な未来に貢献するかを包括的にレビューしています。",
+        "novelty": "従来のNTFPsに関する研究が製品リストの記述に留まることが多かったのに対し、本論文はNTFPsが農村の生計、制度、市場とどのように結びつき、その価値を組織化しているかという点に焦点を当てています。さらに、過剰採取や市場アクセスの課題に対する新しい技術的解決策（フリーズドライ、ブロックチェーンなど）の可能性を提示している点が新規性です。",
+        "method": "本研究は、インドを事例地域とし、非木材林産物（NTFPs）に関する既存の文献を体系的にレビューする手法を採用しています。森林食料、薬用植物、蜂産品、滲出物、グリーン木材代替品、油糧種子、新興スーパーフードの7つのテーマグループに分類し、それぞれのNTFPsが地域住民の栄養、健康、収入、アイデンティティにどのように貢献しているかを分析しています。具体的な調査期間やサンプル数はアブストラクトに記載されていませんが、インド全土の多様な事例（マディヤ・プラデーシュ州のテンドゥ葉採取者、ジャールカンド州のラック栽培者、スンダルバンズの蜂蜜採取者など）を包括的に検討しています。",
+        "results": "分析の結果、NTFPsはインドの農村地域において、食料安全保障、伝統医療、収入創出、文化的多様性の維持に不可欠な役割を果たしていることが示されました。特に、マディヤ・プラデーシュ州のテンドゥ葉採取者やジャールカンド州のラック栽培者、スンダルバンズの蜂蜜採取者といった事例は、伝統的な慣行が生態系保全と文化的多様性を同時に促進する可能性を示しています。一方で、過剰採取、品質劣化、市場へのアクセス不足といった課題がNTFPsを介した生計を脅かしていることも指摘されています。しかし、フリーズドライハーブ、グリーン竹積層材、ブロックチェーン追跡可能な蜂蜜といった新しい技術やアイデアが、これらの課題を克服し、生態学的バランスを維持しながら、科学と伝統的知識を融合させることで、森林とそこに住む人々の双方を豊かにする変化をもたらす可能性を提示しています。",
+        "figures": "アブストラクトに図表の記述なし"
       },
       "doi": "10.3389/fsufs.2026.1792816",
       "source": "openalex",
       "journal": "Frontiers in Sustainable Food Systems",
-      "titleJa": "インドにおける非木材林産物の生態学的持続可能性と農村エンパワーメントへの貢献",
-      "catchTitle": "森の恵み、持続可能な未来を拓く？",
-      "hook": "インドの非木材林産物が、生態系の保全と農村の生活向上にどのように貢献しているかを探ります。"
+      "titleJa": "木材を超えて：インドにおける非木材林産物（NTFPs）の生態学的持続可能性と農村のエンパワーメントにおける役割に関するレビュー",
+      "catchTitle": "インドの森が育む未来：NTFPsが変える農村と環境",
+      "hook": "インドの森林から生まれる非木材林産物（NTFPs）が、どのように地域住民の生活と生態系の持続可能性を支えているのか、その多面的な役割を解き明かします。",
+      "quiz": {
+        "question": "インドの非木材林産物（NTFPs）が農村の生計と環境保全に貢献する上で、最も重要な課題は何でしょうか？",
+        "options": [
+          "過剰採取、品質劣化、市場へのアクセス不足",
+          "NTFPsの認知度不足と需要の低さ",
+          "政府による規制の厳しさと補助金の不足"
+        ],
+        "correctIndex": 0,
+        "explanation": "アブストラクトでは、過剰採取、品質劣化、市場へのアクセス不足がNTFPsを介した生計を脅かす主要な課題として明確に挙げられています。これらは持続可能な利用と経済的価値の最大化を妨げる要因です。"
+      },
+      "evidence": {
+        "level": 2,
+        "levelLabel": "レビュー論文",
+        "sampleSize": "インド全土の多様な事例",
+        "studyDesign": "文献レビュー",
+        "dataQuality": 75,
+        "externalValidity": 80,
+        "notes": "特定の地域や製品に焦点を当てた詳細な定量分析は含まれていません。"
+      }
     },
     {
       "id": "W7157347539",
@@ -86,17 +126,37 @@
       ],
       "abstract": "Cross-sector collaborations are necessary for transformative food system change. Grain producers are increasingly interested in adopting new soil health practices. However, information is still needed to understand the factors throughout the supply chain affecting adoption. Using data from 25 semi-structured interviews and four podcasts with grain producers, supply chain and government professionals, and researchers, we explore factors that enable and constrain adoption of soil health practices in the US Pacific Northwest with a focus on cover cropping and livestock integration into crop production. Our analysis is framed using an integrated model of the diffusion of innovations and transformational adaptation in agriculture. Results show factors within the institutional, personal, and practical spheres of influence play a role in providing traction or causing friction in the adoption of these soil heath practices and are related to the United Nations Sustainable Development Goals. We provide considerations for how to support adoption, including addressing crop insurance barriers, developing creative financing options, developing infrastructure to allow separate storage of crops grown with marketable soil health practices, providing opportunities to connect producers to one another and to markets, communicating benefits across the supply chain from producer to final consumer, developing trusted partnerships, and providing proof of concept that these practices can result in positive environmental, economic, and human health benefits. Results demonstrate the importance of a systems and networked approach when building supply chains.",
       "summary": {
-        "gist": "本論文は、米国太平洋岸北西部の穀物農家が土壌健全化慣行（特に被覆作物と家畜の作物生産への統合）を採用する際の促進要因と制約要因を、サプライチェーン全体にわたる視点から明らかにしています。",
-        "novelty": "従来の研究が個々の農家の意思決定に焦点を当てがちであったのに対し、本研究はイノベーション普及と農業における変革的適応の統合モデルを枠組みとして用い、サプライチェーン全体にわたる制度的、個人的、実践的側面が土壌健全化慣行の採用に与える影響を多角的に分析している点が新規性です。",
-        "method": "本研究では、米国太平洋岸北西部の穀物生産者、サプライチェーンおよび政府関係者、研究者に対する25件の半構造化インタビューと4つのポッドキャストデータを用いています。これらの質的データを分析し、イノベーション普及と農業における変革的適応の統合モデルを適用して、土壌健全化慣行の採用を阻害または促進する要因を特定しています。",
-        "results": "分析の結果、制度的、個人的、実践的という三つの影響圏内の要因が、土壌健全化慣行の採用において促進力または摩擦の原因となっていることが示されました。具体的には、作物保険の障壁、創造的な資金調達オプションの必要性、市場性のある土壌健全化慣行で栽培された作物の分離貯蔵インフラの整備、生産者間のつながりや市場へのアクセス機会の提供、サプライチェーン全体での便益の伝達、信頼できるパートナーシップの構築、そしてこれらの慣行が環境、経済、人間の健康に肯定的な利益をもたらすという概念実証の重要性が指摘されています。これらの結果は、サプライチェーンを構築する際にシステム的かつネットワーク的なアプローチが重要であることを示唆しています。"
+        "gist": "本研究は、米国太平洋岸北西部の穀物農家が被覆作物や家畜統合といった土壌健全性実践を採用する際の促進要因と阻害要因を特定し、サプライチェーン全体での変革的適応を支援するための政策的含意を提示しています。",
+        "novelty": "従来の研究が個別の農家レベルでの採用要因に焦点を当てがちであったのに対し、本研究は、イノベーション普及と農業における変革的適応の統合モデルを用いて、制度的、個人的、実践的な影響圏にわたるサプライチェーン全体の要因を包括的に分析している点が新規性です。これにより、より広範な視点から採用の障壁と機会を明らかにしています。",
+        "method": "本研究は、米国太平洋岸北西部の穀物生産者、サプライチェーンおよび政府関係者、研究者に対して実施された25件の半構造化インタビューと4件のポッドキャストデータを使用しています。分析は、イノベーション普及と農業における変革的適応の統合モデルを枠組みとして用いて、質的データから土壌健全性実践の採用に影響を与える要因を探索的に特定しています。調査期間や具体的なデータ年はアブストラクトに明記されていません。",
+        "results": "分析の結果、土壌健全性実践の採用には、制度的、個人的、実践的な3つの影響圏内の要因が推進力または摩擦として作用することが明らかになりました。具体的には、作物保険の障壁への対処、創造的な資金調達オプションの開発、市場性のある土壌健全性実践で栽培された作物の分離貯蔵を可能にするインフラ整備が重要です。また、生産者間のつながりや市場へのアクセス機会の提供、サプライチェーン全体での便益の伝達、信頼できるパートナーシップの構築、そしてこれらの実践が環境、経済、人間の健康に肯定的な利益をもたらすという概念実証の提供が、採用を支援するために必要であると提言されています。これらの結果は、サプライチェーン構築においてシステム的かつネットワーク的なアプローチの重要性を示唆しています。",
+        "figures": "アブストラクトに図表の記述なし"
       },
       "doi": "10.3389/fsufs.2026.1771805",
       "source": "openalex",
       "journal": "Frontiers in Sustainable Food Systems",
-      "titleJa": "米国太平洋岸北西部の穀物農場における変革的適応と土壌健全化慣行の採用",
-      "catchTitle": "土壌改善、なぜ進まない？",
-      "hook": "米国太平洋岸北西部の穀物農家が土壌健全化慣行を採用する上での障壁と促進要因を明らかにしています。"
+      "titleJa": "米国太平洋岸北西部の穀物農場における変革的適応と土壌健全性実践の採用",
+      "catchTitle": "土壌改善、なぜ進まない？穀物農家の課題",
+      "hook": "米国太平洋岸北西部の穀物農家が土壌健全性実践を採用する上で、どのような要因が推進力となり、また障壁となっているのかを解明しています。",
+      "quiz": {
+        "question": "米国太平洋岸北西部の穀物農家が土壌健全性実践を採用する上で、最も大きな障壁となる要因は何だと考えますか？",
+        "options": [
+          "作物保険制度の制約",
+          "実践に関する情報不足",
+          "初期投資の高さ"
+        ],
+        "correctIndex": 0,
+        "explanation": "論文では、作物保険の障壁への対処が採用支援のための重要な考慮事項として挙げられています。これは、リスク管理の観点から農家の意思決定に大きな影響を与えるためです。"
+      },
+      "evidence": {
+        "level": 2,
+        "levelLabel": "質的調査（探索的）",
+        "sampleSize": "インタビュー25件、ポッドキャスト4件",
+        "studyDesign": "半構造化インタビューとポッドキャストによる質的データ分析",
+        "dataQuality": 75,
+        "externalValidity": 60,
+        "notes": "質的調査のため、結果の一般化には注意が必要ですが、要因の探索には適しています。"
+      }
     },
     {
       "id": "W7156682322",
@@ -119,17 +179,37 @@
       ],
       "abstract": "India is a leading producer and exporter of spices, renowned for their distinctive aroma, texture and taste. Sustaining this position requires improvements not only in production and productivity but also in supply chain efficiency. This study examines the economics, supply chain structure, marketing efficiency, post-harvest losses and production constraints of three major spice crops—dry chilli, turmeric and ginger—in a representative spice-producing region of India. Primary data were collected from 300 farmers and key market intermediaries using a structured survey. The results indicate that ginger had the highest cost of cultivation (₹ 505509.27 ha-1), while dry chilli exhibited the highest benefit-cost ratio (2.30), reflecting superior economic viability. Although turmeric recorded the highest yield (305.60 q ha-1), its profitability remained moderate due to higher marketing costs and post-harvest losses. Short-distance marketing channels were found to be more efficient, offering higher producer shares and lower price spreads. Post-harvest losses ranged from 24.91 % to 25.81 % with the highest losses occurring at the retail level due to inadequate handling, storage and transportation. The study highlights that supply chain inefficiencies and post-harvest management significantly influence farm profitability. Strengthening market linkages and investing in post-harvest infrastructure are essential to enhance farmers’ income and ensure sustainable spice production.",
       "summary": {
-        "gist": "本研究は、インドの主要スパイス生産地域における乾燥唐辛子、ウコン、ショウガの経済性、サプライチェーン構造、マーケティング効率、収穫後損失、および生産制約を分析し、農家の収益性向上と持続可能なスパイス生産のための課題と解決策を明らかにしました。",
-        "novelty": "従来のスパイスに関する研究が生産性向上に焦点を当てていたのに対し、本研究はサプライチェーン全体の効率性、特にマーケティング効率と収穫後損失が農家の収益に与える影響を包括的に分析した点で新規性があります。これにより、生産から市場までのギャップを埋める知見を提供しています。",
-        "method": "本研究では、インドの代表的なスパイス生産地域において、乾燥唐辛子、ウコン、ショウガの3つの主要スパイス作物を対象としました。300の農家と主要な市場仲介業者から、構造化されたアンケートを用いて一次データを収集し、栽培コスト、収益性、マーケティング効率、収穫後損失、および生産制約に関する詳細な分析を行いました。",
-        "results": "分析の結果、ショウガはヘクタールあたり505,509.27ルピーと最も高い栽培コストを示しましたが、乾燥唐辛子は2.30と最も高い費用対効果比率を示し、優れた経済的実行可能性が確認されました。ウコンはヘクタールあたり305.60キンタルと最高の収量でしたが、高いマーケティングコストと収穫後損失により、収益性は中程度にとどまりました。また、短距離のマーケティングチャネルがより効率的であり、生産者への配分率が高く、価格スプレッドが低いことが判明しました。収穫後損失は24.91%から25.81%の範囲であり、不適切な取り扱い、保管、輸送が原因で小売レベルで最も高い損失が発生していました。これらの結果は、サプライチェーンの非効率性と収穫後管理が農家の収益性に大きく影響することを示唆しており、市場連携の強化と収穫後インフラへの投資が、農家の所得向上と持続可能なスパイス生産に不可欠であると結論付けています。"
+        "gist": "本研究は、インド中央グジャラート州における主要スパイス作物（乾燥唐辛子、ウコン、ショウガ）の経済性、サプライチェーン構造、マーケティング効率、収穫後損失、および生産制約を明らかにしました。",
+        "novelty": "従来のスパイス研究が生産性向上に焦点を当てていたのに対し、本研究はサプライチェーンの効率性、収穫後損失、およびマーケティングチャネルの分析を統合することで、農家の収益性に影響を与える包括的な要因を特定し、研究の空白を埋めています。",
+        "method": "インドの代表的なスパイス生産地域である中央グジャラート州において、乾燥唐辛子、ウコン、ショウガを栽培する300名の農家と主要な市場仲介業者から、構造化されたアンケート調査を通じて一次データを収集しました。調査期間やデータ年はアブストラクトに明記されていませんが、これらのデータを用いて経済性分析、サプライチェーン分析、マーケティング効率分析、および収穫後損失の評価を行っています。",
+        "results": "分析の結果、ショウガは栽培コストが最も高く（505,509.27ルピー/ha）、乾燥唐辛子は最も高い費用対効果比（2.30）を示し、優れた経済的実行可能性が確認されました。ウコンは最高の収量（305.60キンタル/ha）を記録しましたが、高いマーケティングコストと収穫後損失により収益性は中程度にとどまりました。短距離のマーケティングチャネルはより効率的であり、生産者シェアが高く、価格スプレッドが低いことが示されています。収穫後損失は24.91%から25.81%の範囲であり、不適切な取り扱い、保管、輸送により小売レベルで最も高い損失が発生していました。これらの結果は、サプライチェーンの非効率性と収穫後管理が農家の収益性に大きく影響することを示唆しており、市場連携の強化と収穫後インフラへの投資が農家所得向上と持続可能なスパイス生産に不可欠であると結論付けています。",
+        "figures": "アブストラクトに図表の記述なし"
       },
       "doi": "10.14719/pst.12101",
       "source": "openalex",
       "journal": "Plant Science Today",
-      "titleJa": "インド中西部における主要スパイスの経済性とサプライチェーン分析",
-      "catchTitle": "スパイス農家の収益、どうすれば上がる？",
-      "hook": "インドの主要スパイス生産地域で、農家の収益性を高めるための課題と解決策を明らかにしています。"
+      "titleJa": "インド中央グジャラート州における主要スパイスの経済性とサプライチェーン分析",
+      "catchTitle": "スパイス農家の収益性、何が鍵？",
+      "hook": "インドの主要スパイス生産地域で、農家の収益性とサプライチェーンの効率性を高めるための重要な要因が明らかになりました。",
+      "quiz": {
+        "question": "インドのスパイス農家にとって、最も収益性が高いとされた作物はどれでしょうか？",
+        "options": [
+          "乾燥唐辛子",
+          "ウコン",
+          "ショウガ"
+        ],
+        "correctIndex": 0,
+        "explanation": "乾燥唐辛子は、費用対効果比が2.30と最も高く、経済的に最も実行可能であると示されました。ウコンは収量が高いものの、マーケティングコストと収穫後損失が収益性を圧迫しています。"
+      },
+      "evidence": {
+        "level": 3,
+        "levelLabel": "横断的観察研究",
+        "sampleSize": "農家300名、市場仲介業者",
+        "studyDesign": "構造化アンケート調査＋経済性分析",
+        "dataQuality": 75,
+        "externalValidity": 60,
+        "notes": "特定の地域と作物に焦点を当てているため、他の地域や作物への一般化には注意が必要です。"
+      }
     },
     {
       "id": "W7156237165",
@@ -149,17 +229,37 @@
       ],
       "abstract": "The global agricultural sector is under increasing pressure from population growth and climate change, driving the transition toward Agriculture 4.0. Although technologies such as the Internet of Things (IoT) and Artificial Intelligence (AI) have improved on-farm productivity, supply chains remain constrained by inefficiencies, information asymmetry, and significant post-harvest losses. This paper presents a comprehensive analysis of blockchain as a decentralized solution to these challenges. The study adopts a Human-Cyber-Physical Systems (H-CPS) perspective to examine how blockchain integrates physical agricultural operations with secure, transparent digital infrastructures. Key applications are analyzed across the value chain, including digital soil passports, seed traceability, cold-chain monitoring, and automated financial settlements via smart contracts. Additionally, the synergy between blockchain and emerging technologies, such as AI-driven predictive maintenance and swarm robotics, is explored. Unlike prior reviews, this work proposes a unified H-CPS-based architecture that integrates blockchain with AI, IoT, and robotics, providing a system-level perspective rather than isolated technological analyses. This integrated framework supports the development of transparent, resilient, and sustainable agri-food ecosystems while addressing challenges such as the Oracle Problem and rural digital constraints.",
       "summary": {
-        "gist": "本論文は、農業4.0におけるサプライチェーンの非効率性や情報非対称性といった課題に対し、ブロックチェーンを分散型ソリューションとして包括的に分析しています。特に、人間・サイバー・物理システム（H-CPS）の視点から、ブロックチェーンが物理的な農業オペレーションと安全で透明なデジタルインフラをいかに統合するかを明らかにしています。",
-        "novelty": "従来の研究が個別の技術分析に留まっていたのに対し、本研究はブロックチェーン、AI、IoT、ロボティクスを統合した統一的なH-CPSベースのアーキテクチャを提案している点が新規性です。これにより、システムレベルでの視点を提供し、透明性、回復力、持続可能性のあるアグリフードエコシステムの開発を支援する研究の空白を埋めています。",
-        "method": "本研究は、特定のデータセットや計量経済学的なモデルを用いた実証分析ではなく、既存の文献や事例に基づいた包括的な分析手法を採用しています。具体的には、ブロックチェーンの主要な応用事例として、デジタル土壌パスポート、種子のトレーサビリティ、コールドチェーン監視、スマートコントラクトによる自動金融決済などをバリューチェーン全体で分析しています。また、AI駆動型予測メンテナンスやスウォームロボティクスといった新興技術とブロックチェーンの相乗効果についても考察しています。",
-        "results": "分析の結果、ブロックチェーンは農業サプライチェーンにおける非効率性、情報非対称性、収穫後損失といった課題に対し、有効な分散型ソリューションとして機能することが示されました。特に、H-CPSの視点からブロックチェーンをAI、IoT、ロボティクスと統合することで、物理的な農業オペレーションと安全で透明なデジタルインフラの連携が強化され、透明で回復力があり、持続可能なアグリフードエコシステムの構築に貢献することが示唆されています。また、オラクル問題や農村部のデジタル制約といった課題への対応策も提示されています。"
+        "gist": "本論文は、人口増加と気候変動による圧力が高まる農業分野において、ブロックチェーン技術がサプライチェーンの非効率性、情報の非対称性、収穫後損失といった課題を解決するための分散型ソリューションとして有効であることを包括的に分析しています。特に、ブロックチェーンをAI、IoT、ロボティクスと統合したH-CPSベースの統一アーキテクチャを提案し、その具体的な応用と可能性を明らかにしています。",
+        "novelty": "従来のレビュー研究が個別の技術分析に留まっていたのに対し、本研究はブロックチェーン、AI、IoT、ロボティクスを統合した統一的なH-CPS（Human-Cyber-Physical Systems）ベースのアーキテクチャを提案している点が新規性です。これにより、農業バリューチェーン全体にわたるシステムレベルでの透明性、回復力、持続可能性の向上を目指し、Oracle Problemや農村部のデジタル制約といった課題への対応も視野に入れています。",
+        "method": "本研究は、特定の地域や農家を対象とした実証データ分析ではなく、文献レビューと概念的フレームワークの構築を通じて、ブロックチェーンの農業バリューチェーンへの統合可能性を包括的に分析しています。Human-Cyber-Physical Systems (H-CPS) の視点を取り入れ、物理的な農業オペレーションと安全で透明なデジタルインフラストラクチャの統合方法を検討しています。分析期間や具体的なデータ年は明記されていませんが、アグリカルチャー4.0の文脈で最新技術の応用可能性を論じています。",
+        "results": "分析の結果、ブロックチェーンはデジタル土壌パスポート、種子のトレーサビリティ、コールドチェーン監視、スマートコントラクトによる自動金融決済など、農業バリューチェーン全体で多岐にわたる応用が可能であることが示されました。また、AI駆動型の予測保守や群ロボティクスといった新興技術との相乗効果も期待できると指摘しています。これにより、透明で回復力があり、持続可能なアグリフードエコシステムの発展が支援される一方で、Oracle Problemや農村部のデジタル制約といった課題への対処も重要であると結論付けています。",
+        "figures": "アブストラクトに図表の記述なし"
       },
       "doi": "10.17654/0973699926002",
       "source": "openalex",
       "journal": "Advances in Computer Science and Engineering",
-      "titleJa": "農業4.0における分散型アーキテクチャ：農業バリューチェーン全体へのブロックチェーン統合に関する包括的分析",
+      "titleJa": "アグリカルチャー4.0における分散型アーキテクチャ：農業バリューチェーン全体でのブロックチェーン統合に関する包括的分析",
       "catchTitle": "農業DXの切り札？ブロックチェーンが変える食の未来",
-      "hook": "人口増加と気候変動に直面する農業において、ブロックチェーン技術がどのようにサプライチェーンの課題を解決するのか、その可能性を探ります。"
+      "hook": "人口増加と気候変動に直面する農業において、ブロックチェーン技術がどのようにサプライチェーンの課題を解決し、持続可能な食料システムを構築するのか、その全貌を解き明かします。",
+      "quiz": {
+        "question": "農業におけるブロックチェーン技術の主な利点は何でしょうか？",
+        "options": [
+          "サプライチェーンの透明性向上と非効率性の削減",
+          "農作物の収穫量を直接的に増加させる",
+          "農業機械の故障を完全に防ぐ"
+        ],
+        "correctIndex": 0,
+        "explanation": "ブロックチェーンは情報の非対称性を解消し、サプライチェーン全体の透明性を高めることで、非効率性や収穫後損失の削減に貢献します。収穫量の増加や機械故障の防止は、ブロックチェーンが直接的に提供する機能ではありません。"
+      },
+      "evidence": {
+        "level": 2,
+        "levelLabel": "概念的分析・文献レビュー",
+        "sampleSize": "該当なし",
+        "studyDesign": "文献レビューと概念的フレームワーク構築",
+        "dataQuality": 60,
+        "externalValidity": 80,
+        "notes": "実証データに基づかない概念的な分析であるため、具体的な効果検証は今後の課題です。"
+      }
     },
     {
       "id": "W7156290828",
@@ -180,17 +280,37 @@
       ],
       "abstract": "Adaptation strategies to climate change are important to manage the risks of climate change and to ensure the sustainability of agricultural production. This research was conducted in Türkiye to determine the adaptation strategies of cotton farmers in the Söke district of Aydın province, the first geographical indication registered by the European Union. A survey of 157 farmers was conducted using simple random sampling. After a comprehensive preliminary investigation of adaptation strategies, the chi-square test was used to test whether there was a significant difference between cotton farmers' access to credit, climate change adaptation strategies and other variables. Binary logistic regression analysis was used to determine the factors influencing farmers' access to credit. The binary logistic regression analysis revealed that social and economic factors such as land tenancy and union membership have a positive influence on access to credit. In addition, it was found that a change in irrigation method, a change in the timing of spraying and land management had a positive effect on access to credit, while changes in land ownership, favoring drought-resistant varieties and turning to non-agricultural activities had a negative effect on access to credit. According to the results of this study, the implementation of holistic adaptation strategies instead of partial adaptation strategies could be a solution for climate change adaptation in cotton farming.",
       "summary": {
-        "gist": "本研究は、トルコのアイドゥン県ソケ地区における綿花農家の気候変動適応戦略を特定し、特に信用へのアクセスが適応戦略に与える影響を明らかにしました。その結果、信用へのアクセスは社会経済的要因や特定の適応戦略によって促進または阻害されることが示されています。",
-        "novelty": "従来の気候変動適応研究では、適応戦略そのものに焦点が当てられることが多かったのに対し、本研究は「信用へのアクセス」という側面から適応戦略を分析している点が新規性です。これにより、適応戦略の実施を可能にする経済的基盤の重要性を浮き彫にし、研究の空白を埋めています。",
-        "method": "トルコのアイドゥン県ソケ地区の綿花農家157名を対象に、単純無作為抽出法を用いたアンケート調査を実施しました。データ分析には、まずカイ二乗検定を用いて、信用へのアクセス、気候変動適応戦略、その他の変数間に有意な差があるかを検証しています。次に、農家の信用へのアクセスに影響を与える要因を特定するため、二項ロジスティック回帰分析が用いられました。",
-        "results": "二項ロジスティック回帰分析の結果、土地の賃借や組合への加入といった社会経済的要因が信用へのアクセスに正の影響を与えることが明らかになりました。また、灌漑方法の変更、散布時期の変更、土地管理といった適応戦略も信用へのアクセスに正の影響を与えています。一方で、土地所有権の変更、干ばつ耐性品種の選好、非農業活動への転換は、信用へのアクセスに負の影響を与えることが判明しました。これらの結果から、綿花栽培における気候変動適応には、部分的な適応戦略ではなく、包括的な適応戦略の実施が解決策となり得ることが示唆されています。"
+        "gist": "本研究は、トルコのアイドゥン県ソケ地区の綿花農家における気候変動適応戦略を特定し、信用へのアクセスに影響を与える要因を明らかにしました。特に、社会経済的要因や特定の適応戦略が信用アクセスに与える影響を分析しています。",
+        "novelty": "従来の気候変動適応研究では、個別の適応戦略に焦点を当てることが多かったのに対し、本研究は信用へのアクセスという金融的側面と複数の適応戦略との関連性を包括的に分析しています。これにより、気候変動リスク管理と農業生産の持続可能性を確保するための、より統合的な視点を提供しています。",
+        "method": "本研究は、トルコのアイドゥン県ソケ地区の綿花農家157名を対象に、単純無作為抽出法を用いたアンケート調査を実施しました。データは、綿花農家の信用へのアクセス、気候変動適応戦略、その他の社会経済的変数を含んでいます。分析には、カイ二乗検定を用いて変数間の有意差を検定し、二項ロジスティック回帰分析を用いて信用へのアクセスに影響を与える要因を特定しました。",
+        "results": "二項ロジスティック回帰分析の結果、土地の賃貸借や組合への加入といった社会経済的要因が、信用へのアクセスに正の影響を与えることが明らかになりました。また、灌漑方法の変更、散布時期の変更、土地管理といった適応戦略も信用アクセスに正の影響を与えます。一方で、土地所有権の変更、干ばつ耐性品種の選好、非農業活動への転換は、信用へのアクセスに負の影響を与えることが判明しました。これらの結果から、部分的な適応戦略ではなく、包括的な適応戦略の実施が綿花栽培における気候変動適応の解決策となり得ると示唆されています。",
+        "figures": "アブストラクトに図表の記述なし"
       },
       "doi": "10.30910/turkjans.1820235",
       "source": "openalex",
       "journal": "Türk Tarım ve Doğa Bilimleri Dergisi",
-      "titleJa": "綿花農家の気候変動適応戦略としての信用へのアクセス：トルコ・アイドゥン＝ソケからの証拠",
-      "catchTitle": "気候変動に挑む綿花農家、融資の鍵は？",
-      "hook": "気候変動に適応する綿花農家が、どのように信用へアクセスしているのかを明らかにしています。"
+      "titleJa": "綿花農家の気候変動適応戦略としての信用へのアクセス：トルコ・アイドゥン-ソケからのエビデンス",
+      "catchTitle": "気候変動に克つ綿花農家！ 信用アクセスが鍵か",
+      "hook": "トルコの綿花農家は、気候変動に適応するためにどのような戦略を取り、信用へのアクセスがそれにどう影響するのでしょうか。",
+      "quiz": {
+        "question": "トルコの綿花農家において、信用へのアクセスを向上させる要因として、次のうちどれが最も適切でしょうか？",
+        "options": [
+          "土地の賃貸借や組合への加入",
+          "干ばつ耐性品種への転換",
+          "非農業活動への集中"
+        ],
+        "correctIndex": 0,
+        "explanation": "本研究の結果、土地の賃貸借や組合への加入といった社会経済的要因が、信用へのアクセスに正の影響を与えることが明らかになっています。これらは農家の組織的なつながりや安定性を示す指標と考えられます。"
+      },
+      "evidence": {
+        "level": 3,
+        "levelLabel": "観察研究（横断調査）",
+        "sampleSize": "農家157名",
+        "studyDesign": "アンケート調査＋カイ二乗検定＋二項ロジスティック回帰分析",
+        "dataQuality": 75,
+        "externalValidity": 60,
+        "notes": "特定の地域と作物に焦点を当てているため、他の地域や作物への一般化には注意が必要です。"
+      }
     },
     {
       "id": "W7156183633",
@@ -215,17 +335,37 @@
       ],
       "abstract": "Introduction Palm oil plantation certification is important in promoting sustainable practices, but its implementation among independent smallholders often faces obstacles. Suboptimal readiness, limited insight, knowledge, human resources, and audit costs cause some stallholders to view certification, whether Indonesian Sustainable Palm Oil (ISPO) or Roundtable on Sustainable Palm Oil (RSPO), as merely an administrative obligation. This study aims to assess the sustainability level of smallholder oil palm plantation certification systems in three districts in Jambi Province, namely Batanghari District (ISPO-certified group), Tanjung Jabung Barat District (RSPO-certified group), and Merangin District (ISPO and RSPO-certified group). Methods The research sample consisted of 225 smallholder’s selected using multistage random sampling. Sustainability analysis was conducted using the Rapfish method across five dimensions of sustainability. Results The results of the study showed differences in sustainability levels between locations. Batanghari Regency, represented by KUD Mutiara Bumi, scored 65.88 (fair category), Tanjung Jabung Barat Regency, represented by FPS–MRM, scored 78.10 (good category), and Merangin Regency, represented by Gapoktan Tanjung Sehati, scored 90.55 (very good category). The economic dimension was the lowest aspect, followed by the institutional dimension, making both priorities for improvement. Discussion These findings confirm that the sustainability of certification depends on formal compliance and on strengthening smallholder capacity, economic support, group institutions, and multistakeholder collaboration. The practical implication is that an integrated strategy covering economic incentives, audit cost facilitation, and strengthening of smallholder organizations is needed to ensure that ISPO/RSPO certification is sustainable and provides tangible benefits for independent smallholders.",
       "summary": {
-        "gist": "本研究は、インドネシアのジャンビ州における独立小規模パーム油農家の認証制度（ISPOおよびRSPO）の持続可能性レベルを評価し、地域によってそのレベルに差があることを明らかにしました。",
-        "novelty": "これまでの研究が認証制度の導入における課題に焦点を当てていたのに対し、本研究は実際に認証を取得した小規模農家を対象に、持続可能性の多次元的な側面を定量的に評価した点で新規性があります。特に、経済的側面と制度的側面が改善の優先事項であることを特定し、認証制度の持続可能性を高めるための具体的な戦略を提示している点が、従来の研究の空白を埋めるものです。",
-        "method": "本研究では、ジャンビ州の3つの地区（バタンハリ県、タンジュンジャバール県、ムランギン県）から多段階無作為抽出法を用いて225の小規模農家サンプルを選定しました。分析手法としては、Rapfish法を用いて、経済、社会、環境、技術、制度の5つの側面から持続可能性レベルを評価しています。",
-        "results": "分析の結果、持続可能性レベルは地域によって異なり、バタンハリ県（ISPO認証グループ）は65.88点（普通）、タンジュンジャバール県（RSPO認証グループ）は78.10点（良い）、ムランギン県（ISPOおよびRSPO認証グループ）は90.55点（非常に良い）という評価でした。特に、経済的側面と制度的側面が最も低いスコアを示し、これらが持続可能性向上のための優先的な改善点であることが示唆されました。このことから、認証の持続可能性は形式的な遵守だけでなく、小規模農家の能力強化、経済的支援、グループ組織の強化、およびマルチステークホルダー間の協力にかかっていることが確認されました。"
+        "gist": "本研究は、インドネシアのジャンビ州における独立小規模パーム油農家の認証システムが、地域や認証の種類によって持続可能性レベルに差があることを明らかにしました。特に経済的側面と制度的側面が改善の優先事項であることが示されています。",
+        "novelty": "従来の研究では、小規模農家におけるパーム油認証の導入障壁が指摘されていましたが、本研究は異なる認証制度（ISPOとRSPO）と地域を比較し、具体的な持続可能性レベルの差異を多次元的に評価した点で新規性があります。これにより、認証が単なる行政義務に留まらず、実質的な持続可能性向上に繋がるための具体的な改善点を提示しています。",
+        "method": "本研究は、インドネシアのジャンビ州にある3つの県（バタンハリ県、タンジュンジャブバル県、ムランギン県）を調査地域としています。調査対象は、多段階無作為抽出法を用いて選定された225の小規模農家です。持続可能性分析には、Rapfish法が用いられ、5つの持続可能性側面（経済、制度など）にわたって評価が行われました。",
+        "results": "分析の結果、持続可能性レベルは地域間で異なることが判明しました。バタンハリ県（ISPO認証グループ）は65.88点（普通）、タンジュンジャブバル県（RSPO認証グループ）は78.10点（良好）、ムランギン県（ISPOとRSPOの両方認証グループ）は90.55点（非常に良好）でした。特に経済的側面が最も低く、次いで制度的側面が低い結果となり、これらが改善の優先事項であることが示されています。この結果は、認証の持続可能性が、農家の能力強化、経済的支援、グループ制度、および多角的なステークホルダー連携にかかっていることを示唆しています。",
+        "figures": "アブストラクトに図表の記述なし"
       },
       "doi": "10.3389/frsus.2026.1717610",
       "source": "openalex",
       "journal": "Frontiers in Sustainability",
-      "titleJa": "ジャンビ州における認証独立小規模パーム油農家の持続可能性評価",
+      "titleJa": "ジャンビ州における認証独立小規模パーム油農家の持続可能性",
       "catchTitle": "パーム油認証、持続可能性に差？",
-      "hook": "パーム油の持続可能な生産をめざす認証制度は、小規模農家にとって本当に有効なのでしょうか。"
+      "hook": "パーム油の持続可能性認証は、小規模農家にとって本当に役立っているのでしょうか？",
+      "quiz": {
+        "question": "ジャンビ州の小規模パーム油農家の持続可能性認証において、最も改善が必要な側面は何でしょうか？",
+        "options": [
+          "経済的側面",
+          "環境的側面",
+          "社会的側面"
+        ],
+        "correctIndex": 0,
+        "explanation": "研究結果によると、経済的側面が最も低いスコアであり、改善の優先事項とされています。次いで制度的側面も改善が必要であることが示されています。"
+      },
+      "evidence": {
+        "level": 3,
+        "levelLabel": "観察研究",
+        "sampleSize": "小規模農家225名",
+        "studyDesign": "多段階無作為抽出＋Rapfish法による持続可能性分析",
+        "dataQuality": 75,
+        "externalValidity": 60,
+        "notes": "特定の地域と認証制度に焦点を当てているため、他の地域や作物への一般化には注意が必要です。"
+      }
     },
     {
       "id": "W7155951053",
@@ -246,17 +386,37 @@
       ],
       "abstract": "practices among Technical-Vocational (TechVoc) students poses challenges to effective curriculum implementation. This study aimed to describe the socio-demographic profile and determine the levels, significant differences, and relationships of knowledge, attitudes, and practices in farming among TechVoc students. Conducted in Asuncion, Davao del Norte, the study involved 229 students enrolled in Agricultural Crops Production and Animal Production. A quantitative research design employing a descriptive-correlational technique was utilized. Data were collected using survey questionnaire and analyzed using frequency, percentage, mean, t-test, ANOVA, and Pearson correlation coefficient. Results revealed that most students were between 13 and 14 years old, predominantly female, of Bisaya ethnicity, and came from low-income households with parents mostly engaged in farming. Students also exhibited high levels of knowledge, attitudes, and practices in farming. Significant differences were observed across age, sex, family income, parents’ occupation, and academic performance. Strong positive correlations among knowledge, attitudes, and practices indicate the interdependence of cognitive, affective, and behavioral domains. These findings imply that an integrated approach to agricultural education enhances student competence and motivation. It is recommended that the school community provide experiential learning opportunities and supportive environments to further strengthen these outcomes.",
       "summary": {
-        "gist": "本研究は、フィリピンのTechVoc学生を対象に、農業に関する知識、態度、実践のレベルを明らかにし、それらが学生の社会人口学的属性とどのように関連しているかを解明しました。その結果、学生は農業に対して高いレベルの知識、態度、実践を示し、これら三つの要素が相互に強く関連していることが示されました。",
-        "novelty": "これまでの研究では、TechVoc学生の農業教育におけるカリキュラム実施の課題が指摘されていましたが、本研究は、特定の地域におけるTechVoc学生の農業に関する知識、態度、実践の現状と、それらが社会人口学的要因や学業成績とどのように関連しているかを定量的に分析した点で新規性があります。これにより、効果的な農業教育カリキュラム設計のための具体的な基礎データを提供しています。",
-        "method": "本研究は、フィリピンのダバオ・デル・ノルテ州アスンシオンにおいて、農業作物生産および動物生産を専攻するTechVoc学生229名を対象としました。記述的相関研究デザインを採用し、調査票を用いたデータ収集を行いました。データ分析には、頻度、パーセンテージ、平均値、t検定、ANOVA、およびピアソン相関係数といった統計手法が用いられています。",
-        "results": "分析の結果、対象学生の多くは13〜14歳で、女性が優勢であり、ビサヤ族出身で、低所得世帯に属し、両親の多くが農業に従事していることが明らかになりました。学生は農業に関して高いレベルの知識、態度、実践を示しており、これらのレベルは年齢、性別、世帯収入、両親の職業、学業成績によって有意な差があることが観察されました。また、知識、態度、実践の間には強い正の相関関係が認められ、これら認知的、情動的、行動的領域の相互依存性が示唆されました。これらの結果は、農業教育において統合的なアプローチが学生の能力とモチベーションを高めることを示唆しており、学校コミュニティが体験学習の機会と支援的な環境を提供することが推奨されます。"
+        "gist": "本研究は、フィリピンのダバオ・デル・ノルテ州アスンシオンにある技術職業訓練校の学生を対象に、農業に関する知識、態度、実践のレベルを記述し、それらの関連性を明らかにしました。学生は農業に対して高いレベルの知識、肯定的な態度、そして実践意欲を持っていることが示されています。",
+        "novelty": "従来の農業教育に関する研究では、技術職業訓練校の学生に焦点を当て、知識、態度、実践の三側面を統合的に分析したものは限られていました。本研究は、これらの側面間の相互関係を定量的に明らかにし、カリキュラム効果の向上に向けた具体的な示唆を提供することで、この研究ギャップを埋めています。",
+        "method": "本研究は、フィリピンのダバオ・デル・ノルテ州アスンシオンにある技術職業訓練校の農業作物生産科および畜産科に在籍する229名の学生を対象としました。データは記述的相関研究デザインに基づき、調査票を用いたアンケート調査によって収集されました。分析には、頻度分布、パーセンテージ、平均値、t検定、ANOVA、およびピアソン相関係数が使用されています。",
+        "results": "分析の結果、対象学生の多くは13〜14歳で、女性が優勢であり、ビサヤ族出身で、両親の多くが農業に従事する低所得世帯出身であることが明らかになりました。学生は農業に関する知識、態度、実践のいずれにおいても高いレベルを示しています。年齢、性別、世帯収入、両親の職業、学業成績によって、これらのレベルに有意な差が見られました。また、知識、態度、実践の間には強い正の相関関係が認められ、これらが相互に依存する認知、感情、行動の領域であることを示唆しています。これらの結果は、農業教育において統合的なアプローチが学生の能力とモチベーションを高めることを意味しており、学校コミュニティが体験学習の機会と支援的な環境を提供することが推奨されます。",
+        "figures": "アブストラクトに図表の記述なし"
       },
       "doi": "10.54536/ajaset.v10i1.7011",
       "source": "openalex",
       "journal": "American Journal of Agricultural Science Engineering and Technology",
-      "titleJa": "ダバオ・デル・ノルテ州アスンシオンにおけるTechVoc学生の農業に関する知識・態度・実践",
-      "catchTitle": "農業教育、成功の鍵は？",
-      "hook": "TechVoc学生の農業への理解度や実践意欲は、教育効果にどう影響するのでしょうか？"
+      "titleJa": "ダバオ・デル・ノルテ州アスンシオンにおける技術職業訓練校生の農業に関する知識、態度、実践",
+      "catchTitle": "農業教育、何が重要？学生の知識・態度・実践を調査",
+      "hook": "技術職業訓練校の学生は農業についてどの程度理解し、どのように感じ、実践しているのでしょうか。",
+      "quiz": {
+        "question": "技術職業訓練校の学生は、農業に対してどのような傾向を示したでしょうか？",
+        "options": [
+          "知識、態度、実践の全てにおいて高いレベルを示した。",
+          "知識は高いが、実践意欲は低い傾向にあった。",
+          "農業への関心は低いが、実践能力は高い傾向にあった。"
+        ],
+        "correctIndex": 0,
+        "explanation": "本研究では、学生が農業に関する知識、肯定的な態度、そして実践意欲の全てにおいて高いレベルを示したことが明らかになりました。これは、統合的な農業教育の重要性を示唆しています。"
+      },
+      "evidence": {
+        "level": 3,
+        "levelLabel": "記述的相関研究",
+        "sampleSize": "学生229名",
+        "studyDesign": "アンケート調査＋記述統計・相関分析",
+        "dataQuality": 75,
+        "externalValidity": 60,
+        "notes": "特定の地域の技術職業訓練校生を対象としているため、結果の一般化には注意が必要です。"
+      }
     },
     {
       "id": "W7156302696",
@@ -278,17 +438,37 @@
       ],
       "abstract": "Indonesia has the largest mangrove area in the world and supports high diversity, including 92 true mangrove species. They provide critical ecosystem services such as protection from floods, disaster risk reduction, fisheries support, carbon sequestration, and erosion prevention. Despite their importance, Indonesia has experienced significant mangrove loss/destruction over the past two centuries. This is majorly driven by factors such as pollution, illegal logging, rapid urbanization, agriculture, and aquaculture expansion, with shrimp specifically. This leads to mangrove degradation, and it threatens community livelihoods, coastal resilience, ecosystem services, and national climate mitigation goals. In recent decades, Indonesia has begun to recognize mangroves as a key blue carbon ecosystem. Under the Paris Agreement, mangrove conservation and restoration strategies have been included. However, mangrove governance remains an issue due to overlapping land-sea policies, weak regulations, and gaps in regulatory frameworks. This paper reviews the environmental and economic importance of mangroves in Indonesia and examines the key drivers of mangrove loss, and discusses the challenges related to policy integration. The discussion highlights the need for inter-sectoral governance, community involvement, sustainable and long-term restoration practices, and financial sources. Strengthening these areas is essential for safeguarding Indonesia’s mangroves.",
       "summary": {
-        "gist": "本論文は、インドネシアにおけるマングローブの環境的・経済的重要性、その喪失の主要因、および政策統合に関する課題を包括的にレビューし、今後の保全に向けた多角的な提言を行っています。",
-        "novelty": "本論文は、インドネシアのマングローブに関する既存の知見を統合し、環境的・経済的重要性、喪失要因、政策課題を一貫した視点で分析している点に新規性があります。特に、重複する陸海政策や規制の弱さといったガバナンスの課題に焦点を当て、学際的なアプローチの必要性を強調することで、従来の研究では十分に議論されてこなかった政策統合の側面を深く掘り下げています。",
-        "method": "本論文は、特定のデータセットや計量経済学的なモデルを用いた実証分析ではなく、既存の学術文献や政策文書を広範にレビューする手法を採用しています。インドネシアにおけるマングローブの生態学的・経済的価値に関する研究、過去2世紀にわたるマングローブ喪失の歴史的経緯と要因、およびパリ協定下の保全戦略やガバナンスに関する議論を対象として、それらの情報を統合・分析しています。",
-        "results": "分析の結果、インドネシアのマングローブは、洪水防御、災害リスク軽減、漁業支援、炭素隔離、侵食防止といった重要な生態系サービスを提供していることが再確認されました。しかし、汚染、違法伐採、急速な都市化、農業・養殖業（特にエビ養殖）の拡大が主要な喪失要因であり、これが地域社会の生計、沿岸のレジリエンス、生態系サービス、そして国の気候変動緩和目標を脅かしていることが明らかになりました。また、マングローブのガバナンスにおいては、陸海政策の重複、規制の弱さ、法的枠組みのギャップが課題として浮上しており、これらを解決するためには、セクター横断的なガバナンス、地域社会の参加、持続可能で長期的な回復実践、および財源の確保が不可欠であると結論付けています。"
+        "gist": "本論文は、インドネシアにおけるマングローブの環境的・経済的重要性、その減少の主要な要因、および政策統合に関する課題を包括的に検討しています。マングローブの保全には、部門横断的なガバナンス、地域社会の関与、持続可能な修復実践、そして財源の確保が不可欠であることを明らかにしています。",
+        "novelty": "本研究は、インドネシアにおけるマングローブの減少要因を特定し、政策統合の課題に焦点を当てることで、既存の研究の空白を埋めています。特に、重複する陸海政策、規制の弱さ、規制枠組みのギャップといったガバナンスの問題がマングローブ保全を阻害している点を議論し、具体的な改善策を提示している点が新規性です。",
+        "method": "本論文は、インドネシアにおけるマングローブの環境的・経済的重要性に関する既存の文献をレビューしています。マングローブ減少の主要な要因を特定し、政策統合に関連する課題について議論を展開しています。特定の調査地域、対象、期間、および計量経済学的な分析手法の記述はアブストラクトにはありません。",
+        "results": "分析の結果、インドネシアのマングローブ減少は、汚染、違法伐採、急速な都市化、農業および養殖業（特にエビ養殖）の拡大が主な要因であることが示されています。これらの要因がマングローブの劣化を引き起こし、地域社会の生計、沿岸のレジリエンス、生態系サービス、そして国の気候変動緩和目標を脅かしています。政策的な課題としては、陸海政策の重複、規制の弱さ、規制枠組みのギャップが挙げられ、これらを克服するためには、部門横断的なガバナンス、地域社会の関与、持続的かつ長期的な修復実践、および財源の強化が不可欠であると結論付けています。",
+        "figures": "アブストラクトに図表の記述なし"
       },
       "doi": "10.26877/adarmaacitya.v2i1.574",
       "source": "openalex",
       "journal": "Community Service Journal Adarma Acitya",
-      "titleJa": "インドネシア沿岸地域におけるマングローブの喪失とブルーカーボン減少",
-      "catchTitle": "マングローブ減少、インドネシアの危機？",
-      "hook": "世界最大のマングローブ林を持つインドネシアで、なぜマングローブが失われ続けているのでしょうか。"
+      "titleJa": "インドネシア沿岸地域におけるマングローブの減少とブルーカーボンの衰退",
+      "catchTitle": "マングローブ減少、インドネシアの気候変動対策を脅かす？",
+      "hook": "世界最大のマングローブ林を持つインドネシアで、その減少が気候変動対策や地域社会に深刻な影響を与えている現状を解説します。",
+      "quiz": {
+        "question": "インドネシアのマングローブ減少の主な原因として、論文で指摘されているのはどれでしょう？",
+        "options": [
+          "汚染、違法伐採、都市化、養殖業の拡大",
+          "気候変動、津波、自然災害",
+          "観光開発、漁業の過剰な発展"
+        ],
+        "correctIndex": 0,
+        "explanation": "論文では、汚染、違法伐採、急速な都市化、農業および養殖業（特にエビ養殖）の拡大がマングローブ減少の主要な要因であると指摘されています。これらが複合的にマングローブの劣化を引き起こしています。"
+      },
+      "evidence": {
+        "level": 2,
+        "levelLabel": "文献レビュー",
+        "sampleSize": "文献多数",
+        "studyDesign": "文献レビュー",
+        "dataQuality": 75,
+        "externalValidity": 80,
+        "notes": "特定のデータ分析は含まれていませんが、広範な文献に基づいています。"
+      }
     },
     {
       "id": "W7156192204",
@@ -313,17 +493,37 @@
       ],
       "abstract": "The circular economy (CE) has moved to the center of sustainability-driven innovation, with agriculture playing a pivotal role due to its large biomass flows and potential for resource optimization. This study investigates how CE practices relate to sustainable innovation, specifically highlighting value creation for “ergo-iconic” agricultural products—goods that uniquely combine ergonomic functionality (usability, durability, and human-centered design) with culturally embedded, sustainability-oriented identity attributes (place-based branding, heritage value, and symbolic meaning). Employing a qualitative exploratory design in Banten, Indonesia, we conducted semi-structured interviews with ten key informants comprising five agro-industry practitioners, three industry analysts, and two NGO representatives. We complemented this primary data with rigorous document analysis to ensure a holistic understanding of the context. Thematic analysis and triangulation were employed to establish the credibility of the findings. The results indicate that circular business models not only reduce waste but also serve as catalysts for broader innovation processes. Three primary drivers consistently emerged: (1) stakeholder engagement, (2) cross-sector collaboration, and (3) the adoption of environmentally friendly technologies. Building on these insights, we propose the CircAgriResilient Nexus (CAR-Nexus)—a comprehensive framework that conceptualizes circularity as a dynamic nexus connecting four pillars: Circularity, Agri-Innovation, Resilience, and Nexus Governance. CAR-Nexus differs from existing sustainable circular bioeconomy models by explicitly positioning resilience as a core system capability and by integrating a provisional Resilience Index Score (RIS)—a conceptual tool that synthesizes resource efficiency, social progress, and economic robustness to guide balanced assessment of circular transitions. This framework clarifies how circular resource flows, eco-innovation, and inclusive governance jointly enhance market, environmental, and social value within the Industry 4.0 era. The study contributes theoretically by articulating an integrative CE-innovation-resilience nexus tailored specifically to agri-food systems, and practically by outlining actionable levers for firms and policymakers to accelerate circular transitions in developing economies.",
       "summary": {
-        "gist": "本研究は、循環経済（CE）の実践が持続可能なイノベーションとどのように関連し、特に人間工学的機能と文化的アイデンティティを兼ね備えた「人間工学的で象徴的な」農産物の価値創造を促進するかを明らかにしました。",
-        "novelty": "本研究は、既存の持続可能な循環バイオエコノミーモデルとは異なり、レジリエンスをシステムの中核的な能力として明確に位置づけ、資源効率、社会進歩、経済的堅牢性を統合する概念的なレジリエンス指標スコア（RIS）を組み込んだ「CircAgriResilient Nexus (CAR-Nexus)」フレームワークを提案している点が新規性です。これにより、農業食品システムに特化した統合的なCE-イノベーション-レジリエンスの関連性を理論的に明確化し、発展途上国における循環型移行を加速するための実践的な手段を提示しています。",
-        "method": "本研究は、インドネシアのバンテン州を対象に、定性的な探索的デザインを採用しています。データ収集は、アグロ産業実務家5名、業界アナリスト3名、NGO代表者2名からなる計10名の主要な情報提供者に対する半構造化インタビューを通じて行われました。この一次データは、文脈の全体的な理解を確実にするために厳密な文書分析によって補完されています。分析手法としては、テーマ分析とトライアンギュレーションが用いられ、調査結果の信頼性が確立されています。",
-        "results": "分析の結果、循環型ビジネスモデルは廃棄物を削減するだけでなく、より広範なイノベーションプロセスの触媒として機能することが示されました。具体的には、主要な推進要因として、(1) ステークホルダーエンゲージメント、(2) 異業種間連携、(3) 環境に優しい技術の採用の3つが一貫して浮上しました。これらの知見に基づき提案されたCAR-Nexusフレームワークは、循環性、農業イノベーション、レジリエンス、ネクサスガバナンスの4つの柱を結びつける動的な関連性として循環性を概念化し、インダストリー4.0時代において循環型資源フロー、エコイノベーション、包括的ガバナンスが市場、環境、社会の価値をどのように共同で高めるかを明確にしています。"
+        "gist": "本研究は、循環経済（CE）の実践が、人間工学的機能と文化的アイデンティティを併せ持つ「人間工学的で象徴的な」農産物の持続可能なイノベーションと価値創造にどのように貢献するかを明らかにしました。",
+        "novelty": "本研究は、既存の持続可能な循環バイオエコノミーモデルとは異なり、レジリエンスをシステムの中核能力として明示的に位置づけ、資源効率性、社会進歩、経済的堅牢性を統合する概念的なレジリエンス指数スコア（RIS）を組み込んだ「CircAgriResilient Nexus (CAR-Nexus)」フレームワークを提案している点が新規性です。これにより、農業食品システムに特化した統合的なCE-イノベーション-レジリエンスの関連性を理論的に明確にしています。",
+        "method": "本研究は、インドネシアのバンテン地域を対象に、定性的な探索的デザインを採用しました。主要なデータは、農業産業従事者5名、産業アナリスト3名、NGO代表者2名からなる計10名のキーインフォーマントに対する半構造化インタビューを通じて収集されました。この一次データは、文書分析によって補完され、調査結果の信頼性を確立するためにテーマ分析とトライアンギュレーションが用いられています。",
+        "results": "分析の結果、循環型ビジネスモデルは廃棄物削減だけでなく、より広範なイノベーションプロセスの触媒となることが示されました。主要な推進要因として、(1) ステークホルダーの関与、(2) 異業種間連携、(3) 環境に優しい技術の採用の3つが一貫して明らかになりました。これらの知見に基づき、本研究は、循環性、農業イノベーション、レジリエンス、ネクサスガバナンスの4つの柱を結びつける「CircAgriResilient Nexus (CAR-Nexus)」フレームワークを提案しています。このフレームワークは、循環的な資源フロー、エコイノベーション、包摂的なガバナンスが、インダストリー4.0時代において市場価値、環境価値、社会価値をどのように共同で向上させるかを明確にし、発展途上国における循環型移行を加速するための実践的な手段を企業や政策立案者に提供しています。",
+        "figures": "アブストラクトに図表の記述なし"
       },
       "doi": "10.61194/ijjm.v7i2.2152",
       "source": "openalex",
       "journal": "Ilomata International Journal of Management",
-      "titleJa": "人間工学的で象徴的な農産物における価値創造を促進する循環経済と持続可能なイノベーションの統合",
-      "catchTitle": "農産物の価値、循環経済でどう高まる？",
-      "hook": "循環経済が、人間工学と文化を融合した農産物の価値をどのように高めるのかを解明しています。"
+      "titleJa": "人間工学的で象徴的な農産物における循環経済と持続可能なイノベーションによる価値創造",
+      "catchTitle": "循環経済で農産物の価値を高める秘訣",
+      "hook": "インドネシアの事例から、循環経済がどのように農産物の価値を高め、持続可能なイノベーションを促進するのかを明らかにしています。",
+      "quiz": {
+        "question": "循環経済が「人間工学的で象徴的な農産物」の価値を高める主な要因は何ですか？",
+        "options": [
+          "ステークホルダーの関与、異業種間連携、環境技術の採用",
+          "政府による直接的な補助金と価格統制",
+          "大規模な単一栽培と輸出市場への特化"
+        ],
+        "correctIndex": 0,
+        "explanation": "論文では、ステークホルダーの関与、異業種間連携、環境に優しい技術の採用が、循環型ビジネスモデルによるイノベーションと価値創造の主要な推進要因として示されています。これらが複合的に作用することで、農産物の価値が高まるのです。"
+      },
+      "evidence": {
+        "level": 2,
+        "levelLabel": "定性的探索研究",
+        "sampleSize": "キーインフォーマント10名",
+        "studyDesign": "半構造化インタビュー＋文書分析＋テーマ分析",
+        "dataQuality": 75,
+        "externalValidity": 50,
+        "notes": "定性研究のため、結果の一般化には慎重な解釈が必要です。"
+      }
     },
     {
       "id": "W7156361999",
@@ -345,17 +545,37 @@
       ],
       "abstract": "Agriculture is strategically important due to its effects on employment, rural welfare, and food security. However, the sustainability of agricultural employment depends not only on production and productivity but also on farmers’ decisions to remain in or leave the sector. In job search theory, the reservation wage refers to the minimum wage an individual is willing to accept to work. This study aims to determine the minimum income level at which farm operators would be willing to leave agriculture and work in other sectors. The research was conducted with 381 farm enterprises in Konya Province, Türkiye, using a stratified random sampling method. The findings indicate that the average monthly reservation wage required for farm operators to exit agriculture is 9,461.87 TL (571.36 USD based on the 2022 average exchange rate). This amount corresponds to approximately 1.94 times the average net minimum wage in 2022. The results show that the decision to leave agriculture is influenced not only by production costs but also by income instability, price volatility, and institutional uncertainty. The study suggests that the reservation wage can be considered a micro-level indicator reflecting income instability in agriculture.",
       "summary": {
-        "gist": "本研究は、トルコのコンヤ県における農家を対象に、農業従事者が農業部門を離れて他部門で働くことを許容する最低収入水準、すなわち留保賃金を明らかにしました。この留保賃金は、農業における所得不安定性を反映するミクロレベルの指標として捉えられることを示唆しています。",
-        "novelty": "従来の農業雇用に関する研究が生産性や生産に焦点を当てていたのに対し、本研究はジョブサーチ理論の概念である留保賃金を農業部門に適用し、農家個人の離農意思決定における最低収入水準を定量的に測定した点で新規性があります。これにより、農業雇用の持続可能性を左右する要因として、農家の所得不安定性という側面から新たな知見を提供しています。",
-        "method": "本研究は、トルコのコンヤ県に位置する381の農業企業を対象に、層化無作為抽出法を用いてデータを収集しました。分析手法としては、農家が農業部門を離れるために必要と考える最低収入水準を直接質問し、その平均値を算出しています。また、その金額を2022年の平均為替レートで米ドルに換算し、同年の平均純最低賃金と比較することで、その経済的意味合いを評価しています。",
-        "results": "分析の結果、農家が農業を離れるために必要とする月間平均留保賃金は9,461.87トルコリラ（2022年平均為替レートで571.36米ドル）であることが判明しました。この金額は、2022年の平均純最低賃金の約1.94倍に相当します。さらに、離農の意思決定は、生産コストだけでなく、所得の不安定性、価格変動、制度的な不確実性といった要因によっても影響されることが示されました。これらの結果は、留保賃金が農業における所得不安定性を反映するミクロレベルの指標として機能することを示唆しています。"
+        "gist": "本研究は、トルコのコンヤ県における農家を対象に、農業従事者が農業を離れて他部門で働くことを許容する最低限の月収（留保賃金）を特定しました。この留保賃金は、農業における所得不安定性を示すミクロレベルの指標として機能することが示されています。",
+        "novelty": "従来の農業雇用に関する研究が生産性や生産量に焦点を当てていたのに対し、本研究はジョブサーチ理論の「留保賃金」概念を農業部門に適用し、農家の離農意思決定要因を所得水準の観点から分析した点で新規性があります。これにより、農業雇用の持続可能性を農家個人の意思決定レベルから理解する新たな視点を提供しています。",
+        "method": "本研究は、トルコのコンヤ県にある381の農業経営体を対象に、層化無作為抽出法を用いて調査を実施しました。データは2022年の平均為替レートに基づいて分析されており、農家の離農意思決定に影響を与える要因を特定するために、留保賃金の概念を用いて分析を行っています。具体的な計量経済学的手法の名称はアブストラクトに明記されていませんが、農家の回答に基づき留保賃金を算出し、その決定要因を分析したものです。",
+        "results": "分析の結果、農家が農業を離れるために必要とする平均月間留保賃金は9,461.87トルコリラ（2022年の平均為替レートで571.36米ドル）であることが判明しました。この金額は、2022年の平均純最低賃金の約1.94倍に相当します。また、離農の意思決定は、生産コストだけでなく、所得の不安定性、価格変動、制度的不確実性といった要因にも影響されることが示されました。この留保賃金は、農業における所得不安定性を反映するミクロレベルの指標として活用できると提言されています。",
+        "figures": "アブストラクトに図表の記述なし"
       },
       "doi": "10.30910/turkjans.1795255",
       "source": "openalex",
       "journal": "Türk Tarım ve Doğa Bilimleri Dergisi",
-      "titleJa": "農業雇用の持続可能性を左右する留保賃金：トルコ・コンヤ県における実証分析",
-      "catchTitle": "農家が農業を辞める最低賃金は？",
-      "hook": "農業従事者が他産業へ移行するために必要な最低収入水準は、いくらだと思いますか？"
+      "titleJa": "農業雇用の持続可能性における留保賃金：トルコ・コンヤ県における農家の離農意思決定要因",
+      "catchTitle": "農家が離農する最低賃金とは？",
+      "hook": "農業従事者が農業を辞め、他分野で働くことを決める最低限の収入水準、すなわち「留保賃金」について、トルコの事例から明らかにします。",
+      "quiz": {
+        "question": "トルコの農家が農業を辞めるために必要と考える最低月収は、2022年の平均最低賃金の何倍くらいだったでしょうか？",
+        "options": [
+          "約2倍",
+          "約1.5倍",
+          "約1倍"
+        ],
+        "correctIndex": 0,
+        "explanation": "論文の結果によると、農家の平均留保賃金は2022年の平均純最低賃金の約1.94倍でした。これは、農家が現在の農業収入に満足していない可能性を示唆しています。"
+      },
+      "evidence": {
+        "level": 3,
+        "levelLabel": "横断的観察研究",
+        "sampleSize": "農業経営体381件",
+        "studyDesign": "層化無作為抽出によるアンケート調査と留保賃金分析",
+        "dataQuality": 75,
+        "externalValidity": 60,
+        "notes": "特定の地域（トルコ・コンヤ県）に限定された調査であり、他の地域や国の農業雇用に直接一般化するには注意が必要です。"
+      }
     },
     {
       "id": "W7155718302",
@@ -382,17 +602,37 @@
       ],
       "abstract": "Abstract Purpose Farmers in Australia are currently facing profound challenges due to soil degradation, biodiversity loss, climate change, biosecurity threats, and difficulties in securing labour; farmers elsewhere face similar challenges. Increased use of robotics and artificial intelligence (AI) has been proposed as a possible solution to these problems. These technologies have the potential to radically transform the practice of farming: according to some authorities they hold out the prospect of a future in which, at least in some forms of farming, human farmers are no longer necessary. There is a strong case that such a radical transformation of the nature of agriculture would require social license. Methods In this paper, we report on the conduct and outcomes of public deliberations conducted in community juries in metropolitan and regional communities in Victoria, Australia, on the question: Under what conditions (if any) should we fully automate food and fibre production without human labour and decision-making? Findings The two juries came to different verdicts: full automation was rejected by consensus in metropolitan Melbourne but seen as being acceptable (under specific conditions) by a clear majority of jurors in the regional town of Mildura. Conclusion These findings, the existential concerns expressed by participants about the prospect of “farmerless farms”, and the quality of the deliberations in the juries, demonstrate the value of engaging with the public about technological trajectories and are highly relevant to the project of attempting to ensure that the use of robots and AI in agriculture has a social license.",
       "summary": {
-        "gist": "本論文は、オーストラリアにおける食料・繊維生産の完全自動化に対する市民の受容性を探るため、都市部と地方で実施された市民討議の結果を報告しています。その結果、都市部では完全自動化が拒否された一方、地方では特定の条件下で受容されるという異なる結論が示されました。",
-        "novelty": "従来の農業技術に関する研究が技術的側面や経済的影響に焦点を当てがちであったのに対し、本研究は「人間らしさ」や「農業の本質」といった哲学的・社会学的問いを市民討議という手法を用いて探求し、農業の完全自動化に対する社会的な受容性、特に都市と地方の視点の違いを明らかにすることで、研究の空白を埋めています。",
-        "method": "本研究では、オーストラリアのビクトリア州において、都市部（メルボルン）と地方（ミルデューラ）のコミュニティで市民陪審による公開討議を実施しました。この討議では、「人間の労働と意思決定なしに食料・繊維生産を完全に自動化すべき条件（もしあれば）は何か？」という問いが設定され、参加者はこの問いについて議論し、最終的な評決を下しました。データセットは、これらの討議プロセスと結果から得られた質的な情報に基づいています。",
-        "results": "分析の結果、都市部のメルボルンでは、参加者のコンセンサスにより完全自動化が拒否されました。これは、「農家のいない農場」という見通しに対する参加者の実存的な懸念が強く反映されたものです。一方、地方のミルデューラでは、陪審員の明確な多数派が特定の条件下であれば完全自動化は許容されると判断しました。これらの結果は、農業におけるロボットやAIの利用が社会的な受容を得るためには、地域ごとの文脈や価値観の違いを考慮した公共との対話が不可欠であることを示唆しています。"
+        "gist": "本論文は、オーストラリアのビクトリア州で実施された市民討議会の結果を報告し、農業の完全自動化に対する都市住民と地方住民の異なる認識を明らかにしました。この結果は、農業におけるロボットやAIの導入に際して、社会的な受容を得るための市民参加の重要性を示唆しています。",
+        "novelty": "従来の技術導入に関する研究が技術的・経済的側面を重視する傾向があるのに対し、本研究は、農業の完全自動化が人間の存在意義や社会に与える影響という「実存的懸念」に焦点を当て、市民の視点から社会的な受容性を探求している点が新規性です。これにより、技術導入における社会ライセンスの獲得という研究の空白を埋めています。",
+        "method": "本研究では、オーストラリアのビクトリア州において、都市部のメルボルンと地方都市のミルデューラの2箇所で市民討議会（community juries）を実施しました。調査期間は明記されていませんが、各討議会では「人間の労働力や意思決定なしに食料・繊維生産を完全に自動化すべきか、またその条件は何か」という問いについて議論されました。分析手法としては、これらの討議会における参加者の議論の内容と、最終的な評決を質的に分析しています。",
+        "results": "分析の結果、都市部のメルボルンでは、市民討議会の参加者全員が農業の完全自動化を拒否するというコンセンサスに至りました。一方、地方都市のミルデューラでは、過半数の参加者が特定の条件下であれば完全自動化を受け入れると判断しました。参加者からは「農家不在の農場」という見通しに対して実存的な懸念が表明されており、これらの知見は、農業におけるロボットやAIの利用が社会的な受容を得るために、市民との対話が極めて重要であることを示しています。",
+        "figures": "アブストラクトに図表の記述なし"
       },
       "doi": "10.1007/s11119-026-10339-4",
       "source": "openalex",
       "journal": "Precision Agriculture",
-      "titleJa": "農業は人間らしさをもたらすか？オーストラリアにおける2つの市民討議報告",
-      "catchTitle": "農業の完全自動化、都市と地方でなぜ意見が割れたのか？",
-      "hook": "オーストラリアの市民討議から、農業の完全自動化に対する都市と地方の異なる見解が明らかになりました。"
+      "titleJa": "農業は私たちを人間たらしめるのか？ オーストラリアにおける2つの市民討議会報告",
+      "catchTitle": "ロボット農業、都市と地方で評価は違う？",
+      "hook": "オーストラリアの市民は、農業の完全自動化について都市と地方で異なる見解を示しました。",
+      "quiz": {
+        "question": "オーストラリアの市民は、農業の完全自動化について都市と地方でどのような見解を示したでしょうか？",
+        "options": [
+          "都市部は拒否、地方は条件付きで受容",
+          "都市部も地方も条件付きで受容",
+          "都市部も地方も拒否"
+        ],
+        "correctIndex": 0,
+        "explanation": "都市部のメルボルンでは完全自動化が拒否された一方、地方のミルデューラでは特定の条件下で受容されました。これは、地域によって技術への認識が異なることを示しています。"
+      },
+      "evidence": {
+        "level": 2,
+        "levelLabel": "質的調査（市民討議会）",
+        "sampleSize": "不明（市民討議会参加者）",
+        "studyDesign": "市民討議会による質的データ収集と内容分析",
+        "dataQuality": 75,
+        "externalValidity": 50,
+        "notes": "市民討議会の参加者数は不明であり、結果の一般化には注意が必要です。"
+      }
     },
     {
       "id": "W7155682040",
@@ -415,17 +655,37 @@
       ],
       "abstract": "Dry season onion farming is central to food supply and rural income in Adamawa State, Nigeria, yet production is limited by inefficiencies. This study assessed the technical, allocative, and economic efficiency of farmers using a stochastic frontier production and cost model. A total of 240 producers were selected through multistage sampling, and structured questionnaires provided the data. Analysis employed Maximum Likelihood Estimation. Results showed that farm size (0.451, p&amp;lt;0.01), seed (0.226, p&amp;lt;0.01), labor (0.1176, p&amp;lt;0.01), and fertilizer (0.102, p&amp;lt;0.05) were the most significant drivers of output. Mean efficiency scores were 0.83 for technical, 0.81 for allocative, and 0.67 for economic performance. Gamma values of 0.88 and 0.91 indicated that inefficiencies explained most variations in output and cost. Farmers achieved strong technical performance but faced persistent allocative and economic constraints. Targeted investment in irrigation, stronger extension services, improved access to credit, and cooperative strengthening are recommended to improve cost-effective resource use and productivity.",
       "summary": {
-        "gist": "本研究は、ナイジェリアのアダマワ州における乾季タマネギ生産の技術的、配分的ならびに経済的効率性を評価し、その非効率性の主な原因を特定しました。その結果、農地の規模、種子、労働力、肥料が生産量に大きく影響し、特に配分効率と経済効率の改善が重要であることを明らかにしています。",
-        "novelty": "従来のタマネギ生産に関する研究では、個別の効率性側面のみに焦点を当てるか、あるいは特定の地域に限定されることが多かったですが、本研究はナイジェリアのアダマワ州において、技術的、配分的ならびに経済的効率性を統合的に評価した点で新規性があります。これにより、生産性向上のためのより包括的な政策提言を可能にしました。",
-        "method": "本研究では、ナイジェリアのアダマワ州から多段階抽出法により選定された240のタマネギ生産者を対象に、構造化された質問票を用いてデータを収集しました。分析手法としては、確率的フロンティア生産モデルと費用モデルを組み合わせ、最尤推定法（Maximum Likelihood Estimation）を用いて技術的、配分的ならびに経済的効率性を評価しています。",
-        "results": "分析の結果、農地の規模（0.451）、種子（0.226）、労働力（0.1176）、肥料（0.102）がタマネギの生産量に統計的に有意な影響を与えることが示されました。平均効率スコアは、技術的効率が0.83、配分効率が0.81、経済的効率が0.67であり、特に経済的効率に改善の余地があることが示唆されました。ガンマ値が生産モデルで0.88、費用モデルで0.91であったことから、生産量と費用の変動の大部分は非効率性によって説明されることが明らかになりました。これらの結果は、灌漑への投資、普及サービスの強化、信用へのアクセス改善、協同組合の強化が、費用対効果の高い資源利用と生産性向上に不可欠であることを示唆しています。"
+        "gist": "本研究は、ナイジェリアのアダマワ州における乾季タマネギ生産の技術的、配分的、および経済的効率性を評価し、その非効率性の主な要因を特定しました。農家は高い技術的効率性を示す一方で、配分的および経済的効率性には改善の余地があることが示されています。",
+        "novelty": "本研究は、ナイジェリアのアダマワ州における乾季タマネギ生産に焦点を当て、確率的フロンティア生産および費用モデルを用いて、技術的、配分的、経済的効率性を包括的に評価した点で新規性があります。これにより、地域の特定の農業システムにおける非効率性の具体的な要因と、それに対する政策的含意を明らかにしました。",
+        "method": "本研究は、ナイジェリアのアダマワ州から多段階抽出法により選定された240名の乾季タマネギ生産者を対象に、構造化された質問票を用いてデータを収集しました。分析には、確率的フロンティア生産および費用モデルが採用され、最尤推定法（Maximum Likelihood Estimation）を用いて効率性スコアと生産要因の影響が評価されています。",
+        "results": "分析の結果、農地規模（係数0.451、p<0.01）、種子（係数0.226、p<0.01）、労働力（係数0.1176、p<0.01）、および肥料（係数0.102、p<0.05）がタマネギ生産量に最も有意な影響を与えることが判明しました。平均効率性スコアは、技術的効率性が0.83、配分的効率性が0.81、経済的効率性が0.67でした。ガンマ値は生産量で0.88、費用で0.91と高く、非効率性が生産量と費用の変動の大部分を説明していることを示しています。これらの結果から、灌漑への投資、普及サービスの強化、信用へのアクセス改善、協同組合の強化が、費用対効果の高い資源利用と生産性向上に推奨されます。",
+        "figures": "アブストラクトに図表の記述なし"
       },
       "doi": "10.53663/turjfas.1786928",
       "source": "openalex",
       "journal": "Turkish Journal of Food and Agriculture Sciences",
       "titleJa": "ナイジェリア・アダマワ州における乾季タマネギ生産の経済効率性評価",
-      "catchTitle": "タマネギ農家の収入増やすには？",
-      "hook": "ナイジェリアの乾季タマネギ生産は非効率性が課題ですが、その改善策を経済学的に分析しています。"
+      "catchTitle": "乾季タマネギ農家の効率性、何が課題？",
+      "hook": "ナイジェリアの乾季タマネギ生産は食料供給と農村収入の要ですが、その生産効率には課題があることが明らかになりました。",
+      "quiz": {
+        "question": "ナイジェリアの乾季タマネギ農家が最も改善すべき効率性はどれでしょうか？",
+        "options": [
+          "経済的効率性",
+          "技術的効率性",
+          "配分的効率性"
+        ],
+        "correctIndex": 0,
+        "explanation": "本研究では、経済的効率性の平均スコアが0.67と最も低く、改善の余地が大きいことが示されています。技術的効率性は比較的高い水準にありました。"
+      },
+      "evidence": {
+        "level": 3,
+        "levelLabel": "観察研究（横断調査）",
+        "sampleSize": "農家240名",
+        "studyDesign": "アンケート調査＋確率的フロンティアモデル",
+        "dataQuality": 75,
+        "externalValidity": 60,
+        "notes": "特定の地域と作物に特化した研究であり、他の地域や作物への一般化には注意が必要です。"
+      }
     },
     {
       "id": "W7155644445",
@@ -445,17 +705,37 @@
       ],
       "abstract": "This study evaluated the combined effects of Rice Crop Manager (RCM) fertilizer recommendations and biofertilizers (EMAS and BioPrime) on rice growth, yield, soil fertility, profitability, and farmer adoption in Isabela, Philippines. Anchored on Site-Specific Nutrient Management (SSNM) and Integrated Nutrient Management (INM), the study employed a Randomized Complete Block Design with seven treatments and three replications, alongside a descriptive survey of 186 rice farmers. Agronomic data, soil properties, and economic indicators were measured, while a structured questionnaire assessed awareness, adoption, and constraints. Results showed that most growth parameters did not significantly differ among treatments, while root length and unfilled grains were significantly improved by biofertilizer application. Grain yield was highest under RCM-only treatments, particularly at 100% and 75% rates, while biofertilizer treatments showed moderate performance but did not surpass RCM alone. Economic analysis revealed that 75% RCM produced the highest return on investment, indicating cost efficiency without yield loss. Soil analysis showed improved phosphorus availability and stable soil fertility across treatments. Socioeconomic findings indicated high awareness but moderate adoption of RCM and low use of biofertilizers, constrained by cost, knowledge gaps, and accessibility issues. The study concludes that RCM remains the most effective and economically viable nutrient management strategy, while biofertilizers offer complementary benefits for root development and grain filling but require long-term evaluation. This study contributes to SDG 2 (Zero Hunger), SDG 8 (Decent Work and Economic Growth), SDG 12 (Responsible Consumption and Production), and SDG 13 (Climate Action) by promoting efficient nutrient management and sustainable agricultural practices. Its sustainability impact lies in improving farmer profitability, enhancing soil health, and supporting environmentally responsible rice production systems.",
       "summary": {
-        "gist": "本研究は、フィリピンのイサベラ州において、米作物マネージャー（RCM）による施肥推奨とバイオ肥料（EMASおよびBioPrime）の併用が、稲の生育、収量、土壌肥沃度、収益性、および農家の採用行動に与える複合的な影響を評価したものです。その結果、RCM単独、特に推奨量の100%および75%の施肥が最も高い収量と経済的リターンをもたらし、バイオ肥料は根の発達と未熟粒の改善に補完的な効果があることを明らかにしました。",
-        "novelty": "従来の研究が個別の施肥管理技術やバイオ肥料の効果を検証するに留まっていたのに対し、本研究はRCMとバイオ肥料という異なる栄養管理戦略を組み合わせ、その相乗効果を包括的に評価した点に新規性があります。これにより、現場レベルでの実践的な栄養管理戦略の最適化に向けた研究の空白を埋め、持続可能な稲作生産システムへの貢献を目指しています。",
-        "method": "本研究は、Site-Specific Nutrient Management (SSNM) とIntegrated Nutrient Management (INM) の原則に基づき、7つの処理区と3つの反復からなる乱塊法（Randomized Complete Block Design）を用いて圃場試験を実施しました。同時に、186名の稲作農家を対象とした記述的調査も行い、RCMとバイオ肥料の認知度、採用状況、および制約要因を構造化された質問票で評価しました。データセットには、生育データ、収量、土壌特性、経済指標が含まれています。",
-        "results": "分析の結果、ほとんどの生育パラメーターでは処理間に有意な差は見られませんでしたが、バイオ肥料の施用は根長と未熟粒の有意な改善をもたらしました。穀物収量はRCM単独の処理、特に推奨量の100%および75%で最も高く、バイオ肥料併用処理は中程度のパフォーマンスを示しましたが、RCM単独の収量を超えることはありませんでした。経済分析では、RCM推奨量の75%が最も高い投資収益率を示し、収量を損なうことなく費用対効果が高いことが示唆されました。土壌分析では、処理間でリン酸利用可能性の改善と土壌肥沃度の安定が確認されました。社会経済的調査からは、RCMの高い認知度と中程度の採用率、そしてバイオ肥料の低い利用率が明らかになり、その制約要因としてコスト、知識不足、アクセシビリティが挙げられています。結論として、RCMが最も効果的かつ経済的に実行可能な栄養管理戦略であり、バイオ肥料は根の発達と登熟に補完的な利益をもたらすものの、長期的な評価が必要であると示唆されています。"
+        "gist": "本研究は、フィリピンのイサベラ州において、稲作管理者（RCM）の施肥推奨とバイオ肥料（EMASおよびBioPrime）の併用が、稲の生育、収量、土壌肥沃度、収益性、および農家の採用に与える複合的な影響を評価しました。その結果、RCM単独、特に75%の推奨施肥率が最も経済的に実行可能であり、バイオ肥料は根の発育と未熟粒の改善に補完的な効果があることを明らかにしています。",
+        "novelty": "本研究は、サイト特異的栄養管理（SSNM）と統合栄養管理（INM）の枠組みに基づき、RCMの施肥推奨とバイオ肥料の複合的な効果を、生育、収量、土壌、経済性、農家採用の多角的な側面から包括的に評価した点に新規性があります。これにより、従来のRCM単独評価やバイオ肥料単独評価では捉えきれなかった、両者の相乗効果と実践的な課題を明らかにしました。",
+        "method": "本研究は、フィリピンのイサベラ州において、7つの処理区と3つの反復を用いたランダム化完全ブロックデザイン（RCBD）による圃場試験を実施しました。同時に、186名の稲作農家を対象とした記述的調査も行われました。調査期間は明記されていませんが、稲作の生育サイクルに合わせた期間と推測されます。測定項目は、農学的データ、土壌特性、経済指標であり、農家の意識、採用状況、制約は構造化された質問票を用いて評価されました。",
+        "results": "分析の結果、ほとんどの生育パラメーターでは処理間に有意な差は見られませんでしたが、根長と未熟粒はバイオ肥料の適用により有意に改善されました。穀物収量はRCM単独処理、特に100%および75%の推奨施肥率で最も高く、バイオ肥料処理は中程度の性能を示しましたが、RCM単独の収量を超えることはありませんでした。経済分析では、RCMの75%施肥率が最も高い投資収益率を示し、収量損失なしでの費用対効果が確認されました。土壌分析では、処理全体でリン酸利用可能性の改善と土壌肥沃度の安定が示されました。社会経済的調査では、RCMの高い認知度と中程度の採用率、バイオ肥料の低い利用率が明らかになり、その制約としてコスト、知識不足、アクセス性の問題が挙げられています。この研究は、RCMが最も効果的かつ経済的に実行可能な栄養管理戦略であり、バイオ肥料は根の発育と未熟粒の改善に補完的な利益をもたらすものの、長期的な評価が必要であると結論付けています。",
+        "figures": "アブストラクトに図表の記述なし"
       },
       "doi": "10.65339/ijsair.v2.i2.297",
       "source": "openalex",
       "journal": "International Journal of Sustainability and Advanced Integrated Research",
-      "titleJa": "イサベラ州における稲作生産性向上：米作物マネージャーとバイオ肥料の活用",
-      "catchTitle": "米作物マネージャー、本当に効果的？",
-      "hook": "フィリピンの稲作で、最適な肥料管理とバイオ肥料の組み合わせが、収益性と土壌にどう影響するかを検証しています。"
+      "titleJa": "イサベラ州における稲作生産におけるバイオ肥料の適用を通じた稲作管理者（RCM）の活用",
+      "catchTitle": "RCMとバイオ肥料、稲作に最適なのは？",
+      "hook": "フィリピンの稲作農家にとって、収益性と持続可能性を両立させる最適な施肥戦略とは何でしょうか。",
+      "quiz": {
+        "question": "フィリピンの稲作において、最も経済的に効率的で収益性の高い施肥戦略は何だと考えられますか？",
+        "options": [
+          "RCMの推奨施肥率の75%",
+          "RCMの推奨施肥率の100%",
+          "バイオ肥料（EMASとBioPrime）の適用"
+        ],
+        "correctIndex": 0,
+        "explanation": "RCMの75%施肥率が最も高い投資収益率を示し、収量損失なしで費用対効果が高いことが明らかになりました。これは、コストを抑えつつ収益を最大化する戦略です。"
+      },
+      "evidence": {
+        "level": 4,
+        "levelLabel": "ランダム化比較試験（RCBD）と記述的調査",
+        "sampleSize": "農家186名",
+        "studyDesign": "圃場試験（RCBD）＋アンケート調査",
+        "dataQuality": 85,
+        "externalValidity": 70,
+        "notes": "特定の地域と作物に特化した研究ですが、同様の稲作地域への示唆は大きいです。"
+      }
     },
     {
       "id": "W7155617606",
@@ -480,17 +760,37 @@
       ],
       "abstract": "Human-elephant conflict (HEC) is emerging as a growing challenge to biodiversity conservation and rural livelihoods in Asia. Assam's Brahmaputra Flood Plain (BFP)is an important stronghold of the Asian elephant, wherein this study aims to comprehensively analyse the spatio-temporal dynamics of human-elephant conflict BFP, between 2010 and 2024. Using a two-way conflict modelling framework, we examined both human victimization of elephants (EV-HI) and elephant victimization of humans (HV-EI), and integrated these perspectives to identify spatial intersections and temporal patterns of heightened conflict risk. We designed effective risk maps with AUC weighting based on a multi-scale ensemble of five machine learning algorithms (i.e., RF, BRT, SVM, CART, MARS), optimally weighting predictor spatial scales (1-15 km). Conflict incidents exhibited strong seasonality, peaking post-monsoon when major crops such as rice, maize, vegetables, and standing sugarcane are harvested or remain available in the fields. Incidents of conflict have risen significantly after 2017. Spatial analysis revealed that scale-dependent variables, such as orchard cover, forest/population ratio, and edge density, predicted EV-HI risk, whereas landscape heterogeneity, human footprint, and edge density predicted HV-EI risk. We have taken the initiative to combine time dynamics, conflict type correlations, and bivariate hotspot mapping to introduce a new framework that would be concerned not only with risks to human beings but also with risks to elephants. The results are management-friendly and facilitate specific interventions. Our study provides an adaptable decision-support tool that guides crop-switching, early warning alerts, fence evaluations, and corridor restoration. Unlike the usual single-model or one-scale approaches, it integrates multiple perspectives to strengthen conservation planning and promote human-elephant coexistence by protecting both livelihoods and elephant populations.",
       "summary": {
-        "gist": "本研究は、インドのアッサム州ブラマプトラ氾濫原における人間とゾウの衝突（HEC）の時空間ダイナミクスを包括的に分析し、人間とゾウ双方のリスクを考慮した効果的なリスクマップと管理ツールを開発したものです。",
-        "novelty": "従来の研究が単一モデルや単一スケールでの分析に留まっていたのに対し、本研究は多尺度アンサンブル機械学習フレームワークを導入し、人間がゾウに与える被害（EV-HI）とゾウが人間に与える被害（HV-EI）の両側面を統合的に分析しました。これにより、双方のリスクを考慮した新たな衝突モデリングフレームワークを提示し、より包括的で実用的な保全計画策定に貢献しています。",
-        "method": "本研究では、2010年から2024年までのブラマプトラ氾濫原における人間とゾウの衝突データを対象としています。分析には、ランダムフォレスト（RF）、ブースティング回帰木（BRT）、サポートベクターマシン（SVM）、分類回帰木（CART）、多変量適応型回帰スプライン（MARS）の5つの機械学習アルゴリズムを組み合わせた多尺度アンサンブルモデルが用いられました。予測変数の空間スケールは1〜15kmで最適に重み付けされ、AUC重み付けに基づくリスクマップが設計されています。",
-        "results": "分析の結果、衝突事件はモンスーン後の主要作物の収穫期にピークを迎える強い季節性を示すことが明らかになりました。特に2017年以降、衝突事件は顕著に増加しています。空間分析では、果樹園の被覆率、森林/人口比、エッジ密度といったスケール依存変数がEV-HIリスクを予測する一方で、景観の不均一性、人間活動の痕跡（ヒューマンフットプリント）、エッジ密度がHV-EIリスクを予測することが示されました。これらの結果は、作物転換、早期警戒システム、フェンス評価、回廊復元といった具体的な介入策を導く、管理に資する意思決定支援ツールとして活用できることを示唆しています。"
+        "gist": "本研究は、インドのアッサム州ブラマプトラ氾濫原における人間とゾウの衝突（HEC）の時空間ダイナミクスを包括的に分析し、両者の被害リスクを予測する多尺度アンサンブル機械学習フレームワークを開発しました。このフレームワークは、ゾウによる人間への被害と人間によるゾウへの被害の両方を考慮し、保護計画と共存促進のための実用的な意思決定支援ツールを提供しています。",
+        "novelty": "従来の単一モデルや単一スケールのアプローチとは異なり、本研究は5つの機械学習アルゴリズムを組み合わせた多尺度アンサンブルフレームワークを導入し、予測変数の空間スケール（1〜15km）を最適に重み付けしています。また、人間へのリスクだけでなくゾウへのリスクも考慮した新しいフレームワークを提案し、時間ダイナミクス、衝突タイプの相関、二変量ホットスポットマッピングを統合することで、より包括的な分析を可能にしている点が新規性です。",
+        "method": "本研究は、2010年から2024年までのインド、アッサム州ブラマプトラ氾濫原における人間とゾウの衝突データを対象としています。分析には、ランダムフォレスト（RF）、勾配ブースティングツリー（BRT）、サポートベクターマシン（SVM）、分類回帰木（CART）、多変量適応型回帰スプライン（MARS）の5つの機械学習アルゴリズムを組み合わせた多尺度アンサンブルフレームワークが用いられました。このフレームワークは、ゾウの人間への被害（HV-EI）と人間のゾウへの被害（EV-HI）の両方を二方向の衝突モデリングとして検討し、AUC重み付けに基づいてリスクマップを作成しています。",
+        "results": "衝突事件は強い季節性を示し、米、トウモロコシ、野菜、サトウキビなどの主要作物の収穫期や圃場に残っている時期であるモンスーン後にピークを迎えることが明らかになりました。特に2017年以降、衝突事件は顕著に増加しています。空間分析の結果、果樹園の被覆率、森林/人口比、エッジ密度といったスケール依存変数がゾウの人間への被害リスク（EV-HI）を予測する一方で、景観の不均一性、人間のフットプリント、エッジ密度が人間への被害リスク（HV-EI）を予測することが示されました。これらの結果は、作物の転換、早期警戒システム、フェンスの評価、回廊の回復といった具体的な介入策を導く、管理に役立つ情報を提供するものです。",
+        "figures": "アブストラクトに図表の記述なし"
       },
       "doi": "10.1038/s41598-026-48970-w",
       "source": "openalex",
       "journal": "Scientific Reports",
-      "titleJa": "ブラマプトラ氾濫原における人間とゾウの衝突評価のための多尺度アンサンブル機械学習フレームワーク",
-      "catchTitle": "ゾウと人の衝突、最新AIで防げる？",
-      "hook": "アジアで深刻化する人間とゾウの衝突問題に対し、最新のAI技術がどのように解決策を提示するのか、その詳細を解説します。"
+      "titleJa": "ブラマプトラ氾濫原における人間とゾウの衝突を評価する多尺度アンサンブル機械学習フレームワーク",
+      "catchTitle": "ゾウと人の衝突、最新AIで予測",
+      "hook": "アジアで深刻化する人間とゾウの衝突、その発生リスクを多角的に分析し、具体的な解決策を提示する研究です。",
+      "quiz": {
+        "question": "人間とゾウの衝突が最も増加する時期はいつですか？",
+        "options": [
+          "モンスーン後、作物の収穫期",
+          "モンスーン前、植え付け期",
+          "乾季、水資源が乏しい時期"
+        ],
+        "correctIndex": 0,
+        "explanation": "衝突事件は強い季節性を示し、米やトウモロコシなどの主要作物が収穫されるモンスーン後にピークを迎えることが明らかになっています。"
+      },
+      "evidence": {
+        "level": 3,
+        "levelLabel": "観察研究（機械学習モデル）",
+        "sampleSize": "データ年2010-2024",
+        "studyDesign": "多尺度アンサンブル機械学習（RF, BRT, SVM, CART, MARS）",
+        "dataQuality": 80,
+        "externalValidity": 70,
+        "notes": "特定の地域に特化したモデルですが、フレームワーク自体は他地域にも応用可能です。"
+      }
     }
   ]
 }

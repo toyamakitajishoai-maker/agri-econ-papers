@@ -1,0 +1,424 @@
+{
+  "date": "2026-05-27",
+  "papers": [
+    {
+      "id": "2605.23959",
+      "title": "When Alpha Disappears: A One-Switch Benchmark for Decision-Time Leakage in Financial Backtests",
+      "authors": [],
+      "publishedAt": "2026-05-26T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.23959",
+      "pdfUrl": "https://arxiv.org/pdf/2605.23959.pdf",
+      "categories": [
+        "topic:labor",
+        "労働・雇用",
+        "q-fin.RM",
+        "q-fin.TR"
+      ],
+      "abstract": "We introduce When Alpha Disappears, a paired evaluation benchmark for diagnosing decision-time leakage in financial machine-learning backtests. Rather than treating leakage as a binary property, the benchmark estimates protocol-induced inflation by toggling one evaluation convention at a time around a clean $t{+}1$-open reference, while holding the data panel, walk-forward split, model family, horizon, portfolio rule, and cost convention fixed. Across two daily-OHLCV equity panels, six model families, and yearly tests from 2016--2024, we find that inflation is highly selective: centered temporal features and same-day-open execution with post-open daily-bar information cause large and stable increases in both predictive and trading metrics, whereas global normalization, future-informed graph structure, and same-day-close execution are weak in most settings. The benchmark is diagnostic rather than a claim of tradable alpha, and is intended to make evaluation assumptions, failure modes, and protocol fragility directly measurable.",
+      "summary": {
+        "gist": "本論文は、金融機械学習のバックテストにおいて、意思決定時リーケージを診断するための評価ベンチマーク「When Alpha Disappears」を提案しています。このベンチマークは、一つずつ評価ルールを切り替えることで、プロトコルに起因するパフォーマンスの過大評価を定量的に測定し、特定のプロトコル違反が予測および取引指標に大きな影響を与えることを明らかにしました。",
+        "novelty": "従来の研究がリーケージの存在を指摘するに留まっていたのに対し、本研究は「ワン・スイッチ・ベンチマーク」という独自の手法を導入することで、バックテストのどのプロトコル違反が、どの程度のパフォーマンス過大評価を引き起こすのかを制御された形で特定できる点が新規性です。これにより、データ、モデル、ポートフォリオルールなどを固定した上で、個々のプロトコル違反の限界効果を測定し、評価プロトコルの脆弱性を直接的に測定可能にしました。",
+        "method": "本研究は、2016年から2024年までの期間を対象に、米国および中国の大型株市場のOHLCV（始値、高値、安値、終値、出来高）日次データパネルを使用しています。分析手法としては、クリーンなt+1日始値参照プロトコルを基準とし、時間的特徴、正規化範囲、グラフ構造、約定タイミングに関する5つのプロトコル違反を一つずつ切り替える「ワン・スイッチ・ベンチマーク」を適用しました。これにより、各プロトコル違反が予測指標と取引指標に与える影響を、ペア比較による「リーケージ・ゲイン」として測定しています。",
+        "results": "分析の結果、バックテストのパフォーマンス過大評価は選択的であることが判明しました。特に、中心化された時間的特徴（TEMP_CENTER）や、当日の始値約定にもかかわらず当日終値後の日足情報を使用する（EXEC_OPEN）といったプロトコル違反は、予測指標と取引指標の両方において、大きく安定した増加を引き起こすことが示されています。一方で、グローバルな正規化（NORM_GLOBAL）や将来情報を含むグラフ構造（STRUCT_GRAPH）、当日の終値約定（EXEC_CLOSE）は、ほとんどの状況で影響が小さいことが明らかになりました。このベンチマークは取引可能なアルファの主張ではなく、評価仮定、失敗モード、プロトコル脆弱性を直接測定することを目的としています。",
+        "why": "中心化された時間的特徴がパフォーマンスを過大評価するのは、意思決定時点では利用できない将来の情報を特徴量構築に含めてしまうためです。同様に、当日始値約定にもかかわらず当日終値後の情報を使用するケースも、約定時点では知り得ない情報を利用しているため、モデルが見せかけの予測能力を発揮してしまいます。これらのプロトコル違反は、モデルが「未来を覗き見」することを許してしまうため、実際の取引では再現不可能な過度に楽観的な結果を生み出すのです。",
+        "figures": "Figure 1は「同じ分割でも異なる情報セット」というタイトルで、時系列順の分割だけでは、シグナル情報セットと想定される約定時間が意思決定時に有効であるとは限らないことを示しています。クリーンなパイプラインとリーケージのあるパイプラインが、同じ訓練/テスト分割を使用しながらも、異なる情報セットに依存している様子を対比的に図示しています。Figure 2は「制御されたベンチマーク設計」と題され、各ペアにおいてデータパネル、分割、モデルファミリー、予測期間、ポートフォリオルール、コスト設定、メトリックが固定され、一つのプロトコルルールのみが切り替えられることを示しています。リーケージ・ゲインは、リーケージのあるバリアントとクリーンな参照プロトコルとのペア差として定義されています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-fin.RM）",
+      "field": "労働・雇用",
+      "titleJa": "金融バックテストにおける意思決定時リーケージ診断のためのワン・スイッチ・ベンチマーク「When Alpha Disappears」",
+      "catchTitle": "金融AIの過剰評価を防げ！",
+      "hook": "金融市場の予測モデル評価で、見せかけの好成績を生む「リーケージ」を特定する新手法が登場しました。",
+      "quiz": {
+        "question": "金融バックテストにおいて、見せかけの好成績（リーケージ）を引き起こしやすいのは次のうちどれでしょうか？",
+        "options": [
+          "意思決定時点では利用できない将来の情報を特徴量に含めること",
+          "過去のデータのみを用いて特徴量を正規化すること",
+          "モデルの訓練とテストで異なるデータセットを使用すること"
+        ],
+        "correctIndex": 0,
+        "explanation": "意思決定時点では利用できない将来の情報を特徴量に含めることは、モデルが未来を「覗き見」することになり、実際の取引では再現不可能な過度に楽観的な結果を生み出すためです。これは「意思決定時リーケージ」の一種です。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "バックテスト",
+          "definition": "金融取引戦略や予測モデルが、過去の市場データでどれくらいの性能を発揮したかをシミュレーションで検証することです。これにより、将来のパフォーマンスを推測します。",
+          "reading": "Backtest"
+        },
+        {
+          "term": "リーケージ",
+          "definition": "機械学習モデルの評価において、本来利用できないはずの将来の情報やテストデータからの情報が、誤ってモデルの訓練や評価に漏れ出し、性能が過大に評価されてしまう現象です。",
+          "reading": "Leakage"
+        },
+        {
+          "term": "ワン・スイッチ・ベンチマーク",
+          "definition": "複数の評価条件のうち、一度に一つの条件だけを変更して、その変更が結果にどのような影響を与えるかを測定する比較評価手法です。これにより、特定の要因の効果を分離して分析できます。",
+          "reading": "One-Switch Benchmark"
+        },
+        {
+          "term": "OHLCV",
+          "definition": "株式などの金融商品の日中の価格変動を示すデータ形式で、始値（Open）、高値（High）、安値（Low）、終値（Close）、出来高（Volume）の頭文字を取ったものです。",
+          "reading": "Open-High-Low-Close-Volume"
+        },
+        {
+          "term": "時系列順の分離",
+          "definition": "過去のデータでモデルを訓練し、それ以降の将来のデータで評価するという、時間的な順序を厳守したデータ分割方法です。金融バックテストの基本的なルールです。",
+          "reading": "Chronological Separation"
+        },
+        {
+          "term": "意思決定時セマンティクス",
+          "definition": "金融取引の意思決定を行う時点において、モデルが利用できる情報が、実際にその時点で入手可能であった情報のみに限定されていることを指す原則です。これに違反するとリーケージが発生します。",
+          "reading": "Decision-Time Semantics"
+        },
+        {
+          "term": "リーケージ・ゲイン",
+          "definition": "リーケージを引き起こすプロトコル違反を適用した場合の評価指標と、クリーンな（リーケージのない）参照プロトコルを適用した場合の評価指標との差です。これにより、リーケージによるパフォーマンスの過大評価の度合いを測定します。",
+          "reading": "Leakage Gain"
+        },
+        {
+          "term": "アルファ",
+          "definition": "市場全体の動き（ベータ）では説明できない、投資戦略やポートフォリオが市場平均を上回って稼ぎ出した超過収益のことです。投資家の腕前や戦略の優位性を示す指標とされます。",
+          "reading": "Alpha"
+        }
+      ]
+    },
+    {
+      "id": "2605.24730",
+      "title": "Private Languages",
+      "authors": [],
+      "publishedAt": "2026-05-26T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.24730",
+      "pdfUrl": "https://arxiv.org/pdf/2605.24730.pdf",
+      "categories": [
+        "topic:labor",
+        "労働・雇用",
+        "econ.TH",
+        "q-fin.GN"
+      ],
+      "abstract": "Strategic communication often relies on anchors observed by the sender but not by the receiver. An analyst may report against a proprietary valuation model, an auditor against an internal score, a manager against an accounting estimate, or an institution against its own standard. I study a sender-receiver game in which reports are costly to move away from such privately observed anchors. Anchor heterogeneity changes the geometry of communication. Rather than relying on partitions, privately anchored reporting generates continuous variation in messages because different senders find different reports costly to make. This mechanism can improve information transmission, but it can also pull reports toward noisy private anchors. I show that (i) small positive reporting costs can make communication approach full revelation, even though zero costs return the model to cheap talk, (ii) uninformative anchors can transmit information through strategic distortions. Anchored reports and cheap-talk messages can coexist as endogenous hard and soft information, but cheap-talk alone is preferred by all parties under sufficiently low misalignment, explaining why organizations may rely exclusively on informal channels.",
+      "summary": {
+        "gist": "本研究は、送り手が私的に観測する「アンカー（基準）」から報告が乖離する際にコストが発生する戦略的コミュニケーションゲームを分析し、アンカーの異質性が情報伝達の幾何学を変え、情報伝達を改善する可能性と、ノイズの多い私的アンカーに報告が引きずられる可能性の両方があることを明らかにしています。",
+        "novelty": "従来の研究が、報告コストの基準を客観的な状態や共通の知識に置いていたのに対し、本研究は送り手が私的に観測する「アンカー」を報告コストの基準とすることで、固定された状態に対して報告コストが送り手間で異なるという新たなメカニズムを導入しています。これにより、連続的なメッセージのバリエーションが生じ、従来のパーティションに基づく情報伝達モデルや、境界でキンクが生じるモデルとは異なる、内部の連続的なコミュニケーション領域を提示している点が新規性です。",
+        "method": "本研究は、送り手と受け手の2者からなる戦略的コミュニケーションゲームをモデル化しています。送り手は、報酬に関連する状態θと私的なアンカーbを観測し、受け手は報告rを観測して行動aを選択します。送り手は受け手の行動に加えて、報告rが私的アンカーbから乖離する際に直接的なコストD(r,b)を負担します。このモデルでは、受け手の行動が報告に対して連続的かつ単調に変化する「正則均衡」に焦点を当て、送り手の最適報告が私的アンカーと連続的に変化する幾何学的分析を用いています。具体的な分析手法としては、送り手の一次条件とベイズの法則を用いて、状態とアンカーの分布から受け手の行動を決定するメカニズムを解明しています。",
+        "results": "分析の結果、以下の3つの主要な知見が得られました。第一に、報告コストがゼロの場合には「チープトーク」モデルに回帰し情報伝達はパーティション形式になりますが、ごくわずかな正の報告コストが存在するだけで、コミュニケーションがほぼ完全な情報開示に近づく可能性があることが示されました。これは、送り手が報告を誇張することでアンカーからのノイズをフィルタリングするためです。第二に、情報を持たないアンカーであっても、戦略的な歪みを通じて情報を伝達できることが明らかになりました。異なる状態では受け手の行動を動かすことによる限界利益が異なるため、同じアンカーから異なる量だけ報告が歪められるためです。第三に、定量的報告と定性的報告のチャネルが共存しうることを示し、送り手と受け手の利害の不一致が中程度の場合にはハイブリッド型が純粋な形式よりも優位ですが、不一致が十分に低い場合には純粋なチープトークが両者にとって厳密に好ましいことが判明しました。これは、組織がなぜ非公式なチャネルにのみ依存するのかを説明しています。",
+        "why": "報告コストがゼロからわずかに正になるだけで情報伝達が劇的に改善するのは、送り手がアンカーから報告を乖離させるコストを負うことで、報告に「重み」が生じるためです。これにより、送り手は戦略的に報告を調整し、アンカーに含まれるノイズをフィルタリングしながら、状態に関する情報をより正確に伝えるインセンティブが生まれます。また、情報を持たないアンカーでも情報が伝達されるのは、送り手が受け手の行動を動かすことによる限界的な利益が状態によって異なるため、同じアンカーからでも状態に応じて報告を異なる量だけ歪ませるからです。この戦略的な歪みが、アンカー自体が情報を持たなくても、間接的に状態に関する情報を受け手に伝える役割を果たします。",
+        "figures": "アブストラクトに図表の記述なし"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.TH）",
+      "field": "労働・雇用",
+      "titleJa": "プライベートな基準を持つ報告が戦略的コミュニケーションに与える影響",
+      "catchTitle": "社内基準が情報伝達を変える？",
+      "hook": "企業や組織が内部の評価基準に基づいて報告を行う際、その「プライベートな基準」が情報伝達の質をどのように左右するのかを解明しています。",
+      "quiz": {
+        "question": "送り手が私的な基準（アンカー）に基づいて報告する状況で、報告コストがごくわずかに存在する場合、情報伝達はどうなるでしょうか？",
+        "options": [
+          "ほぼ完全な情報開示に近づく",
+          "情報伝達は全く行われない",
+          "情報伝達の質は変わらない"
+        ],
+        "correctIndex": 0,
+        "explanation": "本研究では、ごくわずかな正の報告コストが存在するだけで、コミュニケーションがほぼ完全な情報開示に近づく可能性があると示されています。これは、送り手が報告を誇張することでアンカーからのノイズをフィルタリングするためです。"
+      },
+      "limitations": "本研究では、送り手が報告段階でアンカーを私的に観測していると仮定し、アンカーがどのように形成されるか（例：予測者がモデル仕様を選択する、監査人がスコアを決定するインプットを選択するなど）については、報告段階以前の段階としてモデルの範囲外としています。また、分析は受け手の反応が報告に対して連続的かつ単調に変化する「正則均衡」に限定されており、他の種類の均衡については検討されていません。",
+      "glossary": [
+        {
+          "term": "アンカー",
+          "definition": "送り手が報告を行う際に、その報告の基準となる私的な内部情報や評価基準のことです。例えば、会計上の見積もりや内部のチェックリストなどがこれに当たります。"
+        },
+        {
+          "term": "チープトーク",
+          "definition": "送り手がメッセージを送る際に、そのメッセージ自体に直接的なコストがかからないコミュニケーションのことです。メッセージの信頼性は、送り手と受け手の利害の一致度合いに依存します。",
+          "reading": "Cheap Talk"
+        },
+        {
+          "term": "差の差分析（DID）",
+          "definition": "政策や介入の効果を測定する統計的手法です。介入を受けたグループと受けていないグループを比較し、さらに介入前後の変化を比較することで、介入の純粋な効果を推定します。",
+          "reading": "Difference-in-Differences"
+        },
+        {
+          "term": "パーティション",
+          "definition": "チープトークモデルにおいて、送り手が状態空間をいくつかの区間に分割し、各区間の状態に対して同じメッセージを送ることで情報を伝達する均衡のことです。"
+        },
+        {
+          "term": "正則均衡",
+          "definition": "送り手の報告と受け手の行動が連続的かつ単調に変化する、安定したコミュニケーションのパターンを指します。これにより、小さなメッセージの変化が極端な結果を招かない、より予測可能な情報伝達が実現します。",
+          "reading": "Regular Equilibrium"
+        },
+        {
+          "term": "単峰性",
+          "definition": "データや関数の分布が、一つのピーク（最も頻繁に現れる値）を持つ性質のことです。この論文では、報告コスト関数がアンカーからの乖離が最小となる一点で最小値を持つことを指します。"
+        },
+        {
+          "term": "プロビット回帰",
+          "definition": "被説明変数が2値（はい/いいえ、成功/失敗など）である場合に用いられる統計的分析手法です。説明変数が被説明変数の確率にどのように影響するかを分析します。",
+          "reading": "Probit Regression"
+        },
+        {
+          "term": "戦略的歪み",
+          "definition": "送り手が自身の利益を最大化するために、客観的な事実や私的なアンカーから意図的に報告をずらす行為のことです。これにより、情報が不正確になることもありますが、特定の状況下では情報伝達を改善する可能性もあります。",
+          "reading": "Strategic Distortion"
+        }
+      ]
+    },
+    {
+      "id": "W7162344109",
+      "title": "How Financial Resilience Affects the Strategic Choices of Enterprises During Economic Downturns — a Trade-Off Analysis Based on Expansion and Contraction",
+      "authors": [
+        "Ruize Gao"
+      ],
+      "publishedAt": "2026-05-25T12:00:00.000Z",
+      "url": "https://doi.org/10.54254/2754-1169/2026.33844",
+      "pdfUrl": "https://aemps.ewapub.com/article/view/33844.pdf",
+      "categories": [
+        "topic:trade",
+        "貿易・国際経済",
+        "openalex",
+        "Divestment",
+        "Financial crisis",
+        "Cash flow",
+        "Finance"
+      ],
+      "abstract": "This paper focuses on the strategic choice dilemma faced by enterprises during economic downturns - expansion or contraction. This article establishes an analytical framework of financial resilience-industry cyclicality, which suggests that financial resilience fundamentally delineates strategic boundaries: the combination of a company's low financial resilience and the industry's high cyclicality often leads to companies choosing to contract in a pro-cyclical manner; The combination of high financial resilience of enterprises and low cyclicality of industries will make counter-cyclical expansion more feasible. Through the comparison and analysis of cases in the new energy and real estate industries, it is found that successful expansion relies on three key factors: cash flow safety cushion, financing availability, and disciplined investment rhythm control; while the success or failure of contraction depends on structural divestment and retention of core organizational capabilities. For enterprises with moderate resilience, a hybrid strategic posture is recommended, entailing prudent expansion in core domains alongside flexible contraction in peripheral operations, simultaneously emphasizing cash flow management, comprehensive risk control mechanisms, and long-term resilience-construction initiatives to ensure sustainable competitive positioning throughout economic cycles.",
+      "summary": {
+        "gist": "本論文は、経済の低迷期に企業が直面する「拡大」か「縮小」かという戦略的ジレンマに対し、企業の財務レジリエンスと業界の景気循環性が戦略の境界線を決定するという分析フレームワークを提示しています。成功する戦略は、企業の財務状況と業界特性に適合していることが重要であると結論付けています。",
+        "novelty": "従来の研究が景気後退期の企業の行動記述に留まり、その動機や財務レジリエンスとの関連性を十分に解明していなかった点に対し、本研究は財務レジリエンスと業界の景気循環性という二つの側面を統合した分析フレームワークを構築し、戦略的選択の根本的な理由を体系的に説明しています。また、単なる拡大・縮小の対立ではなく、両者を組み合わせたハイブリッド戦略の可能性も探求している点が新規性です。",
+        "method": "本研究は、財務レジリエンスと業界の景気循環性という理論的視点に基づき、景気後退期における企業の戦略的選択を分析する説明フレームワークを構築しています。新エネルギー産業と不動産産業のケーススタディを比較分析することで、理論的枠組みの妥当性を検証し、拡大戦略と縮小戦略の成功要因を具体的に特定しています。具体的なデータセットや調査期間、計量経済学的なモデルの名称はアブストラクトには明記されていません。",
+        "results": "分析の結果、企業の財務レジリエンスが低い場合や業界の景気循環性が高い場合は、景気循環に沿った縮小戦略が選択されやすいことが示されています。一方で、財務レジリエンスが高く、業界の景気循環性が低い企業は、景気循環に逆行した拡大戦略がより実現可能であると判明しました。成功する拡大戦略には、キャッシュフローの安全確保、資金調達の容易さ、規律ある投資リズムの管理が不可欠であり、縮小戦略の成否は、構造的な事業売却と中核組織能力の維持にかかっています。中程度のレジリエンスを持つ企業には、中核事業での慎重な拡大と周辺事業での柔軟な縮小を組み合わせたハイブリッド戦略が推奨されています。",
+        "why": "企業が景気後退期に拡大または縮小の戦略を選択する背景には、主にその企業の「財務レジリエンス」と「業界の景気循環性」が密接に関係しています。財務レジリエンスが高い企業は、十分なキャッシュフローや資金調達能力、リスク許容度を持つため、景気低迷期でも投資を継続し、競合他社が撤退する中で市場シェアを拡大したり、低コストで戦略的資産を買収したりすることが可能になります。一方、財務レジリエンスが低い企業は、資金繰りの悪化や外部資金調達の困難に直面しやすいため、リスクを回避し、生き残りを優先して事業を縮小せざるを得ないのです。業界の景気循環性も重要で、需要変動の大きい業界では、財務的な余裕がなければ拡大は困難であり、安定した業界であれば拡大の機会を捉えやすくなります。",
+        "figures": "アブストラクトに図表の記述なし"
+      },
+      "doi": "10.54254/2754-1169/2026.33844",
+      "source": "openalex",
+      "journal": "Advances in Economics Management and Political Sciences",
+      "field": "貿易・国際経済",
+      "titleJa": "景気後退期における企業の戦略的選択と財務レジリエンス：拡大と縮小のトレードオフ分析",
+      "catchTitle": "不況期の企業戦略、拡大か縮小か？",
+      "hook": "経済が低迷する中、企業が生き残るための戦略的選択は、財務の強靭さと業界の特性によって決まることを明らかにしています。",
+      "quiz": {
+        "question": "経済が低迷する時期、企業が「拡大」戦略を成功させるために最も重要な要素は何でしょうか？",
+        "options": [
+          "十分なキャッシュフロー、資金調達の容易さ、規律ある投資リズムの管理",
+          "政府からの補助金と規制緩和",
+          "競合他社の事業撤退を待つこと"
+        ],
+        "correctIndex": 0,
+        "explanation": "論文では、成功する拡大戦略にはキャッシュフローの安全確保、資金調達の容易さ、規律ある投資リズムの管理という3つの主要因が不可欠であると述べています。"
+      },
+      "limitations": "本研究の限界として、既存研究が企業の戦略的行動の動機を深く掘り下げていない点、景気循環に沿った縮小と逆行した拡大を単純に対立させている点、そして業界の違いが企業の戦略的選択に与える影響が十分に探求されていない点が挙げられています。これらの限界を克服するため、本研究では財務レジリエンスと業界の景気循環性を統合した分析フレームワークを構築しています。",
+      "glossary": [
+        {
+          "term": "財務レジリエンス",
+          "definition": "企業が経済的なショックや不況に直面した際に、その影響を吸収し、事業活動を継続できる能力のことです。キャッシュフローの健全性、負債構造、資金調達のしやすさ、リスク管理能力などに現れます。",
+          "reading": "Financial Resilience"
+        },
+        {
+          "term": "景気循環性",
+          "definition": "特定の産業や経済活動が、景気変動（好況・不況）の影響をどの程度受けるかを示す性質です。景気循環性が高い産業は、景気変動に応じて需要や収益が大きく変動します。",
+          "reading": "Cyclicality"
+        },
+        {
+          "term": "プロシクリカル戦略",
+          "definition": "景気循環と同じ方向に沿って事業活動を調整する戦略です。景気後退期には投資や規模を縮小し、好況期には拡大する傾向があります。",
+          "reading": "Pro-cyclical Strategy"
+        },
+        {
+          "term": "カウンターシクリカル戦略",
+          "definition": "景気循環とは逆の方向に事業活動を行う戦略です。景気後退期にこそ、低コストで資源を獲得したり、市場シェアを拡大したりするために投資を維持・増加させます。",
+          "reading": "Counter-cyclical Strategy"
+        },
+        {
+          "term": "キャッシュフロー安全確保",
+          "definition": "企業が予期せぬ支出や収益の減少に備えて、十分な現預金や流動資産を確保しておくことです。これにより、短期的な運転資金の不足や流動性危機を回避できます。",
+          "reading": "Cash Flow Safety Cushion"
+        },
+        {
+          "term": "資金調達の容易さ",
+          "definition": "企業が銀行からの融資や株式発行など、外部から必要な資金をどれだけスムーズかつ有利な条件で調達できるかを示す度合いです。財務状況が良いほど容易になります。",
+          "reading": "Financing Availability"
+        },
+        {
+          "term": "構造的な事業売却",
+          "definition": "企業の事業ポートフォリオ全体を見直し、中核ではない事業や収益性の低い事業を売却することです。これにより、経営資源を集中させ、財務体質を改善します。",
+          "reading": "Structural Divestment"
+        },
+        {
+          "term": "中核組織能力",
+          "definition": "企業が競争優位性を確立し、持続的に成長するために不可欠な、独自の技術、知識、プロセス、人材などの強みです。景気後退期でもこれを維持することが重要です。",
+          "reading": "Core Organizational Capabilities"
+        }
+      ]
+    },
+    {
+      "id": "2605.23924",
+      "title": "Improving the Completeness and Comparability of Segment Disclosures: A Large Language Model Approach",
+      "authors": [],
+      "publishedAt": "2026-05-26T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.23924",
+      "pdfUrl": "https://arxiv.org/pdf/2605.23924.pdf",
+      "categories": [
+        "topic:labor",
+        "労働・雇用",
+        "cs.CL",
+        "cs.IR",
+        "q-fin.GN"
+      ],
+      "abstract": "Segment-level disclosures are a central component of financial reporting, providing insight into firms' internal organization and the allocation of economic activities across operating units. However, segment information is often presented in both qualitative and quantitative forms, dispersed across tables and narrative sections of Form 10-K filings. Empirical research relying on structured databases faces both completeness and comparability challenges, as some firm-year observations may be missing, nested segment disclosures are not captured, and support for longitudinal and cross-firm comparability is limited. This study develops a large language model-based framework to extract segment disclosures directly from Form 10-K filings and to preserve both reportable and nested segment information. We further design a retrieval augmented system that incorporates information across multiple filings to support comparability. We use two representative settings to demonstrate its application: longitudinal analysis within a firm to interpret segment changes over time, and cross firm alignment of geographic segments across firms with different reporting structures. The results indicate that the artifact accurately extracts segment-level information and effectively addresses questions that require cross-period knowledge, demonstrating the potential of LLM-based approaches to enhance the measurement and interpretation of segment disclosures.",
+      "summary": {
+        "gist": "本研究は、企業の年次報告書（Form 10-K）からセグメント開示情報を直接抽出し、その完全性と比較可能性を向上させるための大規模言語モデル（LLM）ベースのフレームワークを開発しました。このアプローチにより、従来の構造化データベースでは困難だった、企業内の時系列変化や企業間の比較分析が可能になることを示しています。",
+        "novelty": "従来の構造化データベースが抱えるセグメント開示情報の不完全性や比較可能性の課題に対し、LLMを応用することで、定性的・定量的な情報が散在する複雑な開示文書から、報告対象およびネストされたセグメント情報を階層構造を保ったまま抽出できる点が新規性です。また、複数の報告書からの情報を統合し、企業間の比較を可能にする検索拡張システムを設計した点も、これまでの研究にはないアプローチです。",
+        "method": "本研究は、企業のForm 10-K filingsからセグメント開示情報を直接抽出するLLMベースのフレームワークを開発しました。このフレームワークは、報告対象セグメントとネストされた開示の両方を回復するファイルに根ざした抽出手順と、複数のファイリングにわたる情報を組み込む検索拡張コンポーネントで構成されています。その応用例として、企業内の時系列分析によるセグメント変化の解釈と、異なる報告構造を持つ企業間の地理的セグメントの比較という2つの代表的な設定を用いて、その有効性を実証しています。",
+        "results": "開発されたLLMベースのフレームワークは、セグメントレベルの情報を正確に抽出し、複数期間にわたる知識を必要とする問いに効果的に対応できることが示されました。具体的には、企業内のセグメント変更を特定し、その経済的理由を要約し、現在のセグメント構造を過去の年度とリンクさせることが可能です。また、異なる集計レベルを使用する同業他社の地理的セグメント開示を比較する際にも、文脈情報を用いて名称、集計、報告構造の違いを調整できることが示されています。これにより、LLMベースのアプローチがセグメント開示の測定と解釈を強化する可能性が実証されました。",
+        "why": "LLMがセグメント開示の完全性と比較可能性を向上させるのは、従来のルールベースや伝統的な自然言語処理手法では困難だった、非構造化テキストからの情報抽出と文脈理解に優れているためです。LLMは、文書内の異なる部分に分散した情報を関連付け、多様な表現や提示形式を解釈する能力を持っています。これにより、ナラティブな説明と表形式の情報を統合し、企業や期間によって大きく異なる開示スタイルに対応できるため、より網羅的で比較可能なセグメントデータが構築できるのです。",
+        "figures": "アブストラクトに図表の記述なし"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.CL）",
+      "field": "労働・雇用",
+      "titleJa": "セグメント開示の完全性と比較可能性の向上：大規模言語モデルによるアプローチ",
+      "catchTitle": "LLMが企業財務報告をどう変える？",
+      "hook": "大規模言語モデル（LLM）を活用することで、企業のセグメント開示情報の抽出と解釈が、より正確かつ比較可能になる可能性を提示しています。",
+      "quiz": {
+        "question": "大規模言語モデル（LLM）は、企業のセグメント開示情報のどのような課題解決に役立つでしょうか？",
+        "options": [
+          "情報の不完全性と企業間の比較困難性",
+          "財務諸表の誤字脱字の修正",
+          "株価予測の精度向上"
+        ],
+        "correctIndex": 0,
+        "explanation": "LLMは、従来の構造化データベースでは捉えきれなかった、散在するセグメント情報を網羅的に抽出し、異なる報告形式を持つ企業間の比較を可能にすることで、情報の不完全性と比較困難性という課題を解決します。"
+      },
+      "limitations": "本研究の限界として、セクション6で将来の研究課題とともに議論されているものの、具体的な内容はPDF抜粋からは読み取れませんでした。",
+      "glossary": [
+        {
+          "term": "セグメント開示",
+          "definition": "企業が事業活動を複数の部門（セグメント）に分けて、それぞれの部門の売上高、利益、資産などの財務情報を公開することです。投資家が企業の多様な事業内容を理解し、リスクを評価するために重要な情報となります。",
+          "reading": "Segment disclosure"
+        },
+        {
+          "term": "Form 10-K",
+          "definition": "米国証券取引委員会（SEC）に上場している企業が毎年提出を義務付けられている年次報告書です。企業の財務状況、事業内容、リスク要因などが詳細に記載されています。",
+          "reading": "フォームテンケー"
+        },
+        {
+          "term": "大規模言語モデル（LLM）",
+          "definition": "大量のテキストデータを学習し、人間のような自然な言葉を理解し、生成できるAIモデルです。文章の要約、翻訳、質問応答など、幅広いタスクに活用されます。",
+          "reading": "Large Language Model"
+        },
+        {
+          "term": "構造化データベース",
+          "definition": "あらかじめ定義された形式（表形式など）に従ってデータが整理・格納されているデータベースです。検索や分析が容易ですが、非定型な情報を取り込むのが苦手な場合があります。",
+          "reading": "Structured database"
+        },
+        {
+          "term": "ネストされたセグメント開示",
+          "definition": "主要な事業セグメントの中に、さらに詳細な小区分（サブセグメント）の情報が含まれている開示のことです。階層的な事業構造を反映した情報提供を指します。",
+          "reading": "Nested segment disclosures"
+        },
+        {
+          "term": "検索拡張システム",
+          "definition": "大規模言語モデルが、外部のデータベースや文書から関連情報を検索・取得し、それを基に回答や生成を行うシステムです。モデルの知識を補完し、より正確な情報を提供できます。",
+          "reading": "Retrieval augmented system"
+        },
+        {
+          "term": "管理アプローチ",
+          "definition": "企業が内部で経営判断や資源配分に用いているセグメント区分に基づいて、外部にもその情報を開示する会計基準の考え方です。企業の実際の事業運営を反映した情報提供を目指します。",
+          "reading": "Management approach"
+        },
+        {
+          "term": "XBRL",
+          "definition": "財務報告書を電子的に作成・交換するための国際標準言語です。財務データの項目にタグ付けすることで、機械が情報を自動的に読み取り、分析しやすくなります。",
+          "reading": "eXtensible Business Reporting Language"
+        }
+      ]
+    },
+    {
+      "id": "W7162192206",
+      "title": "Constructing Connectivity, Building Trust: The Evolving Dynamics of China-Bangladesh Relations",
+      "authors": [
+        "Mohammad Fakhrus Salam",
+        "Md. Fahim Ahmed"
+      ],
+      "publishedAt": "2026-05-23T12:00:00.000Z",
+      "url": "https://doi.org/10.53451/ijps.1841597",
+      "pdfUrl": "https://dergipark.org.tr/en/download/article-file/5504546",
+      "categories": [
+        "topic:urban",
+        "都市・地域",
+        "openalex",
+        "Geopolitics",
+        "Agency (philosophy)",
+        "General partnership",
+        "China"
+      ],
+      "abstract": "This study examines how regional connectivity has become a pivotal force shaping the economic trajectory of emerging states, with Bangladesh standing at a particularly consequential crossroads. As global and regional powers invest in new corridors, ports, and transport networks, connectivity is no longer merely an infrastructural matter it is a political and developmental choice that influences how nations imagine their futures. China’s involvement, however, is deeply intertwined with its broader geopolitical ambitions, making the Sino-Bangladesh partnership both economically promising and strategically complex. Major projects such as the Padma Bridge and the Karnaphuli Tunnel exemplify the tangible benefits of BRI-linked investments, yet they also underscore the evolving geopolitical landscape in South Asia. This study, grounded in extensive secondary research, critically examines the dual nature of China’s engagement in Bangladesh balancing economic cooperation with strategic calculation. It explores key questions: What are the competing strategic interests of China and India in Bangladesh? Is China a reliable strategic ally or merely a transactional partner? The research assesses both the opportunities and risks embedded in BRI participation and outlines potential strategies for Bangladesh to assert its agency while avoiding overdependence on any single geopolitical actor. The study concludes by advocating for a nuanced, pragmatic foreign policy that prioritizes national interest and long-term sustainability in regional connectivity efforts.",
+      "summary": {
+        "gist": "本研究は、中国の「一帯一路」構想（BRI）におけるバングラデシュとの関係が、単なる経済的協力だけでなく、地政学的な戦略的計算と開発協力の二面性を持つことを明らかにしています。バングラデシュは、中国への過度な依存を避けつつ、国益を最大化するための多角的な外交政策を維持していると結論付けています。",
+        "novelty": "本研究は、中国とバングラデシュの関係を、これまでの研究で主流だった「依存」や「同盟」といった単純な枠組みではなく、地域大国間の競争によって形成される「交渉された開発パートナーシップ」として再構築している点が新規性です。これにより、バングラデシュがBRIへの関与において主体性を保持している可能性を示唆しています。",
+        "method": "本研究は、2013年から2025年までの中国とバングラデシュの関係を対象に、質的調査デザインと内容分析を採用しています。中国政府のホワイトペーパー、バングラデシュ外務省の戦略文書、シンクタンクの報告書、貿易報告書、学術論文など、約52の多様な二次資料を分析の基礎としています。分析戦略としては、戦略的競争、経済的相互依存、開発主体性、地域安全保障という4つの分析次元に基づいたテーマコーディングを行い、リアリズム、リベラル制度主義、開発国家理論を統合した多角的な視点から解釈しています。",
+        "results": "分析の結果、パドマ橋鉄道リンクやカルナフリトンネルといったインフラプロジェクトは、バングラデシュの連結性と経済成長に貢献する一方で、より広範なインド太平洋地域の戦略的競争の中にバングラデシュを組み込んでいることが判明しました。貿易の非対称性が拡大しているにもかかわらず、バングラデシュは中国、インド、欧米諸国との関係を均衡させ、実用的で多角的な外交政策を維持しています。本研究は、バングラデシュが財政規律、制度的能力、戦略的中立性を維持する限り、BRIへの関与において主体性を保持できると主張しています。",
+        "why": "中国のBRI投資がバングラデシュの経済成長と連結性を促進する一方で、地政学的な複雑さを生むのは、中国が経済的利益だけでなく、インド太平洋地域での戦略的影響力拡大も意図しているためです。バングラデシュが主体性を維持できるのは、単一の大国に過度に依存せず、中国、インド、欧米諸国との関係をバランス良く保つ「多角的な外交政策」を巧みに展開しているからです。これにより、バングラデシュは自国の国益を最大化しつつ、外部からの影響力を分散させていると考えられます。",
+        "figures": "アブストラクトに図表の記述なし"
+      },
+      "doi": "10.53451/ijps.1841597",
+      "source": "openalex",
+      "journal": "International Journal of Politics and Security",
+      "field": "都市・地域",
+      "titleJa": "連結性の構築と信頼の醸成：中国・バングラデシュ関係の進化する力学",
+      "catchTitle": "中国の巨大経済圏構想、バングラデシュに何をもたらす？",
+      "hook": "中国の「一帯一路」構想がバングラデシュにもたらす経済的機会と地政学的複雑性を分析しています。",
+      "quiz": {
+        "question": "中国の「一帯一路」構想（BRI）におけるバングラデシュとの関係について、この論文の結論として最も適切なものはどれですか？",
+        "options": [
+          "中国はバングラデシュにとって戦略的同盟国であり、経済的依存関係が深化している。",
+          "中国はバングラデシュにとって単なる取引相手であり、地政学的な影響力は限定的である。",
+          "中国は経済的機会と地政学的複雑さの両方をもたらし、バングラデシュは多角的な外交で主体性を保っている。"
+        ],
+        "correctIndex": 2,
+        "explanation": "論文は、中国の関与が経済協力と戦略的計算の二面性を持つことを示し、バングラデシュが多角的な外交政策を通じて主体性を維持していると結論付けています。"
+      },
+      "limitations": "本研究は二次データに依存しているため、特に公式政策文書においては、戦略的なメッセージングが運用上の透明性よりも優先されている可能性があり、制度的バイアスの可能性が導入されます。また、対外債務や貿易統計などの財政指標は、新たな経済データが利用可能になるにつれて改訂される可能性があります。これらの制約は研究全体の分析的妥当性を損なうものではありませんが、進化する地政学的および経済的状況の中で、結果を慎重に解釈する必要があることを示しています。",
+      "glossary": [
+        {
+          "term": "一帯一路構想（BRI）",
+          "definition": "中国が提唱する広域経済圏構想で、アジア、ヨーロッパ、アフリカを結ぶ陸と海のインフラネットワークを構築し、貿易と投資を促進することを目指しています。",
+          "reading": "Belt and Road Initiative"
+        },
+        {
+          "term": "地政学",
+          "definition": "地理的な位置関係が国際政治や国家戦略に与える影響を研究する学問分野です。国家間の勢力均衡や資源の確保などが主な分析対象となります。"
+        },
+        {
+          "term": "リアリズム",
+          "definition": "国際関係論における主要な理論の一つで、国家は常に自国の生存と安全保障を最優先し、相対的な国力の蓄積を目指すと仮定します。国際システムを無政府状態と見なします。"
+        },
+        {
+          "term": "リベラル制度主義",
+          "definition": "国際関係論の理論の一つで、国際機関や経済的相互依存が国家間の協力関係を促進し、紛争を緩和する役割を果たすと主張します。共通の利益に基づく協力の可能性を重視します。",
+          "reading": "Liberal Institutionalism"
+        },
+        {
+          "term": "開発国家理論",
+          "definition": "国家が経済発展において主導的な役割を果たし、産業政策の策定やインフラ整備を通じて経済成長を推進するという考え方です。特に東アジアの経済発展を説明する際に用いられます。",
+          "reading": "Developmental State Theory"
+        },
+        {
+          "term": "内容分析",
+          "definition": "文書やメディアなどのテキストデータを体系的に分析し、特定のテーマやパターン、傾向を抽出する質的研究手法です。言葉の出現頻度や文脈などを詳細に調べます。",
+          "reading": "Content Analysis"
+        },
+        {
+          "term": "主体性",
+          "definition": "国際関係において、国家が外部からの影響を一方的に受けるだけでなく、自らの意思決定や行動を通じて状況に影響を与える能力を指します。自律的な外交政策を展開する力とも言えます。",
+          "reading": "Agency"
+        },
+        {
+          "term": "三角測量（トライアンギュレーション）",
+          "definition": "研究の信頼性を高めるために、複数のデータ源、分析手法、または理論的視点を組み合わせて検証するアプローチです。異なる視点から同じ現象を分析することで、より確かな結論を導き出します。",
+          "reading": "Triangulation"
+        }
+      ]
+    }
+  ]
+}

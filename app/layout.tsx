@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "今日の研究を、3分で。",
-  description: "論文ではなく、発見を読む。農業・食・農村の最新研究を、小説のように気軽に。",
+  description: "論文ではなく、発見を読む。農業経済から環境・健康まで、毎日さまざまな分野の最新研究を気軽に。",
 };
 
 export default function RootLayout({

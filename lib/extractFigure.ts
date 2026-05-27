@@ -11,6 +11,8 @@ import type { KeyFigure, Paper } from "@/lib/types";
 const GEMINI_MODEL = process.env.GEMINI_MODEL ?? "gemini-2.5-flash";
 const GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models";
 const GEMINI_FETCH_TIMEOUT_MS = Number(process.env.GEMINI_FETCH_TIMEOUT_MS ?? 90_000);
+import { downloadPdfForPaper, downloadPdfFromUrl, type PdfResolveInput } from "@/lib/pdfResolve";
+
 const MAX_PDF_BYTES = 15 * 1024 * 1024;
 const MAX_PAGES_TO_SCAN = 10;
 const PAGE_RENDER_SCALE = 1.1;
@@ -38,43 +40,21 @@ function safeFigureFilename(paperId: string): string {
   return paperId.replace(/[^a-zA-Z0-9._-]/g, "_");
 }
 
+/** @deprecated downloadPdfFromUrl / downloadPdfForPaper を使用 */
 export async function downloadPdf(url: string): Promise<Buffer | null> {
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 60_000);
+  return downloadPdfFromUrl(url);
+}
 
-  try {
-    const response = await fetch(url, {
-      signal: controller.signal,
-      headers: {
-        "User-Agent": "agri-econ-papers/1.0 (research summary; mailto:research@local)",
-        Accept: "application/pdf,*/*",
-      },
-      redirect: "follow",
-    });
-
-    if (!response.ok) return null;
-
-    const contentType = response.headers.get("content-type") ?? "";
-    if (!contentType.includes("pdf") && !url.toLowerCase().includes(".pdf")) {
-      return null;
-    }
-
-    const buffer = Buffer.from(await response.arrayBuffer());
-    if (buffer.length === 0 || buffer.length > MAX_PDF_BYTES) return null;
-    if (buffer.subarray(0, 4).toString() !== "%PDF") return null;
-
-    return buffer;
-  } catch {
-    return null;
-  } finally {
-    clearTimeout(timeoutId);
-  }
+export async function downloadPdfForPaperRecord(paper: PdfResolveInput): Promise<Buffer | null> {
+  const { buffer } = await downloadPdfForPaper(paper);
+  return buffer;
 }
 
 function runPythonExtractor(pdfPath: string, outputDir: string): Promise<PythonExtractResult> {
   return new Promise((resolve) => {
     const script = path.join(process.cwd(), "scripts", "extract_figures.py");
-    const proc = spawn("python3", [script, pdfPath, outputDir], {
+    const pythonBin = process.env.PYTHON_BIN?.trim() || "python3";
+    const proc = spawn(pythonBin, [script, pdfPath, outputDir], {
       cwd: process.cwd(),
     });
     let stdout = "";
@@ -274,9 +254,12 @@ export async function extractKeyFigureForPaper(
   paper: Paper,
   apiKey: string
 ): Promise<KeyFigure | null> {
-  if (!paper.pdfUrl?.trim()) return null;
-
-  const pdfBuffer = await downloadPdf(paper.pdfUrl);
+  const { buffer: pdfBuffer } = await downloadPdfForPaper({
+    doi: paper.doi,
+    pdfUrl: paper.pdfUrl,
+    id: paper.id,
+    source: paper.source,
+  });
   if (!pdfBuffer) return null;
 
   const fromPython = await extractWithPyMuPDF(pdfBuffer, paper, apiKey);

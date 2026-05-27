@@ -13,14 +13,34 @@ export type ArxivPaper = {
   source?: "arxiv" | "openalex";
   /** 掲載誌名（arXiv の場合はプレプリント表記） */
   journal?: string;
+  /** 収集時の分野ラベル */
+  field?: string;
 };
 
 /** arXiv 公式の export エンドポイント（https 推奨） */
 const ARXIV_API_URL = "https://export.arxiv.org/api/query";
 
+/** 公式推奨: リクエスト間隔は最低3秒。連続呼び出しで429が出やすいため5秒以上空ける */
+const MIN_ARXIV_GAP_MS = Number(process.env.ARXIV_MIN_GAP_MS ?? 5_000);
+let lastArxivRequestAt = 0;
+
 function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
+
+async function waitForArxivRateLimitSlot(): Promise<void> {
+  const elapsed = Date.now() - lastArxivRequestAt;
+  if (elapsed < MIN_ARXIV_GAP_MS) {
+    await sleep(MIN_ARXIV_GAP_MS - elapsed);
+  }
+  lastArxivRequestAt = Date.now();
+}
+
+export type FetchArxivOptions = {
+  /** true のとき 429 等で最終失敗しても空配列を返す（fetch 全体を止めない） */
+  softFail?: boolean;
+  maxAttempts?: number;
+};
 
 /** arXiv が 429 で返す Retry-After（秒数 or HTTP日付）をミリ秒に */
 function parseRetryAfterMs(response: Response): number | null {
@@ -95,7 +115,8 @@ export async function fetchArxivPapersSince(
   categories: string[],
   since: Date,
   maxResults = 100,
-  now: Date = new Date()
+  now: Date = new Date(),
+  options: FetchArxivOptions = {}
 ): Promise<ArxivPaper[]> {
   const query = buildCategoryQuery(categories);
   const url = new URL(ARXIV_API_URL);
@@ -105,42 +126,48 @@ export async function fetchArxivPapersSince(
   url.searchParams.set("start", "0");
   url.searchParams.set("max_results", String(maxResults));
 
-  /** 公式推奨に近づける: 初回の前に少し空ける（429が出やすい環境向け） */
-  const defaultCooldown = process.env.CI ? 0 : 12_000;
-  const cooldownMs = Number(process.env.ARXIV_COOLDOWN_MS ?? defaultCooldown);
-  if (Number.isFinite(cooldownMs) && cooldownMs > 0) {
-    await sleep(cooldownMs);
-  }
+  await waitForArxivRateLimitSlot();
 
-  const maxAttempts = 8;
+  const maxAttempts = options.maxAttempts ?? Number(process.env.ARXIV_MAX_ATTEMPTS ?? 4);
   let xml = "";
 
   for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
     const response = await fetch(url.toString(), {
       headers: {
         "User-Agent":
-          "agri-econ-papers/0.1 (https://github.com; respectful arXiv API use)",
+          "agri-econ-papers/0.1 (mailto:research@local; respectful arXiv API use)",
       },
     });
 
-    /** 429 に加え、混雑時の 502/503 も再試行（Wi‑Fi切替直後などで出やすい） */
+    /** 429 に加え、混雑時の 502/503 も再試行 */
     const retryable = [429, 502, 503, 504, 408].includes(response.status);
     if (retryable) {
       const fromHeader = response.status === 429 ? parseRetryAfterMs(response) : null;
-      const exponential = Math.min(180_000, 15_000 * 2 ** (attempt - 1));
-      const waitMs = Math.min(600_000, Math.max(fromHeader ?? 0, exponential, 10_000));
+      const exponential = Math.min(45_000, 8_000 * 2 ** (attempt - 1));
+      const waitMs = Math.min(90_000, Math.max(fromHeader ?? 0, exponential, 5_000));
       console.warn(
         `arXiv ${response.status}: ${Math.round(waitMs / 1000)}秒待ってから再試行 (${attempt}/${maxAttempts})`
       );
       if (attempt === maxAttempts) {
-        throw new Error(`arXiv API error: ${response.status} after ${maxAttempts} attempts`);
+        const msg = `arXiv API error: ${response.status} after ${maxAttempts} attempts`;
+        if (options.softFail) {
+          console.warn(`${msg} — 今回の arXiv 取得はスキップします。`);
+          return [];
+        }
+        throw new Error(msg);
       }
       await sleep(waitMs);
+      lastArxivRequestAt = Date.now();
       continue;
     }
 
     if (!response.ok) {
-      throw new Error(`arXiv API error: ${response.status} ${response.statusText}`);
+      const msg = `arXiv API error: ${response.status} ${response.statusText}`;
+      if (options.softFail) {
+        console.warn(`${msg} — 今回の arXiv 取得はスキップします。`);
+        return [];
+      }
+      throw new Error(msg);
     }
 
     xml = await response.text();

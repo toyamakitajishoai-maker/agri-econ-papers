@@ -1,3 +1,5 @@
+import GlossaryList from "@/components/GlossaryList";
+import GlossaryText from "@/components/GlossaryText";
 import InsightCallout from "@/components/InsightCallout";
 import KeyFigureBlock from "@/components/KeyFigureBlock";
 import PredictionQuiz from "@/components/PredictionQuiz";
@@ -6,7 +8,7 @@ import RelatedPapers from "@/components/RelatedPapers";
 import SourceLinks from "@/components/SourceLinks";
 import StickyReadCta from "@/components/StickyReadCta";
 import SummaryBlock from "@/components/SummaryBlock";
-import TrustIndicator from "@/components/TrustIndicator";
+import StudyLimitations from "@/components/StudyLimitations";
 import { buildEditorialView } from "@/lib/editorial";
 import type { Paper } from "@/lib/types";
 
@@ -19,6 +21,7 @@ type ReadingPageProps = {
 export default function ReadingPage({ paper, date, siblings }: ReadingPageProps) {
   const view = buildEditorialView(paper);
   const { sections } = view;
+  const glossary = paper.glossary ?? [];
 
   return (
     <>
@@ -34,33 +37,53 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
         <div id="read-body" className="space-y-10 sm:space-y-12">
           {paper.quiz ? <PredictionQuiz quiz={paper.quiz} /> : null}
 
-          {paper.evidence ? <TrustIndicator evidence={paper.evidence} /> : null}
+          {glossary.length > 0 ? <GlossaryList terms={glossary} /> : null}
+
+          {paper.limitations?.trim() ? <StudyLimitations text={paper.limitations} /> : null}
 
           <SummaryBlock title="まずここだけ" variant="lead">
             <ul className="space-y-3">
               {view.threeLineSummary.map((line, i) => (
-                <li key={`sum-${i}`}>{line}</li>
+                <li key={`sum-${i}`}>
+                  <GlossaryText text={line} glossary={glossary} />
+                </li>
               ))}
             </ul>
           </SummaryBlock>
 
           {sections.gist && sections.gist !== view.threeLineSummary.join("") ? (
             <SummaryBlock title="背景">
-              <p className="whitespace-pre-line">{sections.gist}</p>
+              <p>
+                <GlossaryText text={sections.gist} glossary={glossary} />
+              </p>
             </SummaryBlock>
           ) : null}
 
-          <InsightCallout label="この研究の面白さ">{view.insight || sections.novelty}</InsightCallout>
+          <InsightCallout label="この研究の面白さ">
+            <GlossaryText text={view.insight || sections.novelty} glossary={glossary} />
+          </InsightCallout>
 
           {sections.method ? (
             <SummaryBlock title="どうやって確かめた？">
-              <p className="whitespace-pre-line">{sections.method}</p>
+              <p>
+                <GlossaryText text={sections.method} glossary={glossary} />
+              </p>
             </SummaryBlock>
           ) : null}
 
           {sections.results ? (
             <SummaryBlock title="わかったこと">
-              <p className="whitespace-pre-line">{sections.results}</p>
+              <p>
+                <GlossaryText text={sections.results} glossary={glossary} />
+              </p>
+            </SummaryBlock>
+          ) : null}
+
+          {sections.why?.trim() ? (
+            <SummaryBlock title="なぜそうなるのか">
+              <p>
+                <GlossaryText text={sections.why} glossary={glossary} />
+              </p>
             </SummaryBlock>
           ) : null}
 

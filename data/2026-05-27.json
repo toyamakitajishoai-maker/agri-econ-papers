@@ -2,508 +2,488 @@
   "date": "2026-05-27",
   "papers": [
     {
-      "id": "2605.23959",
-      "title": "When Alpha Disappears: A One-Switch Benchmark for Decision-Time Leakage in Financial Backtests",
-      "authors": [],
-      "publishedAt": "2026-05-26T04:00:00.000Z",
-      "url": "https://arxiv.org/abs/2605.23959",
-      "pdfUrl": "https://arxiv.org/pdf/2605.23959.pdf",
-      "categories": [
-        "topic:labor",
-        "労働・雇用",
-        "q-fin.RM",
-        "q-fin.TR"
+      "id": "2605.27265v1",
+      "title": "Quantifying Social Inflation in Liability Insurance with Advanced Statistical Methods",
+      "authors": [
+        "Tsz Chai Fung",
+        "Lie Ma",
+        "Liang Peng",
+        "Fang Yang"
       ],
-      "abstract": "We introduce When Alpha Disappears, a paired evaluation benchmark for diagnosing decision-time leakage in financial machine-learning backtests. Rather than treating leakage as a binary property, the benchmark estimates protocol-induced inflation by toggling one evaluation convention at a time around a clean $t{+}1$-open reference, while holding the data panel, walk-forward split, model family, horizon, portfolio rule, and cost convention fixed. Across two daily-OHLCV equity panels, six model families, and yearly tests from 2016--2024, we find that inflation is highly selective: centered temporal features and same-day-open execution with post-open daily-bar information cause large and stable increases in both predictive and trading metrics, whereas global normalization, future-informed graph structure, and same-day-close execution are weak in most settings. The benchmark is diagnostic rather than a claim of tradable alpha, and is intended to make evaluation assumptions, failure modes, and protocol fragility directly measurable.",
+      "publishedAt": "2026-05-26T16:42:07Z",
+      "url": "https://arxiv.org/abs/2605.27265v1",
+      "pdfUrl": "https://arxiv.org/pdf/2605.27265v1.pdf",
+      "categories": [
+        "topic:trade",
+        "貿易・国際経済",
+        "econ.GN",
+        "stat.AP",
+        "stat.ME"
+      ],
+      "abstract": "Social inflation, which is the rise in liability claim costs beyond general economic inflation, has become a major concern for insurers and reinsurers, yet it is difficult to quantify because litigation outcomes are heavy-tailed and the mix of cases reaching verdict versus settlement changes over time. Using a large database of US jury verdicts and settlements, we develop case-mix-adjusted social inflation measures through multiple channels that matter to reinsurers: plaintiff win rates (a frequency-type channel), settlement propensity (a frequency-type channel), and verdict/settlement severity. The approach combines rolling-window logistic regression for probabilities and quantile (value-at-risk) regression for severities, with uncertainty quantified via a random-weighted bootstrap. We find statistically significant relative increases in plaintiff win probability of approximately 20%-30% from 2009 to 2024, alongside a statistically significant relative decline in settlement probability of more than 10% over the same period. The dominant channel is verdict severity: Even after controlling for explanatory variables, verdict awards show a sharp rise after 2020, increasing by more than 100% from 2020 to 2024, whereas settlement amounts show limited and often statistically insignificant inflation. Therefore, inflation in total amounts payable to plaintiffs closely tracks verdict severity. Social inflation is more pronounced in corporate-defendant and uninsured-defendant cases and in states without tort caps or third-party litigation funding regulation. In addition, we find that social inflation has impacts not only on \"nuclear verdicts\" but also, in a similar manner, on moderate losses.",
       "summary": {
-        "gist": "本論文は、金融機械学習のバックテストにおいて、意思決定時リーケージを診断するための評価ベンチマーク「When Alpha Disappears」を提案しています。このベンチマークは、一つずつ評価ルールを切り替えることで、プロトコルに起因するパフォーマンスの過大評価を定量的に測定し、特定のプロトコル違反が予測および取引指標に大きな影響を与えることを明らかにしました。",
-        "novelty": "従来の研究がリーケージの存在を指摘するに留まっていたのに対し、本研究は「ワン・スイッチ・ベンチマーク」という独自の手法を導入することで、バックテストのどのプロトコル違反が、どの程度のパフォーマンス過大評価を引き起こすのかを制御された形で特定できる点が新規性です。これにより、データ、モデル、ポートフォリオルールなどを固定した上で、個々のプロトコル違反の限界効果を測定し、評価プロトコルの脆弱性を直接的に測定可能にしました。",
-        "method": "本研究は、2016年から2024年までの期間を対象に、米国および中国の大型株市場のOHLCV（始値、高値、安値、終値、出来高）日次データパネルを使用しています。分析手法としては、クリーンなt+1日始値参照プロトコルを基準とし、時間的特徴、正規化範囲、グラフ構造、約定タイミングに関する5つのプロトコル違反を一つずつ切り替える「ワン・スイッチ・ベンチマーク」を適用しました。これにより、各プロトコル違反が予測指標と取引指標に与える影響を、ペア比較による「リーケージ・ゲイン」として測定しています。",
-        "results": "分析の結果、バックテストのパフォーマンス過大評価は選択的であることが判明しました。特に、中心化された時間的特徴（TEMP_CENTER）や、当日の始値約定にもかかわらず当日終値後の日足情報を使用する（EXEC_OPEN）といったプロトコル違反は、予測指標と取引指標の両方において、大きく安定した増加を引き起こすことが示されています。一方で、グローバルな正規化（NORM_GLOBAL）や将来情報を含むグラフ構造（STRUCT_GRAPH）、当日の終値約定（EXEC_CLOSE）は、ほとんどの状況で影響が小さいことが明らかになりました。このベンチマークは取引可能なアルファの主張ではなく、評価仮定、失敗モード、プロトコル脆弱性を直接測定することを目的としています。",
-        "why": "中心化された時間的特徴がパフォーマンスを過大評価するのは、意思決定時点では利用できない将来の情報を特徴量構築に含めてしまうためです。同様に、当日始値約定にもかかわらず当日終値後の情報を使用するケースも、約定時点では知り得ない情報を利用しているため、モデルが見せかけの予測能力を発揮してしまいます。これらのプロトコル違反は、モデルが「未来を覗き見」することを許してしまうため、実際の取引では再現不可能な過度に楽観的な結果を生み出すのです。",
-        "figures": "Figure 1は「同じ分割でも異なる情報セット」というタイトルで、時系列順の分割だけでは、シグナル情報セットと想定される約定時間が意思決定時に有効であるとは限らないことを示しています。クリーンなパイプラインとリーケージのあるパイプラインが、同じ訓練/テスト分割を使用しながらも、異なる情報セットに依存している様子を対比的に図示しています。Figure 2は「制御されたベンチマーク設計」と題され、各ペアにおいてデータパネル、分割、モデルファミリー、予測期間、ポートフォリオルール、コスト設定、メトリックが固定され、一つのプロトコルルールのみが切り替えられることを示しています。リーケージ・ゲインは、リーケージのあるバリアントとクリーンな参照プロトコルとのペア差として定義されています。"
+        "gist": "本論文は、賠償責任保険における「社会的インフレ」を定量化し、その主要な要因が評決額の急増にあることを明らかにしました。特に2020年以降、評決額が100%以上増加しており、これが保険金総額のインフレを牽引していると結論付けています。",
+        "novelty": "従来の研究が社会的インフレの存在や要因を概括的に示していたのに対し、本研究は、訴訟の種類や特性の変化（ケースミックス）を調整した上で、勝訴率、和解傾向、評決額、和解額という複数の経路を通じて社会的インフレを定量的に測定した点が新規性です。特に、線形回帰では捉えきれない、重い裾を持つ損失分布の「テール」部分の変動を、分位点回帰を用いて詳細に分析している点が画期的です。",
+        "method": "本研究は、米国の陪審評決および和解に関する大規模データベース「VerdictSearch」を使用し、2009年から2024年までのデータを分析しています。分析手法としては、原告勝訴確率と和解確率にはローリングウィンドウロジスティック回帰を、評決額と和解額の深刻度には分位点（VaR）回帰を組み合わせて用いています。さらに、ランダム加重ブートストラップ法を用いて不確実性を定量化し、ケースミックス調整済みの社会的インフレ指標（年次社会的インフレ率および累積社会的インフレ指数）を算出しています。",
+        "results": "分析の結果、2009年から2024年にかけて、原告の勝訴確率は約20%〜30%の相対的な統計的に有意な増加を示し、和解確率は同時期に10%以上の相対的な統計的に有意な減少を示しました。最も支配的な要因は評決額の深刻度であり、説明変数を調整した後でも、評決額は2020年以降に急激に上昇し、2020年から2024年で100%以上増加しています。一方で、和解額のインフレは限定的で、統計的に有意でない場合が多いです。社会的インフレは、企業が被告となるケースや無保険の被告が関わるケース、そして不法行為の損害賠償上限がない州や第三者訴訟資金提供の規制がない州でより顕著に見られます。また、いわゆる「核評決」だけでなく、中程度の損失にも同様の影響があることが判明しました。",
+        "why": "評決額が急増する背景には、陪審員の視点の変化、訴訟資金提供の拡大、原告側の弁護士の高度化、そして高額評決の常態化といった構造的変化が影響していると考えられます。これらの要因が複合的に作用し、原告に有利な法的結果が増加し、特に陪審員による評決額が大幅に上昇することで、保険会社が支払う総額が経済インフレを上回るペースで増加しているのです。和解が減少し、評決に至るケースが増えることも、高額な評決が社会全体に与える影響を増幅させている要因の一つと言えます。",
+        "figures": "アブストラクトには具体的な図表番号の記述はありませんが、研究の主要な結果として、ケースミックス調整を行わない「単純な」時系列データと、ケースミックス調整を行った「ヘッドライン」および「残差」の社会的インフレ指標を比較した図表（Table ES.2およびFigure 49）が存在すると推測されます。これらの図表は、調整を行わない場合と比較して、ケースミックス調整が社会的インフレの過大評価を防ぐ上で重要であることを示していると考えられます。"
       },
       "source": "arxiv",
-      "journal": "arXiv（プレプリント / q-fin.RM）",
-      "field": "労働・雇用",
-      "titleJa": "金融バックテストにおける意思決定時リーケージ診断のためのワン・スイッチ・ベンチマーク「When Alpha Disappears」",
-      "catchTitle": "金融AIの過剰評価を防げ！",
-      "hook": "金融市場の予測モデル評価で、見せかけの好成績を生む「リーケージ」を特定する新手法が登場しました。",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "貿易・国際経済",
+      "titleJa": "先進統計手法を用いた賠償責任保険における社会的インフレの定量化",
+      "catchTitle": "保険料高騰の謎を解く？ 米国の「社会的インフレ」を徹底解明",
+      "hook": "賠償責任保険の支払いコストが経済インフレを超えて上昇する「社会的インフレ」のメカニズムを、最新の研究が明らかにしています。",
       "quiz": {
-        "question": "金融バックテストにおいて、見せかけの好成績（リーケージ）を引き起こしやすいのは次のうちどれでしょうか？",
+        "question": "賠償責任保険の「社会的インフレ」の主な原因として、この論文が最も強調しているのは次のうちどれでしょうか？",
         "options": [
-          "意思決定時点では利用できない将来の情報を特徴量に含めること",
-          "過去のデータのみを用いて特徴量を正規化すること",
-          "モデルの訓練とテストで異なるデータセットを使用すること"
+          "陪審評決額の急激な増加です",
+          "和解件数の増加です",
+          "原告の勝訴確率の低下です"
         ],
         "correctIndex": 0,
-        "explanation": "意思決定時点では利用できない将来の情報を特徴量に含めることは、モデルが未来を「覗き見」することになり、実際の取引では再現不可能な過度に楽観的な結果を生み出すためです。これは「意思決定時リーケージ」の一種です。"
+        "explanation": "論文では、2020年以降の評決額が100%以上増加し、これが保険金総額のインフレを牽引していると明確に述べています。和解件数はむしろ減少傾向にあります。"
+      },
+      "limitations": "本研究は、VerdictSearchデータベースが訴訟されたケースの結果を扱っているため、原告勝訴や和解傾向のチャネルは、訴訟結果（条件付き）確率として解釈されるべきであり、根本的な事故/請求発生プロセスは捉えていません。また、既存研究の限界として、ケースミックスの時間的変化を十分に考慮していない点や、損失分布のテール部分の進化を線形回帰では直接扱えない点、不確実性の定量化が限定的である点などが挙げられています。",
+      "glossary": [
+        {
+          "term": "社会的インフレ",
+          "definition": "賠償責任保険の請求費用が、一般的な経済インフレ率を超えて上昇する現象です。訴訟の増加や原告に有利な判決などが原因とされます。",
+          "reading": "Social inflation"
+        },
+        {
+          "term": "重い裾（ヘビーテール）",
+          "definition": "確率分布において、平均から大きく離れた値（極端な値）が発生する確率が、正規分布などの他の分布よりも高い特性を指します。保険分野では、巨額の損失が発生する可能性を示唆します。",
+          "reading": "heavy-tailed"
+        },
+        {
+          "term": "ケースミックス",
+          "definition": "分析対象となる訴訟や請求の構成要素（種類、特性、管轄区域など）の組み合わせや割合を指します。これが時間とともに変化すると、見かけ上のインフレを引き起こすことがあります。",
+          "reading": "case-mix"
+        },
+        {
+          "term": "ローリングウィンドウロジスティック回帰",
+          "definition": "一定期間のデータを区切りながら、その期間内でロジスティック回帰分析を繰り返し行う手法です。時間の経過に伴う関係性の変化を捉えるのに役立ちます。",
+          "reading": "rolling-window logistic regression"
+        },
+        {
+          "term": "分位点（VaR）回帰",
+          "definition": "データの平均値ではなく、特定の分位点（例えば上位10%や中央値）における関係性を分析する回帰手法です。特に損失の極端な部分（テール）の変動を理解するのに有効です。",
+          "reading": "quantile (value-at-risk) regression"
+        },
+        {
+          "term": "ランダム加重ブートストラップ",
+          "definition": "統計的推定量の不確実性を評価するためのリサンプリング手法の一つです。元のデータからランダムに重み付けされたサンプルを繰り返し作成し、推定量の分布を推定します。",
+          "reading": "random-weighted bootstrap"
+        },
+        {
+          "term": "核評決",
+          "definition": "賠償責任訴訟において、非常に高額な損害賠償額が命じられる評決を指します。保険業界では特に注目される現象です。",
+          "reading": "nuclear verdicts"
+        },
+        {
+          "term": "第三者訴訟資金提供",
+          "definition": "訴訟当事者ではない第三者が、訴訟費用を肩代わりする代わりに、勝訴した場合の賠償金の一部を受け取る制度です。訴訟件数や高額化に影響を与える可能性があります。",
+          "reading": "third-party litigation funding (TPLF)"
+        }
+      ]
+    },
+    {
+      "id": "2605.27202v1",
+      "title": "Queue &amp; AI: When Faster Tasks Slow Down the Workflow",
+      "authors": [
+        "Silvia Bartolucci",
+        "Pierpaolo Vivo"
+      ],
+      "publishedAt": "2026-05-26T15:57:41Z",
+      "url": "https://arxiv.org/abs/2605.27202v1",
+      "pdfUrl": "https://arxiv.org/pdf/2605.27202v1.pdf",
+      "categories": [
+        "topic:urban",
+        "都市・地域",
+        "cs.CY",
+        "cond-mat.stat-mech",
+        "physics.soc-ph"
+      ],
+      "abstract": "Quantifying the workplace productivity effects of Generative Artificial Intelligence is now central to economics, management, and public policy. The deployment of AI tools in customer service, writing, software development, and consulting operations has been reported to generate large per-task productivity gains, typically measured as tasks completed per worker-hour or reductions in mean handle time. We argue that such mean-based metrics can misrepresent AI's effects in workflows where tasks accumulate and compete for scarce human attention. AI assistance can generate a deceptive productivity signature: average completion times fall because AI tools typically supply a fast first draft, yet workflow-level performance deteriorates when a subset of AI errors escapes review and returns as costly downstream rework. We call this divergence between mean task speed and system-level delay the variance wedge. Depending on the operational parameters, the most time-efficient way to complete a workflow may undergo a transition between two task-processing regimes, a fully AI-assisted and a fully manual one. We formalize the mechanism as a queueing model and derive two main implications analytically. First, under congestion, reviewers rationally raise the risk threshold for checking AI outputs, reducing scrutiny precisely when it would matter the most. Second, AI assistance can stabilize an overloaded workflow only when (i) the fraction of tasks handled by AI exceeds a critical threshold, and (ii) the human attention required for review and expected rework is lower than the attention for manual completion, a requirement substantially more stringent than faster draft generation. These results suggest that AI deployment should be evaluated not only by average task speed, but by its overall effects on congestion, rework, and the robustness of human oversight under load.",
+      "summary": {
+        "gist": "本研究は、生成AIが個々のタスク処理を高速化する一方で、ワークフロー全体ではかえって遅延を引き起こす「分散のくさび（variance wedge）」効果を明らかにしています。これは、AIが生成する成果物のエラーがレビューをすり抜け、後工程での手戻り作業として発生することで、人間の注意資源が枯渇し、システム全体の待ち時間が増加するためです。",
+        "novelty": "従来の研究がAIによる平均的なタスク処理速度の向上に焦点を当てていたのに対し、本研究はタスクが蓄積し、人間の限られた注意資源を奪い合うワークフロー全体への影響を、キューイングモデルを用いて分析しています。特に、AIが平均処理時間を短縮する一方で、エラーによる手戻り作業が「重い裾野（heavy tail）」を持つサービス時間分布を生み出し、システム全体の待ち時間を増加させるメカニズムを理論的に解明した点が新規性です。",
+        "method": "本研究は、タスクが人間の限られた注意資源を奪い合う単一サーバーキューイングシステムとして組織をモデル化しています。タスクは到着率λで到着し、手動処理またはAI支援処理のいずれかに確率的にルーティングされます。AI支援処理では、AIが初期ドラフトを生成し、人間がレビューしますが、エラーがすり抜けた場合は手戻り作業が発生します。このメカニズムをキューイング理論のPollaczek–KhinchineおよびKingmanフレームワークを用いて定式化し、平均待ち時間Wqの閉形式表現を導出することで、分析的に主要な含意を導き出しています。",
+        "results": "分析結果は主に2点です。第一に、ワークフローが混雑している状況では、レビュー担当者はAI出力のチェックに対するリスク閾値を合理的に引き上げ、最も重要な場面で精査を減らす傾向があることを示しています。第二に、AI支援が過負荷のワークフローを安定させるのは、AIが処理するタスクの割合が臨界閾値を超え、かつレビューと予想される手戻り作業に必要な人間の注意が、手動処理に必要な注意よりも少ない場合に限られることを明らかにしています。これは、単にドラフト生成が速いだけでは不十分であり、AI導入は平均的なタスク速度だけでなく、混雑、手戻り、および負荷がかかった状態での人間の監視の堅牢性という全体的な影響によって評価されるべきであることを示唆しています。",
+        "why": "AIがタスクを高速化してもワークフロー全体が遅くなるのは、主に「手戻り作業」と「人間の注意資源の枯渇」というメカニズムによるものです。AIは迅速に初稿を生成しますが、その中に含まれるエラーが人間のレビューをすり抜けると、後工程で修正が必要な「手戻り作業」が発生します。この手戻り作業は予測不能で時間のかかることが多く、個々のタスク処理の平均時間を短縮しても、全体のサービス時間分布に「重い裾野」を生み出します。結果として、タスクがキューに滞留し、人間の限られた注意資源がレビューと手戻り作業に分散されるため、システム全体の待ち時間が増加し、生産性が低下してしまうのです。",
+        "figures": "Figure 1は、手動ルートとAI支援ルートのワークフローモデルを模式的に示しています。パネルAは手動ルートで、平均処理時間は長いものの変動性が低いことを表しています。パネルBはAI支援ルートで、AIが安価にドラフトを生成しますが、人間のレビューが不完全なためエラーが手戻り作業として戻る可能性があり、平均処理時間は低いものの「重い裾野」を持つ分布となることを示しています。パネルCは、AIが平均サービス時間を短縮しても、変動性が増大することでキューの遅延が長くなる可能性、すなわち「分散のくさび」効果を視覚的に説明しています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.CY）",
+      "field": "都市・地域",
+      "titleJa": "AIとキュー：タスクの高速化がワークフローを遅らせる時",
+      "catchTitle": "AIでタスクは速くても、全体は遅くなる？",
+      "hook": "AI導入で個々のタスクは高速化しても、組織全体の生産性が低下する可能性を、キューイングモデルを用いて解明しています。",
+      "quiz": {
+        "question": "AIを導入して個々のタスク処理が速くなると、組織全体の仕事の待ち時間はどうなることが多いでしょうか？",
+        "options": [
+          "かえって長くなることがある",
+          "必ず短くなる",
+          "変わらない"
+        ],
+        "correctIndex": 0,
+        "explanation": "AIが生成する成果物のエラーがレビューをすり抜け、後工程での手戻り作業として発生すると、システム全体の待ち時間が増加することがあります。"
+      },
+      "limitations": "本研究のモデルは、組織を単一サーバーキューイングシステムとして抽象化しており、サーバーが作業を処理する能力Cを単一の集約されたチーム能力として扱っている点が簡略化されています。また、モデルは特定のAIアーキテクチャやベンダーシステムに依存しない汎用的なものであり、ベンチマーク結果がモデルパラメータに直接対応しない可能性があります。例えば、ベンチマークはタスクの正確性や事実性を単独で測定するのに対し、モデルの数量はレビュー時間、レビュー後の残存エラー確率、エラーによって生成される手戻り作業といったワークフローレベルのオブジェクトです。",
+      "glossary": [
+        {
+          "term": "生成AI",
+          "definition": "文章や画像、コードなどを自律的に生成できる人工知能の一種です。人間が与えた指示（プロンプト）に基づいて、新しいコンテンツを作り出します。",
+          "reading": "Generative Artificial Intelligence"
+        },
+        {
+          "term": "キューイングモデル",
+          "definition": "顧客（タスク）がサービスを受けるために列（キュー）に並ぶシステムを数学的に分析するモデルです。待ち時間やシステムの混雑度を予測するのに使われます。",
+          "reading": "Queueing Model"
+        },
+        {
+          "term": "分散のくさび（variance wedge）",
+          "definition": "AIが平均的なタスク処理速度を向上させる一方で、エラーによる手戻り作業の変動性が増大することで、ワークフロー全体の待ち時間が長くなる現象を指します。"
+        },
+        {
+          "term": "手戻り作業",
+          "definition": "一度完了したと見なされた作業が、後工程での問題発覚により再度修正ややり直しが必要になることです。AIが生成した成果物のエラーが原因で発生することがあります。",
+          "reading": "rework"
+        },
+        {
+          "term": "重い裾野（heavy tail）",
+          "definition": "確率分布において、平均値から遠く離れた極端な値（外れ値）が発生する確率が、正規分布などに比べて高い状態を指します。AIによる手戻り作業が予測不能な長時間を要する場合に生じます。"
+        },
+        {
+          "term": "Pollaczek–Khinchineフレームワーク",
+          "definition": "キューイング理論におけるM/G/1キューの平均待ち時間などを導出するための数学的な枠組みです。到着間隔が指数分布に従い、サービス時間分布が一般的な分布に従う単一サーバーキューを扱います。",
+          "reading": "Pollaczek–Khinchine framework"
+        },
+        {
+          "term": "Kingmanフレームワーク",
+          "definition": "キューイング理論において、M/G/1キューの平均待ち時間を近似するキングマンの公式を提供する枠組みです。システムの利用率とサービス時間の変動性が待ち時間に与える影響を示します。",
+          "reading": "Kingman framework"
+        },
+        {
+          "term": "サービス時間分布",
+          "definition": "タスクがサービスを受けるのにかかる時間の確率分布です。AI導入により、平均は短縮されても、手戻り作業によって極端に長い時間がかかる確率が増え、「重い裾野」を持つことがあります。",
+          "reading": "service time distribution"
+        }
+      ],
+      "keyFigure": {
+        "imagePath": "/figures/2605.27202v1_results.png",
+        "page": 8,
+        "caption": "AIと手動処理における平均待ち時間の変化を示しています。",
+        "label": "Figure 4. Mean waiting time under manual (WH) and AI-routed (WA) handling as the arrival rate λ varies. The curves are c",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-05-27T02:53:29.177Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2605.27202v1_results.png",
+          "page": 8,
+          "caption": "AIと手動処理における平均待ち時間の変化を示しています。",
+          "label": "Figure 4. Mean waiting time under manual (WH) and AI-routed (WA) handling as the arrival rate λ varies. The curves are c",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-05-27T02:53:29.177Z"
+        },
+        {
+          "imagePath": "/figures/2605.27202v1_why.png",
+          "page": 6,
+          "caption": "手動とAI処理におけるサービス時間分布のシミュレーション結果を示しています。",
+          "label": "Figure 2. Simulated service-time distributions for manual and AI-routed handling. Manual service time is drawn from a po",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-05-27T02:53:29.177Z"
+        }
+      ]
+    },
+    {
+      "id": "2605.27274v1",
+      "title": "The Structural Case for the Eco-Civilization Paradigm",
+      "authors": [
+        "Lei Zhu",
+        "William Zhu"
+      ],
+      "publishedAt": "2026-05-26T16:52:19Z",
+      "url": "https://arxiv.org/abs/2605.27274v1",
+      "pdfUrl": "https://arxiv.org/pdf/2605.27274v1.pdf",
+      "categories": [
+        "topic:urban",
+        "都市・地域",
+        "physics.soc-ph"
+      ],
+      "abstract": "This paper establishes a quantitative and structural framework for civilizational continuity under rapid, non-linear ecological transitions. Utilizing empirical data on Earth's Energy Imbalance (EEI), currently measured at 1.36 W/m^2, we demonstrate that the planetary system is on a deterministic trajectory toward a new ecological equilibrium, breaching the 1.5 degrees C thermodynamic threshold in less than 6.5 years. We show that mitigating direct anthropogenic waste heat emissions is statistically insufficient, as 35/36-ths of the annual energy imbalance stems from atmospheric radiative forcing rather than localized thermal output. Consequently, preserving legacy centralized socioeconomic frameworks is unfeasible. We present the structural case for the \"Eco-Civilization Paradigm\" -- a decentralized network of autonomous, modular eco-communities engineered to insulate core life-support functions, localized energy networks, and edge computation from cascading macro-system failures. Finally, we outline the systemic requirements for this transition, including the realignment of asset valuation frameworks from geography-dependent to engineering-dependent metrics, the mobilization of youth-driven innovation capital, and the strategic reallocation of global industrial manufacturing capacity to safeguard civilizational survival.",
+      "summary": {
+        "gist": "本論文は、地球のエネルギー不均衡（EEI）が急速に進行し、現在のペースでは6.5年以内に地球温暖化の1.5℃閾値を超えることを定量的に示しています。この状況下で、既存の中央集権型社会経済システムは維持不可能であり、自律分散型の「エコ文明パラダイム」への移行が人類文明存続のために不可欠であると提唱しています。",
+        "novelty": "本研究は、地球のエネルギー不均衡に関する最新の経験的データを用いて、惑星システムが不可逆的な生態学的均衡へと向かっていることを定量的に示し、従来の直接的な人為的熱排出削減策が統計的に不十分であることを明らかにしました。これにより、気候変動に対する適応策として、中央集権型社会の限界を指摘し、分散型エココミュニティという新たな構造的解決策を提示することで、研究の空白を埋めています。",
+        "method": "本研究は、地球のエネルギー不均衡（EEI）に関する経験的データ、具体的には現在のEEIが1.36 W/m²であるという測定値を用いています。このデータに基づき、地球が1.5℃の熱力学的閾値を6.5年以内に超えるという決定論的な軌道にあることを示しています。また、人為的な直接廃熱排出が年間エネルギー不均衡の1/36に過ぎず、残りの35/36が放射強制力に起因するという定量的な分析結果を用いて、既存の緩和策の限界を明らかにしています。",
+        "results": "分析の結果、地球のエネルギー不均衡は現在1.36 W/m²であり、これにより年間約2.19 × 10^22ジュールもの廃熱が蓄積されていることが示されました。このペースでは、地球は6.5年以内に1.5℃の熱力学的閾値を超え、不可逆的な惑星システムの変化を引き起こす可能性が高いと予測されています。さらに、人為的な直接廃熱排出量の削減だけでは、年間エネルギー不均衡のわずか1/36しか対応できず、残りの35/36は放射強制力に由来するため、既存の緩和策は統計的に不十分であることが判明しました。このため、既存の中央集権型社会経済フレームワークの維持は不可能であり、中核的な生命維持機能、地域化されたエネルギーネットワーク、エッジコンピューティングをマクロシステムの連鎖的障害から隔離する、自律分散型の「エコ文明パラダイム」への移行が不可欠であると結論付けられています。",
+        "why": "地球のエネルギー不均衡の主要因は、人為的な直接廃熱ではなく、大気中の放射強制力による太陽エネルギーの閉じ込めであるため、局所的な熱排出削減だけでは地球規模の温暖化を食い止めるには不十分です。既存の中央集権型社会は、食料生産、エネルギー供給、データ処理が集中型ハブに依存しているため、生態系の変動に直面すると、連鎖的なシステム障害のリスクが高まります。これに対し、分散型エココミュニティは、食料生産、エネルギー生成、計算資源といった中核的な生命維持機能をグローバルな流通ネットワークから切り離すことで、局所的な障害が全体に波及するのを防ぎ、システム全体の安定性を維持できるため、人類文明の存続に不可欠であると説明されています。",
+        "figures": "アブストラクトに図表の記述なし"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.soc-ph）",
+      "field": "都市・地域",
+      "titleJa": "エコ文明パラダイムの構造的根拠：熱力学的限界とシステム適応",
+      "catchTitle": "地球は6.5年で限界突破？新文明への移行が必須",
+      "hook": "地球のエネルギー不均衡が加速する中、既存の社会システムでは人類の存続は困難であると、本研究は警鐘を鳴らしています。",
+      "quiz": {
+        "question": "本論文によると、地球温暖化の1.5℃閾値を超えるまでの残された期間は、およそ何年と予測されていますか？",
+        "options": [
+          "6.5年未満",
+          "10年未満",
+          "20年未満"
+        ],
+        "correctIndex": 0,
+        "explanation": "論文では、現在の地球のエネルギー不均衡のデータに基づき、1.5℃の熱力学的閾値を6.5年以内に超えるという予測が示されています。"
       },
       "limitations": "",
       "glossary": [
         {
-          "term": "バックテスト",
-          "definition": "金融取引戦略や予測モデルが、過去の市場データでどれくらいの性能を発揮したかをシミュレーションで検証することです。これにより、将来のパフォーマンスを推測します。",
-          "reading": "Backtest"
+          "term": "地球のエネルギー不均衡（EEI）",
+          "definition": "地球が太陽から受け取るエネルギーと、宇宙へ放出するエネルギーの差のことです。この不均衡が大きいほど、地球に熱が蓄積され、温暖化が進行します。",
+          "reading": "Earth’s Energy Imbalance"
         },
         {
-          "term": "リーケージ",
-          "definition": "機械学習モデルの評価において、本来利用できないはずの将来の情報やテストデータからの情報が、誤ってモデルの訓練や評価に漏れ出し、性能が過大に評価されてしまう現象です。",
-          "reading": "Leakage"
+          "term": "1.5℃熱力学的閾値",
+          "definition": "産業革命前と比較した世界の平均気温上昇を1.5℃に抑えるという、パリ協定で定められた目標です。これを超えると、気候変動による影響がさらに深刻化すると考えられています。",
+          "reading": "1.5 degrees C thermodynamic threshold"
         },
         {
-          "term": "ワン・スイッチ・ベンチマーク",
-          "definition": "複数の評価条件のうち、一度に一つの条件だけを変更して、その変更が結果にどのような影響を与えるかを測定する比較評価手法です。これにより、特定の要因の効果を分離して分析できます。",
-          "reading": "One-Switch Benchmark"
+          "term": "放射強制力",
+          "definition": "地球の気候システムにおいて、大気中の温室効果ガスなどの変化が、地球のエネルギー収支に与える影響の度合いを示す指標です。これが正の値だと、地球は暖まる方向に作用します。",
+          "reading": "atmospheric radiative forcing"
         },
         {
-          "term": "OHLCV",
-          "definition": "株式などの金融商品の日中の価格変動を示すデータ形式で、始値（Open）、高値（High）、安値（Low）、終値（Close）、出来高（Volume）の頭文字を取ったものです。",
-          "reading": "Open-High-Low-Close-Volume"
+          "term": "エコ文明パラダイム",
+          "definition": "急速な生態学的変化に対応するため、分散型で自律的なモジュール式エココミュニティのネットワークを基盤とする、新しい文明のあり方を指します。生命維持機能やエネルギーネットワークなどを地域内で完結させることを目指します。",
+          "reading": "Eco-Civilization Paradigm"
         },
         {
-          "term": "時系列順の分離",
-          "definition": "過去のデータでモデルを訓練し、それ以降の将来のデータで評価するという、時間的な順序を厳守したデータ分割方法です。金融バックテストの基本的なルールです。",
-          "reading": "Chronological Separation"
+          "term": "エッジコンピューティング",
+          "definition": "データ処理を中央のデータセンターではなく、データが発生する場所（エッジ）に近いデバイスやサーバーで行う技術です。これにより、通信遅延の削減やセキュリティの向上が期待されます。",
+          "reading": "edge computation"
         },
         {
-          "term": "意思決定時セマンティクス",
-          "definition": "金融取引の意思決定を行う時点において、モデルが利用できる情報が、実際にその時点で入手可能であった情報のみに限定されていることを指す原則です。これに違反するとリーケージが発生します。",
-          "reading": "Decision-Time Semantics"
+          "term": "資産評価フレームワーク",
+          "definition": "不動産や金融商品などの資産の価値を評価するための基準や仕組みのことです。本論文では、地理的要因から工学的要因へと評価基準を転換する必要性が述べられています。",
+          "reading": "asset valuation frameworks"
         },
         {
-          "term": "リーケージ・ゲイン",
-          "definition": "リーケージを引き起こすプロトコル違反を適用した場合の評価指標と、クリーンな（リーケージのない）参照プロトコルを適用した場合の評価指標との差です。これにより、リーケージによるパフォーマンスの過大評価の度合いを測定します。",
-          "reading": "Leakage Gain"
+          "term": "モジュール性",
+          "definition": "システム全体が独立した小さな部品（モジュール）で構成されている特性です。これにより、一部に障害が発生しても全体への影響を抑え、システムの回復力を高めることができます。",
+          "reading": "modularity"
         },
         {
-          "term": "アルファ",
-          "definition": "市場全体の動き（ベータ）では説明できない、投資戦略やポートフォリオが市場平均を上回って稼ぎ出した超過収益のことです。投資家の腕前や戦略の優位性を示す指標とされます。",
-          "reading": "Alpha"
-        }
-      ],
-      "keyFigure": {
-        "imagePath": "/figures/2605.23959_results.png",
-        "page": 8,
-        "caption": "プロトコル違反が予測指標と取引指標に与える影響をモデルと市場の多様性で示しています。",
-        "label": "Figure 4: Model and market heterogeneity. Left: U.S. mean LG-SR@5bps by protocol variant for",
-        "source": "pdf-image",
-        "purpose": "results",
-        "extractedAt": "2026-05-27T02:45:25.809Z"
-      },
-      "keyFigures": [
-        {
-          "imagePath": "/figures/2605.23959_results.png",
-          "page": 8,
-          "caption": "プロトコル違反が予測指標と取引指標に与える影響をモデルと市場の多様性で示しています。",
-          "label": "Figure 4: Model and market heterogeneity. Left: U.S. mean LG-SR@5bps by protocol variant for",
-          "source": "pdf-image",
-          "purpose": "results",
-          "extractedAt": "2026-05-27T02:45:25.809Z"
-        },
-        {
-          "imagePath": "/figures/2605.23959_why.png",
-          "page": 9,
-          "caption": "EXEC_OPENプロトコル違反がリッジモデルの年間パフォーマンスに与える影響を示しています。",
-          "label": "Figure 5: Yearly LG-SR@5bps for Ridge under EXEC_OPEN. The positive effect is not concentrated",
-          "source": "pdf-image",
-          "purpose": "why",
-          "extractedAt": "2026-05-27T02:45:25.816Z"
+          "term": "座礁資産",
+          "definition": "環境規制の強化や市場の変化などにより、価値が大幅に下落したり、利用できなくなったりする可能性のある資産のことです。特に化石燃料関連資産や、気候変動の影響を受けやすいインフラなどが該当します。",
+          "reading": "stranded assets"
         }
       ]
     },
     {
-      "id": "2605.24730",
-      "title": "Private Languages",
-      "authors": [],
-      "publishedAt": "2026-05-26T04:00:00.000Z",
-      "url": "https://arxiv.org/abs/2605.24730",
-      "pdfUrl": "https://arxiv.org/pdf/2605.24730.pdf",
-      "categories": [
-        "topic:labor",
-        "労働・雇用",
-        "econ.TH",
-        "q-fin.GN"
-      ],
-      "abstract": "Strategic communication often relies on anchors observed by the sender but not by the receiver. An analyst may report against a proprietary valuation model, an auditor against an internal score, a manager against an accounting estimate, or an institution against its own standard. I study a sender-receiver game in which reports are costly to move away from such privately observed anchors. Anchor heterogeneity changes the geometry of communication. Rather than relying on partitions, privately anchored reporting generates continuous variation in messages because different senders find different reports costly to make. This mechanism can improve information transmission, but it can also pull reports toward noisy private anchors. I show that (i) small positive reporting costs can make communication approach full revelation, even though zero costs return the model to cheap talk, (ii) uninformative anchors can transmit information through strategic distortions. Anchored reports and cheap-talk messages can coexist as endogenous hard and soft information, but cheap-talk alone is preferred by all parties under sufficiently low misalignment, explaining why organizations may rely exclusively on informal channels.",
-      "summary": {
-        "gist": "本研究は、送り手が私的に観測する「アンカー（基準）」から報告が乖離する際にコストが発生する戦略的コミュニケーションゲームを分析し、アンカーの異質性が情報伝達の幾何学を変え、情報伝達を改善する可能性と、ノイズの多い私的アンカーに報告が引きずられる可能性の両方があることを明らかにしています。",
-        "novelty": "従来の研究が、報告コストの基準を客観的な状態や共通の知識に置いていたのに対し、本研究は送り手が私的に観測する「アンカー」を報告コストの基準とすることで、固定された状態に対して報告コストが送り手間で異なるという新たなメカニズムを導入しています。これにより、連続的なメッセージのバリエーションが生じ、従来のパーティションに基づく情報伝達モデルや、境界でキンクが生じるモデルとは異なる、内部の連続的なコミュニケーション領域を提示している点が新規性です。",
-        "method": "本研究は、送り手と受け手の2者からなる戦略的コミュニケーションゲームをモデル化しています。送り手は、報酬に関連する状態θと私的なアンカーbを観測し、受け手は報告rを観測して行動aを選択します。送り手は受け手の行動に加えて、報告rが私的アンカーbから乖離する際に直接的なコストD(r,b)を負担します。このモデルでは、受け手の行動が報告に対して連続的かつ単調に変化する「正則均衡」に焦点を当て、送り手の最適報告が私的アンカーと連続的に変化する幾何学的分析を用いています。具体的な分析手法としては、送り手の一次条件とベイズの法則を用いて、状態とアンカーの分布から受け手の行動を決定するメカニズムを解明しています。",
-        "results": "分析の結果、以下の3つの主要な知見が得られました。第一に、報告コストがゼロの場合には「チープトーク」モデルに回帰し情報伝達はパーティション形式になりますが、ごくわずかな正の報告コストが存在するだけで、コミュニケーションがほぼ完全な情報開示に近づく可能性があることが示されました。これは、送り手が報告を誇張することでアンカーからのノイズをフィルタリングするためです。第二に、情報を持たないアンカーであっても、戦略的な歪みを通じて情報を伝達できることが明らかになりました。異なる状態では受け手の行動を動かすことによる限界利益が異なるため、同じアンカーから異なる量だけ報告が歪められるためです。第三に、定量的報告と定性的報告のチャネルが共存しうることを示し、送り手と受け手の利害の不一致が中程度の場合にはハイブリッド型が純粋な形式よりも優位ですが、不一致が十分に低い場合には純粋なチープトークが両者にとって厳密に好ましいことが判明しました。これは、組織がなぜ非公式なチャネルにのみ依存するのかを説明しています。",
-        "why": "報告コストがゼロからわずかに正になるだけで情報伝達が劇的に改善するのは、送り手がアンカーから報告を乖離させるコストを負うことで、報告に「重み」が生じるためです。これにより、送り手は戦略的に報告を調整し、アンカーに含まれるノイズをフィルタリングしながら、状態に関する情報をより正確に伝えるインセンティブが生まれます。また、情報を持たないアンカーでも情報が伝達されるのは、送り手が受け手の行動を動かすことによる限界的な利益が状態によって異なるため、同じアンカーからでも状態に応じて報告を異なる量だけ歪ませるからです。この戦略的な歪みが、アンカー自体が情報を持たなくても、間接的に状態に関する情報を受け手に伝える役割を果たします。",
-        "figures": "アブストラクトに図表の記述なし"
-      },
-      "source": "arxiv",
-      "journal": "arXiv（プレプリント / econ.TH）",
-      "field": "労働・雇用",
-      "titleJa": "プライベートな基準を持つ報告が戦略的コミュニケーションに与える影響",
-      "catchTitle": "社内基準が情報伝達を変える？",
-      "hook": "企業や組織が内部の評価基準に基づいて報告を行う際、その「プライベートな基準」が情報伝達の質をどのように左右するのかを解明しています。",
-      "quiz": {
-        "question": "送り手が私的な基準（アンカー）に基づいて報告する状況で、報告コストがごくわずかに存在する場合、情報伝達はどうなるでしょうか？",
-        "options": [
-          "ほぼ完全な情報開示に近づく",
-          "情報伝達は全く行われない",
-          "情報伝達の質は変わらない"
-        ],
-        "correctIndex": 0,
-        "explanation": "本研究では、ごくわずかな正の報告コストが存在するだけで、コミュニケーションがほぼ完全な情報開示に近づく可能性があると示されています。これは、送り手が報告を誇張することでアンカーからのノイズをフィルタリングするためです。"
-      },
-      "limitations": "本研究では、送り手が報告段階でアンカーを私的に観測していると仮定し、アンカーがどのように形成されるか（例：予測者がモデル仕様を選択する、監査人がスコアを決定するインプットを選択するなど）については、報告段階以前の段階としてモデルの範囲外としています。また、分析は受け手の反応が報告に対して連続的かつ単調に変化する「正則均衡」に限定されており、他の種類の均衡については検討されていません。",
-      "glossary": [
-        {
-          "term": "アンカー",
-          "definition": "送り手が報告を行う際に、その報告の基準となる私的な内部情報や評価基準のことです。例えば、会計上の見積もりや内部のチェックリストなどがこれに当たります。"
-        },
-        {
-          "term": "チープトーク",
-          "definition": "送り手がメッセージを送る際に、そのメッセージ自体に直接的なコストがかからないコミュニケーションのことです。メッセージの信頼性は、送り手と受け手の利害の一致度合いに依存します。",
-          "reading": "Cheap Talk"
-        },
-        {
-          "term": "差の差分析（DID）",
-          "definition": "政策や介入の効果を測定する統計的手法です。介入を受けたグループと受けていないグループを比較し、さらに介入前後の変化を比較することで、介入の純粋な効果を推定します。",
-          "reading": "Difference-in-Differences"
-        },
-        {
-          "term": "パーティション",
-          "definition": "チープトークモデルにおいて、送り手が状態空間をいくつかの区間に分割し、各区間の状態に対して同じメッセージを送ることで情報を伝達する均衡のことです。"
-        },
-        {
-          "term": "正則均衡",
-          "definition": "送り手の報告と受け手の行動が連続的かつ単調に変化する、安定したコミュニケーションのパターンを指します。これにより、小さなメッセージの変化が極端な結果を招かない、より予測可能な情報伝達が実現します。",
-          "reading": "Regular Equilibrium"
-        },
-        {
-          "term": "単峰性",
-          "definition": "データや関数の分布が、一つのピーク（最も頻繁に現れる値）を持つ性質のことです。この論文では、報告コスト関数がアンカーからの乖離が最小となる一点で最小値を持つことを指します。"
-        },
-        {
-          "term": "プロビット回帰",
-          "definition": "被説明変数が2値（はい/いいえ、成功/失敗など）である場合に用いられる統計的分析手法です。説明変数が被説明変数の確率にどのように影響するかを分析します。",
-          "reading": "Probit Regression"
-        },
-        {
-          "term": "戦略的歪み",
-          "definition": "送り手が自身の利益を最大化するために、客観的な事実や私的なアンカーから意図的に報告をずらす行為のことです。これにより、情報が不正確になることもありますが、特定の状況下では情報伝達を改善する可能性もあります。",
-          "reading": "Strategic Distortion"
-        }
-      ]
-    },
-    {
-      "id": "W7162344109",
-      "title": "How Financial Resilience Affects the Strategic Choices of Enterprises During Economic Downturns — a Trade-Off Analysis Based on Expansion and Contraction",
+      "id": "2605.27200v1",
+      "title": "Topological Signatures of Imperial Stress: Persistent Homology of the Eastern Mediterranean Trade Network, 0--400 CE",
       "authors": [
-        "Ruize Gao"
+        "Jose de Jesus Bernal Alvarado",
+        "David Delepine",
+        "Carlos Pinedo Guadarrama"
       ],
-      "publishedAt": "2026-05-25T12:00:00.000Z",
-      "url": "https://doi.org/10.54254/2754-1169/2026.33844",
-      "pdfUrl": "https://aemps.ewapub.com/article/view/33844.pdf",
-      "categories": [
-        "topic:trade",
-        "貿易・国際経済",
-        "openalex",
-        "Divestment",
-        "Financial crisis",
-        "Cash flow",
-        "Finance"
-      ],
-      "abstract": "This paper focuses on the strategic choice dilemma faced by enterprises during economic downturns - expansion or contraction. This article establishes an analytical framework of financial resilience-industry cyclicality, which suggests that financial resilience fundamentally delineates strategic boundaries: the combination of a company's low financial resilience and the industry's high cyclicality often leads to companies choosing to contract in a pro-cyclical manner; The combination of high financial resilience of enterprises and low cyclicality of industries will make counter-cyclical expansion more feasible. Through the comparison and analysis of cases in the new energy and real estate industries, it is found that successful expansion relies on three key factors: cash flow safety cushion, financing availability, and disciplined investment rhythm control; while the success or failure of contraction depends on structural divestment and retention of core organizational capabilities. For enterprises with moderate resilience, a hybrid strategic posture is recommended, entailing prudent expansion in core domains alongside flexible contraction in peripheral operations, simultaneously emphasizing cash flow management, comprehensive risk control mechanisms, and long-term resilience-construction initiatives to ensure sustainable competitive positioning throughout economic cycles.",
-      "summary": {
-        "gist": "本論文は、経済の低迷期に企業が直面する「拡大」か「縮小」かという戦略的ジレンマに対し、企業の財務レジリエンスと業界の景気循環性が戦略の境界線を決定するという分析フレームワークを提示しています。成功する戦略は、企業の財務状況と業界特性に適合していることが重要であると結論付けています。",
-        "novelty": "従来の研究が景気後退期の企業の行動記述に留まり、その動機や財務レジリエンスとの関連性を十分に解明していなかった点に対し、本研究は財務レジリエンスと業界の景気循環性という二つの側面を統合した分析フレームワークを構築し、戦略的選択の根本的な理由を体系的に説明しています。また、単なる拡大・縮小の対立ではなく、両者を組み合わせたハイブリッド戦略の可能性も探求している点が新規性です。",
-        "method": "本研究は、財務レジリエンスと業界の景気循環性という理論的視点に基づき、景気後退期における企業の戦略的選択を分析する説明フレームワークを構築しています。新エネルギー産業と不動産産業のケーススタディを比較分析することで、理論的枠組みの妥当性を検証し、拡大戦略と縮小戦略の成功要因を具体的に特定しています。具体的なデータセットや調査期間、計量経済学的なモデルの名称はアブストラクトには明記されていません。",
-        "results": "分析の結果、企業の財務レジリエンスが低い場合や業界の景気循環性が高い場合は、景気循環に沿った縮小戦略が選択されやすいことが示されています。一方で、財務レジリエンスが高く、業界の景気循環性が低い企業は、景気循環に逆行した拡大戦略がより実現可能であると判明しました。成功する拡大戦略には、キャッシュフローの安全確保、資金調達の容易さ、規律ある投資リズムの管理が不可欠であり、縮小戦略の成否は、構造的な事業売却と中核組織能力の維持にかかっています。中程度のレジリエンスを持つ企業には、中核事業での慎重な拡大と周辺事業での柔軟な縮小を組み合わせたハイブリッド戦略が推奨されています。",
-        "why": "企業が景気後退期に拡大または縮小の戦略を選択する背景には、主にその企業の「財務レジリエンス」と「業界の景気循環性」が密接に関係しています。財務レジリエンスが高い企業は、十分なキャッシュフローや資金調達能力、リスク許容度を持つため、景気低迷期でも投資を継続し、競合他社が撤退する中で市場シェアを拡大したり、低コストで戦略的資産を買収したりすることが可能になります。一方、財務レジリエンスが低い企業は、資金繰りの悪化や外部資金調達の困難に直面しやすいため、リスクを回避し、生き残りを優先して事業を縮小せざるを得ないのです。業界の景気循環性も重要で、需要変動の大きい業界では、財務的な余裕がなければ拡大は困難であり、安定した業界であれば拡大の機会を捉えやすくなります。",
-        "figures": "アブストラクトに図表の記述なし"
-      },
-      "doi": "10.54254/2754-1169/2026.33844",
-      "source": "openalex",
-      "journal": "Advances in Economics Management and Political Sciences",
-      "field": "貿易・国際経済",
-      "titleJa": "景気後退期における企業の戦略的選択と財務レジリエンス：拡大と縮小のトレードオフ分析",
-      "catchTitle": "不況期の企業戦略、拡大か縮小か？",
-      "hook": "経済が低迷する中、企業が生き残るための戦略的選択は、財務の強靭さと業界の特性によって決まることを明らかにしています。",
-      "quiz": {
-        "question": "経済が低迷する時期、企業が「拡大」戦略を成功させるために最も重要な要素は何でしょうか？",
-        "options": [
-          "十分なキャッシュフロー、資金調達の容易さ、規律ある投資リズムの管理",
-          "政府からの補助金と規制緩和",
-          "競合他社の事業撤退を待つこと"
-        ],
-        "correctIndex": 0,
-        "explanation": "論文では、成功する拡大戦略にはキャッシュフローの安全確保、資金調達の容易さ、規律ある投資リズムの管理という3つの主要因が不可欠であると述べています。"
-      },
-      "limitations": "本研究の限界として、既存研究が企業の戦略的行動の動機を深く掘り下げていない点、景気循環に沿った縮小と逆行した拡大を単純に対立させている点、そして業界の違いが企業の戦略的選択に与える影響が十分に探求されていない点が挙げられています。これらの限界を克服するため、本研究では財務レジリエンスと業界の景気循環性を統合した分析フレームワークを構築しています。",
-      "glossary": [
-        {
-          "term": "財務レジリエンス",
-          "definition": "企業が経済的なショックや不況に直面した際に、その影響を吸収し、事業活動を継続できる能力のことです。キャッシュフローの健全性、負債構造、資金調達のしやすさ、リスク管理能力などに現れます。",
-          "reading": "Financial Resilience"
-        },
-        {
-          "term": "景気循環性",
-          "definition": "特定の産業や経済活動が、景気変動（好況・不況）の影響をどの程度受けるかを示す性質です。景気循環性が高い産業は、景気変動に応じて需要や収益が大きく変動します。",
-          "reading": "Cyclicality"
-        },
-        {
-          "term": "プロシクリカル戦略",
-          "definition": "景気循環と同じ方向に沿って事業活動を調整する戦略です。景気後退期には投資や規模を縮小し、好況期には拡大する傾向があります。",
-          "reading": "Pro-cyclical Strategy"
-        },
-        {
-          "term": "カウンターシクリカル戦略",
-          "definition": "景気循環とは逆の方向に事業活動を行う戦略です。景気後退期にこそ、低コストで資源を獲得したり、市場シェアを拡大したりするために投資を維持・増加させます。",
-          "reading": "Counter-cyclical Strategy"
-        },
-        {
-          "term": "キャッシュフロー安全確保",
-          "definition": "企業が予期せぬ支出や収益の減少に備えて、十分な現預金や流動資産を確保しておくことです。これにより、短期的な運転資金の不足や流動性危機を回避できます。",
-          "reading": "Cash Flow Safety Cushion"
-        },
-        {
-          "term": "資金調達の容易さ",
-          "definition": "企業が銀行からの融資や株式発行など、外部から必要な資金をどれだけスムーズかつ有利な条件で調達できるかを示す度合いです。財務状況が良いほど容易になります。",
-          "reading": "Financing Availability"
-        },
-        {
-          "term": "構造的な事業売却",
-          "definition": "企業の事業ポートフォリオ全体を見直し、中核ではない事業や収益性の低い事業を売却することです。これにより、経営資源を集中させ、財務体質を改善します。",
-          "reading": "Structural Divestment"
-        },
-        {
-          "term": "中核組織能力",
-          "definition": "企業が競争優位性を確立し、持続的に成長するために不可欠な、独自の技術、知識、プロセス、人材などの強みです。景気後退期でもこれを維持することが重要です。",
-          "reading": "Core Organizational Capabilities"
-        }
-      ]
-    },
-    {
-      "id": "2605.23924",
-      "title": "Improving the Completeness and Comparability of Segment Disclosures: A Large Language Model Approach",
-      "authors": [],
-      "publishedAt": "2026-05-26T04:00:00.000Z",
-      "url": "https://arxiv.org/abs/2605.23924",
-      "pdfUrl": "https://arxiv.org/pdf/2605.23924.pdf",
-      "categories": [
-        "topic:labor",
-        "労働・雇用",
-        "cs.CL",
-        "cs.IR",
-        "q-fin.GN"
-      ],
-      "abstract": "Segment-level disclosures are a central component of financial reporting, providing insight into firms' internal organization and the allocation of economic activities across operating units. However, segment information is often presented in both qualitative and quantitative forms, dispersed across tables and narrative sections of Form 10-K filings. Empirical research relying on structured databases faces both completeness and comparability challenges, as some firm-year observations may be missing, nested segment disclosures are not captured, and support for longitudinal and cross-firm comparability is limited. This study develops a large language model-based framework to extract segment disclosures directly from Form 10-K filings and to preserve both reportable and nested segment information. We further design a retrieval augmented system that incorporates information across multiple filings to support comparability. We use two representative settings to demonstrate its application: longitudinal analysis within a firm to interpret segment changes over time, and cross firm alignment of geographic segments across firms with different reporting structures. The results indicate that the artifact accurately extracts segment-level information and effectively addresses questions that require cross-period knowledge, demonstrating the potential of LLM-based approaches to enhance the measurement and interpretation of segment disclosures.",
-      "summary": {
-        "gist": "本研究は、企業の年次報告書（Form 10-K）からセグメント開示情報を直接抽出し、その完全性と比較可能性を向上させるための大規模言語モデル（LLM）ベースのフレームワークを開発しました。このアプローチにより、従来の構造化データベースでは困難だった、企業内の時系列変化や企業間の比較分析が可能になることを示しています。",
-        "novelty": "従来の構造化データベースが抱えるセグメント開示情報の不完全性や比較可能性の課題に対し、LLMを応用することで、定性的・定量的な情報が散在する複雑な開示文書から、報告対象およびネストされたセグメント情報を階層構造を保ったまま抽出できる点が新規性です。また、複数の報告書からの情報を統合し、企業間の比較を可能にする検索拡張システムを設計した点も、これまでの研究にはないアプローチです。",
-        "method": "本研究は、企業のForm 10-K filingsからセグメント開示情報を直接抽出するLLMベースのフレームワークを開発しました。このフレームワークは、報告対象セグメントとネストされた開示の両方を回復するファイルに根ざした抽出手順と、複数のファイリングにわたる情報を組み込む検索拡張コンポーネントで構成されています。その応用例として、企業内の時系列分析によるセグメント変化の解釈と、異なる報告構造を持つ企業間の地理的セグメントの比較という2つの代表的な設定を用いて、その有効性を実証しています。",
-        "results": "開発されたLLMベースのフレームワークは、セグメントレベルの情報を正確に抽出し、複数期間にわたる知識を必要とする問いに効果的に対応できることが示されました。具体的には、企業内のセグメント変更を特定し、その経済的理由を要約し、現在のセグメント構造を過去の年度とリンクさせることが可能です。また、異なる集計レベルを使用する同業他社の地理的セグメント開示を比較する際にも、文脈情報を用いて名称、集計、報告構造の違いを調整できることが示されています。これにより、LLMベースのアプローチがセグメント開示の測定と解釈を強化する可能性が実証されました。",
-        "why": "LLMがセグメント開示の完全性と比較可能性を向上させるのは、従来のルールベースや伝統的な自然言語処理手法では困難だった、非構造化テキストからの情報抽出と文脈理解に優れているためです。LLMは、文書内の異なる部分に分散した情報を関連付け、多様な表現や提示形式を解釈する能力を持っています。これにより、ナラティブな説明と表形式の情報を統合し、企業や期間によって大きく異なる開示スタイルに対応できるため、より網羅的で比較可能なセグメントデータが構築できるのです。",
-        "figures": "アブストラクトに図表の記述なし"
-      },
-      "source": "arxiv",
-      "journal": "arXiv（プレプリント / cs.CL）",
-      "field": "労働・雇用",
-      "titleJa": "セグメント開示の完全性と比較可能性の向上：大規模言語モデルによるアプローチ",
-      "catchTitle": "LLMが企業財務報告をどう変える？",
-      "hook": "大規模言語モデル（LLM）を活用することで、企業のセグメント開示情報の抽出と解釈が、より正確かつ比較可能になる可能性を提示しています。",
-      "quiz": {
-        "question": "大規模言語モデル（LLM）は、企業のセグメント開示情報のどのような課題解決に役立つでしょうか？",
-        "options": [
-          "情報の不完全性と企業間の比較困難性",
-          "財務諸表の誤字脱字の修正",
-          "株価予測の精度向上"
-        ],
-        "correctIndex": 0,
-        "explanation": "LLMは、従来の構造化データベースでは捉えきれなかった、散在するセグメント情報を網羅的に抽出し、異なる報告形式を持つ企業間の比較を可能にすることで、情報の不完全性と比較困難性という課題を解決します。"
-      },
-      "limitations": "本研究の限界として、セクション6で将来の研究課題とともに議論されているものの、具体的な内容はPDF抜粋からは読み取れませんでした。",
-      "glossary": [
-        {
-          "term": "セグメント開示",
-          "definition": "企業が事業活動を複数の部門（セグメント）に分けて、それぞれの部門の売上高、利益、資産などの財務情報を公開することです。投資家が企業の多様な事業内容を理解し、リスクを評価するために重要な情報となります。",
-          "reading": "Segment disclosure"
-        },
-        {
-          "term": "Form 10-K",
-          "definition": "米国証券取引委員会（SEC）に上場している企業が毎年提出を義務付けられている年次報告書です。企業の財務状況、事業内容、リスク要因などが詳細に記載されています。",
-          "reading": "フォームテンケー"
-        },
-        {
-          "term": "大規模言語モデル（LLM）",
-          "definition": "大量のテキストデータを学習し、人間のような自然な言葉を理解し、生成できるAIモデルです。文章の要約、翻訳、質問応答など、幅広いタスクに活用されます。",
-          "reading": "Large Language Model"
-        },
-        {
-          "term": "構造化データベース",
-          "definition": "あらかじめ定義された形式（表形式など）に従ってデータが整理・格納されているデータベースです。検索や分析が容易ですが、非定型な情報を取り込むのが苦手な場合があります。",
-          "reading": "Structured database"
-        },
-        {
-          "term": "ネストされたセグメント開示",
-          "definition": "主要な事業セグメントの中に、さらに詳細な小区分（サブセグメント）の情報が含まれている開示のことです。階層的な事業構造を反映した情報提供を指します。",
-          "reading": "Nested segment disclosures"
-        },
-        {
-          "term": "検索拡張システム",
-          "definition": "大規模言語モデルが、外部のデータベースや文書から関連情報を検索・取得し、それを基に回答や生成を行うシステムです。モデルの知識を補完し、より正確な情報を提供できます。",
-          "reading": "Retrieval augmented system"
-        },
-        {
-          "term": "管理アプローチ",
-          "definition": "企業が内部で経営判断や資源配分に用いているセグメント区分に基づいて、外部にもその情報を開示する会計基準の考え方です。企業の実際の事業運営を反映した情報提供を目指します。",
-          "reading": "Management approach"
-        },
-        {
-          "term": "XBRL",
-          "definition": "財務報告書を電子的に作成・交換するための国際標準言語です。財務データの項目にタグ付けすることで、機械が情報を自動的に読み取り、分析しやすくなります。",
-          "reading": "eXtensible Business Reporting Language"
-        }
-      ],
-      "keyFigure": {
-        "imagePath": "/figures/2605.23924_results.jpeg",
-        "page": 34,
-        "caption": "Adobe社の2024年度セグメント開示情報を示しており、LLMが正確に情報を抽出できることを裏付けています。",
-        "label": "Figure 2: Adobe Inc Segment Disclosure for FY2024",
-        "source": "pdf-image",
-        "purpose": "results",
-        "extractedAt": "2026-05-27T02:45:38.110Z"
-      },
-      "keyFigures": [
-        {
-          "imagePath": "/figures/2605.23924_results.jpeg",
-          "page": 34,
-          "caption": "Adobe社の2024年度セグメント開示情報を示しており、LLMが正確に情報を抽出できることを裏付けています。",
-          "label": "Figure 2: Adobe Inc Segment Disclosure for FY2024",
-          "source": "pdf-image",
-          "purpose": "results",
-          "extractedAt": "2026-05-27T02:45:38.110Z"
-        },
-        {
-          "imagePath": "/figures/2605.23924_why.jpeg",
-          "page": 35,
-          "caption": "LLMを活用したセグメント開示情報抽出のワークフローを示しており、LLMのメカニズムを説明しています。",
-          "label": "Figure 3: LLM Assisted Segment Disclosure Extraction Workflow",
-          "source": "pdf-image",
-          "purpose": "why",
-          "extractedAt": "2026-05-27T02:45:38.112Z"
-        }
-      ]
-    },
-    {
-      "id": "W7162192206",
-      "title": "Constructing Connectivity, Building Trust: The Evolving Dynamics of China-Bangladesh Relations",
-      "authors": [
-        "Mohammad Fakhrus Salam",
-        "Md. Fahim Ahmed"
-      ],
-      "publishedAt": "2026-05-23T12:00:00.000Z",
-      "url": "https://doi.org/10.53451/ijps.1841597",
-      "pdfUrl": "https://dergipark.org.tr/en/download/article-file/5504546",
+      "publishedAt": "2026-05-26T15:54:09Z",
+      "url": "https://arxiv.org/abs/2605.27200v1",
+      "pdfUrl": "https://arxiv.org/pdf/2605.27200v1.pdf",
       "categories": [
         "topic:urban",
         "都市・地域",
-        "openalex",
-        "Geopolitics",
-        "Agency (philosophy)",
-        "General partnership",
-        "China"
+        "physics.soc-ph"
       ],
-      "abstract": "This study examines how regional connectivity has become a pivotal force shaping the economic trajectory of emerging states, with Bangladesh standing at a particularly consequential crossroads. As global and regional powers invest in new corridors, ports, and transport networks, connectivity is no longer merely an infrastructural matter it is a political and developmental choice that influences how nations imagine their futures. China’s involvement, however, is deeply intertwined with its broader geopolitical ambitions, making the Sino-Bangladesh partnership both economically promising and strategically complex. Major projects such as the Padma Bridge and the Karnaphuli Tunnel exemplify the tangible benefits of BRI-linked investments, yet they also underscore the evolving geopolitical landscape in South Asia. This study, grounded in extensive secondary research, critically examines the dual nature of China’s engagement in Bangladesh balancing economic cooperation with strategic calculation. It explores key questions: What are the competing strategic interests of China and India in Bangladesh? Is China a reliable strategic ally or merely a transactional partner? The research assesses both the opportunities and risks embedded in BRI participation and outlines potential strategies for Bangladesh to assert its agency while avoiding overdependence on any single geopolitical actor. The study concludes by advocating for a nuanced, pragmatic foreign policy that prioritizes national interest and long-term sustainability in regional connectivity efforts.",
+      "abstract": "We apply persistent homology to the ORBIS Geospatial Network Model of the Roman World in order to quantify the structural resilience of the Eastern Mediterranean trade network between 0 and 400 ce. The network is represented as a weighted transport system whose edges correspond to road, maritime, and riverine routes, each carrying a base cost derived from the ORBIS cost model. To introduce historical dynamics into this static spatial infrastructure, we construct a differential friction model in which edge weights vary by decade and by transport mode according to documented historical perturbations, including epidemic mortality, civil war, military pressure, administrative reorganisation, and imperial reunification. For each decadal snapshot, we compute all-pairs shortest-path distances on the active sub-network and construct a Vietoris--Rips filtration using an adaptive threshold defined by the 90th percentile of finite pairwise distances. The resulting betti number ($β_1$) persistent entropy time series identifies three structurally distinct phases in the Eastern Mediterranean network. Phase~I, from 0 to 200 ce, is a stationary high-redundancy regime consistent with the commercial integration of the early imperial and Antonine periods. Phase~II, from 210 to 280ce, corresponds to recoverable stress during the Crisis of the Third Century: betti number ($β_1$) entropy declines during the crisis but returns to the Phase~I baseline following Aurelianic reunification. Phase~III, from 290 to 400 ce, is qualitatively different: cycle redundancy declines monotonically and does not recover. The main contribution of this study is to show that persistent homology detects a dimension of imperial stress that is not reducible to single economic, military, or political indicators.",
       "summary": {
-        "gist": "本研究は、中国の「一帯一路」構想（BRI）におけるバングラデシュとの関係が、単なる経済的協力だけでなく、地政学的な戦略的計算と開発協力の二面性を持つことを明らかにしています。バングラデシュは、中国への過度な依存を避けつつ、国益を最大化するための多角的な外交政策を維持していると結論付けています。",
-        "novelty": "本研究は、中国とバングラデシュの関係を、これまでの研究で主流だった「依存」や「同盟」といった単純な枠組みではなく、地域大国間の競争によって形成される「交渉された開発パートナーシップ」として再構築している点が新規性です。これにより、バングラデシュがBRIへの関与において主体性を保持している可能性を示唆しています。",
-        "method": "本研究は、2013年から2025年までの中国とバングラデシュの関係を対象に、質的調査デザインと内容分析を採用しています。中国政府のホワイトペーパー、バングラデシュ外務省の戦略文書、シンクタンクの報告書、貿易報告書、学術論文など、約52の多様な二次資料を分析の基礎としています。分析戦略としては、戦略的競争、経済的相互依存、開発主体性、地域安全保障という4つの分析次元に基づいたテーマコーディングを行い、リアリズム、リベラル制度主義、開発国家理論を統合した多角的な視点から解釈しています。",
-        "results": "分析の結果、パドマ橋鉄道リンクやカルナフリトンネルといったインフラプロジェクトは、バングラデシュの連結性と経済成長に貢献する一方で、より広範なインド太平洋地域の戦略的競争の中にバングラデシュを組み込んでいることが判明しました。貿易の非対称性が拡大しているにもかかわらず、バングラデシュは中国、インド、欧米諸国との関係を均衡させ、実用的で多角的な外交政策を維持しています。本研究は、バングラデシュが財政規律、制度的能力、戦略的中立性を維持する限り、BRIへの関与において主体性を保持できると主張しています。",
-        "why": "中国のBRI投資がバングラデシュの経済成長と連結性を促進する一方で、地政学的な複雑さを生むのは、中国が経済的利益だけでなく、インド太平洋地域での戦略的影響力拡大も意図しているためです。バングラデシュが主体性を維持できるのは、単一の大国に過度に依存せず、中国、インド、欧米諸国との関係をバランス良く保つ「多角的な外交政策」を巧みに展開しているからです。これにより、バングラデシュは自国の国益を最大化しつつ、外部からの影響力を分散させていると考えられます。",
-        "figures": "アブストラクトに図表の記述なし"
+        "gist": "本研究は、持続的ホモロジーという数学的手法を用いて、0年から400年にわたる東地中海貿易ネットワークの構造的レジリエンスを定量的に分析しました。その結果、ネットワークは3つの異なるフェーズを経ており、特に3世紀の危機は回復可能であったものの、その後の4世紀には回復不能な構造的劣化が生じていたことを明らかにしています。",
+        "novelty": "従来の研究がローマ帝国の衰退を単一の経済的、軍事的、または政治的指標で説明しようとしてきたのに対し、本研究は持続的ホモロジーを適用することで、ネットワークの「サイクル冗長性」という新たな次元から帝国のストレスを検出しました。これにより、ストレスがどのようにシステム全体に伝播し、回復能力を失わせるのかという、因果構造の解明に貢献しています。",
+        "method": "本研究では、ローマ世界のORBIS地理空間ネットワークモデルを基盤とし、東地中海地域の623の集落ノードと2,208の経路を対象に分析を行いました。0年から400年までの各10年ごとのスナップショットを作成し、疫病、内戦、軍事的圧力、行政再編、帝国再統一といった歴史的変動に応じて経路のコストが変化する「差動摩擦モデル」を適用しています。その後、アクティブなサブネットワークの全ペア最短経路距離を計算し、適応閾値を用いたヴィエトリス-リップス濾過によってベッチ数（β1）の持続エントロピー時系列を算出しました。",
+        "results": "分析の結果、東地中海ネットワークは3つの構造的に異なるフェーズを経たことが判明しました。フェーズI（0〜200年）は、商業統合が進んだ高冗長性の安定期です。フェーズII（210〜280年）は、3世紀の危機に対応する回復可能なストレス期であり、ベッチ数（β1）エントロピーは一時的に低下するものの、アウレリアヌスの再統一後にフェーズIの水準に回復しました。しかし、フェーズIII（290〜400年）では、サイクル冗長性が単調に減少し、回復が見られませんでした。これは、政治的な再統一がネットワークの構造的冗長性を回復させなかったことを示唆しており、3世紀の危機が最終的な破綻ではなく、その後の回復不能な構造的単純化がより重要であったことを示しています。",
+        "why": "ネットワークのサイクル冗長性は、代替経路の存在を示します。多くのサイクルを持つネットワークは、一部の経路が寸断されても他の経路で迂回できるため、回復力が高まります。3世紀の危機では、一時的にサイクル多様性が失われたものの、基盤となる接続性は維持され、政治的再統一によって回復しました。しかし、フェーズIIIではサイクル冗長性が持続的に低下し、ネットワークが構造的に単純化されたため、システムが障害を吸収し、自己修復する能力が失われたと考えられます。これは、政治的な安定だけでは、失われたネットワークの回復能力を取り戻せなかったことを意味します。",
+        "figures": "アブストラクトには図表の記述なし"
       },
-      "doi": "10.53451/ijps.1841597",
-      "source": "openalex",
-      "journal": "International Journal of Politics and Security",
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.soc-ph）",
       "field": "都市・地域",
-      "titleJa": "連結性の構築と信頼の醸成：中国・バングラデシュ関係の進化する力学",
-      "catchTitle": "中国の巨大経済圏構想、バングラデシュに何をもたらす？",
-      "hook": "中国の「一帯一路」構想がバングラデシュにもたらす経済的機会と地政学的複雑性を分析しています。",
+      "titleJa": "ローマ帝国の貿易ネットワークにおける構造的レジリエンスの位相幾何学的解析：東地中海貿易ネットワークの持続的ホモロジー、0〜400年",
+      "catchTitle": "ローマ帝国の崩壊はなぜ？貿易ネットワークの構造変化から探る",
+      "hook": "ローマ帝国の衰退は、単なる政治や経済の問題ではなく、貿易ネットワークの構造的な脆弱化が深く関わっていることが、最新の研究で明らかになりました。",
       "quiz": {
-        "question": "中国の「一帯一路」構想（BRI）におけるバングラデシュとの関係について、この論文の結論として最も適切なものはどれですか？",
+        "question": "ローマ帝国の東地中海貿易ネットワークは、3世紀の危機を乗り越えた後、最終的にどのような状態になったでしょうか？",
         "options": [
-          "中国はバングラデシュにとって戦略的同盟国であり、経済的依存関係が深化している。",
-          "中国はバングラデシュにとって単なる取引相手であり、地政学的な影響力は限定的である。",
-          "中国は経済的機会と地政学的複雑さの両方をもたらし、バングラデシュは多角的な外交で主体性を保っている。"
+          "回復不能な構造的劣化に陥った",
+          "政治的再統一により完全に回復した",
+          "安定した高冗長性状態を維持した"
         ],
-        "correctIndex": 2,
-        "explanation": "論文は、中国の関与が経済協力と戦略的計算の二面性を持つことを示し、バングラデシュが多角的な外交政策を通じて主体性を維持していると結論付けています。"
+        "correctIndex": 0,
+        "explanation": "本研究の結果によると、3世紀の危機は回復可能でしたが、その後の4世紀にはサイクル冗長性が持続的に低下し、回復不能な構造的劣化に陥りました。政治的再統一もこの傾向を覆せませんでした。"
       },
-      "limitations": "本研究は二次データに依存しているため、特に公式政策文書においては、戦略的なメッセージングが運用上の透明性よりも優先されている可能性があり、制度的バイアスの可能性が導入されます。また、対外債務や貿易統計などの財政指標は、新たな経済データが利用可能になるにつれて改訂される可能性があります。これらの制約は研究全体の分析的妥当性を損なうものではありませんが、進化する地政学的および経済的状況の中で、結果を慎重に解釈する必要があることを示しています。",
+      "limitations": "本研究の西部サブネットワークに関する結果は、ORBISデータセットの西部地域のカバー範囲が限定的であるため、慎重に解釈する必要があります。イタリア、ガリア、ブリタニア、ライン川国境が十分に表現されていないため、西部帝国の完全な描写とは言えません。このため、西部サブネットワークは構造的コントロールとして扱われ、完全な表現とはされていません。",
       "glossary": [
         {
-          "term": "一帯一路構想（BRI）",
-          "definition": "中国が提唱する広域経済圏構想で、アジア、ヨーロッパ、アフリカを結ぶ陸と海のインフラネットワークを構築し、貿易と投資を促進することを目指しています。",
-          "reading": "Belt and Road Initiative"
+          "term": "持続的ホモロジー",
+          "definition": "データの形状や構造を、異なるスケール（距離の閾値）でどのように変化するかを追跡する数学的手法です。ネットワークの「穴」や「サイクル」がどのくらいの期間（スケール）存在し続けるかを測ることで、その構造の安定性や冗長性を評価できます。",
+          "reading": "Persistent Homology"
         },
         {
-          "term": "地政学",
-          "definition": "地理的な位置関係が国際政治や国家戦略に与える影響を研究する学問分野です。国家間の勢力均衡や資源の確保などが主な分析対象となります。"
+          "term": "ORBIS Geospatial Network Model",
+          "definition": "ローマ世界の都市や交通路をデジタルデータとして表現した地理情報システムです。古代の旅行時間や費用を計算するために用いられ、本研究では貿易ネットワークの基盤データとして使用されました。",
+          "reading": "ORBIS地理空間ネットワークモデル"
         },
         {
-          "term": "リアリズム",
-          "definition": "国際関係論における主要な理論の一つで、国家は常に自国の生存と安全保障を最優先し、相対的な国力の蓄積を目指すと仮定します。国際システムを無政府状態と見なします。"
+          "term": "ベッチ数（β1）",
+          "definition": "位相幾何学において、ネットワーク内の独立した「サイクル」や「穴」の数を表す指標です。貿易ネットワークでは、代替経路の冗長性を示すものとして解釈され、数値が高いほど多くの迂回経路が存在することを示します。",
+          "reading": "betti number (β1)"
         },
         {
-          "term": "リベラル制度主義",
-          "definition": "国際関係論の理論の一つで、国際機関や経済的相互依存が国家間の協力関係を促進し、紛争を緩和する役割を果たすと主張します。共通の利益に基づく協力の可能性を重視します。",
-          "reading": "Liberal Institutionalism"
+          "term": "持続エントロピー",
+          "definition": "持続的ホモロジーから得られる指標で、ネットワーク内のサイクルの寿命（持続期間）の多様性や分布の均一性を測ります。エントロピーが高いほど、様々な持続期間のサイクルが多数存在し、ネットワークの冗長性が高いことを示します。",
+          "reading": "persistent entropy"
         },
         {
-          "term": "開発国家理論",
-          "definition": "国家が経済発展において主導的な役割を果たし、産業政策の策定やインフラ整備を通じて経済成長を推進するという考え方です。特に東アジアの経済発展を説明する際に用いられます。",
-          "reading": "Developmental State Theory"
+          "term": "サイクル冗長性",
+          "definition": "ネットワーク内に複数の代替経路（サイクル）が存在する度合いを指します。サイクル冗長性が高いほど、一部の経路が機能しなくなっても他の経路で代替できるため、ネットワーク全体の回復力や安定性が高まります。",
+          "reading": "cycle redundancy"
         },
         {
-          "term": "内容分析",
-          "definition": "文書やメディアなどのテキストデータを体系的に分析し、特定のテーマやパターン、傾向を抽出する質的研究手法です。言葉の出現頻度や文脈などを詳細に調べます。",
-          "reading": "Content Analysis"
+          "term": "差動摩擦モデル",
+          "definition": "ネットワークの経路コストに、歴史的イベント（疫病、内戦など）が輸送モード（陸路、海路など）ごとに異なる影響を与えることを考慮したモデルです。これにより、単なる一様なコスト上昇ではなく、ネットワーク構造の再編成を捉えることができます。",
+          "reading": "differential friction model"
         },
         {
-          "term": "主体性",
-          "definition": "国際関係において、国家が外部からの影響を一方的に受けるだけでなく、自らの意思決定や行動を通じて状況に影響を与える能力を指します。自律的な外交政策を展開する力とも言えます。",
-          "reading": "Agency"
+          "term": "ヴィエトリス-リップス濾過",
+          "definition": "ネットワークのノード間の距離に基づき、徐々に距離の閾値を広げていくことで、ネットワークの接続性を段階的に変化させるプロセスです。この濾過を通じて、異なるスケールでのネットワークの位相幾何学的特徴を抽出します。",
+          "reading": "Vietoris–Rips filtration"
         },
         {
-          "term": "三角測量（トライアンギュレーション）",
-          "definition": "研究の信頼性を高めるために、複数のデータ源、分析手法、または理論的視点を組み合わせて検証するアプローチです。異なる視点から同じ現象を分析することで、より確かな結論を導き出します。",
-          "reading": "Triangulation"
+          "term": "Chow break tests",
+          "definition": "時系列データにおいて、特定の時点でデータの構造（例えば平均や分散）に統計的に有意な変化があったかどうかを検定する手法です。本研究では、ネットワークの構造的フェーズ間の境界を特定するために用いられました。",
+          "reading": "チャウの構造変化検定"
         }
       ],
       "keyFigure": {
-        "imagePath": "/figures/W7162192206_results.jpeg",
-        "page": 10,
-        "caption": "バングラデシュと中国間の貿易不均衡の拡大を示しています。",
-        "label": "Figure 2: Trade gap between Bangladesh and China",
+        "imagePath": "/figures/2605.27200v1_results.png",
+        "page": 12,
+        "caption": "東地中海貿易ネットワークの位相構造を0年から400年まで示しています。",
+        "label": "FIG. 4. The Balkanisation Scissors: topological phase structure of the Eastern Mediterranean trade network, 0–400 ce. (a",
         "source": "pdf-image",
         "purpose": "results",
-        "extractedAt": "2026-05-27T02:45:44.703Z"
+        "extractedAt": "2026-05-27T02:53:34.656Z"
       },
       "keyFigures": [
         {
-          "imagePath": "/figures/W7162192206_results.jpeg",
-          "page": 10,
-          "caption": "バングラデシュと中国間の貿易不均衡の拡大を示しています。",
-          "label": "Figure 2: Trade gap between Bangladesh and China",
+          "imagePath": "/figures/2605.27200v1_results.png",
+          "page": 12,
+          "caption": "東地中海貿易ネットワークの位相構造を0年から400年まで示しています。",
+          "label": "FIG. 4. The Balkanisation Scissors: topological phase structure of the Eastern Mediterranean trade network, 0–400 ce. (a",
           "source": "pdf-image",
           "purpose": "results",
-          "extractedAt": "2026-05-27T02:45:44.703Z"
+          "extractedAt": "2026-05-27T02:53:34.656Z"
         },
         {
-          "imagePath": "/figures/W7162192206_why.jpeg",
-          "page": 9,
-          "caption": "バングラデシュと中国間の軍事協力関係を示しており、中国の戦略的意図を裏付けます。",
-          "label": "Figure 1: Military cooperation between Bangladesh and China",
+          "imagePath": "/figures/2605.27200v1_why.png",
+          "page": 8,
+          "caption": "東地中海貿易ネットワークのベッチ数（β1）永続エントロピーの推移を示しています。",
+          "label": "FIG. 1. β1 persistent entropy of the Eastern Mediterranean trade network, 0–400 ce (bootstrap mean, 95% confidence inter",
           "source": "pdf-image",
           "purpose": "why",
-          "extractedAt": "2026-05-27T02:45:44.704Z"
+          "extractedAt": "2026-05-27T02:53:34.657Z"
+        }
+      ]
+    },
+    {
+      "id": "2605.27320v1",
+      "title": "Modeling Agentic Technical Debt and Stochastic Tax: A Standalone Framework for Measurement, Simulation, and Dashboarding",
+      "authors": [
+        "Muhammad Zia Hydari",
+        "Raja Iqbal",
+        "Narayan Ramasubbu"
+      ],
+      "publishedAt": "2026-05-26T17:28:30Z",
+      "url": "https://arxiv.org/abs/2605.27320v1",
+      "pdfUrl": "https://arxiv.org/pdf/2605.27320v1.pdf",
+      "categories": [
+        "topic:trade",
+        "貿易・国際経済",
+        "cs.AI",
+        "cs.CY",
+        "econ.GN"
+      ],
+      "abstract": "Agentic AI systems combine probabilistic reasoning with delegated action through tools, context, memory, orchestration, and external workflow integration. This note develops a formal and managerially usable model that distinguishes Agentic Technical Debt from Stochastic Tax. Agentic Technical Debt is a stock of accumulated design and governance liability. Stochastic Tax is a recurring flow of operating burden that arises when stochastic agents are used in business workflows. The two constructs are related, but they are not the same: debt can amplify the tax, while the tax can remain positive even when debt is minimized. The note starts from a compact dashboard expression, expands it into a fuller structural model, defines all variables and parameters, shows how each cost category can be estimated from operational data, and illustrates the framework with an accounts-payable simulation and companion spreadsheet.",
+      "summary": {
+        "gist": "本論文は、エージェントAIシステムにおける「エージェントテクニカルデット」と「確率的税」という二つの概念を区別し、これらを測定・シミュレーション・ダッシュボード化するための形式的かつ管理に利用可能なモデルを開発しています。これにより、確率的エージェントの運用に伴うコスト構造を明確化し、マネージャーが効果的に管理できるよう支援することを目指しています。",
+        "novelty": "従来の研究では、テクニカルデットがソフトウェアや機械学習システムに適用されてきましたが、本研究は確率的推論と委任された行動を組み合わせるエージェントAIシステムに特化し、この分野におけるテクニカルデットの概念を拡張しています。特に、蓄積された設計・ガバナンス上の負債である「エージェントテクニカルデット」と、確率的エージェントの運用に伴う継続的な負担である「確率的税」を明確に区別し、両者の関係性をモデル化した点が新規性です。これにより、テクニカルデットが最小化されても確率的税は発生し続けるという、従来のテクニカルデットの比喩では捉えきれなかった側面を明らかにしています。",
+        "method": "本研究では、エージェントテクニカルデットと確率的税を測定するための形式的な構造モデルを構築しています。このモデルは、コンパクトなダッシュボード表現から始まり、全ての変数とパラメータを定義し、運用データから各コストカテゴリを推定する方法を示しています。具体的には、コンテキスト、ツール、メモリ、オーケストレーション、ガバナンス、プラットフォーム結合といった6つのデットコンポーネントと、評価、監視、再試行、エスカレーション、再検証、遅延、トークン・計算、セキュリティといった8つのコストカテゴリを特定しています。これらの関係性は、デット指数（Dw,t）、デット増幅器（Φk）、露出増幅器（Ψk）を含む一連の数式で表現され、最終的に総確率的税（TSTw,t）と平均確率的税（STw,t）を算出します。フレームワークの有効性は、買掛金シミュレーションと付属のスプレッドシートを用いて具体的に示されており、参照値やカテゴリパラメータ、シナリオ入力を変更することで、確率的税ダッシュボードがどのように反応するかを探索できるように設計されています。",
+        "results": "分析の結果、エージェントテクニカルデットは蓄積された設計・ガバナンス上の負債であり、確率的税は確率的エージェントをビジネスワークフローで使用する際に発生する継続的な運用負担であることが明確に区別されました。デットは税を増幅させる可能性がありますが、デットが最小化されても税は正の値を取り続けることが示されています。モデルは、デット指数、コストカテゴリ構造、ベースラインとデット増幅された税の分解、困難なβkパラメータのキャリブレーションパス、およびスプレッドシートダッシュボードで実装可能なシミュレーションアプローチをマネージャーに提供します。シミュレーションでは、評価、監視、再試行と修復、エスカレーション、再検証、遅延と遅延、トークン・計算・コンテキスト、セキュリティとガードレールといった各コストカテゴリにおける増幅係数（βk, γUk, γSkなど）が具体的に示されており、デットや使用状況、表面積、自律性、モデルの変動性が税にどのように影響するかが定量的に示されています。",
+        "why": "確率的税がエージェントテクニカルデットが最小化されても発生し続けるのは、エージェントAIシステムが本質的に確率的であるためです。同じ入力に対しても異なる実行パスを取る可能性があり、この非決定性が評価、監視、再試行、エスカレーションなどの継続的な運用コストを生み出します。一方、エージェントテクニカルデットは、不適切な設計やガバナンスの選択によって蓄積される負債であり、これが存在すると、確率的税の各コストカテゴリが増幅され、運用負担がさらに大きくなるというメカニズムです。つまり、デットは税の「増幅器」として機能し、税のベースライン自体はエージェントAIの確率的性質から生じるものと説明されています。",
+        "figures": "アブストラクトには具体的な図表の記述はありませんが、論文本文抜粋の「Table 12: Full Cost-Category Parameters」では、評価、監視、再試行と修復、エスカレーション、再検証、遅延と遅延、トークン・計算・コンテキスト、セキュリティとガードレールといった各コストカテゴリにおけるパラメータ（Vk, Fk, βk, γUk, γSk, γHk, γAk, γΘk）が詳細に報告されています。これらのパラメータは、モデルにおけるデット増幅器や露出増幅器の係数として機能し、各コストカテゴリがデットやシステムの使用状況、複雑性、自律性、モデルの変動性によってどのように影響を受けるかを示しています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.AI）",
+      "field": "貿易・国際経済",
+      "titleJa": "エージェントAIシステムにおけるエージェントテクニカルデットと確率的税：測定、シミュレーション、ダッシュボードのための独立したフレームワーク",
+      "catchTitle": "AIの「見えないコスト」を解明",
+      "hook": "エージェントAIシステムの運用で発生する隠れたコスト、「テクニカルデット」と「確率的税」を明確に区別し、測定・管理する新しいフレームワークが提案されています。",
+      "quiz": {
+        "question": "エージェントAIシステムにおける「確率的税」は、どのような状況で発生するコストでしょうか？",
+        "options": [
+          "エージェントAIシステムの設計上の負債（テクニカルデット）が蓄積されている場合にのみ発生するコストです。",
+          "エージェントAIシステムの設計上の負債が最小化されても、システムの確率的な性質により発生し続ける運用コストです。",
+          "エージェントAIシステムが故障した場合に一度だけ発生する修復コストです。"
+        ],
+        "correctIndex": 1,
+        "explanation": "確率的税は、エージェントAIシステムの確率的な性質に起因するため、設計上の負債が最小化されても発生し続ける運用コストです。デットは税を増幅させますが、税の発生源ではありません。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "エージェントAIシステム",
+          "definition": "確率的な推論能力を持ち、ツール、コンテキスト、記憶などを通じて自律的に行動を委任・実行できる人工知能システムのことです。単なる予測だけでなく、計画立案や外部システムとの連携も行います。",
+          "reading": "Agentic AI systems"
+        },
+        {
+          "term": "エージェントテクニカルデット",
+          "definition": "エージェントAIシステムの設計やガバナンスにおいて、目先の都合で選択された expedient な方法により、将来の変更、検証、説明、制御がより困難かつ高コストになることで蓄積される負債のことです。コードだけでなく、指示、コンテキスト、ツール契約などにも存在します。",
+          "reading": "Agentic Technical Debt"
+        },
+        {
+          "term": "確率的税",
+          "definition": "エージェントAIシステムが本質的に確率的な動作をするために、ビジネスワークフローにおいてその行動を許容可能な範囲に保つために継続的に発生する運用上の負担のことです。テクニカルデットが解消されても発生し続ける可能性があります。",
+          "reading": "Stochastic Tax"
+        },
+        {
+          "term": "ダッシュボード",
+          "definition": "複数の重要な指標や情報を一目でわかるように集約し、視覚的に表示する管理ツールのことです。本論文では、エージェントテクニカルデットと確率的税の状況をマネージャーが把握するために利用されます。",
+          "reading": "Dashboard"
+        },
+        {
+          "term": "ストック・フロー",
+          "definition": "経済学などで用いられる概念で、ストックはある時点での蓄積量（例：貯蓄残高）、フローはある期間にわたる変化量（例：収入）を指します。本論文では、テクニカルデットをストック、確率的税をフローとして区別しています。",
+          "reading": "stock-flow"
+        },
+        {
+          "term": "キャリブレーション",
+          "definition": "モデルのパラメータを実際のデータや既知の基準に合わせて調整し、モデルの精度や適合性を高める作業のことです。本論文では、βk係数などの推定に用いられます。",
+          "reading": "calibration"
+        },
+        {
+          "term": "増幅器",
+          "definition": "ある要素が別の要素の効果を増大させる機能やメカニズムのことです。本論文では、エージェントテクニカルデットが確率的税を増幅させる「デット増幅器」や、使用状況などが税を増幅させる「露出増幅器」として表現されています。",
+          "reading": "amplifier"
+        },
+        {
+          "term": "買掛金シミュレーション",
+          "definition": "企業が仕入れ先への支払いを管理する「買掛金」のプロセスを模倣したシミュレーションのことです。本論文では、エージェントAIシステムがこのプロセスに導入された場合のコストを評価するために用いられています。",
+          "reading": "accounts-payable simulation"
         }
       ]
     }

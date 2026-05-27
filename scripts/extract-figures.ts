@@ -4,9 +4,9 @@ import { readFile } from "node:fs/promises";
 loadEnv({ path: ".env.local" });
 loadEnv();
 
-import { extractKeyFigureWithRetry } from "@/lib/extractFigure";
+import { extractSectionFiguresWithRetry } from "@/lib/extractFigure";
 import { writeJsonFileAtomic } from "@/lib/safeWriteJson";
-import type { Paper } from "@/lib/types";
+import type { KeyFigure, Paper } from "@/lib/types";
 
 const DATA_DIR = "data";
 
@@ -23,8 +23,17 @@ function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+function hasFigureFor(paper: Paper, purpose: "results" | "why"): boolean {
+  if (paper.keyFigures?.some((f) => f.purpose === purpose && f.imagePath?.trim())) return true;
+  if (purpose === "results" && paper.keyFigure?.imagePath?.trim()) return true;
+  return false;
+}
+
 function needsFigure(paper: Paper): boolean {
-  return Boolean(paper.pdfUrl?.trim() && !paper.keyFigure?.imagePath?.trim());
+  if (!paper.pdfUrl?.trim()) return false;
+  if (!hasFigureFor(paper, "results")) return true;
+  if (paper.summary?.why?.trim() && !hasFigureFor(paper, "why")) return true;
+  return false;
 }
 
 async function main() {
@@ -91,15 +100,36 @@ async function main() {
     console.log(`[${processed + 1}/${toProcess}] 図表抽出: ${shortTitle}`);
     const started = Date.now();
 
-    const keyFigure = await extractKeyFigureWithRetry(paper, apiKey, 2);
+    const figures = await extractSectionFiguresWithRetry(paper, apiKey, 2);
     processed += 1;
 
-    if (keyFigure) {
-      updated.push({ ...paper, keyFigure });
-      console.log(`  → 完了 (${((Date.now() - started) / 1000).toFixed(1)}s) p.${keyFigure.page}`);
+    if (figures.length > 0) {
+      /** 既存の同 purpose の図を新しい結果で置き換え。force=true なら一掃して新規のみ */
+      const merged: KeyFigure[] = force
+        ? figures
+        : [
+            ...(paper.keyFigures ?? []).filter(
+              (f) => !figures.some((nf) => nf.purpose === f.purpose)
+            ),
+            ...figures,
+          ];
+      const resultsFigure = merged.find((f) => f.purpose === "results");
+      updated.push({
+        ...paper,
+        keyFigure: resultsFigure ?? paper.keyFigure,
+        keyFigures: merged,
+      });
+      const summary = figures
+        .map((f) => `${f.purpose ?? "?"}: p.${f.page}`)
+        .join(" / ");
+      console.log(
+        `  → 完了 (${((Date.now() - started) / 1000).toFixed(1)}s) ${summary}`
+      );
     } else {
       failed += 1;
-      updated.push(force ? { ...paper, keyFigure: undefined } : paper);
+      updated.push(
+        force ? { ...paper, keyFigure: undefined, keyFigures: undefined } : paper
+      );
       console.log(`  → スキップ（PDF取得または図表選定に失敗）`);
     }
 

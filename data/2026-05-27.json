@@ -81,6 +81,35 @@
           "definition": "市場全体の動き（ベータ）では説明できない、投資戦略やポートフォリオが市場平均を上回って稼ぎ出した超過収益のことです。投資家の腕前や戦略の優位性を示す指標とされます。",
           "reading": "Alpha"
         }
+      ],
+      "keyFigure": {
+        "imagePath": "/figures/2605.23959_results.png",
+        "page": 8,
+        "caption": "プロトコル違反が予測指標と取引指標に与える影響をモデルと市場の多様性で示しています。",
+        "label": "Figure 4: Model and market heterogeneity. Left: U.S. mean LG-SR@5bps by protocol variant for",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-05-27T02:45:25.809Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2605.23959_results.png",
+          "page": 8,
+          "caption": "プロトコル違反が予測指標と取引指標に与える影響をモデルと市場の多様性で示しています。",
+          "label": "Figure 4: Model and market heterogeneity. Left: U.S. mean LG-SR@5bps by protocol variant for",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-05-27T02:45:25.809Z"
+        },
+        {
+          "imagePath": "/figures/2605.23959_why.png",
+          "page": 9,
+          "caption": "EXEC_OPENプロトコル違反がリッジモデルの年間パフォーマンスに与える影響を示しています。",
+          "label": "Figure 5: Yearly LG-SR@5bps for Ridge under EXEC_OPEN. The positive effect is not concentrated",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-05-27T02:45:25.816Z"
+        }
       ]
     },
     {
@@ -331,6 +360,35 @@
           "definition": "財務報告書を電子的に作成・交換するための国際標準言語です。財務データの項目にタグ付けすることで、機械が情報を自動的に読み取り、分析しやすくなります。",
           "reading": "eXtensible Business Reporting Language"
         }
+      ],
+      "keyFigure": {
+        "imagePath": "/figures/2605.23924_results.jpeg",
+        "page": 34,
+        "caption": "Adobe社の2024年度セグメント開示情報を示しており、LLMが正確に情報を抽出できることを裏付けています。",
+        "label": "Figure 2: Adobe Inc Segment Disclosure for FY2024",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-05-27T02:45:38.110Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2605.23924_results.jpeg",
+          "page": 34,
+          "caption": "Adobe社の2024年度セグメント開示情報を示しており、LLMが正確に情報を抽出できることを裏付けています。",
+          "label": "Figure 2: Adobe Inc Segment Disclosure for FY2024",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-05-27T02:45:38.110Z"
+        },
+        {
+          "imagePath": "/figures/2605.23924_why.jpeg",
+          "page": 35,
+          "caption": "LLMを活用したセグメント開示情報抽出のワークフローを示しており、LLMのメカニズムを説明しています。",
+          "label": "Figure 3: LLM Assisted Segment Disclosure Extraction Workflow",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-05-27T02:45:38.112Z"
+        }
       ]
     },
     {
@@ -417,6 +475,35 @@
           "term": "三角測量（トライアンギュレーション）",
           "definition": "研究の信頼性を高めるために、複数のデータ源、分析手法、または理論的視点を組み合わせて検証するアプローチです。異なる視点から同じ現象を分析することで、より確かな結論を導き出します。",
           "reading": "Triangulation"
+        }
+      ],
+      "keyFigure": {
+        "imagePath": "/figures/W7162192206_results.jpeg",
+        "page": 10,
+        "caption": "バングラデシュと中国間の貿易不均衡の拡大を示しています。",
+        "label": "Figure 2: Trade gap between Bangladesh and China",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-05-27T02:45:44.703Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/W7162192206_results.jpeg",
+          "page": 10,
+          "caption": "バングラデシュと中国間の貿易不均衡の拡大を示しています。",
+          "label": "Figure 2: Trade gap between Bangladesh and China",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-05-27T02:45:44.703Z"
+        },
+        {
+          "imagePath": "/figures/W7162192206_why.jpeg",
+          "page": 9,
+          "caption": "バングラデシュと中国間の軍事協力関係を示しており、中国の戦略的意図を裏付けます。",
+          "label": "Figure 1: Military cooperation between Bangladesh and China",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-05-27T02:45:44.704Z"
         }
       ]
     }

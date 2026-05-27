@@ -39,6 +39,8 @@ export type KeyFigure = {
   label?: string;
   extractedAt?: string;
   source?: "pdf-image" | "pdf-page";
+  /** どのセクション用の図か（results=わかったこと / why=なぜそうなるのか） */
+  purpose?: "results" | "why";
 };
 
 export type Paper = {
@@ -73,6 +75,8 @@ export type Paper = {
    * 空文字 = 処理済みだが該当記述なし。undefined = 未処理（旧データ）
    */
   limitations?: string;
-  /** PDF から抽出した主要図（1枚） */
+  /** PDF から抽出した主要図（旧形式: 1枚） */
   keyFigure?: KeyFigure;
+  /** PDF から抽出した複数図（新形式: わかったこと用・なぜそうなるのか用など） */
+  keyFigures?: KeyFigure[];
 };

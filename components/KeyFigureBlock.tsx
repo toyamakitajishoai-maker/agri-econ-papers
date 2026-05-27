@@ -3,16 +3,25 @@ import type { KeyFigure, Paper } from "@/lib/types";
 type KeyFigureBlockProps = {
   figure: KeyFigure;
   paper: Paper;
+  /** ブロック上部に出す見出し（指定なければ purpose や既定値で自動決定） */
+  heading?: string;
 };
 
-export default function KeyFigureBlock({ figure, paper }: KeyFigureBlockProps) {
+function defaultHeading(figure: KeyFigure): string {
+  if (figure.purpose === "results") return "わかったこと（図表）";
+  if (figure.purpose === "why") return "なぜそうなるのか（図表）";
+  return "主要な結果（図表）";
+}
+
+export default function KeyFigureBlock({ figure, paper, heading }: KeyFigureBlockProps) {
   const sourceLabel = paper.titleJa ?? paper.title;
+  const headingText = heading ?? defaultHeading(figure);
 
   return (
     <figure className="overflow-hidden rounded-2xl border border-[#ebe7df] bg-white shadow-sm">
       <div className="bg-[#faf8f5] px-4 py-3">
         <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#9a8460]">
-          主要な結果（図表）
+          {headingText}
           {figure.label ? ` — ${figure.label}` : ""}
         </p>
         <figcaption className="mt-1 text-sm leading-relaxed text-[#4a524a]">{figure.caption}</figcaption>

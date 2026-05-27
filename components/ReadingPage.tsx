@@ -23,6 +23,16 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
   const { sections } = view;
   const glossary = paper.glossary ?? [];
 
+  /** 新形式（keyFigures）優先。旧形式（keyFigure 単数）は results 用にフォールバック */
+  const allFigures = paper.keyFigures ?? [];
+  const resultsFigure =
+    allFigures.find((f) => f.purpose === "results") ?? paper.keyFigure ?? null;
+  const whyFigure = allFigures.find((f) => f.purpose === "why") ?? null;
+  /** results/why 以外の余り図（旧データ互換のため） */
+  const extraFigures = allFigures.filter(
+    (f) => f !== resultsFigure && f !== whyFigure && f.purpose !== "results" && f.purpose !== "why"
+  );
+
   return (
     <>
       <article className="mx-auto max-w-[680px]">
@@ -79,12 +89,28 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
             </SummaryBlock>
           ) : null}
 
+          {resultsFigure ? (
+            <KeyFigureBlock
+              figure={resultsFigure}
+              paper={paper}
+              heading="わかったこと（図表）"
+            />
+          ) : null}
+
           {sections.why?.trim() ? (
             <SummaryBlock title="なぜそうなるのか">
               <p>
                 <GlossaryText text={sections.why} glossary={glossary} />
               </p>
             </SummaryBlock>
+          ) : null}
+
+          {whyFigure ? (
+            <KeyFigureBlock
+              figure={whyFigure}
+              paper={paper}
+              heading="なぜそうなるのか（図表）"
+            />
           ) : null}
 
           {sections.figures &&
@@ -95,7 +121,9 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
             </SummaryBlock>
           ) : null}
 
-          {paper.keyFigure ? <KeyFigureBlock figure={paper.keyFigure} paper={paper} /> : null}
+          {extraFigures.map((fig, i) => (
+            <KeyFigureBlock key={`extra-${i}`} figure={fig} paper={paper} />
+          ))}
 
           <InsightCallout label="私たちに関係あるのはここ">{view.relevance}</InsightCallout>
 

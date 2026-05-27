@@ -4,6 +4,7 @@ import { spawn } from "node:child_process";
 
 import {
   selectBestFigureFromCaptions,
+  selectFiguresForSections,
   type FigureCandidate,
 } from "@/lib/selectFigure";
 import type { KeyFigure, Paper } from "@/lib/types";
@@ -279,4 +280,100 @@ export async function extractKeyFigureWithRetry(
     if (attempt < retryCount) await sleep(1500);
   }
   return null;
+}
+
+/**
+ * Python抽出で得た候補を、results用 / why用 の2枚に振り分けて保存する。
+ * 同じ候補が両方に当たった場合は1枚だけにまとめる。
+ */
+async function extractSectionFiguresWithPyMuPDF(
+  pdfBuffer: Buffer,
+  paper: Paper,
+  apiKey: string
+): Promise<KeyFigure[]> {
+  const pdfPath = path.join(process.cwd(), `.tmp-figure-${safeFigureFilename(paper.id)}.pdf`);
+  const workDir = path.join(TMP_DIR, safeFigureFilename(paper.id));
+
+  await mkdir(workDir, { recursive: true });
+  await writeFile(pdfPath, pdfBuffer);
+
+  try {
+    const result = await runPythonExtractor(pdfPath, workDir);
+    const candidates = result.candidates ?? [];
+    if (candidates.length === 0) return [];
+
+    const selection = await selectFiguresForSections(candidates, paper, apiKey);
+    const figures: KeyFigure[] = [];
+
+    await mkdir(FIGURES_DIR, { recursive: true });
+
+    async function saveOne(
+      candidate: FigureCandidate,
+      purpose: "results" | "why"
+    ): Promise<KeyFigure | null> {
+      const ext = path.extname(candidate.imageFile) || ".png";
+      const filename = `${safeFigureFilename(paper.id)}_${purpose}${ext}`;
+      const src = path.join(workDir, candidate.imageFile);
+      const dest = path.join(FIGURES_DIR, filename);
+      try {
+        await copyFile(src, dest);
+      } catch {
+        return null;
+      }
+      return {
+        imagePath: `/figures/${filename}`,
+        page: candidate.page,
+        caption: candidate.caption,
+        label: candidate.label,
+        source: "pdf-image",
+        purpose,
+        extractedAt: new Date().toISOString(),
+      };
+    }
+
+    if (selection.results) {
+      const fig = await saveOne(selection.results, "results");
+      if (fig) figures.push(fig);
+    }
+    if (selection.why && selection.why.id !== selection.results?.id) {
+      const fig = await saveOne(selection.why, "why");
+      if (fig) figures.push(fig);
+    }
+
+    return figures;
+  } finally {
+    await rm(workDir, { recursive: true, force: true }).catch(() => undefined);
+    await import("node:fs/promises").then(({ unlink }) =>
+      unlink(pdfPath).catch(() => undefined)
+    );
+  }
+}
+
+/** results用と why用 の図表をまとめて抽出（最大2枚） */
+export async function extractSectionFiguresForPaper(
+  paper: Paper,
+  apiKey: string
+): Promise<KeyFigure[]> {
+  const { buffer: pdfBuffer } = await downloadPdfForPaper({
+    doi: paper.doi,
+    pdfUrl: paper.pdfUrl,
+    id: paper.id,
+    source: paper.source,
+  });
+  if (!pdfBuffer) return [];
+
+  return extractSectionFiguresWithPyMuPDF(pdfBuffer, paper, apiKey);
+}
+
+export async function extractSectionFiguresWithRetry(
+  paper: Paper,
+  apiKey: string,
+  retryCount = 2
+): Promise<KeyFigure[]> {
+  for (let attempt = 1; attempt <= retryCount; attempt += 1) {
+    const figures = await extractSectionFiguresForPaper(paper, apiKey);
+    if (figures.length > 0) return figures;
+    if (attempt < retryCount) await sleep(1500);
+  }
+  return [];
 }

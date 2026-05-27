@@ -1,10 +1,12 @@
 import InsightCallout from "@/components/InsightCallout";
 import KeyFigureBlock from "@/components/KeyFigureBlock";
+import PredictionQuiz from "@/components/PredictionQuiz";
 import ReadingMeta from "@/components/ReadingMeta";
 import RelatedPapers from "@/components/RelatedPapers";
 import SourceLinks from "@/components/SourceLinks";
 import StickyReadCta from "@/components/StickyReadCta";
 import SummaryBlock from "@/components/SummaryBlock";
+import TrustIndicator from "@/components/TrustIndicator";
 import { buildEditorialView } from "@/lib/editorial";
 import type { Paper } from "@/lib/types";
 
@@ -30,6 +32,10 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
         </header>
 
         <div id="read-body" className="space-y-10 sm:space-y-12">
+          {paper.quiz ? <PredictionQuiz quiz={paper.quiz} /> : null}
+
+          {paper.evidence ? <TrustIndicator evidence={paper.evidence} /> : null}
+
           <SummaryBlock title="まずここだけ" variant="lead">
             <ul className="space-y-3">
               {view.threeLineSummary.map((line, i) => (

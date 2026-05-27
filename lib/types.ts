@@ -11,12 +11,34 @@ export type PaperSummary = {
   figures?: string;
 };
 
+export type PredictionQuiz = {
+  question: string;
+  options: string[];
+  correctIndex: number;
+  explanation: string;
+};
+
+/** 信頼度・エビデンス（0〜100 のゲージ表示用） */
+export type EvidenceProfile = {
+  /** 1（弱い）〜5（強い） */
+  level: number;
+  levelLabel: string;
+  sampleSize: string;
+  studyDesign: string;
+  dataQuality: number;
+  externalValidity: number;
+  notes?: string;
+};
+
 export type KeyFigure = {
   /** 例: /figures/W123.png */
   imagePath: string;
   page: number;
   caption: string;
+  /** 例: Figure 3 */
+  label?: string;
   extractedAt?: string;
+  source?: "pdf-image" | "pdf-page";
 };
 
 export type Paper = {
@@ -40,6 +62,10 @@ export type Paper = {
   catchTitle?: string;
   /** 1文フック（Gemini 生成） */
   hook?: string;
+  /** 記事冒頭の予想クイズ */
+  quiz?: PredictionQuiz;
+  /** エビデンス・サンプルサイズの可視化用 */
+  evidence?: EvidenceProfile;
   /** PDF から抽出した主要図（1枚） */
   keyFigure?: KeyFigure;
 };

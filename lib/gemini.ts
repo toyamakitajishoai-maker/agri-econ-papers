@@ -1,5 +1,5 @@
 import type { ArxivPaper } from "@/lib/arxiv";
-import type { PaperSummary } from "@/lib/types";
+import type { EvidenceProfile, PaperSummary, PredictionQuiz } from "@/lib/types";
 
 /** 2.0 系は新規APIキーでは 404 になるため 2.5 を既定にする */
 const GEMINI_MODEL = process.env.GEMINI_MODEL ?? "gemini-2.5-flash";
@@ -84,9 +84,24 @@ function buildPrompt(paper: ArxivPaper): string {
     "・catchTitle: 20〜32字程度。問い・対比・意外性があり、専門用語を抑えた読者向け見出し。句点で終えない。",
     "・hook: 80字以内の1文。読者が「続きを読みたい」と思う導入。です・ます調。",
     "",
+    "【エデュテインメント（読者参加）】",
+    "・quiz: 記事を読む前に答える2〜3択の予想クイズ。",
+    "  - question: 論文の結論を問う質問（です・ます調）",
+    "  - options: 選択肢3つ（文字列の配列）",
+    "  - correctIndex: 正解のインデックス（0始まり）",
+    "  - explanation: 正解の理由を2文以内（です・ます調）",
+    "・evidence: 研究の信頼度を数値化（ゲームのステータス表示用）",
+    "  - level: 1〜5の整数（5が最も強いエビデンス。RCT/メタ分析=5, 観察研究=3, 記述=1など）",
+    "  - levelLabel: 例「ランダム化比較試験」「コホート研究」",
+    "  - sampleSize: 例「農家384名」「世帯157件」",
+    "  - studyDesign: 例「アンケート調査＋ロジット回帰」",
+    "  - dataQuality: 0〜100（データの質）",
+    "  - externalValidity: 0〜100（他地域への一般化しやすさ）",
+    "  - notes: 注意点1文（任意）",
+    "",
     "【API出力指定】",
     "以下のキーをすべて持つJSONオブジェクト1つを出力すること（前後に説明文やコードブロック記号を付けない）。",
-    "各値は必ず文字列とし、配列にしないこと。",
+    "quiz.options は文字列の配列とすること。",
     "",
     "{",
     '  "titleJa": "論文タイトルの日本語訳（学術的な見出し、80字以内）",',
@@ -96,7 +111,22 @@ function buildPrompt(paper: ArxivPaper): string {
     '  "novelty": "新規性の文章（です・ます調）",',
     '  "method": "手法の文章（です・ます調。対象・期間・手法名を具体的に）",',
     '  "results": "結果の文章（です・ます調。数値・比較・含意を具体的に）",',
-    '  "figures": "主要図表の説明（です・ます調。2〜3文。無ければアブストラクトに図表の記述なし）"',
+    '  "figures": "主要図表の説明（です・ます調。2〜3文。無ければアブストラクトに図表の記述なし）",',
+    '  "quiz": {',
+    '    "question": "予想クイズの質問",',
+    '    "options": ["選択肢A", "選択肢B", "選択肢C"],',
+    '    "correctIndex": 0,',
+    '    "explanation": "正解の解説"',
+    "  },",
+    '  "evidence": {',
+    '    "level": 3,',
+    '    "levelLabel": "研究デザイン名",',
+    '    "sampleSize": "サンプル規模",',
+    '    "studyDesign": "手法の概要",',
+    '    "dataQuality": 70,',
+    '    "externalValidity": 65,',
+    '    "notes": "注意点（任意）"',
+    "  }",
     "}",
     "",
     "【対象論文データ】",
@@ -116,7 +146,47 @@ export type GeminiSummaryResult = {
   titleJa?: string;
   catchTitle?: string;
   hook?: string;
+  quiz?: PredictionQuiz;
+  evidence?: EvidenceProfile;
 };
+
+function parseQuiz(raw: unknown): PredictionQuiz | undefined {
+  if (!raw || typeof raw !== "object") return undefined;
+  const q = raw as Partial<PredictionQuiz>;
+  if (typeof q.question !== "string" || !Array.isArray(q.options)) return undefined;
+  const options = q.options.filter((o): o is string => typeof o === "string").slice(0, 3);
+  const correctIndex = typeof q.correctIndex === "number" ? q.correctIndex : 0;
+  const explanation = typeof q.explanation === "string" ? q.explanation.trim() : "";
+  if (options.length < 2 || !q.question.trim() || !explanation) return undefined;
+  return {
+    question: q.question.trim(),
+    options,
+    correctIndex: Math.min(options.length - 1, Math.max(0, correctIndex)),
+    explanation,
+  };
+}
+
+function parseEvidence(raw: unknown): EvidenceProfile | undefined {
+  if (!raw || typeof raw !== "object") return undefined;
+  const e = raw as Partial<EvidenceProfile>;
+  const level = typeof e.level === "number" ? e.level : Number(e.level);
+  if (!Number.isFinite(level)) return undefined;
+  return {
+    level: Math.min(5, Math.max(1, Math.round(level))),
+    levelLabel: typeof e.levelLabel === "string" ? e.levelLabel.trim() : "研究報告",
+    sampleSize: typeof e.sampleSize === "string" ? e.sampleSize.trim() : "記載なし",
+    studyDesign: typeof e.studyDesign === "string" ? e.studyDesign.trim() : "要約参照",
+    dataQuality: clampScore(e.dataQuality, 50),
+    externalValidity: clampScore(e.externalValidity, 50),
+    notes: typeof e.notes === "string" ? e.notes.trim() : undefined,
+  };
+}
+
+function clampScore(value: unknown, fallback: number): number {
+  const n = typeof value === "number" ? value : Number(value);
+  if (!Number.isFinite(n)) return fallback;
+  return Math.min(100, Math.max(0, Math.round(n)));
+}
 
 function parseSummaryText(raw: string): GeminiSummaryResult | null {
   const cleaned = raw
@@ -127,7 +197,13 @@ function parseSummaryText(raw: string): GeminiSummaryResult | null {
 
   try {
     const parsed = JSON.parse(cleaned) as Partial<
-      PaperSummary & { titleJa?: string; catchTitle?: string; hook?: string }
+      PaperSummary & {
+        titleJa?: string;
+        catchTitle?: string;
+        hook?: string;
+        quiz?: unknown;
+        evidence?: unknown;
+      }
     >;
     if (
       typeof parsed.gist === "string" &&
@@ -156,6 +232,8 @@ function parseSummaryText(raw: string): GeminiSummaryResult | null {
         titleJa,
         catchTitle,
         hook,
+        quiz: parseQuiz(parsed.quiz),
+        evidence: parseEvidence(parsed.evidence),
       };
     }
     return null;

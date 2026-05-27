@@ -52,6 +52,8 @@ function needsSummarize(paper: Paper): boolean {
   if (gist.startsWith("同分野の新着")) return true;
   if (!paper.catchTitle?.trim() || !paper.hook?.trim()) return true;
   if (!s.figures?.trim()) return true;
+  if (!paper.quiz?.question) return true;
+  if (!paper.evidence?.level) return true;
   if (paper.abstract && (novelty === paper.abstract || results === paper.abstract)) return true;
   return false;
 }
@@ -121,6 +123,8 @@ async function main() {
       titleJa: result.titleJa ?? paper.titleJa,
       catchTitle: result.catchTitle ?? paper.catchTitle,
       hook: result.hook ?? paper.hook,
+      quiz: result.quiz ?? paper.quiz,
+      evidence: result.evidence ?? paper.evidence,
       summary: result.summary,
     });
 

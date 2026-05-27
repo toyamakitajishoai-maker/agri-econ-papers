@@ -13,6 +13,7 @@ export default function KeyFigureBlock({ figure, paper }: KeyFigureBlockProps) {
       <div className="bg-[#faf8f5] px-4 py-3">
         <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#9a8460]">
           主要な結果（図表）
+          {figure.label ? ` — ${figure.label}` : ""}
         </p>
         <figcaption className="mt-1 text-sm leading-relaxed text-[#4a524a]">{figure.caption}</figcaption>
       </div>

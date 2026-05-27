@@ -1,6 +1,11 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { copyFile, mkdir, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { spawn } from "node:child_process";
 
+import {
+  selectBestFigureFromCaptions,
+  type FigureCandidate,
+} from "@/lib/selectFigure";
 import type { KeyFigure, Paper } from "@/lib/types";
 
 const GEMINI_MODEL = process.env.GEMINI_MODEL ?? "gemini-2.5-flash";
@@ -10,18 +15,19 @@ const MAX_PDF_BYTES = 15 * 1024 * 1024;
 const MAX_PAGES_TO_SCAN = 10;
 const PAGE_RENDER_SCALE = 1.1;
 const FIGURES_DIR = path.join(process.cwd(), "public", "figures");
+const TMP_DIR = path.join(process.cwd(), ".tmp-figures");
 
-type PageImage = {
-  page: number;
-  buffer: Buffer;
-};
+type PageImage = { page: number; buffer: Buffer };
 
 type GeminiVisionResponse = {
   candidates?: Array<{
-    content?: {
-      parts?: Array<{ text?: string }>;
-    };
+    content?: { parts?: Array<{ text?: string }> };
   }>;
+};
+
+type PythonExtractResult = {
+  candidates?: FigureCandidate[];
+  error?: string;
 };
 
 function sleep(ms: number): Promise<void> {
@@ -65,7 +71,79 @@ export async function downloadPdf(url: string): Promise<Buffer | null> {
   }
 }
 
-export async function renderPdfPages(pdfBuffer: Buffer): Promise<PageImage[]> {
+function runPythonExtractor(pdfPath: string, outputDir: string): Promise<PythonExtractResult> {
+  return new Promise((resolve) => {
+    const script = path.join(process.cwd(), "scripts", "extract_figures.py");
+    const proc = spawn("python3", [script, pdfPath, outputDir], {
+      cwd: process.cwd(),
+    });
+    let stdout = "";
+    let stderr = "";
+    proc.stdout.on("data", (d) => {
+      stdout += d.toString();
+    });
+    proc.stderr.on("data", (d) => {
+      stderr += d.toString();
+    });
+    proc.on("close", (code) => {
+      if (code !== 0) {
+        resolve({ candidates: [], error: stderr || `exit ${code}` });
+        return;
+      }
+      try {
+        const lastLine = stdout.trim().split("\n").pop() ?? "{}";
+        resolve(JSON.parse(lastLine) as PythonExtractResult);
+      } catch {
+        resolve({ candidates: [], error: "invalid json from python" });
+      }
+    });
+    proc.on("error", () => resolve({ candidates: [], error: "python3 not found" }));
+  });
+}
+
+async function extractWithPyMuPDF(
+  pdfBuffer: Buffer,
+  paper: Paper,
+  apiKey: string
+): Promise<KeyFigure | null> {
+  const pdfPath = path.join(process.cwd(), ".tmp-figure.pdf");
+  const workDir = path.join(TMP_DIR, safeFigureFilename(paper.id));
+
+  await mkdir(workDir, { recursive: true });
+  await writeFile(pdfPath, pdfBuffer);
+
+  try {
+    const result = await runPythonExtractor(pdfPath, workDir);
+    const candidates = result.candidates ?? [];
+    if (candidates.length === 0) return null;
+
+    const chosen = await selectBestFigureFromCaptions(candidates, paper, apiKey);
+    if (!chosen) return null;
+
+    await mkdir(FIGURES_DIR, { recursive: true });
+    const ext = path.extname(chosen.imageFile) || ".png";
+    const filename = `${safeFigureFilename(paper.id)}${ext}`;
+    const src = path.join(workDir, chosen.imageFile);
+    const dest = path.join(FIGURES_DIR, filename);
+    await copyFile(src, dest);
+
+    return {
+      imagePath: `/figures/${filename}`,
+      page: chosen.page,
+      caption: chosen.caption,
+      label: chosen.label,
+      source: "pdf-image",
+      extractedAt: new Date().toISOString(),
+    };
+  } finally {
+    await rm(workDir, { recursive: true, force: true }).catch(() => undefined);
+    await import("node:fs/promises").then(({ unlink }) =>
+      unlink(pdfPath).catch(() => undefined)
+    );
+  }
+}
+
+async function renderPdfPages(pdfBuffer: Buffer): Promise<PageImage[]> {
   const { pdf } = await import("pdf-to-img");
   const tmpPath = path.join(process.cwd(), ".tmp-figure.pdf");
   await writeFile(tmpPath, pdfBuffer);
@@ -90,7 +168,7 @@ export async function renderPdfPages(pdfBuffer: Buffer): Promise<PageImage[]> {
   return pages;
 }
 
-function parseSelectionJson(raw: string): { page: number; caption: string } | null {
+function parsePageSelectionJson(raw: string): { page: number; caption: string } | null {
   const cleaned = raw
     .replace(/^```json\s*/i, "")
     .replace(/^```\s*/i, "")
@@ -108,7 +186,7 @@ function parseSelectionJson(raw: string): { page: number; caption: string } | nu
   }
 }
 
-export async function selectKeyFigurePage(
+async function selectKeyFigurePageFallback(
   pages: PageImage[],
   paperTitle: string,
   apiKey: string
@@ -119,9 +197,8 @@ export async function selectKeyFigurePage(
     {
       text: [
         `論文「${paperTitle.slice(0, 120)}」のPDFページ画像です。`,
-        "研究の主要な結果（グラフ・表・地図・モデル図など）が最もよく示されているページを1つ選んでください。",
-        "表紙・著者紹介・参考文献リストだけのページは避けてください。",
-        "JSONのみ返してください: {\"page\": ページ番号, \"caption\": \"80字以内の説明（です・ます調）\"}",
+        "研究の主要な結果（グラフ・表・地図）が最もよく示されているページを1つ選んでください。",
+        "JSONのみ: {\"page\": 番号, \"caption\": \"説明（です・ます調）\"}",
       ].join("\n"),
     },
   ];
@@ -129,10 +206,7 @@ export async function selectKeyFigurePage(
   for (const { page, buffer } of pages) {
     parts.push({ text: `--- ページ ${page} ---` });
     parts.push({
-      inlineData: {
-        mimeType: "image/png",
-        data: buffer.toString("base64"),
-      },
+      inlineData: { mimeType: "image/png", data: buffer.toString("base64") },
     });
   }
 
@@ -159,7 +233,7 @@ export async function selectKeyFigurePage(
 
     const data = (await response.json()) as GeminiVisionResponse;
     const text = data.candidates?.[0]?.content?.parts?.[0]?.text ?? "";
-    return parseSelectionJson(text);
+    return parsePageSelectionJson(text);
   } catch {
     return null;
   } finally {
@@ -167,16 +241,15 @@ export async function selectKeyFigurePage(
   }
 }
 
-export async function extractKeyFigureForPaper(paper: Paper, apiKey: string): Promise<KeyFigure | null> {
-  if (!paper.pdfUrl?.trim()) return null;
-
-  const pdfBuffer = await downloadPdf(paper.pdfUrl);
-  if (!pdfBuffer) return null;
-
+async function extractWithPageFallback(
+  pdfBuffer: Buffer,
+  paper: Paper,
+  apiKey: string
+): Promise<KeyFigure | null> {
   const pages = await renderPdfPages(pdfBuffer);
   if (pages.length === 0) return null;
 
-  const selection = await selectKeyFigurePage(pages, paper.title, apiKey);
+  const selection = await selectKeyFigurePageFallback(pages, paper.title, apiKey);
   if (!selection) return null;
 
   const chosen =
@@ -185,15 +258,31 @@ export async function extractKeyFigureForPaper(paper: Paper, apiKey: string): Pr
 
   await mkdir(FIGURES_DIR, { recursive: true });
   const filename = `${safeFigureFilename(paper.id)}.png`;
-  const diskPath = path.join(FIGURES_DIR, filename);
-  await writeFile(diskPath, chosen.buffer);
+  await writeFile(path.join(FIGURES_DIR, filename), chosen.buffer);
 
   return {
     imagePath: `/figures/${filename}`,
     page: chosen.page,
     caption: selection.caption,
+    source: "pdf-page",
     extractedAt: new Date().toISOString(),
   };
+}
+
+/** 図表なしでも安全に null を返す */
+export async function extractKeyFigureForPaper(
+  paper: Paper,
+  apiKey: string
+): Promise<KeyFigure | null> {
+  if (!paper.pdfUrl?.trim()) return null;
+
+  const pdfBuffer = await downloadPdf(paper.pdfUrl);
+  if (!pdfBuffer) return null;
+
+  const fromPython = await extractWithPyMuPDF(pdfBuffer, paper, apiKey);
+  if (fromPython) return fromPython;
+
+  return extractWithPageFallback(pdfBuffer, paper, apiKey);
 }
 
 export async function extractKeyFigureWithRetry(

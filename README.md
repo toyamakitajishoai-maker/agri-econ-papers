@@ -61,8 +61,11 @@ npm run summarize
 図表抽出（PDFから主要図1枚）:
 
 ```bash
+pip3 install -r requirements-figures.txt
 npm run figures
 ```
+
+（PyMuPDF で図とキャプションを抽出 → Gemini で最重要1件を選定。失敗時はページ画像にフォールバック）
 
 ## 4. Gemini APIキーの取得方法
 

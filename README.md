@@ -87,9 +87,22 @@ npm run figures
 
 1. GitHub にこのリポジトリを push  
 2. [Vercel](https://vercel.com/) で `New Project` を作成  
-3. 対象リポジトリをインポート  
-4. Framework Preset は `Next.js` のままデプロイ  
-5. 以後、`main` への更新で自動デプロイ
+3. リポジトリ `toyamakitajishoai-maker/agri-econ-papers` をインポート  
+4. **Root Directory** は空欄のまま（リポジトリ直下がアプリ本体）  
+5. Framework Preset は `Next.js` のまま → Deploy  
+
+ビルドが失敗する場合:
+
+- Vercel の **Settings → General → Node.js Version** を **20.x** にする  
+- **Root Directory** に `agri-econ-papers` を入れない（親フォルダからインポートした場合のみ `agri-econ-papers` を指定）  
+- Build Logs の赤いエラー文を確認する  
+
+環境変数（サイト表示のみなら不要。ビルド時には `data/*.json` を使用）:
+
+- 本番サイトは GitHub Actions が更新した `data/` を表示します  
+- Vercel 上で API を動かす場合のみ `GEMINI_API_KEY` 等を設定  
+
+6. 以後、`main` への更新で自動デプロイ
 
 ## 7. カスタマイズ方法
 

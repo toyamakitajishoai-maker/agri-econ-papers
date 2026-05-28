@@ -98,11 +98,13 @@ function buildPrompt(paper: ArxivPaper, pdfExcerpt?: string | null): string {
     "・hook: 80字以内の1文。読者が「続きを読みたい」と思う導入。です・ます調。",
     "",
     "【エデュテインメント（読者参加）】",
-    "・quiz: 記事を読む前に答える2〜3択の予想クイズ。",
+    "・quiz: 記事を読む前に答える3択の予想クイズ。",
     "  - question: 論文の結論を問う質問（です・ます調）",
-    "  - options: 選択肢3つ（文字列の配列）",
+    "  - options: 選択肢3つ（文字列の配列）。1つが正解、残り2つは『一見もっともらしいが論文の結論とは異なる誤答』を作る。極端な誤答（明らかに荒唐無稽）は避ける。",
     "  - correctIndex: 正解のインデックス（0始まり）",
     "  - explanation: 正解の理由を2文以内（です・ます調）",
+    "  - difficulty: 'easy' | 'medium' | 'hard' のいずれか。",
+    "      easy=直感的に正解できる / medium=分野の知識があると正解できる / hard=論文を読まないと正解しづらい",
     "・limitations: 研究の限界・制約（PDF本文抜粋に該当記述がある場合のみ）",
     "  - Limitations / Discussion / Conclusion などで著者が述べた限界を、日本語2〜5文で要約",
     "  - サンプルサイズ・一般化可能性・データ欠損・因果推論の限界など、論文に書かれた内容に限定",
@@ -137,7 +139,8 @@ function buildPrompt(paper: ArxivPaper, pdfExcerpt?: string | null): string {
     '    "question": "予想クイズの質問",',
     '    "options": ["選択肢A", "選択肢B", "選択肢C"],',
     '    "correctIndex": 0,',
-    '    "explanation": "正解の解説"',
+    '    "explanation": "正解の解説",',
+    '    "difficulty": "easy | medium | hard のいずれか"',
     "  },",
     '  "limitations": "研究の限界（該当記述がある場合のみ。無ければ空文字）",',
     '  "glossary": [',
@@ -175,6 +178,13 @@ export type GeminiSummaryResult = {
   glossary?: GlossaryTerm[];
 };
 
+function parseDifficulty(raw: unknown): PredictionQuiz["difficulty"] {
+  if (typeof raw !== "string") return undefined;
+  const v = raw.trim().toLowerCase();
+  if (v === "easy" || v === "medium" || v === "hard") return v;
+  return undefined;
+}
+
 function parseQuiz(raw: unknown): PredictionQuiz | undefined {
   if (!raw || typeof raw !== "object") return undefined;
   const q = raw as Partial<PredictionQuiz>;
@@ -183,11 +193,13 @@ function parseQuiz(raw: unknown): PredictionQuiz | undefined {
   const correctIndex = typeof q.correctIndex === "number" ? q.correctIndex : 0;
   const explanation = typeof q.explanation === "string" ? q.explanation.trim() : "";
   if (options.length < 2 || !q.question.trim() || !explanation) return undefined;
+  const difficulty = parseDifficulty((q as { difficulty?: unknown }).difficulty);
   return {
     question: q.question.trim(),
     options,
     correctIndex: Math.min(options.length - 1, Math.max(0, correctIndex)),
     explanation,
+    ...(difficulty ? { difficulty } : {}),
   };
 }
 

@@ -233,6 +233,12 @@ const SLUG_OVERRIDE: Record<string, string> = {
   "行動・心理": "behavior",
   "イノベーション・技術": "innovation",
   "食料システム": "food-system",
+  "ファイナンス・保険": "finance",
+  "AI・データサイエンス": "ai-tech",
+  "神経・脳科学": "neuroscience",
+  "歴史・人文・社会": "humanities",
+  "公共政策・ガバナンス": "policy",
+  "その他": "other",
   "プレプリント": "preprint",
   "査読論文": "peer-reviewed",
 };

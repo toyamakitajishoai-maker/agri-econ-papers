@@ -92,6 +92,41 @@ export const FETCH_TOPICS: FetchTopic[] = [
     semanticQuery: "food systems research",
     arxivCategories: ["q-bio.PE", "econ.GN"],
   },
+  {
+    id: "finance",
+    labelJa: "ファイナンス・保険",
+    openAlexQuery: "finance insurance risk portfolio asset pricing",
+    semanticQuery: "quantitative finance",
+    arxivCategories: ["q-fin.RM", "q-fin.PM", "q-fin.ST", "q-fin.CP", "q-fin.PR", "q-fin.TR", "q-fin.MF"],
+  },
+  {
+    id: "ai-tech",
+    labelJa: "AI・データサイエンス",
+    openAlexQuery: "artificial intelligence machine learning deep learning large language model",
+    semanticQuery: "machine learning artificial intelligence",
+    arxivCategories: ["cs.AI", "cs.LG", "cs.CL", "cs.CV", "cs.NE", "stat.ML"],
+  },
+  {
+    id: "neuroscience",
+    labelJa: "神経・脳科学",
+    openAlexQuery: "neuroscience brain cognition neural representation",
+    semanticQuery: "cognitive neuroscience",
+    arxivCategories: ["q-bio.NC"],
+  },
+  {
+    id: "humanities",
+    labelJa: "歴史・人文・社会",
+    openAlexQuery: "history humanities cultural network social structure",
+    semanticQuery: "digital humanities history",
+    arxivCategories: ["physics.soc-ph", "cs.SI"],
+  },
+  {
+    id: "policy",
+    labelJa: "公共政策・ガバナンス",
+    openAlexQuery: "public policy governance regulation institution",
+    semanticQuery: "public policy governance",
+    arxivCategories: ["econ.GN", "cs.CY"],
+  },
 ];
 
 export function shuffleInPlace<T>(items: T[]): T[] {

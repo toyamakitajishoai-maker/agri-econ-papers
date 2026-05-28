@@ -18,7 +18,8 @@
     "export:csv": "tsx scripts/export-papers-csv.ts",
     "backfill:journals": "tsx scripts/backfill-journals.ts",
     "backfill:pdf": "tsx scripts/backfill-pdf-urls.ts",
-    "backfill:quiz": "tsx scripts/backfill-quiz-difficulty.ts"
+    "backfill:quiz": "tsx scripts/backfill-quiz-difficulty.ts",
+    "backfill:fields": "tsx scripts/backfill-fields.ts"
   },
   "dependencies": {
     "dotenv": "^16.4.5",

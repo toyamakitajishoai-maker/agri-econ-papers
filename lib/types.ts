@@ -13,11 +13,15 @@ export type PaperSummary = {
   figures?: string;
 };
 
+export type QuizDifficulty = "easy" | "medium" | "hard";
+
 export type PredictionQuiz = {
   question: string;
   options: string[];
   correctIndex: number;
   explanation: string;
+  /** 難易度（将来の分野別・難易度別統計用、後方互換のため optional） */
+  difficulty?: QuizDifficulty;
 };
 
 /** 専門用語の解説（要約本文中の語にホバー/タップで意味表示） */

@@ -21,34 +21,28 @@
       ],
       "abstract": "Sustainability issues related to livestock have been discussed primarily with an emphasis on their environmental effects without sufficient consideration for nutrition and other socio-economic factors. The purpose of this article review is to analyze the paper by Varijakshapanicker et al. (2019) that highlights the potential of livestock as a critical resource in enhancing the health of humans, food and nutritional security, and economic stability in developing countries. In the reviewed paper, the authors make use of the results obtained in the areas of nutrition science, environmental science, and developmental economics to elaborate on the role of livestock as an asset in terms of providing livelihood opportunities in rural areas, ecosystem services, and converting non-food biomass resources to food products. At the same time, the paper identifies several problems, including greenhouse gas emissions, inequitable distribution of food resources, and sociocultural obstacles associated with the consumption of animal-source foods. In summary, the paper provides a vital contribution to the literature through its balanced approach to sustainability that accounts for both environmental and nutritional factors.",
       "summary": {
-        "gist": "本論文レビューは、Varijakshapanicker et al. (2019) の論文を分析し、畜産が開発途上国における人間の健康、食料・栄養安全保障、経済安定性を高める重要な資源となる可能性を明らかにしています。同時に、温室効果ガス排出や食料資源の不公平な分配といった課題も指摘し、持続可能性に対するバランスの取れたアプローチの重要性を強調しています。",
-        "novelty": "従来の研究が畜産の持続可能性問題を主に環境影響に焦点を当ててきたのに対し、本レビューは栄養やその他の社会経済的要因への十分な考慮が欠けていた研究の空白を埋めています。栄養科学、環境科学、開発経済学の知見を統合することで、畜産が農村地域の生計機会、生態系サービス、非食料バイオマスから食料への転換といった多面的な資産としての役割を、より包括的に提示している点が新規性です。",
-        "method": "本論文は、Varijakshapanicker et al. (2019) の論文を対象としたレビュー記事です。このレビュー対象論文は、栄養科学、環境科学、開発経済学の各分野で得られた研究結果を活用し、開発途上国における畜産の役割を多角的に分析しています。具体的なデータセットや計量経済学的なモデルの適用については、本レビューの範囲では記述がありません。",
-        "results": "レビュー対象論文は、畜産が開発途上国において人間の健康、食料・栄養安全保障、経済安定性を向上させる潜在力を持つことを強調しています。具体的には、農村地域での生計機会の提供、生態系サービスの創出、非食料バイオマス資源から食料製品への転換といった資産としての役割を指摘しています。一方で、温室効果ガス排出、食料資源の不公平な分配、動物由来食品の消費に関連する社会文化的障壁といった問題点も特定しています。結論として、環境要因と栄養要因の両方を考慮した持続可能性へのバランスの取れたアプローチが、文献に重要な貢献をしていると評価しています。",
-        "why": "畜産が開発途上国の経済安定性を高めるのは、農村地域で生計機会を提供し、収入源を多様化できるためです。また、非食料バイオマスを食料に変換することで、資源の有効活用と食料供給に貢献します。さらに、生態系サービスを提供することで、環境と生産性の両面から持続可能性を支える側面もあります。しかし、温室効果ガス排出や食料の不公平な分配といった課題も存在し、これらを解決しながら畜産の恩恵を最大化するバランスの取れたアプローチが求められています。",
+        "gist": "本論文レビューは、畜産が温室効果ガス排出などの環境側面だけでなく、人間の健康、栄養、経済的安定性にも大きく貢献する多機能な資源であることを強調しています。特に開発途上国において、畜産が食料安全保障、生計向上、生態系サービスに果たす役割を、栄養科学、環境科学、開発経済学の知見を統合して分析しています。",
+        "novelty": "従来の研究が畜産の環境影響、特に温室効果ガス排出に偏重していたのに対し、本レビューは栄養、健康、生計、社会経済的側面を包括的に評価することで、研究の空白を埋めています。また、畜産システムを持続可能性の多角的指標（排出原単位、栄養密度、公平性など）で評価する、よりバランスの取れたアプローチを提案している点が新規性です。",
+        "method": "本研究は、Varijakshapanicker et al. (2019) の論文を主要な対象とし、その内容を詳細に分析するレビュー論文です。栄養科学、環境科学、開発経済学といった複数の分野の既存研究結果を統合し、畜産の役割と課題を多角的に考察しています。具体的なデータセットや計量経済学的なモデルは使用されていませんが、既存の学術文献を批判的に検討し、その知見を総合することで結論を導き出しています。",
+        "results": "分析の結果、持続可能な畜産システムは生態系の健全性、経済的収益性、社会的受容性のバランスを必要とすることが示されました。適切に管理された畜産システムは、炭素隔離、栄養循環、土地生産性の向上に寄与し、人間が直接摂取できない草や作物残渣を栄養豊富な食品に変換する能力があります。また、動物性食品（ASF）は、特に開発途上国の子どもの成長、認知発達、発育阻害の減少に不可欠な高品質タンパク質、必須脂肪酸、微量栄養素（鉄、亜鉛、ビタミンB12など）を提供することが、ケニア、エクアドル、インド、ネパールなどの研究で示されています。畜産は農村地域の雇用創出や収入源の多様化を通じて経済的安定性にも貢献しますが、病気発生、価格変動、サプライチェーンの混乱といった課題も指摘されています。",
+        "why": "畜産が経済安定性を高めるのは、農村地域で多様な生計機会を提供し、作物ベースのシステムよりも安定した収入をもたらすためです。また、動物性食品は、子どもたちの成長や認知発達に必要な高品質のタンパク質や微量栄養素を供給することで、人間の健康と栄養状態を改善します。さらに、適切に管理された放牧システムは、土壌浸食の削減や土壌炭素隔離の増加を通じて生態系サービスを提供し、環境の持続可能性にも貢献します。",
         "figures": "アブストラクトに図表の記述なし"
       },
       "doi": "10.65339/ijsair.v2.i2.481",
       "source": "openalex",
       "journal": "International Journal of Sustainability and Advanced Integrated Research",
       "titleJa": "持続可能な畜産システムが人間の健康、栄養、経済状況を改善する可能性に関する論文レビュー",
-      "catchTitle": "畜産は環境負荷だけじゃない？ 健康・経済への貢献とは",
-      "hook": "畜産が開発途上国の健康、栄養、経済安定に果たす役割を、環境側面だけでなく多角的に分析した論文レビューです。",
-      "keyFigure": {
-        "imagePath": "/figures/W7162205795.png",
-        "page": 2,
-        "caption": "本研究の背景と目的、そして持続可能な家畜システムが人間の健康、栄養、経済状況を改善する可能性について説明しています。",
-        "extractedAt": "2026-05-26T01:16:36.481Z"
-      },
+      "catchTitle": "畜産は環境負荷だけじゃない？健康・経済への多角的貢献",
+      "hook": "本論文レビューは、畜産が開発途上国の健康、食料安全保障、経済安定性向上に果たす多面的な役割を明らかにしています。",
       "quiz": {
-        "question": "畜産が開発途上国にもたらす影響として、この論文レビューが特に強調しているのは次のうちどれですか？",
+        "question": "持続可能な畜産システムは、主にどのような側面から評価されるべきでしょうか？",
         "options": [
-          "健康、栄養、経済安定性の向上と、環境・社会文化的課題の双方",
-          "主に温室効果ガス排出量の削減と環境保全",
-          "食料資源の公平な分配と消費文化の統一"
+          "環境負荷、栄養、経済、社会といった多角的な側面から評価されるべきです。",
+          "温室効果ガス排出量と土地利用効率といった環境側面のみで評価されるべきです。",
+          "動物性食品の生産量と価格安定性といった経済側面のみで評価されるべきです。"
         ],
         "correctIndex": 0,
-        "explanation": "この論文レビューは、畜産が健康、栄養、経済安定性を高める可能性を強調しつつ、環境問題や社会文化的課題もバランス良く指摘しています。",
+        "explanation": "本論文レビューでは、畜産を持続可能性の多角的指標（排出原単位、栄養密度、公平性など）で評価する、よりバランスの取れたアプローチを提案しています。",
         "difficulty": "medium"
       },
       "evidence": {
@@ -62,17 +56,54 @@
       },
       "field": "食料システム",
       "takeaway": {
-        "whatIsIt": "開発途上国での家畜飼育が、人々の暮らしや栄養にどう影響するかをまとめた研究なんです。",
-        "whatFound": "家畜は健康や経済を良くする一方で、環境問題も引き起こすので、バランスが大事だそうです。",
-        "soWhat": "環境と栄養の両方を考えた家畜の育て方が、私たちの食卓や社会を良くする鍵になるようですね。"
+        "whatIsIt": "この研究は、畜産が環境問題だけでなく、人々の健康や経済にも深く関わることを示したものです。",
+        "whatFound": "畜産は、適切に管理すれば栄養改善や収入安定に貢献し、環境にも良い影響を与えることがわかりました。",
+        "soWhat": "畜産を評価する際には、環境負荷だけでなく、栄養や経済、社会的な役割も考慮することが大切だそうです。"
       },
       "audio": {
         "src": "/audio/W7162205795.mp3",
         "format": "mp3",
-        "duration": 30,
+        "duration": 32,
         "voice": "Kore",
-        "generatedAt": "2026-05-28T05:47:46.669Z"
-      }
+        "generatedAt": "2026-05-28T07:05:42.786Z"
+      },
+      "limitations": "本レビューは、既存の経験的研究がしばしば観察研究であるため、動物性食品の摂取、栄養成果、環境影響間の因果関係を確立することが難しい点を指摘しています。また、一部の研究が特定の低・中所得国に限定されており、他の農業・経済状況への一般化可能性が限られることも限界としています。さらに、栄養成果の測定方法が研究間で一貫しておらず、畜産システムの広範な雇用効果に関する国レベルの情報が不足していることも課題です。",
+      "glossary": [
+        {
+          "term": "動物性食品（ASF）",
+          "definition": "肉、魚、卵、乳製品など、動物を起源とする食品のことです。高品質なタンパク質や必須微量栄養素を多く含みます。",
+          "reading": "Animal-Source Foods"
+        },
+        {
+          "term": "温室効果ガス（GHG）",
+          "definition": "地球の温暖化を引き起こす原因となるガスの総称です。二酸化炭素やメタンなどが含まれ、畜産活動からも排出されます。",
+          "reading": "Greenhouse Gas"
+        },
+        {
+          "term": "排出原単位",
+          "definition": "生産された製品単位あたりに排出される温室効果ガスの量を示す指標です。総排出量だけでなく、生産効率を考慮した評価に用いられます。",
+          "reading": "emission intensity"
+        },
+        {
+          "term": "炭素隔離",
+          "definition": "大気中の二酸化炭素を土壌や植物、海洋などに貯留するプロセスのことです。適切に管理された放牧地などがこれに貢献するとされます。",
+          "reading": "carbon sequestration"
+        },
+        {
+          "term": "シルボパストラルシステム",
+          "definition": "樹木、牧草、家畜を統合して管理する農林畜産複合システムのことです。生物多様性の向上や土壌炭素貯留に寄与すると期待されています。",
+          "reading": "silvopastoral systems"
+        },
+        {
+          "term": "スタント（発育阻害）",
+          "definition": "慢性的な栄養不良により、年齢に対して身長が低い状態を指します。特に開発途上国の子どもたちに見られる深刻な健康問題です。",
+          "reading": "stunting"
+        },
+        {
+          "term": "多機能性",
+          "definition": "一つのものが複数の機能や役割を持つことを指します。畜産においては、食料生産だけでなく、生計向上、文化、生態系サービスなど多様な側面を指します。"
+        }
+      ]
     },
     {
       "id": "W7161974967",
@@ -95,35 +126,38 @@
       ],
       "abstract": "This study examined the efficacy of multi-entity collaborative patrols in rural contexts through a quantitative analysis of GPS-tracked patrol activities aimed at preventing agricultural theft. We tracked patrols conducted by six organizations in two Japanese municipalities during the 2023 fruit harvest season. We found significant differences in patrol characteristics across spatial scale, movement patterns, temporal distribution, and physical route properties. Furthermore, the diverse patrol entities substantially improved both the temporal and spatial coverage. This study contributes to rural criminology and plural policing research by introducing GPS-based quantitative assessment techniques. The results indicate the value of plural policing approaches in rural contexts, where collaboration among entities with complementary operational characteristics can maximize limited resources for crime prevention.",
       "summary": {
-        "gist": "本研究は、日本の農村地域における果物盗難防止を目的とした複数組織による協調パトロールの有効性を、GPS追跡データを用いて定量的に評価しました。その結果、多様な主体が連携することで、パトロールの時間的・空間的カバー率が大幅に向上することが明らかになりました。",
-        "novelty": "従来の農村犯罪学や複数主体による治安維持（plural policing）に関する研究では、GPSを用いたパトロール活動の定量的な評価手法が不足していました。本研究は、GPSベースの定量評価技術を導入することで、この研究の空白を埋め、複数主体によるパトロールの具体的な運用特性と効果を詳細に分析した点で新規性があります。",
-        "method": "本研究では、2023年の果物収穫期に、日本の2つの自治体で6つの組織が実施したパトロール活動を対象としました。これらのパトロール活動はGPSで追跡され、そのデータを用いて、空間的規模、移動パターン、時間的分布、物理的な経路特性といったパトロールの特性が分析されました。具体的な分析手法の名称はアブストラクトに明記されていませんが、GPSデータに基づく定量分析が行われています。",
-        "results": "分析の結果、パトロールの特性には空間的規模、移動パターン、時間的分布、物理的な経路特性において組織間で有意な違いがあることが判明しました。さらに、多様なパトロール主体が連携することで、パトロールの時間的および空間的カバー率が大幅に改善されることが示されました。この結果は、農村地域における複数主体による治安維持アプローチの価値を示しており、補完的な運用特性を持つ組織間の連携が、限られた資源を最大限に活用した犯罪防止に繋がることを示唆しています。",
-        "why": "複数主体によるパトロールが効果を高めるのは、各組織が持つ異なる運用特性（例えば、活動時間帯、巡回ルート、移動手段など）が互いに補完し合うためと考えられます。これにより、単一の組織ではカバーしきれない時間帯や地域、あるいは特定の種類の犯罪リスクに対して、より広範かつきめ細やかな監視が可能になります。結果として、限られた人員や予算といった資源を効率的に配分し、犯罪抑止効果を最大化できるのです。",
-        "figures": "アブストラクトに図表の記述なし"
+        "gist": "本研究は、日本の農村地域における果物盗難対策として、複数の組織が連携して実施するパトロールの有効性をGPSデータを用いて定量的に評価しました。その結果、多様な主体が協働することで、パトロールの時間的・空間的カバー率が大幅に向上することが明らかになりました。",
+        "novelty": "従来の研究では、都市部における警察パトロールの最適化や、住民による自主的な防犯活動に関する評価が中心でした。本研究は、農村地域における農業盗難対策として、警察以外の多様な主体（市役所、JA、NPO、警備会社など）が連携して行う「複数主体によるパトロール（plural policing）」の実態を、GPSデータを用いて定量的に分析した点で新規性があります。これにより、限られた資源で効果的な防犯活動を行うための新たな知見を提供しています。",
+        "method": "本研究は、2023年の果物収穫期（7月から11月）に、山梨県の南アルプス市と笛吹市で実施されました。これらの地域は高級果物の産地であり、果物盗難が深刻な問題となっています。調査対象は、両市でパトロールを実施する6つの組織で、各組織に小型GPSロガーを携行してもらい、30秒間隔で位置情報を記録しました。GPSデータと日誌の記録を照合し、パトロール中の移動データのみを抽出した後、ArcGIS Proのツールを用いて「滞在」と「移動」を区別し、パトロールルートを道路データにマッピングして分析しました。",
+        "results": "分析の結果、パトロールの特性は空間スケール、移動パターン、時間分布、物理的ルート特性において組織間で有意な違いがあることが判明しました。さらに、多様なパトロール主体が協働することで、パトロールの時間的および空間的なカバー率が大幅に改善されることが示されました。これは、農村地域における限られた資源を最大限に活用し、犯罪抑止効果を高める上で、複数主体による連携アプローチが有効であることを示唆しています。",
+        "why": "複数主体によるパトロールがカバー率を向上させるのは、各組織が異なる運用特性や活動範囲を持っているためです。例えば、警察は広範囲をカバーする一方で、市役所やJAは特定の地域や時間帯に重点を置くことができ、NPOや警備会社はさらに多様な活動形態を取り得ます。これらの異なる特性を持つ組織が連携することで、個々の組織だけではカバーしきれない時間帯や地理的範囲を補完し合い、結果としてパトロールの網羅性が高まるためです。これにより、犯罪者が活動しにくい環境が広がり、盗難防止に繋がると考えられます。",
+        "figures": "アブストラクトには主要な図表の記述はありませんが、論文本文抜粋には、研究対象地域である山梨県の南アルプス市と笛吹市の位置と農地の分布を示す図（Fig. 1）、パトロール日誌の記入例（Fig. 2）、GPSデータ処理のステップを示す図（Fig. 3）、そして処理後のパトロールルートと滞在地点の例を示す図（Fig. 4）が言及されています。"
       },
       "doi": "10.1057/s41284-026-00543-2",
       "source": "openalex",
       "journal": "Security Journal",
-      "titleJa": "農村地域における複数主体によるパトロール：GPSを用いた果物盗難対策の評価",
-      "catchTitle": "果物盗難、防ぐのは誰？ GPSで効果を検証",
-      "hook": "日本の農村で多発する果物盗難に対し、複数組織が連携するパトロールの効果をGPSデータで分析した研究です。",
+      "titleJa": "農村地域における複数主体によるパトロール：果物盗難対策としてのGPSベース評価",
+      "catchTitle": "果物盗難、複数パトロールで防ぐ",
+      "hook": "日本の農村地域で深刻化する果物盗難に対し、多様な組織が連携するパトロールがどれほど効果的か、GPSデータで分析した研究です。",
       "keyFigure": {
-        "imagePath": "/figures/W7161974967.png",
+        "imagePath": "/figures/W7161974967_results.jpeg",
         "page": 8,
-        "caption": "様々な組織によるパトロールと滞在地点の分布を地図で示しています。",
-        "extractedAt": "2026-05-26T01:16:42.278Z"
+        "caption": "各パトロール主体のパトロールルートと滞在地点の分布を示しています。",
+        "label": "Fig. 5  Distribution of patrol routes and stay points for each patrol group",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-05-28T06:50:25.924Z"
       },
       "quiz": {
-        "question": "日本の農村における果物盗難対策として、複数組織が連携してパトロールを行うと、どのような効果が期待できるでしょうか？",
+        "question": "農村地域での果物盗難対策として、複数の組織が連携してパトロールを行うと、どのような効果が期待できるでしょうか？",
         "options": [
-          "パトロールの時間的・空間的カバー率が向上する。",
-          "パトロールの実施回数が減少する。",
-          "パトロールにかかる費用が大幅に削減される。"
+          "パトロールの時間的・空間的カバー率が大幅に向上する。",
+          "パトロールのコストが大幅に削減される。",
+          "パトロールの頻度が減り、住民の負担が軽減される。"
         ],
         "correctIndex": 0,
-        "explanation": "多様な組織が連携することで、それぞれの組織が持つ異なる特性が補完し合い、より広範囲かつ長時間の監視が可能になるためです。費用削減や回数減少は直接的な結果ではありません。",
-        "difficulty": "easy"
+        "explanation": "本研究では、多様な組織が連携することで、パトロールの時間的・空間的カバー率が大幅に向上することが示されています。これにより、限られた資源で効果的な防犯活動が可能になります。",
+        "difficulty": "medium"
       },
       "evidence": {
         "level": 3,
@@ -136,17 +170,62 @@
       },
       "field": "公共政策・ガバナンス",
       "takeaway": {
-        "whatIsIt": "日本の農村で問題になっている果物泥棒対策として、いろんな団体が協力して行うパトロールの効果を調べた研究なんです。",
-        "whatFound": "GPSデータで分析したら、複数の団体が協力すると、パトロールできる範囲や時間がぐんと広がるのがわかったそうです。",
-        "soWhat": "限られた人手や予算でも、みんなで協力すれば、地域全体で犯罪を防ぐ効果が高まるってことですね。"
+        "whatIsIt": "日本の農村で深刻な果物盗難を防ぐため、警察だけでなく多様な組織が協力するパトロールの効果をGPSで調べた研究なんです。",
+        "whatFound": "市役所やJA、NPOなどが連携すると、パトロールがカバーできる時間や場所がぐんと広がり、盗難対策にとても有効だそうです。",
+        "soWhat": "限られた人手や予算でも、地域で協力し合えば、大切な農作物を守り、安心して暮らせる社会に繋がるようですね。"
       },
       "audio": {
         "src": "/audio/W7161974967.mp3",
         "format": "mp3",
-        "duration": 33,
+        "duration": 35,
         "voice": "Kore",
-        "generatedAt": "2026-05-28T05:48:13.496Z"
-      }
+        "generatedAt": "2026-05-28T07:06:05.632Z"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "複数主体によるパトロール（plural policing）",
+          "definition": "従来の警察組織だけでなく、民間警備会社や地域住民組織など、多様な主体が協力して地域の安全維持活動を行う枠組みのことです。農村地域では特に、限られた警察資源を補完する役割が期待されています。",
+          "reading": "Plural policing"
+        },
+        {
+          "term": "GPSロガー",
+          "definition": "位置情報（GPSデータ）を自動的に記録する小型の装置です。本研究では、パトロール隊員の移動経路や滞在時間を客観的に把握するために使用されました。",
+          "reading": "GPS logger"
+        },
+        {
+          "term": "空間的カバー率",
+          "definition": "パトロール活動が地理的にどれだけの範囲を網羅しているかを示す指標です。広範囲をカバーすることで、犯罪者が活動しにくい環境を広げる効果が期待されます。"
+        },
+        {
+          "term": "時間的カバー率",
+          "definition": "パトロール活動が時間的にどれだけの期間や時間帯を網羅しているかを示す指標です。犯罪が発生しやすい時間帯などを重点的にカバーすることで、犯罪抑止効果を高めます。"
+        },
+        {
+          "term": "ArcGIS Pro",
+          "definition": "地理情報システム（GIS）ソフトウェアの一つで、地図データの作成、分析、管理を行うために使われます。本研究では、GPSデータをパトロールルートに変換したり、移動パターンを分析したりするために利用されました。"
+        }
+      ],
+      "keyFigures": [
+        {
+          "imagePath": "/figures/W7161974967_results.jpeg",
+          "page": 8,
+          "caption": "各パトロール主体のパトロールルートと滞在地点の分布を示しています。",
+          "label": "Fig. 5  Distribution of patrol routes and stay points for each patrol group",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-05-28T06:50:25.924Z"
+        },
+        {
+          "imagePath": "/figures/W7161974967_why.png",
+          "page": 10,
+          "caption": "南アルプス市における各パトロール主体による時間帯別のパトロール頻度を示しています。",
+          "label": "Fig. 7  Frequency of patrols by time of day across patrol groups (Minami-Alps City)",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-05-28T06:50:25.933Z"
+        }
+      ]
     },
     {
       "id": "W7162132175",
@@ -168,34 +247,28 @@
       ],
       "abstract": "National fadama development project (NFDP) III has been implemented by the World Bank, Federal and states Governments of Nigeria to resolve, among others, issues relating to wellbeing. However, NFDP III extent of contribution to farming households’ wellbeing has not been sufficiently researched. Thus, this research looked into NFDP III impact on wellbeing of farming households in Delta State, Nigeria. Multi-stage sampling procedure was used to select 108 respondents (NFDP III beneficiaries). Interview schedule was used to obtain data on respondents demographic and enterprise characteristics, participation status in NFDP III, food security, reduced vulnerability to poverty, livelihood outcome and wellbeing. Data were analyzed with descriptive statistics, Chi-square, Pearson Product Moment Correlation, independent samples t-test, and multiple linear regression at α0.05. Majority were females (54.6%), married (75.9%) and non-members of social groups (52.8%). Crop farming/production (59.3%) was the predominant` non-NFDP III enterprise. The mean extension contact per year, farm size, farming experience, income from NFDP III enterprises and income from Non-NFDP III enterprises were 3.0 ± 4.0 yearly, 2.8 ± 4.3 ha, 27.0 ± 14.0 years, ₦2,442,022.00 ± 1,897,935.00 yearly, and ₦2,257,828.00 ± 3,925,102.00 yearly, respectively. Approximately 58.0% of the beneficiaries had inadequate participation in NFDP III, 54.6% were food secure, 53.7% had less vulnerability to poverty and 52.8% had high livelihood outcome. Over 56.0% had high wellbeing. The food security of farming households with high (34.4 ± 9.0) and low (29.3 ± 8.6) participation in NFDP III differed significantly (t=-2.96). Farming households with high participation (-2.9 ± 9.4) in NFDP III had less vulnerability to poverty than those with low participation (-7.3 ± 12.9). Farming households with high participation (34.3 ± 12.5) in NFDP III had high livelihood outcome than those with low participation (26.9 ± 14.1). Membership of social group (χ2 = 7.48), reduced vulnerability to poverty (r = 0.18), and income from non-NFDP III enterprises (r = 0.18) were all positively correlated with NFDP III beneficiaries wellbeing. Wellbeing of farming households with high (89.8±19.48) and low (81.2±20.86) participation in NFDP III differed significantly (t=-2.18). Predictors of wellbeing were mostly food security (β=-4.79), vulnerability to poverty (β=-2.75), livelihood outcome (β=4.65) and participation status (β=0.43). Farming households with high participation in NFDP III had better wellbeing than those with low participation. NFDP III improved the wellbeing of farming households in Delta State, Nigeria.",
       "summary": {
-        "gist": "本研究は、ナイジェリアのデルタ州において、国家ファダマ開発プロジェクトIII（NFDP III）が参加農家の幸福度に与える影響を分析しました。その結果、NFDP IIIへの参加度が高い農家は、食料安全保障、貧困への脆弱性の低減、生計の成果、そして全体的な幸福度において、参加度が低い農家よりも有意に優れていることが明らかになりました。",
-        "novelty": "これまでの研究では、ナイジェリアの国家ファダマ開発プロジェクトIII（NFDP III）が農家の幸福度にどの程度貢献しているかについて、十分に調査されていませんでした。本研究は、デルタ州のNFDP III受益者を対象に、プロジェクトへの参加度が幸福度の様々な側面（食料安全保障、貧困への脆弱性、生計の成果）に与える具体的な影響を定量的に評価することで、この研究の空白を埋めています。",
-        "method": "本研究は、ナイジェリアのデルタ州において、多段階抽出法を用いてNFDP III受益者108名を対象にデータを収集しました。調査は面接形式で行われ、回答者の人口統計学的特性、事業特性、NFDP IIIへの参加状況、食料安全保障、貧困への脆弱性の低減、生計の成果、および幸福度に関する情報が得られました。データ分析には、記述統計、カイ二乗検定、ピアソン積率相関係数、独立標本t検定、および重回帰分析が用いられました。",
-        "results": "分析の結果、NFDP IIIへの参加度が高い農家は、低い農家と比較して、食料安全保障（t=-2.96で有意差あり）、貧困への脆弱性の低減（高い参加度で平均-2.9、低い参加度で平均-7.3）、および生計の成果（高い参加度で平均34.3、低い参加度で平均26.9）において有意に優れていました。また、NFDP IIIへの参加度が高い農家の幸福度（平均89.8）は、低い農家（平均81.2）よりも有意に高いことが示されました（t=-2.18）。幸福度の予測因子としては、食料安全保障（β=-4.79）、貧困への脆弱性（β=-2.75）、生計の成果（β=4.65）、および参加状況（β=0.43）が挙げられ、NFDP IIIがデルタ州の農家の幸福度を向上させたことが示唆されます。",
-        "why": "NFDP IIIへの参加度が高い農家がより高い幸福度を示すのは、プロジェクトが提供する支援を通じて、食料安全保障が向上し、貧困への脆弱性が低減されるためと考えられます。具体的には、プロジェクトへの積極的な参加は、農業生産性の向上や収入源の多様化につながり、これが食料の安定供給と家計収入の増加をもたらします。さらに、生計の成果が高まることで、農家は経済的に安定し、将来への不安が軽減されるため、全体的な幸福度が向上すると考えられます。社会集団への参加や非NFDP III事業からの収入も幸福度と正の相関があることから、プロジェクトによる直接的な恩恵だけでなく、社会的なつながりや収入源の多様化も幸福度を高める要因となっている可能性があります。",
+        "gist": "本研究は、ナイジェリアのデルタ州において、世界銀行とナイジェリア政府が実施した国家ファダマ開発プロジェクトIII（NFDP III）が農業世帯のウェルビーイングに与える影響を評価したものです。分析の結果、NFDP IIIへの参加度が高い農業世帯ほど、食料安全保障、貧困への脆弱性の低減、生計の成果、そして総合的なウェルビーイングが有意に改善されることが明らかになりました。",
+        "novelty": "これまでのNFDP IIIに関する研究が農業生産量や経済的利益に焦点を当てがちであったのに対し、本研究は受益者の参加度、食料安全保障、貧困への脆弱性の低減、生計の成果、そして総合的なウェルビーイングという多角的な側面からプロジェクトの影響を評価した点に新規性があります。特に、デルタ州におけるNFDP IIIが農業世帯のウェルビーイングに与える影響に焦点を当てた研究は不足しており、この知識ギャップを埋めるものです。",
+        "method": "本研究では、ナイジェリアのデルタ州において、NFDP IIIの受益者108名を多段階抽出法で選定し、インタビュー調査を通じてデータを収集しました。データには、回答者の人口統計学的特性、企業特性、NFDP IIIへの参加状況、食料安全保障、貧困への脆弱性の低減、生計の成果、ウェルビーイングに関する情報が含まれています。これらのデータは、記述統計、カイ二乗検定、ピアソン積率相関係数、独立標本t検定、および重回帰分析を用いて統計的に分析されました。",
+        "results": "分析の結果、NFDP IIIへの参加度が高い農業世帯は、参加度が低い世帯と比較して、食料安全保障（高参加群34.4±9.0 vs 低参加群29.3±8.6、t=-2.96）、貧困への脆弱性（高参加群-2.9±9.4 vs 低参加群-7.3±12.9）、生計の成果（高参加群34.3±12.5 vs 低参加群26.9±14.1）、そして総合的なウェルビーイング（高参加群89.8±19.48 vs 低参加群81.2±20.86、t=-2.18）の全てにおいて有意に良好な状態であることが示されました。特に、食料安全保障（β=-4.79）、貧困への脆弱性（β=-2.75）、生計の成果（β=4.65）、および参加状況（β=0.43）がウェルビーイングの主要な予測因子であることが判明しました。これらの結果は、NFDP IIIがデルタ州の農業世帯のウェルビーイングを改善したことを示唆しています。",
+        "why": "NFDP IIIへの参加度が高い農業世帯でウェルビーイングが改善されるのは、プロジェクトが提供する資源や技術支援を通じて、農業生産性が向上し、収入が増加するためと考えられます。具体的には、安価な灌漑方法や改良された種子、肥料などの投入物へのアクセスが改善され、通年での作物栽培が可能になることで、食料安全保障が強化されます。また、生計活動の多角化や市場アクセス改善により、貧困への脆弱性が低減し、持続可能な生計の成果が得られることで、総合的な生活の質、すなわちウェルビーイングが高まるメカニズムが働いていると推察されます。",
         "figures": "アブストラクトに図表の記述なし"
       },
       "doi": "10.33462/jotaf.1724413",
       "source": "openalex",
       "journal": "Tekirdağ Ziraat Fakültesi Dergisi",
-      "titleJa": "ナイジェリア・デルタ州における国家ファダマ開発プロジェクトIIIが農家の幸福度に与える影響",
-      "catchTitle": "農業プロジェクト、農家の幸福度を高める？",
-      "hook": "ナイジェリアの国家ファダマ開発プロジェクトIII（NFDP III）が、農家の幸福度向上にどれほど貢献したのかを検証した研究です。",
-      "keyFigure": {
-        "imagePath": "/figures/W7162132175.png",
-        "page": 8,
-        "caption": "本研究の参加者の企業活動への参加状況と、その平均値および標準偏差を示した表です。",
-        "extractedAt": "2026-05-26T01:16:50.203Z"
-      },
+      "titleJa": "ナイジェリア・デルタ州における国家ファダマ開発プロジェクトIIIが農業世帯のウェルビーイングに与える影響",
+      "catchTitle": "農業支援が生活向上に貢献？ ナイジェリアのプロジェクト効果を検証",
+      "hook": "ナイジェリアの農業開発プロジェクトが、参加農家の食料安全保障や貧困脆弱性の低減、そして総合的なウェルビーイングにどのような影響を与えたのかを明らかにしています。",
       "quiz": {
-        "question": "ナイジェリアの農業開発プロジェクトNFDP IIIへの参加度が高い農家は、低い農家と比べてどのような傾向が見られましたか？",
+        "question": "ナイジェリアの農業開発プロジェクト（NFDP III）への参加度が高い農家は、低い農家と比較して、生活の質（ウェルビーイング）にどのような違いが見られましたか？",
         "options": [
-          "食料安全保障、貧困への脆弱性、生計の成果、幸福度の全てが向上した",
-          "収入は増えたが、食料安全保障や幸福度には変化がなかった",
-          "プロジェクトへの参加は、農家の幸福度とは無関係だった"
+          "食料安全保障、貧困への脆弱性、生計の成果、そして総合的なウェルビーイングの全てが有意に改善されました。",
+          "主に農業収入は増加しましたが、食料安全保障や貧困への脆弱性には大きな変化は見られませんでした。",
+          "プロジェクトへの参加は、農家の生活の質にほとんど影響を与えませんでした。"
         ],
         "correctIndex": 0,
-        "explanation": "本研究の結果、NFDP IIIへの参加度が高い農家は、食料安全保障、貧困への脆弱性の低減、生計の成果、そして全体的な幸福度において、参加度が低い農家よりも有意に優れていることが示されました。",
+        "explanation": "論文の結果によると、NFDP IIIへの参加度が高い農家は、食料安全保障、貧困への脆弱性の低減、生計の成果、そして総合的なウェルビーイングの全てにおいて、低い農家よりも有意に良好な状態でした。",
         "difficulty": "medium"
       },
       "evidence": {
@@ -209,17 +282,60 @@
       },
       "field": "農業経済",
       "takeaway": {
-        "whatIsIt": "ナイジェリアの農業開発プロジェクトが、参加する農家の人たちの暮らしにどう影響するかを調べた研究なんです。",
-        "whatFound": "プロジェクトに熱心に参加した農家は、食料が安定したり、貧困になりにくかったり、収入も増えて、全体的な幸福度も高かったそうですよ。",
-        "soWhat": "農業支援プロジェクトは、単に生産性を上げるだけでなく、農家の人たちの生活の質や心の豊かさにも大きく貢献する可能性があるんですね。"
+        "whatIsIt": "ナイジェリアの農業開発プロジェクトが、農家の暮らしにどう影響したかを調べた研究です。",
+        "whatFound": "プロジェクトに熱心に参加した農家は、食料が安定し、貧困になりにくく、生活の質も向上したそうです。",
+        "soWhat": "農業支援は、単にお金が増えるだけでなく、人々の総合的な幸福度を高める効果があるのですね。"
       },
       "audio": {
         "src": "/audio/W7162132175.mp3",
         "format": "mp3",
-        "duration": 38,
+        "duration": 35,
         "voice": "Kore",
-        "generatedAt": "2026-05-28T05:48:37.239Z"
-      }
+        "generatedAt": "2026-05-28T07:06:27.154Z"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "国家ファダマ開発プロジェクトIII（NFDP III）",
+          "definition": "世界銀行とナイジェリア政府が共同で実施した農業開発プログラムです。灌漑設備の導入や農業技術の支援を通じて、農家の生産性向上と貧困削減を目指しました。",
+          "reading": "National Fadama Development Project III"
+        },
+        {
+          "term": "ウェルビーイング",
+          "definition": "個人の生活状況や幸福度を総合的に示す概念です。身体的、精神的、社会的、経済的な側面を含んだ、生活の質の高さを意味します。",
+          "reading": "Wellbeing"
+        },
+        {
+          "term": "多段階抽出法",
+          "definition": "大規模な調査対象から、段階的にサンプルを絞り込んでいくサンプリング手法です。まず大きな地域を選び、次にその中の小さな地域、さらに個人へと進みます。",
+          "reading": "Multi-stage sampling procedure"
+        },
+        {
+          "term": "食料安全保障",
+          "definition": "全ての人が、いつでも十分に安全で栄養のある食料を手に入れられる状態を指します。飢餓や栄養不足のリスクが低いことを意味します。",
+          "reading": "Food security"
+        },
+        {
+          "term": "貧困への脆弱性",
+          "definition": "経済的なショックや災害などによって、貧困状態に陥りやすい度合いを示す指標です。脆弱性が低いほど、予期せぬ事態にも対応できる回復力があると言えます。",
+          "reading": "Vulnerability to poverty"
+        },
+        {
+          "term": "生計の成果",
+          "definition": "人々の生計活動がもたらす結果や効果のことです。収入の安定、資産の増加、生活環境の改善などが含まれます。",
+          "reading": "Livelihood outcome"
+        },
+        {
+          "term": "記述統計",
+          "definition": "収集したデータの要約や特徴を数値やグラフで表現する統計手法です。平均値や標準偏差などがこれにあたります。",
+          "reading": "Descriptive statistics"
+        },
+        {
+          "term": "重回帰分析",
+          "definition": "複数の要因（独立変数）が、ある結果（従属変数）にどのように影響するかを分析する統計手法です。要因の相対的な影響度を数値で示します。",
+          "reading": "Multiple linear regression"
+        }
+      ]
     },
     {
       "id": "W7162096050",
@@ -241,29 +357,29 @@
       ],
       "abstract": "This research examines the economic and social impacts of the Plantation Community Empowerment Program (PMDK) and develops a Creating Shared Value (CSV)-based agribusiness model through the optimization of non-productive land in plantation areas. Although the application of CSV in agribusiness has increased, studies that explain the integrated mechanisms linking land optimization, community empowerment, and agribusiness systems remain limited. This research employed a qualitative case study approach at PTPN I Regional 2, Indonesia, involving 16 key informants from company management, field officers, local communities, and village government representatives. Data were collected through in-depth interviews, field observations, and documentation involving key stakeholders and analyzed using triangulation techniques. The findings reveal that the PMDK program increased land utilization by 60–70% and community income by 60–150%, with some cases reaching up to threefold growth. The program also improved access to agribusiness activities, reduced land conflicts, and strengthened social relations. However, constraints persist in capital access, human resource capacity, and market integration. This study proposes an integrative CSV-based agribusiness empowerment model that positions non-productive land as a strategic entry point for generating shared economic and social value. The findings contribute by offering a more comprehensive framework that links resource optimization, stakeholder collaboration, and agribusiness system integration in plantation-based rural development",
       "summary": {
-        "gist": "本研究は、インドネシアのプランテーション地域における非生産的土地の最適化を通じた、共有価値創造（CSV）に基づくアグリビジネスモデルの経済的・社会的影響を明らかにしました。プランテーション地域コミュニティ強化プログラム（PMDK）が土地利用率と地域住民の所得を大幅に向上させ、土地紛争の減少や社会関係の強化にも寄与することを示しています。",
-        "novelty": "従来のアグリビジネスにおけるCSV適用研究が増加する中で、本研究は非生産的土地の最適化、コミュニティエンパワーメント、アグリビジネスシステムを統合的に結びつけるメカニズムを説明する研究の空白を埋めました。資源最適化、ステークホルダー連携、アグリビジネスシステム統合を包括的に結びつける枠組みを提示している点が新規性です。",
-        "method": "本研究は、インドネシアのPTPN I Regional 2を対象に、質的なケーススタディ手法を採用しました。企業経営者、現場担当者、地域コミュニティ、村政府代表者を含む16名の主要な情報提供者から、詳細なインタビュー、現地観察、文書調査を通じてデータを収集しました。収集されたデータは、三角測量法を用いて分析されています。",
-        "results": "PMDKプログラムは、非生産的土地の利用率を60〜70%向上させ、地域住民の所得を60〜150%増加させ、一部のケースでは最大3倍の成長を達成しました。また、アグリビジネス活動へのアクセス改善、土地紛争の減少、社会関係の強化にも貢献しています。しかし、資本アクセス、人材能力、市場統合における課題も依然として存在することが明らかになりました。本研究は、非生産的土地を共有経済的・社会的価値を創出するための戦略的な出発点として位置づける、統合的なCSV型アグリビジネスエンパワーメントモデルを提案しています。",
-        "why": "PMDKプログラムが土地利用率と所得を向上させたのは、非生産的な土地を有効活用することで、新たな生産活動の機会を創出したためです。これにより、地域住民はこれまで利用できなかった資源から収入を得られるようになり、所得の増加につながりました。また、アグリビジネス活動へのアクセス改善は、生産物の市場への流通を促進し、経済活動を活性化させます。土地紛争の減少は、共同での土地利用やプログラムへの参加を通じて、地域内の協力関係が強化された結果と考えられます。社会関係の強化は、共通の目標に向かって協力する過程で、コミュニティ内の絆が深まったことを示唆しています。",
+        "gist": "本研究は、インドネシアのプランテーション地域における「プランテーションコミュニティエンパワーメントプログラム（PMDK）」の経済的・社会的な影響を検証し、非生産的土地の最適化を通じた共通価値創造（CSV）に基づくアグリビジネスモデルを開発しました。このモデルは、土地利用の向上と地域住民の所得増加に貢献し、地域開発の新たな枠組みを提示しています。",
+        "novelty": "従来の研究では、アグリビジネスにおけるCSVの適用が増加しているものの、土地の最適化、コミュニティのエンパワーメント、およびアグリビジネスシステムを統合的に説明するメカニズムに関する研究は限られていました。本研究は、非生産的土地を戦略的な出発点として、共有される経済的・社会的な価値を生み出すCSVベースの統合的なアグリビジネスエンパワーメントモデルを提案することで、この研究の空白を埋めています。",
+        "method": "本研究は、インドネシアのPTPN I Regional 2を対象とした質的なケーススタディ手法を採用しています。企業経営者、現場担当者、地域コミュニティ、村政府代表者を含む16名の主要な情報提供者から、詳細なインタビュー、現地観察、文書調査を通じてデータを収集しました。収集されたデータは、主要なステークホルダーが関与する三角測量技術を用いて分析されています。",
+        "results": "PMDKプログラムは、土地利用率を60〜70%向上させ、地域コミュニティの所得を60〜150%増加させ、一部のケースでは最大3倍の成長を達成したことが明らかになりました。また、このプログラムはアグリビジネス活動へのアクセスを改善し、土地紛争を減少させ、社会関係を強化する効果も示しています。しかし、資本アクセス、人材能力、市場統合においては依然として制約が存在することが指摘されています。",
+        "why": "PMDKプログラムが土地利用とコミュニティ所得を向上させたのは、非生産的な土地を有効活用することで、新たな生産活動の機会を創出したためです。これにより、地域住民はこれまで利用されていなかった資源から収入を得られるようになります。また、アグリビジネス活動へのアクセス改善は、住民が生産した作物を市場に流通させる経路を提供し、所得増加に繋がります。土地紛争の減少と社会関係の強化は、共同での土地利用や事業活動を通じて、住民間の協力関係が深まった結果と考えられます。",
         "figures": "アブストラクトに図表の記述なし"
       },
       "doi": "10.59188/eduvest.v6i5.53178",
       "source": "openalex",
       "journal": "Eduvest - Journal Of Universal Studies",
-      "titleJa": "プランテーション地域における非生産的土地最適化を通じたCSV型アグリビジネスモデル",
-      "catchTitle": "遊休地が地域を変える？CSV型農業の可能性",
-      "hook": "プランテーションの非生産的土地を有効活用するCSV型アグリビジネスモデルが、地域社会に経済的・社会的利益をもたらす可能性を検証しています。",
+      "titleJa": "プランテーション地域における非生産的土地の最適化を通じた共通価値創造（CSV）に基づくアグリビジネスモデル",
+      "catchTitle": "遊休地活用で地域が潤う？ 共通価値創造のアグリビジネス",
+      "hook": "プランテーション地域の使われていない土地を有効活用するアグリビジネスモデルが、地域社会に経済的・社会的な恩恵をもたらす可能性について解説します。",
       "quiz": {
-        "question": "プランテーションの非生産的土地活用プログラムは、地域住民の所得をどの程度増加させましたか？",
+        "question": "プランテーション地域の非生産的土地をアグリビジネスで活用するプログラムは、どのような効果をもたらしましたか？",
         "options": [
-          "60〜150%増加しました。",
-          "10〜20%増加しました。",
-          "ほとんど変化はありませんでした。"
+          "土地利用率と地域住民の所得が大幅に増加しました。",
+          "土地利用率は向上しましたが、所得増加には繋がりませんでした。",
+          "土地紛争は減少しましたが、アグリビジネス活動へのアクセスは改善されませんでした。"
         ],
         "correctIndex": 0,
-        "explanation": "本研究の結果によると、PMDKプログラムは地域住民の所得を60〜150%増加させ、一部では最大3倍の成長を達成しています。これは、非生産的土地の有効活用が経済的利益に直結することを示しています。",
-        "difficulty": "hard"
+        "explanation": "本研究の結果から、PMDKプログラムは土地利用率を60〜70%向上させ、地域コミュニティの所得を60〜150%増加させたことが示されています。",
+        "difficulty": "medium"
       },
       "evidence": {
         "level": 3,
@@ -276,17 +392,43 @@
       },
       "field": "農業経済",
       "takeaway": {
-        "whatIsIt": "インドネシアのプランテーションで、使われていない土地を有効活用して、地域を豊かにする研究なんです。",
-        "whatFound": "その結果、土地の利用率が最大7割上がり、住民の収入も6割から3倍に増えたそうですよ。",
-        "soWhat": "使われていない土地をみんなで活用すると、地域の経済が潤い、争いも減って仲良くなれる、という話ですね。"
+        "whatIsIt": "インドネシアのプランテーション地域で、使われていない土地を有効活用する研究です。",
+        "whatFound": "この取り組みで、土地の利用率が60〜70%上がり、住民の収入も最大3倍に増えたそうです。",
+        "soWhat": "地域資源をみんなで活用する「共通価値創造」が、発展途上国の貧困解決に役立つかもしれませんね。"
       },
       "audio": {
         "src": "/audio/W7162096050.mp3",
         "format": "mp3",
         "duration": 33,
         "voice": "Kore",
-        "generatedAt": "2026-05-28T05:48:59.324Z"
-      }
+        "generatedAt": "2026-05-28T07:06:47.530Z"
+      },
+      "glossary": [
+        {
+          "term": "共通価値創造（CSV）",
+          "definition": "企業が経済的価値を追求するだけでなく、社会的な課題解決にも貢献することで、社会と企業の双方に共通の価値を生み出す経営戦略のことです。単なる寄付とは異なり、事業活動そのものを通じて社会貢献を目指します。",
+          "reading": "Creating Shared Value"
+        },
+        {
+          "term": "プランテーションコミュニティエンパワーメントプログラム（PMDK）",
+          "definition": "プランテーション地域において、地域住民の能力向上や経済的自立を支援することを目的としたプログラムです。土地利用の最適化やアグリビジネスへの参加促進などが含まれます。"
+        },
+        {
+          "term": "アグリビジネス",
+          "definition": "農業生産だけでなく、種子や肥料の供給、農産物の加工、流通、販売など、農業に関連する一連の経済活動全体を指す言葉です。農業をビジネスとして捉える視点が含まれます。",
+          "reading": "Agribusiness"
+        },
+        {
+          "term": "質的なケーススタディ",
+          "definition": "特定の事例や現象を深く掘り下げて分析する研究手法の一つです。数値データだけでなく、インタビューや観察を通じて詳細な情報を収集し、その背景にあるメカニズムや文脈を理解することを目指します。",
+          "reading": "Qualitative Case Study"
+        },
+        {
+          "term": "三角測量技術",
+          "definition": "研究において、複数の異なるデータ源、分析手法、または研究者を用いて、結果の信頼性や妥当性を高めるための手法です。様々な角度から検証することで、より確かな知見を得ようとします。",
+          "reading": "Triangulation techniques"
+        }
+      ]
     },
     {
       "id": "W7162093761",
@@ -308,34 +450,28 @@
       ],
       "abstract": "This study looked at how Kenyan small-scale farmers' livelihood outcomes were affected by non-farm enterprises that resulted from the construction of rural road infrastructure. The study used a descriptive survey design to determine the association between rural road infrastructure and livelihood outcomes of small-scale farmers. It was based on the Sustainable Livelihood Framework and driven by a pragmatic research ethic. Further, the study employed cluster sampling to select households residing within a kilometer of the road corridor under study; thus, a sample of 395 houses was selected to provide data for the study. The two measures of the study's operationalization of non-farm enterprises were access to non-farm credit and income diversification. The majority of respondents reported greater engagement in non-farm economic activities after the rural road was constructed, indicating that the expansion of rural road infrastructure improved prospects for livelihood diversification. Farmers reported being involved in value-adding projects, small-scale trading, and dairy-related businesses. Through expanded outreach by lending organizations and financial institutions, improved road accessibility also made non-farm financing more accessible. The results also showed that access to economic opportunities, dietary diversity, and household income stability were all positively impacted by rural road infrastructure. However, because many households reported inadequate savings capacity and concerns about future livelihood security, the study also found that improvements in current economic conditions were not always accompanied by improved long-term financial resilience. According to regression analysis, small-scale farmers' livelihood outcomes were statistically significantly impacted by non-farm enterprises due to rural road infrastructure. However, the results also showed a negative relationship between household food security, non-farm credit availability, and income diversification, indicating a possible trade-off between non-farm activities and agricultural output. The study concluded that by encouraging non-farm enterprises, increasing market accessibility, and boosting small-scale farmers' financial inclusion, rural road infrastructure plays a crucial role in facilitating rural economic development. In order to support sustainable rural livelihoods, the study recommends making consistent investments in all-weather rural road infrastructure, growing rural non-farm enterprise support mechanisms, bolstering rural financial services, and developing policies that strike a balance between agricultural productivity and livelihood diversification.",
       "summary": {
-        "gist": "本研究は、ケニアの小規模農家において、農村道路インフラの整備が非農業事業の発展を通じて、生計の多様化、経済機会へのアクセス、食料多様性、家計収入の安定に貢献することを明らかにしました。",
-        "novelty": "本研究は、農村道路インフラが小規模農家の生計に与える影響を、非農業事業という仲介要因に焦点を当てて分析した点で新規性があります。特に、非農業信用へのアクセスや収入多様化といった具体的な指標を用いて、持続可能な生計フレームワークに基づき、道路インフラと生計成果の関連性を記述調査デザインで検証している点が特徴です。",
-        "method": "本研究は、ケニアの農村地域に居住する小規模農家を対象に、記述調査デザインを採用しました。研究対象地域内の道路回廊から1km以内に住む世帯をクラスターサンプリングにより選定し、合計395世帯からデータを収集しています。非農業事業の指標として、非農業信用へのアクセスと収入多様化を用いています。分析には回帰分析が用いられ、農村道路インフラに起因する非農業事業が小規模農家の生計成果に与える影響を統計的に検証しています。",
-        "results": "分析の結果、農村道路インフラの整備は、小規模農家の非農業経済活動への関与を増加させ、生計多様化の見通しを改善することが示されました。具体的には、付加価値プロジェクト、小規模取引、酪農関連事業への従事が報告されています。また、道路アクセス性の向上は、貸付機関や金融機関の活動範囲拡大を通じて、非農業融資へのアクセスも容易にしました。さらに、農村道路インフラは経済機会へのアクセス、食料多様性、家計収入の安定に正の影響を与えることが明らかになりました。しかし、非農業信用へのアクセスと収入多様化が家計の食料安全保障と負の関係にある可能性も示唆され、非農業活動と農業生産の間にトレードオフが存在する可能性も指摘されています。回帰分析により、農村道路インフラに起因する非農業事業が小規模農家の生計成果に統計的に有意な影響を与えることが確認されました。",
-        "why": "農村道路インフラが小規模農家の生計を改善するメカニズムは複数あります。まず、道路整備により市場へのアクセスが向上し、農家は農産物をより効率的に販売できるようになります。次に、交通の便が良くなることで、非農業事業（例：小規模取引、付加価値プロジェクト）に従事しやすくなり、収入源が多様化します。これにより、農業収入に依存するリスクが軽減され、家計収入の安定につながります。さらに、道路アクセス性の向上は金融機関の活動範囲を広げ、非農業融資へのアクセスを容易にし、新たな事業機会の創出を支援します。これらの要因が複合的に作用し、経済機会の拡大、食料多様性の向上、そして家計収入の安定という生計成果の改善に貢献していると考えられます。",
+        "gist": "本研究は、ケニアの小規模農家を対象に、農村道路インフラの整備が非農業企業活動を通じて生計に与える影響を明らかにしました。道路整備は非農業活動への参加を促し、経済機会、食料の多様性、家計収入の安定性を向上させる一方で、食料安全保障とのトレードオフや長期的な貯蓄能力の課題も示しています。",
+        "novelty": "本研究は、農村道路インフラが生計に与える影響を、非農業企業活動という具体的な経路を通じて分析した点に新規性があります。これにより、道路整備が単に市場アクセスを改善するだけでなく、非農業部門の発展を促し、生計多様化に貢献するメカニズムを明らかにしました。また、食料安全保障との潜在的なトレードオフという課題も提示しており、より多角的な政策検討に資する知見を提供しています。",
+        "method": "本研究は、ケニアの農村地域に居住する小規模農家を対象に、記述的調査デザインを採用しました。調査対象は、研究対象の道路回廊から1km以内に住む世帯をクラスターサンプリングで抽出し、合計395世帯からデータを収集しました。非農業企業活動の指標としては、非農業信用へのアクセスと収入多様化の2つを用いています。分析には回帰分析が用いられ、農村道路インフラ整備と小規模農家の生計結果との関連性が統計的に有意であるかを検証しました。",
+        "results": "分析の結果、農村道路インフラの整備は、小規模農家の非農業経済活動への参加を促進し、生計多様化の可能性を高めることが示されました。具体的には、付加価値プロジェクト、小規模取引、酪農関連事業への従事が増加しています。また、道路アクセスの改善は、金融機関による融資拡大を通じて非農業融資へのアクセスも容易にしました。さらに、農村道路インフラは、経済機会へのアクセス、食料の多様性、家計収入の安定性にプラスの影響を与えることが確認されました。しかし、非農業信用へのアクセスと収入多様化は、家計の食料安全保障と負の関係にあることが示され、非農業活動と農業生産の間に潜在的なトレードオフが存在する可能性が指摘されています。回帰分析により、農村道路インフラに起因する非農業企業活動が、小規模農家の生計結果に統計的に有意な影響を与えることが明らかになりました。",
+        "why": "農村道路インフラの整備は、まず市場へのアクセスを改善し、農家が農産物を販売しやすくなるだけでなく、非農業製品やサービスを都市部から調達しやすくなります。これにより、農家は農業以外の収入源を求めるようになり、付加価値の高い活動や小規模な取引、酪農ビジネスなど、多様な非農業企業活動に従事する機会が増えます。また、道路整備は金融機関の農村部への進出を促し、非農業活動に必要な資金へのアクセスを容易にすることで、生計多様化をさらに後押しするのです。しかし、非農業活動への傾倒が農業生産への投入を減少させ、結果的に食料安全保障に負の影響を与える可能性も示唆されています。",
         "figures": "アブストラクトに図表の記述なし"
       },
       "doi": "10.61424/rjbe.v4i2.820",
       "source": "openalex",
       "journal": "Research journal in business and economics.",
-      "titleJa": "農村道路インフラが小規模農家の生計に与える影響：非農業事業の貢献",
+      "titleJa": "農村道路インフラが小規模農家の生計に与える影響：非農業企業の貢献",
       "catchTitle": "道路整備で農家の暮らしはどう変わる？",
-      "hook": "ケニアの小規模農家を対象とした調査から、農村道路の整備が彼らの生計にどのような影響を与えているのかを明らかにしています。",
-      "keyFigure": {
-        "imagePath": "/figures/W7162093761.png",
-        "page": 8,
-        "caption": "農村道路インフラと小規模農家の生計成果の関係を示す回帰分析の結果が示されています。",
-        "extractedAt": "2026-05-26T01:16:58.767Z"
-      },
+      "hook": "ケニアの小規模農家を対象とした研究で、農村道路インフラの整備が彼らの生計にどのような影響を与えたのかが明らかになりました。",
       "quiz": {
-        "question": "農村道路の整備は、小規模農家の生計にどのような影響を与えると思いますか？",
+        "question": "ケニアの農村道路インフラ整備は、小規模農家の生計にどのような影響を与えたでしょうか？",
         "options": [
-          "非農業事業への参加が増え、収入が安定する",
-          "農業生産性が低下し、食料安全保障が悪化する",
-          "特に大きな変化はなく、現状維持となる"
+          "非農業活動への参加を促し、収入源を多様化させました。",
+          "農業生産性が大幅に向上し、食料自給率が高まりました。",
+          "農村から都市への人口流出が加速し、農村経済が停滞しました。"
         ],
         "correctIndex": 0,
-        "explanation": "本研究では、道路整備が非農業事業への参加を促し、生計の多様化や家計収入の安定に貢献することが示されています。ただし、食料安全保障との間にトレードオフの可能性も指摘されています。",
+        "explanation": "道路整備により、農家は市場へアクセスしやすくなり、農業以外の収入源として非農業活動に積極的に参加するようになりました。これにより、生計の多様化が進んだと報告されています。",
         "difficulty": "medium"
       },
       "evidence": {
@@ -349,17 +485,59 @@
       },
       "field": "開発経済",
       "takeaway": {
-        "whatIsIt": "ケニアの農村で、道路が整備されると農家さんの暮らしがどう変わるか調べた研究なんです。",
-        "whatFound": "道路ができると、農家さんは農業以外の仕事（お店や加工など）もしやすくなり、収入が安定したり、食べ物の種類が増えたりするそうです。",
-        "soWhat": "つまり、途上国で道路を良くすることは、貧しい農家さんが自力で豊かになるための、すごく大切な一歩になるんですね。"
+        "whatIsIt": "ケニアの小規模農家が、道路整備でどう変わったかの研究です。",
+        "whatFound": "道路ができると、農家は農業以外の仕事も始めて収入が安定したそうです。",
+        "soWhat": "道路は単なる移動手段でなく、農村の経済発展にとても大切なんですね。"
       },
       "audio": {
         "src": "/audio/W7162093761.mp3",
         "format": "mp3",
-        "duration": 34,
+        "duration": 25,
         "voice": "Kore",
-        "generatedAt": "2026-05-28T05:49:23.601Z"
-      }
+        "generatedAt": "2026-05-28T07:07:05.583Z"
+      },
+      "glossary": [
+        {
+          "term": "記述的調査デザイン",
+          "definition": "特定の現象や集団の特性を明らかにするために、データを収集し、その状況を詳細に記述する調査方法です。因果関係の特定よりも、現状把握に重点を置きます。",
+          "reading": "Descriptive Survey Design"
+        },
+        {
+          "term": "持続可能な生計フレームワーク",
+          "definition": "人々の生計がどのように成り立ち、どのような資産（人的、物的、金融的など）を活用して、どのような脆弱性に直面しながら、目標を達成しようとするのかを分析するための枠組みです。",
+          "reading": "Sustainable Livelihood Framework"
+        },
+        {
+          "term": "クラスターサンプリング",
+          "definition": "調査対象をいくつかの集団（クラスター）に分け、その中からいくつかのクラスターを無作為に選び、選ばれたクラスター内のすべての対象を調査する方法です。広範囲の調査で効率的です。",
+          "reading": "Cluster Sampling"
+        },
+        {
+          "term": "非農業信用",
+          "definition": "農業以外の事業活動（例えば、小規模な小売業やサービス業など）を行うために利用される融資や資金のことです。農家の収入源多様化を支える重要な要素となります。",
+          "reading": "Non-farm Credit"
+        },
+        {
+          "term": "収入多様化",
+          "definition": "一つの収入源に依存せず、複数の異なる収入源を持つことです。これにより、特定の収入源が不安定になった場合でも、家計全体の経済的安定性を高めることができます。",
+          "reading": "Income Diversification"
+        },
+        {
+          "term": "回帰分析",
+          "definition": "ある変数（目的変数）が、他の変数（説明変数）によってどのように影響されるかを統計的に分析する手法です。変数間の関係性の強さや方向を明らかにします。",
+          "reading": "Regression Analysis"
+        },
+        {
+          "term": "食料安全保障",
+          "definition": "すべての人が、いつでも十分に安全で栄養のある食料を手に入れ、活動的で健康的な生活を送るために必要な食料を得られる状態を指します。食料の入手可能性、アクセス、利用可能性、安定性が重要です。",
+          "reading": "Food Security"
+        },
+        {
+          "term": "トレードオフ",
+          "definition": "何かを得るために、別の何かを犠牲にしなければならない関係のことです。本研究では、非農業活動の増加が農業生産に負の影響を与える可能性が指摘されています。",
+          "reading": "Trade-off"
+        }
+      ]
     }
   ]
 }

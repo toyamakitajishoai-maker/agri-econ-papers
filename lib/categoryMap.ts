@@ -1,3 +1,5 @@
+import { FETCH_TOPICS } from "@/lib/fetchTopics";
+
 /**
  * arXiv カテゴリ・OpenAlex 概念 → 日本語タグの単一ソース。
  *
@@ -238,6 +240,11 @@ const SLUG_OVERRIDE: Record<string, string> = {
   "神経・脳科学": "neuroscience",
   "歴史・人文・社会": "humanities",
   "公共政策・ガバナンス": "policy",
+  "生命科学・進化": "biology",
+  "遺伝・ゲノム": "genomics",
+  "農学・作物科学": "agronomy",
+  "医学・健康": "health",
+  "天文・宇宙": "astro",
   "その他": "other",
   "プレプリント": "preprint",
   "査読論文": "peer-reviewed",
@@ -263,6 +270,12 @@ export function slugToTag(slug: string): string | null {
   }
 }
 
+/**
+ * fetch トピックの labelJa は field 側で出すので、categories から表示するときは弾く。
+ * 旧データの categories に "開発経済" などが残っていても誤表示にならないようにする保険。
+ */
+const TOPIC_LABEL_SET: Set<string> = new Set(FETCH_TOPICS.map((t) => t.labelJa));
+
 /** カテゴリ1件を日本語タグへ。マップに無い OpenAlex 概念は素通し、ノイズは null */
 export function normalizeCategory(raw: string): string | null {
   const trimmed = raw.trim();
@@ -270,6 +283,7 @@ export function normalizeCategory(raw: string): string | null {
   if (TAG_EXCLUDE.has(trimmed)) return null;
   if (trimmed.startsWith("topic:")) return null;
   if (trimmed === "openalex" || trimmed === "arxiv") return null;
+  if (TOPIC_LABEL_SET.has(trimmed)) return null;
   /** すでに日本語ラベル（fetchTopics の labelJa 等）はそのまま採用 */
   if (/[\u3040-\u30ff\u3400-\u9fff]/.test(trimmed)) return trimmed;
   if (ARXIV_CATEGORY_MAP[trimmed]) return ARXIV_CATEGORY_MAP[trimmed];

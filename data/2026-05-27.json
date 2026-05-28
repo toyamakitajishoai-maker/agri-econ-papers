@@ -15,7 +15,6 @@
       "pdfUrl": "https://arxiv.org/pdf/2605.27265v1.pdf",
       "categories": [
         "topic:trade",
-        "貿易・国際経済",
         "econ.GN",
         "stat.AP",
         "stat.ME"
@@ -114,7 +113,6 @@
       "pdfUrl": "https://arxiv.org/pdf/2605.27202v1.pdf",
       "categories": [
         "topic:urban",
-        "都市・地域",
         "cs.CY",
         "cond-mat.stat-mech",
         "physics.soc-ph"
@@ -240,7 +238,6 @@
       "pdfUrl": "https://arxiv.org/pdf/2605.27274v1.pdf",
       "categories": [
         "topic:urban",
-        "都市・地域",
         "physics.soc-ph"
       ],
       "abstract": "This paper establishes a quantitative and structural framework for civilizational continuity under rapid, non-linear ecological transitions. Utilizing empirical data on Earth's Energy Imbalance (EEI), currently measured at 1.36 W/m^2, we demonstrate that the planetary system is on a deterministic trajectory toward a new ecological equilibrium, breaching the 1.5 degrees C thermodynamic threshold in less than 6.5 years. We show that mitigating direct anthropogenic waste heat emissions is statistically insufficient, as 35/36-ths of the annual energy imbalance stems from atmospheric radiative forcing rather than localized thermal output. Consequently, preserving legacy centralized socioeconomic frameworks is unfeasible. We present the structural case for the \"Eco-Civilization Paradigm\" -- a decentralized network of autonomous, modular eco-communities engineered to insulate core life-support functions, localized energy networks, and edge computation from cascading macro-system failures. Finally, we outline the systemic requirements for this transition, including the realignment of asset valuation frameworks from geography-dependent to engineering-dependent metrics, the mobilization of youth-driven innovation capital, and the strategic reallocation of global industrial manufacturing capacity to safeguard civilizational survival.",
@@ -338,7 +335,6 @@
       "pdfUrl": "https://arxiv.org/pdf/2605.27200v1.pdf",
       "categories": [
         "topic:urban",
-        "都市・地域",
         "physics.soc-ph"
       ],
       "abstract": "We apply persistent homology to the ORBIS Geospatial Network Model of the Roman World in order to quantify the structural resilience of the Eastern Mediterranean trade network between 0 and 400 ce. The network is represented as a weighted transport system whose edges correspond to road, maritime, and riverine routes, each carrying a base cost derived from the ORBIS cost model. To introduce historical dynamics into this static spatial infrastructure, we construct a differential friction model in which edge weights vary by decade and by transport mode according to documented historical perturbations, including epidemic mortality, civil war, military pressure, administrative reorganisation, and imperial reunification. For each decadal snapshot, we compute all-pairs shortest-path distances on the active sub-network and construct a Vietoris--Rips filtration using an adaptive threshold defined by the 90th percentile of finite pairwise distances. The resulting betti number ($β_1$) persistent entropy time series identifies three structurally distinct phases in the Eastern Mediterranean network. Phase~I, from 0 to 200 ce, is a stationary high-redundancy regime consistent with the commercial integration of the early imperial and Antonine periods. Phase~II, from 210 to 280ce, corresponds to recoverable stress during the Crisis of the Third Century: betti number ($β_1$) entropy declines during the crisis but returns to the Phase~I baseline following Aurelianic reunification. Phase~III, from 290 to 400 ce, is qualitatively different: cycle redundancy declines monotonically and does not recover. The main contribution of this study is to show that persistent homology detects a dimension of imperial stress that is not reducible to single economic, military, or political indicators.",
@@ -465,7 +461,6 @@
       "pdfUrl": "https://arxiv.org/pdf/2605.27320v1.pdf",
       "categories": [
         "topic:trade",
-        "貿易・国際経済",
         "cs.AI",
         "cs.CY",
         "econ.GN"

@@ -92,10 +92,16 @@ function toPaperSchema(input: ArxivPaper): Paper {
 }
 
 function tagTopic(paper: ArxivPaper, topic: FetchTopic): ArxivPaper {
+  /**
+   * 注意: ここで categories に topic.labelJa を「日本語のまま」入れると、
+   * editorial の getTags がそれをそのままタグとして拾い、
+   * 例えば AI 論文に「開発経済」というタグが付く誤表示が起きる。
+   * field には日本語ラベルを入れるが、categories には機械的な topic:xxx 接頭辞のみ残す。
+   */
   return {
     ...paper,
     field: topic.labelJa,
-    categories: [`topic:${topic.id}`, topic.labelJa, ...paper.categories],
+    categories: [`topic:${topic.id}`, ...paper.categories],
   };
 }
 

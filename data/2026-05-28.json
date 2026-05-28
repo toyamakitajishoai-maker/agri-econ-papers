@@ -12,7 +12,6 @@
       "pdfUrl": "https://arxiv.org/pdf/2605.26508.pdf",
       "categories": [
         "topic:development",
-        "開発経済",
         "q-fin.RM",
         "cs.AI"
       ],
@@ -100,7 +99,6 @@
       "pdfUrl": "https://arxiv.org/pdf/2605.19742.pdf",
       "categories": [
         "topic:development",
-        "開発経済",
         "cs.GT",
         "cs.CR",
         "math.PR",
@@ -200,7 +198,6 @@
       "pdfUrl": "https://arxiv.org/pdf/2509.24144.pdf",
       "categories": [
         "topic:development",
-        "開発経済",
         "q-fin.PM",
         "q-fin.CP",
         "q-fin.ST",
@@ -327,7 +324,6 @@
       "pdfUrl": "https://arxiv.org/pdf/2605.26437.pdf",
       "categories": [
         "topic:development",
-        "開発経済",
         "econ.GN",
         "q-fin.EC"
       ],
@@ -424,7 +420,6 @@
       "pdfUrl": "https://arxiv.org/pdf/2605.23111.pdf",
       "categories": [
         "topic:development",
-        "開発経済",
         "q-bio.NC"
       ],
       "abstract": "The human brain represents objects in a way that is both invariant across instances and flexible enough to support different contexts and tasks. Yet it remains unknown how object representations are dynamically remapped as the same object shifts across contextual roles. Here we combined fMRI with naturalistic movie viewing to investigate how the same objects are represented when they are passive elements in the scene versus the targets of goal-directed actions. When objects were action targets, they engaged a parietal action network centered in the supramarginal and postcentral gyri, while passive objects recruited a distributed occipito-temporal network involved in visual object recognition. Within the networks most strongly encoding objects in their respective contexts, representational geometry showed a double dissociation: target object representations were organized by action affordance and hand posture affordance dimensions, while passive object representations aligned with semantic dimensions. In addition, visual representational structure was invariant to context. Outside those context-specific brain networks, representational content retained context-invariance, indicating that flexibility and invariance operate at different levels of the same representational system. Together, these findings demonstrate neural remapping of object representational geometries in a manner that depends on moment-to-moment changes in the contextual relevance of objects within a naturalistic scene.",

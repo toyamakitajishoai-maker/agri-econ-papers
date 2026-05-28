@@ -5,15 +5,32 @@ export type FetchTopic = {
   openAlexQuery: string;
   semanticQuery: string;
   arxivCategories: string[];
+  /**
+   * ランダム選択時の重み（高いほど選ばれやすい）。
+   * 既定は 1。「分野が偏らないようにしたい」目的のため、
+   * もともと多めに来ていた農業経済・食料システムは下げ、
+   * 新しいキャッチーな分野は同じか少し高めにしている。
+   */
+  weight?: number;
 };
 
 export const FETCH_TOPICS: FetchTopic[] = [
+  // ─── 経済・社会系（既存 + 重み調整） ─────────────────────────────
   {
     id: "agri-econ",
     labelJa: "農業経済",
     openAlexQuery: "agricultural economics food security rural development",
     semanticQuery: "agricultural economics",
     arxivCategories: ["econ.GN", "q-fin.EC"],
+    weight: 0.5,
+  },
+  {
+    id: "food-system",
+    labelJa: "食料システム",
+    openAlexQuery: "food systems supply chain food waste nutrition",
+    semanticQuery: "food systems research",
+    arxivCategories: ["q-bio.PE", "econ.GN"],
+    weight: 0.5,
   },
   {
     id: "climate",
@@ -23,18 +40,12 @@ export const FETCH_TOPICS: FetchTopic[] = [
     arxivCategories: ["physics.ao-ph", "q-fin.EC"],
   },
   {
-    id: "health",
-    labelJa: "健康・公衆衛生",
-    openAlexQuery: "public health epidemiology nutrition intervention",
-    semanticQuery: "public health research",
-    arxivCategories: ["q-bio.QM", "stat.AP"],
-  },
-  {
     id: "development",
     labelJa: "開発経済",
     openAlexQuery: "economic development poverty inequality emerging economies",
     semanticQuery: "development economics",
     arxivCategories: ["econ.GN", "econ.TH"],
+    weight: 0.7,
   },
   {
     id: "education",
@@ -77,6 +88,7 @@ export const FETCH_TOPICS: FetchTopic[] = [
     openAlexQuery: "behavioral economics psychology decision making experiment",
     semanticQuery: "behavioral economics",
     arxivCategories: ["econ.GN", "q-fin.EC"],
+    weight: 1.3,
   },
   {
     id: "innovation",
@@ -84,13 +96,6 @@ export const FETCH_TOPICS: FetchTopic[] = [
     openAlexQuery: "innovation technology adoption productivity R&D",
     semanticQuery: "innovation economics",
     arxivCategories: ["econ.GN", "cs.CY"],
-  },
-  {
-    id: "food-system",
-    labelJa: "食料システム",
-    openAlexQuery: "food systems supply chain food waste nutrition",
-    semanticQuery: "food systems research",
-    arxivCategories: ["q-bio.PE", "econ.GN"],
   },
   {
     id: "finance",
@@ -107,13 +112,6 @@ export const FETCH_TOPICS: FetchTopic[] = [
     arxivCategories: ["cs.AI", "cs.LG", "cs.CL", "cs.CV", "cs.NE", "stat.ML"],
   },
   {
-    id: "neuroscience",
-    labelJa: "神経・脳科学",
-    openAlexQuery: "neuroscience brain cognition neural representation",
-    semanticQuery: "cognitive neuroscience",
-    arxivCategories: ["q-bio.NC"],
-  },
-  {
     id: "humanities",
     labelJa: "歴史・人文・社会",
     openAlexQuery: "history humanities cultural network social structure",
@@ -127,6 +125,62 @@ export const FETCH_TOPICS: FetchTopic[] = [
     semanticQuery: "public policy governance",
     arxivCategories: ["econ.GN", "cs.CY"],
   },
+
+  // ─── 生命科学・自然科学系（新規追加：キャッチーな話題） ───────
+  {
+    id: "biology",
+    labelJa: "生命科学・進化",
+    openAlexQuery:
+      "evolutionary biology ecology animal behavior population biology",
+    semanticQuery: "evolutionary biology ecology",
+    arxivCategories: ["q-bio.PE", "q-bio.MN"],
+    weight: 1.4,
+  },
+  {
+    id: "genomics",
+    labelJa: "遺伝・ゲノム",
+    openAlexQuery:
+      "genetics genomics DNA sequencing CRISPR molecular biology",
+    semanticQuery: "genomics genetics",
+    arxivCategories: ["q-bio.GN", "q-bio.MN"],
+    weight: 1.2,
+  },
+  {
+    id: "agronomy",
+    labelJa: "農学・作物科学",
+    openAlexQuery:
+      "crop science plant breeding agronomy soil microbiome plant pathology",
+    semanticQuery: "crop science plant biology",
+    arxivCategories: ["q-bio.PE", "q-bio.QM"],
+    weight: 1.3,
+  },
+  {
+    id: "neuroscience",
+    labelJa: "神経・脳科学",
+    openAlexQuery:
+      "neuroscience brain cognition neural representation memory",
+    semanticQuery: "cognitive neuroscience",
+    arxivCategories: ["q-bio.NC"],
+    weight: 1.2,
+  },
+  {
+    id: "health",
+    labelJa: "医学・健康",
+    openAlexQuery:
+      "public health medicine epidemiology nutrition intervention clinical",
+    semanticQuery: "public health medicine",
+    arxivCategories: ["q-bio.QM", "stat.AP"],
+    weight: 1.2,
+  },
+  {
+    id: "astro",
+    labelJa: "天文・宇宙",
+    openAlexQuery:
+      "astrophysics cosmology exoplanet dark matter galaxy formation",
+    semanticQuery: "astrophysics cosmology",
+    arxivCategories: ["astro-ph.CO", "astro-ph.EP", "astro-ph.GA", "astro-ph.SR"],
+    weight: 1.1,
+  },
 ];
 
 export function shuffleInPlace<T>(items: T[]): T[] {
@@ -137,10 +191,29 @@ export function shuffleInPlace<T>(items: T[]): T[] {
   return items;
 }
 
-/** 重複なしでランダムに分野を選ぶ（日次 fetch 用） */
+/**
+ * 重複なしで重み付きランダムに分野を選ぶ（日次 fetch 用）。
+ * weight が大きいほど早めに選ばれる。
+ */
 export function pickRandomTopics(count: number): FetchTopic[] {
   const n = Math.min(Math.max(1, count), FETCH_TOPICS.length);
-  return shuffleInPlace([...FETCH_TOPICS]).slice(0, n);
+  const pool = FETCH_TOPICS.map((t) => ({ topic: t, weight: t.weight ?? 1 }));
+  const picked: FetchTopic[] = [];
+  while (picked.length < n && pool.length > 0) {
+    const total = pool.reduce((sum, p) => sum + p.weight, 0);
+    let r = Math.random() * total;
+    let idx = 0;
+    for (let i = 0; i < pool.length; i += 1) {
+      r -= pool[i].weight;
+      if (r <= 0) {
+        idx = i;
+        break;
+      }
+    }
+    picked.push(pool[idx].topic);
+    pool.splice(idx, 1);
+  }
+  return picked;
 }
 
 /** 複数分野の arXiv カテゴリを1クエリにまとめる（API呼び出し回数削減） */

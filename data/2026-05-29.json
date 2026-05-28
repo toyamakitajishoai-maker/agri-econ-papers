@@ -1,0 +1,620 @@
+{
+  "date": "2026-05-29",
+  "papers": [
+    {
+      "id": "2605.28771v1",
+      "title": "Evolution of the dusty nova QY Mus from eruption to quiescence",
+      "authors": [
+        "Mohit Singh Bisht",
+        "A. Raj",
+        "F. M. Walter",
+        "D. Bisht",
+        "K. Belwal",
+        "S. Biswas"
+      ],
+      "publishedAt": "2026-05-27T17:30:54Z",
+      "url": "https://arxiv.org/abs/2605.28771v1",
+      "pdfUrl": "https://arxiv.org/pdf/2605.28771v1.pdf",
+      "categories": [
+        "topic:astro",
+        "astro-ph.SR"
+      ],
+      "abstract": "We present a comprehensive study of the spectrophotometric evolution of the classical nova QY Mus from eruption to quiescence. The light curve shows a notable dust dip, classifying it as a D (137)-type nova, with dust formation beginning at $\\sim$123 days post-outburst and reaching a maximum optical depth of $τ\\sim 3.2$. We classify QY Mus as a slow nova with $t_2 = 87 \\pm 6$ days, and derive an absolute magnitude of $M_V = -6.55 \\pm 0.54$ using the MMRD relation. The spectroscopic evolution, traced from 94 to 1348 days, shows prominent P-Cygni profiles in Balmer and Fe II lines during the early decline, consistent with an Fe II-type nova. The transition to the nebular phase occurs around $\\sim$233 days, marked by the emergence of [O III] emission. Photoionization modeling using \\textsc{Cloudy} of 41 emission lines on day 590 yields a central source temperature of $(7.08 \\pm 0.20)\\times10^{5}$ K, with enhanced nitrogen and oxygen abundances and moderate neon enrichment, suggesting that QY Mus is not a neon nova. Mid-infrared WISE observations at $\\sim$502 days indicate the presence of cool dust at $\\sim$400 K. Using a Gaia-based color magnitude diagram constructed in this work for 34 quiescent novae, we find that QY Mus occupies a region consistent with systems hosting main-sequence or subgiant secondaries; its orbital period further supports a subgiant companion. These results establish QY Mus as a slow, dust-forming nova with well-characterized evolution and a subgiant secondary.",
+      "summary": {
+        "gist": "本研究は、古典新星QY Musの噴火から静穏期に至るまでの分光測光進化を包括的に調査したものです。QY Musが塵を形成するタイプのゆっくりとした新星であり、伴星が準巨星であることを明らかにしました。",
+        "novelty": "本研究は、これまで十分に研究されていなかったダスト形成型新星QY Musについて、噴火から静穏期までの包括的な分析を初めて行いました。特に、Gaiaデータに基づく色等級図を構築し、他の静穏期新星と比較することで、QY Musの伴星が主系列星または準巨星である可能性を具体的に示し、その軌道周期が準巨星伴星を支持するという新規性があります。",
+        "method": "本研究では、2008年9月21日を噴火日として、光度曲線、分光観測、中赤外線WISE観測、およびGaia DR3測光データを用いてQY Musを分析しました。光度曲線データはAAVSO、VSOLJ、ASAS、SMARTSの公開データベースから取得し、2008年12月24日（噴火後94日）から2012年6月1日（噴火後1348日）までの35の低分散光学スペクトルもSMARTS Nova Atlasから利用しています。物理的・化学的パラメータの導出には、CLOUDYコードを用いた光電離モデリングが実施され、34の静穏期新星の色等級図が構築されました。",
+        "results": "QY Musは、光度曲線に顕著なダストディップを示すD(137)型新星に分類され、塵の形成は噴火後約123日で始まり、最大光学深さはτ〜3.2に達しました。減光速度t2は87±6日であり、ゆっくりとした新星であることが判明し、MMRD関係から絶対等級MV = -6.55±0.54と推定されました。分光観測では、初期減光期にバルマー線とFe II線にP-Cygniプロファイルが見られ、Fe II型新星であることを示唆しています。噴火後590日目の光電離モデリングからは、中心源温度が(7.08±0.20)×10^5 K、窒素と酸素の存在量が増加し、ネオンの濃縮は中程度であることが示されました。噴火後約502日の中赤外線WISE観測では、約400 Kの低温の塵の存在が確認され、Gaiaデータに基づく色等級図から、QY Musが主系列星または準巨星を伴星とする系と一致する領域を占めることが明らかになりました。",
+        "why": "QY Musがダスト形成型新星であるのは、白色矮星が伴星から水素豊富な物質を降着させ、熱核暴走を起こして物質を放出する際に、その放出物中で塵が形成されるためです。光度曲線に見られるダストディップは、この新しく形成された塵が光学的な光を遮蔽することで生じます。また、伴星が準巨星であると推定されるのは、構築された色等級図においてQY Musが主系列星や準巨星を伴星とする既知の新星と同じ領域に位置し、その軌道周期も準巨星伴星の特徴と一致するためです。",
+        "figures": "アブストラクトには主要な図表の記述はありませんが、論文本文抜粋では、光度曲線（Fig. 1）、光学深度の進化（Fig. 2）、光学色の時間的進化（Fig. 3）、および色等級図（Fig. 6）が言及されています。これらの図は、QY Musの明るさの変化、塵の形成とその光学深度の推移、および色指数から見た進化段階を示し、特に色等級図は静穏期におけるQY Musの伴星のタイプを他の新星と比較して特定するために用いられています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / astro-ph.SR）",
+      "field": "天文・宇宙",
+      "titleJa": "ダスト形成型新星QY Musの噴火から静穏期までの分光測光進化の包括的研究",
+      "catchTitle": "新星QY Mus、塵をまとい静かに進化",
+      "hook": "新星QY Musが噴火後、どのように塵を形成し、静穏期へと移行したのかを詳細に解明しています。",
+      "quiz": {
+        "question": "新星QY Musの光度曲線に現れる「ダストディップ」は何を示しているでしょうか？",
+        "options": [
+          "新星が一時的に活動を停止したことを示しています。",
+          "新星の放出物中で新たに塵が形成され、光を遮蔽していることを示しています。",
+          "新星の核融合反応が一時的に弱まったことを示しています。"
+        ],
+        "correctIndex": 1,
+        "explanation": "ダストディップは、新星が放出したガスの中で塵が形成され、その塵が新星からの光を吸収・散乱することで、見かけの明るさが一時的に暗くなる現象です。",
+        "difficulty": "medium"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "古典新星",
+          "definition": "連星系を構成する白色矮星の表面で、伴星から降着した水素が熱核暴走を起こし、急激な増光を伴って物質を放出する現象のことです。",
+          "reading": "Classical Nova"
+        },
+        {
+          "term": "ダストディップ",
+          "definition": "新星の光度曲線において、噴出物中に形成された塵が光を遮蔽することで、見かけの明るさが一時的に急激に減少する現象を指します。",
+          "reading": "Dust Dip"
+        },
+        {
+          "term": "光学深さ（τ）",
+          "definition": "光が物質中を通過する際に、どれだけ吸収または散乱されるかを示す尺度です。値が大きいほど、光が透過しにくいことを意味します。",
+          "reading": "Optical Depth"
+        },
+        {
+          "term": "P-Cygniプロファイル",
+          "definition": "スペクトル線において、青方偏移した吸収成分と赤方偏移した輝線成分が組み合わさって見える特徴的な形状です。星からの物質流出（恒星風）の存在を示唆します。",
+          "reading": "P-Cygni Profile"
+        },
+        {
+          "term": "星雲状段階",
+          "definition": "新星の進化段階の一つで、噴出物が希薄になり、電離したガスからの輝線が支配的になる時期を指します。特に[O III]などの禁制線が出現します。",
+          "reading": "Nebular Phase"
+        },
+        {
+          "term": "光電離モデリング",
+          "definition": "ガス雲が中心の放射源からの紫外線によって電離される過程を計算し、観測されるスペクトル線強度からガスの物理的・化学的状態を推定する手法です。",
+          "reading": "Photoionization Modeling"
+        },
+        {
+          "term": "MMRD関係",
+          "definition": "新星の最大絶対等級と、その後の光度減少率との間に見られる経験的な関係です。この関係を用いることで、新星までの距離を推定できます。",
+          "reading": "Maximum Magnitude versus Rate of Decline Relation"
+        },
+        {
+          "term": "色等級図",
+          "definition": "天体の色（温度を示す）と絶対等級（真の明るさを示す）をプロットした図です。恒星の進化段階や連星系の構成を分析するために用いられます。",
+          "reading": "Color-Magnitude Diagram (CMD)"
+        }
+      ],
+      "takeaway": {
+        "whatIsIt": "宇宙で突如明るくなる「新星」QY Musが、噴火後にどう変化するかを調べた研究です。",
+        "whatFound": "この新星は、噴火から約123日後に大量の「塵」を作り、光を遮ることで一時的に暗くなることがわかりました。",
+        "soWhat": "新星がどのように進化し、どんな星を伴っているのかを知ることで、星の寿命や宇宙の物質循環の理解が進みます。"
+      },
+      "storyCards": {
+        "ask": "新星QY Mus、噴火後に何が起きた？",
+        "method": "光度とスペクトルを数年間追跡し分析",
+        "finding": "噴火123日後、塵が光を遮り暗くなった",
+        "meaning": "新星の進化と伴星の特定に役立つ"
+      },
+      "audio": {
+        "src": "/audio/2605.28771v1.mp3",
+        "format": "mp3",
+        "duration": 30,
+        "voice": "Kore",
+        "generatedAt": "2026-05-28T23:17:41.838Z"
+      },
+      "keyFigure": {
+        "imagePath": "/figures/2605.28771v1_results.png",
+        "page": 13,
+        "caption": "QY Musの観測スペクトルと合成スペクトルを比較した図です。",
+        "label": "Figure 13. Comparison between the observed optical spectrum of QY Mus (day 590, black) and the synthetic spectrum derive",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-05-28T23:19:51.272Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2605.28771v1_results.png",
+          "page": 13,
+          "caption": "QY Musの観測スペクトルと合成スペクトルを比較した図です。",
+          "label": "Figure 13. Comparison between the observed optical spectrum of QY Mus (day 590, black) and the synthetic spectrum derive",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-05-28T23:19:51.272Z"
+        },
+        {
+          "imagePath": "/figures/2605.28771v1_why.png",
+          "page": 14,
+          "caption": "WISEデータに最もよくフィットする黒体放射曲線を示した図です。",
+          "label": "Figure 15. The SED shows a best ﬁt blackbody to the WISE data",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-05-28T23:19:51.273Z"
+        }
+      ]
+    },
+    {
+      "id": "2605.27973v1",
+      "title": "Dynamical Resolution of the Cosmic Coincidence Problem in Non-Interacting Holographic Dark Energy via Einstein-Cartan Torsion",
+      "authors": [
+        "Yongjun Yun",
+        "Kyungduk Kim",
+        "Jungjai Lee"
+      ],
+      "publishedAt": "2026-05-27T05:10:11Z",
+      "url": "https://arxiv.org/abs/2605.27973v1",
+      "pdfUrl": "https://arxiv.org/pdf/2605.27973v1.pdf",
+      "categories": [
+        "topic:astro",
+        "gr-qc",
+        "astro-ph.CO"
+      ],
+      "abstract": "We investigate the cosmic coincidence problem in non-interacting holographic dark energy with the Hubble radius as the infrared cutoff in Einstein-Cartan gravity. In general relativity, this cutoff gives a dust-like equation of state in the non-interacting case, whereas interacting models require a phenomenological dark sector coupling and yield a constant density ratio. We show that the Einstein-Cartan torsion scalar $Φ$, compatible with the cosmological principle, with the self-consistent scaling behavior $Φ\\sim a^{-3}$, makes the density ratio $r\\equiv ρ_m/ρ_X$ dynamical even when the phenomenological interaction term is absent, $Q=0$. The same torsion contribution shifts the equation of state for holographic dark energy toward negative values, allowing cosmic acceleration, and realizes the observed order-unity density ratio within the weak torsion regime without tuning the holographic free parameter. Thus, Einstein-Cartan torsion provides a geometric mechanism that replaces the phenomenological dark sector interaction and offers a dynamical resolution of the cosmic coincidence problem.",
+      "summary": {
+        "gist": "本研究は、非相互作用ホログラフィック暗黒エネルギーモデルにおいて、アインシュタイン-カルタン重力理論の「ねじれスカラー」が、物質と暗黒エネルギーの密度比を動的に変化させ、宇宙論的偶然問題に解決策をもたらすことを明らかにしました。これにより、現象論的な暗黒セクター間の相互作用を導入することなく、宇宙の加速膨張と現在の密度比の観測値を説明できることを示しています。",
+        "novelty": "従来の研究では、ハッブル半径を赤外カットオフとする非相互作用ホログラフィック暗黒エネルギーモデルでは宇宙の加速膨張を説明できず、また密度比が一定となるため宇宙論的偶然問題を動的に解決できませんでした。本研究は、アインシュタイン-カルタン重力におけるねじれスカラーを導入することで、現象論的な相互作用なしに密度比を時間依存的にし、宇宙の加速膨張を可能にするという点で新規性があります。",
+        "method": "本研究は、アインシュタイン-カルタン重力理論の枠組みで、ハッブル半径を赤外カットオフとする非相互作用ホログラフィック暗黒エネルギーモデルを分析しています。特に、宇宙原理と整合するねじれスカラーΦがスケール因子aに対してΦ〜a^-3と自己整合的に振る舞うことを利用し、フリードマン方程式を修正して物質密度と暗黒エネルギー密度の比rの動的な進化を導出しました。現在の宇宙の観測値（減速パラメータq0 ≃-0.51、物質密度パラメータΩ0m ≃0.3、暗黒エネルギー密度パラメータΩ0X ≃0.7）を用いて、モデルのパラメータdの許容範囲を特定し、その結果を検証しています。",
+        "results": "分析の結果、アインシュタイン-カルタン重力におけるねじれスカラーの導入により、物質と暗黒エネルギーの密度比rが時間依存的になることが示されました。これにより、現象論的な相互作用がなくても宇宙論的偶然問題の動的な解決が可能になります。また、ねじれスカラーは暗黒エネルギーの状態方程式を負の値にシフトさせ、宇宙の加速膨張を可能にします。現在の観測値（r0 ≃0.429、ω0X ≲-0.9）と整合するフリーパラメータdの範囲は0.913 ≲d ≲0.924であり、弱いねじれ領域（|Φ0/H0| < 1）では、dの調整なしに観測されたオーダー1の密度比が実現されます。",
+        "why": "ねじれスカラーは、アインシュタイン-カルタン重力において、物質の固有スピンに代数的に関連しており、暗黒セクター間の現象論的な相互作用なしに宇宙のダイナミクスを修正します。具体的には、ねじれスカラーΦがスケール因子aに対してΦ〜a^-3と振る舞うことで、フリードマン方程式に新たな項が加わります。この項が物質密度と暗黒エネルギー密度の比rを時間依存的に変化させ、また暗黒エネルギーの状態方程式を負の値にシフトさせるため、宇宙の加速膨張と現在のオーダー1の密度比が説明できるようになるのです。",
+        "figures": "図1は、暗黒エネルギーの状態方程式ω0Xとフリーパラメータdの関係を示しており、観測と整合するdの範囲（0.913 ≲d ≲0.924）が、現在の密度比r0 ≃0.429と観測上好ましいω0Xの範囲（-1 ≤ω0X ≲-0.9）の両方を満たすことを示しています。図2は、現在の密度比r0とフリーパラメータdの関係を、ねじれスカラーの初期値|Φ0/H0|の異なる値でプロットしており、弱いねじれ領域ではdの広い範囲でr0がオーダー1の値をとることを示しています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / gr-qc）",
+      "field": "天文・宇宙",
+      "titleJa": "アインシュタイン-カルタン重力における非相互作用ホログラフィック暗黒エネルギーの宇宙論的偶然問題の動的解決",
+      "catchTitle": "宇宙の謎「偶然問題」をねじれが解く？",
+      "hook": "宇宙の物質と暗黒エネルギーの密度がなぜ今同じくらいなのか、その謎をアインシュタイン-カルタン重力の「ねじれ」が動的に解決する可能性を示しています。",
+      "quiz": {
+        "question": "宇宙の物質と暗黒エネルギーの密度がなぜ今ほぼ同じなのかという「宇宙論的偶然問題」は、本研究でどのように解決される可能性が示されましたか？",
+        "options": [
+          "アインシュタイン-カルタン重力理論の「ねじれスカラー」が、密度比を動的に変化させるためです。",
+          "暗黒物質と暗黒エネルギーの間に強い相互作用があることが、新たな観測で判明したためです。",
+          "宇宙定数の値が、偶然にも現在の密度比に合うように調整されたためです。"
+        ],
+        "correctIndex": 0,
+        "explanation": "本研究では、アインシュタイン-カルタン重力理論における「ねじれスカラー」が、物質と暗黒エネルギーの密度比を時間とともに変化させ、現在のオーダー1の密度比を自然に説明できることを示しています。",
+        "difficulty": "medium"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "宇宙論的偶然問題",
+          "definition": "宇宙の進化の歴史において、物質の密度と暗黒エネルギーの密度が、なぜ現在の宇宙でほぼ同じオーダーになっているのかという謎です。これは、宇宙定数モデルの大きな課題の一つとされています。",
+          "reading": "Cosmic Coincidence Problem"
+        },
+        {
+          "term": "ホログラフィック暗黒エネルギー",
+          "definition": "ホログラフィック原理に基づいて、宇宙の真空エネルギー密度を赤外線カットオフと呼ばれるある長さスケールに関連付けることで、暗黒エネルギーの性質を説明しようとする理論モデルです。",
+          "reading": "Holographic Dark Energy"
+        },
+        {
+          "term": "アインシュタイン-カルタン重力",
+          "definition": "一般相対性理論を拡張した重力理論の一つで、時空の曲率だけでなく「ねじれ（torsion）」も考慮に入れます。ねじれは物質の固有スピンと関連付けられ、宇宙のダイナミクスに影響を与えます。",
+          "reading": "Einstein-Cartan gravity"
+        },
+        {
+          "term": "ねじれスカラー",
+          "definition": "アインシュタイン-カルタン重力理論において、時空のねじれの度合いを表すスカラー量です。本研究では、このスカラーが宇宙のスケール因子aに反比例して変化する性質を持つことが示されています。",
+          "reading": "torsion scalar"
+        },
+        {
+          "term": "ハッブル半径",
+          "definition": "宇宙の膨張速度によって決まる、光が宇宙の年齢の間に移動できる最大距離を示す概念です。ホログラフィック暗黒エネルギーモデルでは、このハッブル半径を赤外カットオフとして用いることがあります。",
+          "reading": "Hubble radius"
+        },
+        {
+          "term": "状態方程式",
+          "definition": "物質やエネルギーの圧力と密度の比を表す物理量で、宇宙論では暗黒エネルギーの性質を特徴づける重要なパラメータです。負の値をとると、宇宙の加速膨張を引き起こします。",
+          "reading": "equation of state"
+        },
+        {
+          "term": "フリーパラメータd",
+          "definition": "ホログラフィック暗黒エネルギーモデルにおいて導入される、理論の具体的な振る舞いを決定するための調整可能な定数です。観測データと整合するようにその値が制約されます。",
+          "reading": "free parameter d"
+        },
+        {
+          "term": "減速パラメータq",
+          "definition": "宇宙の膨張が加速しているか減速しているかを示すパラメータです。負の値は加速膨張を意味し、正の値は減速膨張を意味します。現在の宇宙では負の値が観測されています。",
+          "reading": "deceleration parameter q"
+        }
+      ],
+      "takeaway": {
+        "whatIsIt": "宇宙の物質と暗黒エネルギーの量が、なぜ今だけ似ているのかという謎を解く研究です。",
+        "whatFound": "アインシュタイン-カルタン重力理論の「ねじれ」が、この密度比を時間とともに変化させ、偶然ではないことを示しました。",
+        "soWhat": "この発見は、宇宙の加速膨張や暗黒エネルギーの性質を理解する新たな手がかりになるかもしれません。"
+      },
+      "storyCards": {
+        "ask": "宇宙の物質と暗黒エネルギー、なぜ今だけ量が近い？",
+        "method": "アインシュタイン-カルタン重力で「ねじれ」の働きを計算",
+        "finding": "「ねじれ」が密度比を動的に変化させ、偶然ではないと判明",
+        "meaning": "宇宙の謎を解き明かす新理論、今後の観測に期待"
+      },
+      "audio": {
+        "src": "/audio/2605.27973v1.mp3",
+        "format": "mp3",
+        "duration": 34,
+        "voice": "Kore",
+        "generatedAt": "2026-05-28T23:18:11.738Z"
+      }
+    },
+    {
+      "id": "2605.28719v1",
+      "title": "A Homogeneous Catalog of Rossiter-McLaughlin Systems: Distinct $e$-$λ$ Trends in Three Gas-Giant Mass Regimes",
+      "authors": [
+        "Xian-Yu Wang",
+        "Songhu Wang",
+        "Konstantin Batygin"
+      ],
+      "publishedAt": "2026-05-27T16:39:15Z",
+      "url": "https://arxiv.org/abs/2605.28719v1",
+      "pdfUrl": "https://arxiv.org/pdf/2605.28719v1.pdf",
+      "categories": [
+        "topic:astro",
+        "astro-ph.EP",
+        "astro-ph.IM"
+      ],
+      "abstract": "Stellar obliquity ($λ$) and orbital eccentricity ($e$) trace the dynamical histories of close-in giant planets, but the current observational picture is assembled from heterogeneous analyses that have obscured population-level trends. In this work, we homogeneously refit systems with Rossiter-McLaughlin (RM) measurements by performing a joint global fit to spectral energy distributions, transit light curves, mid-transit times, out-of-transit and in-transit radial velocities, yielding self-consistent posterior distributions for the physical and orbital parameters of both stars and planets across 255 systems. Restricting to 145 single-star systems with reliable planet-mass measurements, we uncover pronounced structure in the $e-λ$ plane that depends on planet mass: (i) sub-Saturns ($M_{\\rm p} \\leq \\sim0.3M_{\\rm J}$) can be both eccentric and misaligned; (ii) Jupiters ($\\sim0.3M_{\\rm J}&lt;M_{\\rm p} \\leq \\sim3 M_{\\rm J}$) are misaligned only on circular orbits; and (iii) super Jupiters and brown dwarfs ($M_{\\rm p}&gt;\\sim3M_{\\rm J}$) are aligned across the full eccentricity range. A two-dimensional Kolmogorov-Smirnov test shows that the joint $(e,λ)$ distributions differ significantly among these three mass regimes. These trends demonstrate that $λ$ depends jointly on eccentricity and planet mass, implying that obliquity alone is not a unique tracer of evolutionary history and underscoring the need for a unified framework for the origins of spin-orbit misalignment. The full catalog from this work is publicly available at https://www.stellarobliquity.com .",
+      "summary": {
+        "gist": "本研究は、系外惑星系の観測データを均質に再解析することで、惑星の質量に応じて軌道離心率と恒星自転軸の傾き（斜軸角）の間に明確な関係性があることを明らかにしました。特に、サブサターン級、木星級、スーパー木星級の3つの質量領域で異なる傾向が示されています。",
+        "novelty": "これまでの研究では、観測データの解析方法が不均一であったため、惑星系の集団レベルでの傾向が不明瞭でした。本研究は、255の系外惑星系に対して均質な解析手法を適用し、特に信頼性の高い惑星質量データを持つ145の単一恒星系に絞ることで、惑星質量が軌道離心率と斜軸角の関係に与える影響を初めて明確に示しました。これにより、斜軸角単独では惑星の進化史を完全に追跡できないという、新たな知見が提示されています。",
+        "method": "本研究では、255の系外惑星系を対象に、スペクトルエネルギー分布、トランジット光度曲線、トランジット中央時刻、トランジット内外の視線速度（ラジアルベロシティ）、およびロシター・マクローリン（RM）効果のデータを統合的に解析するグローバルフィット手法を採用しました。これにより、恒星と惑星の物理的・軌道パラメータについて自己無撞着な事後分布を導出しています。特に、信頼できる惑星質量測定値を持つ145の単一恒星系に限定して分析を行い、2次元コルモゴロフ・スミルノフ検定を用いて、3つの惑星質量領域間での離心率と斜軸角の結合分布の有意な違いを検証しました。",
+        "results": "分析の結果、惑星の質量に応じて軌道離心率と恒星自転軸の傾き（斜軸角）の間に明確な構造が存在することが判明しました。具体的には、(i) サブサターン級惑星（木星質量の約0.3倍以下）は、離心率が高く、かつ恒星自転軸に対して傾いている（ミスアライン）場合があること、(ii) 木星級惑星（木星質量の約0.3倍超から約3倍以下）は、円軌道の場合にのみミスアラインであること、そして (iii) スーパー木星級惑星および褐色矮星（木星質量の約3倍超）は、離心率の範囲に関わらず恒星自転軸と整列していることが示されました。2次元コルモゴロフ・スミルノフ検定により、これら3つの質量領域間での離心率と斜軸角の結合分布が統計的に有意に異なることが確認されています。これらの傾向は、斜軸角が離心率と惑星質量に複合的に依存することを示唆しており、斜軸角単独では進化の歴史のユニークなトレーサーではないことを強調しています。",
+        "why": "惑星の軌道離心率と恒星自転軸の傾きは、惑星系の形成と進化の過程で異なる物理メカニズムによって影響を受けるため、このような質量依存のトレンドが生じると考えられます。例えば、高離心率軌道形成チャネル（惑星間散乱、永年相互作用、コザイ・リドフ共鳴など）は、大きな離心率と傾きを生成する可能性があります。しかし、潮汐進化は離心率と斜軸角の減衰 timescales が異なるため、一方を効率的に消去しつつ他方を残すことがあります。また、惑星質量が大きいほど、恒星との潮汐相互作用が強くなり、軌道を円形化し、恒星の自転軸を整列させる効果が強まる可能性があります。本研究は、これらの複雑な相互作用が、惑星質量という要因を通じて、観測される離心率-斜軸角のトレンドに影響を与えていることを示唆しています。",
+        "figures": "Figure 1は、HD 209458系のグローバルモデリングの例を示しています。左から順に、スペクトルエネルギー分布（SED）、TESSトランジット光度曲線、視線速度（RV）、そしてロシター・マクローリン（RM）効果のフィット結果がプロットされています。各パネルには、観測データとモデルフィット、および残差が示されており、本研究で採用された均質な解析手法の適用例と、その高い適合度を視覚的に示しています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / astro-ph.EP）",
+      "field": "天文・宇宙",
+      "titleJa": "ロシター・マクローリン系における均質なカタログ：3つのガス惑星質量領域における異なる離心率-斜軸角トレンド",
+      "catchTitle": "系外惑星の軌道、質量で運命が決まる？",
+      "hook": "系外惑星の軌道離心率と恒星の自転軸の傾きは、惑星の進化の歴史を解き明かす重要な手がかりです。",
+      "quiz": {
+        "question": "系外惑星の軌道離心率と恒星の自転軸の傾き（斜軸角）の関係について、この論文から最も適切に導かれる結論は何ですか？",
+        "options": [
+          "惑星の質量によって、軌道離心率と斜軸角の関係性が大きく異なります。",
+          "すべての系外惑星において、軌道離心率が高いほど恒星の自転軸は大きく傾いています。",
+          "惑星の軌道離心率と斜軸角は、惑星の質量に関わらず常に相関関係にあります。"
+        ],
+        "correctIndex": 0,
+        "explanation": "本論文は、サブサターン級、木星級、スーパー木星級の3つの質量領域で、離心率と斜軸角の間に異なるトレンドがあることを明らかにしています。これは、惑星の質量がこれらの関係性を決定する重要な要因であることを示しています。",
+        "difficulty": "medium"
+      },
+      "limitations": "本研究では、恒星活動が活発な若い恒星系や、トランジットタイミング変動の振幅が大きい系は、均一な解析フレームワークを維持するために分析対象から除外されています。これらの系では、ガウス過程を用いた恒星活動の共同処理や、光力学モデリングが必要となるため、今後の研究課題として残されています。",
+      "glossary": [
+        {
+          "term": "ロシター・マクローリン（RM）効果",
+          "definition": "恒星の手前を惑星が通過する際、恒星の自転によって生じるスペクトル線のわずかな変化を観測することで、惑星の軌道と恒星の自転軸の相対的な傾き（斜軸角）を測定する手法です。",
+          "reading": "Rossiter-McLaughlin effect"
+        },
+        {
+          "term": "斜軸角（λ）",
+          "definition": "惑星の軌道面と恒星の自転軸がなす角度のことです。この角度が大きいほど、恒星の自転軸に対して惑星の軌道が大きく傾いていることを示します。",
+          "reading": "stellar obliquity"
+        },
+        {
+          "term": "軌道離心率（e）",
+          "definition": "惑星の軌道がどれだけ円からずれているかを示す値です。0は完全な円軌道を意味し、1に近づくほど細長い楕円軌道になります。",
+          "reading": "orbital eccentricity"
+        },
+        {
+          "term": "グローバルフィット",
+          "definition": "複数の異なる観測データ（光度曲線、視線速度、スペクトルなど）を同時に、かつ一貫したモデルを用いて解析する手法です。これにより、各パラメータ間の相関を考慮し、より信頼性の高い結果を得ることができます。",
+          "reading": "joint global fit"
+        },
+        {
+          "term": "スペクトルエネルギー分布",
+          "definition": "天体から放出される電磁波の強度が、波長（または周波数）に対してどのように分布しているかを示すグラフです。天体の温度や組成などの物理的特性を推定するために用いられます。",
+          "reading": "spectral energy distribution (SED)"
+        },
+        {
+          "term": "視線速度（ラジアルベロシティ）",
+          "definition": "天体が観測者に対して近づいたり遠ざかったりする速度のことです。ドップラー効果によってスペクトル線の波長が変化するのを測定し、系外惑星の存在や質量を検出する主要な手法の一つです。",
+          "reading": "radial velocity (RV)"
+        },
+        {
+          "term": "2次元コルモゴロフ・スミルノフ検定",
+          "definition": "2つの2次元データセットが同じ分布から来ているかどうかを統計的に評価するノンパラメトリック検定です。本研究では、異なる惑星質量領域における離心率と斜軸角の結合分布の違いを検出するために使用されました。",
+          "reading": "two-dimensional Kolmogorov-Smirnov test"
+        },
+        {
+          "term": "潮汐進化",
+          "definition": "天体間で働く潮汐力によって、軌道や自転が時間とともに変化する現象です。惑星と恒星の間で潮汐力が作用することで、軌道が円形化したり、自転軸が整列したりすることがあります。",
+          "reading": "tidal evolution"
+        }
+      ],
+      "takeaway": {
+        "whatIsIt": "系外惑星の軌道離心率と恒星の自転軸の傾きを、均質なデータで再分析した研究です。",
+        "whatFound": "惑星の質量によって、軌道がどれだけ歪んでいるか（離心率）と恒星の軸の傾き（斜軸角）の関係が大きく異なることがわかりました。",
+        "soWhat": "惑星の進化の歴史を解き明かすには、斜軸角だけでなく、惑星の質量や軌道離心率も合わせて考える必要があるそうです。"
+      },
+      "storyCards": {
+        "ask": "系外惑星の軌道、質量で運命が決まるってホント？",
+        "method": "255の系外惑星系を均質な手法で再解析し、軌道と傾きを測定。",
+        "finding": "惑星の質量で、軌道離心率と恒星軸の傾きに明確なトレンドを発見。",
+        "meaning": "惑星の進化史を解明する新視点。今後の観測に期待！"
+      },
+      "audio": {
+        "src": "/audio/2605.28719v1.mp3",
+        "format": "mp3",
+        "duration": 31,
+        "voice": "Kore",
+        "generatedAt": "2026-05-28T23:18:48.958Z"
+      },
+      "keyFigure": {
+        "imagePath": "/figures/2605.28719v1_results.png",
+        "page": 7,
+        "caption": "サブサターン級、木星級、スーパー木星級の惑星における離心率と斜軸角の関係を示しています。",
+        "label": "Figure 2.",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-05-28T23:19:56.905Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2605.28719v1_results.png",
+          "page": 7,
+          "caption": "サブサターン級、木星級、スーパー木星級の惑星における離心率と斜軸角の関係を示しています。",
+          "label": "Figure 2.",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-05-28T23:19:56.905Z"
+        }
+      ]
+    },
+    {
+      "id": "2605.28804v1",
+      "title": "Whispers of Supergravity in Gravitational Wave Backgrounds: Determining the Gravitino Mass from Cosmic Thermal History",
+      "authors": [
+        "Angus Spalding",
+        "Stephen F. King"
+      ],
+      "publishedAt": "2026-05-27T17:55:42Z",
+      "url": "https://arxiv.org/abs/2605.28804v1",
+      "pdfUrl": "https://arxiv.org/pdf/2605.28804v1.pdf",
+      "categories": [
+        "topic:astro",
+        "astro-ph.CO",
+        "hep-ph"
+      ],
+      "abstract": "Gravitino masses above the electroweak scale provide the simplest solution to the gravitino problem, but such large mass scales lie far beyond the reach of collider experiments. We show that the stochastic gravitational wave background offers a direct probe of this otherwise inaccessible regime. Despite decaying before Big-Bang Nucleosynthesis (BBN), these gravitinos naturally generate a period of early matter domination in the early universe. This non-standard epoch leaves a characteristic imprint on any primordial gravitational wave background, characterised by two frequencies corresponding to the onset and end of this phase. We demonstrate that these features can be used to directly infer both the gravitino mass and its initial abundance in a direct mapping. Future gravitational wave observatories span a vast frequency range, enabling sensitivity to gravitino masses from the BBN bound of $\\mathcal{O}(100)\\,\\text{TeV}$ all the way up to $\\mathcal{O}(10^{10})\\,\\text{TeV}$, with recent signal by NANOGrav already probing masses in the range $500$-$10^4$ TeV. Gravitational wave observables therefore probe an enormous region of parameter space, far beyond the reach of collider experiments. We are entering an era in which supergravity can be probed through gravitational wave backgrounds alongside collider experiments.",
+      "summary": {
+        "gist": "本研究は、宇宙初期にグラビティーノが支配する「初期物質優勢期」が存在した場合、その痕跡が原始重力波背景に特徴的な周波数として刻まれることを示しています。この特徴を利用することで、グラビティーノの質量とその初期存在量を直接的に決定できる可能性を提示しています。",
+        "novelty": "従来の素粒子実験では到達不可能な超高質量領域にあるグラビティーノの質量を、重力波観測という全く新しい手法でプローブできる点を提示しています。特に、グラビティーノがビッグバン原子核合成（BBN）以前に崩壊しても、その存在が宇宙の膨張史に与える影響が重力波背景に特有のシグナルとして残ることを初めて具体的に示し、研究の空白を埋めています。",
+        "method": "本研究では、グラビティーノが宇宙初期のエネルギー収支を支配する期間（初期物質優勢期）の宇宙論的進化を理論的に分析しています。グラビティーノの質量、初期存在量、崩壊率が、宇宙のハッブル膨張率とどのように相互作用し、宇宙の状態方程式を変化させるかをボルツマン方程式を用いてモデル化しています。この変化が原始重力波背景のスペクトルに与える影響を計算し、初期物質優勢期の開始と終了に対応する2つの特徴的な周波数を特定しています。",
+        "results": "分析の結果、グラビティーノの質量がビッグバン原子核合成（BBN）の下限である約100 TeVから10^10 TeVという広大な範囲にわたって、重力波観測によって感度が得られることが示されました。特に、NANOGravによる最近のシグナルは、すでに500 TeVから10^4 TeVの質量範囲をプローブしていると報告されています。これにより、重力波観測が素粒子衝突型加速器では到達できない広大なパラメータ空間を探索する新たな手段となることが明らかになりました。",
+        "why": "グラビティーノが宇宙初期にエネルギー密度を支配する「初期物質優勢期」を生成するのは、グラビティーノが非相対論的粒子として振る舞い、そのエネルギー密度が放射よりもゆっくりと減少するためです。この期間中、宇宙の膨張を記述する状態方程式が変化し、それが原始重力波のエネルギー密度と背景のエネルギー成分との相対的な赤方偏移に影響を与えます。この変化が、重力波スペクトルに特有の歪みとして刻まれ、初期物質優勢期の開始と終了に対応する2つの周波数として観測されるのです。",
+        "figures": "アブストラクトに図表の記述なし"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / astro-ph.CO）",
+      "field": "天文・宇宙",
+      "titleJa": "重力波背景から超重力理論の痕跡を探る：宇宙の熱的履歴からグラビティーノ質量を決定する",
+      "catchTitle": "宇宙の謎、グラビティーノ質量を重力波で解明",
+      "hook": "宇宙初期の重力波背景に刻まれた特徴から、これまで観測不可能だったグラビティーノの質量を直接推測できることが明らかになりました。",
+      "quiz": {
+        "question": "宇宙初期の重力波背景からグラビティーノの質量を推測できるのはなぜだと思いますか？",
+        "options": [
+          "グラビティーノが宇宙の膨張史を一時的に変え、その痕跡が重力波スペクトルに残るからです。",
+          "グラビティーノが直接重力波を放出し、その強度が質量に比例するからです。",
+          "グラビティーノがビッグバン原子核合成に影響を与え、その結果が重力波で観測されるからです。"
+        ],
+        "correctIndex": 0,
+        "explanation": "グラビティーノが宇宙初期にエネルギー密度を支配する期間を設けることで、宇宙の膨張史が標準的なモデルから逸脱し、その変化が重力波背景に特有のシグナルとして刻まれるためです。",
+        "difficulty": "medium"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "グラビティーノ",
+          "definition": "超対称性理論において、重力を伝える素粒子であるグラビトンの超対称性パートナーとして予言される素粒子です。スピン3/2を持つとされています。",
+          "reading": "Gravitino"
+        },
+        {
+          "term": "超重力理論",
+          "definition": "超対称性理論を局所的な対称性に拡張した理論で、重力を統一的に記述します。グラビティーノの存在を予言します。",
+          "reading": "Supergravity"
+        },
+        {
+          "term": "確率的重力波背景",
+          "definition": "宇宙全体に広がる、無数の独立した重力波源から発生するランダムな重力波の重ね合わせです。宇宙初期の物理現象の痕跡を保持していると考えられています。",
+          "reading": "Stochastic Gravitational Wave Background"
+        },
+        {
+          "term": "ビッグバン原子核合成（BBN）",
+          "definition": "宇宙誕生から数分後に、陽子と中性子が結合してヘリウムなどの軽い原子核が作られた時期です。この時期の元素存在量は、宇宙論の標準モデルの重要な検証点です。",
+          "reading": "Big-Bang Nucleosynthesis"
+        },
+        {
+          "term": "初期物質優勢期",
+          "definition": "宇宙初期において、放射（光やニュートリノなど）ではなく、グラビティーノのような非相対論的粒子が宇宙のエネルギー密度を一時的に支配する期間を指します。",
+          "reading": "Early Matter Domination"
+        },
+        {
+          "term": "状態方程式",
+          "definition": "宇宙を構成する物質やエネルギーの圧力とエネルギー密度の関係を示す物理量です。宇宙の膨張の仕方を決定する重要なパラメータです。",
+          "reading": "Equation of State"
+        },
+        {
+          "term": "NANOGrav",
+          "definition": "パルサータイミングアレイ（PTA）と呼ばれる手法を用いて、ナノヘルツ帯の重力波を探索する国際的な共同研究プロジェクトです。最近、確率的重力波背景の有力な証拠を報告しています。",
+          "reading": "North American Nanohertz Observatory for Gravitational Waves"
+        }
+      ],
+      "takeaway": {
+        "whatIsIt": "宇宙の初期に存在したとされる「グラビティーノ」という素粒子の質量を、新しい方法で探る研究です。",
+        "whatFound": "グラビティーノが宇宙の膨張を一時的に変えることで、その痕跡が重力波の背景ノイズに残り、質量がわかるそうです。",
+        "soWhat": "素粒子実験では測れない超重いグラビティーノの質量を、将来の重力波望遠鏡で解明できるかもしれません。"
+      },
+      "storyCards": {
+        "ask": "グラビティーノの重さは、どうやって測る？",
+        "method": "宇宙初期の重力波の「ゆらぎ」を分析",
+        "finding": "グラビティーノが宇宙の膨張を変え、重力波に痕跡を残す",
+        "meaning": "素粒子実験では無理な超高質量も、重力波で探れる時代へ"
+      },
+      "audio": {
+        "src": "/audio/2605.28804v1.mp3",
+        "format": "mp3",
+        "duration": 33,
+        "voice": "Kore",
+        "generatedAt": "2026-05-28T23:19:18.445Z"
+      },
+      "keyFigure": {
+        "imagePath": "/figures/2605.28804v1_results.png",
+        "page": 16,
+        "caption": "グラビティーノが宇宙初期に存在した場合の重力波スペクトルへの影響を示しています。",
+        "label": "FIG. 5. Benchmark GWBs with (solid lines) and without (dashed lines) an early matter-dominated",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-05-28T23:19:59.169Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2605.28804v1_results.png",
+          "page": 16,
+          "caption": "グラビティーノが宇宙初期に存在した場合の重力波スペクトルへの影響を示しています。",
+          "label": "FIG. 5. Benchmark GWBs with (solid lines) and without (dashed lines) an early matter-dominated",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-05-28T23:19:59.169Z"
+        },
+        {
+          "imagePath": "/figures/2605.28804v1_why.png",
+          "page": 15,
+          "caption": "重力波スペクトルの特徴を決定する観測可能な周波数を示しています。",
+          "label": "FIG. 4. The observable frequencies characterising the spectral features of the gravitational wave",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-05-28T23:19:59.169Z"
+        }
+      ]
+    },
+    {
+      "id": "2605.28005v1",
+      "title": "Transient axion streams from disrupted miniclusters",
+      "authors": [
+        "Luca Visinelli",
+        "Momchil Naydenov"
+      ],
+      "publishedAt": "2026-05-27T05:56:34Z",
+      "url": "https://arxiv.org/abs/2605.28005v1",
+      "pdfUrl": "https://arxiv.org/pdf/2605.28005v1.pdf",
+      "categories": [
+        "topic:astro",
+        "astro-ph.GA",
+        "astro-ph.CO",
+        "gr-qc",
+        "hep-ph"
+      ],
+      "abstract": "We investigate the formation and evolution of axion streams generated by the tidal disruption of axion miniclusters through stellar encounters in the Milky Way halo. Combining a large-scale Monte Carlo treatment of repeated stellar flybys with a tracer reconstruction of the stripped debris, we follow the phase-space evolution of the streams across a broad range of galactocentric radii and assess their contribution to the local dark matter distribution. We find that the kinetic energy of the stripped debris typically exceeds its residual self-gravitational binding energy at formation, so that the subsequent evolution is dominated by anisotropic free expansion and orbital shear. As a result, stream densities can decrease by factors as large as $\\sim10^{-9}$ over Galactic timescales, strongly suppressing the steady-state abundance of dense streams near the Solar circle. At the Solar radius, only a small fraction of realizations yields a nonzero encounter probability over a 10 year exposure, implying that observable streams are dominated by rare recent and nearby disruption events rather than by a persistent population of long-lived overdense substructure. Despite this rapid dilution, the streams remain dynamically cold and produce detector-frame linewidths many orders of magnitude narrower than the cavity bandwidths of current haloscope experiments. For representative haloscope configurations, we find characteristic stream linewidths in the range $Δν_{\\rm stream}\\sim10^{-7}-10^{1}\\,{\\rm Hz}$, while the corresponding Doppler drift remains well below the cavity response width.",
+      "summary": {
+        "gist": "本研究は、銀河ハロー内でアクシオンミニクラスターが星との遭遇によって潮汐破壊され、生成されるアクシオンストリームの形成と進化を調査しました。その結果、ストリームは急速に希薄化し、太陽近傍では稀な最近の破壊イベントに由来する一時的なものであることを明らかにしています。",
+        "novelty": "従来の研究がアクシオンミニクラスターの破壊と潮汐デブリの生成に焦点を当てていたのに対し、本研究は剥ぎ取られた物質の長期的な力学、特にストリーム自体の動的安定性に注目しています。これにより、アクシオンストリームが銀河スケールで過密構造として持続するのか、それとも分散するのかという未解明な点を明らかにしました。",
+        "method": "本研究では、銀河ハローにおけるアクシオンミニクラスターの潮汐破壊をシミュレートするため、大規模なモンテカルロ法と、剥ぎ取られたデブリのトレーサー再構築を組み合わせています。アクシオン質量を50 µeV、密度プロファイルをべき乗則と仮定し、各ストリッピングイベントの運動学的特性を追跡しました。その後、ストリームの進化を衝突のない系としてモデル化し、銀河ポテンシャル内でトレーサー粒子を追跡することで、ストリームの形態、密度進化、可視時間、有効存在量を評価しています。",
+        "results": "分析の結果、剥ぎ取られたデブリの運動エネルギーは、形成時の自己重力結合エネルギーを上回ることが多く、その後の進化は異方的な自由膨張と軌道せん断によって支配されることが判明しました。これにより、ストリーム密度は銀河スケールで最大約10^-9倍にまで減少し、太陽近傍での高密度ストリームの定常状態での存在量を強く抑制します。太陽半径では、ごく一部の実現例のみが10年間の観測期間で非ゼロの遭遇確率を示し、観測可能なストリームは持続的な長寿命の過密なサブ構造ではなく、稀な最近の近傍での破壊イベントによって支配されることを示唆しています。しかし、この急速な希薄化にもかかわらず、ストリームは動的に冷たく、現在のハロスコープ実験の空洞帯域幅よりもはるかに狭い検出器フレーム線幅（Δνstream〜10^-7-10^1 Hz）を生成すると予測されています。",
+        "why": "アクシオンストリームが急速に希薄化するのは、剥ぎ取られたデブリの運動エネルギーが、その残存する自己重力結合エネルギーを上回るためです。このため、デブリは自己重力によって束縛されず、異方的な自由膨張と軌道せん断によって空間的に拡散していきます。具体的には、潮汐キックによる縦方向の引き伸ばしと、元となるミニクラスターから受け継いだ横方向の広がりが、ストリームの密度を時間とともに大きく減少させる主要なメカニズムです。",
+        "figures": "アブストラクトに図表の記述なし"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / astro-ph.GA）",
+      "field": "天文・宇宙",
+      "titleJa": "銀河ハローにおける星との遭遇によるアクシオンミニクラスターの潮汐破壊から生成される一時的なアクシオンストリーム",
+      "catchTitle": "暗黒物質の謎に迫る！アクシオンの流れは一時的？",
+      "hook": "銀河系に存在する暗黒物質の有力候補であるアクシオンが、星との遭遇によってどのように振る舞うのかを解明しています。",
+      "quiz": {
+        "question": "銀河ハローで星との遭遇によって生成されるアクシオンストリームは、時間とともにどのように変化するでしょうか？",
+        "options": [
+          "急速に希薄化し、一時的な存在となります。",
+          "安定した高密度な構造を保ち、長期間存在します。",
+          "密度は変化せず、銀河全体に均一に分布します。"
+        ],
+        "correctIndex": 0,
+        "explanation": "本研究の結果、アクシオンストリームは急速に希薄化し、銀河スケールでは一時的な存在となることが示されています。",
+        "difficulty": "medium"
+      },
+      "limitations": "本研究では、剥ぎ取られたデブリと残存するミニクラスターの自己重力を無視してトレーサーの進化を計算しています。この近似は、再構築されたストリームが運動学的支持が自己重力を上回るレジームで進化するという結果によって事後的に正当化されていますが、自己重力が重要な役割を果たす可能性のある特定のシナリオでは、この近似が限界となる可能性があります。",
+      "glossary": [
+        {
+          "term": "アクシオンミニクラスター（AMC）",
+          "definition": "宇宙の暗黒物質の候補であるアクシオンが、重力によって凝集して形成されるコンパクトな構造体のことです。銀河系内に多数存在すると考えられています。",
+          "reading": "Axion Miniclusters"
+        },
+        {
+          "term": "潮汐破壊",
+          "definition": "重力的に束縛された天体が、より大きな天体の重力によって引き裂かれ、構成物質が散逸する現象です。本研究では、アクシオンミニクラスターが星の重力によって破壊されることを指します。",
+          "reading": "Tidal disruption"
+        },
+        {
+          "term": "アクシオンストリーム",
+          "definition": "潮汐破壊によってアクシオンミニクラスターから剥ぎ取られたアクシオンが、細長く伸びた流れとして銀河ハロー内に分布する構造のことです。",
+          "reading": "Axion streams"
+        },
+        {
+          "term": "モンテカルロ法",
+          "definition": "乱数を用いてシミュレーションや数値計算を行う手法です。本研究では、星との繰り返し遭遇によるアクシオンミニクラスターの破壊過程を確率的にモデル化するために用いられています。",
+          "reading": "Monte Carlo method"
+        },
+        {
+          "term": "トレーサー再構築",
+          "definition": "剥ぎ取られた物質の運動学的特性を追跡し、その進化をシミュレートする手法です。個々のアクシオン粒子ではなく、仮想的な粒子（トレーサー）の集団としてデブリの動きを再現します。",
+          "reading": "Tracer reconstruction"
+        },
+        {
+          "term": "フェーズ空間",
+          "definition": "粒子の位置と運動量を組み合わせた空間です。本研究では、アクシオンストリームの空間的な広がりと速度分布を記述するために用いられています。",
+          "reading": "Phase-space"
+        },
+        {
+          "term": "軌道せん断",
+          "definition": "銀河の重力ポテンシャル内で、異なる軌道を持つ粒子が互いに相対的に移動し、構造が引き伸ばされたり、分散したりする現象です。アクシオンストリームの希薄化の一因となります。",
+          "reading": "Orbital shear"
+        },
+        {
+          "term": "ハロスコープ実験",
+          "definition": "暗黒物質の候補であるアクシオンを直接検出するための実験装置です。アクシオンが電磁場中で光子に変換される現象を利用して検出を試みます。",
+          "reading": "Haloscope experiments"
+        }
+      ],
+      "takeaway": {
+        "whatIsIt": "宇宙の暗黒物質の候補である「アクシオン」が、銀河系で星とぶつかった後にどうなるかを調べた研究です。",
+        "whatFound": "アクシオンの流れは、思っていたよりもずっと早く薄まってしまうことが分かりました。観測できるのはごく稀なケースのようです。",
+        "soWhat": "この発見は、アクシオンを直接検出する実験の計画に役立ち、暗黒物質の探索方法を見直すきっかけになります。"
+      },
+      "storyCards": {
+        "ask": "暗黒物質の候補「アクシオン」は、銀河でどう振る舞う？",
+        "method": "星との衝突をモンテカルロ法でシミュレートし、アクシオンの流れを追跡",
+        "finding": "アクシオンの流れは、銀河スケールで約10億分の1に希薄化する",
+        "meaning": "アクシオン検出実験の設計に影響、稀なイベントに注目"
+      },
+      "audio": {
+        "src": "/audio/2605.28005v1.mp3",
+        "format": "mp3",
+        "duration": 34,
+        "voice": "Kore",
+        "generatedAt": "2026-05-28T23:19:46.777Z"
+      },
+      "keyFigure": {
+        "imagePath": "/figures/2605.28005v1_results.png",
+        "page": 8,
+        "caption": "FIG. 9. Evolution of the analytic stream-density track ρtrack Evolution of the analytic stream-density track ρtrack",
+        "label": "FIG. 9. Evolution of the analytic stream-density track ρtrack",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-05-28T23:20:00.374Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2605.28005v1_results.png",
+          "page": 8,
+          "caption": "FIG. 9. Evolution of the analytic stream-density track ρtrack Evolution of the analytic stream-density track ρtrack",
+          "label": "FIG. 9. Evolution of the analytic stream-density track ρtrack",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-05-28T23:20:00.374Z"
+        }
+      ]
+    }
+  ]
+}

@@ -21,7 +21,9 @@
     "backfill:quiz": "tsx scripts/backfill-quiz-difficulty.ts",
     "backfill:fields": "tsx scripts/backfill-fields.ts",
     "backfill:takeaway": "tsx scripts/backfill-takeaway.ts",
-    "backfill:audio": "tsx scripts/backfill-audio.ts"
+    "backfill:audio": "tsx scripts/backfill-audio.ts",
+    "preview:fetch": "tsx scripts/preview-fetch.ts",
+    "clean:categories": "tsx scripts/clean-categories.ts"
   },
   "dependencies": {
     "@breezystack/lamejs": "^1.2.7",

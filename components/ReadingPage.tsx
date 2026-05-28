@@ -4,6 +4,7 @@ import InsightCallout from "@/components/InsightCallout";
 import KeyFigureBlock from "@/components/KeyFigureBlock";
 import PredictionQuiz from "@/components/PredictionQuiz";
 import QuizGate from "@/components/QuizGate";
+import ReadButton from "@/components/ReadButton";
 import ReadingMeta from "@/components/ReadingMeta";
 import RelatedPapers from "@/components/RelatedPapers";
 import ShareButtons from "@/components/ShareButtons";
@@ -143,6 +144,8 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
               url={articleUrl}
             />
           ) : null}
+
+          <ReadButton paperId={paper.id} field={paper.field} />
 
           <ShareButtons url={articleUrl} title={view.catchTitle} />
 

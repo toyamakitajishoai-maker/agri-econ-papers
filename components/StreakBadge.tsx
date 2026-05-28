@@ -1,6 +1,7 @@
 "use client";
 
 import { Flame } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { currentStreak, readStats } from "@/lib/quizStats";
@@ -35,20 +36,22 @@ export default function StreakBadge() {
 
   if (streak <= 0) {
     return (
-      <span
-        className="inline-flex items-center gap-1 rounded-full border border-[#e8e4dc] bg-white/70 px-2.5 py-1 text-[11px] text-[#8a908a]"
-        title="クイズに答えると連続日数が始まります"
+      <Link
+        href="/me"
+        className="inline-flex items-center gap-1 rounded-full border border-[#e8e4dc] bg-white/70 px-2.5 py-1 text-[11px] text-[#8a908a] transition hover:border-[#d8d2c4] hover:text-[#3d3830]"
+        title="クイズに答えると連続日数が始まります（タップでマイページへ）"
       >
         <Flame className="h-3 w-3" strokeWidth={1.8} />
         ストリーク 0
-      </span>
+      </Link>
     );
   }
 
   return (
-    <span
-      className="inline-flex items-center gap-1 rounded-full border border-[#e8d6c8] bg-[#fdf3ec] px-2.5 py-1 text-[11px] font-medium text-[#3d3830]"
-      title={`クイズに答えた日数：${streak}日連続`}
+    <Link
+      href="/me"
+      className="inline-flex items-center gap-1 rounded-full border border-[#e8d6c8] bg-[#fdf3ec] px-2.5 py-1 text-[11px] font-medium text-[#3d3830] transition hover:border-[#d8b8a3] hover:bg-[#fae8db]"
+      title={`クイズに答えた日数：${streak}日連続（タップでマイページへ）`}
     >
       <Flame
         className="h-3 w-3 text-[#c45c4a]"
@@ -57,6 +60,6 @@ export default function StreakBadge() {
         aria-hidden
       />
       {streak}日連続
-    </span>
+    </Link>
   );
 }

@@ -21,6 +21,13 @@ export type QuizAnswer = {
   difficulty?: string;
 };
 
+export type ReadRecord = {
+  /** 読破日（YYYY-MM-DD, JST） */
+  date: string;
+  /** 任意: 分野ラベル */
+  field?: string;
+};
+
 export type QuizStats = {
   version: 1;
   /** paperId -> 最新回答 */
@@ -31,6 +38,10 @@ export type QuizStats = {
   byField: Record<string, { total: number; correct: number }>;
   /** ストリーク状態 */
   streak: { current: number; longest: number; lastDate: string | null };
+  /** 読破した論文（paperId -> 記録） */
+  readPapers?: Record<string, ReadRecord>;
+  /** 分野別の読破数 */
+  readByField?: Record<string, number>;
 };
 
 const KEY = "quiz-stats-v1";
@@ -41,6 +52,8 @@ const emptyStats = (): QuizStats => ({
   byDate: {},
   byField: {},
   streak: { current: 0, longest: 0, lastDate: null },
+  readPapers: {},
+  readByField: {},
 });
 
 function isBrowser(): boolean {
@@ -77,6 +90,8 @@ export function readStats(): QuizStats {
       byDate: parsed.byDate ?? {},
       byField: parsed.byField ?? {},
       streak: parsed.streak ?? { current: 0, longest: 0, lastDate: null },
+      readPapers: parsed.readPapers ?? {},
+      readByField: parsed.readByField ?? {},
     };
   } catch {
     return emptyStats();
@@ -162,4 +177,52 @@ export function hasAnswered(paperId: string): boolean {
   if (!isBrowser()) return false;
   const stats = readStats();
   return Boolean(stats.answers[paperId]);
+}
+
+/** 読破フラグの toggle（true で読破登録、false で取り消し） */
+export function setRead(input: { paperId: string; field?: string; read: boolean }): QuizStats {
+  const stats = readStats();
+  const map = stats.readPapers ?? {};
+  const fieldMap = stats.readByField ?? {};
+  const already = Boolean(map[input.paperId]);
+
+  if (input.read && !already) {
+    map[input.paperId] = { date: todayJst(), field: input.field };
+    if (input.field) fieldMap[input.field] = (fieldMap[input.field] ?? 0) + 1;
+  } else if (!input.read && already) {
+    const prev = map[input.paperId];
+    delete map[input.paperId];
+    if (prev?.field && fieldMap[prev.field]) {
+      fieldMap[prev.field] = Math.max(0, fieldMap[prev.field] - 1);
+      if (fieldMap[prev.field] === 0) delete fieldMap[prev.field];
+    }
+  }
+  stats.readPapers = map;
+  stats.readByField = fieldMap;
+  writeStats(stats);
+  return stats;
+}
+
+export function hasRead(paperId: string): boolean {
+  if (!isBrowser()) return false;
+  return Boolean(readStats().readPapers?.[paperId]);
+}
+
+/** 集計用ユーティリティ */
+export function totalRead(stats: QuizStats): number {
+  return Object.keys(stats.readPapers ?? {}).length;
+}
+
+export function totalAnswered(stats: QuizStats): number {
+  return Object.keys(stats.answers).length;
+}
+
+export function totalCorrect(stats: QuizStats): number {
+  return Object.values(stats.byDate).reduce((sum, v) => sum + v.correct, 0);
+}
+
+export function fieldsRead(stats: QuizStats): string[] {
+  return Object.keys(stats.readByField ?? {}).filter(
+    (f) => (stats.readByField?.[f] ?? 0) > 0
+  );
 }

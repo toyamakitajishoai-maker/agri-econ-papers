@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+
+import StreakBadge from "@/components/StreakBadge";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -23,13 +25,14 @@ export default function RootLayout({
               </span>
               <span className="block text-[10px] tracking-[0.18em] text-[#8a908a]">3 MIN READ</span>
             </Link>
-            <nav className="flex items-center gap-5 text-sm text-[#5c635c]">
+            <nav className="flex items-center gap-4 text-sm text-[#5c635c] sm:gap-5">
               <Link className="transition hover:text-[#2f4a3a]" href="/">
                 きょう
               </Link>
               <Link className="transition hover:text-[#2f4a3a]" href="/archive">
                 これまで
               </Link>
+              <StreakBadge />
             </nav>
           </div>
         </header>

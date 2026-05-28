@@ -1,0 +1,57 @@
+"use client";
+
+import { Flame } from "lucide-react";
+import { useEffect, useState } from "react";
+
+import { currentStreak, readStats } from "@/lib/quizStats";
+
+/**
+ * ヘッダー右上に常駐するクイズストリーク。
+ * SSR では空（プレースホルダのみ）を返してハイドレーション不一致を回避し、
+ * mount 後に LocalStorage を読んで実値を表示する。
+ */
+export default function StreakBadge() {
+  const [streak, setStreak] = useState<number | null>(null);
+
+  useEffect(() => {
+    function refresh() {
+      const stats = readStats();
+      setStreak(currentStreak(stats));
+    }
+    refresh();
+    window.addEventListener("quiz-stats:updated", refresh);
+    /** 他タブで更新された場合にも反映 */
+    window.addEventListener("storage", refresh);
+    return () => {
+      window.removeEventListener("quiz-stats:updated", refresh);
+      window.removeEventListener("storage", refresh);
+    };
+  }, []);
+
+  /** SSR & マウント直後: 高さだけ確保した空 span（レイアウト揺れ防止） */
+  if (streak === null) {
+    return <span aria-hidden className="inline-block h-6 w-12" />;
+  }
+
+  if (streak <= 0) {
+    return (
+      <span
+        className="inline-flex items-center gap-1 rounded-full border border-[#e8e4dc] bg-white/70 px-2.5 py-1 text-[11px] text-[#8a908a]"
+        title="クイズに答えると連続日数が始まります"
+      >
+        <Flame className="h-3 w-3" strokeWidth={1.8} />
+        ストリーク 0
+      </span>
+    );
+  }
+
+  return (
+    <span
+      className="inline-flex items-center gap-1 rounded-full border border-[#d8d2c4] bg-[#faf7f0] px-2.5 py-1 text-[11px] font-medium text-[#3d3830]"
+      title={`クイズに答えた日数：${streak}日連続`}
+    >
+      <Flame className="h-3 w-3 text-[#9a8460]" strokeWidth={2} aria-hidden />
+      {streak}日連続
+    </span>
+  );
+}

@@ -24,6 +24,20 @@ export type PredictionQuiz = {
   difficulty?: QuizDifficulty;
 };
 
+/** 読み上げ音声（Gemini TTS で生成） */
+export type PaperAudio = {
+  /** public 配下からの相対パス。例: /audio/2401.12345v1.wav */
+  src: string;
+  /** "wav" | "mp3" */
+  format: "wav" | "mp3";
+  /** 推定再生時間（秒） */
+  duration?: number;
+  /** 使用した声 (例: Kore, Zephyr) */
+  voice?: string;
+  /** 生成日時 (ISO8601) */
+  generatedAt?: string;
+};
+
 /** 友人に話せる3行テイクアウェイ（読了後の持ち帰り用） */
 export type Takeaway = {
   /** 1行目: 何の研究か（30〜60字目安） */
@@ -91,6 +105,8 @@ export type Paper = {
   limitations?: string;
   /** 友人にこう話せる3行テイクアウェイ（読者向けの持ち帰り、Gemini生成） */
   takeaway?: Takeaway;
+  /** 60秒で聴く要点ナレーション（Gemini TTS で事前生成） */
+  audio?: PaperAudio;
   /** PDF から抽出した主要図（旧形式: 1枚） */
   keyFigure?: KeyFigure;
   /** PDF から抽出した複数図（新形式: わかったこと用・なぜそうなるのか用など） */

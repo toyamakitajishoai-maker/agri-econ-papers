@@ -4,6 +4,7 @@ import { readFile } from "node:fs/promises";
 loadEnv({ path: ".env.local" });
 loadEnv();
 
+import { buildAudioForPaper, isAudioFresh, isReadyForAudio } from "@/lib/buildAudio";
 import { extractPdfTextExcerpt } from "@/lib/extractPdfText";
 import { isWeakPdfUrl, resolvePdfUrl } from "@/lib/pdfResolve";
 import { summarizeAbstractWithGemini } from "@/lib/gemini";
@@ -161,7 +162,7 @@ async function main() {
 
     const result = await summarizeAbstractWithGemini(toArxivPaper(paper), apiKey, 3, pdfExcerpt);
     processed += 1;
-    summarizedPapers.push({
+    const updatedPaper: Paper = {
       ...paper,
       pdfUrl: resolvedPdfUrl || paper.pdfUrl,
       titleJa: result.titleJa ?? paper.titleJa,
@@ -172,7 +173,21 @@ async function main() {
       glossary: result.glossary ?? paper.glossary,
       takeaway: result.takeaway ?? paper.takeaway,
       summary: result.summary,
-    });
+    };
+
+    // 音声化（無効化したい場合は SKIP_AUDIO=1）
+    let audioNote = "";
+    if (process.env.SKIP_AUDIO !== "1" && isReadyForAudio(updatedPaper) && !isAudioFresh(updatedPaper.audio)) {
+      try {
+        const { audio, bytes } = await buildAudioForPaper(updatedPaper, apiKey);
+        updatedPaper.audio = audio;
+        audioNote = ` 音声:${audio.duration ?? "?"}s/${(bytes / 1024).toFixed(0)}KB`;
+      } catch (e) {
+        audioNote = ` 音声:失敗(${e instanceof Error ? e.message.slice(0, 60) : "?"})`;
+      }
+    }
+
+    summarizedPapers.push(updatedPaper);
 
     const elapsedSec = ((Date.now() - started) / 1000).toFixed(1);
     const limNote = pdfExcerpt
@@ -182,7 +197,7 @@ async function main() {
       : "";
     const glossaryNote = result.glossary?.length ? ` 用語:${result.glossary.length}件` : "";
     console.log(
-      `  → 完了 (${elapsedSec}s) catchTitle: ${result.catchTitle ? "あり" : "なし"}${limNote ? ` ${limNote}` : ""}${glossaryNote}`
+      `  → 完了 (${elapsedSec}s) catchTitle: ${result.catchTitle ? "あり" : "なし"}${limNote ? ` ${limNote}` : ""}${glossaryNote}${audioNote}`
     );
 
     await saveProgress();

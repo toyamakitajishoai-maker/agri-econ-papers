@@ -1,3 +1,4 @@
+import AudioPlayer from "@/components/AudioPlayer";
 import GlossaryList from "@/components/GlossaryList";
 import GlossaryText from "@/components/GlossaryText";
 import InsightCallout from "@/components/InsightCallout";
@@ -48,6 +49,12 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
             {view.catchTitle}
           </h1>
           <p className="text-pretty text-lg leading-[1.8] text-[#4a524a]">{view.hook}</p>
+          {paper.audio ? (
+            <AudioPlayer
+              audio={paper.audio}
+              label={`要点を ${paper.audio.duration ?? 60} 秒で聴く`}
+            />
+          ) : null}
         </header>
 
         <div id="read-body" className="space-y-10 sm:space-y-12">

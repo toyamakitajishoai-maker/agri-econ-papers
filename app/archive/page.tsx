@@ -1,8 +1,11 @@
 import Link from "next/link";
 
+import TagChips from "@/components/TagChips";
+import { tagToSlug } from "@/lib/categoryMap";
 import { getAvailableDates, getDailyPapers } from "@/lib/data";
 import { getJournalLabel } from "@/lib/journal";
 import { buildEditorialView } from "@/lib/editorial";
+import { getAllTagsWithCount } from "@/lib/tagIndex";
 
 function formatPublishedDate(iso: string): string {
   if (!iso) return "—";
@@ -18,6 +21,9 @@ function formatPublishedDate(iso: string): string {
 
 export default async function ArchivePage() {
   const dates = await getAvailableDates();
+  const tagCounts = await getAllTagsWithCount();
+  /** 上位タグ（最大18件）だけ表示し、回遊性を担保しつつUIを軽くする */
+  const visibleTags = tagCounts.slice(0, 18);
 
   return (
     <div className="space-y-8">
@@ -29,6 +35,27 @@ export default async function ArchivePage() {
           タイトル・著者・掲載誌など、基本情報だけをまとめています。
         </p>
       </section>
+
+      {visibleTags.length > 0 ? (
+        <section className="rounded-3xl bg-white px-5 py-5 shadow-sm">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#6b726b]">
+            分野で絞り込む
+          </p>
+          <ul className="mt-3 flex flex-wrap gap-1.5">
+            {visibleTags.map(({ tag, count }) => (
+              <li key={tag}>
+                <Link
+                  href={`/tags/${tagToSlug(tag)}`}
+                  className="inline-flex items-center gap-1 rounded-full bg-[#eef2ea] px-3 py-1 text-xs font-medium text-[#4a5c4a] transition hover:bg-[#dde6dc] hover:text-[#1f3326]"
+                >
+                  {tag}
+                  <span className="text-[10px] text-[#8a958a]">{count}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
 
       {dates.length === 0 ? (
         <div className="rounded-3xl bg-white px-8 py-12 text-center text-[#6b726b]">
@@ -71,6 +98,9 @@ export default async function ArchivePage() {
                               <dt className="text-[#9a9f9a]">公開日</dt>
                               <dd>{formatPublishedDate(paper.publishedAt)}</dd>
                             </dl>
+                            <div className="mt-2">
+                              <TagChips tags={view.tags} />
+                            </div>
                           </li>
                         );
                       })}

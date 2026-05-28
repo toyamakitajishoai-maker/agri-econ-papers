@@ -6,6 +6,7 @@ import KeyFigureBlock from "@/components/KeyFigureBlock";
 import PredictionQuiz from "@/components/PredictionQuiz";
 import QuizGate from "@/components/QuizGate";
 import ReadButton from "@/components/ReadButton";
+import ReviewMemoSection from "@/components/ReviewMemo";
 import ReadingMeta from "@/components/ReadingMeta";
 import RelatedPapers from "@/components/RelatedPapers";
 import ShareButtons from "@/components/ShareButtons";
@@ -158,6 +159,8 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
           ) : null}
 
           <ReadButton paperId={paper.id} field={paper.field} />
+
+          <ReviewMemoSection paperId={paper.id} takeaway={paper.takeaway} />
 
           <ShareButtons url={articleUrl} title={view.catchTitle} />
 

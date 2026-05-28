@@ -1,3 +1,4 @@
+import { normalizeCategory } from "@/lib/categoryMap";
 import { getJournalLabel } from "@/lib/journal";
 import { isAcademicSummary } from "@/lib/summary";
 import type { Paper, PaperSummary } from "@/lib/types";
@@ -18,18 +19,6 @@ export type EditorialView = {
     why?: string;
     figures?: string;
   };
-};
-
-const TAG_LABELS: Record<string, string> = {
-  "Food security": "食料安全保障",
-  "Business": "ビジネス",
-  "Economics": "経済学",
-  "Agriculture": "農業",
-  "Rural": "農村",
-  "Policy": "政策",
-  "Sustainability": "持続可能性",
-  "Climate change": "気候変動",
-  "openalex": "",
 };
 
 function firstSentence(text: string, maxLen = 120): string {
@@ -120,24 +109,43 @@ export function getRelevance(paper: Paper): string {
   return firstSentence(paper.abstract, 160);
 }
 
+/**
+ * タグ抽出ロジック（大分類 + 中分類のハイブリッド）
+ * 優先順:
+ *   1. field（収集時に割り当てた分野＝大分類）
+ *   2. categories を normalizeCategory で日本語化（中分類、ノイズ除外）
+ *   3. 媒体種別（プレプリント / 査読論文）
+ * 重複は除去、上限 max 件まで。
+ */
 export function getTags(paper: Paper, max = 4): string[] {
   const tags: string[] = [];
-  if (paper.field?.trim()) tags.push(paper.field.trim());
+  const field = paper.field?.trim();
+  if (field) tags.push(field);
 
-  const fromCats = paper.categories
-    .filter((c) => c !== "openalex" && !c.startsWith("topic:") && !c.startsWith("arxiv"))
-    .map((c) => TAG_LABELS[c] ?? c)
-    .filter((c) => c && c !== paper.field);
+  const seen = new Set(tags);
+  for (const raw of paper.categories ?? []) {
+    const normalized = normalizeCategory(raw);
+    if (!normalized) continue;
+    if (seen.has(normalized)) continue;
+    seen.add(normalized);
+    tags.push(normalized);
+    /** 中分類は最大2個まで（field と合わせて3個まで） */
+    if (tags.length >= 3) break;
+  }
 
   const journal = getJournalLabel(paper);
-  tags.push(...fromCats);
-  if (journal.includes("arXiv")) tags.push("プレプリント");
-  else if (journal !== "掲載誌情報なし") tags.push("査読論文");
+  const journalTag = journal.includes("arXiv")
+    ? "プレプリント"
+    : journal !== "掲載誌情報なし"
+      ? "査読論文"
+      : null;
+  if (journalTag && !seen.has(journalTag)) {
+    tags.push(journalTag);
+    seen.add(journalTag);
+  }
 
-  const unique = [...new Set(tags)].filter(Boolean);
-  if (unique.length >= 1) return unique.slice(0, max);
-
-  return ["今日の研究", "3分で読む"].slice(0, max);
+  if (tags.length === 0) return ["今日の研究"];
+  return tags.slice(0, max);
 }
 
 export function getReadMinutes(paper: Paper): number {

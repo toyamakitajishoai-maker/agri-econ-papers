@@ -4,14 +4,18 @@ type GlossaryListProps = {
   terms: GlossaryTerm[];
 };
 
-export default function GlossaryList({ terms }: GlossaryListProps) {
+export default function GlossaryList({ terms, defaultOpen = false }: GlossaryListProps & { defaultOpen?: boolean }) {
   if (!terms.length) return null;
   return (
-    <section className="rounded-2xl border border-[#e8e4dc] bg-white px-5 py-5 sm:px-6">
-      <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#6b726b]">
-        この記事の専門用語
-      </p>
-      <p className="mt-1 text-xs text-[#8a908a]">
+    <details
+      className="group rounded-2xl border border-[#e8e4dc] bg-white px-5 py-4 sm:px-6"
+      open={defaultOpen}
+    >
+      <summary className="cursor-pointer list-none text-sm font-medium text-[#6b726b] marker:content-none">
+        <span className="group-open:hidden">この記事の専門用語（タップで展開）</span>
+        <span className="hidden group-open:inline">この記事の専門用語（タップで閉じる）</span>
+      </summary>
+      <p className="mt-3 text-xs text-[#8a908a]">
         本文の下線つきの語は、カーソルを合わせる／タップすると説明が出ます。
       </p>
       <ul className="mt-4 space-y-3">
@@ -25,6 +29,6 @@ export default function GlossaryList({ terms }: GlossaryListProps) {
           </li>
         ))}
       </ul>
-    </section>
+    </details>
   );
 }

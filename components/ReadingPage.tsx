@@ -1,3 +1,5 @@
+import ActionFlowDiagram from "@/components/ActionFlowDiagram";
+import ApproachComparisonTable from "@/components/ApproachComparisonTable";
 import AudioPlayer from "@/components/AudioPlayer";
 import GlossaryList from "@/components/GlossaryList";
 import GlossaryText from "@/components/GlossaryText";
@@ -6,6 +8,7 @@ import KeyFigureBlock from "@/components/KeyFigureBlock";
 import PredictionQuiz from "@/components/PredictionQuiz";
 import QuizGate from "@/components/QuizGate";
 import ReadButton from "@/components/ReadButton";
+import ResultsHighlightBlock from "@/components/ResultsHighlightBlock";
 import ReviewMemoSection from "@/components/ReviewMemo";
 import ReadingMeta from "@/components/ReadingMeta";
 import RelatedPapers from "@/components/RelatedPapers";
@@ -31,6 +34,14 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
   const { sections } = view;
   const glossary = paper.glossary ?? [];
   const articleUrl = `${getSiteUrl()}/papers/${encodeURIComponent(paper.id)}`;
+  const threeLineSummary = paper.threeLineSummary ?? view.threeLineSummary;
+  const backgroundText = paper.background?.trim() || sections.gist?.trim() || "";
+  const showBackground =
+    Boolean(backgroundText) &&
+    backgroundText !== threeLineSummary.join("");
+  const resultsTitle = paper.resultsTitle ?? "わかったこと";
+  const hasLimitations =
+    Boolean(paper.limitationsBullets?.length) || Boolean(paper.limitations?.trim());
 
   /** 新形式（keyFigures）優先。旧形式（keyFigure 単数）は results 用にフォールバック */
   const allFigures = paper.keyFigures ?? [];
@@ -51,6 +62,11 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
             {view.catchTitle}
           </h1>
           <p className="text-pretty text-lg leading-[1.8] text-[#4a524a]">{view.hook}</p>
+          {paper.hookLead?.trim() ? (
+            <p className="text-pretty text-base leading-[1.85] text-[#5c635c]">
+              <GlossaryText text={paper.hookLead} glossary={glossary} />
+            </p>
+          ) : null}
           {paper.audio ? (
             <AudioPlayer
               audio={paper.audio}
@@ -66,13 +82,9 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
 
           <QuizGate paperId={paper.id} skip={!paper.quiz}>
           <div className="space-y-10 sm:space-y-12">
-          {glossary.length > 0 ? <GlossaryList terms={glossary} /> : null}
-
-          {paper.limitations?.trim() ? <StudyLimitations text={paper.limitations} /> : null}
-
           <SummaryBlock title="まずここだけ" variant="lead">
             <ul className="space-y-3">
-              {view.threeLineSummary.map((line, i) => (
+              {threeLineSummary.map((line, i) => (
                 <li key={`sum-${i}`}>
                   <GlossaryText text={line} glossary={glossary} />
                 </li>
@@ -80,10 +92,10 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
             </ul>
           </SummaryBlock>
 
-          {sections.gist && sections.gist !== view.threeLineSummary.join("") ? (
+          {showBackground ? (
             <SummaryBlock title="背景">
               <p>
-                <GlossaryText text={sections.gist} glossary={glossary} />
+                <GlossaryText text={backgroundText} glossary={glossary} />
               </p>
             </SummaryBlock>
           ) : null}
@@ -100,11 +112,21 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
             </SummaryBlock>
           ) : null}
 
-          {sections.results ? (
-            <SummaryBlock title="わかったこと">
+          {paper.resultsHighlight ? (
+            <SummaryBlock title={resultsTitle}>
+              <ResultsHighlightBlock data={paper.resultsHighlight} glossary={glossary} />
+            </SummaryBlock>
+          ) : sections.results ? (
+            <SummaryBlock title={resultsTitle}>
               <p>
                 <GlossaryText text={sections.results} glossary={glossary} />
               </p>
+            </SummaryBlock>
+          ) : null}
+
+          {paper.approachComparison && paper.approachComparison.length > 0 ? (
+            <SummaryBlock title="既存のアプローチとの違い">
+              <ApproachComparisonTable rows={paper.approachComparison} />
             </SummaryBlock>
           ) : null}
 
@@ -132,6 +154,19 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
             />
           ) : null}
 
+          {hasLimitations ? (
+            <StudyLimitations
+              text={paper.limitations}
+              bullets={paper.limitationsBullets}
+            />
+          ) : null}
+
+          {paper.flowSteps && paper.flowSteps.length > 0 ? (
+            <ActionFlowDiagram steps={paper.flowSteps} />
+          ) : null}
+
+          {glossary.length > 0 ? <GlossaryList terms={glossary} /> : null}
+
           {sections.figures &&
           !sections.figures.includes("図表の記述なし") &&
           sections.figures.trim() ? (
@@ -147,7 +182,11 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
           <InsightCallout label="私たちに関係あるのはここ">{view.relevance}</InsightCallout>
 
           {paper.storyCards ? (
-            <StoryCardsSection cards={paper.storyCards} catchTitle={view.catchTitle} />
+            <StoryCardsSection
+              cards={paper.storyCards}
+              catchTitle={view.catchTitle}
+              sharePath={`/papers/${encodeURIComponent(paper.id)}`}
+            />
           ) : null}
 
           {paper.takeaway ? (

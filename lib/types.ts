@@ -83,6 +83,26 @@ export type KeyFigure = {
   purpose?: "results" | "why";
 };
 
+/** アプローチ比較表の1行（論文ページ向けオーバーライド用） */
+export type ApproachComparisonRow = {
+  approach: string;
+  timing: string;
+  unit: string;
+  irreversible: string;
+  /** 本論文の行として強調 */
+  highlight?: boolean;
+};
+
+/** 「わかったこと」の看板成果ブロック */
+export type ResultsHighlight = {
+  title: string;
+  body: string;
+  /** 補助結果の前置き */
+  supportIntro?: string;
+  /** 補助的な構造結果（箇条書き） */
+  supportItems?: string[];
+};
+
 export type Paper = {
   id: string;
   title: string;
@@ -106,6 +126,22 @@ export type Paper = {
   catchTitle?: string;
   /** 1文フック（Gemini 生成） */
   hook?: string;
+  /** フック直後の具体例段落（読者向け・任意） */
+  hookLead?: string;
+  /** 「まずここだけ」用の3行（指定時は自動生成を上書き） */
+  threeLineSummary?: string[];
+  /** 「背景」セクション専用テキスト（指定時は gist の代わり） */
+  background?: string;
+  /** 「わかったこと」の見出し上書き */
+  resultsTitle?: string;
+  /** 看板成果＋補助結果の構成（指定時は results 段落を置き換え） */
+  resultsHighlight?: ResultsHighlight;
+  /** アプローチ比較表 */
+  approachComparison?: ApproachComparisonRow[];
+  /** 限界を箇条書きで（指定時は StudyLimitations でリスト表示） */
+  limitationsBullets?: string[];
+  /** フロー図用ラベル（4ステップ） */
+  flowSteps?: string[];
   /** 記事冒頭の予想クイズ */
   quiz?: PredictionQuiz;
   /** 専門用語の解説（要約本文中の語をホバー/タップで補足） */

@@ -77,6 +77,9 @@ export function getHook(paper: Paper): string {
 }
 
 export function getThreeLineSummary(paper: Paper): string[] {
+  const override = paper.threeLineSummary?.filter((l) => l.trim());
+  if (override && override.length > 0) return override.slice(0, 3);
+
   const s = paper.summary;
   if (isAcademicSummary(s)) {
     const parts = [...toSentences(s.gist), ...toSentences(s.results)].slice(0, 3);

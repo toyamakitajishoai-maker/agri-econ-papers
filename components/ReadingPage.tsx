@@ -3,6 +3,7 @@ import GlossaryText from "@/components/GlossaryText";
 import InsightCallout from "@/components/InsightCallout";
 import KeyFigureBlock from "@/components/KeyFigureBlock";
 import PredictionQuiz from "@/components/PredictionQuiz";
+import QuizGate from "@/components/QuizGate";
 import ReadingMeta from "@/components/ReadingMeta";
 import RelatedPapers from "@/components/RelatedPapers";
 import SourceLinks from "@/components/SourceLinks";
@@ -45,8 +46,12 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
         </header>
 
         <div id="read-body" className="space-y-10 sm:space-y-12">
-          {paper.quiz ? <PredictionQuiz quiz={paper.quiz} /> : null}
+          {paper.quiz ? (
+            <PredictionQuiz quiz={paper.quiz} paperId={paper.id} field={paper.field} />
+          ) : null}
 
+          <QuizGate paperId={paper.id} skip={!paper.quiz}>
+          <div className="space-y-10 sm:space-y-12">
           {glossary.length > 0 ? <GlossaryList terms={glossary} /> : null}
 
           {paper.limitations?.trim() ? <StudyLimitations text={paper.limitations} /> : null}
@@ -136,6 +141,8 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
             </summary>
             <p className="mt-4 whitespace-pre-line text-sm leading-[1.85] text-[#5c635c]">{paper.abstract}</p>
           </details>
+          </div>
+          </QuizGate>
         </div>
 
         <RelatedPapers papers={siblings} currentId={paper.id} />

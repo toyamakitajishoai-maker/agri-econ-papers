@@ -1,18 +1,39 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
+import { readStats, recordAnswer } from "@/lib/quizStats";
 import type { PredictionQuiz as PredictionQuizType } from "@/lib/types";
 
 type PredictionQuizProps = {
   quiz: PredictionQuizType;
+  paperId: string;
+  field?: string;
 };
 
-export default function PredictionQuiz({ quiz }: PredictionQuizProps) {
+export default function PredictionQuiz({ quiz, paperId, field }: PredictionQuizProps) {
   const [picked, setPicked] = useState<number | null>(null);
   const options = quiz.options.slice(0, 3);
   const answered = picked !== null;
   const correct = picked === quiz.correctIndex;
+
+  /** マウント時に既回答があれば復元（リロード後も結果表示を維持） */
+  useEffect(() => {
+    const prev = readStats().answers[paperId];
+    if (prev) setPicked(prev.picked);
+  }, [paperId]);
+
+  function handlePick(index: number) {
+    if (answered) return;
+    setPicked(index);
+    recordAnswer({
+      paperId,
+      picked: index,
+      correctIndex: quiz.correctIndex,
+      field,
+      difficulty: quiz.difficulty,
+    });
+  }
 
   return (
     <section className="rounded-3xl border-2 border-dashed border-[#d4c4a8] bg-gradient-to-br from-[#fffdf8] to-[#f5f0e6] px-5 py-6 sm:px-7">
@@ -42,7 +63,7 @@ export default function PredictionQuiz({ quiz }: PredictionQuizProps) {
               key={`opt-${index}`}
               type="button"
               disabled={answered}
-              onClick={() => setPicked(index)}
+              onClick={() => handlePick(index)}
               className={`rounded-2xl border px-4 py-3 text-left text-sm leading-relaxed transition ${ring} ${
                 answered ? "cursor-default" : "cursor-pointer"
               }`}

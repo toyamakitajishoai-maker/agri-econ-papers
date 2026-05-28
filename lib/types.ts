@@ -24,6 +24,16 @@ export type PredictionQuiz = {
   difficulty?: QuizDifficulty;
 };
 
+/** 友人に話せる3行テイクアウェイ（読了後の持ち帰り用） */
+export type Takeaway = {
+  /** 1行目: 何の研究か（30〜60字目安） */
+  whatIsIt: string;
+  /** 2行目: 何がわかったか（30〜60字目安） */
+  whatFound: string;
+  /** 3行目: だから何なのか / So what?（30〜60字目安） */
+  soWhat: string;
+};
+
 /** 専門用語の解説（要約本文中の語にホバー/タップで意味表示） */
 export type GlossaryTerm = {
   /** 要約本文に登場する形（マッチ用） */
@@ -79,6 +89,8 @@ export type Paper = {
    * 空文字 = 処理済みだが該当記述なし。undefined = 未処理（旧データ）
    */
   limitations?: string;
+  /** 友人にこう話せる3行テイクアウェイ（読者向けの持ち帰り、Gemini生成） */
+  takeaway?: Takeaway;
   /** PDF から抽出した主要図（旧形式: 1枚） */
   keyFigure?: KeyFigure;
   /** PDF から抽出した複数図（新形式: わかったこと用・なぜそうなるのか用など） */

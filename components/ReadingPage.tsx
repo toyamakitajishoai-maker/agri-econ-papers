@@ -10,6 +10,7 @@ import SourceLinks from "@/components/SourceLinks";
 import StickyReadCta from "@/components/StickyReadCta";
 import SummaryBlock from "@/components/SummaryBlock";
 import StudyLimitations from "@/components/StudyLimitations";
+import TakeawayCard from "@/components/TakeawayCard";
 import { buildEditorialView } from "@/lib/editorial";
 import type { Paper } from "@/lib/types";
 
@@ -131,6 +132,10 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
           ))}
 
           <InsightCallout label="私たちに関係あるのはここ">{view.relevance}</InsightCallout>
+
+          {paper.takeaway ? (
+            <TakeawayCard takeaway={paper.takeaway} catchTitle={view.catchTitle} />
+          ) : null}
 
           <SourceLinks paper={paper} />
 

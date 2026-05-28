@@ -1,5 +1,5 @@
 import type { ArxivPaper } from "@/lib/arxiv";
-import type { GlossaryTerm, PaperSummary, PredictionQuiz } from "@/lib/types";
+import type { GlossaryTerm, PaperSummary, PredictionQuiz, Takeaway } from "@/lib/types";
 
 /** 2.0 系は新規APIキーでは 404 になるため 2.5 を既定にする */
 const GEMINI_MODEL = process.env.GEMINI_MODEL ?? "gemini-2.5-flash";
@@ -111,6 +111,15 @@ function buildPrompt(paper: ArxivPaper, pdfExcerpt?: string | null): string {
     "  - PDF抜粋に限界の記述が無い場合は空文字 \"\"（推測や創作はしない）",
     "  - PDF抜粋が無い場合も空文字 \"\"",
     "",
+    "【友人に話せる3行テイクアウェイ（takeaway）】",
+    "・記事を読んだ人が、友人に「ねぇ知ってる？」と話したくなる3行を作る。",
+    "・トーンは『少し柔らかい です・ます調』（例: 〜なんです / 〜だそうです / 〜のようです）。サイト全体の上品さは保ち、軽口は避ける。",
+    "・各行は30〜60字。冗長な学術用語は使わず、専門用語は言い換える。",
+    "・whatIsIt: 何を扱った研究か（背景・対象が分かる）",
+    "・whatFound: 何がわかったか（結論・主要な数値や比較を一つ）",
+    "・soWhat: だから何なのか（読者の日常 or 社会へのつながり）",
+    "・各行は必ず日本語の文として完結させる（体言止め可、ただし主語と述語が読み取れること）。",
+    "",
     "【専門用語の解説（glossary）】",
     "・要約本文（gist / novelty / method / results / why）に登場する専門用語を最大8件まで抽出し、",
     "  一般読者にも分かるように1〜2文で解説してください。",
@@ -141,6 +150,11 @@ function buildPrompt(paper: ArxivPaper, pdfExcerpt?: string | null): string {
     '    "correctIndex": 0,',
     '    "explanation": "正解の解説",',
     '    "difficulty": "easy | medium | hard のいずれか"',
+    "  },",
+    '  "takeaway": {',
+    '    "whatIsIt": "何を扱った研究か（30〜60字）",',
+    '    "whatFound": "何がわかったか（30〜60字）",',
+    '    "soWhat": "だから何なのか（30〜60字）"',
     "  },",
     '  "limitations": "研究の限界（該当記述がある場合のみ。無ければ空文字）",',
     '  "glossary": [',
@@ -176,6 +190,7 @@ export type GeminiSummaryResult = {
   /** PDFに限界の記述がある場合のみ。無ければ空文字 */
   limitations?: string;
   glossary?: GlossaryTerm[];
+  takeaway?: Takeaway;
 };
 
 function parseDifficulty(raw: unknown): PredictionQuiz["difficulty"] {
@@ -212,6 +227,18 @@ const LIMITATIONS_EMPTY_MARKERS = [
   "not mentioned",
   "no explicit",
 ];
+
+function parseTakeaway(raw: unknown): Takeaway | undefined {
+  if (!raw || typeof raw !== "object") return undefined;
+  const t = raw as Partial<Takeaway>;
+  const what = typeof t.whatIsIt === "string" ? t.whatIsIt.trim() : "";
+  const found = typeof t.whatFound === "string" ? t.whatFound.trim() : "";
+  const so = typeof t.soWhat === "string" ? t.soWhat.trim() : "";
+  if (!what || !found || !so) return undefined;
+  /** 長すぎる行は安全側で 120 字に切り詰め */
+  const clip = (s: string) => (s.length > 120 ? `${s.slice(0, 119)}…` : s);
+  return { whatIsIt: clip(what), whatFound: clip(found), soWhat: clip(so) };
+}
 
 function parseGlossary(raw: unknown): GlossaryTerm[] | undefined {
   if (!Array.isArray(raw)) return undefined;
@@ -324,6 +351,7 @@ function parseSummaryText(raw: string): GeminiSummaryResult | null {
       quiz: parseQuiz(parsed.quiz),
       limitations: parseLimitations(parsed.limitations),
       glossary: parseGlossary((parsed as { glossary?: unknown }).glossary),
+      takeaway: parseTakeaway((parsed as { takeaway?: unknown }).takeaway),
     };
   }
   return null;

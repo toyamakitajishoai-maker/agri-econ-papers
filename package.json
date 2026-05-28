@@ -19,7 +19,8 @@
     "backfill:journals": "tsx scripts/backfill-journals.ts",
     "backfill:pdf": "tsx scripts/backfill-pdf-urls.ts",
     "backfill:quiz": "tsx scripts/backfill-quiz-difficulty.ts",
-    "backfill:fields": "tsx scripts/backfill-fields.ts"
+    "backfill:fields": "tsx scripts/backfill-fields.ts",
+    "backfill:takeaway": "tsx scripts/backfill-takeaway.ts"
   },
   "dependencies": {
     "dotenv": "^16.4.5",

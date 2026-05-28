@@ -17,7 +17,8 @@
     "summarize:sample": "tsx scripts/sample-summarize.ts",
     "export:csv": "tsx scripts/export-papers-csv.ts",
     "backfill:journals": "tsx scripts/backfill-journals.ts",
-    "backfill:pdf": "tsx scripts/backfill-pdf-urls.ts"
+    "backfill:pdf": "tsx scripts/backfill-pdf-urls.ts",
+    "backfill:quiz": "tsx scripts/backfill-quiz-difficulty.ts"
   },
   "dependencies": {
     "dotenv": "^16.4.5",

@@ -6,6 +6,27 @@ type ResultsHighlightBlockProps = {
   glossary?: GlossaryTerm[];
 };
 
+/** 本文中の ε / B を変数として強調 */
+function BodyWithVars({ text, glossary }: { text: string; glossary: GlossaryTerm[] }) {
+  const parts = text.split(/(ε|B)/);
+  return (
+    <>
+      {parts.map((part, i) =>
+        part === "ε" || part === "B" ? (
+          <code
+            key={`var-${i}`}
+            className="rounded bg-[#f2ebd9] px-1 py-0.5 font-mono text-[0.92em] font-semibold text-[#7c6a45]"
+          >
+            {part}
+          </code>
+        ) : (
+          <GlossaryText key={`txt-${i}`} text={part} glossary={glossary} />
+        )
+      )}
+    </>
+  );
+}
+
 export default function ResultsHighlightBlock({ data, glossary = [] }: ResultsHighlightBlockProps) {
   return (
     <div className="space-y-5">
@@ -15,7 +36,7 @@ export default function ResultsHighlightBlock({ data, glossary = [] }: ResultsHi
         </p>
         <p className="mt-2 font-serif text-base font-semibold text-[#1a1f1c]">{data.title}</p>
         <p className="mt-3 text-sm leading-[1.9] text-[#3d4540]">
-          <GlossaryText text={data.body} glossary={glossary} />
+          <BodyWithVars text={data.body} glossary={glossary} />
         </p>
       </blockquote>
 

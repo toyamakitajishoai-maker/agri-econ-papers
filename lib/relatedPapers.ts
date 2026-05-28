@@ -6,7 +6,10 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 
 import { getAvailableDates, getDailyPapers } from "@/lib/data";
+import { getTags } from "@/lib/editorial";
 import type { Paper } from "@/lib/types";
+
+const META_TAGS = new Set(["プレプリント", "査読論文", "今日の研究"]);
 
 const RELATED_PATH = path.join(process.cwd(), "data", "related.json");
 
@@ -77,4 +80,55 @@ export async function getRelatedPapers(
     }
   }
   return papers.slice(0, 3);
+}
+
+/** タグの重なりが多い論文を新しい順に最大 limit 件 */
+export async function getPapersBySharedTags(
+  paper: Paper,
+  limit = 3
+): Promise<Paper[]> {
+  const targetTags = new Set(
+    getTags(paper).filter((t) => !META_TAGS.has(t))
+  );
+  if (targetTags.size === 0) return [];
+
+  const index = await buildPaperIndex();
+  const scored: { paper: Paper; score: number; published: number }[] = [];
+
+  for (const p of index.values()) {
+    if (p.id === paper.id) continue;
+    const pTags = getTags(p).filter((t) => !META_TAGS.has(t));
+    let score = 0;
+    for (const t of pTags) {
+      if (targetTags.has(t)) score += 1;
+    }
+    if (score === 0) continue;
+    scored.push({
+      paper: p,
+      score,
+      published: new Date(p.publishedAt).getTime() || 0,
+    });
+  }
+
+  scored.sort((a, b) => b.score - a.score || b.published - a.published);
+  return scored.slice(0, limit).map((s) => s.paper);
+}
+
+/** 類似度ベース + タグマッチをマージ（重複除去、最大3件） */
+export async function getMergedRelatedPapers(
+  paper: Paper,
+  fallback: Paper[] = []
+): Promise<Paper[]> {
+  const byTags = await getPapersBySharedTags(paper, 3);
+  const byEmbed = await getRelatedPapers(paper.id, fallback);
+  const seen = new Set<string>();
+  const merged: Paper[] = [];
+
+  for (const p of [...byTags, ...byEmbed]) {
+    if (p.id === paper.id || seen.has(p.id)) continue;
+    seen.add(p.id);
+    merged.push(p);
+    if (merged.length >= 3) break;
+  }
+  return merged;
 }

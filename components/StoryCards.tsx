@@ -126,7 +126,7 @@ export default function StoryCardsSection({
             4枚で読む
           </p>
           <p className="mt-1 text-sm leading-relaxed text-[#5c635c]">
-            ストーリーズやX用の縦型カード。画像を保存してそのまま投稿できます。
+            保存前に、この場で4枚の中身を確認できます。ストーリーズやX用の縦型画像として保存できます。
           </p>
           <p className="mt-1 text-[11px] text-[#8a908a]">
             推奨: Instagram ストーリーズ（9:16）・ X の画像投稿

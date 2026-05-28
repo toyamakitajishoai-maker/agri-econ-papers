@@ -41,7 +41,9 @@ export default function RootLayout({
               <span className="block font-serif text-lg font-semibold tracking-tight text-[#1a1f1c]">
                 今日の研究
               </span>
-              <span className="block text-[10px] tracking-[0.18em] text-[#8a908a]">3 MIN READ</span>
+              <span className="block text-[10px] tracking-[0.12em] text-[#8a908a]">
+                気軽に読める
+              </span>
             </Link>
             <nav className="flex items-center gap-4 text-sm text-[#5c635c] sm:gap-5">
               <Link className="transition hover:text-[#2f4a3a]" href="/">

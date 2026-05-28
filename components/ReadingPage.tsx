@@ -7,6 +7,7 @@ import InsightCallout from "@/components/InsightCallout";
 import KeyFigureBlock from "@/components/KeyFigureBlock";
 import PredictionQuiz from "@/components/PredictionQuiz";
 import QuizGate from "@/components/QuizGate";
+import QuizSkipBar from "@/components/QuizSkipBar";
 import ReadButton from "@/components/ReadButton";
 import ResultsHighlightBlock from "@/components/ResultsHighlightBlock";
 import ReviewMemoSection from "@/components/ReviewMemo";
@@ -68,16 +69,23 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
             </p>
           ) : null}
           {paper.audio ? (
-            <AudioPlayer
-              audio={paper.audio}
-              label={`要点を ${paper.audio.duration ?? 60} 秒で聴く`}
-            />
+            <a
+              href="#audio-player"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-[#2f4a3a] underline-offset-4 transition hover:text-[#1a1f1c] hover:underline"
+            >
+              <span aria-hidden>🎧</span>
+              要点を {paper.audio.duration ?? 60} 秒で聴く（下部へ）
+              <span aria-hidden>→</span>
+            </a>
           ) : null}
         </header>
 
         <div id="read-body" className="space-y-10 sm:space-y-12">
           {paper.quiz ? (
-            <PredictionQuiz quiz={paper.quiz} paperId={paper.id} field={paper.field} />
+            <>
+              <PredictionQuiz quiz={paper.quiz} paperId={paper.id} field={paper.field} />
+              <QuizSkipBar paperId={paper.id} />
+            </>
           ) : null}
 
           <QuizGate paperId={paper.id} skip={!paper.quiz}>
@@ -100,9 +108,11 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
             </SummaryBlock>
           ) : null}
 
-          <InsightCallout label="この研究の面白さ">
-            <GlossaryText text={view.insight || sections.novelty} glossary={glossary} />
-          </InsightCallout>
+          {!paper.approachComparison?.length ? (
+            <InsightCallout label="この研究の面白さ">
+              <GlossaryText text={view.insight || sections.novelty} glossary={glossary} />
+            </InsightCallout>
+          ) : null}
 
           {sections.method ? (
             <SummaryBlock title="どうやって確かめた？">
@@ -162,7 +172,10 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
           ) : null}
 
           {paper.flowSteps && paper.flowSteps.length > 0 ? (
-            <ActionFlowDiagram steps={paper.flowSteps} />
+            <ActionFlowDiagram
+              steps={paper.flowSteps}
+              showBudgetBranch={paper.flowSteps.length >= 4}
+            />
           ) : null}
 
           {glossary.length > 0 ? <GlossaryList terms={glossary} /> : null}
@@ -180,6 +193,15 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
           ))}
 
           <InsightCallout label="私たちに関係あるのはここ">{view.relevance}</InsightCallout>
+
+          {paper.audio ? (
+            <div id="audio-player" className="scroll-mt-24">
+              <AudioPlayer
+                audio={paper.audio}
+                label={`要点を ${paper.audio.duration ?? 60} 秒で聴く`}
+              />
+            </div>
+          ) : null}
 
           {paper.storyCards ? (
             <StoryCardsSection
@@ -205,6 +227,12 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
 
           <SourceLinks paper={paper} />
 
+          <RelatedPapers
+            papers={siblings}
+            currentId={paper.id}
+            title="関連する論文"
+          />
+
           <details className="group rounded-2xl bg-[#faf8f5] px-5 py-4">
             <summary className="cursor-pointer list-none text-sm font-medium text-[#6b726b] marker:content-none">
               <span className="group-open:hidden">原文アブストラクトを見る</span>
@@ -216,7 +244,6 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
           </QuizGate>
         </div>
 
-        <RelatedPapers papers={siblings} currentId={paper.id} />
       </article>
 
       <StickyReadCta label="本文へ" />

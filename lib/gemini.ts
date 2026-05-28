@@ -157,6 +157,7 @@ function buildPrompt(paper: ArxivPaper, pdfExcerpt?: string | null): string {
     '    "options": ["選択肢A", "選択肢B", "選択肢C"],',
     '    "correctIndex": 0,',
     '    "explanation": "正解の解説",',
+    '    "optionExplanations": ["Aを選んだときの解説", "Bを選んだときの解説", "Cを選んだときの解説"],',
     '    "difficulty": "easy | medium | hard のいずれか"',
     "  },",
     '  "takeaway": {',

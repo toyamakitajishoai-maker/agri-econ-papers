@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import ReadingPage from "@/components/ReadingPage";
 import { getPaperWithSiblings } from "@/lib/data";
 import { buildEditorialView } from "@/lib/editorial";
-import { getRelatedPapers } from "@/lib/relatedPapers";
+import { getMergedRelatedPapers } from "@/lib/relatedPapers";
 import { getSiteUrl } from "@/lib/siteUrl";
 
 type PaperDetailPageProps = {
@@ -61,7 +61,7 @@ export default async function PaperDetailPage({ params }: PaperDetailPageProps) 
 
   const { paper, date, siblings } = ctx;
   /** 埋め込み類似度で「次に読む3本」を取得。失敗時は同日論文にフォールバック */
-  const related = await getRelatedPapers(paper.id, siblings);
+  const related = await getMergedRelatedPapers(paper, siblings);
 
   return (
     <div className="pb-24 sm:pb-12">

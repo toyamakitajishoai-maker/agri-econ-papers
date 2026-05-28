@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 
+import { markPaperRead } from "@/lib/paperReadState";
 import { readStats, recordAnswer } from "@/lib/quizStats";
 import type { PredictionQuiz as PredictionQuizType } from "@/lib/types";
 
@@ -11,13 +12,21 @@ type PredictionQuizProps = {
   field?: string;
 };
 
+function getOptionFeedback(quiz: PredictionQuizType, index: number): string {
+  const custom = quiz.optionExplanations?.[index]?.trim();
+  if (custom) return custom;
+  if (index === quiz.correctIndex) {
+    return quiz.explanation;
+  }
+  return "惜しい！ この研究の主な特徴とは少し違う考え方です。本文を読むと、なぜ別の選択肢になるかが分かります。";
+}
+
 export default function PredictionQuiz({ quiz, paperId, field }: PredictionQuizProps) {
   const [picked, setPicked] = useState<number | null>(null);
   const options = quiz.options.slice(0, 3);
   const answered = picked !== null;
   const correct = picked === quiz.correctIndex;
 
-  /** マウント時に既回答があれば復元（リロード後も結果表示を維持） */
   useEffect(() => {
     const prev = readStats().answers[paperId];
     if (prev) setPicked(prev.picked);
@@ -33,7 +42,10 @@ export default function PredictionQuiz({ quiz, paperId, field }: PredictionQuizP
       field,
       difficulty: quiz.difficulty,
     });
+    markPaperRead(paperId);
   }
+
+  const feedback = picked !== null ? getOptionFeedback(quiz, picked) : "";
 
   return (
     <section className="rounded-3xl border-2 border-dashed border-[#d4c4a8] bg-gradient-to-br from-[#fffdf8] to-[#f5f0e6] px-5 py-6 sm:px-7">
@@ -68,21 +80,34 @@ export default function PredictionQuiz({ quiz, paperId, field }: PredictionQuizP
                 answered ? "cursor-default" : "cursor-pointer"
               }`}
             >
-              <span className="mr-2 font-semibold text-[#6b7f6b]">{String.fromCharCode(65 + index)}.</span>
+              <span className="mr-2 font-semibold text-[#6b7f6b]">
+                {String.fromCharCode(65 + index)}.
+              </span>
               {option}
             </button>
           );
         })}
       </div>
 
-      {answered ? (
+      {answered && picked !== null ? (
         <div
           className={`mt-4 rounded-2xl px-4 py-3 text-sm leading-relaxed ${
             correct ? "bg-[#eef3ee] text-[#2f4a3a]" : "bg-[#fdf5f3] text-[#6b3d35]"
           }`}
         >
-          <p className="font-medium">{correct ? "正解です" : "惜しい！正解は別の選択肢です"}</p>
-          <p className="mt-1">{quiz.explanation}</p>
+          <p className="font-medium">
+            {correct ? "正解です！" : "惜しい！"}
+          </p>
+          <p className="mt-1">{feedback}</p>
+          {!correct ? (
+            <p className="mt-2 text-xs text-[#8a908a]">
+              ヒント: 正解は{" "}
+              <span className="font-semibold text-[#2f4a3a]">
+                {String.fromCharCode(65 + quiz.correctIndex)}
+              </span>
+              です。本文を読むと理由が分かります。
+            </p>
+          ) : null}
         </div>
       ) : null}
     </section>

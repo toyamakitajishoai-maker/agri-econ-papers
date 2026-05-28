@@ -20,6 +20,8 @@ export type PredictionQuiz = {
   options: string[];
   correctIndex: number;
   explanation: string;
+  /** 各選択肢のフィードバック（options と同じ順・同数） */
+  optionExplanations?: string[];
   /** 難易度（将来の分野別・難易度別統計用、後方互換のため optional） */
   difficulty?: QuizDifficulty;
 };

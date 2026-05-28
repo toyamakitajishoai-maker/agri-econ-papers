@@ -10,6 +10,7 @@ import ReadingMeta from "@/components/ReadingMeta";
 import RelatedPapers from "@/components/RelatedPapers";
 import ShareButtons from "@/components/ShareButtons";
 import SourceLinks from "@/components/SourceLinks";
+import StoryCardsSection from "@/components/StoryCards";
 import StickyReadCta from "@/components/StickyReadCta";
 import SummaryBlock from "@/components/SummaryBlock";
 import StudyLimitations from "@/components/StudyLimitations";
@@ -143,6 +144,10 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
           ))}
 
           <InsightCallout label="私たちに関係あるのはここ">{view.relevance}</InsightCallout>
+
+          {paper.storyCards ? (
+            <StoryCardsSection cards={paper.storyCards} catchTitle={view.catchTitle} />
+          ) : null}
 
           {paper.takeaway ? (
             <TakeawayCard

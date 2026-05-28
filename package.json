@@ -24,7 +24,8 @@
     "backfill:audio": "tsx scripts/backfill-audio.ts",
     "preview:fetch": "tsx scripts/preview-fetch.ts",
     "clean:categories": "tsx scripts/clean-categories.ts",
-    "build:related": "tsx scripts/build-related.ts"
+    "build:related": "tsx scripts/build-related.ts",
+    "backfill:story": "tsx scripts/backfill-story-cards.ts"
   },
   "dependencies": {
     "@breezystack/lamejs": "^1.2.7",

@@ -59,6 +59,7 @@ function needsSummarize(paper: Paper): boolean {
   if (paper.pdfUrl?.trim() && paper.limitations === undefined) return true;
   if (!paper.glossary?.length) return true;
   if (!paper.takeaway?.whatIsIt) return true;
+  if (!paper.storyCards?.ask) return true;
   if (!s.why?.trim()) return true;
   if (paper.abstract && (novelty === paper.abstract || results === paper.abstract)) return true;
   return false;
@@ -172,6 +173,7 @@ async function main() {
       limitations: pdfExcerpt ? (result.limitations ?? "") : paper.limitations,
       glossary: result.glossary ?? paper.glossary,
       takeaway: result.takeaway ?? paper.takeaway,
+      storyCards: result.storyCards ?? paper.storyCards,
       summary: result.summary,
     };
 

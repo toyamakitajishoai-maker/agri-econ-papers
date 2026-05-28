@@ -38,6 +38,18 @@ export type PaperAudio = {
   generatedAt?: string;
 };
 
+/** 4枚スワイプ図解カード（問い→手法→発見→意味） */
+export type StoryCards = {
+  /** カード1: 何を調べたか（40〜80字） */
+  ask: string;
+  /** カード2: どう確かめたか */
+  method: string;
+  /** カード3: 何がわかったか */
+  finding: string;
+  /** カード4: だから何なのか */
+  meaning: string;
+};
+
 /** 友人に話せる3行テイクアウェイ（読了後の持ち帰り用） */
 export type Takeaway = {
   /** 1行目: 何の研究か（30〜60字目安） */
@@ -105,6 +117,8 @@ export type Paper = {
   limitations?: string;
   /** 友人にこう話せる3行テイクアウェイ（読者向けの持ち帰り、Gemini生成） */
   takeaway?: Takeaway;
+  /** 4枚スワイプ図解（SNS・会話用の超要約、Gemini生成） */
+  storyCards?: StoryCards;
   /** 60秒で聴く要点ナレーション（Gemini TTS で事前生成） */
   audio?: PaperAudio;
   /** PDF から抽出した主要図（旧形式: 1枚） */

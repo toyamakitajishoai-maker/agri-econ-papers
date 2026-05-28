@@ -1,5 +1,5 @@
 import type { ArxivPaper } from "@/lib/arxiv";
-import type { GlossaryTerm, PaperSummary, PredictionQuiz, Takeaway } from "@/lib/types";
+import type { GlossaryTerm, PaperSummary, PredictionQuiz, StoryCards, Takeaway } from "@/lib/types";
 
 /** 2.0 系は新規APIキーでは 404 になるため 2.5 を既定にする */
 const GEMINI_MODEL = process.env.GEMINI_MODEL ?? "gemini-2.5-flash";
@@ -120,6 +120,14 @@ function buildPrompt(paper: ArxivPaper, pdfExcerpt?: string | null): string {
     "・soWhat: だから何なのか（読者の日常 or 社会へのつながり）",
     "・各行は必ず日本語の文として完結させる（体言止め可、ただし主語と述語が読み取れること）。",
     "",
+    "【4枚図解カード（storyCards）】",
+    "・スマホで左右スワイプする4枚の超要約。Instagramのストーリー風だが、煽り口調は禁止。",
+    "・各カード40〜80字。です・ます調。1カード=1つのメッセージに絞る。",
+    "・ask: この研究が問いかけたこと（「〜は本当か？」「なぜ〜なのか？」の形が望ましい）",
+    "・method: どう調べたか（データ・対象・手法を1つに絞る）",
+    "・finding: 何がわかったか（数値や比較があれば1つ入れる）",
+    "・meaning: だから私たちにとって何か（社会・日常へのつながり）",
+    "",
     "【専門用語の解説（glossary）】",
     "・要約本文（gist / novelty / method / results / why）に登場する専門用語を最大8件まで抽出し、",
     "  一般読者にも分かるように1〜2文で解説してください。",
@@ -156,6 +164,12 @@ function buildPrompt(paper: ArxivPaper, pdfExcerpt?: string | null): string {
     '    "whatFound": "何がわかったか（30〜60字）",',
     '    "soWhat": "だから何なのか（30〜60字）"',
     "  },",
+    '  "storyCards": {',
+    '    "ask": "問い（40〜80字）",',
+    '    "method": "手法（40〜80字）",',
+    '    "finding": "発見（40〜80字）",',
+    '    "meaning": "意味（40〜80字）"',
+    "  },",
     '  "limitations": "研究の限界（該当記述がある場合のみ。無ければ空文字）",',
     '  "glossary": [',
     '    { "term": "本文中に登場する専門用語", "reading": "別表記（任意）", "definition": "平易な日本語の解説1〜2文" }',
@@ -191,6 +205,7 @@ export type GeminiSummaryResult = {
   limitations?: string;
   glossary?: GlossaryTerm[];
   takeaway?: Takeaway;
+  storyCards?: StoryCards;
 };
 
 function parseDifficulty(raw: unknown): PredictionQuiz["difficulty"] {
@@ -227,6 +242,22 @@ const LIMITATIONS_EMPTY_MARKERS = [
   "not mentioned",
   "no explicit",
 ];
+
+function parseStoryCards(raw: unknown): StoryCards | undefined {
+  let obj: unknown = raw;
+  if (Array.isArray(raw) && raw.length > 0 && typeof raw[0] === "object") {
+    obj = raw[0];
+  }
+  if (!obj || typeof obj !== "object") return undefined;
+  const s = obj as Partial<StoryCards>;
+  const ask = typeof s.ask === "string" ? s.ask.trim() : "";
+  const method = typeof s.method === "string" ? s.method.trim() : "";
+  const finding = typeof s.finding === "string" ? s.finding.trim() : "";
+  const meaning = typeof s.meaning === "string" ? s.meaning.trim() : "";
+  if (!ask || !method || !finding || !meaning) return undefined;
+  const clip = (t: string) => (t.length > 100 ? `${t.slice(0, 99)}…` : t);
+  return { ask: clip(ask), method: clip(method), finding: clip(finding), meaning: clip(meaning) };
+}
 
 function parseTakeaway(raw: unknown): Takeaway | undefined {
   if (!raw || typeof raw !== "object") return undefined;
@@ -352,6 +383,7 @@ function parseSummaryText(raw: string): GeminiSummaryResult | null {
       limitations: parseLimitations(parsed.limitations),
       glossary: parseGlossary((parsed as { glossary?: unknown }).glossary),
       takeaway: parseTakeaway((parsed as { takeaway?: unknown }).takeaway),
+      storyCards: parseStoryCards((parsed as { storyCards?: unknown }).storyCards),
     };
   }
   return null;

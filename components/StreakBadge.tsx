@@ -47,10 +47,15 @@ export default function StreakBadge() {
 
   return (
     <span
-      className="inline-flex items-center gap-1 rounded-full border border-[#d8d2c4] bg-[#faf7f0] px-2.5 py-1 text-[11px] font-medium text-[#3d3830]"
+      className="inline-flex items-center gap-1 rounded-full border border-[#e8d6c8] bg-[#fdf3ec] px-2.5 py-1 text-[11px] font-medium text-[#3d3830]"
       title={`クイズに答えた日数：${streak}日連続`}
     >
-      <Flame className="h-3 w-3 text-[#9a8460]" strokeWidth={2} aria-hidden />
+      <Flame
+        className="h-3 w-3 text-[#c45c4a]"
+        strokeWidth={2}
+        fill="#e8826a"
+        aria-hidden
+      />
       {streak}日連続
     </span>
   );

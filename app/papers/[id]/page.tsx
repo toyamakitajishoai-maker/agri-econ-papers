@@ -1,14 +1,56 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import ReadingPage from "@/components/ReadingPage";
 import { getPaperWithSiblings } from "@/lib/data";
+import { buildEditorialView } from "@/lib/editorial";
+import { getSiteUrl } from "@/lib/siteUrl";
 
 type PaperDetailPageProps = {
   params: {
     id: string;
   };
 };
+
+export async function generateMetadata({ params }: PaperDetailPageProps): Promise<Metadata> {
+  const ctx = await getPaperWithSiblings(params.id);
+  if (!ctx) {
+    return { title: "論文が見つかりませんでした" };
+  }
+  const { paper } = ctx;
+  const view = buildEditorialView(paper);
+  const siteUrl = getSiteUrl();
+  const path = `/papers/${encodeURIComponent(paper.id)}`;
+  const ogImageUrl = `${siteUrl}/api/og?id=${encodeURIComponent(paper.id)}`;
+
+  return {
+    metadataBase: new URL(siteUrl),
+    title: `${view.catchTitle} | 今日の研究を、3分で。`,
+    description: view.hook,
+    openGraph: {
+      type: "article",
+      title: view.catchTitle,
+      description: view.hook,
+      url: path,
+      siteName: "今日の研究を、3分で。",
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: view.catchTitle,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: view.catchTitle,
+      description: view.hook,
+      images: [ogImageUrl],
+    },
+  };
+}
 
 export default async function PaperDetailPage({ params }: PaperDetailPageProps) {
   const ctx = await getPaperWithSiblings(params.id);

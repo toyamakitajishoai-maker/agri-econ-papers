@@ -2,11 +2,29 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import StreakBadge from "@/components/StreakBadge";
+import { getSiteUrl } from "@/lib/siteUrl";
 import "./globals.css";
 
+const SITE_URL = getSiteUrl();
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "今日の研究を、3分で。",
-  description: "論文ではなく、発見を読む。農業経済から環境・健康まで、毎日さまざまな分野の最新研究を気軽に。",
+  description:
+    "論文ではなく、発見を読む。農業経済から環境・健康・AI・金融まで、毎日さまざまな分野の最新研究を気軽に。",
+  openGraph: {
+    type: "website",
+    siteName: "今日の研究を、3分で。",
+    title: "今日の研究を、3分で。",
+    description: "論文ではなく、発見を読む。",
+    images: [`${SITE_URL}/api/og`],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "今日の研究を、3分で。",
+    description: "論文ではなく、発見を読む。",
+    images: [`${SITE_URL}/api/og`],
+  },
 };
 
 export default function RootLayout({

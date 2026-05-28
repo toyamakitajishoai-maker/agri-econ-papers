@@ -6,12 +6,14 @@ import PredictionQuiz from "@/components/PredictionQuiz";
 import QuizGate from "@/components/QuizGate";
 import ReadingMeta from "@/components/ReadingMeta";
 import RelatedPapers from "@/components/RelatedPapers";
+import ShareButtons from "@/components/ShareButtons";
 import SourceLinks from "@/components/SourceLinks";
 import StickyReadCta from "@/components/StickyReadCta";
 import SummaryBlock from "@/components/SummaryBlock";
 import StudyLimitations from "@/components/StudyLimitations";
 import TakeawayCard from "@/components/TakeawayCard";
 import { buildEditorialView } from "@/lib/editorial";
+import { getSiteUrl } from "@/lib/siteUrl";
 import type { Paper } from "@/lib/types";
 
 type ReadingPageProps = {
@@ -24,6 +26,7 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
   const view = buildEditorialView(paper);
   const { sections } = view;
   const glossary = paper.glossary ?? [];
+  const articleUrl = `${getSiteUrl()}/papers/${encodeURIComponent(paper.id)}`;
 
   /** 新形式（keyFigures）優先。旧形式（keyFigure 単数）は results 用にフォールバック */
   const allFigures = paper.keyFigures ?? [];
@@ -134,8 +137,14 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
           <InsightCallout label="私たちに関係あるのはここ">{view.relevance}</InsightCallout>
 
           {paper.takeaway ? (
-            <TakeawayCard takeaway={paper.takeaway} catchTitle={view.catchTitle} />
+            <TakeawayCard
+              takeaway={paper.takeaway}
+              catchTitle={view.catchTitle}
+              url={articleUrl}
+            />
           ) : null}
+
+          <ShareButtons url={articleUrl} title={view.catchTitle} />
 
           <SourceLinks paper={paper} />
 

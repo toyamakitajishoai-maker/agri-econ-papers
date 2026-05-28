@@ -23,7 +23,8 @@
     "backfill:takeaway": "tsx scripts/backfill-takeaway.ts",
     "backfill:audio": "tsx scripts/backfill-audio.ts",
     "preview:fetch": "tsx scripts/preview-fetch.ts",
-    "clean:categories": "tsx scripts/clean-categories.ts"
+    "clean:categories": "tsx scripts/clean-categories.ts",
+    "build:related": "tsx scripts/build-related.ts"
   },
   "dependencies": {
     "@breezystack/lamejs": "^1.2.7",

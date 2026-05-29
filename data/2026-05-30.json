@@ -1,0 +1,553 @@
+{
+  "date": "2026-05-30",
+  "papers": [
+    {
+      "id": "2512.03693",
+      "title": "Estimation of Panel Data Models with Nonlinear Factor Structure",
+      "authors": [
+        "Christina Maschmann",
+        "Joakim Westerlund"
+      ],
+      "publishedAt": "2026-05-29T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2512.03693",
+      "pdfUrl": "https://arxiv.org/pdf/2512.03693.pdf",
+      "categories": [
+        "topic:climate",
+        "econ.EM"
+      ],
+      "abstract": "Panel data models with unobserved heterogeneity in the form of interactive effects standardly assume that the time effects -- or ``common factors'' -- enter linearly. This assumption is restrictive because it concerns an unobserved component of the model, for which a particular functional form is rarely justified. By contrast, linearity in the observable regressors can often be motivated by economic theory or empirical convention. Linearity in the factors has mainly persisted because it is convenient and improves on standard fixed effects. This paper relaxes that assumption by combining the common correlated effects (CCE) approach with sieve methods. The resulting estimator -- abbreviated ``SCCE'' -- preserves key advantages of CCE, including computational simplicity and good small-sample and asymptotic properties, while allowing for a broader class of factor structures that nests the linear case. This makes it suitable for a wide range of empirical applications.",
+      "summary": {
+        "gist": "本研究は、パネルデータモデルにおける未観測の共通因子が非線形に作用する場合でも、その効果を推定できる新しい手法「SCCE推定量」を提案しています。これにより、従来の線形仮定の制約を緩和し、より広範な実証分析への適用が可能になります。",
+        "novelty": "従来のパネルデータモデルでは、未観測の共通因子（時間効果）が線形に作用すると仮定されてきましたが、本研究はこの線形仮定を緩和し、非線形な因子構造を許容する点で新規性があります。特に、共通相関効果（CCE）アプローチとシーブ法を組み合わせることで、計算の簡便さや良好な小標本特性を維持しつつ、より一般的な非線形因子モデルに対応できる点が画期的です。",
+        "method": "本研究では、多数のクロスセクション単位（N）と多数の期間（T）を持つパネルデータモデルを対象としています。具体的には、被説明変数と説明変数が未観測の共通因子に非線形な関数形式で依存するモデル（yi,t = x′i,tβ + gi(ft) + εi,tなど）を想定しています。分析手法としては、共通相関効果（CCE）アプローチにシーブ法を組み合わせた「SCCE推定量」を提案しています。この手法は、クロスセクション平均から共通因子の代理変数を構築し、シーブ法を用いてそのスパンを拡張することで、非線形な関数形式を特定せずにgi(·)とGi(·)を近似し、βを推定します。モンテカルロシミュレーションにより、様々なデータ生成過程の下で良好な小標本特性が確認されています。",
+        "results": "分析の結果、提案されたSCCE推定量は、通常のパラメトリックレートで一致性を持ち、漸近的に正規分布に従うことが示されています。これにより、未観測の共通因子が非線形に作用する場合でも、説明変数の平均限界効果（β）を頑健に推定できることが明らかになりました。この手法は、気候経済学における気温と生産性の非線形関係や、労働経済学における技術変化とスキル需要の非線形関係など、幅広い実証応用において、より現実的なモデル化を可能にする政策的含意を持っています。",
+        "why": "共通因子が非線形に作用するモデルにおいて、従来のCCEアプローチは因子の線形性を仮定するため、非線形な影響を捉えきれませんでした。SCCE推定量は、クロスセクション平均から共通因子の「代理変数」をまず作成します。次に、シーブ法という統計手法を用いて、この代理変数を非線形に変換し、その表現力を高めます。これにより、未観測の共通因子が持つ複雑な非線形な影響を、特定の関数形を仮定することなく近似し、モデルから取り除くことが可能になります。その結果、説明変数の真の効果（β）をより正確に推定できるのです。",
+        "figures": "アブストラクトに図表の記述なし"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.EM）",
+      "field": "気候・環境",
+      "titleJa": "非線形因子構造を持つパネルデータモデルの推定",
+      "catchTitle": "見えない要因の非線形効果をどう測る？",
+      "hook": "パネルデータ分析において、これまで線形と仮定されてきた「見えない共通因子」が非線形に作用する場合でも、その影響を正確に推定できる新しい手法が開発されました。",
+      "quiz": {
+        "question": "本論文で提案された新しい推定手法「SCCE」は、パネルデータモデルのどのような課題を解決することを目指しているでしょうか？",
+        "options": [
+          "未観測の共通因子が非線形に作用する場合でも、その効果を正確に推定することを目指しています。",
+          "観測可能な説明変数が非線形に作用する場合に、モデルの予測精度を向上させることを目指しています。",
+          "固定効果モデルにおける個体差の推定精度を大幅に改善することを目指しています。"
+        ],
+        "correctIndex": 0,
+        "explanation": "本論文は、パネルデータモデルにおいて、これまで線形と仮定されてきた未観測の共通因子が非線形に作用する場合の推定問題を解決することを目指しています。",
+        "difficulty": "medium"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "パネルデータモデル",
+          "definition": "複数の個人や企業、国などを一定期間にわたって追跡調査したデータ（パネルデータ）を分析するための統計モデルです。時間経過による変化と個体間の違いを同時に考慮できます。"
+        },
+        {
+          "term": "非線形因子構造",
+          "definition": "モデルに含まれる未観測の共通因子（時間効果など）が、被説明変数や説明変数に対して直線的ではない、より複雑な関係（例えば、ある閾値を超えると急激に効果が変わるなど）を持つ構造を指します。"
+        },
+        {
+          "term": "共通相関効果（CCE）アプローチ",
+          "definition": "パネルデータモデルにおいて、未観測の共通因子による内生性を、クロスセクション平均（個体間の平均値）をコントロール変数として用いることで対処する推定手法です。計算が比較的簡便な特徴があります。",
+          "reading": "Common Correlated Effects"
+        },
+        {
+          "term": "シーブ法",
+          "definition": "非パラメトリック推定手法の一つで、未知の関数を、基底関数（例えば多項式やスプライン）の線形結合で近似する方法です。基底関数の数を増やしていくことで、より複雑な関数形を表現できます。",
+          "reading": "sieve methods"
+        },
+        {
+          "term": "SCCE推定量",
+          "definition": "本論文で提案された新しい推定手法で、共通相関効果（CCE）アプローチとシーブ法を組み合わせたものです。未観測の共通因子が非線形に作用する場合でも、その効果を頑健に推定できます。"
+        },
+        {
+          "term": "未観測の共通因子",
+          "definition": "データでは直接観測できないものの、複数の個体や期間に共通して影響を与える要因のことです。例えば、景気変動や技術革新などがこれに該当します。",
+          "reading": "unobserved common factors"
+        },
+        {
+          "term": "漸近的に正規分布",
+          "definition": "サンプルサイズが非常に大きくなったときに、推定量の分布が正規分布に近づく性質を指します。これにより、統計的推論（仮説検定や信頼区間の構築）が可能になります。"
+        },
+        {
+          "term": "内生性",
+          "definition": "統計モデルにおいて、説明変数が誤差項と相関している状態を指します。内生性があると、通常の最小二乗法では推定結果が偏ってしまう問題が生じます。"
+        }
+      ],
+      "takeaway": {
+        "whatIsIt": "経済や社会の動きを分析するパネルデータで、見えない共通の要因がどう影響するかを調べた研究です。",
+        "whatFound": "これまで線形と決めつけていた「見えない共通因子」が、実は非線形に作用しても正確に推定できる新手法が開発されたそうです。",
+        "soWhat": "この新手法を使えば、気候変動が農業に与える影響など、より複雑で現実的な経済現象を深く理解できるようです。"
+      },
+      "storyCards": {
+        "ask": "見えない共通要因、本当にいつも線形に効くの？",
+        "method": "既存手法に「シーブ法」を組み合わせ、非線形効果を推定。",
+        "finding": "新手法SCCEは、非線形要因でも正確に推定可能。",
+        "meaning": "気候変動など、複雑な経済現象の解明に貢献できる。"
+      },
+      "audio": {
+        "src": "/audio/2512.03693.mp3",
+        "format": "mp3",
+        "duration": 36,
+        "voice": "Kore",
+        "generatedAt": "2026-05-29T23:12:30.567Z"
+      },
+      "keyFigure": {
+        "imagePath": "/figures/2512.03693_results.png",
+        "page": 20,
+        "caption": "提案手法のシミュレーション結果を示しており、推定量の有効性を裏付けています。",
+        "label": "Figure 1. Simulation results for experiments E1 and E2.",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-05-29T23:14:35.138Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2512.03693_results.png",
+          "page": 20,
+          "caption": "提案手法のシミュレーション結果を示しており、推定量の有効性を裏付けています。",
+          "label": "Figure 1. Simulation results for experiments E1 and E2.",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-05-29T23:14:35.138Z"
+        },
+        {
+          "imagePath": "/figures/2512.03693_why.png",
+          "page": 24,
+          "caption": "共通因子の非線形な影響を捉えるための代理変数の変換過程を示唆しています。",
+          "label": "Figure 2. Plotting bft = [ln σt, ln",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-05-29T23:14:35.138Z"
+        }
+      ]
+    },
+    {
+      "id": "2605.29315",
+      "title": "Generalized Spectral Testing with Sample Splitting",
+      "authors": [
+        "Yuxin Tao",
+        "Feiyu Jiang",
+        "Xiaofeng Shao"
+      ],
+      "publishedAt": "2026-05-29T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.29315",
+      "pdfUrl": "https://arxiv.org/pdf/2605.29315.pdf",
+      "categories": [
+        "topic:climate",
+        "econ.EM",
+        "stat.ME"
+      ],
+      "abstract": "Residual-based goodness-of-fit tests for parametric time-series models are often complicated by parameter-estimation effects, which can alter the limiting behavior of diagnostic statistics. We propose a sample-splitting generalized spectral test (in the spirit of Escanciano(2006)) for assessing conditional mean specification in linear and nonlinear time-series models. The procedure estimates the model parameter on a fitting subsample and constructs a generalized spectral Cramer-von Mises statistic from residuals computed on a checking/testing subsample. The statistic aggregates pairwise conditional mean restrictions over all lags and is therefore bandwidth-free and free of truncation-lag selection. Under mild regularity conditions and a score-alignment condition, the residual-based process has the same limiting null distribution as the infeasible oracle process based on the true errors. Although the resulting limiting law is still non-pivotal, it can be consistently approximated by a simple multiplier bootstrap that does not require generating bootstrap time series or re-estimating parameters. Such an oracle-equivalence property is in sharp contrast to the original full-sample test, for which parameter estimation contributes an additional first-order term to the limiting process, and requires re-estimating parameters in each bootstrapped sample. We further establish consistency of the proposed test against fixed alternatives and nontrivial power against local alternatives. Extensive simulations and real data analyses show that the proposed test controls size well, has comparable power, and delivers substantial computational savings in models where repeated estimation is costly.",
+      "summary": {
+        "gist": "本論文は、線形および非線形時系列モデルにおける条件付き平均の適合度を評価するため、サンプル分割を用いた一般化スペクトル検定を提案しています。この手法は、モデルパラメータの推定と適合度検定を別々のサブサンプルで行うことで、従来の検定が抱えていたパラメータ推定効果による複雑さを解消し、計算コストを大幅に削減できることを明らかにしています。",
+        "novelty": "従来の研究では、時系列モデルの適合度検定において、パラメータ推定が診断統計量の漸近挙動に影響を与える「推定効果」が課題でした。本研究は、Escanciano (2006) の一般化スペクトル検定とDavis and Fernandes (2025) のサンプル分割戦略を組み合わせることで、この推定効果を排除し、真の誤差に基づく理想的なプロセスと同じ漸近帰無分布を持つことを示しています。これにより、ブートストラップによる再推定が不要となり、計算効率が大幅に向上するという点で新規性があります。",
+        "method": "本研究では、厳密に定常かつエルゴード的な時系列データ {(Yt, Z′t−1)}t∈Z を対象としています。観測されたサンプルを2つのサブサンプルに分割し、最初の fn 個のデータポイントをモデルパラメータ θ0 の推定に、残りの ln 個のデータポイントを推定されたパラメータに基づく残差の計算とモデル適合度のチェックに用いる「サンプル分割」手法を採用しています。具体的には、推定された残差から一般化スペクトルCramér-von Mises統計量を構築し、すべてのラグにわたる条件付き平均制約を集約することで、帯域幅や打ち切りラグの選択が不要な検定を実現しています。この統計量の漸近的な挙動は、乗数ブートストラップによって近似され、シミュレーションと実データ分析を通じてその性能を評価しています。",
+        "results": "提案されたサンプル分割一般化スペクトル検定は、線形および非線形時系列モデルにおいて、サイズ（第一種過誤の確率）を適切に制御し、既存手法と同等の検出力を持つことがシミュレーションで示されています。特に、繰り返し推定が高コストとなるモデルにおいて、計算時間を大幅に節約できることが確認されました。この検定は、S&P 500のダイナミクスと年間のウォルフ黒点データを用いた実証分析でもその有効性と計算上の利点が実証されており、固定された対立仮説に対する一貫性と局所的な対立仮説に対する非自明な検出力も確立されています。",
+        "why": "この手法が計算効率を大幅に向上させるのは、サンプル分割によってパラメータ推定と適合度検定のプロセスを分離するためです。推定用サブサンプルで得られたパラメータを用いて、検定用サブサンプルで残差を計算することで、残差に基づく統計量が、真の誤差が既知であるかのような理想的な状況（オラクルプロセス）と同じ漸近分布を持つようになります。これにより、従来の検定で必要とされた、ブートストラップのたびにモデルを再推定する手間が省け、計算コストが削減されるのです。",
+        "figures": "アブストラクトには主要な図表の具体的な記述はありませんが、シミュレーション研究では線形ARMAモデル、非線形ボラティリティモデル、閾値自己回帰モデルにおける提案手法の有限サンプル性能が報告されています。また、S&P 500のダイナミクスと年間のウォルフ黒点データを用いた実証分析も含まれており、これらの結果は図や表で示されていると考えられます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.EM）",
+      "field": "気候・環境",
+      "titleJa": "サンプル分割を用いた一般化スペクトル検定：時系列モデルの条件付き平均仕様評価",
+      "catchTitle": "時系列モデルの診断を高速化！",
+      "hook": "新しい統計的手法が、時系列モデルの適合度検定をより効率的かつ正確にする可能性を示しています。",
+      "quiz": {
+        "question": "時系列モデルの適合度検定において、本研究が解決しようとした主要な課題は何ですか？",
+        "options": [
+          "パラメータ推定が診断統計量の漸近挙動に与える影響を排除することです。",
+          "非線形モデルの推定精度を向上させることです。",
+          "時系列データの欠損値を補完する新しい方法を開発することです。"
+        ],
+        "correctIndex": 0,
+        "explanation": "本研究は、パラメータ推定が診断統計量の漸近挙動に与える影響（推定効果）を排除し、検定の複雑さを軽減することを目的としています。",
+        "difficulty": "medium"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "一般化スペクトル検定",
+          "definition": "時系列データの条件付き平均が正しく指定されているかを評価するための統計的検定手法です。様々なラグにわたる条件付き平均の制約を集約して判断します。",
+          "reading": "Generalized Spectral Test"
+        },
+        {
+          "term": "サンプル分割",
+          "definition": "観測データを複数のサブサンプルに分割し、それぞれを異なる目的（例：パラメータ推定とモデル検証）に用いる統計的な手法です。これにより、推定と検定の独立性を高めます。",
+          "reading": "Sample Splitting"
+        },
+        {
+          "term": "条件付き平均",
+          "definition": "特定の情報が与えられた条件下での確率変数の平均値のことです。時系列分析では、過去のデータに基づいて将来の値を予測する際の平均的な期待値を指します。",
+          "reading": "Conditional Mean"
+        },
+        {
+          "term": "Cramér-von Mises統計量",
+          "definition": "経験分布関数と理論分布関数の差の二乗を積分したもので、二つの分布が一致するかを検定するために用いられる統計量の一種です。",
+          "reading": "Cramér-von Mises statistic"
+        },
+        {
+          "term": "マルチンゲール差分系列（MDS）",
+          "definition": "過去のすべての情報が与えられたとき、その時点での期待値がゼロとなるような確率変数の系列です。正しく指定されたモデルの誤差項が持つべき特性とされます。",
+          "reading": "Martingale Difference Sequence"
+        },
+        {
+          "term": "乗数ブートストラップ",
+          "definition": "統計的推論において、未知の分布を近似するために用いられるリサンプリング手法の一つです。特に、パラメータの再推定を必要とせずに分布を近似できる利点があります。",
+          "reading": "Multiplier Bootstrap"
+        },
+        {
+          "term": "漸近帰無分布",
+          "definition": "サンプルサイズが無限大に近づくにつれて、統計量が従うと期待される確率分布のことです。検定統計量のP値を計算する際の基準となります。",
+          "reading": "Asymptotic Null Distribution"
+        },
+        {
+          "term": "オラクルプロセス",
+          "definition": "真の誤差（未知のパラメータを含まない理想的な誤差）が観測されていると仮定した場合の統計的プロセスです。現実には不可能ですが、理論的なベンチマークとして用いられます。",
+          "reading": "Oracle Process"
+        }
+      ],
+      "takeaway": {
+        "whatIsIt": "時系列データのモデルがどれだけ適切かを測る新しい統計手法の研究です。",
+        "whatFound": "データを分割して使うことで、モデルの適合度検定が速く、正確になることが分かりました。",
+        "soWhat": "複雑な時系列モデルの分析が、より手軽に、そして信頼性高くできるようになります。"
+      },
+      "storyCards": {
+        "ask": "時系列モデルの診断、もっと速くできない？",
+        "method": "データを分割し、推定と検定を別々に行う",
+        "finding": "計算コストを大幅削減、精度は同等",
+        "meaning": "複雑なモデル診断が、より手軽に可能に"
+      },
+      "audio": {
+        "src": "/audio/2605.29315.mp3",
+        "format": "mp3",
+        "duration": 25,
+        "voice": "Kore",
+        "generatedAt": "2026-05-29T23:13:00.642Z"
+      }
+    },
+    {
+      "id": "2605.30081",
+      "title": "Tax Salience: How Requiring Transparency Affects the Price of Equality",
+      "authors": [
+        "Ashley Craig",
+        "Itai Sher"
+      ],
+      "publishedAt": "2026-05-29T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.30081",
+      "pdfUrl": "https://arxiv.org/pdf/2605.30081.pdf",
+      "categories": [
+        "topic:climate",
+        "econ.TH"
+      ],
+      "abstract": "Less-salient taxes can ease the classic equality-efficiency trade-off by making people respond less to taxation. But deliberately obscuring taxes may be viewed as dishonest. This creates a three-way trade-off between equality, efficiency, and honesty. We analyze this trade-off in a simple setting with a linear income tax. We define and characterize the morally efficient frontier, trading off utilitarian welfare against honesty or transparency. Complete honesty is Pareto inefficient but not morally inefficient. More generally, any increase in honesty reduces utilitarian welfare. When utilitarian welfare is decomposed into equality and efficiency, the cost of honesty falls most robustly on equality: higher salience always reduces equality, while the effect on efficiency is ambiguous. This asymmetry is explained by the fact that salience increases the price of equality, which is the efficiency cost of a marginal increase in equality. Our approach could be applied to other settings in which utilitarian and procedural or deontological values conflict.",
+      "summary": {
+        "gist": "本研究は、税の透明性（顕現性）が、社会の平等性と経済効率性という伝統的なトレードオフにどのように影響するかを分析しています。その結果、税の透明性を高めることは、常に平等性を低下させる一方で、経済効率性への影響は一義的ではないことを明らかにしました。",
+        "novelty": "本論文は、従来の税制研究における平等性対効率性の二項対立に加え、「正直さ」または「透明性」という規範的価値を第三の要素として導入した点に新規性があります。これにより、功利主義的厚生と手続き的価値が衝突する状況における「道徳的に効率的なフロンティア」を定義し、税の顕現性が平等性の価格を上昇させるメカニズムを解明しました。",
+        "method": "本研究は、線形所得税と一定の労働供給弾力性を持つシンプルな経済モデルを用いて、税の顕現性が社会厚生に与える影響を理論的に分析しています。具体的には、納税者が税率を過小認識する度合いを顕現性パラメータs（0, 1]）として定義し、功利主義的社会厚生を平等性と効率性に分解するアトキンソン（1970）の標準的な手法を用いています。このフレームワークに基づき、顕現性の変化が平等性の価格にどう影響するかを所得効果と代替効果に分けて考察しました。",
+        "results": "分析の結果、最適な税率において、税の顕現性を高めると功利主義的社会厚生が減少することが示されました（定理1）。特に、顕現性の増加は常に平等性を低下させる一方で、経済効率性への影響は曖昧であることが判明しました（定理2）。これは、顕現性が平等性の価格、すなわち平等性を1単位増やすための効率性コストを上昇させるためです。したがって、透明性を高める政策は、平等性を犠牲にする可能性が高いという政策的含意があります。",
+        "why": "税の顕現性が高まると平等性が低下するメカニズムは、「平等性の価格」の上昇によって説明されます。顕現性が高まると、納税者は税率をより正確に認識し、労働供給を減らすインセンティブが強まります。これにより、政府が再分配を通じて平等性を高めようとする際の効率性コスト（平等性の価格）が上昇します。この価格上昇は、所得効果と代替効果を通じて平等性の水準を低下させる方向に作用し、両効果が同じ方向に働くため、平等性は一貫して減少します。一方、効率性については、所得効果と代替効果が逆方向に働くため、その影響は一義的ではありません。",
+        "figures": "アブストラクトには図表の記述はありませんが、論文本文抜粋ではFigure 1として「透明性の低下の効果」が示されています。パネル(a)は「平等性の価格」を、平等性（E）と効率性（µ）のフロンティア曲線と接線の傾きで示し、パネル(b)は顕現性の低下が最適な平等性・効率性の組み合わせに与える影響を、所得効果と代替効果に分解して描いています。これにより、顕現性の低下が平等性を一貫して高める一方で、効率性への影響は曖昧であるという結論が視覚的に説明されています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.TH）",
+      "field": "気候・環境",
+      "titleJa": "税の顕現性：透明性の要件が平等性の価格にどう影響するか",
+      "catchTitle": "税の透明性、平等性、効率性はどう両立？",
+      "hook": "税の透明性を高めると、社会の平等性が損なわれる可能性があるという、意外なトレードオフが明らかになりました。",
+      "quiz": {
+        "question": "税の透明性を高める政策は、社会の「平等性」と「経済効率性」にどのような影響を与えるでしょうか？",
+        "options": [
+          "平等性は低下するが、経済効率性への影響は一概には言えない。",
+          "平等性と経済効率性の両方が改善する。",
+          "平等性は改善するが、経済効率性は低下する。"
+        ],
+        "correctIndex": 0,
+        "explanation": "本研究では、税の透明性を高めると、平等性が常に低下することが示されています。これは、透明性が高まることで平等性を高めるためのコストが増加するためです。一方、経済効率性への影響は、状況によって異なり、一概には言えないと結論付けられています。",
+        "difficulty": "medium"
+      },
+      "limitations": "本研究の限界として、功利主義的社会厚生と手続き的価値（正直さや透明性）の間のトレードオフをモデル化する際に、後者を個人の選好としてではなく、道徳的支配と道徳的効率性の概念を用いて扱っている点が挙げられます。また、線形所得税と一定の労働供給弾力性というシンプルな設定で分析しているため、より複雑な税制や行動反応を考慮した場合の一般化可能性には注意が必要です。",
+      "glossary": [
+        {
+          "term": "税の顕現性",
+          "definition": "納税者が税率をどれだけ意識し、認識しているかの度合いを指します。顕現性が低い税は、納税者がその存在や影響を十分に認識しない傾向があります。",
+          "reading": "Tax Salience"
+        },
+        {
+          "term": "平等性の価格",
+          "definition": "社会の平等性を1単位高めるために、経済効率性をどれだけ犠牲にする必要があるかを示す指標です。この価格が高いほど、平等性の達成が難しくなります。",
+          "reading": "Price of Equality"
+        },
+        {
+          "term": "功利主義的社会厚生",
+          "definition": "社会全体の幸福や満足度の合計を最大化しようとする考え方に基づく社会厚生の指標です。個人の効用を合計することで社会全体の厚生を評価します。",
+          "reading": "Utilitarian Social Welfare"
+        },
+        {
+          "term": "道徳的に効率的なフロンティア",
+          "definition": "功利主義的厚生と正直さ（透明性）のような道徳的価値の間のトレードオフにおいて、どちらか一方を改善しようとすると、もう一方が必ず悪化するような最適な政策の組み合わせを示す境界線です。",
+          "reading": "Morally Efficient Frontier"
+        },
+        {
+          "term": "所得効果",
+          "definition": "実質所得の変化によって、財やサービスの消費量、または労働供給量が変化する効果を指します。税制変更が個人の購買力に与える影響として現れます。",
+          "reading": "Income Effect"
+        },
+        {
+          "term": "代替効果",
+          "definition": "相対価格の変化によって、より安くなった財やサービスに消費がシフトしたり、労働と余暇の選択が変わったりする効果を指します。税率の変化が労働供給のインセンティブに与える影響として現れます。",
+          "reading": "Substitution Effect"
+        }
+      ],
+      "takeaway": {
+        "whatIsIt": "税金がどれだけ分かりやすいか（透明性）が、社会にどう影響するかを調べた研究です。",
+        "whatFound": "税金が透明になるほど、社会の「平等さ」は失われやすくなるそうです。",
+        "soWhat": "政府が税制をより透明にしようとすると、平等さとの間で難しい選択を迫られることになりそうです。"
+      },
+      "storyCards": {
+        "ask": "税金が透明だと、社会は良くなる？",
+        "method": "シンプルな経済モデルで、税の透明性と社会厚生を理論分析。",
+        "finding": "税の透明性が高まると、平等性は常に低下する。",
+        "meaning": "税制設計では、透明性と平等性のバランスが重要になる。"
+      },
+      "audio": {
+        "src": "/audio/2605.30081.mp3",
+        "format": "mp3",
+        "duration": 27,
+        "voice": "Kore",
+        "generatedAt": "2026-05-29T23:13:30.294Z"
+      }
+    },
+    {
+      "id": "2605.28905",
+      "title": "DFT Accuracy on Crystal Structure Prediction with Machine Learning Interatomic Potentials",
+      "authors": [
+        "Laurence I. Midgley",
+        "Chen Lin",
+        "J. Harry Moore",
+        "Flaviano Della Pia",
+        "Javier Antor\\'an",
+        "Sten O. Nilsson Lill",
+        "Emma S. E. Eriksson",
+        "Felix A. Faber",
+        "Lars Tornberg",
+        "Anders Broo",
+        "G\\'abor Cs\\'anyi"
+      ],
+      "publishedAt": "2026-05-29T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.28905",
+      "pdfUrl": "https://arxiv.org/pdf/2605.28905.pdf",
+      "categories": [
+        "topic:climate",
+        "physics.chem-ph"
+      ],
+      "abstract": "We present an evaluation of CSP-MACE-{\\AA}, a machine learning interatomic potential intended to replace DFT in crystal structure prediction (CSP). We decompose the total energy into separate intramolecular and intermolecular components. For the intramolecular component, we adopt the MACE-POLAR architecture and train it on the OMol25 dataset. The intermolecular component combines three terms: an intermolecular contribution from the MACE-POLAR model, a long-range dispersion term with the functional form of the XDM correction, and a learned delta model trained to reproduce B86bPBE-XDM intermolecular energies. The learned delta model is trained on residual intermolecular targets derived from 50,000 B86bPBE-XDM calculations on molecular crystal structures. On an evaluation set composed of 19 compounds, including a salt, selected from AstraZeneca's previous CSP publications, CSP-MACE-{\\AA} achieves performance comparable to PBE DFT with the Neumann-Perrin dispersion correction. On a second evaluation set composed of 28 compounds, including cocrystals and salts, collated from the seven CSP blind tests, CSP-MACE-{\\AA} achieves performance close to B86bPBE-XDM DFT. In both evaluation sets, reranking with harmonic free energies substantially improves performance relative to ranking by energy alone. Across our evaluation suite, CSP-MACE-{\\AA} is shown to outperform the MACE-POLAR-1 and UMA-OMC foundation models. Lastly, on a set of five compounds, CSP-MACE-{\\AA} is shown to capture temperature-dependent trends in the relative stability of polymorphs through estimation of the free energy under the harmonic approximation. By running multiple orders of magnitude faster than DFT, CSP-MACE-{\\AA} enables energy and free energy evaluation of far more candidate structures, providing greater confidence when derisking solid forms.",
+      "summary": {
+        "gist": "本研究は、結晶構造予測（CSP）において密度汎関数理論（DFT）の代替となる機械学習原子間ポテンシャル「CSP-MACE-Å」を開発し、その性能を評価しました。CSP-MACE-Åは、DFTに匹敵する精度を達成しつつ、計算速度を大幅に向上させることを明らかにしています。",
+        "novelty": "従来の機械学習原子間ポテンシャル（MLIP）は、長距離相互作用のモデリングや結晶構造データ不足といった課題を抱え、CSPにおけるDFTの性能には及ばないことが指摘されていました。本研究では、分子内・分子間エネルギーを分離し、長距離分散項と学習型デルタモデルを組み合わせることでこれらの課題を克服し、DFTに匹敵する精度を持つMLIPを開発した点が新規性です。これにより、MLIPがCSPブラインドテストで示してきた性能不足を解消し、より実用的な応用への道を開いています。",
+        "method": "本研究では、CSP-MACE-Åモデルのエネルギーを分子内成分と分子間成分に分解しました。分子内成分にはMACE-POLARアーキテクチャをOMol25データセットで訓練し、分子間成分はMACE-POLARモデルの分子間寄与、XDM補正の関数形式を持つ長距離分散項、およびB86bPBE-XDM分子間エネルギーを再現するよう訓練された学習型デルタモデルを組み合わせています。このデルタモデルは、50,000回のB86bPBE-XDM計算から得られた残差分子間ターゲットで訓練されました。評価は、AstraZenecaの過去のCSP論文から選定された19化合物と、7回のCSPブラインドテストから収集された28化合物（共結晶や塩を含む）の2つの評価セットで行われ、既存のDFT手法（PBE-NP、B86bPBE-XDM）と比較されました。",
+        "results": "CSP-MACE-Åは、AstraZenecaの19化合物評価セットにおいて、PBE DFTとNeumann-Perrin分散補正に匹敵する性能を達成しました。また、共結晶や塩を含む28化合物の評価セットでは、B86bPBE-XDM DFTに近い性能を示しています。両評価セットにおいて、調和自由エネルギーを用いた再ランキングは、エネルギー単独でのランキングと比較して性能を大幅に改善しました。さらに、CSP-MACE-Åは、MACE-POLAR-1やUMA-OMCといった既存の基盤モデルを上回る性能を示し、5つの化合物セットでは、調和近似による自由エネルギー推定を通じて多形相対安定性の温度依存性トレンドを捉えることが可能であることも示されました。これにより、DFTよりも数桁速い計算速度で、より多くの候補構造のエネルギーおよび自由エネルギー評価が可能となり、固体形態のリスク低減において高い信頼性を提供します。",
+        "why": "CSP-MACE-Åが高い精度と速度を両立できるのは、エネルギーを分子内と分子間に分解し、それぞれの相互作用タイプに適したモデルを組み合わせているためです。特に、分子間相互作用のモデリングにおいて、MACE-POLARモデルの長距離静電相互作用の原理的処理に加え、XDM分散補正の関数形式で長距離分散を捉え、さらに学習型デルタモデルでB86bPBE-XDM DFTの分子間エネルギーを再現するように補正することで、精密な相互作用の記述が可能になります。この分解と組み合わせにより、MLIPの課題であった長距離相互作用のモデリングと、結晶構造データに特化した学習が実現され、DFTに匹敵する精度を、DFTよりも大幅に速い速度で達成できるのです。",
+        "figures": "Figure 1は、AZ評価セットにおける相対エネルギーランドスケープを示しています。各化合物について、PBE-NP DFTエネルギーランキング、CSP-MACE-Åエネルギーランキング、および300Kでの調和近似によるCSP-MACE-Å自由エネルギーランキングの3つの列で比較されています。実験的な多形と一致する生成構造は色付きで、一致しない構造は灰色で表示されており、各手法における実験構造の相対的な安定性やランキングの正確性を視覚的に示しています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.chem-ph）",
+      "field": "気候・環境",
+      "titleJa": "機械学習原子間ポテンシャルを用いた結晶構造予測におけるDFT精度の評価",
+      "catchTitle": "新AIで薬開発加速？結晶構造予測の精度と速度を両立",
+      "hook": "新しい機械学習モデル「CSP-MACE-Å」が、医薬品開発に不可欠な結晶構造予測の速度と精度を大幅に向上させる可能性を示しています。",
+      "quiz": {
+        "question": "新しい機械学習モデル「CSP-MACE-Å」が、医薬品開発における結晶構造予測（CSP）にどのような影響をもたらすでしょうか？",
+        "options": [
+          "DFTと同等の精度を維持しつつ、計算速度を大幅に向上させ、より多くの候補構造を評価できるようになります。",
+          "DFTよりも精度は低いものの、計算速度が非常に速いため、初期スクリーニング段階でのみ利用可能になります。",
+          "既存の機械学習モデルと比較して精度は向上しますが、DFTほどの速度改善は見込めません。"
+        ],
+        "correctIndex": 0,
+        "explanation": "CSP-MACE-Åは、DFTに匹敵する精度を達成しつつ、計算速度を数桁向上させることが示されています。これにより、より多くの候補構造の評価が可能になり、医薬品開発における固体形態のリスク低減に貢献します。",
+        "difficulty": "medium"
+      },
+      "limitations": "本研究の限界として、ごく一部の緩和計算（0.01%未満）で結合接続の変化が見られ、これらはランキングから除外されました。また、超セルの選択はGPUメモリ使用量を抑えつつ誤差を最小化するように行われましたが、この選択が結果に与える影響についてはさらなる検討の余地があるかもしれません。",
+      "glossary": [
+        {
+          "term": "結晶構造予測（CSP）",
+          "definition": "分子の化学構造から、それがどのような結晶の形をとるかをコンピューターで予測する技術です。医薬品開発において、薬の安定性や溶解度などの物性を評価するために重要です。",
+          "reading": "Crystal Structure Prediction"
+        },
+        {
+          "term": "密度汎関数理論（DFT）",
+          "definition": "量子力学に基づき、物質の電子状態やエネルギーを計算する手法の一つです。高い精度を持つ一方で、計算コストが非常に高いという特徴があります。",
+          "reading": "Density Functional Theory"
+        },
+        {
+          "term": "機械学習原子間ポテンシャル（MLIP）",
+          "definition": "機械学習を用いて原子間の相互作用をモデル化する手法です。DFTのような高精度計算の結果を学習することで、高速かつ高精度なシミュレーションを可能にします。",
+          "reading": "Machine Learning Interatomic Potential"
+        },
+        {
+          "term": "MACE-POLARアーキテクチャ",
+          "definition": "長距離静電相互作用を考慮した機械学習原子間ポテンシャルのモデル構造です。結晶構造予測において重要な、分子間の電荷分布による相互作用を原理的に扱います。"
+        },
+        {
+          "term": "OMol25データセット",
+          "definition": "1億回ものDFT計算結果を含む、広範囲の化学空間をカバーする分子データセットです。主に分子内の相互作用モデルの訓練に用いられます。"
+        },
+        {
+          "term": "B86bPBE-XDM DFT",
+          "definition": "特定の汎関数（B86bPBE）とXDM分散補正を組み合わせたDFT計算手法です。結晶における分子間相互作用を特に正確に記述できるとされています。"
+        },
+        {
+          "term": "調和自由エネルギー",
+          "definition": "結晶の安定性を評価する際に、原子の振動（フォノン）による寄与を考慮したエネルギーです。単なる格子エネルギーよりも、温度依存性のある安定性をより正確に予測できます。",
+          "reading": "Harmonic Free Energy"
+        },
+        {
+          "term": "多形",
+          "definition": "同じ化学組成を持つ物質が、異なる結晶構造をとる現象、またはその異なる結晶形のことです。医薬品では、多形によって薬の物性や効果が大きく変わるため、その特定が重要です。",
+          "reading": "Polymorph"
+        }
+      ],
+      "takeaway": {
+        "whatIsIt": "薬の安定性や効果を決める「結晶構造」を、AIで予測する研究です。",
+        "whatFound": "新しいAIモデル「CSP-MACE-Å」は、従来の計算手法と同じくらい正確に、しかも数千倍速く予測できることがわかりました。",
+        "soWhat": "これにより、新薬開発の初期段階で、より多くの候補物質を素早く評価できるようになり、開発期間の短縮やコスト削減につながるかもしれません。"
+      },
+      "storyCards": {
+        "ask": "新薬開発の鍵「結晶構造」予測、遅くて困ってない？",
+        "method": "AIが分子内・分子間の力を分けて計算、DFTの結果を学習。",
+        "finding": "新AI「CSP-MACE-Å」はDFT並みの精度で、計算速度は数千倍速い。",
+        "meaning": "薬の安定性評価が加速、開発期間短縮へ。実装はこれから。"
+      },
+      "audio": {
+        "src": "/audio/2605.28905.mp3",
+        "format": "mp3",
+        "duration": 36,
+        "voice": "Kore",
+        "generatedAt": "2026-05-29T23:14:03.935Z"
+      }
+    },
+    {
+      "id": "2605.28847",
+      "title": "New class of quantum transitions exhibiting large-scale intercorrelations: Color of the sky",
+      "authors": [
+        "Kenzo Ishikawa",
+        "Masaki Takesada"
+      ],
+      "publishedAt": "2026-05-29T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2605.28847",
+      "pdfUrl": "https://arxiv.org/pdf/2605.28847.pdf",
+      "categories": [
+        "topic:climate",
+        "physics.optics",
+        "physics.ao-ph",
+        "physics.atom-ph"
+      ],
+      "abstract": "The absolute value of the transition probability of the Rayleigh scattering is computed for the first time and applied to the scattering of solar light with molecules in the atmosphere and to the laser scattering with nanopartilces. The probability has a new contribution of unique properties from long-range correlations specific to the quantum mechanics. The magnitude is sufficient to resolve longstanding puzzle on diffusion lights in the sky and anomalous photon spectrum in laser experiments. The earth's albedo from the new calculations on Rayleigh scattering agrees with observations with satelites.",
+      "summary": {
+        "gist": "本論文は、レイリー散乱における遷移確率の絶対値を初めて計算し、その結果を大気中の分子による太陽光散乱やナノ粒子によるレーザー散乱に適用しています。この新しい計算には、量子力学に特有な長距離相関に由来する独自の寄与が含まれており、これにより空の拡散光やレーザー実験における異常な光子スペクトルの長年の謎が解決されることを示唆しています。",
+        "novelty": "従来の研究が短距離相関に基づくレイリー散乱の計算に留まっていたのに対し、本研究は量子力学に固有の長距離相関を考慮した遷移確率の絶対値を初めて導出しました。これにより、標準的な散乱理論では説明が困難であった空の明るさや、最近のレーザー実験で観測された異常なエネルギー・スペクトルといった観測結果との不一致を解消し、研究の空白を埋めています。",
+        "method": "本研究では、波束形式（wave-packet formalism）を用いて、レイリー散乱における遷移確率を計算しています。この形式では、初期状態と最終状態の間の時間間隔に依存する遷移確率を、従来の「単位時間あたりの確率（第一種）」と、新たに導入された「時間に依存しない定数（第二種）」の二つのクラスに分類しています。特に、第二種はアインシュタイン・ポドルスキー・ローゼン（EPR）によって提唱された長距離相関の特性を反映しており、この寄与が空の色の謎を解く鍵となると論じています。太陽光の波束サイズを約100km、分子の波束サイズを約10^-7mと仮定し、これらのパラメータを用いて理論的な計算を行っています。",
+        "results": "分析の結果、レイリー散乱の遷移確率には、量子力学的な長距離相関に起因する「第二種」の寄与が無視できないほど大きく存在することが明らかになりました。この第二種の寄与は、古典的なレイリー散乱では説明できない、高高度での散乱光の強度が分子密度に比例しない均一な振る舞いを説明します。具体的には、対流圏（0-10km）と成層圏（10-50km）を考慮した計算では、第二種の寄与が第一種の寄与に対して約2.5倍のオーダーで大きくなる可能性が示されています。この新しい計算に基づく地球のアルベド（反射率）は、衛星観測と一致しており、空の青さや拡散光の長年の謎を解決する上で重要な政策的含意を持つと結論付けています。",
+        "why": "空の青さや拡散光が新しい量子遷移のクラスで説明されるのは、太陽光が非常に大きなコヒーレンス長を持つ波束として振る舞うためです。この大きな波束が、大気中の分子と相互作用する際に、量子力学特有の長距離相関（第二種）が強く現れます。古典的な散乱では、散乱光の強度は分子の密度に比例しますが、量子力学的な長距離相関が働く場合、散乱光は広範囲にわたって均一な強度を持つようになります。これにより、高高度で分子密度が低い場所でも、地上と同じように散乱光が観測され、空全体が明るく見える現象が説明できるのです。",
+        "figures": "アブストラクトには図表の記述なし"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.optics）",
+      "field": "気候・環境",
+      "titleJa": "大規模な相互相関を示す新しい量子遷移のクラス：空の色",
+      "catchTitle": "空の青さ、量子力学で新解釈",
+      "hook": "長年の謎だった空の青さや地球のアルベドが、量子力学の新しい計算によって説明される可能性が示されています。",
+      "quiz": {
+        "question": "この論文によると、空が青く見える長年の謎を解明する上で最も重要な要素は何ですか？",
+        "options": [
+          "量子力学的な長距離相関による新しい散乱の寄与",
+          "大気中の水蒸気や塵による光の吸収と再放出",
+          "太陽光の波長と大気分子のサイズの古典的な比率"
+        ],
+        "correctIndex": 0,
+        "explanation": "この論文は、量子力学に特有の長距離相関がレイリー散乱に新たな寄与をもたらし、それが空の青さの謎を解決すると主張しています。",
+        "difficulty": "medium"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "レイリー散乱",
+          "definition": "光の波長よりも十分に小さい粒子によって光が散乱される現象です。空が青く見える主な原因とされています。",
+          "reading": "Rayleigh scattering"
+        },
+        {
+          "term": "遷移確率",
+          "definition": "量子力学において、ある状態から別の状態へ粒子が移り変わる確率のことです。この論文ではその絶対値を計算しています。",
+          "reading": "transition probability"
+        },
+        {
+          "term": "長距離相関",
+          "definition": "量子力学的な現象で、離れた場所にある粒子間にも相関関係が存在することです。アインシュタイン・ポドルスキー・ローゼン（EPR）によって提唱されました。",
+          "reading": "long-range correlation"
+        },
+        {
+          "term": "波束形式",
+          "definition": "量子力学において、粒子を特定の運動量と位置の周りに局在する波の集まり（波束）として記述する手法です。これにより、より現実的な物理現象を扱えます。",
+          "reading": "wave-packet formalism"
+        },
+        {
+          "term": "アルベド",
+          "definition": "天体や表面が受けた光のうち、反射される光の割合を示す数値です。地球のアルベドは気候変動に影響を与えます。",
+          "reading": "albedo"
+        }
+      ],
+      "takeaway": {
+        "whatIsIt": "空が青い理由や地球の反射率（アルベド）について、量子力学の新しい考え方で説明する研究です。",
+        "whatFound": "太陽光の散乱に、量子力学特有の「長距離相関」という新しい効果が大きく関わっていることが分かりました。",
+        "soWhat": "この発見は、空の色の長年の謎を解き明かし、地球の気候モデルの精度向上にもつながるかもしれませんね。"
+      },
+      "storyCards": {
+        "ask": "空の青さ、古典物理では説明しきれない？",
+        "method": "量子力学の「波束」で光の散乱を計算。",
+        "finding": "「長距離相関」が空の明るさに大きく貢献。",
+        "meaning": "地球のアルベドも説明、気候モデルに新知見。"
+      },
+      "audio": {
+        "src": "/audio/2605.28847.mp3",
+        "format": "mp3",
+        "duration": 30,
+        "voice": "Kore",
+        "generatedAt": "2026-05-29T23:14:30.656Z"
+      },
+      "keyFigure": {
+        "imagePath": "/figures/2605.28847_results.png",
+        "page": 11,
+        "caption": "レーザー光とナノ粒子によるレイリー散乱の光子スペクトルを示しています。",
+        "label": "FIG. 2. Photon spectrum of Rayleigh scattering of laser light with nanoparticle. Holizontal line",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-05-29T23:14:46.423Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2605.28847_results.png",
+          "page": 11,
+          "caption": "レーザー光とナノ粒子によるレイリー散乱の光子スペクトルを示しています。",
+          "label": "FIG. 2. Photon spectrum of Rayleigh scattering of laser light with nanoparticle. Holizontal line",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-05-29T23:14:46.423Z"
+        },
+        {
+          "imagePath": "/figures/2605.28847_why.png",
+          "page": 7,
+          "caption": "楕円形の大きな波束を持つ太陽光のレイリー散乱の時空間ビューを示しています。",
+          "label": "FIG. 1. Space-time view of Rayleigh scattering of a sun light of large wave-packet of an ellipse with",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-05-29T23:14:46.424Z"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,583 @@
+{
+  "date": "2026-05-31",
+  "papers": [
+    {
+      "id": "2605.30187v1",
+      "title": "Modularizing Educational LLM-Agency for Fostering Responsible Learning Assistance",
+      "authors": [
+        "Julius Gabelmann",
+        "Felix Jahn",
+        "Kevin Baum",
+        "Sophie van Rossum",
+        "Emely Wuenscher",
+        "Timo P. Gros",
+        "Verena Wolf"
+      ],
+      "publishedAt": "2026-05-28T16:31:32Z",
+      "url": "https://arxiv.org/abs/2605.30187v1",
+      "pdfUrl": "https://arxiv.org/pdf/2605.30187v1.pdf",
+      "categories": [
+        "topic:policy",
+        "cs.AI",
+        "cs.CY"
+      ],
+      "abstract": "The widespread adoption of AI chatbots in education will drastically change learning, making responsible deployment a critical concern. While large language models (LLMs) might have access to sources discussing insights from educational sciences, they are not particularly inclined to adhere to pedagogical concepts, risking negative effects on the learning process, such as a loss of transfer capabilities, critical thinking, or creativity. In this paper, we introduce an agentic AI chatbot architecture assisting students with exercise solving, specifically designed to contribute to more responsible AI use in education. We base our conceptual development on the identification of several desiderata for responsible LLM-based educational systems, argue for the structural shortcomings inherent in monolithic, out-of-the-box solutions, and instead suggest modularizing the agentic architecture. We propose specific modules for different stages of exercise solving, enabling incorporation of targeted pedagogical advice, guiding students through the learning process in a more controllable, transparent, and overseeable manner.",
+      "summary": {
+        "gist": "本論文は、教育におけるAIチャットボットの責任ある利用を促進するため、モジュール化されたエージェント型AIチャットボットアーキテクチャを提案しています。これにより、従来のモノリシックなシステムが抱える課題を克服し、より制御可能で透明性の高い学習支援を実現することを目指しています。",
+        "novelty": "本研究は、従来の単一プロンプトに基づくモノリシックなAIチャットボットが、教育科学の知見に沿った指導を困難にし、転移能力や批判的思考の喪失といった負の影響をもたらすという課題を指摘しています。これに対し、学習プロセスを複数の専門モジュールに分解することで、個別の教育的助言を組み込み、学生の学習をより細かく制御・監視できる新しいアーキテクチャを提案している点が新規性です。",
+        "method": "本研究では、責任あるLLMベースの教育システムに必要な設計要件（デシデラタ）を特定し、モノリシックなシステムが持つ構造的欠陥を議論しています。その上で、演習解決の異なる段階に対応する特定のモジュールを提案し、概念実証としてModular Artificial Learning Assistance (MALA)というシステムを構築しています。MALAは、学生の意図を分析し、ヒント生成、概念説明、フィードバック提供などの専門モジュールにリクエストをルーティングすることで、個別化された教育的制御を可能にしています。",
+        "results": "分析の結果、モジュール化されたアーキテクチャは、教育における責任あるAI利用のための設計要件（デシデラタ）に貢献することが示されています。具体的には、各モジュールが特定の教育目標に合わせたシステムプロンプトで制御されるため、ソクラテス式支援や概念説明など、状況に応じたきめ細やかな指導が可能になります。これにより、エラーの原因特定や教育戦略の調整が容易になり、他の機能への意図しない影響を避けることができると結論付けられています。",
+        "why": "モジュール化によって責任ある学習支援が実現するのは、教育的介入が明示的かつ制御可能になるためです。従来のモノリシックなシステムでは、単一のプロンプトですべての指導を賄うため、ヒントや説明といった異なる教育機能を明確に区別することが困難でした。しかし、モジュール化により、各機能が独立したモジュールとして設計され、それぞれに特化したシステムプロンプトが適用されることで、個別の教育目標に沿った行動を厳密に制御できるようになります。これにより、学生の認識主体性（epistemic agency）を損なうことなく、透明性の高いプロセスで適切な支援を提供することが可能になるのです。",
+        "figures": "アブストラクトに図表の記述なし"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.AI）",
+      "field": "公共政策・ガバナンス",
+      "titleJa": "責任ある学習支援を促進するための教育用LLMエージェンシーのモジュール化",
+      "catchTitle": "AI先生、賢くなる秘訣は「モジュール化」？",
+      "hook": "教育現場でのAIチャットボットの責任ある利用に向け、学習効果を高める新たなアーキテクチャが提案されています。",
+      "quiz": {
+        "question": "教育用AIチャットボットをより責任あるものにするための、本論文が提案する主なアプローチは何でしょうか？",
+        "options": [
+          "学習プロセスを複数の専門モジュールに分解し、それぞれを個別に制御する",
+          "AIの回答速度を向上させ、学生がより早く課題を解決できるようにする",
+          "最新のAIモデルを導入し、より高度な自然言語処理能力を持たせる"
+        ],
+        "correctIndex": 0,
+        "explanation": "本論文では、学習プロセスをモジュール化し、各モジュールが特定の教育目標に沿って制御されることで、より責任あるAI利用が可能になると提案しています。",
+        "difficulty": "medium"
+      },
+      "limitations": "本論文では、概念実証としてModular Artificial Learning Assistance (MALA)を提案していますが、MALAは一般的なチューターや学習プランナーとしては機能せず、問題解決演習に特化している点が限界として挙げられます。また、本研究は責任あるAI設計のデシデラタの一部に焦点を当てており、完全な仕様ではないことも述べられています。",
+      "glossary": [
+        {
+          "term": "LLM（大規模言語モデル）",
+          "definition": "大量のテキストデータを学習し、人間のような自然な文章を理解したり生成したりできるAIモデルのことです。ChatGPTなどが代表的です。",
+          "reading": "Large Language Model"
+        },
+        {
+          "term": "エージェント型AIチャットボット",
+          "definition": "単に質問に答えるだけでなく、特定の目標達成のために自律的に行動し、学習プロセス全体を支援する能力を持つAIチャットボットのことです。"
+        },
+        {
+          "term": "モノリシックなシステム",
+          "definition": "単一の大きなプログラムやコンポーネントで全ての機能が統合されているシステムのことです。教育用AIでは、単一のプロンプトで全ての指導を行う方式を指します。"
+        },
+        {
+          "term": "モジュール化されたアーキテクチャ",
+          "definition": "システムを機能ごとに独立した小さな部品（モジュール）に分割して構築する設計思想です。これにより、各部品の役割が明確になり、柔軟な開発や管理が可能になります。"
+        },
+        {
+          "term": "デシデラタ",
+          "definition": "特定の目的を達成するために必要とされる、望ましい特性や要件のことです。この論文では、責任ある教育用AIシステムに求められる設計条件を指します。"
+        },
+        {
+          "term": "認識主体性（epistemic agency）",
+          "definition": "学生が自らの認知的な努力を通じて、積極的に推論し、評価し、理解に到達する能力のことです。既成の答えを受け取るのではなく、自力で考える力を指します。"
+        },
+        {
+          "term": "システムプロンプト",
+          "definition": "AIモデルの振る舞いを規定するために、ユーザーには見えない形で内部的に与えられる指示文のことです。モデルの役割や出力形式などを制御します。"
+        },
+        {
+          "term": "スキャフォールディング",
+          "definition": "学習者が自力では難しい課題に取り組む際に、より知識のある他者（教師やAI）が一時的に支援を提供し、学習者の成長を促す教育手法です。足場を組むようにサポートすることから名付けられました。",
+          "reading": "scaffolding"
+        }
+      ],
+      "takeaway": {
+        "whatIsIt": "AIチャットボットが教育現場で普及する中、学生の学びを本当に助けるにはどうすべきかを探る研究です。",
+        "whatFound": "AIを「万能な先生」にするのではなく、ヒント出しや説明など、機能ごとに専門のモジュールに分けることで、より効果的で責任ある学習支援ができることが分かりました。",
+        "soWhat": "将来、AI先生が学生の考える力を奪わず、むしろ育む存在になるためには、AIの設計段階から教育的な配慮が重要だということが示唆されています。"
+      },
+      "storyCards": {
+        "ask": "AI先生、答えを教えすぎ？ 学びを阻害しない？",
+        "method": "学習支援を「ヒント」「説明」など機能別にモジュール化",
+        "finding": "モジュール化で、学生の思考力を守りつつ、適切な支援を実現",
+        "meaning": "教育AIの責任ある設計へ。学生の自律的な学びを促進"
+      },
+      "audio": {
+        "src": "/audio/2605.30187v1.mp3",
+        "format": "mp3",
+        "duration": 39,
+        "voice": "Kore",
+        "generatedAt": "2026-05-30T22:56:53.054Z"
+      },
+      "keyFigure": {
+        "imagePath": "/figures/2605.30187v1_results.png",
+        "page": 2,
+        "caption": "Fig. 1. Contribution of modular chatbot architectures to the identified desiderata for Contribution of modular chatbot architectures to the identified desiderata for",
+        "label": "Fig. 1. Contribution of modular chatbot architectures to the identified desiderata for",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-05-30T22:58:53.447Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2605.30187v1_results.png",
+          "page": 2,
+          "caption": "Fig. 1. Contribution of modular chatbot architectures to the identified desiderata for Contribution of modular chatbot architectures to the identified desiderata for",
+          "label": "Fig. 1. Contribution of modular chatbot architectures to the identified desiderata for",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-05-30T22:58:53.447Z"
+        }
+      ]
+    },
+    {
+      "id": "2605.29749v1",
+      "title": "Community detection in subject-subject networks from psychometrics data",
+      "authors": [
+        "Arianna Armanetti",
+        "Luca Cecchetti",
+        "Eiko Fried",
+        "Diego Garlaschelli",
+        "Miguel Ibáñez-Berganza"
+      ],
+      "publishedAt": "2026-05-28T10:46:49Z",
+      "url": "https://arxiv.org/abs/2605.29749v1",
+      "pdfUrl": "https://arxiv.org/pdf/2605.29749v1.pdf",
+      "categories": [
+        "topic:urban",
+        "physics.soc-ph",
+        "cond-mat.stat-mech",
+        "physics.data-an"
+      ],
+      "abstract": "Identifying subgroups of respondents in psychometric data is traditionally addressed with Latent Class Analysis, which requires the number of classes to be specified a priori and can perform poorly when strong inter-item correlations violate local independence assumptions. We propose a network-theoretic alternative based on community detection in subject-subject similarity networks. To suppress the systematic artifacts induced by the factor structure of the items, the similarity is computed in a low-dimensional factor-score space and the null model for modularity maximisation is obtained by removing the leading (global) mode of the similarity matrix, rather than via the standard Newman--Girvan model. The significance of a detected partition is then assessed against a column-wise resampling null through four complementary observables: the modularity, the differential entropy of the eigenvector point cloud at two neighbourhood scales, and the overlap of the within- and between-community similarity histograms. On a synthetic benchmark with controlled mixture signal, all four metrics correctly identify the homogeneous case as null-compatible -- including the demanding regime of a dataset dominated by a single factor -- and exhibit a graded departure from the null as the cluster separation grows. Applied to 14 widely used psychometric scales, the pipeline isolates a small group of datasets supporting a genuine and directly interpretable modular structure, while the remaining scales fall either in a mixed-signal regime or in one compatible with a single homogeneous community. The significance analysis is independent of the specific community-detection algorithm and provides an operational way to test for modular subject-level structure in questionnaire data.",
+      "summary": {
+        "gist": "本研究は、心理測定データにおける被験者のサブグループを特定するため、被験者間の類似性ネットワークに基づくコミュニティ検出という新しいネットワーク理論的アプローチを提案しています。この手法は、従来の潜在クラス分析（LCA）が抱える、クラス数の事前指定や強い項目間相関による性能低下といった課題を克服することを目指しています。",
+        "novelty": "本研究の新規性は、従来の項目中心のアプローチや潜在クラス分析（LCA）の限界を克服し、被験者中心の視点から人口の異質性を探求している点です。特に、項目間の因子構造に起因する系統的なアーティファクトを抑制するため、低次元の因子スコア空間で類似性を計算し、類似性行列の主要な（グローバルな）モードを除去する独自のヌルモデルを導入している点が画期的です。これにより、データに内在する真のサブグループ構造を、偽のパターンと区別して検出することが可能になります。",
+        "method": "本研究では、まず心理測定データを被験者と項目の重み付き二部ネットワークとして扱い、被験者層に投影して重み付き被験者間類似性ネットワークを構築します。このパイプラインは、因子スコアへの投影、類似性行列の構築、そしてマーケットモード除去とコミュニティ検出の3つのステップで構成されています。具体的には、因子分析モデルをデータに適合させ、被験者をF次元の因子スコア空間に埋め込み、この空間での二乗ユークリッド距離に基づいて類似性行列を構築します。その後、類似性行列から主要な固有値寄与を減算し、Leidenアルゴリズムを用いてモジュラリティ最大化によるコミュニティ検出を行います。検出された分割の有意性は、モジュラリティ、固有ベクトル点群の微分エントロピー、コミュニティ内外の類似性ヒストグラムのオーバーラップという4つの補完的な観測量を用いて、リサンプリングヌルモデルに対して評価されます。この手法は、合成データセットと14の広く使用されている実際の心理測定尺度に適用されています。",
+        "results": "合成ベンチマークデータを用いた検証では、提案された4つの評価指標（モジュラリティ、2つの近傍スケールでの固有ベクトル点群の微分エントロピー、コミュニティ内外の類似性ヒストグラムのオーバーラップ）が、単一因子が支配的なデータセットのような困難な状況でも、均質なケースをヌル互換として正しく識別しました。また、クラス分離が大きくなるにつれて、ヌルからの段階的な逸脱を示しています。14の実際の心理測定尺度に適用した結果、パイプラインは真に解釈可能なモジュラー構造を支持する少数のデータセットを特定し、残りの尺度は混合シグナル体制または単一の均質なコミュニティと互換性のある体制に分類されました。この有意性分析は、特定のコミュニティ検出アルゴリズムに依存せず、質問票データにおける被験者レベルのモジュラー構造を運用的にテストする方法を提供します。",
+        "why": "この手法が真のサブグループを特定できるのは、従来の分析が抱える課題を克服しているためです。まず、項目間の強い相関によって生じる冗長性を、低次元の因子スコア空間に投影することで抑制します。これにより、同じ潜在因子を測定する項目が類似性を過剰に膨らませることを防ぎ、被験者間の真の差異を浮き彫りにします。次に、類似性行列から主要な（グローバルな）モードを除去する独自のヌルモデルを用いることで、データ生成プロセスに起因する偽のモジュラーパターン（例えば、単一の支配的な変動軸に沿って被験者が人工的に2つのグループに分割される現象）を排除し、真のコミュニティ構造のみを抽出できるのです。",
+        "figures": "アブストラクトに図表の記述なし"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.soc-ph）",
+      "field": "都市・地域",
+      "titleJa": "心理測定データにおける被験者間ネットワークのコミュニティ検出",
+      "catchTitle": "心理テストの隠れたグループ、AIで見つける",
+      "hook": "心理測定データから、従来の分析手法では見つけにくかった被験者の隠れたグループを、新しいネットワーク理論で特定する方法を提案しています。",
+      "quiz": {
+        "question": "心理測定データから被験者のサブグループを検出する新しい手法は、従来の潜在クラス分析（LCA）のどのような課題を解決することを目指していますか？",
+        "options": [
+          "クラス数の事前指定が不要になり、項目間の強い相関があっても性能が低下しにくいです。",
+          "分析結果の解釈がより複雑になり、専門家でなければ理解が難しいです。",
+          "大規模データセットでの計算時間が大幅に増加し、実用性が低いです。"
+        ],
+        "correctIndex": 0,
+        "explanation": "新しいネットワーク理論的アプローチは、LCAが抱えるクラス数の事前指定の必要性や、強い項目間相関が局所独立性仮定を侵害することによる性能低下といった課題を解決します。",
+        "difficulty": "medium"
+      },
+      "limitations": "アブストラクトには研究の限界に関する直接的な記述はありませんが、論文本文抜粋のMethodsセクションでは、小さなデータセット（10〜20項目）や、構成要素あたりの項目数が少ないデータセットでは、類似性行列がよりノイズが多くなり、モジュラー構造に関する結果の信頼性が低下する傾向があると述べられています。",
+      "glossary": [
+        {
+          "term": "潜在クラス分析（LCA）",
+          "definition": "観測されたデータから、直接見ることのできない「潜在的なクラス（グループ）」を統計的に推定する手法です。心理学や社会学で、人々のタイプ分けによく用いられます。",
+          "reading": "Latent Class Analysis"
+        },
+        {
+          "term": "コミュニティ検出",
+          "definition": "ネットワーク（グラフ）の中で、密接に結びついたノード（点）の集まり（コミュニティ）を見つけ出すアルゴリズムです。ソーシャルネットワーク分析などで利用されます。"
+        },
+        {
+          "term": "因子スコア空間",
+          "definition": "因子分析によって得られた、少数の「因子（潜在的な共通要因）」で構成される仮想的な空間です。元の多数の項目データよりも、本質的な情報を少ない次元で表現できます。"
+        },
+        {
+          "term": "ヌルモデル",
+          "definition": "統計的な分析において、特定の効果や構造が存在しないという「基準」となるモデルです。観測されたデータがこのヌルモデルからどれだけ逸脱しているかを比較することで、その効果の有意性を評価します。",
+          "reading": "Null model"
+        },
+        {
+          "term": "モジュラリティ",
+          "definition": "ネットワークのコミュニティ構造の強さを示す指標です。ランダムなネットワークと比較して、どれだけコミュニティ内の結合が強く、コミュニティ間の結合が弱いかを表します。",
+          "reading": "Modularity"
+        },
+        {
+          "term": "Leidenアルゴリズム",
+          "definition": "ネットワークのコミュニティ検出に使われるアルゴリズムの一つで、モジュラリティを最大化することで、より質の高いコミュニティ分割を見つけ出すことを目指します。"
+        },
+        {
+          "term": "微分エントロピー",
+          "definition": "連続的な確率分布の不確実性や情報量を測る指標です。データ点の分布がどれだけ広がっているか、あるいは集中しているかを示すために用いられます。",
+          "reading": "Differential entropy"
+        },
+        {
+          "term": "因子分析（FA）",
+          "definition": "多数の観測変数（項目）の背後にある、少数の「潜在因子」を抽出する多変量解析手法です。心理学の質問紙調査などで、共通の特性を測るために用いられます。",
+          "reading": "Factor Analysis"
+        }
+      ],
+      "takeaway": {
+        "whatIsIt": "心理テストの回答データから、回答者の隠れたグループを見つける研究です。",
+        "whatFound": "新しいAI分析で、従来の課題を克服し、真のグループ構造を特定できることがわかりました。",
+        "soWhat": "これにより、個々人に合わせた心理支援や教育プログラムの開発に役立つかもしれません。"
+      },
+      "storyCards": {
+        "ask": "心理テストの回答、実は隠れたグループがある？",
+        "method": "回答パターンをネットワーク化し、AIでグループを検出。",
+        "finding": "従来の課題を克服し、真のグループ構造を特定可能に。",
+        "meaning": "個別化された心理支援や教育プログラム開発に期待。"
+      },
+      "audio": {
+        "src": "/audio/2605.29749v1.mp3",
+        "format": "mp3",
+        "duration": 30,
+        "voice": "Kore",
+        "generatedAt": "2026-05-30T22:57:24.431Z"
+      },
+      "keyFigure": {
+        "imagePath": "/figures/2605.29749v1_results.png",
+        "page": 12,
+        "caption": "14の実際の心理測定尺度における有意性指標を示しており、真に解釈可能なモジュラー構造を持つデータセットを特定しています。",
+        "label": "FIG. 3: Significance metrics for the 14 real datasets, structured as in Fig. 2. Panels: (A) modularity Q, (B) cloud",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-05-30T22:58:58.516Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2605.29749v1_results.png",
+          "page": 12,
+          "caption": "14の実際の心理測定尺度における有意性指標を示しており、真に解釈可能なモジュラー構造を持つデータセットを特定しています。",
+          "label": "FIG. 3: Significance metrics for the 14 real datasets, structured as in Fig. 2. Panels: (A) modularity Q, (B) cloud",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-05-30T22:58:58.516Z"
+        }
+      ]
+    },
+    {
+      "id": "2605.29367v1",
+      "title": "Attention Asymmetry in AI Layoff Discourse on X: A Computational Analysis of Capital vs Labour Amplification",
+      "authors": [
+        "Joy Bose"
+      ],
+      "publishedAt": "2026-05-28T05:09:33Z",
+      "url": "https://arxiv.org/abs/2605.29367v1",
+      "pdfUrl": "https://arxiv.org/pdf/2605.29367v1.pdf",
+      "categories": [
+        "topic:policy",
+        "cs.CL",
+        "cs.CY",
+        "cs.SI"
+      ],
+      "abstract": "When workers lose jobs to AI-driven restructuring, two very different conversations happen on X (formerly Twitter) at the same time. Tech executives and AI researchers talk about productivity, transformation, and opportunity. Laid-off workers and labour critics talk about job loss, uncertainty, and fear. This paper asks a simple question: which conversation gets more reach? We report three studies using two collection methods and 763 tweets from 20 named public accounts. Study 1 used keyword-based collection (n=392) and found no significant difference between corpora (p=0.891), revealing that keyword search is too noisy for this task. Study 2 used account-based collection (n=96) and found a 3.12x mean amplification advantage for capital discourse over labour discourse (p=0.000003, Cohen's d=0.555). Study 3 combined both methods (n=763) and confirmed the finding at 4.18x mean and 10.77x median amplification ratio (p&lt;0.000001). Critically, after normalising for follower count, the asymmetry persists at 2.69x (p=0.000009, Cohen's d=0.491), demonstrating that the effect is not simply a consequence of capital accounts having larger audiences. The finding is robust across all tested amplification metric weightings. We introduce the Amplification Ratio and Amplification Normalisation Index as simple metrics for measuring platform-level discourse inequality. A cross-platform replication on Reddit (n=647 posts) did not replicate the finding, suggesting the asymmetry may be specific to X's account-based amplification architecture. We discuss the methodological implications for cross-platform discourse analysis.",
+      "summary": {
+        "gist": "本研究は、AIによる人員削減に関するX（旧Twitter）上の言説において、企業・投資家側の「資本言説」が、解雇された労働者側の「労働言説」よりも大幅に増幅され、より多くの注目を集めていることを明らかにしました。この非対称性は、フォロワー数で正規化しても持続することが示されています。",
+        "novelty": "本研究は、AIと労働に関する言説の非対称性を、X上のエンゲージメントデータを用いて直接的かつ実証的に測定した点で新規性があります。特に、先行研究では十分に対処されていなかったフォロワー数の影響を正規化して分析することで、プラットフォームのアルゴリズムが特定の言説を構造的に優遇するメカニズムを明らかにしました。また、キーワードベースのデータ収集がこの種の分析には不適切である一方、アカウントベースの収集が有効であることを示した点も、今後の言説分析における重要な手法論的貢献です。",
+        "method": "本研究は、2026年5月20日から27日にかけて、X上の公開アカウントからデータを収集しました。具体的には、AIと仕事に関する言説のタイプに基づき、「資本言説」と「労働言説」の2つのコーパスを定義し、それぞれ10のアカウントから合計763件のツイートを分析対象としました。分析手法としては、各ツイートの「いいね」「リツイート」「引用」に重み付けをして増幅スコアを算出し、さらにフォロワー数で正規化した増幅正規化指数（ANI）を導入しました。統計分析には、べき乗則分布に従うエンゲージメントデータに適したノンパラメトリック検定であるMann-Whitney U検定を用い、効果量としてCohen's dを算出しています。",
+        "results": "分析の結果、アカウントベースのデータ収集を用いた場合、資本言説は労働言説と比較して平均で3.12倍（p=0.000003, Cohen's d=0.555）の増幅優位性を持つことが判明しました。さらに、両方の収集方法を組み合わせた研究では、平均で4.18倍、中央値で10.77倍の増幅比率が確認されました（p<0.000001）。フォロワー数で正規化しても、この非対称性は2.69倍（p=0.000009, Cohen's d=0.491）と持続し、この効果が単に資本側のアカウントがより大きなフォロワーを持つことの結果ではないことが示されました。この結果は、増幅指標の重み付けを変更してもロバストであることが確認されています。ただし、Redditでのクロスプラットフォーム検証では同様の非対称性は見られず、この現象がXのプラットフォームアーキテクチャに特有のものである可能性が示唆されています。",
+        "why": "この非対称性は、Xのようなソーシャルメディアプラットフォームのアルゴリズムが、エンゲージメントを最大化するように設計されていることに起因すると考えられます。先行研究では、アルゴリズムが感情を刺激するコンテンツや対立的な政治的コンテンツを増幅させることが示されており、技術に対する楽観的な物語も同様のダイナミクスから構造的に利益を得ている可能性があります。また、企業側がAIによる人員削減を「AIウォッシング」として効率化や変革の一部と位置づけることで、金融市場にポジティブなシグナルを送り、株価上昇につながるという背景も、資本言説の増幅を促している可能性があります。これにより、社会全体でAI導入のコストと利益がどのように認識されるかに影響を与えていると考えられます。",
+        "figures": "アブストラクトには具体的な図表の記述はありませんが、研究の主要な結果として、資本言説と労働言説の増幅比率、およびフォロワー数正規化後の増幅比率が数値で示されており、これらが棒グラフや散布図などで比較・提示されていると推測されます。また、増幅指標の重み付けに対する感度分析の結果も、表形式で示されている可能性があります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.CL）",
+      "field": "公共政策・ガバナンス",
+      "titleJa": "XにおけるAIレイオフ言説の注目度非対称性：資本側と労働側の増幅に関する計算分析",
+      "catchTitle": "AIレイオフ、Xで語られるのは誰の声？",
+      "hook": "AIによる人員削減を巡るX（旧Twitter）上の議論では、企業側の楽観的な言説が労働側の懸念をはるかに上回る注目を集めていることが明らかになりました。",
+      "quiz": {
+        "question": "AIによる人員削減に関するX（旧Twitter）上の議論で、最も注目を集めるのはどちらの言説だと思いますか？",
+        "options": [
+          "企業やAI研究者による「AIは生産性を高め、新たな機会を生む」という楽観的な言説です。",
+          "解雇された労働者や労働評論家による「AIは雇用を奪い、不安をもたらす」という懸念の言説です。",
+          "どちらの言説も、ほぼ同じくらい注目を集めていると考えられます。"
+        ],
+        "correctIndex": 0,
+        "explanation": "本研究の結果、企業やAI研究者による楽観的な言説の方が、労働側の懸念の言説よりも大幅に注目を集めていることが明らかになりました。",
+        "difficulty": "medium"
+      },
+      "limitations": "本研究では、ツイートテキストが100文字に切り詰められて保存されたため、キーワードベースの品質フィルタリングが短いツイートには信頼できないというデータ品質の問題がありました。また、リツイートが第三者のコンテンツを反映するため、アカウント自身の言説とは異なる可能性があるため、分析から除外されました。将来の研究では、完全なツイートテキストを保存し、リツイートを除外して収集することが推奨されています。さらに、Xの標準APIが代表的なサンプルを配布しないという限界も指摘されており、アカウントベースの収集でこの点を克服しています。",
+      "glossary": [
+        {
+          "term": "資本言説",
+          "definition": "AI導入による機会、生産性向上、変革、ポジティブな可能性を強調する投稿を指します。主に企業、投資家、テクノロジーリーダーの視点から発信されます。"
+        },
+        {
+          "term": "労働言説",
+          "definition": "AI導入による雇用喪失、労働者への影響、職の代替、自動化による人的コストを強調する投稿を指します。主に労働者や労働者の利益を代弁する人々の視点から発信されます。"
+        },
+        {
+          "term": "増幅スコア",
+          "definition": "各ツイートの「いいね」「リツイート」「引用」の数を特定の重み付けで合計し、そのツイートがどれだけ多くの人に届いたかを示す指標です。",
+          "reading": "Amplification Score"
+        },
+        {
+          "term": "増幅正規化指数（ANI）",
+          "definition": "増幅スコアを、投稿元アカウントのフォロワー数で正規化した指標です。フォロワー数が多いアカウントの投稿が自然と多く拡散される影響を調整するために用いられます。",
+          "reading": "Amplification Normalisation Index"
+        },
+        {
+          "term": "Mann-Whitney U検定",
+          "definition": "2つの独立したグループ間で、順序尺度や間隔尺度のデータに統計的に有意な差があるかを比較するノンパラメトリック検定手法です。データの分布が正規分布に従わない場合に特に有効です。"
+        },
+        {
+          "term": "Cohen's d",
+          "definition": "2つのグループ間の平均値の差を標準偏差で割ったもので、効果量を示す指標です。統計的有意性だけでなく、その効果の大きさや実質的な重要性を評価するために用いられます。"
+        },
+        {
+          "term": "AIウォッシング",
+          "definition": "企業が人員削減をAI導入による効率化や投資戦略の一部であるかのように説明する慣行を指します。実際にはAIとは無関係なレイオフをAIのせいにすることで、市場からの評価を高める狙いがあります。",
+          "reading": "AI washing"
+        },
+        {
+          "term": "べき乗則分布",
+          "definition": "少数の要素が全体の大部分を占め、残りの多数の要素はごくわずかな割合しか占めないという、不均等な分布を示す統計的なパターンです。ソーシャルメディアのエンゲージメントやフォロワー数によく見られます。",
+          "reading": "power-law distribution"
+        }
+      ],
+      "takeaway": {
+        "whatIsIt": "AIによる人員削減について、X（旧Twitter）でどんな声が届きやすいかを調べた研究です。",
+        "whatFound": "企業側の「AIは素晴らしい」という楽観的な声が、労働側の「職がなくなる」という懸念の声より、平均で4倍以上も拡散されやすいそうです。",
+        "soWhat": "社会がAIをどう捉えるかは、Xでどんな情報が広まるかに影響されるのかもしれませんね。"
+      },
+      "storyCards": {
+        "ask": "AIで職が減る？Xで広まるのは誰の声？",
+        "method": "企業側と労働側のツイートを収集し、拡散度を比較。",
+        "finding": "企業側の楽観論が労働側の懸念より4倍以上拡散。",
+        "meaning": "AIの社会受容は、SNSのアルゴリズムに左右されるかも。"
+      },
+      "audio": {
+        "src": "/audio/2605.29367v1.mp3",
+        "format": "mp3",
+        "duration": 36,
+        "voice": "Kore",
+        "generatedAt": "2026-05-30T22:57:57.146Z"
+      },
+      "keyFigure": {
+        "imagePath": "/figures/2605.29367v1_results.png",
+        "page": 10,
+        "caption": "AIレイオフに関する資本側と労働側の言説における、ツイートあたりの平均エンゲージメント数を示しています。",
+        "label": "Figure 3. Mean engagement counts per tweet by discourse type across the combined corpus (n=763).",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-05-30T22:59:00.601Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2605.29367v1_results.png",
+          "page": 10,
+          "caption": "AIレイオフに関する資本側と労働側の言説における、ツイートあたりの平均エンゲージメント数を示しています。",
+          "label": "Figure 3. Mean engagement counts per tweet by discourse type across the combined corpus (n=763).",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-05-30T22:59:00.601Z"
+        }
+      ]
+    },
+    {
+      "id": "2605.30209v1",
+      "title": "Betting Against Integrity: Identifying Match-Fixing Through In-Play Market Dynamics",
+      "authors": [
+        "David Winkelmann",
+        "Maya Vienken",
+        "Christian Deutscher",
+        "Roland Langrock"
+      ],
+      "publishedAt": "2026-05-28T16:44:54Z",
+      "url": "https://arxiv.org/abs/2605.30209v1",
+      "pdfUrl": "https://arxiv.org/pdf/2605.30209v1.pdf",
+      "categories": [
+        "topic:policy",
+        "econ.GN",
+        "stat.AP"
+      ],
+      "abstract": "Match-fixing undermines the integrity of sport by eroding public trust and threatening the financial sustainability of clubs and leagues. The global expansion of sports betting markets has created new incentives and opportunities for manipulation, calling for rigorous, data-driven monitoring tools. Football, which accounts for the largest share of global betting turnover, remains particularly exposed: integrity reports continue to flag several suspicious matches, with past scandals in Italy and Turkey underlining the problem's persistence. This study uses high-frequency live-betting data from the Italian Serie B (2018/19-2020/21) to explore statistical approaches for detecting abnormal betting behaviour. A state-space modelling framework is employed to describe standard betting market dynamics and to predict expected betting volumes conditional on match characteristics. Deviations from these expectations can then be analysed using outlier detection techniques to identify potentially suspicious periods. The results demonstrate how statistical modelling can contribute to the early identification of irregular betting patterns, thereby supporting integrity assurance in live sports betting markets.",
+      "summary": {
+        "gist": "本研究は、イタリア・セリエBのライブベッティングデータを用いて、異常なベッティング行動を統計的に検出する手法を開発しました。これにより、八百長を示唆する可能性のある期間を早期に特定し、スポーツベッティング市場の健全性維持に貢献できることを実証しています。",
+        "novelty": "従来の研究が主に試合前のベッティング市場に焦点を当てていたのに対し、本研究はライブベッティング市場における不正行為の検出に特化している点が新規性です。高頻度かつ高解像度のライブベッティングデータと状態空間モデルを組み合わせることで、試合中のイベントに応じたベッティング量の予測と、そこからの逸脱を分析する新たなアプローチを提案しています。",
+        "method": "本研究では、イタリア・セリエBの2018/19シーズンから2020/21シーズンまでの高頻度ライブベッティングデータを使用しています。主要なヨーロッパのブックメーカーから提供されたこのデータには、試合結果ごとの秒単位のベッティング量とライブオッズが含まれています。分析手法としては、状態空間モデリングフレームワークを用いて通常のベッティング市場の動態を記述し、試合特性を条件とした期待ベッティング量を予測します。その後、この予測値からの逸脱を外れ値検出技術で分析し、不審な期間を特定しています。",
+        "results": "分析の結果、統計モデリングがライブスポーツベッティング市場における異常なベッティングパターンを早期に特定するのに貢献できることが示されました。この手法は、不正行為の兆候を検出するための実用的なツールとして機能し、スポーツの健全性を確保するための監視システムを強化する可能性を秘めています。具体的な数値結果については、論文本文を参照する必要があります。",
+        "why": "八百長が経済的利益をもたらす場合、不正行為が起きやすくなります。グローバルなスポーツベッティング市場の拡大は、アクセスしやすさと高い流動性により、不正行為の機会を増やしているため、検出が困難になっています。本研究の手法は、通常のベッティング市場の動態を正確にモデル化し、そこから大きく逸脱するベッティング量を「異常」と捉えることで、不正行為の兆候を早期に特定することを目指しています。特に、試合終盤に起こりうる、比較的起こりにくい結果への異常に高いベッティング量のようなパターンを捉えることで、操作された試合の結果を最大化しようとする不正行為を検出できると考えられます。",
+        "figures": "アブストラクトに図表の記述なし"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "公共政策・ガバナンス",
+      "titleJa": "インプレー市場の動向から八百長を特定する：スポーツベッティングにおける不正行為の検出",
+      "catchTitle": "ライブベッティングの八百長、AIで見抜く",
+      "hook": "スポーツの八百長は信頼を損ないますが、本研究はライブベッティングデータからその兆候を統計的に検出する新しい手法を開発しました。",
+      "quiz": {
+        "question": "本研究が開発した八百長検出システムは、主にどの種類のベッティングデータを利用していますか？",
+        "options": [
+          "試合中のライブベッティングデータ",
+          "試合前のベッティングデータ",
+          "過去の試合結果データ"
+        ],
+        "correctIndex": 0,
+        "explanation": "本研究は、試合中のリアルタイムなベッティング活動を分析することで、従来の研究では見過ごされがちだったライブベッティング市場の不正行為を検出する新たなアプローチを提示しています。",
+        "difficulty": "medium"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "状態空間モデリングフレームワーク",
+          "definition": "観測できない内部状態と観測可能なデータを結びつけ、時間の経過とともに変化するシステムを記述するための統計モデルです。この研究では、通常のベッティング市場の動態を予測するために用いられています。",
+          "reading": "State-space modelling framework"
+        },
+        {
+          "term": "外れ値検出技術",
+          "definition": "データセット内の他のデータポイントから著しく逸脱する異常な観測値（外れ値）を特定するための統計的・機械学習的手法です。本研究では、予測されたベッティング量からの大きな逸脱を検出するために使用されます。",
+          "reading": "Outlier detection techniques"
+        },
+        {
+          "term": "ライブベッティング",
+          "definition": "試合が進行中にリアルタイムで行われるスポーツベッティングのことです。試合中のイベント（ゴール、レッドカードなど）に応じてオッズやベッティング量が変動します。",
+          "reading": "In-play betting / Live betting"
+        },
+        {
+          "term": "高頻度データ",
+          "definition": "非常に短い時間間隔（秒単位など）で収集されたデータのことです。本研究では、ライブベッティング市場の微細な動態を捉えるために利用されています。",
+          "reading": "High-frequency data"
+        },
+        {
+          "term": "セリエB",
+          "definition": "イタリアのプロサッカーリーグにおける2部リーグのことです。過去に八百長スキャンダルが報告されており、不正検出モデルのテストに適した環境とされています。",
+          "reading": "Serie B"
+        }
+      ],
+      "takeaway": {
+        "whatIsIt": "サッカーの八百長はスポーツの信頼を揺るがす深刻な問題です。",
+        "whatFound": "本研究は、試合中のリアルタイムな賭けの動きから、八百長の兆候を統計的に見つける新しい方法を開発したそうです。",
+        "soWhat": "この技術が実用化されれば、スポーツの公正さを守り、ファンが安心して試合を楽しめるようになるかもしれませんね。"
+      },
+      "storyCards": {
+        "ask": "サッカーの八百長、どうやって見抜く？",
+        "method": "イタリア・セリエBのライブベッティングデータを分析",
+        "finding": "異常な賭けのパターンから八百長の兆候を検出",
+        "meaning": "スポーツの公正性を守る新たな監視ツールに期待"
+      },
+      "audio": {
+        "src": "/audio/2605.30209v1.mp3",
+        "format": "mp3",
+        "duration": 31,
+        "voice": "Kore",
+        "generatedAt": "2026-05-30T22:58:21.935Z"
+      }
+    },
+    {
+      "id": "2605.29266v1",
+      "title": "Quantifying real-world energy use and CO2 emissions of electric vehicles via a city-scale bottom-up framework",
+      "authors": [
+        "Shuhan Ge",
+        "Yanqiao Deng",
+        "Minda Ma"
+      ],
+      "publishedAt": "2026-05-28T02:35:32Z",
+      "url": "https://arxiv.org/abs/2605.29266v1",
+      "pdfUrl": "https://arxiv.org/pdf/2605.29266v1.pdf",
+      "categories": [
+        "topic:urban",
+        "physics.soc-ph"
+      ],
+      "abstract": "Although electric vehicles (EVs) are scaling rapidly, city-scale evidence on real-world operational energy use and carbon dioxide (CO2) emissions from EVs remains limited. Using Shanghai as a case study, this study develops a bottom-up framework covering all EV models registered between July 2022 and December 2024 to quantify model-specific real-world energy intensity, the operational energy mix, and associated CO2 emissions. The results indicate that (1) pronounced and systematic underestimation by test-cycle values: on average, real-world use is 20.8% greater for battery electric vehicles (BEVs) and ~55% greater for plug-in hybrid electric vehicles (PHEVs), whereas extended-range EVs (EREVs) show the largest gaps, as many models consume 3.75 times more energy than their official data suggest. (2) From 2022-2024, electricity supplies more than 70% of operational energy, and power-sector emissions dominate EV operational CO2, contributing 75.3%, 85.7% and 87.0% in 2022, 2023 and 2024, respectively. (3) BEVs achieve the greatest absolute mitigation under current policies, with 1,834 kilotons (kt) of CO2 in 2035, modest benefits from PHEVs, and strong gains for EREVs under more ambitious policies (up to 2,122 kt of CO2 in 2035). These findings underscore the need to align fleet electrification with grid decarbonization, alleviate congestion, improve charging accessibility, and narrow test-cycle versus on-road performance gaps to fully realize the climate benefits of EVs in megacities.",
+      "summary": {
+        "gist": "本研究は、上海を事例に、電気自動車（EV）の現実世界における運用時のエネルギー使用量とCO2排出量をモデル別に定量化しました。その結果、公式のテストサイクル値が現実のエネルギー使用量を大幅に過小評価していること、およびEVのCO2排出削減には電力部門の脱炭素化が不可欠であることを明らかにしています。",
+        "novelty": "従来の研究が単一または少数のEVモデルに限定され、都市全体のフリートレベルでの詳細な分析が不足していたのに対し、本研究は上海に登録された全EVモデルを対象としたボトムアップフレームワークを開発しました。これにより、現実世界でのエネルギー強度と排出量をより正確に評価し、将来の脱炭素化ポテンシャルを予測する新たな知見を提供しています。",
+        "method": "本研究では、2022年7月から2024年12月までの期間に上海で登録された全EVモデルを対象に、オーナー測定データと登録統計に基づくデータセットを使用しました。現実世界でのエネルギー強度を推定するために、多重線形回帰（MLR）モデルを適用し、電力消費量（BEV）または燃料消費量（PHEV、EREV）を予測しました。さらに、電力部門の排出係数を用いて運用時のCO2排出量を推定しています。",
+        "results": "分析の結果、公式のテストサイクル値は現実のエネルギー使用量を系統的に過小評価しており、バッテリー電気自動車（BEV）では平均20.8%、プラグインハイブリッド電気自動車（PHEV）では約55%多く、航続距離延長型EV（EREV）では最大3.75倍もの乖離があることが判明しました。2022年から2024年にかけて、運用エネルギーの70%以上が電力で供給され、EVの運用時CO2排出量の75.3%（2022年）、85.7%（2023年）、87.0%（2024年）を電力部門からの排出が占めています。政策含意としては、BEVが現在の政策下で最大のCO2削減効果（2035年に1,834キロトン）を達成し、PHEVは限定的、EREVはより野心的な政策下で大きな削減効果（2035年に最大2,122キロトン）が期待されることが示されました。",
+        "why": "公式データと現実のエネルギー使用量に乖離が生じるのは、テストサイクルが実際の運転条件（交通渋滞、運転行動、気温など）を完全に反映していないためです。EVのCO2排出削減が電力部門の脱炭素化に強く依存するのは、EVが走行中に排出ガスを出さない一方で、その動力源である電力が発電時にCO2を排出するためです。電力ミックスがクリーンであればあるほど、EVの運用時CO2排出量は減少します。また、BEVがPHEVやEREVよりも大きなCO2削減効果を持つのは、BEVが化石燃料を一切使用しないため、電力部門の脱炭素化が直接的に排出量削減につながるからです。",
+        "figures": "アブストラクトには特定の図表の記述はありませんが、研究結果から、各EVモデル（BEV、PHEV、EREV）の現実世界でのエネルギー使用量と公式テストサイクル値との乖離を示す棒グラフや、2022年から2024年における電力供給割合と電力部門からのCO2排出寄与率の推移を示す折れ線グラフ、さらに2035年までの各EVタイプにおけるCO2削減ポテンシャルを政策シナリオ別に比較するグラフなどが含まれていると推測されます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.soc-ph）",
+      "field": "都市・地域",
+      "titleJa": "都市規模のボトムアップフレームワークによる電気自動車の現実世界でのエネルギー使用量とCO2排出量の定量化",
+      "catchTitle": "EVのCO2排出、公式値より大幅増？",
+      "hook": "電気自動車（EV）のCO2排出量は、公式データよりも現実世界で大幅に多いことが上海での詳細な分析で明らかになりました。",
+      "quiz": {
+        "question": "上海での電気自動車（EV）の現実世界でのエネルギー消費量は、公式データと比較してどうなると思いますか？",
+        "options": [
+          "公式データよりも大幅に多い",
+          "公式データとほぼ同じ",
+          "公式データよりも少ない"
+        ],
+        "correctIndex": 0,
+        "explanation": "本研究の結果、EVの現実世界でのエネルギー消費量は、公式のテストサイクル値よりも大幅に多いことが明らかになりました。",
+        "difficulty": "medium"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "ボトムアップフレームワーク",
+          "definition": "個々の車両モデルや詳細なデータから出発し、それらを積み上げて都市全体の傾向や排出量を推定する分析手法です。マクロなデータから全体を推測するトップダウンアプローチと対比されます。",
+          "reading": "bottom-up framework"
+        },
+        {
+          "term": "バッテリー電気自動車（BEV）",
+          "definition": "走行に必要な全ての動力をバッテリーに蓄えられた電力のみで賄う電気自動車です。ガソリンなどの化石燃料は一切使用しません。",
+          "reading": "Battery Electric Vehicles"
+        },
+        {
+          "term": "プラグインハイブリッド電気自動車（PHEV）",
+          "definition": "電気モーターとガソリンエンジンを併用し、外部電源からの充電も可能なハイブリッド車です。短距離では電力のみで走行できます。",
+          "reading": "Plug-in Hybrid Electric Vehicles"
+        },
+        {
+          "term": "航続距離延長型EV（EREV）",
+          "definition": "基本的に電気モーターで走行しますが、バッテリー残量が少なくなると搭載された小型エンジンが発電し、走行距離を延長するタイプの電気自動車です。",
+          "reading": "Extended-Range Electric Vehicles"
+        },
+        {
+          "term": "エネルギー強度",
+          "definition": "車両が一定距離を走行するために消費するエネルギーの量を示す指標です。通常、100kmあたりの消費電力（kWh/100km）や燃料消費量（L/100km）で表されます。",
+          "reading": "energy intensity"
+        },
+        {
+          "term": "多重線形回帰（MLR）",
+          "definition": "複数の独立変数（説明変数）を用いて、一つの従属変数（目的変数）を予測または説明する統計分析手法です。変数間の線形関係をモデル化します。",
+          "reading": "Multilinear Regression"
+        },
+        {
+          "term": "電力部門の脱炭素化",
+          "definition": "発電時に排出される二酸化炭素（CO2）の量を削減する取り組みです。再生可能エネルギーの導入拡大や原子力発電の活用などにより、電力供給全体のCO2排出量を減らすことを目指します。",
+          "reading": "grid decarbonization"
+        },
+        {
+          "term": "テストサイクル",
+          "definition": "自動車の燃費や排出ガス性能を測定するために、標準化された条件下で行われる走行パターンです。実際の運転状況とは異なるため、現実世界での性能と乖離が生じることがあります。",
+          "reading": "test-cycle"
+        }
+      ],
+      "takeaway": {
+        "whatIsIt": "電気自動車（EV）の実際のエネルギー消費とCO2排出を、上海の全モデルで詳細に調べた研究です。",
+        "whatFound": "EVの実際のエネルギー消費は、公式データよりBEVで約2割、PHEVで約5割も多いことが分かりました。",
+        "soWhat": "EVの環境メリットを最大限に引き出すには、電力の脱炭素化や充電インフラの改善が重要だそうです。"
+      },
+      "storyCards": {
+        "ask": "EV、本当にエコ？公式データと現実の差は？",
+        "method": "上海の全EVモデルを対象に、実際の走行データを分析",
+        "finding": "EVの実際のエネルギー消費は、公式値より最大3.75倍多い",
+        "meaning": "EVのCO2削減には、電力の脱炭素化がカギ。都市政策に活用へ"
+      },
+      "audio": {
+        "src": "/audio/2605.29266v1.mp3",
+        "format": "mp3",
+        "duration": 32,
+        "voice": "Kore",
+        "generatedAt": "2026-05-30T22:58:49.817Z"
+      },
+      "keyFigure": {
+        "imagePath": "/figures/2605.29266v1_results.jpeg",
+        "page": 26,
+        "caption": "Fig. 5 Predicted decarbonization performance of EVs in Shanghai for 2025 to 2035: (a) predicted Predicted decarbonization performance of EVs in Shanghai for 2025 to 2035: (a) predicted",
+        "label": "Fig. 5 Predicted decarbonization performance of EVs in Shanghai for 2025 to 2035: (a) predicted",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-05-30T22:59:04.561Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2605.29266v1_results.jpeg",
+          "page": 26,
+          "caption": "Fig. 5 Predicted decarbonization performance of EVs in Shanghai for 2025 to 2035: (a) predicted Predicted decarbonization performance of EVs in Shanghai for 2025 to 2035: (a) predicted",
+          "label": "Fig. 5 Predicted decarbonization performance of EVs in Shanghai for 2025 to 2035: (a) predicted",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-05-30T22:59:04.561Z"
+        }
+      ]
+    }
+  ]
+}

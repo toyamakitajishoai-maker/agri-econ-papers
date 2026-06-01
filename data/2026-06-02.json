@@ -1,0 +1,566 @@
+{
+  "date": "2026-06-02",
+  "papers": [
+    {
+      "id": "2605.31551v1",
+      "title": "SMART: SMPLest-X Mesh Adaptation and RAFT Tracking for Soccer Pose Estimation",
+      "authors": [
+        "Parthsarthi Rawat"
+      ],
+      "publishedAt": "2026-05-29T17:12:34Z",
+      "url": "https://arxiv.org/abs/2605.31551v1",
+      "pdfUrl": "https://arxiv.org/pdf/2605.31551v1.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "cs.CV"
+      ],
+      "abstract": "We present our approach to the FIFA Skeletal Tracking Challenge 2026, which requires estimating 3D world-space poses of soccer players from broadcast video. Our method finetunes SMPLest-X (ViT-H, 687 M parameters) via a stratified clip split, multi-task depth supervision, and broadcast augmentation, paired with a RAFT dense optical flow camera tracker, foot-plane anchoring, and two-pass temporal smoothing. Against the FIFA baseline score of 1.053 on the validation set, SMART achieves 0.647, a 38.6% improvement; on the held-out test set, SMART scores 0.593 (Global MPJPE: 0.324 m, Local MPJPE: 0.054 m).",
+      "summary": {
+        "gist": "本研究は、放送映像からサッカー選手の3D姿勢を推定する「FIFA Skeletal Tracking Challenge 2026」向けに、新しい手法「SMART」を提案しています。この手法は、既存のSMPLest-Xモデルを微調整し、カメラトラッカーや足元固定、時間的平滑化を組み合わせることで、FIFAのベースラインスコアを38.6%改善する高精度な姿勢推定を実現しました。",
+        "novelty": "本研究の新規性は、既存のSMPLest-Xモデルに対して、層別クリップ分割、マルチタスク深度監視、放送映像向けデータ拡張といった独自の微調整戦略を適用した点にあります。これにより、サッカー放送映像特有の課題（小さな選手サイズ、広い画角、部分的なオクルージョン）によるドメインギャップを効果的に埋め、従来のベースライン手法や素朴な微調整では達成できなかった高精度な3D姿勢推定を可能にしました。",
+        "method": "本研究では、FIFAワールドカップ2022の放送映像から提供された20シーケンス（検証用6、テスト用14）のデータセットを使用しています。提案手法SMARTは、SMPLest-Xモデルをベースに、RAFT密なオプティカルフローカメラトラッカー、足元平面アンカリング、および2段階の時間的平滑化を統合したパイプラインです。特に、深度監視（Ldepth）を組み込んだマルチタスク損失関数を用いて15エポックの微調整を行い、各コンポーネントの有効性をアブレーションスタディで検証しています。",
+        "results": "SMARTは、検証セットにおいてFIFAベースラインスコア1.053に対し0.647を達成し、38.6%の改善を示しました。また、未公開のテストセットでは0.593というスコアを記録し、高い汎化性能を実証しています。具体的には、Global MPJPEが0.324m、Local MPJPEが0.054mであり、特に深度監視が局所的な姿勢推定精度向上に最も寄与していることが確認されました。",
+        "why": "SMARTが高精度な姿勢推定を可能にするのは、複数の技術的工夫が相乗効果を生むためです。まず、SMPLest-Xモデルをサッカー放送映像に特化して微調整することで、選手が小さく映る広角映像や部分的な遮蔽といったドメインギャップを克服します。次に、RAFTカメラトラッカーが、選手以外の背景の動きを正確に捉え、カメラの回転と移動を高精度に推定します。さらに、足元平面アンカリングによって、推定されたスケルトンがピッチ平面に適切に接地され、浮遊するような不自然な姿勢が抑制されます。最後に、2段階の時間的平滑化により、検出ノイズによる一時的な揺らぎが除去され、滑らかな選手軌跡と関節の動きが再現されるため、全体として高精度な3D姿勢推定が実現するのです。",
+        "figures": "アブストラクトには図表の記述なし。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.CV）",
+      "field": "AI・データサイエンス",
+      "titleJa": "SMART: サッカー選手3D姿勢推定のためのSMPLest-Xメッシュ適応とRAFTトラッキング",
+      "catchTitle": "サッカー選手の動き、AIで高精度に追跡！",
+      "hook": "放送映像からサッカー選手の3D姿勢を推定するAIモデル「SMART」が、FIFAの既存手法を大幅に上回る精度を達成しました。",
+      "quiz": {
+        "question": "サッカー放送映像から選手の3D姿勢を推定する際、最も精度を向上させる要因は何だと思いますか？",
+        "options": [
+          "深度監視とデータ拡張によるモデルの微調整",
+          "高解像度カメラと高速な画像処理プロセッサの導入",
+          "選手に装着する小型センサーからのデータ統合"
+        ],
+        "correctIndex": 0,
+        "explanation": "論文の結果セクションによると、深度監視とデータ拡張を含む微調整戦略が、特に局所的な姿勢推定精度を大幅に向上させることが示されています。",
+        "difficulty": "medium"
+      },
+      "limitations": "本研究の限界として、(i) ダイビングのような極端な姿勢は学習データに少なく、SMPLest-Xが苦手とすること、また選手が空中にいる際には足元平面アンカリングが機能しない点が挙げられます。(ii) SMPLest-Xはフレームごとの処理であるため、選手が遮蔽された場合に脆弱であり、時間的情報を考慮したモデルであればより堅牢に対応できる可能性があります。(iii) 使用しているViT-Hバックボーンは推論コストが高く、ViT-Sのような軽量モデルであれば精度をわずかに犠牲にする代わりに処理速度を約4倍に向上できると述べられています。",
+      "glossary": [
+        {
+          "term": "SMPLest-X",
+          "definition": "人間の形状と姿勢を低次元の係数で表現するパラメトリックモデルSMPL-Xを基盤とした、表現力豊かな身体メッシュ回復モデルです。画像から3Dの身体形状と姿勢を推定します。",
+          "reading": "SMPLest-X"
+        },
+        {
+          "term": "RAFT",
+          "definition": "画像間の動き（オプティカルフロー）を推定する深層学習モデルです。特に、密なフロー推定において高い精度を発揮します。",
+          "reading": "Recurrent All-Pairs Field Transforms"
+        },
+        {
+          "term": "足元平面アンカリング",
+          "definition": "推定された3Dスケルトンを、既知のピッチ平面に接地させる技術です。これにより、選手が宙に浮いているような不自然な姿勢推定を防ぎ、絶対的な位置と相対的なスケール精度を向上させます。",
+          "reading": "foot-plane anchoring"
+        },
+        {
+          "term": "MPJPE",
+          "definition": "推定された3D関節位置と真の関節位置との間の平均誤差を測る指標です。Global MPJPEは絶対座標での誤差、Local MPJPEはルート関節からの相対誤差を示します。",
+          "reading": "Mean Per-Joint Position Error"
+        },
+        {
+          "term": "アブレーションスタディ",
+          "definition": "提案するシステムやモデルの各コンポーネントを一つずつ取り除き、その性能への影響を評価する分析手法です。どの要素がどれだけ寄与しているかを特定するために用いられます。",
+          "reading": "ablation study"
+        },
+        {
+          "term": "深度監視",
+          "definition": "モデルの学習において、画像中の物体の奥行き情報（深度）を教師信号として用いることです。これにより、3D空間での位置推定精度が向上します。",
+          "reading": "depth supervision"
+        },
+        {
+          "term": "オプティカルフロー",
+          "definition": "連続する画像フレーム間で、各ピクセルがどのように動いたかを示すベクトル場の推定です。物体の動きやカメラの動きを分析するために使用されます。",
+          "reading": "optical flow"
+        },
+        {
+          "term": "RANSAC",
+          "definition": "データセット中に外れ値が多く含まれる場合でも、モデルのパラメータを推定するための反復的な手法です。外れ値の影響を排除し、正確なモデルを特定するのに役立ちます。",
+          "reading": "Random Sample Consensus"
+        }
+      ],
+      "takeaway": {
+        "whatIsIt": "サッカー放送映像から、選手の動きを3Dで正確に捉える技術の研究です。",
+        "whatFound": "新しいAIモデル「SMART」が、FIFAの既存手法より38.6%も高精度に選手の姿勢を推定できることが分かりました。",
+        "soWhat": "これにより、戦術分析や選手のパフォーマンス評価がより詳細になり、スポーツ中継も進化しそうです。"
+      },
+      "storyCards": {
+        "ask": "サッカー選手の3D姿勢、放送映像からどこまで正確にわかる？",
+        "method": "既存モデルをサッカー映像向けに微調整、足元固定で精度向上。",
+        "finding": "新モデル「SMART」、FIFA基準より38.6%も高精度に推定。",
+        "meaning": "詳細な戦術分析やVR中継など、スポーツ観戦の未来が変わるかも。"
+      },
+      "audio": {
+        "src": "/audio/2605.31551v1.mp3",
+        "format": "mp3",
+        "duration": 32,
+        "voice": "Kore",
+        "generatedAt": "2026-06-01T23:26:35.670Z"
+      }
+    },
+    {
+      "id": "2605.31478v1",
+      "title": "Knowledge Boundary Probing and Demand-Guided Intervention for LLM-Based Power System Code Generation",
+      "authors": [
+        "Hui Wu",
+        "Xiaoyang Wang",
+        "Zhong Fan"
+      ],
+      "publishedAt": "2026-05-29T16:06:34Z",
+      "url": "https://arxiv.org/abs/2605.31478v1",
+      "pdfUrl": "https://arxiv.org/pdf/2605.31478v1.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "cs.SE",
+        "cs.CL",
+        "eess.SY"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly used to automate power-system analysis, but many utilities and energy-research labs require on-premise serving for confidentiality, regulatory, reproducibility, and cost reasons. This makes the reliability of open-weight models a deployment issue. We show that first-pass failures in power-system code generation are dominated not by reasoning alone, but by structured API-knowledge boundary errors: hallucinated function names, misused parameters, and mishandled result tables in versioned simulation libraries. We introduce PowerCodeBench, an execution-validated benchmark generator that pairs natural-language operator queries with pandapower code and numerical ground truth; an L0-L3 documentation-driven probing procedure that measures per-model API knowledge profiles; and a boundary-aware intervention that combines query-side API demand estimation with targeted proactive documentation injection and routed reactive correction. On a 2,000-task frozen release, we evaluate ten open-weight LLMs (1.5B-480B parameters) and four commercial mid-tier APIs. The intervention improves every evaluated open-weight model of at least 7B parameters and every commercial API by 32 to 56 accuracy points. Open-weight models in the 70B-120B range match the commercial mid-tier accuracy range, while Llama-3.1-405B and Qwen3-Coder-480B lead the panel. The targeted prompts preserve the full-context accuracy ceiling while using 41% of the prompt-token cost. The result is an accuracy-side, deployment-time path toward reliable on-premise LLM assistance for grid-analysis workflows without fine-tuning or cloud inference.",
+      "summary": {
+        "gist": "本研究は、電力システム解析のためのLLMによるコード生成において、推論能力ではなくAPI知識の境界エラーが主要な失敗原因であることを特定しました。そして、この問題に対処するため、API知識プロファイリングとターゲットを絞ったドキュメント注入を組み合わせた介入手法を提案し、オンプレミス環境でのLLMの信頼性と精度を大幅に向上させることを実証しました。",
+        "novelty": "従来の研究では、LLMのコード生成における失敗は推論能力の限界に起因すると考えられがちでしたが、本研究は、バージョン管理されたシミュレーションライブラリにおけるAPI知識の境界エラー（関数名の幻覚、パラメータの誤用、結果テーブルの誤処理）が主要な原因であることを初めて体系的に示しました。また、このAPI知識の境界を測定し、展開時に補償する「境界認識型介入」という新しいアプローチを提案し、高価なファインチューニングやクラウド推論なしにオンプレミスLLMの性能を向上させる道筋を示した点が新規性です。",
+        "method": "本研究では、自然言語のオペレータークエリとpandapowerコード、数値的な正解を組み合わせた2,000タスクからなる実行検証済みベンチマークジェネレーター「PowerCodeBench」を構築しました。このベンチマークを用いて、1.5Bから480Bパラメータの10種類のオープンウェイトLLMと4種類の商用ミッドティアAPIを評価しました。分析手法としては、L0-L3のドキュメント駆動型プロービング手順によりモデルごとのAPI知識プロファイルを測定し、クエリ側のAPI需要推定とターゲットを絞った事前ドキュメント注入、および実行フィードバックに基づく事後修正を組み合わせた境界認識型介入を適用しています。",
+        "results": "提案された介入手法は、評価対象の7Bパラメータ以上のオープンウェイトモデルすべてと、すべての商用APIにおいて、精度を32から56パーセンテージポイント改善しました。これにより、70Bから120Bのオープンウェイトモデルは商用ミッドティアAPIの精度範囲に匹敵し、Llama-3.1-405BとQwen3-Coder-480Bはパネル内で最高の精度を達成しました。また、ターゲットを絞ったプロンプトは、プロンプトトークンコストを41%に削減しながら、フルコンテキストの精度上限を維持できることも示されました。この結果は、ファインチューニングやクラウド推論なしに、グリッド解析ワークフロー向けのオンプレミスLLMアシスタンスの信頼性を高める展開時パスを提供することを示唆しています。",
+        "why": "LLMが電力システムコード生成で失敗する主な原因は、推論能力の不足ではなく、特定のAPI関数の名前を間違えたり、パラメータを誤用したり、結果テーブルの扱いを間違えたりといった「API知識の境界エラー」にあると本研究は指摘しています。これは、LLMが学習データからAPIの構造や使い方を完全に把握できていないために発生します。提案された介入手法は、このAPI知識の不足を補うために、まずモデルごとにどのAPI知識が不足しているかを診断し、次にクエリの内容に応じて必要なAPIドキュメントを事前にプロンプトに注入します。さらに、コード実行時のエラーフィードバックを活用して、誤りを修正するようモデルに指示することで、LLMがより正確なコードを生成できるようになります。これにより、モデルの重みを変更することなく、展開時にLLMの性能を向上させることが可能になるのです。",
+        "figures": "アブストラクトには主要な図表の記述はありませんが、論文本文抜粋のFigure 1には、PowerCodeBenchの信頼性ワークフローが示されています。これは、包括的なベンチマークの構築、難易度ピラミッド、参照コード、スカラーの正解値から構成されるタスクのペアリングによって、LLMのコード生成能力を評価する仕組みを図解していると考えられます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.SE）",
+      "field": "AI・データサイエンス",
+      "titleJa": "LLMベースの電力システムコード生成における知識境界の調査と需要主導型介入",
+      "catchTitle": "電力システム解析、LLMで効率化！オンプレミス環境でも高精度コード生成",
+      "hook": "大規模言語モデル（LLM）を用いた電力システム解析のコード自動生成において、オンプレミス環境での信頼性を大幅に向上させる新しい介入手法が開発されました。",
+      "quiz": {
+        "question": "電力システム解析のコード生成において、LLMの失敗の主な原因は何だと思いますか？",
+        "options": [
+          "API知識の境界エラー（関数名の誤用など）",
+          "電力システムに関する推論能力の限界",
+          "モデルのパラメータ数が少なすぎるため"
+        ],
+        "correctIndex": 0,
+        "explanation": "本研究では、LLMのコード生成における失敗は、電力システムに関する推論能力の限界よりも、API知識の境界エラー（関数名の幻覚、パラメータの誤用、結果テーブルの誤処理など）が主要な原因であると結論付けています。",
+        "difficulty": "medium"
+      },
+      "limitations": "本研究の限界として、ベンチマークが現在のところpandapowerライブラリのみを対象としている点が挙げられます。MATPOWERやOpenDSSなどの他のバックエンドへの拡張には、バックエンドに依存しないシナリオスキーマとAPIドキュメントパイプラインが必要とされています。また、ベンチマークはスカラー出力の実行可能タスクに限定されており、完全なレポート生成、複数出力テーブルの作成、対話型スケジューリング、グラフィカル分析といった、オペレーターのワークフローに関連するが異なる評価プロトコルを必要とするタスクは意図的に除外されています。さらに、介入手法には2B未満のモデルでは効果が限定的であるという最小モデル容量の閾値が存在します。",
+      "glossary": [
+        {
+          "term": "大規模言語モデル（LLM）",
+          "definition": "大量のテキストデータで学習された、人間のような文章を生成したり理解したりできるAIモデルのことです。様々なタスクに応用されています。",
+          "reading": "Large Language Models"
+        },
+        {
+          "term": "オンプレミス",
+          "definition": "情報システムを自社の施設内に設置・運用する形態のことです。データ機密性や規制遵守、再現性などの理由から採用されます。",
+          "reading": "on-premise"
+        },
+        {
+          "term": "API知識の境界エラー",
+          "definition": "LLMが特定のライブラリのAPI（アプリケーションプログラミングインターフェース）に関する知識が不足しているために発生するエラーのことです。関数名の誤認識やパラメータの誤用などが含まれます。",
+          "reading": "API-knowledge boundary errors"
+        },
+        {
+          "term": "幻覚",
+          "definition": "LLMが事実に基づかない、または学習データに存在しない情報を生成してしまう現象のことです。コード生成においては、存在しない関数名を生成するなどが該当します。",
+          "reading": "hallucinated"
+        },
+        {
+          "term": "pandapower",
+          "definition": "Pythonで書かれた電力システム解析用のオープンソースライブラリのことです。電力潮流計算や最適潮流計算など、様々な解析機能を提供します。"
+        },
+        {
+          "term": "PowerCodeBench",
+          "definition": "本研究で開発された、電力システムコード生成のための実行検証済みベンチマークジェネレーターのことです。自然言語クエリとpandapowerコード、数値的な正解を組み合わせています。"
+        },
+        {
+          "term": "ドキュメント駆動型プロービング",
+          "definition": "APIの仕様ドキュメントに基づいて、LLMのAPI知識がどこで破綻するかを診断する手順のことです。モデルごとのAPI知識プロファイルを測定するために使用されます。",
+          "reading": "documentation-driven probing"
+        },
+        {
+          "term": "ファインチューニング",
+          "definition": "事前に学習された大規模言語モデルを、特定のタスクやデータセットに合わせて追加学習させるプロセスのことです。モデルの性能を向上させるために行われます。",
+          "reading": "fine-tuning"
+        }
+      ],
+      "takeaway": {
+        "whatIsIt": "電力システム解析のコードをLLMに自動生成させる研究です。",
+        "whatFound": "LLMの失敗は推論力不足よりAPI知識の誤りが原因で、新しい手法で精度が32〜56%向上したそうです。",
+        "soWhat": "電力会社のオンプレミス環境でも、LLMが安全かつ高精度に使えるようになり、業務効率が上がりそうですね。"
+      },
+      "storyCards": {
+        "ask": "電力システム解析、LLMでコード生成できる？",
+        "method": "API知識の不足を診断し、必要な情報をプロンプトに注入",
+        "finding": "LLMのコード生成精度が最大56%改善！",
+        "meaning": "電力会社のオンプレミス環境でLLM活用が進む"
+      },
+      "audio": {
+        "src": "/audio/2605.31478v1.mp3",
+        "format": "mp3",
+        "duration": 35,
+        "voice": "Kore",
+        "generatedAt": "2026-06-01T23:27:14.806Z"
+      }
+    },
+    {
+      "id": "2605.31547v1",
+      "title": "The Dynamic-Probabilistic Consistency Gap in Chaotic Surrogate Modeling",
+      "authors": [
+        "Andre Herz",
+        "Matthijs Pals",
+        "Daniel Durstewitz",
+        "Georgia Koppe"
+      ],
+      "publishedAt": "2026-05-29T17:04:15Z",
+      "url": "https://arxiv.org/abs/2605.31547v1",
+      "pdfUrl": "https://arxiv.org/pdf/2605.31547v1.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "cs.LG",
+        "math.DS",
+        "stat.ML"
+      ],
+      "abstract": "Dynamical systems reconstruction (DSR) aims to learn surrogate models that capture the dynamics underlying time-series data. Reliably deploying these surrogates requires uncertainty estimates consistent with the learned dynamics. We expose a dynamic-probabilistic consistency (DPC) gap: the pursuit of finite-horizon probabilistic objectives can degrade dynamics or decouple predictive uncertainty from the local tangent dynamics it ought to reflect. We isolate three mechanisms behind this gap: core collapse, noise masking, and blind uncertainty. Specifically, we show that open-loop Gaussian rollout objectives can penalize Jacobian-generated covariance growth in chaotic systems, encouraging optimization shortcuts that weaken physical expansion or decouple uncertainty from it. To mitigate this gap, we propose KAFFEE (Kalman-Aware Framework For Ergodic Emulation), a differentiable extended Kalman filter-based training framework that evaluates likelihood on local predictive residuals (innovations) while transporting covariance through learned local Jacobians. On stochastic hyperchaotic Lorenz-96, KAFFEE reduces the identified failure modes, improves reconstruction of dynamical invariants relative to open-loop objectives, and maintains competitive predictive scores. We further show that the DPC gap appears when probabilistically adapting a DSR foundation model across 13 chaotic systems, where KAFFEE enables in-context Bayesian filtering while largely preserving zero-shot dynamics.",
+      "summary": {
+        "gist": "本研究は、時系列データから力学系を再構築する代理モデルにおいて、予測の不確実性推定が学習された力学系と矛盾する「動的確率的一貫性の乖離（DPCギャップ）」が存在することを明らかにしました。この乖離は、有限期間の確率的目標を追求することで、力学系の精度が低下したり、予測の不確実性が局所的な接線力学から乖離したりするメカニズムによって引き起こされることを示しています。",
+        "novelty": "従来の研究では、時系列データの予測精度が重視されてきましたが、本研究は、予測の不確実性が力学系の特性と整合しないというDPCギャップを初めて特定し、その背後にある3つのメカニズム（コア崩壊、ノイズマスキング、盲目的な不確実性）を形式化しました。これにより、科学的応用における代理モデルの信頼性向上に必要な、動的に根拠のある不確実性推定という研究の空白を埋めています。",
+        "method": "本研究では、動的システム再構築（DSR）モデルが時系列データから潜在的なシステムの生成的なニューラル代理モデルを学習する際に、DPCギャップが生じることを理論的に分析しました。特に、オープンループのガウス型ロールアウト目的関数が、カオス系におけるヤコビアンが生成する共分散の増大を抑制し、物理的膨張を弱める最適化の近道を引き起こすことを示しています。このギャップを緩和するため、微分可能な拡張カルマンフィルター（EKF）に基づく学習フレームワークであるKAFFEE（Kalman-Aware Framework For Ergodic Emulation）を提案し、局所的な予測残差（イノベーション）に対する尤度を評価しつつ、学習された局所ヤコビアンを通じて共分散を伝播させる手法を採用しています。",
+        "results": "確率的ハイパーカオス系Lorenz-96モデルを用いた評価では、KAFFEEがDPCギャップによって引き起こされる失敗モード（コア崩壊、ノイズマスキング、盲目的な不確実性）を低減し、オープンループ目的関数と比較して力学的不変量の再構築を改善することが示されました。さらに、KAFFEEは競争力のある予測スコアを維持しています。また、13種類のカオス系にわたるDSR基盤モデルの確率的適応においてDPCギャップが発生する際にも、KAFFEEがゼロショット力学をほぼ維持しつつ、コンテキスト内ベイズフィルタリングを可能にすることを示しました。",
+        "why": "DPCギャップが発生する主な理由は、有限期間の確率的目標が、カオス系の本質的な特性である予測不確実性の増大をペナルティとして捉えてしまうためです。具体的には、オープンループのガウス型ロールアウト目的関数は、予測共分散の体積増大を直接的にペナルティとして課します。カオス系では、不安定な方向への膨張によってこの体積が急速に増大するため、最適化アルゴリズムは、この体積圧力を軽減するために、学習されたヤコビアン積を縮小させる「コア崩壊」という近道をとってしまうのです。これにより、モデルの自律的な力学が損なわれ、予測の不確実性が局所的な力学から乖離してしまいます。",
+        "figures": "Figure 1は、確率的DSRにおけるDPCギャップの概念図です。左側では、有限期間のスコア改善が、コア崩壊、ノイズマスキング、盲目的な不確実性といった最適化の近道を引き起こし、力学再構築の品質を低下させる可能性を示しています。右側では、これらの失敗モードのメカニズム的分類が示されており、KAFFEEがフィルターされたイノベーションスコアリングとヤコビアンに基づく共分散伝播を組み合わせることで、これらの近道を緩和する様子が説明されています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.LG）",
+      "field": "AI・データサイエンス",
+      "titleJa": "カオス的代理モデリングにおける動的確率的一貫性の乖離：そのメカニズムとKAFFEEによる緩和",
+      "catchTitle": "カオス予測の不確実性、なぜズレる？",
+      "hook": "時系列データの予測モデルが、予測の不確実性を正しく反映できない「動的確率的一貫性の乖離（DPCギャップ）」という問題が明らかになりました。",
+      "quiz": {
+        "question": "カオス的な時系列データを予測するAIモデルが、予測の不確実性を過小評価してしまう主な原因は何でしょうか？",
+        "options": [
+          "予測の不確実性が、カオス系の本質的な膨張特性と矛盾するように最適化されてしまうためです。",
+          "モデルが学習データに過剰に適合し、未知のデータに対する不確実性を考慮しないためです。",
+          "予測モデルが単純すぎて、カオス系の複雑なパターンを捉えきれないためです。"
+        ],
+        "correctIndex": 0,
+        "explanation": "本研究では、有限期間の確率的目標を追求する際に、カオス系の本質的な膨張特性がペナルティとして扱われ、予測の不確実性が過小評価される「DPCギャップ」が生じることを明らかにしています。",
+        "difficulty": "medium"
+      },
+      "limitations": "本研究の範囲では、DPCギャップは有限期間のオープンループ・ロールアウト目的関数、高度に非ガウス的なカオス法則に対するガウス近似、および近似的な潜在変数周辺化といった実用的な状況から生じると述べられています。これは、モデルが正しく指定され、正確な観測データ尤度があれば、最尤法が真のデータ生成プロセスを目標とすることとは異なる、実用的な制約によるものであると認識されています。",
+      "glossary": [
+        {
+          "term": "動的システム再構築（DSR）",
+          "definition": "時系列データから、その背後にある力学的な法則やシステムを学習し、将来の挙動を予測できるモデルを構築する技術です。",
+          "reading": "Dynamical systems reconstruction"
+        },
+        {
+          "term": "代理モデル",
+          "definition": "複雑な物理モデルやシミュレーションの代わりに、より高速で近似的な予測を行うために用いられる簡略化されたモデルのことです。",
+          "reading": "surrogate model"
+        },
+        {
+          "term": "動的確率的一貫性の乖離（DPCギャップ）",
+          "definition": "力学系モデルにおいて、予測の不確実性推定が、学習されたシステムの実際の力学的な挙動と矛盾してしまう現象を指します。",
+          "reading": "Dynamic-Probabilistic Consistency gap"
+        },
+        {
+          "term": "オープンループ・ガウス型ロールアウト目的関数",
+          "definition": "モデルが自律的に生成した予測系列（ロールアウト）に対して、ガウス分布を仮定して尤度を評価する学習目標関数です。中間観測に条件付けずに予測を行います。",
+          "reading": "open-loop Gaussian rollout objectives"
+        },
+        {
+          "term": "ヤコビアン",
+          "definition": "多変数関数の各入力変数に対する偏微分を並べた行列で、力学系では状態の変化率や局所的な拡大・縮小の度合いを表します。",
+          "reading": "Jacobian"
+        },
+        {
+          "term": "拡張カルマンフィルター（EKF）",
+          "definition": "非線形システムの状態推定に用いられるアルゴリズムで、予測と観測を組み合わせることで、システムの現在の状態と不確実性を推定します。",
+          "reading": "Extended Kalman Filter"
+        },
+        {
+          "term": "イノベーション",
+          "definition": "カルマンフィルターにおいて、実際の観測値と予測された観測値との差を指します。この残差は、モデルの予測精度と不確実性の評価に用いられます。",
+          "reading": "innovations"
+        },
+        {
+          "term": "Lorenz-96",
+          "definition": "大気のカオス的な挙動をシミュレートするために用いられる、比較的単純な非線形力学系モデルの一つです。"
+        }
+      ],
+      "takeaway": {
+        "whatIsIt": "カオス的な動きをするシステムの将来を予測するAIモデルの研究です。",
+        "whatFound": "予測の不確実性が、システムの実際の動きとズレてしまう問題を発見しました。",
+        "soWhat": "このズレを修正する新しい学習方法で、より信頼性の高い予測ができるようになります。"
+      },
+      "storyCards": {
+        "ask": "カオスな未来予測、不確実性はどこまで信じる？",
+        "method": "拡張カルマンフィルターで予測のズレを評価。",
+        "finding": "予測の不確実性が、システムの動きと矛盾する「DPCギャップ」を発見。",
+        "meaning": "より信頼できる予測で、気象や金融のリスク管理に貢献。"
+      },
+      "audio": {
+        "src": "/audio/2605.31547v1.mp3",
+        "format": "mp3",
+        "duration": 28,
+        "voice": "Kore",
+        "generatedAt": "2026-06-01T23:27:44.374Z"
+      },
+      "keyFigure": {
+        "imagePath": "/figures/2605.31547v1_results.png",
+        "page": 39,
+        "caption": "Figure 8: Van der Pol covariance propagation map. (top row) One-step transported reference- Van der Pol covariance propagation map. (top row) One-step transported reference-",
+        "label": "Figure 8: Van der Pol covariance propagation map. (top row) One-step transported reference-",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-01T23:28:56.750Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2605.31547v1_results.png",
+          "page": 39,
+          "caption": "Figure 8: Van der Pol covariance propagation map. (top row) One-step transported reference- Van der Pol covariance propagation map. (top row) One-step transported reference-",
+          "label": "Figure 8: Van der Pol covariance propagation map. (top row) One-step transported reference-",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-01T23:28:56.750Z"
+        }
+      ]
+    },
+    {
+      "id": "2605.31576v1",
+      "title": "Joint Multi-Camera LiDAR Extrinsic Calibration via Learned Pairwise Initialization and Geometric Refinement",
+      "authors": [
+        "Aziz Al-Najjar",
+        "Marzieh Amini",
+        "James R. Green",
+        "Felix Kwamena"
+      ],
+      "publishedAt": "2026-05-29T17:45:26Z",
+      "url": "https://arxiv.org/abs/2605.31576v1",
+      "pdfUrl": "https://arxiv.org/pdf/2605.31576v1.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "cs.CV"
+      ],
+      "abstract": "Most learning-based camera-LiDAR calibration methods treat each camera-LiDAR pair independently, ignoring the rigid geometric coupling in multi-camera platforms. As a result, per-camera estimates may be individually accurate yet inconsistent at the system level. We present a two-stage framework for joint multi-camera LiDAR extrinsic calibration that combines learned pairwise matching with geometric refinement. First, CMRNext is applied independently to each camera to produce initial extrinsic estimates and dense 2D-3D correspondences. These predictions are then jointly refined through a multi-frame bundle adjustment with reprojection, per-camera prior, and relative-pose prior terms. This approach converts pairwise predictions into a globally consistent multi-camera calibration. Experiments on KITTI (in-domain for CMRNext) and Walkley (out-of-domain) datasets show improved per-camera accuracy and inter-camera consistency. On KITTI, the method achieves 0.89 cm translation error and 0.038 rotation error. On Walkley, it reduces translation error from 108.6 cm to 3.1 cm, highlighting the benefit of explicit multi-camera coupling when single-camera predictions are less reliable.",
+      "summary": {
+        "gist": "本研究は、複数のカメラとLiDARセンサーを搭載したプラットフォームにおいて、個々のカメラの外部キャリブレーションの精度と、システム全体でのカメラ間の幾何学的な一貫性を同時に向上させる二段階フレームワークを提案しています。これにより、従来の単一カメラごとのキャリブレーションでは見過ごされがちだった、カメラ間の剛体的な結合を考慮した高精度な校正が可能になることを明らかにしました。",
+        "novelty": "従来の研究が各カメラとLiDARのペアを独立して扱うことが多かったのに対し、本研究はマルチカメラプラットフォームにおけるカメラ間の剛体的な幾何学的結合を明示的に考慮し、システムレベルでの一貫性を確保する点で新規性があります。学習ベースの単一カメラ予測を初期値として活用しつつ、多視点バンドル調整と相対ポーズ事前分布を組み合わせることで、個々のカメラ精度とシステム全体の整合性を両立させる研究の空白を埋めています。",
+        "method": "本研究では、まずStage 1として、学習ベースの単一カメラLiDARキャリブレーション手法であるCMRNextを各カメラに独立して適用し、初期の外部キャリブレーション推定値と密な2D-3D対応点を生成します。次にStage 2として、これらの初期推定値を、リプロジェクション誤差、各カメラの事前分布、およびカメラ間の相対ポーズ事前分布を含む多視点バンドル調整を用いて共同で洗練します。評価は、CMRNextの学習ドメイン内データセットであるKITTIと、ドメイン外データセットであるWalkleyを用いて行われました。",
+        "results": "提案手法は、KITTIデータセットにおいて0.89 cmの並進誤差と0.038度の回転誤差を達成し、Stage 1の初期推定値（並進誤差2.63 cm、回転誤差0.187度）と比較して並進誤差で約3倍、回転誤差で約5倍の改善を示しました。特に、単一カメラ予測の信頼性が低いWalkleyデータセットでは、並進誤差を108.6 cmから3.1 cmへと大幅に削減し、マルチカメラ結合の恩恵が大きいことを示しています。これらの結果は、システムレベルの一貫性を犠牲にすることなく、各カメラの精度が向上することを示唆しています。",
+        "why": "この手法が精度と一貫性を向上させるのは、Stage 1で得られた個々のカメラの初期推定値が、Stage 2で複数のカメラの情報を統合して共同で最適化されるためです。具体的には、リプロジェクション誤差の最小化により各LiDAR点が画像上の対応位置に正確に位置合わせされ、さらに「各カメラの事前分布」と「相対ポーズ事前分布」という二つの制約が導入されます。これにより、個々のカメラの推定値が初期値から大きく逸脱するのを防ぎつつ、カメラ間の幾何学的な関係が剛体的に保たれるよう調整されるため、システム全体として矛盾のない高精度なキャリブレーションが実現するのです。",
+        "figures": "アブストラクトに図表の記述なし"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.CV）",
+      "field": "AI・データサイエンス",
+      "titleJa": "学習されたペアワイズ初期化と幾何学的洗練によるマルチカメラLiDAR外部キャリブレーション",
+      "catchTitle": "複数カメラのLiDAR校正、精度と一貫性を両立",
+      "hook": "複数のカメラとLiDARセンサーを組み合わせたシステムで、個々のカメラの校正精度とシステム全体の一貫性を同時に高める新しい手法が開発されました。",
+      "quiz": {
+        "question": "複数のカメラとLiDARセンサーの校正において、本研究が最も重視し、改善した点は何でしょうか？",
+        "options": [
+          "個々のカメラの校正精度と、カメラ間の幾何学的整合性の両立です。",
+          "校正プロセスを完全に自動化し、手動での設定を不要にすることです。",
+          "LiDARセンサーの解像度を向上させ、より詳細な3D点群を取得することです。"
+        ],
+        "correctIndex": 0,
+        "explanation": "本研究は、個々のカメラの外部キャリブレーションの精度と、システム全体でのカメラ間の幾何学的な一貫性を同時に向上させることを目的としています。",
+        "difficulty": "medium"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "外部キャリブレーション",
+          "definition": "カメラやLiDARなどのセンサーが、車両やロボットなどのシステム内のどこに、どのような向きで取り付けられているかを正確に測定する作業です。これにより、異なるセンサーから得られた情報を同じ座標系で統合できるようになります。",
+          "reading": "Extrinsic Calibration"
+        },
+        {
+          "term": "LiDAR",
+          "definition": "レーザー光を照射し、その反射時間から対象物までの距離を計測するセンサーです。周囲の環境を3D点群データとして高精度に把握できます。",
+          "reading": "Light Detection and Ranging"
+        },
+        {
+          "term": "CMRNext",
+          "definition": "学習ベースの単一カメラLiDARキャリブレーション手法の一つです。LiDARの深度マップとカメラ画像間の密なオプティカルフローを予測し、2D-3D対応点から外部キャリブレーションを推定します。"
+        },
+        {
+          "term": "多視点バンドル調整",
+          "definition": "複数の視点（フレーム）から得られたセンサーデータを用いて、カメラの姿勢やシーンの3D構造、センサー間の位置関係などを同時に最適化する手法です。リプロジェクション誤差を最小化することで、全体的な整合性を高めます。",
+          "reading": "Multi-frame Bundle Adjustment (BA)"
+        },
+        {
+          "term": "リプロジェクション誤差",
+          "definition": "3D空間の点が、推定されたセンサーの外部・内部パラメータを用いて画像平面に投影された位置と、実際に画像上で観測された位置との間のずれ（距離）のことです。この誤差を最小化することがキャリブレーションの目的の一つです。",
+          "reading": "Reprojection Error"
+        },
+        {
+          "term": "事前分布",
+          "definition": "最適化や推定を行う際に、未知のパラメータについて事前に持っている情報や仮定を確率的に表現したものです。本研究では、各カメラの初期推定値やカメラ間の相対ポーズに関する事前情報が利用されます。",
+          "reading": "Prior"
+        },
+        {
+          "term": "剛体的な結合",
+          "definition": "複数のカメラが単一のプラットフォームに固定されているため、カメラ間の相対的な位置や向きが時間とともに変化しない、固定された幾何学的関係にあることを指します。この関係を考慮することで、システム全体の一貫性が保たれます。",
+          "reading": "Rigid Geometric Coupling"
+        },
+        {
+          "term": "KITTIデータセット",
+          "definition": "自動運転研究で広く利用されるベンチマークデータセットの一つです。車両に搭載されたカメラ、LiDAR、IMUなどのセンサーデータが含まれており、物体検出や追跡、キャリブレーションなどの評価に用いられます。"
+        }
+      ],
+      "takeaway": {
+        "whatIsIt": "複数のカメラとLiDARセンサーを搭載した自動運転車などのシステムで、センサーの「目」を正確に合わせる技術の研究です。",
+        "whatFound": "個々のカメラの校正を別々に行うだけでなく、カメラ同士のつながりを考慮して全体を調整すると、精度が最大5倍も向上するそうです。",
+        "soWhat": "これにより、自動運転の物体認識や地図作成がより正確になり、安全性が高まることが期待されますね。"
+      },
+      "storyCards": {
+        "ask": "自動運転の目、LiDARとカメラの連携は完璧？",
+        "method": "各カメラの初期予測を、複数カメラの幾何学的制約で共同調整。",
+        "finding": "カメラ間の結合を考慮すると、校正精度が最大5倍も向上。",
+        "meaning": "より正確なセンサー融合で、自動運転の安全性向上へ。"
+      },
+      "audio": {
+        "src": "/audio/2605.31576v1.mp3",
+        "format": "mp3",
+        "duration": 38,
+        "voice": "Kore",
+        "generatedAt": "2026-06-01T23:28:16.419Z"
+      },
+      "keyFigure": {
+        "imagePath": "/figures/2605.31576v1_results.png",
+        "page": 8,
+        "caption": "WalkleyとKITTIデータセットにおけるLiDAR投影のオーバーレイを示し、キャリブレーション結果を比較しています。",
+        "label": "Figure 2. LiDAR projection overlays from Walkley and KITTI. Columns show the perturbed initialization used as input to C",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-01T23:29:00.516Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2605.31576v1_results.png",
+          "page": 8,
+          "caption": "WalkleyとKITTIデータセットにおけるLiDAR投影のオーバーレイを示し、キャリブレーション結果を比較しています。",
+          "label": "Figure 2. LiDAR projection overlays from Walkley and KITTI. Columns show the perturbed initialization used as input to C",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-01T23:29:00.516Z"
+        },
+        {
+          "imagePath": "/figures/2605.31576v1_why.png",
+          "page": 3,
+          "caption": "提案するマルチカメラLiDARキャリブレーションフレームワークの全体像を示しています。",
+          "label": "Figure 1. Overview of the proposed joint multi-camera LiDAR calibration framework",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-01T23:29:00.517Z"
+        }
+      ]
+    },
+    {
+      "id": "2605.31594v1",
+      "title": "A Tight Theory of Error Feedback Algorithms in Distributed Optimization",
+      "authors": [
+        "Daniel Berg Thomsen",
+        "Adrien Taylor",
+        "Aymeric Dieuleveut"
+      ],
+      "publishedAt": "2026-05-29T17:57:03Z",
+      "url": "https://arxiv.org/abs/2605.31594v1",
+      "pdfUrl": "https://arxiv.org/pdf/2605.31594v1.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "cs.LG",
+        "math.OC"
+      ],
+      "abstract": "Communication costs are a major bottleneck in distributed learning and first-order optimization. A common approach to alleviate this issue is to compress the gradient information exchanged between agents. However, such compression typically degrades the convergence guarantees of gradient-based methods. Error feedback mechanisms provide a simple and computationally cheap remedy for this issue, but numerous variants have been proposed, and their relative performance remains poorly understood. This paper provides tight convergence analyses for two of the main error-feedback algorithms from the literature, the classic Error Feedback method (EF) and Error Feedback 21 (EF21), by identifying optimal step-size choices and constructing optimal Lyapunov functions tailored to each method. The results hold independently of the number of agents and recover the known best guarantees possible in the single-agent regime.",
+      "summary": {
+        "gist": "本研究は、分散学習における通信コスト削減手法である誤差フィードバック（EF）とEF21の収束特性を、最適なステップサイズとLyapunov関数を用いて厳密に分析したものです。これにより、これらのアルゴリズムが多エージェント環境でどのように機能するかを詳細に解明しています。",
+        "novelty": "従来の研究では、誤差フィードバックアルゴリズムの収束保証が緩やかであったり、単一エージェント設定に限定されていました。本論文は、多エージェント設定（n > 1）において、EFとEF21の厳密な収束解析を提供し、特にエージェント間の異質性が収束に与える影響を初めて体系的に明らかにしています。これにより、既存の理論的ギャップを埋め、アルゴリズム間の有意義な比較を可能にしています。",
+        "method": "本研究では、分散学習の有限和問題（min f(x) := (1/n) Σ f^(i)(x)）を対象とし、各エージェントが局所目的関数f^(i)の情報にアクセスするスター型トポロジーを想定しています。分析手法として、Lyapunov関数と最適なステップサイズの特定を通じて、EFとEF21の厳密な収束率を導出しています。特に、契約型圧縮（Contractive compressor）と強凸性・滑らかさの仮定の下で、統計的異質性や規則性パラメータの異質性といったエージェント間の異質性を考慮した解析を行っています。一部の結果は、コンピュータ代数システム（CAS）やパフォーマンス推定問題（PEP）の数値解法を用いた証明書によって検証されています。",
+        "results": "分析の結果、CGDと古典的なEFは、統計的異質性のある多エージェント設定では一般に収束せず、2ステップのサイクルを示すことが二次関数の反例で示されました。一方、EF21は契約型圧縮と統計的異質性の下で、エージェント数に依存しない最適な収束率を達成することが示されています。また、統計的同質性の下では、古典的なEFの最適なステップサイズと収束率がEF21と一致し、単一エージェントの結果が任意のnで再現されることが明らかになりました。さらに、規則性パラメータが異なる場合でも、EF21と平均化パラメータを用いたEFはシャープな線形収束保証を持つことが示されています。",
+        "why": "CGDや古典的なEFが統計的異質性のある多エージェント設定で収束しないのは、各エージェントの局所目的関数が異なるため、圧縮された勾配情報が全体として最適解に向かわず、誤差が蓄積・循環してしまうためです。EF21が異質性下でも収束するのは、各エージェントが局所勾配の推定器を保持し、圧縮された差分を通信することで、過去の圧縮誤差を効果的に補正し、より安定した更新を行うためと考えられます。これにより、全体的な目的関数の最適解周辺での安定性が向上すると考えられます。",
+        "figures": "アブストラクトには図表の記述なし"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.LG）",
+      "field": "AI・データサイエンス",
+      "titleJa": "分散最適化における誤差フィードバックアルゴリズムの厳密な理論",
+      "catchTitle": "分散学習の通信ボトルネック解消へ",
+      "hook": "分散学習で通信コストを削減する「誤差フィードバック」の性能を、厳密な理論で明らかにしています。",
+      "quiz": {
+        "question": "分散学習において、通信コストを削減するために勾配情報を圧縮すると、収束にどのような影響があるでしょうか？",
+        "options": [
+          "常に収束が遅くなるが、誤差フィードバックで改善できる。",
+          "収束が保証されなくなり、誤差フィードバックを使っても改善できない。",
+          "収束速度は変わらないが、計算コストが増加する。"
+        ],
+        "correctIndex": 0,
+        "explanation": "勾配情報の圧縮は一般に収束保証を低下させますが、誤差フィードバック機構はこれを補正し、収束を改善する効果があります。",
+        "difficulty": "medium"
+      },
+      "limitations": "本研究の解析は、契約型圧縮と強凸性・滑らかさの仮定の下で行われており、より一般的な圧縮オペレーターや目的関数に対する保証は今後の課題です。また、一部の結果は形式的な証明ではなく、広範な数値的証拠に基づく経験的法則として提示されています。これらの結果は、特定のLyapunov関数クラス内での「タイト」な収束率を特定するものであり、あらゆる圧縮分散手法における通信複雑性の下限を示すものではありません。",
+      "glossary": [
+        {
+          "term": "分散最適化",
+          "definition": "複数のコンピュータ（エージェント）が協力して、全体として最適な解を見つける計算手法です。大規模なデータやモデルの学習によく用いられます。"
+        },
+        {
+          "term": "誤差フィードバック（EF）",
+          "definition": "分散学習において、勾配情報を圧縮して通信する際に生じる誤差を、次の通信で補正するメカニズムです。通信コストを削減しつつ、収束性能の低下を抑制します。",
+          "reading": "Error Feedback"
+        },
+        {
+          "term": "EF21",
+          "definition": "誤差フィードバックの一種で、各エージェントが局所勾配の推定器を保持し、圧縮された差分を通信することで、より安定した更新を行うアルゴリズムです。エージェント間の異質性に対するロバスト性が特徴です。",
+          "reading": "Error Feedback 21"
+        },
+        {
+          "term": "Lyapunov関数",
+          "definition": "システムの安定性を評価するために用いられる関数です。この関数の値が時間とともに減少する（またはある値に収束する）ことを示すことで、システムの収束や安定性を証明します。"
+        },
+        {
+          "term": "契約型圧縮",
+          "definition": "圧縮オペレーターの一種で、圧縮によってベクトルのノルムが一定の割合で縮小される性質を持つものです。圧縮による情報の損失を数学的にモデル化する際に用いられます。",
+          "reading": "Contractive compressor"
+        },
+        {
+          "term": "統計的異質性",
+          "definition": "分散学習において、各エージェントが持つ局所目的関数の最適解が互いに異なる状態を指します。データ分布の偏りなどによって生じ、収束を困難にする要因となります。"
+        },
+        {
+          "term": "パフォーマンス推定問題（PEP）",
+          "definition": "最適化アルゴリズムの最悪ケースの収束率を、数値的に厳密に計算するための手法です。特定のアルゴリズムと問題設定に対して、最も遅い収束シナリオを特定します。",
+          "reading": "Performance Estimation Problems"
+        },
+        {
+          "term": "コンピュータ代数システム（CAS）",
+          "definition": "数式処理をコンピュータ上で行うソフトウェアです。代数的な恒等式の検証や複雑な数式の簡略化などに用いられ、数学的証明の補助として活用されます。",
+          "reading": "Computer Algebra System"
+        }
+      ],
+      "takeaway": {
+        "whatIsIt": "大規模なAIモデルを効率的に学習させる分散最適化の研究です。",
+        "whatFound": "通信を圧縮する技術は収束を遅らせるが、EF21という手法なら多人数でも安定して速く学習できることが分かりました。",
+        "soWhat": "AIモデルの学習時間を大幅に短縮し、より複雑なモデルの開発を加速させる可能性を秘めています。"
+      },
+      "storyCards": {
+        "ask": "AI学習、通信コストがボトルネック？",
+        "method": "誤差フィードバックの収束を厳密に解析",
+        "finding": "EF21は多人数でも安定収束、EFは異質性でサイクル",
+        "meaning": "大規模分散学習の効率化へ、最適なアルゴリズム選択の指針に"
+      },
+      "audio": {
+        "src": "/audio/2605.31594v1.mp3",
+        "format": "mp3",
+        "duration": 28,
+        "voice": "Kore",
+        "generatedAt": "2026-06-01T23:28:47.256Z"
+      }
+    }
+  ]
+}

@@ -1,0 +1,640 @@
+{
+  "date": "2026-06-03",
+  "papers": [
+    {
+      "id": "2606.02458v1",
+      "title": "Beyond One-shot: AI Agents for Learning in Field Experiments",
+      "authors": [
+        "Junjie Luo",
+        "Ritu Agarwal",
+        "Gordon Gao"
+      ],
+      "publishedAt": "2026-06-01T16:30:42Z",
+      "url": "https://arxiv.org/abs/2606.02458v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.02458v1.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "cs.AI"
+      ],
+      "abstract": "Organizations routinely run experiments for A/B testing, yet the data generated from one experiment is underutilized to inform subsequent intervention design. Significant barriers exist to extracting actionable knowledge from prior experimental data to inform new interventions. We study whether tool-augmented agentic AI can automatically learn from experimental data to generate new interventions in subsequent experiments. Through two-stage field experiments in healthcare prescription messaging (693,139 patient visits), we compare a Human + Chatbot method (Stage 1: behavioral experts with conversational AI co-designing 13 message variants, 444,691 patient visits) against a Tool-Augmented Agentic AI method (Stage 2: AI autonomously extracting principles from Stage 1 data to generate 17 new variants, 248,448 patient visits). The Agentic AI method, equipped with analytical tools, structured Data-Information-Knowledge-Wisdom (DIKW) reasoning agents, and transparent evidence chains, produces superior interventions: the best AI-generated message achieved a 69.8% CTR (+6.5 percentage points over baseline). Critically, our results suggest that the value comes from domain-specific experimental data, not from general reasoning ability: frontier LLMs operating without experimental data failed to predict which interventions would succeed. The field experiments also revealed that general-purpose behavioral theories used for intervention design do not extend uniformly to specific healthcare contexts, motivating an agentic AI approach to theory audits at field-experiment scale. Our research shows that tool-augmented AI can learn from experimental data and generate improved domain-relevant interventions, transforming behavioral experimentation from one-shot evaluation into a scalable system for cumulative design learning.",
+      "summary": {
+        "gist": "本研究は、ツール拡張型エージェントAIが過去の実験データから自動的に学習し、新たな介入策を生成できるかを検証しました。医療処方メッセージングにおける2段階のフィールド実験を通じて、AIが生成したメッセージが人間の専門家とチャットボットが共同設計したメッセージよりも優れた成果を出すことを明らかにしています。",
+        "novelty": "従来の研究では、行動実験のデータが「ワンショット」の評価に留まり、次なる介入策の設計に再利用可能な知識として蓄積されないという課題がありました。本研究は、ツール拡張型エージェントAIとDIKW推論を用いることで、この長年のギャップを埋め、実験結果を再利用可能な設計原則へと変換し、累積的な学習を可能にする新しいパラダイムを提示した点で新規性があります。",
+        "method": "本研究は、医療処方メッセージングを対象に、合計693,139回の患者訪問を含む2段階のフィールド実験を実施しました。ステージ1では、行動経済学の専門家がGPT-4と共同で13種類のメッセージバリアントを設計し、444,691回の患者訪問でテストしました。ステージ2では、ステージ1のデータから行動原則を抽出し、17種類の新しいメッセージバリアントを生成するために、コード実行、統計分析、および構造化されたDIKW推論を用いるツール拡張型エージェントAIを設計・展開し、248,448回の患者訪問で無作為化比較試験を行いました。",
+        "results": "分析の結果、ツール拡張型エージェントAIが生成した介入策は、人間の専門家とチャットボットが共同設計した介入策よりも優れていることが示されました。具体的には、AIが生成した最良のメッセージは69.8%のクリック率（CTR）を達成し、ステージ2のベースラインと比較して6.5パーセンテージポイントの向上（相対的に10.3%の改善）を示しました。重要なことに、この価値はAIの一般的な推論能力ではなく、ドメイン固有の実験データから得られることが示唆されています。実験データなしで運用された最先端のLLMは、どの介入策が成功するかを予測できませんでした。また、効率性フレームと専門的権威が医療現場で信頼できる原則として浮上しましたが、社会的証明と互恵性は効果がないことが判明し、一般的な行動理論が特定の医療文脈に一様に適用されないことを明らかにしました。",
+        "why": "AIが生成したメッセージが優れた成果を出したのは、ツール拡張型エージェントAIが、単なる一般的な推論能力に依存するのではなく、ドメイン固有の実験データから体系的に学習するインフラを備えているためです。このAIシステムは、コード実行による統計分析、DIKW推論によるデータから知識への構造化された進展、そして各推論レベルを具体的な実験観察に結びつける明確な証拠連鎖を通じて、行動原則を抽出し、新しい介入策を生成します。これにより、過去の実験から得られた「なぜうまくいったのか」「誰にうまくいったのか」といった具体的な知見が、次なる設計サイクルに再利用されるため、累積的な学習が可能となります。",
+        "figures": "アブストラクトに図表の記述なし"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.AI）",
+      "field": "AI・データサイエンス",
+      "titleJa": "ワンショットを超えて：フィールド実験における学習のためのAIエージェント",
+      "catchTitle": "AIが実験データから学習！医療メッセージ改善の秘訣",
+      "hook": "組織が実施するA/Bテストのデータは、次なる介入策の設計に十分に活用されていない現状があります。",
+      "quiz": {
+        "question": "本研究で、ツール拡張型エージェントAIが医療メッセージングの改善に成功した主な要因は何だと思いますか？",
+        "options": [
+          "ドメイン固有の実験データから体系的に学習する能力",
+          "一般的な推論能力に優れた最先端の大規模言語モデル（LLM）の利用",
+          "人間の専門家による直感と経験に基づいたメッセージ設計"
+        ],
+        "correctIndex": 0,
+        "explanation": "正解は「ドメイン固有の実験データから体系的に学習する能力」です。本研究では、AIの価値が一般的な推論能力ではなく、実験データから知識を抽出する学習インフラにあることが示されています。",
+        "difficulty": "medium"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "ツール拡張型エージェントAI",
+          "definition": "大規模言語モデル（LLM）に、コード実行や統計分析ツールなどの外部ツールを使用する能力と、自律的に推論・行動するエージェント機能を組み合わせたAIシステムのことです。これにより、AIは単なるテキスト生成を超えて、データ分析や知識抽出といった複雑なタスクを実行できます。",
+          "reading": "Tool-Augmented Agentic AI"
+        },
+        {
+          "term": "DIKW推論",
+          "definition": "データ（Data）、情報（Information）、知識（Knowledge）、知恵（Wisdom）という階層を通じて、生のデータからより高度な知見を抽出する構造化された推論プロセスです。本研究では、実験データを統計パターン（情報）として処理し、行動原則（知識）として解釈し、最終的に新しい介入策の設計（知恵）に応用する際に用いられています。",
+          "reading": "Data-Information-Knowledge-Wisdom reasoning"
+        },
+        {
+          "term": "フィールド実験",
+          "definition": "現実世界の自然な環境下で、介入の効果を検証するために行われる実験のことです。実験室での実験とは異なり、参加者が日常的な行動をする中で、特定の介入がどのような影響を与えるかを測定します。",
+          "reading": "Field Experiments"
+        },
+        {
+          "term": "クリック率（CTR）",
+          "definition": "表示された広告やメッセージのうち、実際にクリックされた割合を示す指標です。ウェブ広告やメールマーケティングなどで、メッセージの効果を測るためによく用いられます。",
+          "reading": "Click-Through Rate"
+        },
+        {
+          "term": "LLM",
+          "definition": "大量のテキストデータで学習された、人間のような言語を理解し生成できる大規模なAIモデルのことです。文章作成、要約、翻訳など様々な言語タスクに利用されますが、本研究では実験データなしでは効果的な介入策を予測できないことが示されました。",
+          "reading": "Large Language Models"
+        },
+        {
+          "term": "行動原則",
+          "definition": "人々の行動を説明し、予測するための一般的な規則や法則のことです。本研究では、実験データから特定の文脈において効果的なメッセージ設計につながる行動のパターンやメカニズムを指します。",
+          "reading": "Behavioral Principles"
+        },
+        {
+          "term": "無作為化比較試験",
+          "definition": "研究対象者を無作為に複数のグループ（介入群と対照群など）に分け、介入の効果を比較する研究デザインです。これにより、介入以外の要因が結果に与える影響を最小限に抑え、因果関係をより正確に評価できます。",
+          "reading": "Randomized Controlled Trial (RCT)"
+        }
+      ],
+      "takeaway": {
+        "whatIsIt": "医療現場でのメッセージング効果を上げるため、AIが過去の実験データから学習する研究です。",
+        "whatFound": "AIが生成したメッセージは、人間の専門家が作ったものよりクリック率が6.5%も高かったそうです。",
+        "soWhat": "これからはAIが実験結果を分析し、より効果的な施策を自動で生み出す時代になるかもしれませんね。"
+      },
+      "storyCards": {
+        "ask": "医療メッセージ、AIが作ると効果は上がる？",
+        "method": "2段階のフィールド実験で、AIと人間を比較。",
+        "finding": "AI生成メッセージ、クリック率69.8%で人間を上回る。",
+        "meaning": "AIがデータから学び、より良い介入策を生む未来へ。"
+      },
+      "audio": {
+        "src": "/audio/2606.02458v1.mp3",
+        "format": "mp3",
+        "duration": 30,
+        "voice": "Kore",
+        "generatedAt": "2026-06-02T23:44:59.774Z"
+      },
+      "keyFigure": {
+        "imagePath": "/figures/2606.02458v1_results.png",
+        "page": 3,
+        "caption": "Figure 1 Conceptual Overview of Two-Stage Learning Architecture. Stage 1 tests multiple intervention",
+        "label": "Figure 1",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-02T23:47:06.120Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.02458v1_results.png",
+          "page": 3,
+          "caption": "Figure 1 Conceptual Overview of Two-Stage Learning Architecture. Stage 1 tests multiple intervention",
+          "label": "Figure 1",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-02T23:47:06.120Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.02424v1",
+      "title": "GC-MoE: Genomics-Guided Cell-Type-Specific Mixture of Experts for Histology-Based Single-Cell Spatial Transcriptomics",
+      "authors": [
+        "Kaito Shiku",
+        "Ahtisham Fazeel Abbasi",
+        "Ryoma Bise",
+        "Yuichiro Iwashita",
+        "Kazuya Nishimura",
+        "Andreas Dengel",
+        "Muhammad Nabeel Asim"
+      ],
+      "publishedAt": "2026-06-01T16:01:44Z",
+      "url": "https://arxiv.org/abs/2606.02424v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.02424v1.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "abstract": "Histology-based single-cell spatial transcriptomics (ST) estimation aims to predict gene expression for individual cells from histopathological images and cell locations, reducing the need for costly single-cell ST measurements. Unlike existing histology-to-ST methods that mainly predict spot-level profiles for local regions containing multiple cells, this task requires modeling cell-to-cell expression variability, which is strongly structured by cell type. We propose Genomics-Guided Cell-Type-Specific Mixture-of-Experts (GC-MoE), which estimates cell-type probabilities with a routing network and softly combines cell-type-specific experts for gene expression prediction. To further encode cell-type-dependent gene programs, we introduce the Cell-Type-Specific Co-Expression-Aware Predictor (CAP), together with a lightweight Cell-to-Cell Interaction Attention (C2CA) module for neighboring-cell context. Experiments and ablations on public single-cell ST datasets show consistent improvements over existing single-cell and adapted spot-level baselines.",
+      "summary": {
+        "gist": "本研究は、組織病理画像と細胞位置から個々の細胞の遺伝子発現を推定する「組織画像に基づく単一細胞空間トランスクリプトーム（ST）推定」において、細胞タイプ特異的な遺伝子発現の多様性をモデル化するGC-MoE（Genomics-Guided Cell-Type-Specific Mixture-of-Experts）を提案しています。このモデルは、細胞タイプ確率を推定するルーティングネットワークと、細胞タイプに特化したエキスパートモデルを組み合わせることで、既存手法よりも高い精度で遺伝子発現を予測できることを示しています。",
+        "novelty": "従来の組織画像からSTを推定する手法が主に複数細胞を含む局所領域（スポットレベル）のプロファイルを予測していたのに対し、本研究は個々の細胞レベルでの遺伝子発現変動、特に細胞タイプによって強く構造化された変動をモデル化する点に新規性があります。また、細胞タイプ特異的な遺伝子共発現パターンを外部データから取り込むCAPモジュールと、隣接細胞のコンテキストを考慮するC2CAモジュールを導入し、細胞タイプごとの多様な遺伝子プログラムを捉えることで、既存の単一細胞およびスポットレベルのベースライン手法を上回る性能を達成しています。",
+        "method": "本研究では、組織病理画像と検出された細胞位置から、各細胞の遺伝子発現プロファイルを予測する手法を開発しています。提案モデルGC-MoEは、細胞タイプ確率を推定するルーティングネットワークと、各細胞タイプに特化したエキスパートモデルを組み合わせる混合エキスパートフレームワークを採用しています。さらに、外部の単一細胞RNAシーケンス（scRNA-seq）データから細胞タイプ特異的な遺伝子共発現グラフを構築し、各エキスパートに組み込むCell-Type-Specific Co-Expression-Aware Predictor (CAP)と、隣接細胞の特徴を局所的な文脈情報として利用するCell-to-Cell Interaction Attention (C2CA)モジュールを導入しています。評価は複数の公開単一細胞STデータセットを用いて行われました。",
+        "results": "GC-MoEは、複数の公開単一細胞STデータセットにおいて、既存の単一細胞ST予測手法および細胞レベル入力に適応させたスポットレベルST予測手法と比較して、一貫して最高の性能を達成しました。追加分析により、GC-MoEが細胞タイプ特異的な発現分布をより良く再現し、共発現関係に沿った遺伝子予測を学習し、グラウンドトゥルース測定値により近い空間発現マップを生成することが示されています。これにより、細胞タイプによって構造化された発現変動を明示的にモデル化することの利点が実証されました。",
+        "why": "GC-MoEが優れた結果を示すのは、単一のモデルで多様な細胞タイプの発現パターンを捉えることが困難であるという課題に対し、細胞タイプごとに特化したエキスパートモデルを動的に割り当てる混合エキスパートフレームワークを採用しているためです。これにより、各エキスパートが特定の細胞タイプの発現プログラムに特化し、細胞タイプ間の多様な発現モードをより正確に表現できます。さらに、外部のscRNA-seqデータから得られる細胞タイプ特異的な遺伝子共発現情報をCAPモジュールで活用し、C2CAモジュールで隣接細胞の文脈を取り入れることで、予測の精度と生物学的妥当性が向上していると考えられます。",
+        "figures": "Figure 1は、単一細胞ST推定の難しさ、ゲノム知識の重要性、および提案手法の動機を示しています。(a)は、単一モデルが多様な遺伝子発現分布を捉えきれないことを示し、(b)は細胞タイプ間で遺伝子発現パターンが異なるというゲノム知識を提示しています。(c)は、細胞タイプを考慮した混合エキスパートフレームワークが、ルーティングネットワークと細胞タイプ特異的エキスパートを通じて、多様な発現パターンを捉えるという提案手法の概念図です。Figure 2は、提案するGC-MoEの全体像を示しており、細胞タイプ特異的エキスパートモデルとルーティングモデル、さらにCAPモジュールとC2CAモジュールの連携を詳細に図解しています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.CV）",
+      "field": "AI・データサイエンス",
+      "titleJa": "GC-MoE: 組織画像に基づく単一細胞空間トランスクリプトーム推定のためのゲノミクス誘導型細胞タイプ特異的混合エキスパートモデル",
+      "catchTitle": "細胞タイプ特化AIで遺伝子発現を予測",
+      "hook": "組織画像から個々の細胞の遺伝子発現を予測する新しいAIモデルが、細胞タイプごとの多様な発現パターンを捉え、予測精度を向上させます。",
+      "quiz": {
+        "question": "組織画像から個々の細胞の遺伝子発現を予測する際、最も効果的なアプローチは何だと考えられますか？",
+        "options": [
+          "細胞タイプごとに特化した複数の予測モデルを組み合わせる",
+          "単一の汎用モデルで全ての細胞の発現パターンを予測する",
+          "隣接する細胞の平均的な発現量のみを考慮する"
+        ],
+        "correctIndex": 0,
+        "explanation": "本研究では、細胞タイプごとに遺伝子発現パターンが異なるため、それぞれに特化したエキスパートモデルを組み合わせることで、予測精度が向上すると結論付けています。",
+        "difficulty": "medium"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "空間トランスクリプトーム（ST）",
+          "definition": "組織内の細胞がどの遺伝子を、どこで、どれくらいの量で発現しているかを空間的な位置情報と共に測定する技術です。病気のメカニズム解明などに役立ちます。",
+          "reading": "Spatial Transcriptomics"
+        },
+        {
+          "term": "混合エキスパート（MoE）",
+          "definition": "複数の専門家（エキスパートモデル）を組み合わせ、入力データに応じて最適な専門家を選択・統合する機械学習のフレームワークです。多様なデータパターンに対応できます。",
+          "reading": "Mixture of Experts"
+        },
+        {
+          "term": "ルーティングネットワーク",
+          "definition": "混合エキスパートモデルにおいて、どのエキスパートモデルの予測を採用するか、あるいはどの程度の重みで組み合わせるかを決定する役割を担うネットワークです。",
+          "reading": "routing network"
+        },
+        {
+          "term": "単一細胞RNAシーケンス（scRNA-seq）",
+          "definition": "個々の細胞が持つRNA（遺伝子発現の指標）の配列を解析する技術です。細胞ごとの遺伝子発現の違いを詳細に調べることができます。",
+          "reading": "single-cell RNA-sequencing"
+        },
+        {
+          "term": "共発現",
+          "definition": "複数の遺伝子が同時に、あるいは協調して発現する現象です。同じ生物学的経路に関わる遺伝子によく見られます。",
+          "reading": "co-expression"
+        },
+        {
+          "term": "アブレーション",
+          "definition": "機械学習モデルの特定の構成要素を取り除いて性能を評価する実験手法です。その要素がモデル全体の性能にどれだけ貢献しているかを分析します。",
+          "reading": "ablation"
+        },
+        {
+          "term": "グラウンドトゥルース",
+          "definition": "データ解析や機械学習において、真実であると仮定される正確なデータや情報のことです。モデルの予測結果と比較する際の基準となります。",
+          "reading": "ground-truth"
+        },
+        {
+          "term": "ヘマトキシリン・エオシン（H&E）染色",
+          "definition": "病理組織学で最も一般的に用いられる染色法です。細胞核や細胞質を異なる色に染め分け、組織の形態を観察しやすくします。",
+          "reading": "Hematoxylin and Eosin staining"
+        }
+      ],
+      "takeaway": {
+        "whatIsIt": "組織の病理画像から、個々の細胞がどんな遺伝子を発現しているかをAIで予測する研究です。",
+        "whatFound": "細胞の種類ごとに特化したAIモデルを組み合わせると、従来の予測より格段に精度が上がることが分かりました。",
+        "soWhat": "高価な実験なしに、病気の診断や薬の効果を細胞レベルで詳しく分析できるようになるかもしれませんね。"
+      },
+      "storyCards": {
+        "ask": "組織画像から、細胞ごとの遺伝子発現をAIで予測できる？",
+        "method": "細胞タイプごとに特化したAIモデルを組み合わせて予測精度を比較。",
+        "finding": "細胞タイプ特化モデルが、既存手法より高い予測精度を達成。",
+        "meaning": "病理画像から、より詳細な分子情報を得られる未来へ。"
+      },
+      "audio": {
+        "src": "/audio/2606.02424v1.mp3",
+        "format": "mp3",
+        "duration": 32,
+        "voice": "Kore",
+        "generatedAt": "2026-06-02T23:45:34.361Z"
+      },
+      "keyFigure": {
+        "imagePath": "/figures/2606.02424v1_results.png",
+        "page": 9,
+        "caption": "GC-MoEによるエキスパートの割り当てと遺伝子発現の予測結果を示しています。",
+        "label": "Figure 5: Visualization of expert assignments and predicted gene expression by the proposed",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-02T23:47:08.586Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.02424v1_results.png",
+          "page": 9,
+          "caption": "GC-MoEによるエキスパートの割り当てと遺伝子発現の予測結果を示しています。",
+          "label": "Figure 5: Visualization of expert assignments and predicted gene expression by the proposed",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-02T23:47:08.586Z"
+        },
+        {
+          "imagePath": "/figures/2606.02424v1_why.jpeg",
+          "page": 4,
+          "caption": "GC-MoEモデルの全体像と、細胞タイプ特異的なエキスパートの仕組みを示しています。",
+          "label": "Figure 2: Overview of proposed Genomics-Guided Cell-Type-Specific Mixture of Experts",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-02T23:47:08.587Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.02430v1",
+      "title": "Not All Errors Are Equal: A Systematic Study of Error Propagation in Large Language Model Inference",
+      "authors": [
+        "Yafan Huang",
+        "Sheng Di",
+        "Guanpeng Li"
+      ],
+      "publishedAt": "2026-06-01T16:04:51Z",
+      "url": "https://arxiv.org/abs/2606.02430v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.02430v1.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "cs.DC",
+        "cs.AI"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly integrated into high-performance computing (HPC) workflows, accelerating scientific discovery through diverse perspectives such as code generation and domain-specific decision-making. Yet, how soft errors propagate and affect LLM inference remains largely unexplored. To bridge this gap, we present a comprehensive study on error propagation in LLM inference, enabled by our proposed LLMFI, a configurable and deterministic fault-injection framework. Using LLMFI, we systematically inject faults across three open-weighted LLMs and thirteen representative tasks, covering reasoning, multilingual, mathematical, and coding domains. In addition, we conduct fine-grained case studies that reveal critical vulnerability patterns. Overall, our study yields 17 takeaways that advance the understanding of error propagation in LLM inference and introduces four low-overhead directions to improve reliability through software-only modification, offering practical guidance for future error detection and mitigation.",
+      "summary": {
+        "gist": "本研究は、大規模言語モデル（LLM）の推論過程におけるソフトエラーの伝播メカニズムを系統的に解明しました。エラーの発生場所やタイミングによって影響度が大きく異なることを示し、信頼性向上のための具体的なソフトウェア的対策を提案しています。",
+        "novelty": "従来の研究では、LLMにおけるエラー伝播のメカニズムは十分に探求されていませんでした。本研究は、設定可能なフォールトインジェクションフレームワーク「LLMFI」を開発し、LLMのアーキテクチャ、タスク、推論ステージ全体にわたるエラー伝播を初めて詳細に分析し、この研究ギャップを埋めました。",
+        "method": "本研究では、独自に開発したフォールトインジェクションフレームワーク「LLMFI」を使用しています。このフレームワークは、3つのオープンウェイトLLMと、推論、多言語、数学、コーディングを含む13の代表的なタスクに対して、体系的にフォールトを注入できます。これにより、様々な条件でのエラー伝播を詳細に分析し、脆弱性パターンを特定しています。",
+        "results": "分析の結果、エラーの伝播は発生場所やタイミングに強く依存することが明らかになりました。特に、Prefillステージと最初のトークン生成ステージが最も脆弱であることが示されています。また、次元拡張はエラー伝播を緩和する一方で、次元削減は増幅する傾向があることも判明しました。これらの知見に基づき、混合精度推論、選択的チェックサム保護、デュアル初回トークン生成、動的ショット推論という4つの低オーバーヘッドなソフトウェアのみの対策が提案されており、将来のエラー検出と軽減に実用的な指針を提供しています。",
+        "why": "エラーの伝播が場所やタイミングによって異なるのは、LLMの推論プロセスが複数の複雑なステージと内部構造を持つためです。例えば、Prefillステージや最初のトークン生成ステージは、後続のデコードループ全体のコンテキストを確立するため、この段階でのエラーは全体に大きな影響を及ぼします。また、Transformerブロックにおける次元拡張は、情報が分散されることでエラーの影響を希釈する効果がある一方、次元削減は情報を凝縮するため、エラーがより顕著に現れると考えられます。",
+        "figures": "アブストラクトには主要な図表の記述はありませんが、論文本文抜粋のFigure 1では、LLMアーキテクチャの多様な実装、多様な推論タスク、複雑な推論プロセスという、LLM推論におけるエラーモデリングの課題が図示されています。また、Figure 2では、Prefill-DecodeというLLM推論プロセスが、入力トークンからKVキャッシュの生成、そして逐次的なトークン生成へと進む様子が示されています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.DC）",
+      "field": "AI・データサイエンス",
+      "titleJa": "大規模言語モデル推論におけるエラー伝播の系統的研究：すべてのエラーが等しいわけではない",
+      "catchTitle": "LLMの誤動作、どこで起きる？",
+      "hook": "大規模言語モデル（LLM）が科学的発見を加速する一方で、ハードウェアのソフトエラーがその推論にどう影響するかは不明でした。",
+      "quiz": {
+        "question": "大規模言語モデル（LLM）の推論において、ソフトエラーが最も影響を及ぼしやすいのはどの段階だと思いますか？",
+        "options": [
+          "推論の初期段階（Prefillや最初のトークン生成）",
+          "推論の中間段階（デコードループの途中）",
+          "推論の最終段階（出力トークンのデトークン化）"
+        ],
+        "correctIndex": 0,
+        "explanation": "本研究では、Prefillステージと最初のトークン生成ステージが最も脆弱であることが示されています。これらの初期段階でのエラーは、後続の推論全体に大きな影響を与えるためです。",
+        "difficulty": "medium"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "ソフトエラー",
+          "definition": "高エネルギー粒子やシリコンの劣化によって発生する、一時的なハードウェアの誤動作です。ビット反転として現れ、プログラムの実行結果をサイレントに変化させることがあります。"
+        },
+        {
+          "term": "大規模言語モデル（LLM）",
+          "definition": "大量のテキストデータで学習された、人間のような自然言語を理解し生成できるAIモデルです。質問応答、文章作成、翻訳など多様なタスクに利用されます。",
+          "reading": "Large Language Models"
+        },
+        {
+          "term": "フォールトインジェクション",
+          "definition": "システムの信頼性や耐障害性を評価するために、意図的にエラー（フォールト）を注入するテスト手法です。エラーがシステムにどのような影響を与えるかを分析します。",
+          "reading": "Fault Injection"
+        },
+        {
+          "term": "LLMFI",
+          "definition": "本研究で提案された、設定可能で決定論的なフォールトインジェクションフレームワークです。LLMのアーキテクチャ、タスク、推論ステージを横断してエラー伝播を系統的に研究するために開発されました。"
+        },
+        {
+          "term": "Prefillステージ",
+          "definition": "LLM推論プロセスの初期段階で、ユーザーからの入力プロンプト全体を処理し、最初の出力トークンを生成するとともに、会話のコンテキストを保持するKVキャッシュを構築します。"
+        },
+        {
+          "term": "デコードループ",
+          "definition": "LLM推論プロセスの逐次的な段階で、前のステップで生成されたトークンとKVキャッシュを用いて、次の出力トークンを繰り返し生成します。これにより、完全な応答が構築されます。",
+          "reading": "Decode loop"
+        },
+        {
+          "term": "KVキャッシュ",
+          "definition": "LLMの推論中に、以前のトークンから計算された「キー」と「バリュー」の情報を保存するメモリ領域です。これにより、各ステップで過去のコンテキストを再計算することなく、効率的に次のトークンを生成できます。",
+          "reading": "Key-Value Cache"
+        },
+        {
+          "term": "混合精度推論",
+          "definition": "LLM推論の特定のコンポーネントで異なるデータ型（例：float16とfloat32）を使い分ける技術です。計算精度を保ちつつ、エラー耐性を高めたり、計算効率を向上させたりする目的で用いられます。",
+          "reading": "Mixed-precision Inference"
+        }
+      ],
+      "takeaway": {
+        "whatIsIt": "LLMが計算間違いする原因を、ハードウェアの微細なエラーから探る研究です。",
+        "whatFound": "エラーは発生する場所やタイミングで影響が大きく異なり、特に初期段階が重要だと分かりました。",
+        "soWhat": "この知見は、将来LLMをより信頼性の高いシステムにするための対策開発に役立ちます。"
+      },
+      "storyCards": {
+        "ask": "LLMの「ちょっとした間違い」はどこから？",
+        "method": "独自ツールで3つのLLMに意図的にエラーを注入し検証。",
+        "finding": "推論の「最初」のエラーが最も致命的。17の発見。",
+        "meaning": "LLMの信頼性向上へ、4つのソフトウェア対策を提案。"
+      },
+      "audio": {
+        "src": "/audio/2606.02430v1.mp3",
+        "format": "mp3",
+        "duration": 28,
+        "voice": "Kore",
+        "generatedAt": "2026-06-02T23:46:02.197Z"
+      },
+      "keyFigure": {
+        "imagePath": "/figures/2606.02430v1_results.jpeg",
+        "page": 3,
+        "caption": "Figure 3: Illustrating error propagation in LLM inference Illustrating error propagation in LLM inference",
+        "label": "Figure 3: Illustrating error propagation in LLM inference",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-02T23:47:09.683Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.02430v1_results.jpeg",
+          "page": 3,
+          "caption": "Figure 3: Illustrating error propagation in LLM inference Illustrating error propagation in LLM inference",
+          "label": "Figure 3: Illustrating error propagation in LLM inference",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-02T23:47:09.683Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.02411v1",
+      "title": "Evolved Collectives Combine Complex Internal Representations with Simple Outputs",
+      "authors": [
+        "Guilherme S. Y. Giardini",
+        "John F. Hardy",
+        "Carlo daCunha"
+      ],
+      "publishedAt": "2026-06-01T15:53:51Z",
+      "url": "https://arxiv.org/abs/2606.02411v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.02411v1.pdf",
+      "categories": [
+        "topic:humanities",
+        "physics.soc-ph",
+        "nlin.AO"
+      ],
+      "abstract": "Collective intelligence emerges from local interactions among agents with limited information, yet how internal controller organization relates to emergent collective order remains unclear. Here, we study evolved swarms with shallow neural controllers under explicit sensory and actuation constraints and compare collective order with hidden-layer complexity and output nonlinearity across 3024 conditions. Under these constraints, the most ordered regimes exhibit two simultaneous and seemingly contrasting effects: hidden-layer complexity increases, while the effective output mapping becomes more linear. The diversity of recurrent collective behaviors varies nonmonotonically across the control parameters, with pattern richness shaped by parameter-specific tradeoffs rather than a single generic constraint optimum. Unevolved controls show that output linearization persists without adaptation, whereas the hidden-complexity relation depends on optimization. These two effects are respectively consistent with the law of requisite complexity and ecological rationality, suggesting that adaptive collective intelligence can arise through a partitioned controller organization in which representational complexity and action-level linearization coexist within the same system.",
+      "summary": {
+        "gist": "本研究は、進化した群れの集合知が、個々のエージェントの神経コントローラーにおける内部表現の複雑性と、出力マッピングの線形性という、一見相反する特性の組み合わせによって実現されることを明らかにしました。最も秩序だった群れの状態では、隠れ層の複雑性が増大する一方で、出力はより線形になることが示されています。",
+        "novelty": "従来の研究では、内部コントローラーの組織が集合的な秩序にどう関連するかが不明確でした。本研究は、感覚入力と行動出力に制約がある中で、隠れ層の複雑性と出力の非線形性という二つの側面を同時に分析し、これらが集合的な秩序とどのように関連するかを3024の条件下で比較した点で新規性があります。特に、秩序だった群れが内部表現の複雑さと行動レベルの線形化を両立させるという、コントローラーの分割された組織構造を提案しています。",
+        "method": "本研究では、浅いニューラルコントローラーを持つ進化した群れを対象に、3024通りのシミュレーションアンサンブルを実施しました。まず、密度構造、配向秩序、運動状態、形状、伝播方向に基づいて、再帰的な集合的レジームを幾何学的分類器で特定しました。次に、局所的な方向秩序をネマティック秩序パラメーターで、システム全体の構造的コヒーレンスをガウス距離重み付け相互作用グラフのスペクトルギャップで定量化しました。さらに、神経コントローラーの出力段階における線形性をR2値の代理変数（1-R2）で、隠れ層の複雑性をLMC複雑度で評価し、これらの5つの記述子間のペアワイズ相関（ピアソンおよびスピアマン）を分析しました。",
+        "results": "分析の結果、最も秩序だった群れのレジームでは、隠れ層の複雑性が増大する一方で、有効な出力マッピングがより線形になることが判明しました。具体的には、出力の非線形性と局所的な秩序の間には強い負の相関（スピアマン相関係数ρS = -0.806）があり、局所的な組織化が進むにつれてコントローラーの出力はより線形になることが示されました。対照的に、隠れ層の複雑性は局所的な秩序（ρS = 0.655）および全体的な秩序（ρS = 0.658）と正の相関を示しました。これらの結果は、より秩序だった構成が、より線形な出力マッピングとより大きな隠れ層の複雑性を組み合わせていることを示唆しています。",
+        "why": "この現象は、コントローラーの内部表現と行動出力が異なる空間スケールに対応しているためと考えられます。隠れ層の複雑性は、エージェントが遭遇する感覚環境の構造化された変動を追跡しており、これは「必要複雑性の法則」と一致します。一方、出力の線形化は、制約された環境自体が局所的な秩序を生み出すために線形な入出力マッピングを好むという「生態学的合理性」の側面を反映しています。進化の過程で、環境の規則性が増幅され、より線形なコントローラーが優先的に保持されることで、この二つの特性が共存する適応的な集合知が生まれると考えられます。",
+        "figures": "アブストラクトには図表の記述なし"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.soc-ph）",
+      "field": "歴史・人文・社会",
+      "titleJa": "進化した群れの集合知：内部表現の複雑さと単純な出力の共存",
+      "catchTitle": "群れの賢さの秘密：複雑な思考と単純な行動",
+      "hook": "群れの行動が秩序立つのは、個々のエージェントが内部で複雑な情報を処理しつつ、単純な行動ルールに従うためだという研究結果が出ています。",
+      "quiz": {
+        "question": "進化した群れの集合知において、個々のエージェントの神経コントローラーの内部表現と行動出力は、どのような特性を示すことが多いですか？",
+        "options": [
+          "内部表現は複雑になり、行動出力はより線形になります。",
+          "内部表現は単純になり、行動出力はより非線形になります。",
+          "内部表現も行動出力も、ともに複雑になります。"
+        ],
+        "correctIndex": 0,
+        "explanation": "論文では、最も秩序だった群れの状態において、隠れ層の複雑性が増大する一方で、出力マッピングがより線形になることが示されています。",
+        "difficulty": "medium"
+      },
+      "limitations": "本研究の範囲では、二層の隠れ層を持つコントローラーを用いた補足実験により、出力の線形性に関する関連が単一隠れ層のトポロジーに特有のものではないことが確認されています。しかし、より複雑な情報理論的記述子を用いることで、入出力関係のより豊かな側面を捉えることができる可能性も示唆されています。",
+      "glossary": [
+        {
+          "term": "ニューラルコントローラー",
+          "definition": "生物の脳の働きを模倣したコンピュータープログラムや回路のことです。エージェントが環境からの情報を受け取り、それに基づいて行動を決定するために使われます。",
+          "reading": "Neural Controller"
+        },
+        {
+          "term": "隠れ層の複雑性",
+          "definition": "ニューラルネットワークの中間層（隠れ層）が、どれだけ多様で構造化された情報を処理しているかを示す指標です。複雑性が高いほど、より多くの種類のパターンを認識・生成できます。",
+          "reading": "Hidden-layer complexity"
+        },
+        {
+          "term": "出力非線形性",
+          "definition": "ニューラルコントローラーの入力と出力の関係が、どれだけ直線的でないかを示す指標です。非線形性が低い（線形性が高い）ほど、入力の変化に対して出力が比例的に変化します。",
+          "reading": "Output nonlinearity"
+        },
+        {
+          "term": "集合知",
+          "definition": "個々のエージェントが限られた情報に基づいて局所的に相互作用することで、システム全体として高度な問題解決能力や秩序だった行動が生まれる現象です。鳥の群れやアリのコロニーなどが例です。",
+          "reading": "Collective intelligence"
+        },
+        {
+          "term": "ネマティック秩序",
+          "definition": "液体結晶などで見られる、分子の向きが特定の方向に揃っている状態を示す物理学の概念です。本研究では、群れのエージェントの進行方向がどれだけ揃っているかを示す指標として用いられています。",
+          "reading": "Nematic order"
+        },
+        {
+          "term": "スペクトルギャップ",
+          "definition": "グラフ理論において、グラフの隣接行列やラプラシアン行列の固有値の差のことです。本研究では、群れ全体の相互作用構造がどれだけまとまっているか（コヒーレンス）を示す指標として使われています。",
+          "reading": "Spectral gap"
+        },
+        {
+          "term": "LMC複雑度",
+          "definition": "情報理論における複雑性の指標の一つで、分布の均一性と集中度を組み合わせて計算されます。本研究では、エージェントの感覚環境や隠れ層の活性化パターンの構造的多様性を評価するために用いられています。",
+          "reading": "López-Ruiz-Mancini-Calbet complexity"
+        },
+        {
+          "term": "生態学的合理性",
+          "definition": "意思決定が、個人の認知能力だけでなく、その意思決定が行われる環境の構造によっても効率的になるという考え方です。環境の情報構造が、特定の単純な戦略を有効にするという側面を指します。",
+          "reading": "Ecological rationality"
+        }
+      ],
+      "takeaway": {
+        "whatIsIt": "群れが賢く動くメカニズムを、個々のエージェントの脳（コントローラー）の働きから解明する研究です。",
+        "whatFound": "秩序だった群れは、内部で複雑に情報を処理しつつ、外部への行動はシンプルに線形化されることが分かりました。",
+        "soWhat": "複雑なシステムが効率的に機能する秘訣は、内部の複雑さと外部の単純さのバランスにあるのかもしれませんね。"
+      },
+      "storyCards": {
+        "ask": "鳥の群れ、なぜあんなにきれいに動くの？",
+        "method": "3024通りのシミュレーションで、群れの行動と脳の構造を分析。",
+        "finding": "秩序ある群れは、複雑な内部処理とシンプルな行動ルールを両立。",
+        "meaning": "AIやロボット群の設計に、この「賢さの秘訣」を応用できるかも。"
+      },
+      "audio": {
+        "src": "/audio/2606.02411v1.mp3",
+        "format": "mp3",
+        "duration": 34,
+        "voice": "Kore",
+        "generatedAt": "2026-06-02T23:46:32.906Z"
+      },
+      "keyFigure": {
+        "imagePath": "/figures/2606.02411v1_results.png",
+        "page": 6,
+        "caption": "神経と集合体の主要な記述子間の関連構造を示しています。",
+        "label": "Fig. 4. Broad and residual association structure among the five principal neural and collective descriptors. Panel A sho",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-02T23:47:12.250Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.02411v1_results.png",
+          "page": 6,
+          "caption": "神経と集合体の主要な記述子間の関連構造を示しています。",
+          "label": "Fig. 4. Broad and residual association structure among the five principal neural and collective descriptors. Panel A sho",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-02T23:47:12.250Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.02479v1",
+      "title": "Retrieve What's Missing: Coverage-Maximizing Retrieval for Consistent Long Video Generation",
+      "authors": [
+        "Minseok Joo",
+        "Dogyun Park",
+        "Taehoon Lee",
+        "Kyujin Lee",
+        "Hyunwoo J. Kim"
+      ],
+      "publishedAt": "2026-06-01T16:49:58Z",
+      "url": "https://arxiv.org/abs/2606.02479v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.02479v1.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "cs.CV"
+      ],
+      "abstract": "Maintaining long-term geometric consistency remains challenging for long-horizon autoregressive video generation. Memory-augmented generative models address this by retrieving historical frames, but their effectiveness depends on two key design choices: what 3D-geometric evidence should represent past observations, and how memory frames should be selected from this evidence. Existing methods often rely on camera poses or field-of-view overlap, which are lightweight but too coarse to reason about pixel-wise visibility, or use explicit 3D reconstruction, which provides fine-grained evidence but is costly to maintain over long rollouts. We propose Coverage-Maximizing Retrieval-Augmented Generation (COVRAG), a depth-based memory retrieval framework that uses pretrained 3D priors to construct a target-view coverage map as lightweight 3D memory evidence. For frame selection, COVRAG maximizes residual coverage gain, iteratively retrieving frames that explain target-view regions not covered by the current context or previously selected memories. To improve scalability in long-video generation, we introduce sliding-window depth caching for efficient geometry estimation. Experiments on RealEstate10K and DL3DV10K show that COVRAG improves long-horizon geometric consistency while maintaining low latency compared to baselines.",
+      "summary": {
+        "gist": "本研究は、長尺動画の自動生成において課題となっていた幾何学的矛盾を解決するため、深度情報に基づいた記憶検索フレームワーク「COVRAG」を提案しています。この手法は、過去のフレームから対象視点における未カバー領域を最大化するように情報を選択することで、一貫性の高い動画生成を実現します。",
+        "novelty": "従来の研究では、過去の観察を表現する3D幾何学的証拠として、カメラポーズや視野の重複といった粗い情報を用いるか、高コストな明示的3D再構築に頼るかのトレードオフがありました。本研究は、事前学習済み3D事前知識を用いて軽量な「対象視点カバレッジマップ」を構築することで、ピクセル単位の可視性推論を可能にしつつ、計算コストを抑えるという新たな中間的なアプローチを提示しています。また、フレーム選択においても、個々のフレームの関連性だけでなく、未カバー領域を補完する「残余カバレッジゲイン」を最大化する戦略により、冗長性を排除し、補完的な記憶セットを効率的に選択する点で新規性があります。",
+        "method": "本研究では、事前学習済み3D事前知識モデルによって予測された深度とカメラポーズを利用し、各履歴フレームを対象視点にワープさせることで「対象視点カバレッジマップ」を構築しています。フレーム選択には、現在未カバーのピクセルを最も多く説明するフレームを反復的に選択する「残余カバレッジゲイン最大化」の基準を採用しています。さらに、長尺動画生成におけるスケーラビリティ向上のため、「スライディングウィンドウ深度キャッシング」戦略を導入し、推論コストをほぼ一定に保っています。評価は、RealEstate10KとDL3DV10Kデータセットを用いて行われ、DFoT、WorldMem、VMemといった既存のベースラインと比較されました。",
+        "results": "COVRAGは、RealEstate10KおよびDL3DV10Kデータセットにおいて、幾何学的整合性エラーをMEt3Rで最大29%削減し、ベースラインと比較して大幅な改善を示しました。特に、3D再構築ベースの手法と比較して、最大5倍低いレイテンシを達成しています。これらの結果は、COVRAGが3D的に一貫性のある動画生成において、効果的かつ効率的な検索手法であることを示しています。",
+        "why": "COVRAGが幾何学的整合性を改善できるのは、主に2つのメカニズムによるものです。第一に、深度情報に基づく「対象視点カバレッジマップ」を用いることで、カメラポーズや視野の重複といった粗い情報では捉えきれなかった、ピクセルレベルでの正確な可視性推論が可能になります。これにより、どの過去のフレームが対象視点のどの領域を実際にカバーできるかを精密に判断できます。第二に、「残余カバレッジゲイン最大化」というフレーム選択基準により、すでにカバーされている領域を重複して説明するフレームではなく、まだ情報が不足している領域を補完するフレームを優先的に選択します。これにより、限られた記憶容量の中で、最も情報量の多い補完的な記憶セットを効率的に構築し、全体として一貫性の高いシーン構造を維持できるためです。",
+        "figures": "Figure 2は、COVRAGを用いた拡散動画生成の概要を示しています。この図では、自己回帰的な動画生成中に、COVRAGが過去のフレームから補完的な幾何学的証拠を検索し、拡散モデルを強化する様子が描かれています。具体的には、時間的コンテキストによって既にサポートされている領域を特定し、残りの対象視点領域をカバーする追加の記憶（赤と青の領域で示される）を検索することで、より一貫性のある長尺生成を可能にすることを示しています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.CV）",
+      "field": "AI・データサイエンス",
+      "titleJa": "欠落を補完する：一貫性のある長尺動画生成のためのカバレッジ最大化リトリーバル",
+      "catchTitle": "長尺動画の矛盾を解消！AIが過去の映像から最適な情報を賢く選択",
+      "hook": "長尺動画生成における幾何学的矛盾を解消するため、AIが過去のフレームから必要な情報を効率的に選択する新しい手法が開発されました。",
+      "quiz": {
+        "question": "長尺動画生成で幾何学的矛盾が生じる主な原因は何ですか？",
+        "options": [
+          "モデルが限られた時間的コンテキスト内でしか生成せず、過去の情報を保持できないためです。",
+          "生成される動画の解像度が高すぎて、計算リソースが不足するためです。",
+          "ユーザーが入力するプロンプトが曖昧で、モデルが意図を正確に理解できないためです。"
+        ],
+        "correctIndex": 0,
+        "explanation": "論文によると、ほとんどの自己回帰型動画拡散モデルは限られた時間的コンテキスト内で動画を生成するため、その範囲を超えると構造的・意味的な詳細が失われ、幾何学的矛盾が生じやすいと説明されています。",
+        "difficulty": "medium"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "自己回帰型動画生成",
+          "definition": "動画のフレームを一つずつ順番に生成していく方法です。前のフレームや短い過去の文脈を参考に、次のフレームを作り出します。",
+          "reading": "Autoregressive video generation"
+        },
+        {
+          "term": "幾何学的整合性",
+          "definition": "動画内のオブジェクトの形や位置関係、奥行きなどが、時間を通じて矛盾なく保たれている状態を指します。カメラが移動しても、同じ物体が同じように見えることが重要です。",
+          "reading": "Geometric consistency"
+        },
+        {
+          "term": "深度情報",
+          "definition": "画像中の各ピクセルがカメラからどれくらいの距離にあるかを示す情報です。これにより、シーンの3D構造を理解することができます。",
+          "reading": "Depth information"
+        },
+        {
+          "term": "対象視点カバレッジマップ",
+          "definition": "特定の視点から見たときに、過去のどのフレームがその視点のどのピクセルをカバー（情報を提供）できるかを示す地図のようなものです。未カバー領域を特定するのに使われます。",
+          "reading": "Target-view coverage map"
+        },
+        {
+          "term": "残余カバレッジゲイン",
+          "definition": "まだ情報が不足している（カバーされていない）領域を、新しく選択するフレームがどれだけ補完できるかを示す指標です。このゲインを最大化するようにフレームを選びます。",
+          "reading": "Residual coverage gain"
+        },
+        {
+          "term": "スライディングウィンドウ深度キャッシング",
+          "definition": "長尺動画生成において、深度推定の計算コストを抑えるための技術です。直近の一定期間（ウィンドウ）内の深度情報のみを計算・キャッシュし、それより古い情報は再利用することで、効率を高めます。",
+          "reading": "Sliding-window depth caching"
+        },
+        {
+          "term": "MEt3R",
+          "definition": "動画生成における幾何学的整合性を評価するための指標の一つです。ピクセル間の対応関係を推定し、生成されたフレームと真のフレームの整合性を比較します。",
+          "reading": "MEt3R"
+        },
+        {
+          "term": "レイテンシ",
+          "definition": "処理要求が出されてから、その結果が返されるまでの時間遅延のことです。動画生成においては、フレームが生成されるまでの時間を示します。",
+          "reading": "Latency"
+        }
+      ],
+      "takeaway": {
+        "whatIsIt": "AIが長い動画を作る時、過去のシーンと矛盾しないようにする研究です。",
+        "whatFound": "新しいAI技術「COVRAG」は、動画の幾何学的矛盾を最大29%減らすそうです。",
+        "soWhat": "これにより、より自然でリアルなAI生成動画が作れるようになるでしょう。"
+      },
+      "storyCards": {
+        "ask": "AIが作る長尺動画、過去のシーンと矛盾しない？",
+        "method": "深度情報とカメラ位置から、必要な過去フレームを効率的に選ぶ",
+        "finding": "新手法COVRAGで、幾何学的矛盾が最大29%減少！",
+        "meaning": "ロボットシミュレーションやゲーム開発に、よりリアルな動画を"
+      },
+      "audio": {
+        "src": "/audio/2606.02479v1.mp3",
+        "format": "mp3",
+        "duration": 29,
+        "voice": "Kore",
+        "generatedAt": "2026-06-02T23:47:02.505Z"
+      },
+      "keyFigure": {
+        "imagePath": "/figures/2606.02479v1_results.jpeg",
+        "page": 7,
+        "caption": "RealEstate10KとDL3DV10Kデータセットにおける、COVRAGの動画一貫性評価結果を示しています。",
+        "label": "Table 1: Consistency evaluation on RealEstate10K and DL3DV10K. We report long-horizon",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-02T23:47:14.701Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.02479v1_results.jpeg",
+          "page": 7,
+          "caption": "RealEstate10KとDL3DV10Kデータセットにおける、COVRAGの動画一貫性評価結果を示しています。",
+          "label": "Table 1: Consistency evaluation on RealEstate10K and DL3DV10K. We report long-horizon",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-02T23:47:14.701Z"
+        },
+        {
+          "imagePath": "/figures/2606.02479v1_why.jpeg",
+          "page": 3,
+          "caption": "COVRAGを用いた拡散動画生成の全体像を示しており、そのメカニズムを理解するのに役立ちます。",
+          "label": "Figure 2: Overview of diffusion video generation with COVRAG. During autoregressive video",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-02T23:47:14.701Z"
+        }
+      ]
+    }
+  ]
+}

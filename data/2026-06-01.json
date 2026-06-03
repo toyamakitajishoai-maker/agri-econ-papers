@@ -2,152 +2,198 @@
   "date": "2026-06-01",
   "papers": [
     {
-      "id": "2605.30166v1",
-      "title": "SAHG: Sector-Anisotropic Hyperbolic Graph Model for Social Bot Detection",
+      "id": "W7162751758",
+      "title": "Evaluation of pollination modes on Nigella sativa yield and seed quality, with analysis of farmer practices in Northern Ethiopia",
       "authors": [
-        "Hanning Lu",
-        "Yingguang Yang",
-        "Jinwei Su",
-        "Yang Liu",
-        "Zhaoqian Yao",
-        "Yaoming Li",
-        "Taoran Liang",
-        "Ziyi Zhang",
-        "Ran Ran",
-        "Kefu Xu",
-        "Bin Chong"
+        "Medhanye Araya",
+        "Gebreamlak Bezabih Tesfay",
+        "Solomon Zewdu Altaye",
+        "Birhan Mengesha",
+        "Gebremedhn Beyene",
+        "Yetimwork Gebremeskel"
       ],
-      "publishedAt": "2026-05-28T16:19:14Z",
-      "url": "https://arxiv.org/abs/2605.30166v1",
-      "pdfUrl": "https://arxiv.org/pdf/2605.30166v1.pdf",
+      "publishedAt": "2026-05-29T12:00:00.000Z",
+      "url": "https://doi.org/10.1007/s44279-026-00616-1",
+      "pdfUrl": "https://link.springer.com/content/pdf/10.1007/s44279-026-00616-1.pdf",
       "categories": [
-        "topic:humanities",
-        "cs.SI",
-        "cs.LG"
+        "topic:agri-econ",
+        "openalex",
+        "Pollination",
+        "Nigella sativa",
+        "Pollinator",
+        "Biology"
       ],
-      "abstract": "LLM-driven social bots can generate fluent, human-like text, reducing the discriminative advantage of content-based detection alone. However, coordinated campaigns still leave relational patterns -- interactions, behavioral similarity, shared neighborhoods, community positions, and coordinated activity -- that graph-based methods can exploit. Existing graph detectors face two challenges when exploiting such evidence. First, Euclidean GNNs distort hierarchical and scale-free social graphs; while hyperbolic geometry addresses this volume-growth mismatch, fixed-curvature models still assign uniform geometric resolution to structural directions with different densities and separation needs. Second, relational evidence is not always reliable: sophisticated bots forge heterophilic connections with genuine users, causing neighborhood aggregation to mix bot and human signals and dilute account-level evidence. We propose \\textsc{SAHG} (Sector-Anisotropic Hyperbolic Graph), addressing both challenges. \\textsc{SAHG} learns a direction-dependent curvature field $γ(u)$ that adapts geometric resolution across structural directions, and uses sector prototypes to convert angular concentration and alignment into classifier-readable features. To prevent contaminated aggregation from overwhelming account-level evidence, \\textsc{SAHG} encodes per-account features and graph-neighborhood representations in two independent SAH channels, fusing them only at the classifier. Experiments on Fox8-23, BotSim-24, and MGTAB show that \\textsc{SAHG} achieves the highest accuracy and F1 on all three benchmarks, outperforming feature-based, graph-based, LLM-based, and isotropic hyperbolic baselines. Ablation and geometric analyses confirm the effectiveness of the anisotropic geometry and dual-channel design.",
+      "abstract": "Pollination services are essential for crop productivity, yet their role in supporting both yield and nutritional quality remains understudied in many spice crops, especially under smallholder farming conditions. For Nigella sativa (N. sativa, black cumin)—Ethiopia’s second-largest spice export—no comprehensive assessment has measured how pollination influences productivity and seed quality, nor has it examined how farmer practices align with these biological needs. We combined a controlled field experiment with a household survey to address this gap in black cumin cultivation in Northern Ethiopia. The experiment employed a randomized block design with three treatments: honeybee-only pollination, open pollination, and pollinator exclusion, and compared phenological, agronomic, and seed quality traits. Honeybee‑only pollination increased seed yield by 49.1% (95% CI: 45.3–52.8%), protein content by 43.4% (95% CI: 39.7–47.1%), and germination by 60.5% (95% CI: 56.2–64.8%) compared to exclusion. Effect sizes were very large (Cohen’s d > 5 for phenological traits; η2 > 0.97 for quality parameters), indicating that pollination explained most of the observed variation. Open pollination provided intermediate benefits (yield + 42.4% over exclusion), but managed honeybee colonies added further gains (yield + 4.7%, protein + 14.6%). Floral visitor observations in the open-pollinated treatment showed that honeybees dominated floral visits (64%), with foraging peaking at 11:00–12:00. However, the farmer survey found that 74% of farmers applied pesticides during this peak period, and 93.3% had limited knowledge of pollination services. These practices could diminish the benefits observed in the experiment. This is the first study to demonstrate that managed honeybees pollinate N. sativa and that their pollination significantly improves yield and seed quality. Still, the disconnect between pollinator activity and pesticide use suggests these benefits may not reach smallholder farmers. Bridging the gap between ecological services and farmer practices through targeted extension and pollinator‑friendly management could unlock significant productivity and quality gains for Ethiopia’s spice sector.",
       "summary": {
-        "gist": "本論文は、大規模言語モデル（LLM）によって高度化するソーシャルボットの検出において、既存のグラフベース手法が抱える課題を解決する「SAHG（Sector-Anisotropic Hyperbolic Graph）」モデルを提案しています。SAHGは、方向依存の曲率場とデュアルチャネル設計により、階層的なソーシャルグラフの歪みを修正し、ボットが偽装する異種混合な関係性からアカウントレベルの証拠を保護することで、高い検出精度を実現しています。",
-        "novelty": "従来の研究では、階層的でスケールフリーなソーシャルグラフをユークリッド空間で扱うことによる構造の歪みや、固定曲率の双曲グラフモデルによる幾何学的解像度の均一性が課題でした。また、巧妙なボットが人間との異種混合な接続を偽装することで、近傍集約がボットと人間の信号を混合させ、アカウントレベルの証拠が希薄になる問題も存在しました。SAHGは、これらの課題に対し、方向依存の曲率を学習する異方性双曲幾何学と、アカウントレベルの証拠とグラフ近傍表現を独立して扱うデュアルチャネル設計を導入することで、研究の空白を埋めています。",
-        "method": "SAHGは、ソーシャルグラフのノード（アカウント）と特徴ベクトル、およびボットかどうかの二値ラベルをインプットとします。このモデルは、入力表現を動径方向の深さと単位球上の方向に分解し、LocalWarpNetで方向依存の曲率スケールγ(u)を動的に学習します。さらに、SectorPrototypesを用いて角度方向を分類器が読み取れる集中度とアラインメント特徴に変換します。特に、アカウントレベルの証拠を保護するため、SAHGはアカウントごとの特徴とグラフ近傍表現を二つの独立したSAHチャネルでエンコードし、分類器の段階で初めて融合するデュアルチャネル設計を採用しています。グラフチャネルの入力はGraphSAGEを用いて構築されています。",
-        "results": "SAHGは、Fox8-23、BotSim-24、MGTABという3つのベンチマークデータセットにおいて、既存の素性ベース、グラフベース、LLMベース、および等方性双曲ベースのモデルを上回り、最高の精度（Accuracy）とF1スコアを達成しました。アブレーション分析と幾何学的分析により、提案された異方性幾何学とデュアルチャネル設計の有効性が確認されています。これにより、SAHGは高度なソーシャルボットの検出において、より信頼性の高い解決策を提供できることが示唆されています。",
-        "why": "SAHGが高い検出精度を達成できるのは、主に二つのメカニズムによるものです。第一に、ソーシャルグラフが持つ階層的でスケールフリーな構造は、ユークリッド空間では歪んで表現されがちですが、SAHGは双曲幾何学を用いることでこの歪みを修正し、さらに方向依存の曲率を学習することで、ボットグループや人間コミュニティなど、密度や分離要件が異なる構造方向に対して適切な幾何学的解像度を割り当てることが可能になります。第二に、巧妙なボットは人間との異種混合な接続を偽装することで、近傍集約時にボットと人間の信号が混ざり合い、アカウントレベルの証拠が希薄になる問題があります。SAHGは、アカウントごとの特徴とグラフ近傍表現を独立した二つのチャネルで処理し、分類器で融合するデュアルチャネル設計により、この「汚染された集約」の影響を軽減し、アカウントレベルの重要な証拠を保護できるためです。",
-        "figures": "アブストラクトに図表の記述なし"
+        "gist": "受粉サービスは作物の生産性にとって不可欠ですが、特に小規模農家における多くのスパイス作物では、収量と栄養品質の両方を支える役割が十分に研究されていません。エチオピアで2番目に大きなスパイス輸出品であるブラッククミン（ニゲラ・サティバ）についても、受粉が生産性と種子品質にどのように影響するか、また農家の慣行がこれらの生物学的ニーズとどのように一致しているかについて、包括的な評価は行われていませんでした。",
+        "novelty": "これまで、エチオピアの小規模農家におけるブラッククミン（ニゲラ・サティバ）栽培において、受粉が収量や栄養品質にどう影響するか、また農家の慣行が受粉の生物学的ニーズとどれだけ合致しているかについての包括的な研究はありませんでした。 本研究は、管理されたミツバチによる受粉がブラッククミンの収量、発芽率、タンパク質含有量を大幅に向上させることを初めて実証しました。しかし、農家の多くが受粉の重要性を認識せず、ミツバチの活動が活発な時間帯に農薬を散布している現状も明らかにしました。",
+        "method": "本研究では、エチオピア北部におけるブラッククミン栽培のギャップを埋めるため、管理された野外実験と農家への聞き取り調査を組み合わせました。野外実験では、ミツバチのみによる受粉、開放受粉、受粉媒介者排除の3つの処理をランダム化ブロックデザインで比較し、植物の生育段階、農業形質、種子品質の特性を評価しました。また、開放受粉処理における訪花昆虫の観察を行い、農家調査では受粉サービスに関する知識、農薬使用慣行、ミツバチへの影響に関する懸念を調査しました。",
+        "results": "ミツバチのみによる受粉は、受粉媒介者排除と比較して、種子収量を49.1%、タンパク質含有量を43.4%、発芽率を60.5%増加させました。開放受粉でも中間的な利益が見られましたが、管理されたミツバチのコロニーはさらに収量を4.7%、タンパク質を14.6%増加させました。訪花昆虫の観察では、ミツバチが訪花の64%を占め、午前11時から12時に採餌活動がピークに達することが分かりました。しかし、農家調査では、74%の農家がこのピーク時間帯に農薬を散布しており、93.3%が受粉サービスに関する知識が限られていることが判明しました。",
+        "why": "ミツバチが花粉を効率的に運ぶことで、ブラッククミンの受精が促進され、その結果、より多くの種子が形成され、種子一つあたりの栄養価も高まります。特に、受粉が制限されると種子の生存能力が著しく低下するため、ミツバチによる受粉は発芽率の劇的な向上に繋がります。しかし、農家が受粉の重要性を認識せず、ミツバチの活動が活発な時間帯に農薬を散布してしまうと、ミツバチの個体数が減少し、受粉サービスが十分に提供されなくなり、結果として収量や品質の向上が阻害されると考えられます。"
       },
-      "source": "arxiv",
-      "journal": "arXiv（プレプリント / cs.SI）",
-      "field": "歴史・人文・社会",
-      "titleJa": "SAHG: ソーシャルボット検出のためのセクター異方性双曲グラフモデル",
-      "catchTitle": "AIボットを見破る新技術！双曲グラフで巧妙な偽装を暴く",
-      "hook": "LLMが生成する人間そっくりのボットの検出が困難になる中、SAHGはグラフ構造の歪みを修正し、偽装された関係性を見抜く新しい手法を提案しています。",
+      "doi": "10.1007/s44279-026-00616-1",
+      "source": "openalex",
+      "journal": "Discover Agriculture",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "crop-science",
+      "arxivPrimary": "unknown",
+      "titleJa": "ニゲラ・サティバの収量と種子品質に対する送粉様式の影響評価と農家の慣行分析",
+      "catchTitle": "ミツバチがスパイスを救う？知られざる受粉の力",
+      "hook": "あなたの食卓に並ぶスパイス、その品質がミツバチに左右されるとしたら驚きませんか？",
+      "background": "受粉サービスは作物の生産性にとって不可欠ですが、特に小規模農家における多くのスパイス作物では、収量と栄養品質の両方を支える役割が十分に研究されていません。エチオピアで2番目に大きなスパイス輸出品であるブラッククミン（ニゲラ・サティバ）についても、受粉が生産性と種子品質にどのように影響するか、また農家の慣行がこれらの生物学的ニーズとどのように一致しているかについて、包括的な評価は行われていませんでした。",
       "quiz": {
-        "question": "LLMが生成するソーシャルボットの検出を難しくしている主な要因は何でしょうか？",
+        "question": "この研究で、ミツバチのみによる受粉がブラッククミンの種子収量をどのくらい増加させましたか？",
         "options": [
-          "ボットが人間そっくりの流暢なテキストを生成できるためです。",
-          "ボットが複雑な暗号化技術を使用しているためです。",
-          "ボットが物理的な位置情報を偽装できるためです。"
+          "約10%",
+          "約25%",
+          "約49%"
         ],
-        "correctIndex": 0,
-        "explanation": "LLMの進化により、ボットが人間と区別しにくい自然なテキストを生成できるようになり、コンテンツだけでの検出が困難になっています。",
-        "difficulty": "easy"
+        "correctIndex": 2,
+        "explanation": "ミツバチのみによる受粉は、受粉媒介者排除と比較して、種子収量を49.1%増加させました。"
       },
       "limitations": "",
       "glossary": [
         {
-          "term": "大規模言語モデル（LLM）",
-          "definition": "大量のテキストデータを学習し、人間のような自然な文章を生成したり理解したりできるAIモデルのことです。ChatGPTなどが代表的です。",
-          "reading": "Large Language Models"
+          "term": "ニゲラ・サティバ",
+          "definition": "ブラッククミンとも呼ばれる、エチオピアの主要なスパイス作物。"
         },
         {
-          "term": "ユークリッドGNN",
-          "definition": "グラフニューラルネットワーク（GNN）の一種で、データを平面的なユークリッド空間に配置して学習するモデルです。ソーシャルグラフのような階層的な構造には不向きな場合があります。",
-          "reading": "Euclidean GNNs"
+          "term": "受粉様式",
+          "definition": "植物がどのように花粉を受け取るかの方法。"
         },
         {
-          "term": "双曲幾何学",
-          "definition": "ユークリッド幾何学とは異なり、空間が負の曲率を持つ幾何学です。中心から離れるほど指数関数的に空間が広がるため、階層的なデータやスケールフリーなネットワークの表現に適しています。",
-          "reading": "Hyperbolic geometry"
+          "term": "ランダム化ブロックデザイン",
+          "definition": "実験計画法の一つで、環境の不均一性を考慮する手法。"
         },
         {
-          "term": "方向依存の曲率場",
-          "definition": "双曲空間において、方向によって空間の曲がり具合（曲率）が異なるように調整する仕組みです。これにより、グラフの異なる部分に適切な幾何学的解像度を割り当てることができます。",
-          "reading": "direction-dependent curvature field"
+          "term": "生育段階",
+          "definition": "植物の成長過程における各フェーズ。"
         },
         {
-          "term": "セクタープロトタイプ",
-          "definition": "双曲空間における角度方向を、分類器が理解しやすい特徴量に変換するための概念です。特定の角度領域（セクター）への所属度や集中度を数値化します。",
-          "reading": "sector prototypes"
+          "term": "農業形質",
+          "definition": "作物の収量や品質に関わる特徴。"
         },
         {
-          "term": "デュアルチャネル設計",
-          "definition": "アカウントごとの特徴と、そのアカウントの周囲（近傍）のグラフ構造から得られる特徴を、それぞれ独立した経路（チャネル）で処理し、最後に統合する設計です。これにより、近傍情報が汚染されてもアカウント本来の情報を保護できます。",
-          "reading": "dual-channel design"
+          "term": "訪花昆虫",
+          "definition": "花を訪れて花粉を運ぶ昆虫。"
         },
         {
-          "term": "異種混合な接続",
-          "definition": "ネットワークにおいて、異なる性質を持つノード同士が接続している状態を指します。ボットが人間ユーザーと意図的に繋がることで、自身の正体を隠す偽装行為に利用されることがあります。",
-          "reading": "heterophilic connections"
+          "term": "受精",
+          "definition": "花粉がめしべに付着し、種子形成が始まる過程。"
         },
         {
-          "term": "アブレーション分析",
-          "definition": "提案するモデルの各構成要素を一つずつ取り除き、その性能変化を評価する分析手法です。どの要素がモデルの性能にどれだけ貢献しているかを特定するために用いられます。",
-          "reading": "Ablation studies"
+          "term": "発芽率",
+          "definition": "種子が発芽する割合。"
         }
       ],
-      "takeaway": {
-        "whatIsIt": "AIが生成する巧妙なソーシャルボットを見つけるための新しい技術の研究です。",
-        "whatFound": "SAHGという新モデルが、既存手法より高い精度でボットを検出できることが分かりました。",
-        "soWhat": "SNSの健全性を守り、偽情報拡散を防ぐための技術開発に役立つ可能性があります。"
+      "useArticleV2": true,
+      "oneLiner": "ミツバチによる受粉が、エチオピアの主要輸出品であるスパイス「ブラッククミン」の収量と品質を劇的に向上させることを発見しました。",
+      "noveltyContrast": {
+        "before": "これまで、エチオピアの小規模農家におけるブラッククミン（ニゲラ・サティバ）栽培において、受粉が収量や栄養品質にどう影響するか、また農家の慣行が受粉の生物学的ニーズとどれだけ合致しているかについての包括的な研究はありませんでした。",
+        "after": "本研究は、管理されたミツバチによる受粉がブラッククミンの収量、発芽率、タンパク質含有量を大幅に向上させることを初めて実証しました。しかし、農家の多くが受粉の重要性を認識せず、ミツバチの活動が活発な時間帯に農薬を散布している現状も明らかにしました。"
       },
-      "storyCards": {
-        "ask": "AIボット、人間そっくりで困る？",
-        "method": "グラフの形をAIが自動調整して検出",
-        "finding": "SAHGが3つのテストで最高精度を達成",
-        "meaning": "SNSの安全を守る新技術に期待"
-      },
-      "audio": {
-        "src": "/audio/2605.30166v1.mp3",
-        "format": "mp3",
-        "duration": 31,
-        "voice": "Kore",
-        "generatedAt": "2026-05-31T22:58:56.606Z"
-      },
-      "keyFigure": {
-        "imagePath": "/figures/2605.30166v1_results.png",
-        "page": 8,
-        "caption": "MGTABデータセットにおけるSAHGの性能と、アブレーション分析およびλ0感度を示しています。",
-        "label": "Table 3: Ablation and λ0 sensitivity on MGTAB (%, best bold, second-best underlined). (a) Each",
-        "source": "pdf-image",
-        "purpose": "results",
-        "extractedAt": "2026-05-31T23:01:17.965Z"
-      },
-      "keyFigures": [
-        {
-          "imagePath": "/figures/2605.30166v1_results.png",
-          "page": 8,
-          "caption": "MGTABデータセットにおけるSAHGの性能と、アブレーション分析およびλ0感度を示しています。",
-          "label": "Table 3: Ablation and λ0 sensitivity on MGTAB (%, best bold, second-best underlined). (a) Each",
-          "source": "pdf-image",
-          "purpose": "results",
-          "extractedAt": "2026-05-31T23:01:17.965Z"
-        },
-        {
-          "imagePath": "/figures/2605.30166v1_why.png",
-          "page": 9,
-          "caption": "SAHGがポアンカレ円盤上で学習した方向依存の曲率γ(u)を示しています。",
-          "label": "Figure 4: Direction-dependent curvature γ(u) learned by SAHG on the Poincaré disk: (a) MGTAB",
-          "source": "pdf-image",
-          "purpose": "why",
-          "extractedAt": "2026-05-31T23:01:17.965Z"
-        }
-      ],
       "analogy": {
-        "title": "土壌の質を測る専門家のようなもの",
-        "body": "SAHGは、まるで熟練の農家が土壌の質を詳細に分析するようなものです。一見すると同じ畑でも、場所によって水分や栄養分の偏りがあるように、SAHGはソーシャルグラフの構造的な歪みを修正し、ボットと人間のコミュニティが持つ異なる「密度」や「分離要件」を、方向ごとに最適な解像度で捉えます。これは、グラフ構造の歪みを修正し、方向依存の曲率を学習するメカニズムに対応します。これにより、偽装された関係性を見抜く精度が高まるのです。",
+        "title": "畑の「縁結び役」ミツバチ",
+        "body": "畑で野菜を育てる際、適切なタイミングで「縁結び役」がいないと、実のつきが悪くなったり、栄養が足りなくなったりするようなものです。この研究では、ブラッククミンの花にとってミツバチがまさにその縁結び役。ミツバチが花粉を運ぶことで、種子がしっかり実り、栄養価も高まる。しかし、農家がその縁結び役の活動時間中に農薬をまいてしまうと、せっかくの縁結びが台無しになってしまう、という状況を示しています。",
         "domain": "farming"
       },
+      "kpi": [
+        {
+          "value": "+49.1%",
+          "label": "種子収量"
+        },
+        {
+          "value": "+43.4%",
+          "label": "タンパク質含有量"
+        },
+        {
+          "value": "+60.5%",
+          "label": "発芽率"
+        }
+      ],
+      "whyYouCare": "この研究は、私たちが普段口にするスパイスの品質や、世界の食料供給の裏側にある見過ごされがちな要素に光を当てています。ミツバチのような小さな生き物が、作物の収量だけでなく、タンパク質や油分といった栄養価にまで大きな影響を与えるという事実は、生物多様性の保全が私たちの食生活や経済に直結していることを示唆しています。農家が受粉の重要性を理解し、ミツバチに優しい農業慣行を取り入れることは、持続可能な農業を実現し、より高品質な農産物を消費者に届けるために不可欠です。これは、単にエチオピアのスパイス産業だけでなく、世界中の農業と食の未来を考える上で重要な示唆を与えてくれます。",
+      "takeawayTalk": "ミツバチがスパイスの収量と栄養価を劇的に高めるらしいよ！",
+      "bodyText": "本研究では、エチオピア北部におけるブラッククミン栽培のギャップを埋めるため、管理された野外実験と農家への聞き取り調査を組み合わせました。野外実験では、ミツバチのみによる受粉、開放受粉、受粉媒介者排除の3つの処理をランダム化ブロックデザインで比較し、植物の生育段階、農業形質、種子品質の特性を評価しました。また、開放受粉処理における訪花昆虫の観察を行い、農家調査では受粉サービスに関する知識、農薬使用慣行、ミツバチへの影響に関する懸念を調査しました。\n\nミツバチが花粉を効率的に運ぶことで、ブラッククミンの受精が促進され、その結果、より多くの種子が形成され、種子一つあたりの栄養価も高まります。特に、受粉が制限されると種子の生存能力が著しく低下するため、ミツバチによる受粉は発芽率の劇的な向上に繋がります。しかし、農家が受粉の重要性を認識せず、ミツバチの活動が活発な時間帯に農薬を散布してしまうと、ミツバチの個体数が減少し、受粉サービスが十分に提供されなくなり、結果として収量や品質の向上が阻害されると考えられます。",
+      "bodyGlossary": [
+        {
+          "term": "ランダム化ブロックデザイン",
+          "definition": "実験計画法の一つで、環境の不均一性を考慮する手法。",
+          "start": 106,
+          "end": 119
+        },
+        {
+          "term": "生育段階",
+          "definition": "植物の成長過程における各フェーズ。",
+          "start": 127,
+          "end": 131
+        },
+        {
+          "term": "農業形質",
+          "definition": "作物の収量や品質に関わる特徴。",
+          "start": 132,
+          "end": 136
+        },
+        {
+          "term": "訪花昆虫",
+          "definition": "花を訪れて花粉を運ぶ昆虫。",
+          "start": 165,
+          "end": 169
+        },
+        {
+          "term": "受精",
+          "definition": "花粉がめしべに付着し、種子形成が始まる過程。",
+          "start": 252,
+          "end": 254
+        },
+        {
+          "term": "発芽率",
+          "definition": "種子が発芽する割合。",
+          "start": 336,
+          "end": 339
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "ランダム化ブロックデザイン",
+          "definition": "実験計画法の一つで、環境の不均一性を考慮する手法。",
+          "start": 106,
+          "end": 119
+        },
+        {
+          "term": "生育段階",
+          "definition": "植物の成長過程における各フェーズ。",
+          "start": 127,
+          "end": 131
+        },
+        {
+          "term": "農業形質",
+          "definition": "作物の収量や品質に関わる特徴。",
+          "start": 132,
+          "end": 136
+        },
+        {
+          "term": "訪花昆虫",
+          "definition": "花を訪れて花粉を運ぶ昆虫。",
+          "start": 165,
+          "end": 169
+        },
+        {
+          "term": "受精",
+          "definition": "花粉がめしべに付着し、種子形成が始まる過程。",
+          "start": 252,
+          "end": 254
+        },
+        {
+          "term": "発芽率",
+          "definition": "種子が発芽する割合。",
+          "start": 336,
+          "end": 339
+        }
+      ],
+      "agriEconRelevance": "",
       "analogyNeedsReview": false,
-      "useArticleV2": true
+      "readingTimeSec": 245
     },
     {
       "id": "2605.29276v1",
@@ -162,78 +208,68 @@
       ],
       "publishedAt": "2026-05-28T02:52:43Z",
       "url": "https://arxiv.org/abs/2605.29276v1",
-      "pdfUrl": "https://arxiv.org/pdf/2605.29276v1.pdf",
+      "pdfUrl": "https://arxiv.org/pdf/2605.29276.pdf",
       "categories": [
         "topic:astro",
         "astro-ph.CO"
       ],
       "abstract": "The 21-cm emission line from neutral hydrogen during the cosmic Dark Ages can be a powerful probe of cosmological models and early universe physics. This work provides a quantitative forecast for the design requirements of a lunar far-side interferometer array aimed at measuring the 21-cm power spectrum and constraining inflationary models through the running of the spectral index $α_s$. During the Dark Ages, larger collapsed objects have not yet formed, allowing linear perturbation theory to remain valid down to much smaller scales than is possible in current large-scale structure or CMB surveys. We first validate this linearity assumption by quantifying the contribution of minihalos to the 21-cm signal. We then establish a generalized and flexible analytical framework for the baseline density distribution of interferometers that may consist of an arbitrary number of stations or sub-arrays. Incorporating a realistic noise model, we determine the configurations necessary to reach the detection threshold and demonstrate that distributing the total collecting area into multiple stations can improve the signal-to-noise ratio of the power spectrum at a tunable small scale of interest by up to two orders of magnitude. We then show that a lunar array requires at least $\\sim30,000$ probed Fourier modes to achieve a constraint on inflation of $σ(α_s) = 0.034$, a result competitive with the Planck 2018 results and capable of distinguishing between different inflationary scenarios. We quantitatively explain how thermal noise severely erodes modes at high redshifts and small scales -- scales previously considered easily accessible to Dark Ages observations in the literature -- and discuss the prospects for Dark Ages observations as a new and independent probe despite this limitation.",
       "summary": {
-        "gist": "本研究は、宇宙の暗黒時代に中性水素から放射される21cm線信号を測定するための月面裏側干渉計アレイの設計要件を定量的に予測しています。これにより、インフレーションモデルのスペクトル指数αsに制約を与え、宇宙初期の物理を解明する可能性を示しています。",
-        "novelty": "従来の宇宙マイクロ波背景放射（CMB）や大規模構造（LSS）観測では到達できなかった、より小さなスケールでの宇宙初期の摂動を21cm線信号で探る点が新規性です。特に、ミニハローの寄与を定量化し、線形摂動理論が有効なスケールを検証した上で、任意の数のステーションやサブアレイで構成される干渉計のベースライン密度分布に対する汎用的な解析フレームワークを確立しています。",
-        "method": "本研究では、宇宙の暗黒時代における21cm線信号のパワー・スペクトルを計算するため、数値パッケージCAMBを用いてボルツマン・アインシュタイン方程式を解いています。現実的なノイズモデルを組み込み、干渉計のベースライン密度分布に対する汎用的な解析フレームワークを構築し、検出閾値に達するために必要な構成を決定しました。また、インフレーションモデルのスペクトル指数αsに対する制約を評価するために、約30,000のフーリエモードをプローブする必要があることを示しています。",
-        "results": "分析の結果、全集光面積を複数のステーションに分散させることで、関心のある小さなスケールでのパワー・スペクトルの信号対雑音比（SNR）を最大2桁向上できることが示されました。また、月面アレイはインフレーションモデルのスペクトル指数αsに対してσ(αs) = 0.034という制約を達成するために、少なくとも約30,000のフーリエモードをプローブする必要があり、これはPlanck 2018の結果に匹敵し、異なるインフレーションシナリオを区別できるレベルです。さらに、熱雑音がこれまでアクセス可能と考えられていた高赤方偏移・小スケールのモードを著しく劣化させることも明らかにしています。",
-        "why": "全集光面積を複数のステーションに分散させることで信号対雑音比が向上するのは、干渉計アレイのベースライン密度分布を最適化し、特定の空間スケールでの信号検出感度を高めるためです。これにより、より広範囲のフーリエ空間を効率的にサンプリングし、微弱な21cm線信号をノイズから分離しやすくなります。熱雑音が小スケールのモードを劣化させるのは、信号が非常に弱く、観測装置自体の熱によるランダムなノイズが信号を覆い隠してしまうためです。特に高赤方偏移では信号がさらに希薄になるため、この影響が顕著になります。",
-        "figures": "アブストラクトには具体的な図表の記述はありませんが、論文本文抜粋のFigure 1では、宇宙の暗黒時代における様々な赤方偏移での無次元、球面平均21cmパワー・スペクトルがCAMBを用いて計算された例が示されています。これは、宇宙の進化段階における21cm線信号の強度と空間的な変動がどのように変化するかを視覚的に示していると考えられます。"
+        "gist": "宇宙の「暗黒時代」は、ビッグバン後の水素再結合期から最初の星が誕生するまでの、光を放つ天体がほとんど存在しない時代です。この時代には、中性水素から放出される21cm線が唯一の観測可能な信号であり、宇宙の初期条件や構造形成の謎を解き明かす鍵となります。しかし、この21cm信号は非常に微弱で、地球の電離層や人工的な電波干渉によって観測が極めて困難でした。そのため、月の裏側が理想的な観測地として注目されています。",
+        "novelty": "これまでの宇宙観測は、宇宙マイクロ波背景放射（CMB）や大規模構造（LSS）に限定され、宇宙の「暗黒時代」と呼ばれる最初の星が誕生する前の時代については、観測が極めて困難でした。特に地球上からの観測は、電離層や人工的な電波干渉により大きな制約を受けていました。 本研究は、月の裏側に電波望遠鏡アレイを設置することで、地球の電離層や電波干渉の影響を受けずに、暗黒時代の21cm信号を観測する具体的な設計要件と性能予測を提示しました。これにより、これまでアクセスできなかった宇宙初期の情報を高精度で取得できる可能性を示しています。",
+        "method": "本研究では、月の裏側に設置する電波干渉計アレイの設計要件を定量的に予測するための分析フレームワークを確立しました。まず、暗黒時代の21cm信号に対するミニハローの寄与を定量化し、線形摂動理論が有効なスケールを検証しました。次に、任意の数のステーションやサブアレイで構成される干渉計のベースライン密度分布に対する柔軟な分析フレームワークを構築しました。現実的なノイズモデルを組み込み、検出閾値に達するために必要な構成を決定し、総収集面積を複数のステーションに分散させることで、関心のある小さなスケールでのパワースペクトルの信号対雑音比を最大2桁改善できることを示しました。",
+        "results": "月の裏側アレイは、インフレーションの制約 σ(αs) = 0.034 を達成するために、少なくとも約30,000のフーリエモードを観測する必要があることを示しました。この結果は、Planck 2018の結果に匹敵し、異なるインフレーションシナリオを区別できる可能性があります。また、熱ノイズが高赤方偏移および小スケールでのモードを著しく侵食することを定量的に説明しました。これは、これまで文献で暗黒時代の観測にとって容易にアクセス可能と考えられていたスケールです。",
+        "why": "宇宙の暗黒時代では、複雑な星形成プロセスがまだ始まっていないため、構造の成長は主に線形的な振る舞いをします。これにより、インフレーションによって生成された原始的な密度ゆらぎがよく保存されており、21cm信号が宇宙の初期条件を調べる優れたプローブとなります。月の裏側は、地球の電離層による吸収・屈折や、地上の人工的な電波干渉（RFI）から完全に遮蔽されるため、非常に微弱な21cm信号をクリーンな環境で観測できます。複数のアンテナを分散配置することで、特定のスケールでの信号対雑音比が向上し、より詳細な宇宙の情報を引き出すことが可能になります。"
       },
       "source": "arxiv",
       "journal": "arXiv（プレプリント / astro-ph.CO）",
       "field": "天文・宇宙",
-      "titleJa": "宇宙の暗黒時代における21cm線パワー・スペクトル測定とインフレーションモデルの制約：月面裏側干渉計アレイの設計ガイド",
-      "catchTitle": "月面望遠鏡で宇宙の謎を解く？",
-      "hook": "宇宙の「暗黒時代」に放たれた微弱な電波を捉えるため、月面裏側に設置する電波望遠鏡アレイの最適な設計が提案されています。",
+      "titleJa": "月面裏側干渉計アレイ設計ガイド：ダークエイジからのパワースペクトル測定と宇宙論的制約",
+      "catchTitle": "月の裏側で宇宙の夜明けを観測する",
+      "hook": "あなたは宇宙の始まり、最初の星が生まれる前の「暗黒時代」に何があったか知りたいと思いませんか？",
       "quiz": {
-        "question": "宇宙の暗黒時代に21cm線信号を観測する際、月面裏側に電波望遠鏡を設置する最大の利点は何ですか？",
+        "question": "この研究で、宇宙の「暗黒時代」の観測に月の裏側が理想的な場所とされる主な理由は何でしょう？",
         "options": [
-          "地球の電離層による吸収・屈折や、地上の電波干渉を受けないため、非常に微弱な信号をクリアに観測できる。",
-          "月面は地球よりも重力が小さいため、大型の望遠鏡を容易に建設でき、観測コストを大幅に削減できる。",
-          "月面裏側は地球から常に隠れているため、地球からの光害の影響を受けず、可視光での観測精度が向上する。"
+          "月面が地球よりも太陽に近いから",
+          "地球の電離層と人工的な電波干渉から遮蔽されるから",
+          "月の裏側には宇宙人が住んでいるから"
         ],
-        "correctIndex": 0,
-        "explanation": "月面裏側は地球の電離層の影響を受けず、さらに地球からの電波干渉（RFI）からも遮蔽されるため、極めて微弱な21cm線信号をクリアに観測するのに理想的な環境です。",
-        "difficulty": "medium"
+        "correctIndex": 1,
+        "explanation": "月の裏側は、地球の電離層による電波の吸収・屈折や、地上の人工的な電波干渉（RFI）から完全に遮蔽されるため、非常に微弱な21cm信号をクリーンな環境で観測するのに理想的です。"
       },
-      "limitations": "本研究では、CAMBを用いた21cmパワー・スペクトル計算において、第二次の有効粘性減衰（vbc^2に起因するパワー・スペクトル抑制効果）が考慮されていません。ただし、これはプローブする最大スケール（k〜0.5 Mpc^-1）では影響が小さく、信号対雑音比への寄与もパーセントレベルであるため、異なるアレイ構成間の相対的な変化を議論する本研究の結果には影響しないと述べられています。",
+      "limitations": "熱ノイズが高赤方偏移および小スケールでのモードを著しく侵食するという課題が残されており、これらのスケールでの観測精度を向上させるためのさらなる技術開発が必要です。また、月の裏側への大規模アレイ建設には、莫大なコストと技術的・工学的な困難が伴います。",
       "glossary": [
         {
-          "term": "21cm線",
-          "definition": "中性水素原子が持つ特定のエネルギー状態間の遷移によって放出される、波長21.1cmの電波のことです。宇宙初期のガス分布や構造形成の様子を探る重要な手がかりとなります。",
-          "reading": "21-cm emission line"
+          "term": "暗黒時代",
+          "definition": "ビッグバン後の水素再結合から最初の星誕生までの時代"
         },
         {
-          "term": "宇宙の暗黒時代",
-          "definition": "宇宙誕生後、水素が再結合して中性になり、最初の星が形成されるまでの期間を指します。この時代は光を放つ天体がほとんどなく、観測が非常に困難です。",
-          "reading": "cosmic Dark Ages"
-        },
-        {
-          "term": "パワー・スペクトル",
-          "definition": "宇宙の物質分布や温度の空間的な変動の大きさを、異なるスケール（波長）ごとに示す指標です。これにより、宇宙の構造形成のパターンを定量的に分析できます。",
-          "reading": "power spectrum"
-        },
-        {
-          "term": "インフレーションモデル",
-          "definition": "宇宙誕生直後に極めて短時間で指数関数的な膨張が起こったとする理論モデルです。現在の宇宙の大規模構造の起源や、宇宙マイクロ波背景放射の均一性などを説明します。",
-          "reading": "inflationary models"
-        },
-        {
-          "term": "スペクトル指数αs",
-          "definition": "宇宙初期の密度ゆらぎの大きさが、異なる空間スケールでどのように変化するかを示す指標です。インフレーションモデルの具体的な種類を区別するのに役立ちます。",
-          "reading": "running of the spectral index αs"
+          "term": "21cm信号",
+          "definition": "中性水素原子が放出する電波で宇宙初期の情報を運ぶ"
         },
         {
           "term": "干渉計アレイ",
-          "definition": "複数の電波望遠鏡を離れた場所に配置し、それらの信号を合成することで、単一の巨大な望遠鏡では得られない高い解像度と感度を実現する観測システムです。",
-          "reading": "interferometer array"
+          "definition": "複数のアンテナを連携させ高解像度観測を行うシステム"
         },
         {
           "term": "ミニハロー",
-          "definition": "宇宙初期に形成された、星を形成するには小さすぎる暗黒物質の塊のことです。21cm線信号にわずかな非線形性をもたらしますが、暗黒時代ではその寄与は限定的です。",
-          "reading": "minihalos"
+          "definition": "星を形成するには小さすぎる暗黒物質の塊"
         },
         {
-          "term": "信号対雑音比（SNR）",
-          "definition": "観測された信号の強さと、背景にあるノイズの強さの比率です。この値が高いほど、信号がノイズに埋もれずに明確に検出できることを意味します。",
-          "reading": "Signal-to-Noise Ratio"
+          "term": "線形摂動理論",
+          "definition": "宇宙の密度ゆらぎが小さい場合の近似理論"
+        },
+        {
+          "term": "パワースペクトル",
+          "definition": "宇宙の構造形成における密度ゆらぎの分布を示す指標"
+        },
+        {
+          "term": "信号対雑音比",
+          "definition": "信号の強さとノイズの強さの比率"
+        },
+        {
+          "term": "インフレーション",
+          "definition": "宇宙誕生直後の急膨張理論"
         }
       ],
       "takeaway": {
@@ -284,12 +320,136 @@
         }
       ],
       "analogy": {
-        "title": "広大な畑の土壌調査のようなもの",
-        "body": "広大な畑で、まだ作物が育つ前の土壌のわずかな成分変化を捉え、将来の収穫量を予測するようなものです。これは、宇宙の「暗黒時代」の微弱な電波信号から、初期宇宙の情報を読み解く研究の仕組みに対応します。広大な畑を効率的に調査するため、複数の小型センサーを配置し、それぞれのセンサーが捉える微細な変化を組み合わせることで、全体の土壌状態を高精度で把握できるのです。",
+        "title": "畑の土壌分析で未来の収穫を予測する",
+        "body": "これは、まるで広大な畑の土壌を分析して、まだ何も育っていない開墾前の土地が、将来どのような作物をどれだけ豊かに実らせるかを予測するようなものです。土壌の成分（宇宙の初期条件）を詳細に調べることで、どんな品種（宇宙論モデル）がこの土地に合っているか、どれくらいの肥料（観測装置の設計）が必要かを事前に知ることができます。この研究は、月の裏側という手つかずの土地で、宇宙の最も古い「土壌」を分析し、未来の宇宙の「収穫」（宇宙論的制約）を最大化するための最適な「農法」（観測アレイの設計）を提案しているのです。",
         "domain": "farming"
       },
       "analogyNeedsReview": false,
-      "useArticleV2": true
+      "useArticleV2": true,
+      "background": "宇宙の「暗黒時代」は、ビッグバン後の水素再結合期から最初の星が誕生するまでの、光を放つ天体がほとんど存在しない時代です。この時代には、中性水素から放出される21cm線が唯一の観測可能な信号であり、宇宙の初期条件や構造形成の謎を解き明かす鍵となります。しかし、この21cm信号は非常に微弱で、地球の電離層や人工的な電波干渉によって観測が極めて困難でした。そのため、月の裏側が理想的な観測地として注目されています。",
+      "oneLiner": "月の裏側に設置する電波望遠鏡アレイの最適な設計を提案し、宇宙の暗黒時代の謎を解き明かす可能性を示した研究。",
+      "noveltyContrast": {
+        "before": "これまでの宇宙観測は、宇宙マイクロ波背景放射（CMB）や大規模構造（LSS）に限定され、宇宙の「暗黒時代」と呼ばれる最初の星が誕生する前の時代については、観測が極めて困難でした。特に地球上からの観測は、電離層や人工的な電波干渉により大きな制約を受けていました。",
+        "after": "本研究は、月の裏側に電波望遠鏡アレイを設置することで、地球の電離層や電波干渉の影響を受けずに、暗黒時代の21cm信号を観測する具体的な設計要件と性能予測を提示しました。これにより、これまでアクセスできなかった宇宙初期の情報を高精度で取得できる可能性を示しています。"
+      },
+      "kpi": [
+        {
+          "value": "30,000",
+          "label": "必要なフーリエモード数"
+        },
+        {
+          "value": "0.034",
+          "label": "インフレーション制約の精度"
+        }
+      ],
+      "whyYouCare": "この研究は、私たちが住む宇宙がどのように始まり、現在の姿になったのかという根源的な問いに答えるための大きな一歩です。月の裏側に観測施設を建設するという壮大な計画は、宇宙開発技術の進歩を加速させ、将来の月面基地建設や深宇宙探査にも貢献するでしょう。また、宇宙初期の物理法則を解明することは、ダークマターやダークエネルギーといった未解明な宇宙の構成要素の理解にも繋がり、私たちの科学技術や世界観に大きな影響を与える可能性があります。未来の宇宙観測のあり方を提示する、まさに夢のある研究と言えるでしょう。",
+      "takeawayTalk": "月の裏側で宇宙の夜明けを観測する計画が、いよいよ現実味を帯びてきたよ！",
+      "bodyText": "本研究では、月の裏側に設置する電波干渉計アレイの設計要件を定量的に予測するための分析フレームワークを確立しました。まず、暗黒時代の21cm信号に対するミニハローの寄与を定量化し、線形摂動理論が有効なスケールを検証しました。次に、任意の数のステーションやサブアレイで構成される干渉計のベースライン密度分布に対する柔軟な分析フレームワークを構築しました。現実的なノイズモデルを組み込み、検出閾値に達するために必要な構成を決定し、総収集面積を複数のステーションに分散させることで、関心のある小さなスケールでのパワースペクトルの信号対雑音比を最大2桁改善できることを示しました。\n\n宇宙の暗黒時代では、複雑な星形成プロセスがまだ始まっていないため、構造の成長は主に線形的な振る舞いをします。これにより、インフレーションによって生成された原始的な密度ゆらぎがよく保存されており、21cm信号が宇宙の初期条件を調べる優れたプローブとなります。月の裏側は、地球の電離層による吸収・屈折や、地上の人工的な電波干渉（RFI）から完全に遮蔽されるため、非常に微弱な21cm信号をクリーンな環境で観測できます。複数のアンテナを分散配置することで、特定のスケールでの信号対雑音比が向上し、より詳細な宇宙の情報を引き出すことが可能になります。",
+      "bodyGlossary": [
+        {
+          "term": "干渉計アレイ",
+          "definition": "複数のアンテナを連携させ高解像度観測を行うシステム",
+          "start": 17,
+          "end": 23
+        },
+        {
+          "term": "暗黒時代",
+          "definition": "ビッグバン後の水素再結合から最初の星誕生までの時代",
+          "start": 60,
+          "end": 64
+        },
+        {
+          "term": "21cm信号",
+          "definition": "中性水素原子が放出する電波で宇宙初期の情報を運ぶ",
+          "start": 65,
+          "end": 71
+        },
+        {
+          "term": "ミニハロー",
+          "definition": "星を形成するには小さすぎる暗黒物質の塊",
+          "start": 75,
+          "end": 80
+        },
+        {
+          "term": "線形摂動理論",
+          "definition": "宇宙の密度ゆらぎが小さい場合の近似理論",
+          "start": 89,
+          "end": 95
+        },
+        {
+          "term": "パワースペクトル",
+          "definition": "宇宙の構造形成における密度ゆらぎの分布を示す指標",
+          "start": 251,
+          "end": 259
+        },
+        {
+          "term": "信号対雑音比",
+          "definition": "信号の強さとノイズの強さの比率",
+          "start": 260,
+          "end": 266
+        },
+        {
+          "term": "インフレーション",
+          "definition": "宇宙誕生直後の急膨張理論",
+          "start": 347,
+          "end": 355
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "干渉計アレイ",
+          "definition": "複数のアンテナを連携させ高解像度観測を行うシステム",
+          "start": 17,
+          "end": 23
+        },
+        {
+          "term": "暗黒時代",
+          "definition": "ビッグバン後の水素再結合から最初の星誕生までの時代",
+          "start": 60,
+          "end": 64
+        },
+        {
+          "term": "21cm信号",
+          "definition": "中性水素原子が放出する電波で宇宙初期の情報を運ぶ",
+          "start": 65,
+          "end": 71
+        },
+        {
+          "term": "ミニハロー",
+          "definition": "星を形成するには小さすぎる暗黒物質の塊",
+          "start": 75,
+          "end": 80
+        },
+        {
+          "term": "線形摂動理論",
+          "definition": "宇宙の密度ゆらぎが小さい場合の近似理論",
+          "start": 89,
+          "end": 95
+        },
+        {
+          "term": "パワースペクトル",
+          "definition": "宇宙の構造形成における密度ゆらぎの分布を示す指標",
+          "start": 251,
+          "end": 259
+        },
+        {
+          "term": "信号対雑音比",
+          "definition": "信号の強さとノイズの強さの比率",
+          "start": 260,
+          "end": 266
+        },
+        {
+          "term": "インフレーション",
+          "definition": "宇宙誕生直後の急膨張理論",
+          "start": 347,
+          "end": 355
+        }
+      ],
+      "agriEconRelevance": "",
+      "categoryL1": "adjacent",
+      "categoryL2": "astronomy",
+      "arxivPrimary": "astro-ph.CO",
+      "readingTimeSec": 370
     },
     {
       "id": "2605.30145v1",
@@ -310,12 +470,10 @@
       ],
       "abstract": "We study black hole (BH) formation from the nonlinear growth and collapse of primordial perturbations during the matter-dominated era. Modelling cold dark matter (CDM) as pressureless dust, we describe the collapse in a fully nonlinear relativistic framework using the Lemaître-Tolman-Bondi (LTB) and quasi-spherical Szekeres solutions as exact perturbations of a spatially-flat Friedmann-Lemaître-Robertson-Walker (FLRW) $Λ$CDM background. At first order in relativistic scalar perturbation theory, the growing mode of any relevant quantity can be expressed in terms of the conserved gauge-invariant curvature perturbation $\\mathcal{R}_c$, which acts as a potential for the 3-curvature of hypersurfaces orthogonal to the matter 4-velocity. We use this result to express the active gravitational mass and curvature functions of the LTB and Szekeres models in terms of the initial values of $\\mathcal{R}_c$ and its spatial derivatives. From these initial curvature data we derive: (i) the turn-around, collapse, and apparent-horizon formation times, and (ii) the regularity conditions required for BH formation. We show that sinusoidal and Gaussian profiles do not provide viable BH-forming channels, whereas broad compensated curvature peaks, naturally predicted by peak theory, do. We then estimate the formation times of $10^{3}-10^{6}~\\mathrm{M}_\\odot$ massive BH seeds produced by the direct collapse of primordial CDM curvature peaks, finding full BH formation at redshifts $z&gt;5$, with core collapse beginning at $10 \\lesssim z \\lesssim 16$. Finally, we characterize the local dynamics and singularity type of the collapse (point-like, cigar-like, or pancake-like) directly from the initial comoving curvature data, clarifying the role of the initial shear in selecting the collapse end-state.",
       "summary": {
-        "gist": "本研究は、物質優勢時代における原始的な摂動の非線形な成長と崩壊からブラックホール（BH）が形成されるメカニズムを研究しています。特に、コールドダークマター（CDM）の曲率ピークが直接崩壊することで、超大質量ブラックホール種子が形成される可能性を、相対論的な枠組みで明らかにしました。",
-        "novelty": "従来の研究では、ブラックホール形成における初期摂動の空間構造や潮汐異方性の影響が十分に考慮されていませんでした。本研究は、Lemaître-Tolman-Bondi (LTB) および準球対称Szekeres解を、空間的に平坦なFLRW ΛCDM背景の厳密な摂動として用いることで、非線形相対論的枠組みで崩壊を記述し、初期曲率データからBH形成の規則性条件を導き出しました。これにより、単純なプロファイルではBH形成が困難である一方、ピーク理論で予測される広範な補償された曲率ピークがBH形成の実行可能な経路であることを示し、初期宇宙における超大質量BH種子の起源に関する研究の空白を埋めています。",
-        "method": "本研究では、物質優勢時代における原始摂動の非線形成長と崩壊によるブラックホール形成を研究するため、コールドダークマター（CDM）を圧力のないダストとしてモデル化しました。空間的に平坦なフリードマン・ルメートル・ロバートソン・ウォーカー（FLRW）ΛCDM背景の厳密な摂動として、ルメートル・トルマン・ボンディ（LTB）解と準球対称Szekeres解という非線形相対論的枠組みを使用しています。解析は、相対論的スカラー摂動理論の一次で、ゲージ不変な保存量である共動曲率摂動Rcを用いて行われ、このRcと空間微分から、ターンアラウンド、崩壊、見かけの事象の地平面形成の時間、およびBH形成に必要な規則性条件を導き出しています。",
-        "results": "分析の結果、正弦波やガウス型の曲率プロファイルではブラックホール形成が不可能であることが示されました。これらは中心に裸の特異点を生成するためです。一方で、ピーク理論によって自然に予測される広範な補償された曲率ピークは、実行可能なブラックホール形成経路を提供することが判明しました。これらのピークは、中心の特異点をほぼ均質なコアが覆い、急峻な補償された尾部がシェルクロッシングを遅らせることで、ブラックホール形成を可能にします。具体的には、10^3から10^6太陽質量規模の超大質量ブラックホール種子が、赤方偏移z > 5で完全に形成され、コア崩壊は10 ≲ z ≲ 16で始まると推定されています。また、崩壊の局所的なダイナミクスと特異点タイプ（点状、葉巻状、パンケーキ状）は、初期の共動曲率データから直接特徴づけられ、初期せん断が崩壊の最終状態を決定する重要な役割を果たすことが明らかになりました。",
-        "why": "超大質量ブラックホール種子が形成されるのは、初期宇宙の物質優勢時代において、コールドダークマター（CDM）の密度ゆらぎが特定の空間構造を持つ場合に、重力崩壊が効率的に進行するためです。特に、ピーク理論で予測される「広範な補償された曲率ピーク」は、中心部の密度が十分に高く、かつ周囲の物質分布が適切に配置されているため、中心の特異点が事象の地平面によって覆われる「裸の特異点ではない」ブラックホールが形成されます。これにより、単純な密度ゆらぎでは起こりえない、安定したブラックホールへの直接崩壊が可能になるのです。また、圧力のないダストとしてCDMをモデル化することで、放射優勢時代のような圧力勾配による崩壊の閾値が存在せず、重力崩壊が促進されることも要因です。",
-        "figures": "アブストラクトに図表の記述なし"
+        "gist": "要約生成に失敗しました（原文をご参照ください）",
+        "novelty": "We study black hole (BH) formation from the nonlinear growth and collapse of primordial perturbations during the matter-dominated era. Modelling cold dark matter (CDM) as pressureless dust, we describe the collapse in a fully nonlinear relativistic framework using the Lemaître-Tolman-Bondi (LTB) and quasi-spherical Szekeres solutions as exact perturbations of a spatially-flat Friedmann-Lemaître-Robertson-Walker (FLRW) $Λ$CDM background. At first order in relativistic scalar perturbation theory, the growing mode of any relevant quantity can be expressed in terms of the conserved gauge-invariant curvature perturbation $\\mathcal{R}_c$, which acts as a potential for the 3-curvature of hypersurfaces orthogonal to the matter 4-velocity. We use this result to express the active gravitational mass and curvature functions of the LTB and Szekeres models in terms of the initial values of $\\mathcal{R}_c$ and its spatial derivatives. From these initial curvature data we derive: (i) the turn-around, collapse, and apparent-horizon formation times, and (ii) the regularity conditions required for BH formation. We show that sinusoidal and Gaussian profiles do not provide viable BH-forming channels, whereas broad compensated curvature peaks, naturally predicted by peak theory, do. We then estimate the formation times of $10^{3}-10^{6}~\\mathrm{M}_\\odot$ massive BH seeds produced by the direct collapse of primordial CDM curvature peaks, finding full BH formation at redshifts $z&gt;5$, with core collapse beginning at $10 \\lesssim z \\lesssim 16$. Finally, we characterize the local dynamics and singularity type of the collapse (point-like, cigar-like, or pancake-like) directly from the initial comoving curvature data, clarifying the role of the initial shear in selecting the collapse end-state.",
+        "method": "We study black hole (BH) formation from the nonlinear growth and collapse of primordial perturbations during the matter-dominated era. Modelling cold dark matter (CDM) as pressureless dust, we describe the collapse in a fully nonlinear relativistic framework using the Lemaître-Tolman-Bondi (LTB) and quasi-spherical Szekeres solutions as exact perturbations of a spatially-flat Friedmann-Lemaître-Robertson-Walker (FLRW) $Λ$CDM background. At first order in relativistic scalar perturbation theory, the growing mode of any relevant quantity can be expressed in terms of the conserved gauge-invariant curvature perturbation $\\mathcal{R}_c$, which acts as a potential for the 3-curvature of hypersurfaces orthogonal to the matter 4-velocity. We use this result to express the active gravitational mass and curvature functions of the LTB and Szekeres models in terms of the initial values of $\\mathcal{R}_c$ and its spatial derivatives. From these initial curvature data we derive: (i) the turn-around, collapse, and apparent-horizon formation times, and (ii) the regularity conditions required for BH formation. We show that sinusoidal and Gaussian profiles do not provide viable BH-forming channels, whereas broad compensated curvature peaks, naturally predicted by peak theory, do. We then estimate the formation times of $10^{3}-10^{6}~\\mathrm{M}_\\odot$ massive BH seeds produced by the direct collapse of primordial CDM curvature peaks, finding full BH formation at redshifts $z&gt;5$, with core collapse beginning at $10 \\lesssim z \\lesssim 16$. Finally, we characterize the local dynamics and singularity type of the collapse (point-like, cigar-like, or pancake-like) directly from the initial comoving curvature data, clarifying the role of the initial shear in selecting the collapse end-state.",
+        "results": "We study black hole (BH) formation from the nonlinear growth and collapse of primordial perturbations during the matter-dominated era. Modelling cold dark matter (CDM) as pressureless dust, we describe the collapse in a fully nonlinear relativistic framework using the Lemaître-Tolman-Bondi (LTB) and quasi-spherical Szekeres solutions as exact perturbations of a spatially-flat Friedmann-Lemaître-Robertson-Walker (FLRW) $Λ$CDM background. At first order in relativistic scalar perturbation theory, the growing mode of any relevant quantity can be expressed in terms of the conserved gauge-invariant curvature perturbation $\\mathcal{R}_c$, which acts as a potential for the 3-curvature of hypersurfaces orthogonal to the matter 4-velocity. We use this result to express the active gravitational mass and curvature functions of the LTB and Szekeres models in terms of the initial values of $\\mathcal{R}_c$ and its spatial derivatives. From these initial curvature data we derive: (i) the turn-around, collapse, and apparent-horizon formation times, and (ii) the regularity conditions required for BH formation. We show that sinusoidal and Gaussian profiles do not provide viable BH-forming channels, whereas broad compensated curvature peaks, naturally predicted by peak theory, do. We then estimate the formation times of $10^{3}-10^{6}~\\mathrm{M}_\\odot$ massive BH seeds produced by the direct collapse of primordial CDM curvature peaks, finding full BH formation at redshifts $z&gt;5$, with core collapse beginning at $10 \\lesssim z \\lesssim 16$. Finally, we characterize the local dynamics and singularity type of the collapse (point-like, cigar-like, or pancake-like) directly from the initial comoving curvature data, clarifying the role of the initial shear in selecting the collapse end-state."
       },
       "source": "arxiv",
       "journal": "arXiv（プレプリント / gr-qc）",
@@ -414,8 +572,11 @@
         "body": "この研究は、まるで農地の土壌の特定の場所が、なぜか周囲よりも格段に肥沃で、作物が驚くほど大きく育つ「特異点」になる現象を解明するようです。通常の土壌改良では生まれない、その場所固有の土壌構造と水分・栄養素の絶妙な配置が、豊作を直接引き起こすメカニズムに対応します。土壌のわずかな違いが、最終的な収穫量に決定的な差を生むのと同じくらい、初期宇宙の微細な構造が超大質量ブラックホールの誕生を左右するのです。",
         "domain": "farming"
       },
-      "analogyNeedsReview": false,
-      "useArticleV2": true
+      "useArticleV2": true,
+      "categoryL1": "adjacent",
+      "categoryL2": "general-econ",
+      "arxivPrimary": "astro-ph.CO",
+      "readingTimeSec": 549
     },
     {
       "id": "2605.29424v1",
@@ -439,12 +600,10 @@
       ],
       "abstract": "The mean squared displacement (MSD) of particles or probes is commonly estimated from microscopy videos using particle tracking approaches, which rely on tuning parameters manually, and are often unstable over the entire lag time range, especially in dense or low-contrast situations. In this work, we propose model-free ab initio uncertainty quantification (MF-AIUQ), a model-free method for scattering analysis of microscopy video based on a probabilistic framework, which estimates MSD without isolating particles and linking their trajectories. Based on the relationship between the intermediate scattering function (ISF) and the MSD derived from the cumulant theorem, MF-AIUQ estimates the MSD values by the marginal maximum likelihood estimator. To reduce the computational cost, the likelihood function is approximated by a subset of Fourier-transformed intensities. These intensities are equally spaced at the logarithmic values of Fourier basis functions and lag time points. We found that the ISF is smooth in this logarithmic input space, and the information of the ISF can be captured by this subset of inputs. We examine the method through simulation studies covering several representative stochastic processes and three experimental systems: a Newtonian fluid for evaluating performance in optically dense and bright-field settings, a gelation system with an evolving MSD shape, and snail mucin, a viscoelastic biopolymer, for modulus estimation. Across these studies, MF-AIUQ provides smooth and stable MSD estimates over the full lag time range and serves as a useful complementary approach in settings where particle tracking is unreliable or a parametric model of MSD is unavailable or unverifiable.",
       "summary": {
-        "gist": "本研究は、顕微鏡動画から粒子の平均二乗変位（MSD）を推定するモデルフリーな手法「MF-AIUQ」を提案しています。この手法は、従来の粒子追跡やモデル依存型の手法が抱える課題を克服し、光学的に高密度な系や低コントラストな状況でも、全ラグ時間範囲にわたって滑らかで安定したMSD推定を可能にします。",
-        "novelty": "従来の粒子追跡法が手動パラメータ調整の不安定性や高密度・低コントラスト環境での性能低下に悩まされ、また既存のモデルフリーな微分動態顕微鏡（DDM）アプローチが特定のラグ時間範囲でしか信頼性の高いMSD推定を提供できなかったのに対し、本研究のMF-AIUQは、粒子を分離したり軌跡をリンクしたりすることなく、全ラグ時間範囲で安定したMSD推定を可能にしました。特に、中間散乱関数（ISF）とMSDの関係を確率論的枠組みで捉え、対数的に等間隔に配置されたフーリエ変換強度の一部を用いることで計算コストを削減しつつ、情報量を効率的に利用する点が新規性です。",
-        "method": "本研究では、確率論的枠組みに基づき、中間散乱関数（ISF）と平均二乗変位（MSD）の関係をキュムラント定理から導出し、周辺最大尤度推定量を用いてMSD値を推定するMF-AIUQを開発しました。計算コスト削減のため、尤度関数はフーリエ基底関数とラグ時間点の対数値で等間隔に配置されたフーリエ変換強度の一部で近似されます。この手法は、いくつかの代表的な確率過程をカバーするシミュレーション研究と、ニュートン流体、ゲル化系、粘弾性バイオポリマーであるカタツムリの粘液という3つの実験システムで検証されました。顕微鏡動画は通常、500×500ピクセルのフレームを500タイムポイントで取得し、ピクセル強度は[0, 1]に正規化されます。",
-        "results": "MF-AIUQは、シミュレーションおよび3つの実験システム（光学的に高密度な明視野設定でのニュートン流体、MSD形状が変化するゲル化システム、弾性率推定のためのカタツムリ粘液）において、全ラグ時間範囲にわたって滑らかで安定したMSD推定値を提供しました。この手法は、粒子追跡が信頼できない、またはMSDのパラメトリックモデルが利用できないか検証できない状況において、有用な補完的アプローチとして機能します。計算コストは、MD-AIUQやDDM-UQアプローチと同程度であることが示されています（図6参照）。",
-        "why": "MF-AIUQが安定したMSD推定を可能にするのは、粒子を個別に追跡するのではなく、顕微鏡動画全体の散乱情報からMSDを推定する「モデルフリー」なアプローチを採用しているためです。具体的には、中間散乱関数（ISF）とMSDの間の関係を確率論的な枠組みで利用し、尤度関数を通じて異なるフーリエ基底関数とラグ時間点からの情報を統合的に扱うことで、推定の安定性を高めています。また、フーリエ変換強度の部分集合を対数スケールでサンプリングし、ガウス過程回帰で補間することで、計算コストを大幅に削減しつつ、全ラグ時間範囲での滑らかなMSD曲線の推定を実現しています。",
-        "figures": "アブストラクトには具体的な図表の記述はありませんが、本文抜粋ではMF-AIUQの計算コストがMD-AIUQやDDM-UQアプローチと同程度であることを示す「図6」への言及があります。この図は、異なる手法間の計算効率を比較する棒グラフや散布図であると推測されます。"
+        "gist": "要約生成に失敗しました（原文をご参照ください）",
+        "novelty": "The mean squared displacement (MSD) of particles or probes is commonly estimated from microscopy videos using particle tracking approaches, which rely on tuning parameters manually, and are often unstable over the entire lag time range, especially in dense or low-contrast situations. In this work, we propose model-free ab initio uncertainty quantification (MF-AIUQ), a model-free method for scattering analysis of microscopy video based on a probabilistic framework, which estimates MSD without isolating particles and linking their trajectories. Based on the relationship between the intermediate scattering function (ISF) and the MSD derived from the cumulant theorem, MF-AIUQ estimates the MSD values by the marginal maximum likelihood estimator. To reduce the computational cost, the likelihood function is approximated by a subset of Fourier-transformed intensities. These intensities are equally spaced at the logarithmic values of Fourier basis functions and lag time points. We found that the ISF is smooth in this logarithmic input space, and the information of the ISF can be captured by this subset of inputs. We examine the method through simulation studies covering several representative stochastic processes and three experimental systems: a Newtonian fluid for evaluating performance in optically dense and bright-field settings, a gelation system with an evolving MSD shape, and snail mucin, a viscoelastic biopolymer, for modulus estimation. Across these studies, MF-AIUQ provides smooth and stable MSD estimates over the full lag time range and serves as a useful complementary approach in settings where particle tracking is unreliable or a parametric model of MSD is unavailable or unverifiable.",
+        "method": "The mean squared displacement (MSD) of particles or probes is commonly estimated from microscopy videos using particle tracking approaches, which rely on tuning parameters manually, and are often unstable over the entire lag time range, especially in dense or low-contrast situations. In this work, we propose model-free ab initio uncertainty quantification (MF-AIUQ), a model-free method for scattering analysis of microscopy video based on a probabilistic framework, which estimates MSD without isolating particles and linking their trajectories. Based on the relationship between the intermediate scattering function (ISF) and the MSD derived from the cumulant theorem, MF-AIUQ estimates the MSD values by the marginal maximum likelihood estimator. To reduce the computational cost, the likelihood function is approximated by a subset of Fourier-transformed intensities. These intensities are equally spaced at the logarithmic values of Fourier basis functions and lag time points. We found that the ISF is smooth in this logarithmic input space, and the information of the ISF can be captured by this subset of inputs. We examine the method through simulation studies covering several representative stochastic processes and three experimental systems: a Newtonian fluid for evaluating performance in optically dense and bright-field settings, a gelation system with an evolving MSD shape, and snail mucin, a viscoelastic biopolymer, for modulus estimation. Across these studies, MF-AIUQ provides smooth and stable MSD estimates over the full lag time range and serves as a useful complementary approach in settings where particle tracking is unreliable or a parametric model of MSD is unavailable or unverifiable.",
+        "results": "The mean squared displacement (MSD) of particles or probes is commonly estimated from microscopy videos using particle tracking approaches, which rely on tuning parameters manually, and are often unstable over the entire lag time range, especially in dense or low-contrast situations. In this work, we propose model-free ab initio uncertainty quantification (MF-AIUQ), a model-free method for scattering analysis of microscopy video based on a probabilistic framework, which estimates MSD without isolating particles and linking their trajectories. Based on the relationship between the intermediate scattering function (ISF) and the MSD derived from the cumulant theorem, MF-AIUQ estimates the MSD values by the marginal maximum likelihood estimator. To reduce the computational cost, the likelihood function is approximated by a subset of Fourier-transformed intensities. These intensities are equally spaced at the logarithmic values of Fourier basis functions and lag time points. We found that the ISF is smooth in this logarithmic input space, and the information of the ISF can be captured by this subset of inputs. We examine the method through simulation studies covering several representative stochastic processes and three experimental systems: a Newtonian fluid for evaluating performance in optically dense and bright-field settings, a gelation system with an evolving MSD shape, and snail mucin, a viscoelastic biopolymer, for modulus estimation. Across these studies, MF-AIUQ provides smooth and stable MSD estimates over the full lag time range and serves as a useful complementary approach in settings where particle tracking is unreliable or a parametric model of MSD is unavailable or unverifiable."
       },
       "source": "arxiv",
       "journal": "arXiv（プレプリント / stat.AP）",
@@ -548,8 +707,11 @@
         "body": "広大な畑で、個々の作物の成長を一つ一つ追跡するのは大変です。しかし、ドローンで畑全体を撮影し、その映像から光の反射や色の変化を分析することで、作物の平均的な生育状況や土壌の健康状態をまとめて把握できます。これは、個々の粒子を追跡せず、顕微鏡動画全体の散乱情報から粒子の平均二乗変位（MSD）を推定する本研究の「モデルフリー手法」に対応します。個別の追跡が難しい状況でも、全体像から安定した情報を得られるのです。",
         "domain": "farming"
       },
-      "analogyNeedsReview": false,
-      "useArticleV2": true
+      "useArticleV2": true,
+      "categoryL1": "adjacent",
+      "categoryL2": "consumer-behavior",
+      "arxivPrimary": "stat.AP",
+      "readingTimeSec": 531
     },
     {
       "id": "2605.30264v1",
@@ -567,12 +729,10 @@
       ],
       "abstract": "We analyze the effect of microscopic heterogeneity on the Lorenz curve of macroscopic observables. Lorenz curve of a response function being a cumulative and bounded quantity, is often a more stable function than the corresponding probability density. We show here that by doing an exponent spectrum analysis of the complementary Lorenz curve, it is possible to obtain a reflection of the underlying heterogeneity that causes the response function to depart from a power law behavior. We demonstrate this framework first by synthetic data and then by analyzing the avalanche statistics of a two dimensional, Random Field Ising Model (RFIM) at zero temperature. This method can lead to possible use in estimating microscopic heterogeneity of a system from analysis of an estimated Lorenz curve, particularly in socio-economic and physical contexts where the full probability distribution function is unavailable.",
       "summary": {
-        "gist": "本研究は、微視的な不均一性がマクロな観測量のローレンツ曲線に与える影響を分析し、相補ローレンツ曲線の指数スペクトル解析を通じて、基底にある不均一性の特徴を捉える新しい手法を提案しています。この手法は、完全な確率分布関数が得られない状況でも、システムの不均一性を推定するのに役立つ可能性を示しています。",
-        "novelty": "従来の研究では、確率分布関数からローレンツ曲線や不均一性指標を計算していましたが、本研究は確率分布が不明な場合でも、相補ローレンツ曲線の指数スペクトルを分析することで、システムの不均一性を間接的に推定する新しい枠組みを提示しています。特に、シンプルなべき乗則基底を用いることで、確率分布の指数との直接的な対応関係を保持しつつ、不均一性の幅を定量的に評価できる点が新規性です。",
-        "method": "本研究では、まず合成データを用いて提案手法の有効性を検証し、次にゼロ温度の2次元ランダム磁場イジングモデル（RFIM）の雪崩統計データに適用しています。分析手法としては、相補ローレンツ関数をべき乗則基底で展開し、その指数スペクトル（スペクトル密度）を解析しています。特に、直接的な逆変換が困難なため、局所指数（αeff）の最大値と最小値の差（Δα）や、局所指数の分布から計算されるエントロピー（Sα）といった間接的な指標を用いて、スペクトル幅と不均一性の相関を調べています。",
-        "results": "分析の結果、合成データを用いた検証では、スペクトル幅（ε）が小さい場合、確率分布の指数（δ）は約3.0に収束し、εが大きくなると最も緩やかな減衰を示す指数（ε=0.4でδ≈2.11）が支配的になることが示されました。また、相補ローレンツ関数の局所指数の最大・最小差（Δα）はスペクトル幅（ε）とほぼ線形に振る舞い、局所指数の分布のエントロピー（Sα）はln εに比例することが確認されました。これらの結果は、ローレンツ曲線の分析から基底にある不均一性の強さを定量的に推定できる可能性を示唆しており、特にランダム磁場イジングモデルでは、臨界点付近で不均一性の強さがローレンツ関数のスペクトル幅と強く相関することが示されています。",
-        "why": "この手法が不均一性を捉えられるのは、システムの微視的な不均一性が、マクロな応答関数の確率分布を単純なべき乗則から逸脱させるためです。ローレンツ曲線は累積的な量であるため、確率密度関数よりも安定しており、ノイズやデータの疎さに影響されにくい特性があります。そのため、相補ローレンツ曲線の指数スペクトルを解析することで、その逸脱の度合い、すなわち基底にある不均一性の「幅」を間接的に定量化できるのです。これにより、完全な確率分布が不明な場合でも、不均一性の特徴を捉えることが可能になります。",
-        "figures": "アブストラクトには特定の図表の記述はありませんが、本文抜粋のFigure 1では、θ0=0.5とした一様スペクトル密度A(θ)から生成された合成データの確率分布P(S)が、異なるスペクトル幅εの値に対してプロットされています。Figure 2では、合成データにおける有効指数αeffのq（=1-p）に対する変化が、異なるスペクトル幅で示されており、幅が大きいほど有効指数が大きく逸脱することが読み取れます。Figure 3では、スペクトル幅εに対するΔαとSαの変化が示されており、Δαがεとほぼ線形に、Sαがln εに比例することが示唆されています。"
+        "gist": "要約生成に失敗しました（原文をご参照ください）",
+        "novelty": "We analyze the effect of microscopic heterogeneity on the Lorenz curve of macroscopic observables. Lorenz curve of a response function being a cumulative and bounded quantity, is often a more stable function than the corresponding probability density. We show here that by doing an exponent spectrum analysis of the complementary Lorenz curve, it is possible to obtain a reflection of the underlying heterogeneity that causes the response function to depart from a power law behavior. We demonstrate this framework first by synthetic data and then by analyzing the avalanche statistics of a two dimensional, Random Field Ising Model (RFIM) at zero temperature. This method can lead to possible use in estimating microscopic heterogeneity of a system from analysis of an estimated Lorenz curve, particularly in socio-economic and physical contexts where the full probability distribution function is unavailable.",
+        "method": "We analyze the effect of microscopic heterogeneity on the Lorenz curve of macroscopic observables. Lorenz curve of a response function being a cumulative and bounded quantity, is often a more stable function than the corresponding probability density. We show here that by doing an exponent spectrum analysis of the complementary Lorenz curve, it is possible to obtain a reflection of the underlying heterogeneity that causes the response function to depart from a power law behavior. We demonstrate this framework first by synthetic data and then by analyzing the avalanche statistics of a two dimensional, Random Field Ising Model (RFIM) at zero temperature. This method can lead to possible use in estimating microscopic heterogeneity of a system from analysis of an estimated Lorenz curve, particularly in socio-economic and physical contexts where the full probability distribution function is unavailable.",
+        "results": "We analyze the effect of microscopic heterogeneity on the Lorenz curve of macroscopic observables. Lorenz curve of a response function being a cumulative and bounded quantity, is often a more stable function than the corresponding probability density. We show here that by doing an exponent spectrum analysis of the complementary Lorenz curve, it is possible to obtain a reflection of the underlying heterogeneity that causes the response function to depart from a power law behavior. We demonstrate this framework first by synthetic data and then by analyzing the avalanche statistics of a two dimensional, Random Field Ising Model (RFIM) at zero temperature. This method can lead to possible use in estimating microscopic heterogeneity of a system from analysis of an estimated Lorenz curve, particularly in socio-economic and physical contexts where the full probability distribution function is unavailable."
       },
       "source": "arxiv",
       "journal": "arXiv（プレプリント / physics.soc-ph）",
@@ -657,8 +817,11 @@
         "body": "広大な農地で、作物の生育状況を一株ずつ調べるのは大変です。そこで、土壌の質や水分量といった限られた情報から、畑全体の収穫量や品質のばらつきを予測するようなものです。これは、この研究が、社会経済や物理システムにおける微視的な不均一性（個々の土壌の特性）が、マクロな観測量であるローレンツ曲線（畑全体の収穫分布）にどう反映されるかを分析している点に対応します。部分的な情報から全体の傾向を掴むことで、効率的な農業経営に繋がります。",
         "domain": "farming"
       },
-      "analogyNeedsReview": false,
-      "useArticleV2": true
+      "useArticleV2": true,
+      "categoryL1": "serendipity",
+      "categoryL2": "methods-import",
+      "arxivPrimary": "physics.soc-ph",
+      "readingTimeSec": 273
     }
   ]
 }

@@ -11,6 +11,9 @@ import { dedupeByArxivId } from "@/lib/filter";
 import {
   inferTopicForPaper,
   mergeArxivCategories,
+  mergeOpenAlexTopics,
+  pickArxivTopicsForFetch,
+  pickTopicsForDailyFetch,
   pickRandomTopics,
   shuffleInPlace,
   type FetchTopic,
@@ -281,16 +284,20 @@ async function selectPapersWithDownloadablePdf(
 }
 
 async function main() {
-  const today = getTodayJstString();
+  const today = (process.env.FETCH_DATE ?? "").trim() || getTodayJstString();
   await mkdir(DATA_DIR, { recursive: true });
 
   const mailto = (process.env.OPENALEX_MAILTO ?? process.env.UNPAYWALL_EMAIL ?? "").trim();
   const unpaywallEmail = (process.env.UNPAYWALL_EMAIL ?? process.env.OPENALEX_MAILTO ?? "").trim();
   const now = new Date();
-  const topics = pickRandomTopics(TOPICS_PER_FETCH);
+  const topics = pickTopicsForDailyFetch(TOPICS_PER_FETCH, {
+    smartSelection: USE_SMART_SELECTION,
+  });
 
   console.log(
-    `本日の収集分野（ランダム ${topics.length}件）: ${topics.map((t) => t.labelJa).join("、")}`
+    `収集日 ${today} / 分野 ${topics.length}件` +
+      (USE_SMART_SELECTION ? "（農経・食料は必須）" : "（ランダム）") +
+      `: ${topics.map((t) => t.labelJa).join("、")}`
   );
 
   const candidates: ArxivPaper[] = [];
@@ -300,14 +307,15 @@ async function main() {
   }
 
   /* ----- arXiv を最初に1回だけ（OpenAlex の前。429 が出にくい） ----- */
-  const arxivTopics = pickRandomTopics(Math.min(4, topics.length));
+  const arxivTopics = pickArxivTopicsForFetch(topics, USE_SMART_SELECTION);
   console.log(`  arXiv 分野（1リクエストに統合）: ${arxivTopics.map((t) => t.labelJa).join("、")}`);
   const arxivPapers = await fetchArxivForTopics(arxivTopics, now);
   candidates.push(...arxivPapers);
 
   if (mailto) {
     const fromPublicationDate = getJstDateMinusDays(OPENALEX_LOOKBACK_DAYS);
-    for (const topic of topics) {
+    const openAlexTopics = mergeOpenAlexTopics(topics, USE_SMART_SELECTION);
+    for (const topic of openAlexTopics) {
       try {
         const openAlexRaw = await fetchOpenAlexRecentWorks({
           mailto,

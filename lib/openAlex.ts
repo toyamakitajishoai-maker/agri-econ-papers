@@ -145,3 +145,26 @@ export async function fetchOpenAlexRecentWorks(options: FetchOpenAlexOptions): P
 
   return results.map(workToPaper).filter((p): p is ArxivPaper => Boolean(p));
 }
+
+/** OpenAlex ID（W… または URL）で1件取得 */
+export async function fetchOpenAlexWorkById(
+  mailto: string,
+  workId: string
+): Promise<ArxivPaper | null> {
+  const shortId = workId.replace(/^https:\/\/openalex\.org\//i, "").trim();
+  if (!shortId) return null;
+
+  const res = await fetch(`${OPENALEX_BASE}/works/${shortId}`, {
+    headers: {
+      Accept: "application/json",
+      "User-Agent": `mailto:${mailto}`,
+    },
+  });
+
+  if (!res.ok) {
+    throw new Error(`OpenAlex API error: ${res.status} ${res.statusText}`);
+  }
+
+  const work = (await res.json()) as OpenAlexWork;
+  return workToPaper(work);
+}

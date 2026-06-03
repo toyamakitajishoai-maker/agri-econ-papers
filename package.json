@@ -10,6 +10,7 @@
     "start": "next start",
     "lint": "next lint",
     "fetch": "tsx scripts/fetch-papers.ts",
+    "pin:openalex": "tsx scripts/pin-openalex-work.ts",
     "summarize": "tsx scripts/summarize.ts",
     "summarize:v2": "SUMMARIZE_ARTICLE_V2=1 tsx scripts/summarize.ts",
     "backfill:article-v2": "tsx scripts/backfill-article-v2.ts",

@@ -43,6 +43,8 @@ jobs:
           OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO }}
           UNPAYWALL_EMAIL: ${{ secrets.UNPAYWALL_EMAIL }}
           MAX_PAPERS: "5"
+          USE_SMART_SELECTION: "1"
+          TOPICS_PER_FETCH: "5"
         run: npm run fetch
 
       - name: Summarize papers

@@ -216,6 +216,78 @@ export function pickRandomTopics(count: number): FetchTopic[] {
   return picked;
 }
 
+const MANDATORY_SMART_TOPIC_IDS = ["agri-econ", "food-system"] as const;
+
+export function topicById(id: string): FetchTopic | undefined {
+  return FETCH_TOPICS.find((t) => t.id === id);
+}
+
+/**
+ * 日次 fetch 用。スマート選出 ON のときは農業経済・食料システムを必ず含め、
+ * ローカルと GitHub Actions で同じ方針の候補プールを作る。
+ */
+export function pickTopicsForDailyFetch(
+  count: number,
+  options?: { smartSelection?: boolean }
+): FetchTopic[] {
+  const n = Math.min(Math.max(1, count), FETCH_TOPICS.length);
+  if (!options?.smartSelection) {
+    return pickRandomTopics(n);
+  }
+
+  const mandatory = MANDATORY_SMART_TOPIC_IDS.map((id) => topicById(id)).filter(
+    (t): t is FetchTopic => Boolean(t)
+  );
+  const remaining = n - mandatory.length;
+  if (remaining <= 0) {
+    return mandatory.slice(0, n);
+  }
+
+  const excludeIds = new Set(mandatory.map((t) => t.id));
+  const extraFiltered = pickRandomTopics(remaining).filter((t) => !excludeIds.has(t.id));
+  const merged = [...mandatory, ...extraFiltered];
+  const seen = new Set<string>();
+  return merged.filter((t) => {
+    if (seen.has(t.id)) return false;
+    seen.add(t.id);
+    return true;
+  });
+}
+
+/** OpenAlex / arXiv で農経系を必ず叩くための追加トピック（本日のランダム分野に加える） */
+export function getMandatoryOpenAlexTopics(smartSelection: boolean): FetchTopic[] {
+  if (!smartSelection) return [];
+  return MANDATORY_SMART_TOPIC_IDS.map((id) => topicById(id)).filter((t): t is FetchTopic =>
+    Boolean(t)
+  );
+}
+
+/** スマート選出時は本日の topics の先頭（農経・食料が必ず入る）から arXiv を取る */
+export function pickArxivTopicsForFetch(
+  dailyTopics: FetchTopic[],
+  smartSelection: boolean
+): FetchTopic[] {
+  const n = Math.min(4, dailyTopics.length);
+  if (smartSelection) {
+    return dailyTopics.slice(0, n);
+  }
+  return pickRandomTopics(n);
+}
+
+/** OpenAlex ループ用：必須分野 + 本日分野の重複除去 */
+export function mergeOpenAlexTopics(
+  dailyTopics: FetchTopic[],
+  smartSelection: boolean
+): FetchTopic[] {
+  const mandatory = getMandatoryOpenAlexTopics(smartSelection);
+  const seen = new Set<string>();
+  return [...mandatory, ...dailyTopics].filter((t) => {
+    if (seen.has(t.id)) return false;
+    seen.add(t.id);
+    return true;
+  });
+}
+
 /** 複数分野の arXiv カテゴリを1クエリにまとめる（API呼び出し回数削減） */
 export function mergeArxivCategories(topics: FetchTopic[]): string[] {
   return [...new Set(topics.flatMap((t) => t.arxivCategories))];

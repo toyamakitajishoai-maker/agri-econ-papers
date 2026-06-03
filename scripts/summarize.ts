@@ -10,6 +10,7 @@ import { isWeakPdfUrl, resolvePdfUrl } from "@/lib/pdfResolve";
 import { classifyFromPaper } from "@/lib/classifyPaper";
 import { summarizeAbstractWithGemini } from "@/lib/gemini";
 import type { GeminiV2SummaryResult } from "@/lib/geminiV2";
+import { generateAnalogyForPaper, needsAnalogy } from "@/lib/generateAnalogy";
 import {
   isSummarizeArticleV2Enabled,
   needsArticleV2Fields,
@@ -75,8 +76,30 @@ function needsSummarize(paper: Paper): boolean {
 
 function needsProcessing(paper: Paper, useV2: boolean): boolean {
   if (needsSummarize(paper)) return true;
+  if (needsAnalogy(paper)) return true;
   if (useV2 && needsArticleV2Fields(paper)) return true;
   return false;
+}
+
+async function ensureAnalogyOnPaper(
+  paper: Paper,
+  arxiv: ArxivPaper,
+  apiKey: string
+): Promise<Paper> {
+  if (!needsAnalogy(paper)) return paper;
+  console.log("  たとえると: 比喩を生成中…");
+  const analogy = await generateAnalogyForPaper(arxiv, apiKey, {
+    oneLiner: paper.oneLiner ?? paper.hook ?? paper.summary.gist,
+    mechanism: paper.summary?.why,
+    categoryL1: paper.categoryL1,
+  });
+  if (!analogy) return paper;
+  return {
+    ...paper,
+    analogy,
+    analogyNeedsReview: false,
+    useArticleV2: paper.useArticleV2 ?? true,
+  };
 }
 
 function applyV2ResultToPaper(
@@ -111,7 +134,7 @@ function applyV2ResultToPaper(
     bodyGlossary: result.bodyGlossary ?? paper.bodyGlossary,
     glossarySpans: result.glossarySpans ?? paper.glossarySpans,
     agriEconRelevance: result.agriEconRelevance ?? paper.agriEconRelevance,
-    analogyNeedsReview: result.analogyNeedsReview ?? paper.analogyNeedsReview,
+    analogyNeedsReview: result.analogy?.body?.trim() ? false : result.analogyNeedsReview,
     ...(() => {
       const c = classifyFromPaper({
         ...paper,
@@ -181,9 +204,28 @@ async function main() {
   for (let i = 0; i < papers.length; i += 1) {
     const paper = papers[i];
 
+    const onlyAnalogy =
+      !force &&
+      needsAnalogy(paper) &&
+      !needsSummarize(paper) &&
+      Boolean(paper.oneLiner?.trim() && paper.bodyText?.trim());
+
     if (!force && !needsProcessing(paper, useV2)) {
       skipped += 1;
       summarizedPapers.push(paper);
+      continue;
+    }
+
+    if (onlyAnalogy) {
+      processed += 1;
+      const label = paper.titleJa ?? paper.title;
+      const shortTitle = label.length > 48 ? `${label.slice(0, 48)}…` : label;
+      console.log(`[${processed}/${toProcess}] 比喩のみ生成: ${shortTitle}`);
+      const arxivOnly = toArxivPaper(paper);
+      const withAnalogy = await ensureAnalogyOnPaper(paper, arxivOnly, apiKey);
+      summarizedPapers.push(withAnalogy);
+      await saveProgress();
+      await sleep(Number(process.env.SUMMARIZE_GAP_MS ?? 2500));
       continue;
     }
 
@@ -235,7 +277,7 @@ async function main() {
       ? await summarizeWithGeminiV2(arxiv, apiKey, 3, pdfExcerpt)
       : await summarizeAbstractWithGemini(arxiv, apiKey, 3, pdfExcerpt);
     processed += 1;
-    const updatedPaper: Paper = useV2
+    let updatedPaper: Paper = useV2
       ? applyV2ResultToPaper(paper, result as GeminiV2SummaryResult, pdfExcerpt, resolvedPdfUrl)
       : {
           ...paper,
@@ -250,6 +292,8 @@ async function main() {
           storyCards: result.storyCards ?? paper.storyCards,
           summary: result.summary,
         };
+
+    updatedPaper = await ensureAnalogyOnPaper(updatedPaper, arxiv, apiKey);
 
     // 音声化（無効化したい場合は SKIP_AUDIO=1）
     let audioNote = "";

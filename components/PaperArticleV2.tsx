@@ -113,9 +113,7 @@ export default function PaperArticleV2({ paper, date, siblings }: PaperArticleV2
       </section>
 
       <SummaryBlock title="たとえると">
-        {paper.analogyNeedsReview ? (
-          <p className="text-sm text-[#8a6f3e]">比喩は編集部で確認中です。</p>
-        ) : analogy?.body?.trim() ? (
+        {analogy?.body?.trim() && (analogy.body?.length ?? 0) >= 50 ? (
           <>
             {analogy.title?.trim() ? (
               <p className="mb-3 font-serif text-base font-semibold text-[#1a1f1c]">
@@ -125,7 +123,9 @@ export default function PaperArticleV2({ paper, date, siblings }: PaperArticleV2
             <p>{analogy.body}</p>
           </>
         ) : (
-          <p className="text-sm text-[#8a908a]">比喩を準備しています。</p>
+          <p className="text-sm text-[#8a908a]">
+            比喩は自動生成の対象です。しばらくしてからページを更新するか、管理者が再生成を実行します。
+          </p>
         )}
       </SummaryBlock>
 

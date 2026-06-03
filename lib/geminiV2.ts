@@ -1,5 +1,5 @@
 import type { ArxivPaper } from "@/lib/arxiv";
-import { evaluateAnalogyQuality } from "@/lib/analogyQuality";
+import { generateAnalogyForPaper } from "@/lib/generateAnalogy";
 import { classifyPaper } from "@/lib/classifyPaper";
 import { spansFromGlossaryTerms } from "@/lib/glossarySpans";
 import {
@@ -101,8 +101,10 @@ export function buildPromptV2(
     "専門外の社会人が3分で「この研究面白い」と思える解説を、必ず以下JSONスキーマで出力してください。",
     "",
     "【最重要ルール】",
-    "- analogy は必須。**農業文脈の比喩を最優先**（畑・収穫・天候・市場・流通・農機・品種改良など）",
-    "  農経の比喩が困難な場合のみ cooking / market / weather / daily に切り替え（analogy.domain に記録）",
+    "- analogy は必須（手編集しない・必ず生成）。**農業文脈の比喩を最優先**（畑・収穫・天候・市場・流通・農機・品種改良など）",
+    "  title 12〜28字 + body 130〜190字。①具体場面 ②研究の何に対応するか明示 ③納得の一文",
+    "  農経の比喩が困難な場合のみ cooking / market / weather / daily（analogy.domain に記録）",
+    "  「〜のようなものです」だけで終わる比喩は禁止",
     "- hook は「あなた」を主語にするか、身近な異変・疑問形で始める（80字以内）",
     "- novelty.before / after は必ず対比（各120字以内）",
     "- why_you_care は専門外の読者の生活・仕事・社会と接続（150字程度）",
@@ -512,12 +514,14 @@ export function isSummarizeArticleV2Enabled(): boolean {
 export function needsArticleV2Fields(paper: {
   oneLiner?: string;
   analogy?: AnalogyBlock;
+  analogyNeedsReview?: boolean;
   noveltyContrast?: NoveltyContrast;
   bodyText?: string;
   bodyGlossary?: BodyGlossaryEntry[];
 }): boolean {
   if (!paper.oneLiner?.trim()) return true;
-  if (!paper.analogy?.body?.trim()) return true;
+  const analogyBody = paper.analogy?.body?.trim() ?? "";
+  if (!analogyBody || analogyBody.length < 50 || paper.analogyNeedsReview) return true;
   if (!paper.noveltyContrast?.before?.trim() || !paper.noveltyContrast?.after?.trim()) {
     return true;
   }
@@ -569,41 +573,14 @@ export async function summarizeWithGeminiV2(
       let parsed = parseGeminiV2Response(responseText);
       if (!parsed) throw new Error("Gemini v2 response is not valid JSON.");
 
-      let analogyAttempts = 0;
-      while (parsed.analogy?.body && analogyAttempts < 2) {
-        const verdict = await evaluateAnalogyQuality(
-          parsed.analogy.title,
-          parsed.analogy.body,
-          apiKey
-        );
-        if (verdict.ok) break;
-        analogyAttempts += 1;
-        const regen = await callGeminiJson(
-          [
-            buildPromptV2(paper, pdfExcerpt, slot),
-            "",
-            "前回の analogy が品質基準を満たしませんでした。農業文脈の比喩で analogy のみ改善して同じJSON全体を再出力してください。",
-            `NG理由: ${verdict.reason ?? "quality"}`,
-          ].join("\n"),
-          apiKey,
-          0.4
-        );
-        const reparsed = parseGeminiV2Response(regen);
-        if (reparsed) parsed = reparsed;
-      }
-
-      if (parsed.analogy?.body) {
-        const finalVerdict = await evaluateAnalogyQuality(
-          parsed.analogy.title,
-          parsed.analogy.body,
-          apiKey
-        );
-        if (!finalVerdict.ok) {
-          parsed = {
-            ...parsed,
-            analogy: { title: parsed.analogy.title, body: "" },
-            analogyNeedsReview: true,
-          };
+      if (!parsed.analogy?.body?.trim() || (parsed.analogy.body?.length ?? 0) < 50) {
+        const generated = await generateAnalogyForPaper(paper, apiKey, {
+          categoryL1: slot,
+          oneLiner: parsed.oneLiner,
+          mechanism: parsed.summary.why,
+        });
+        if (generated) {
+          parsed = { ...parsed, analogy: generated, analogyNeedsReview: false };
         }
       }
 

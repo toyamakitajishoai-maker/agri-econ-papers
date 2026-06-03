@@ -14,6 +14,7 @@
     "summarize:v2": "SUMMARIZE_ARTICLE_V2=1 tsx scripts/summarize.ts",
     "backfill:article-v2": "tsx scripts/backfill-article-v2.ts",
     "repair:glossary-spans": "tsx scripts/repair-glossary-spans.ts",
+    "regenerate:analogy": "tsx scripts/regenerate-analogy.ts",
     "figures": "tsx scripts/extract-figures.ts",
     "github:push": "sh scripts/github-auth-and-push.sh",
     "fetch:sample": "tsx scripts/sample-fetch.ts",

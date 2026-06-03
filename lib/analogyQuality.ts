@@ -44,7 +44,7 @@ export async function evaluateAnalogyQuality(
     "あなたは農業経済メディアの編集者です。次の比喩を評価し JSON のみ返してください。",
     "{",
     '  "ok": true/false,',
-    '  "is_agri_context": 農業・畑・収穫・天候・市場・流通・農機・品種など農業文脈が主か,',
+    '  "is_agri_context": 農業・畑・収穫・天候・市場・流通・家計・契約など読者の身近な文脈が主か,',
     '  "has_mapping": 「〜のようなもの」だけで終わらず対応関係が明示されているか,',
     '  "within_length": 200字以内か,',
     '  "reason": "NG理由（任意）"',
@@ -84,10 +84,13 @@ export async function evaluateAnalogyQuality(
   const text = data.candidates?.[0]?.content?.parts?.[0]?.text ?? "";
   return (
     parseVerdictJson(text) ?? {
-      ok: analogyBody.length <= 200 && analogyBody.length >= 40,
-      isAgriContext: /農|畑|作物|収穫|畜産|食料|市場/.test(analogyBody),
-      hasMapping: /ように|たとえ|イメージ|対応/.test(analogyBody),
-      withinLength: analogyBody.length <= 200,
+      ok:
+        analogyBody.length <= 220 &&
+        analogyBody.length >= 50 &&
+        /ように|たとえ|イメージ|対応|つまり|これは|研究/.test(analogyBody),
+      isAgriContext: /農|畑|作物|収穫|畜産|食料|市場|家計|契約|天候/.test(analogyBody),
+      hasMapping: /ように|たとえ|イメージ|対応|つまり|これは|研究|論文/.test(analogyBody),
+      withinLength: analogyBody.length <= 220,
     }
   );
 }

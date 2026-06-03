@@ -48,7 +48,8 @@ jobs:
       - name: Summarize papers
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: npm run summarize
+          SUMMARIZE_ARTICLE_V2: "1"
+        run: npm run summarize:v2
 
       - name: Extract key figures from PDFs
         env:

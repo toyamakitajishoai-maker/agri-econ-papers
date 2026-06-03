@@ -1,0 +1,956 @@
+{
+  "date": "2026-06-04",
+  "papers": [
+    {
+      "id": "2606.02867v1",
+      "title": "The Epi-LLM Framework: probing LLM behavioral priors through epidemiological agent-based models",
+      "authors": [
+        "Petra Ferenz",
+        "Ava Keeling",
+        "Tobias O'Keefe",
+        "Lorenzo Stigliano",
+        "Francesco Di Lauro",
+        "Andres Colubri",
+        "Jasmina Panovska-Griffiths"
+      ],
+      "publishedAt": "2026-06-01T20:31:06Z",
+      "url": "https://arxiv.org/abs/2606.02867v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.02867v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "cs.MA",
+        "cs.AI",
+        "q-bio.PE"
+      ],
+      "abstract": "Human behaviour during epidemics affects infectious disease dynamics, but quantifying this remains deeply challenging. Here we introduce the Epi-LLM framework: a novel integration of agent-based modelling, real-life epigames, and large language models (LLMs) in which a synthetic society of agents reasons and adapts dynamically over an outbreak contact network. Comparing synthetic agent behaviour against a no-intervention SEIR baseline and human participant data from the AUIB epigame study, we find that LLM agents across four different architectures reduced peak active infections, with quarantine compliance peaking at 58-65% on day six of the 15-day simulation. A binomial generalised linear model showed that perceived health severity was the strongest predictor of quarantine behaviour ($β= 0.33, p = 0.002$), yielding a pseudo-$R^2$ of 0.055, comparable to the 0.072 observed in the human trial. LLM architecture is a key determinant of epidemic dynamics: low-variance architectures offer greater internal validity for testing behavioural rules, while high-variance models may better represent real-world decision-making. Geographic labels alone do not induce culturally differentiated behaviour; explicit attitudinal parameterisation is required. This proof-of-principle work lays the groundwork for deploying the Epi-LLM framework as a scalable, risk-free simulation environment for pandemic preparedness research.",
+      "summary": {
+        "gist": "感染症の流行において、人間の行動は感染ダイナミクスを大きく左右しますが、その影響を定量的に把握することは非常に困難です。従来の疫学モデルは単純な仮定に依存し、複雑な行動変化を捉えきれませんでした。エージェントベースモデルは個人の行動をシミュレートできますが、実世界の行動データに基づかない推測的なパラメータに頼りがちでした。",
+        "novelty": "従来の疫学モデルは、人間の複雑な行動変化（自主隔離、ワクチン接種、ソーシャルディスタンスなど）を捉えるのが難しく、単純な仮定に頼っていました。エージェントベースモデルは個人の行動をシミュレートするものの、リアルな行動データに基づかない推測的なパラメータに依存していました。 この研究では、現実の疫病ゲーム（エピゲーム）で得られた人間の行動データと大規模言語モデル（LLM）を統合。LLMエージェントが、感染状況や健康状態に応じて自主隔離などの意思決定を行う「合成社会」を構築し、パンデミック時の人間行動と感染ダイナミクスをより正確にシミュレーションできるようになりました。",
+        "method": "本研究では、エージェントベースモデリング、現実の疫病ゲーム（エピゲーム）、大規模言語モデル（LLM）を統合した「Epi-LLMフレームワーク」を開発しました。このフレームワークでは、エピゲームで収集された人間の健康信念プロファイルを基にLLMエージェントをパラメータ化し、合成社会を構築します。エージェントは、感染状況や自身の健康状態、報酬インセンティブに基づいて毎日自主隔離するか否かを決定します。この行動が動的な接触ネットワーク上で感染伝播にどう影響するかを、Starsimというオープンソースプラットフォームを用いて15日間シミュレーションしました。異なるLLMアーキテクチャも比較検討し、その行動が感染ダイナミクスに与える影響を分析しました。",
+        "results": "Epi-LLMフレームワークを用いたシミュレーションでは、LLMエージェントが自主隔離行動を取ることで、介入なしのSEIRベースラインと比較してピーク時の活動的感染者数が減少しました。自主隔離遵守率はシミュレーション6日目に58-65%でピークに達しました。二項一般化線形モデル分析の結果、知覚される健康上の重症度が自主隔離行動の最も強い予測因子であり（β=0.33, p=0.002）、その説明力は人間の試験データ（擬似R²=0.072）に匹敵する0.055でした。また、LLMアーキテクチャが感染ダイナミクスの重要な決定要因であることが示されました。",
+        "why": "LLMエージェントは、現実のエピゲーム参加者の健康信念プロファイルに基づいてパラメータ化されることで、人間らしい意思決定パターンを模倣します。エージェントは、自身の健康状態（無症状、軽症、重症）や周囲の感染状況、自主隔離による報酬減と感染リスク回避のトレードオフを考慮し、LLMの推論能力を使って自主隔離するか否かを判断します。これにより、個々のエージェントの行動が動的な接触ネットワーク上で伝播し、集団レベルでの感染ダイナミクスが形成されます。知覚される健康上の重症度が高いほど自主隔離を選ぶ傾向が強まるのは、人間が自身の健康リスクを重視する行動原理をLLMが学習・再現しているためと考えられます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.MA）",
+      "field": "食料システム",
+      "categoryL1": "serendipity",
+      "categoryL2": "public-health",
+      "arxivPrimary": "cs.MA",
+      "titleJa": "Epi-LLMフレームワーク：疫学エージェントベースモデルによるLLM行動事前分布の調査",
+      "catchTitle": "AIがパンデミック時の人間行動を予測",
+      "hook": "パンデミック時、人々がどう行動するか予測できたら、もっと効果的な対策が打てると思いませんか？",
+      "background": "感染症の流行において、人間の行動は感染ダイナミクスを大きく左右しますが、その影響を定量的に把握することは非常に困難です。従来の疫学モデルは単純な仮定に依存し、複雑な行動変化を捉えきれませんでした。エージェントベースモデルは個人の行動をシミュレートできますが、実世界の行動データに基づかない推測的なパラメータに頼りがちでした。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "エージェントベースモデル",
+          "definition": "個々の主体（エージェント）の行動をシミュレートし、全体の挙動を分析するモデル"
+        },
+        {
+          "term": "エピゲーム",
+          "definition": "疫病の流行をシミュレートし、参加者の行動データを収集するゲーム"
+        },
+        {
+          "term": "大規模言語モデル",
+          "definition": "大量のテキストデータで学習し、人間のような文章を生成するAI"
+        },
+        {
+          "term": "Epi-LLMフレームワーク",
+          "definition": "エージェントベースモデルとLLMを統合した疫学シミュレーション"
+        },
+        {
+          "term": "合成社会",
+          "definition": "シミュレーション内でLLMエージェントが行動する仮想社会"
+        },
+        {
+          "term": "Starsim",
+          "definition": "感染症ダイナミクスをモデル化するためのオープンソースプラットフォーム"
+        },
+        {
+          "term": "SEIRベースライン",
+          "definition": "感受性・曝露・感染・回復の4つの状態を持つ基本的な疫学モデル"
+        },
+        {
+          "term": "二項一般化線形モデル",
+          "definition": "二値の結果を予測する統計モデル"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "大規模言語モデル（LLM）を組み込んだエージェントベースモデルで、パンデミック時の人間行動をリアルにシミュレーションし、感染拡大を予測する新しいフレームワークが開発されました。",
+      "noveltyContrast": {
+        "before": "従来の疫学モデルは、人間の複雑な行動変化（自主隔離、ワクチン接種、ソーシャルディスタンスなど）を捉えるのが難しく、単純な仮定に頼っていました。エージェントベースモデルは個人の行動をシミュレートするものの、リアルな行動データに基づかない推測的なパラメータに依存していました。",
+        "after": "この研究では、現実の疫病ゲーム（エピゲーム）で得られた人間の行動データと大規模言語モデル（LLM）を統合。LLMエージェントが、感染状況や健康状態に応じて自主隔離などの意思決定を行う「合成社会」を構築し、パンデミック時の人間行動と感染ダイナミクスをより正確にシミュレーションできるようになりました。"
+      },
+      "analogy": {
+        "title": "畑の作物の成長を予測するAI農家",
+        "body": "これは、まるでAIが農家の行動を予測して、畑の作物の成長をシミュレーションするようなものです。AI農家は、過去の農家の記録（エピゲームの人間データ）や、その日の天気（感染状況）、作物の状態（健康状態）を見て、「今日は水やりを控えよう（自主隔離）」とか「肥料を増やそう（活動を続ける）」といった意思決定をします。これにより、実際の農家の行動が作物の収穫量（感染拡大）にどう影響するかを、事前に、しかもリスクなく試せるようになったのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "58-65%",
+          "label": "自主隔離遵守率のピーク"
+        },
+        {
+          "value": "+3.2pt",
+          "label": "ピーク感染者数の減少"
+        }
+      ],
+      "whyYouCare": "この研究は、パンデミック対策の未来を大きく変える可能性を秘めています。もしAIが人間の行動を正確に予測できるようになれば、政府や自治体は、どのタイミングで、どのようなメッセージを発信すれば、人々が自主隔離やワクチン接種に協力してくれるかを事前にシミュレーションできます。例えば、ある地域で感染が拡大し始めた時、「このままでは重症者が増える」という情報を強調すれば自主隔離率が上がる、といった具体的な対策を、リスクなく試せるようになるのです。これにより、より効果的で無駄のない介入策を計画し、社会経済活動への影響を最小限に抑えながら、感染拡大を抑制できるかもしれません。あなたの生活や仕事にも、より賢明なパンデミック対策がもたらされる可能性があります。",
+      "takeawayTalk": "AIがパンデミック時の人間行動を予測して、感染対策を最適化できるらしいよ！",
+      "bodyText": "本研究では、エージェントベースモデリング、現実の疫病ゲーム（エピゲーム）、大規模言語モデル（LLM）を統合した「Epi-LLMフレームワーク」を開発しました。このフレームワークでは、エピゲームで収集された人間の健康信念プロファイルを基にLLMエージェントをパラメータ化し、合成社会を構築します。エージェントは、感染状況や自身の健康状態、報酬インセンティブに基づいて毎日自主隔離するか否かを決定します。この行動が動的な接触ネットワーク上で感染伝播にどう影響するかを、Starsimというオープンソースプラットフォームを用いて15日間シミュレーションしました。異なるLLMアーキテクチャも比較検討し、その行動が感染ダイナミクスに与える影響を分析しました。\n\nLLMエージェントは、現実のエピゲーム参加者の健康信念プロファイルに基づいてパラメータ化されることで、人間らしい意思決定パターンを模倣します。エージェントは、自身の健康状態（無症状、軽症、重症）や周囲の感染状況、自主隔離による報酬減と感染リスク回避のトレードオフを考慮し、LLMの推論能力を使って自主隔離するか否かを判断します。これにより、個々のエージェントの行動が動的な接触ネットワーク上で伝播し、集団レベルでの感染ダイナミクスが形成されます。知覚される健康上の重症度が高いほど自主隔離を選ぶ傾向が強まるのは、人間が自身の健康リスクを重視する行動原理をLLMが学習・再現しているためと考えられます。",
+      "bodyGlossary": [
+        {
+          "term": "エピゲーム",
+          "definition": "疫病の流行をシミュレートし、参加者の行動データを収集するゲーム",
+          "start": 30,
+          "end": 35
+        },
+        {
+          "term": "大規模言語モデル",
+          "definition": "大量のテキストデータで学習し、人間のような文章を生成するAI",
+          "start": 37,
+          "end": 45
+        },
+        {
+          "term": "Epi-LLMフレームワーク",
+          "definition": "エージェントベースモデルとLLMを統合した疫学シミュレーション",
+          "start": 56,
+          "end": 70
+        },
+        {
+          "term": "合成社会",
+          "definition": "シミュレーション内でLLMエージェントが行動する仮想社会",
+          "start": 136,
+          "end": 140
+        },
+        {
+          "term": "Starsim",
+          "definition": "感染症ダイナミクスをモデル化するためのオープンソースプラットフォーム",
+          "start": 232,
+          "end": 239
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "エピゲーム",
+          "definition": "疫病の流行をシミュレートし、参加者の行動データを収集するゲーム",
+          "start": 30,
+          "end": 35
+        },
+        {
+          "term": "大規模言語モデル",
+          "definition": "大量のテキストデータで学習し、人間のような文章を生成するAI",
+          "start": 37,
+          "end": 45
+        },
+        {
+          "term": "Epi-LLMフレームワーク",
+          "definition": "エージェントベースモデルとLLMを統合した疫学シミュレーション",
+          "start": 56,
+          "end": 70
+        },
+        {
+          "term": "合成社会",
+          "definition": "シミュレーション内でLLMエージェントが行動する仮想社会",
+          "start": 136,
+          "end": 140
+        },
+        {
+          "term": "Starsim",
+          "definition": "感染症ダイナミクスをモデル化するためのオープンソースプラットフォーム",
+          "start": 232,
+          "end": 239
+        }
+      ],
+      "agriEconRelevance": "このEpi-LLMフレームワークは、農業経済学においても応用可能です。例えば、特定の病害虫が流行した際の農家の行動（農薬散布、品種転換、出荷調整など）をシミュレーションし、その行動が地域全体の作物生産量や市場価格にどう影響するかを予測できます。また、気候変動や新たな規制導入に対する農家の適応行動をLLMエージェントに学習させ、政策効果を事前に検証することも可能です。これにより、農業政策の立案やリスク管理において、よりデータに基づいた意思決定が可能となり、持続可能な農業システムの構築に貢献できるでしょう。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 275,
+      "keyFigure": {
+        "imagePath": "/figures/2606.02867v1_results.png",
+        "page": 5,
+        "caption": "LLMアーキテクチャごとの感染ダイナミクスと自主隔離行動を示しています。",
+        "label": "Figure 3 Epidemic dynamics and quarantine behaviour across LLM architectures, with the “no intervention” reference shown",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-03T23:43:07.432Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.02867v1_results.png",
+          "page": 5,
+          "caption": "LLMアーキテクチャごとの感染ダイナミクスと自主隔離行動を示しています。",
+          "label": "Figure 3 Epidemic dynamics and quarantine behaviour across LLM architectures, with the “no intervention” reference shown",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-03T23:43:07.432Z"
+        },
+        {
+          "imagePath": "/figures/2606.02867v1_why.png",
+          "page": 7,
+          "caption": "自主隔離行動を予測する二項一般化線形モデルの結果を示しています。",
+          "label": "Table 3 Poisson generalized linear model predicting quarantine behaviour with group interactions.",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-03T23:43:07.432Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.02408v1",
+      "title": "Structure-Informed Multiple Sequence Alignment: A Formal Model and Hardness Results",
+      "authors": [
+        "Yoshiki Kanazawa",
+        "Naphan Benchasattabuse",
+        "Michal Hajdušek",
+        "Rodney Van Meter"
+      ],
+      "publishedAt": "2026-06-01T15:52:22Z",
+      "url": "https://arxiv.org/abs/2606.02408v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.02408v1.pdf",
+      "categories": [
+        "topic:agronomy",
+        "cs.CC",
+        "q-bio.QM"
+      ],
+      "abstract": "We formulate a structure-informed multiple sequence alignment problem, denoted MSA-S. The model abstracts biological sequences as strings and structural information as designated position-pairs. It augments a fixed pairwise string score, defined by a fixed non-gap symbol-pair scoring rule and fixed affine gap penalties, with a binary overlap score on designated position-pairs, which can be interpreted as a contact-map overlap score in structural applications. This yields a fixed-score, integer-valued optimization model suitable for complexity-theoretic analysis. Under this formulation, we show that the decision problem MSA-S-DEC is NP-complete for a broad class of fixed pairwise string scoring schemes. We also show that NP-hardness persists even under the restriction that every designated position-pair set is nonempty and the pair-overlap threshold is strictly positive. For the associated scalarized optimization problem MSA-S-OPT(lambda) with any fixed rational constant lambda &gt;= 1, we further show that, under the canonical unit scheme for the non-gap symbol-pair scoring rule, MSA-S-OPT(lambda) admits no polynomial-time approximation scheme (PTAS) even for two input strings (k = 2), unless P = NP. These results establish a formal complexity-theoretic baseline for structure-informed multiple sequence alignment.",
+      "summary": {
+        "gist": "多重配列アラインメント（MSA）は、DNA、RNA、タンパク質などの生物学的配列を比較するバイオインフォマティクスにおける基本的な技術です。配列間の保存パターンや変異を特定することで、機能的な制約や進化関係に関する情報を提供し、構造解釈にも役立ちます。そのため、系統発生推論、タンパク質ファミリーおよびドメイン解析、機能アノテーションなどの下流解析の予備ステップとして広く使用されています。計算上、MSAは入力配列を共通の列表現に配置することでこれらの比較を表します。これは通常、各配列の記号の順序を維持しながらギャップを挿入することによって行われます。同じ列に配置された記号は、仮説的な位置的対応として解釈されます。アラインメントの品質は、互換性のある記号を報酬し、ギャップにペナルティを課すなどのスコアリングスキームによって評価されます。最適なペアワイズアラインメントは動的計画法によって効率的に計算できますが、MSAの厳密な動的計画法は配列数に対してスケールしません。より根本的には、sum-of-pairs（SP）スコアに基づく標準的なMSA定式化は計算論的に手に負えないことが知られています。WangとJiangはSPスコア決定版のMSAがNP完全であることを証明し、その後の研究では、より広範なスコアリングクラスや多重アラインメントの一般的なバリアントについてもNP困難性が確立されました。その結果、実用的なMSA方法はヒューリスティックな戦略に依存しており、精度、速度、および異なる種類の入力データへの適用可能性の間で異なるトレードオフを行っています。この広範な状況の中で、配列類似性以外の補助情報を探求する研究が進められています。タンパク質配列アラインメントでは、構造情報はそのような補助情報の自然な源です。利用可能な構造情報は位置的互換性に関する制約を提供でき、既存の構造認識アラインメント方法は、そのような情報を直接的または配列ベースのスコアリングと組み合わせて組み込んでいます。",
+        "novelty": "従来の多重配列アラインメントは、主に配列の類似性（記号の一致やギャップのペナルティ）に基づいて最適な並び方を探していました。しかし、生物学的配列の機能や進化には、立体構造の情報も重要であると認識されつつありました。 この論文では、配列の類似性スコアに加えて、特定の「位置ペア」（構造的な接触点など）がアラインメント後も一致するかどうかを評価する「構造情報スコア」を組み合わせた新しいモデルを提案。このモデルが計算論的にどれほど難しいかを初めて形式的に分析しました。",
+        "method": "本研究では、構造情報を考慮した多重配列アラインメント問題（MSA-S）を定式化しました。このモデルでは、生物学的配列を文字列として抽象化し、構造情報を各文字列内の指定された位置ペアとして抽象化します。これは、固定された非ギャップ記号ペアスコアリングルールと固定されたアフィンギャップペナルティによって定義される固定されたペアワイズ文字列スコアに、指定された位置ペアに対するバイナリオーバーラップスコアを追加します。このオーバーラップスコアは、構造的応用における接触マップオーバーラップスコアとして解釈できます。これにより、計算複雑性理論的分析に適した、固定スコアの整数値最適化モデルが得られます。この定式化の下で、MSA-Sの決定問題が、広範な固定ペアワイズ文字列スコアリングスキームに対してNP完全であることを示しました。また、すべての指定された位置ペア集合が空ではなく、ペアオーバーラップ閾値が厳密に正であるという制約の下でも、NP困難性が持続することを示しました。関連するスカラー化された最適化問題MSA-S-OPT(λ)（任意の固定された有理定数λ ≥ 1）については、非ギャップ記号ペアスコアリングルールの標準的な単位スキームの下では、P = NPでない限り、2つの入力文字列（k = 2）の場合でも多項式時間近似スキーム（PTAS）を認めないことをさらに示しました。",
+        "results": "構造情報を考慮した多重配列アラインメント問題（MSA-S）の決定問題は、広範なスコアリングスキームにおいてNP完全であることが示されました。また、指定された位置ペアが常に存在し、ペアオーバーラップ閾値が正であるという制約下でもNP困難性が持続します。さらに、スカラー化された最適化問題MSA-S-OPT(λ)は、P=NPでない限り、たとえ2つの配列の場合でも多項式時間近似スキーム（PTAS）を持たないことが証明されました。",
+        "why": "この計算困難性は、配列の類似性を最大化する問題と、構造的な位置ペアの一致を最大化する問題という、本質的に異なる2つの最適化目標を同時に達成しようとすることに起因します。配列の並び替えは、構造的な一致を崩す可能性があり、その逆もまた然りです。このトレードオフを最適に解決することが、計算論的に非常に複雑な問題を生み出します。特に、構造情報が加わることで、単なる線形的な比較ではなく、より複雑なグラフ構造のような関係性を考慮する必要が生じ、これが問題の複雑性を指数関数的に増大させます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.CC）",
+      "field": "農学・作物科学",
+      "categoryL1": "adjacent",
+      "categoryL2": "bioinformatics",
+      "arxivPrimary": "cs.CC",
+      "titleJa": "構造情報を考慮した多重配列アラインメント：形式モデルと計算困難性の結果",
+      "catchTitle": "構造情報で配列比較、実は超難しい？",
+      "hook": "DNAやタンパク質の配列を比較して、進化の歴史や機能を探る「配列アラインメント」。もし構造情報も使えたら、もっと正確になると思いませんか？",
+      "background": "多重配列アラインメント（MSA）は、DNA、RNA、タンパク質などの生物学的配列を比較するバイオインフォマティクスにおける基本的な技術です。配列間の保存パターンや変異を特定することで、機能的な制約や進化関係に関する情報を提供し、構造解釈にも役立ちます。そのため、系統発生推論、タンパク質ファミリーおよびドメイン解析、機能アノテーションなどの下流解析の予備ステップとして広く使用されています。計算上、MSAは入力配列を共通の列表現に配置することでこれらの比較を表します。これは通常、各配列の記号の順序を維持しながらギャップを挿入することによって行われます。同じ列に配置された記号は、仮説的な位置的対応として解釈されます。アラインメントの品質は、互換性のある記号を報酬し、ギャップにペナルティを課すなどのスコアリングスキームによって評価されます。最適なペアワイズアラインメントは動的計画法によって効率的に計算できますが、MSAの厳密な動的計画法は配列数に対してスケールしません。より根本的には、sum-of-pairs（SP）スコアに基づく標準的なMSA定式化は計算論的に手に負えないことが知られています。WangとJiangはSPスコア決定版のMSAがNP完全であることを証明し、その後の研究では、より広範なスコアリングクラスや多重アラインメントの一般的なバリアントについてもNP困難性が確立されました。その結果、実用的なMSA方法はヒューリスティックな戦略に依存しており、精度、速度、および異なる種類の入力データへの適用可能性の間で異なるトレードオフを行っています。この広範な状況の中で、配列類似性以外の補助情報を探求する研究が進められています。タンパク質配列アラインメントでは、構造情報はそのような補助情報の自然な源です。利用可能な構造情報は位置的互換性に関する制約を提供でき、既存の構造認識アラインメント方法は、そのような情報を直接的または配列ベースのスコアリングと組み合わせて組み込んでいます。",
+      "quiz": {
+        "question": "この研究で示された、構造情報を考慮した多重配列アラインメント問題の計算困難性に関する最も重要な結果は何ですか？",
+        "options": [
+          "常に多項式時間で最適な解が見つかること",
+          "NP完全であり、P=NPでない限りPTASも存在しないこと",
+          "線形時間で近似解が常に得られること"
+        ],
+        "correctIndex": 1,
+        "explanation": "この論文は、構造情報を考慮した多重配列アラインメント問題がNP完全であり、さらにP=NPでない限り、2つの入力文字列の場合でも多項式時間近似スキーム（PTAS）が存在しないことを示しました。これは、この問題が計算論的に非常に難しいことを意味します。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "多重配列アラインメント",
+          "definition": "複数の生物学的配列を並べて比較する手法"
+        },
+        {
+          "term": "NP完全",
+          "definition": "計算論的に最も難しい問題のクラスの一つ"
+        },
+        {
+          "term": "NP困難",
+          "definition": "NP完全問題と同等かそれ以上に難しい問題"
+        },
+        {
+          "term": "アフィンギャップペナルティ",
+          "definition": "ギャップの開始と延長に異なるペナルティを課す"
+        },
+        {
+          "term": "バイナリオーバーラップスコア",
+          "definition": "指定ペアが一致した場合に1点加算されるスコア"
+        },
+        {
+          "term": "スカラー化された最適化問題",
+          "definition": "複数の目的関数を単一の関数にまとめた問題"
+        },
+        {
+          "term": "PTAS",
+          "definition": "多項式時間近似スキーム。近似解を効率的に求める手法"
+        },
+        {
+          "term": "P = NP",
+          "definition": "効率的に解ける問題と検証できる問題が同じかという未解決問題"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "構造情報を加味した配列アラインメント問題は、たとえ単純化しても計算が非常に難しいことが証明されました。",
+      "noveltyContrast": {
+        "before": "従来の多重配列アラインメントは、主に配列の類似性（記号の一致やギャップのペナルティ）に基づいて最適な並び方を探していました。しかし、生物学的配列の機能や進化には、立体構造の情報も重要であると認識されつつありました。",
+        "after": "この論文では、配列の類似性スコアに加えて、特定の「位置ペア」（構造的な接触点など）がアラインメント後も一致するかどうかを評価する「構造情報スコア」を組み合わせた新しいモデルを提案。このモデルが計算論的にどれほど難しいかを初めて形式的に分析しました。"
+      },
+      "analogy": {
+        "title": "畑の畝（うね）を揃える難しさ",
+        "body": "これは、複数の畑で育った作物の畝を、それぞれの畑の「土壌の質」と「隣接する作物の相性」の両方を考慮して、全体で最も効率よく揃えるようなものです。土壌の質は配列の類似性、隣接作物の相性は構造情報に対応します。土壌の質だけなら比較的簡単に畝を揃えられますが、そこに「特定の畝同士が隣接しているべき」という相性の条件を加えると、途端に最適な畝の配置を見つけるのが非常に難しくなる、という納得の一文です。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、一見すると専門的なバイオインフォマティクスの話に見えますが、実は私たちの身近な「最適化問題」にも通じる示唆を与えています。例えば、あなたが複数のプロジェクトを同時に進める際、それぞれのプロジェクトの「個別の目標達成」と「プロジェクト間の連携」という二つの側面を最適化しようとすると、途端に複雑になり、完璧な解を見つけるのが非常に難しくなる経験はありませんか？この論文は、構造情報という「連携」の要素を加えることで、配列アラインメントという問題がどれほど計算論的に難しくなるかを形式的に示しています。これは、AIや機械学習を使って複雑な問題を解決しようとする際、どのような情報を取り入れると計算コストが跳ね上がるのか、その限界を理解する上で重要な知見となります。完璧な解を求めるのではなく、実用的な「良い近似解」で満足することの重要性を再認識させてくれるでしょう。",
+      "takeawayTalk": "構造情報で配列比較すると、計算がめちゃくちゃ難しくなるらしいよ！",
+      "bodyText": "本研究では、構造情報を考慮した多重配列アラインメント問題（MSA-S）を定式化しました。このモデルでは、生物学的配列を文字列として抽象化し、構造情報を各文字列内の指定された位置ペアとして抽象化します。これは、固定された非ギャップ記号ペアスコアリングルールと固定されたアフィンギャップペナルティによって定義される固定されたペアワイズ文字列スコアに、指定された位置ペアに対するバイナリオーバーラップスコアを追加します。このオーバーラップスコアは、構造的応用における接触マップオーバーラップスコアとして解釈できます。これにより、計算複雑性理論的分析に適した、固定スコアの整数値最適化モデルが得られます。この定式化の下で、MSA-Sの決定問題が、広範な固定ペアワイズ文字列スコアリングスキームに対してNP完全であることを示しました。また、すべての指定された位置ペア集合が空ではなく、ペアオーバーラップ閾値が厳密に正であるという制約の下でも、NP困難性が持続することを示しました。関連するスカラー化された最適化問題MSA-S-OPT(λ)（任意の固定された有理定数λ ≥ 1）については、非ギャップ記号ペアスコアリングルールの標準的な単位スキームの下では、P = NPでない限り、2つの入力文字列（k = 2）の場合でも多項式時間近似スキーム（PTAS）を認めないことをさらに示しました。\n\nこの計算困難性は、配列の類似性を最大化する問題と、構造的な位置ペアの一致を最大化する問題という、本質的に異なる2つの最適化目標を同時に達成しようとすることに起因します。配列の並び替えは、構造的な一致を崩す可能性があり、その逆もまた然りです。このトレードオフを最適に解決することが、計算論的に非常に複雑な問題を生み出します。特に、構造情報が加わることで、単なる線形的な比較ではなく、より複雑なグラフ構造のような関係性を考慮する必要が生じ、これが問題の複雑性を指数関数的に増大させます。",
+      "bodyGlossary": [
+        {
+          "term": "多重配列アラインメント",
+          "definition": "複数の生物学的配列を並べて比較する手法",
+          "start": 15,
+          "end": 26
+        },
+        {
+          "term": "アフィンギャップペナルティ",
+          "definition": "ギャップの開始と延長に異なるペナルティを課す",
+          "start": 133,
+          "end": 146
+        },
+        {
+          "term": "バイナリオーバーラップスコア",
+          "definition": "指定ペアが一致した場合に1点加算されるスコア",
+          "start": 186,
+          "end": 200
+        },
+        {
+          "term": "NP完全",
+          "definition": "計算論的に最も難しい問題のクラスの一つ",
+          "start": 346,
+          "end": 350
+        },
+        {
+          "term": "NP困難",
+          "definition": "NP完全問題と同等かそれ以上に難しい問題",
+          "start": 416,
+          "end": 420
+        },
+        {
+          "term": "スカラー化された最適化問題",
+          "definition": "複数の目的関数を単一の関数にまとめた問題",
+          "start": 439,
+          "end": 452
+        },
+        {
+          "term": "P = NP",
+          "definition": "効率的に解ける問題と検証できる問題が同じかという未解決問題",
+          "start": 523,
+          "end": 529
+        },
+        {
+          "term": "PTAS",
+          "definition": "多項式時間近似スキーム。近似解を効率的に求める手法",
+          "start": 567,
+          "end": 571
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "多重配列アラインメント",
+          "definition": "複数の生物学的配列を並べて比較する手法",
+          "start": 15,
+          "end": 26
+        },
+        {
+          "term": "アフィンギャップペナルティ",
+          "definition": "ギャップの開始と延長に異なるペナルティを課す",
+          "start": 133,
+          "end": 146
+        },
+        {
+          "term": "バイナリオーバーラップスコア",
+          "definition": "指定ペアが一致した場合に1点加算されるスコア",
+          "start": 186,
+          "end": 200
+        },
+        {
+          "term": "NP完全",
+          "definition": "計算論的に最も難しい問題のクラスの一つ",
+          "start": 346,
+          "end": 350
+        },
+        {
+          "term": "NP困難",
+          "definition": "NP完全問題と同等かそれ以上に難しい問題",
+          "start": 416,
+          "end": 420
+        },
+        {
+          "term": "スカラー化された最適化問題",
+          "definition": "複数の目的関数を単一の関数にまとめた問題",
+          "start": 439,
+          "end": 452
+        },
+        {
+          "term": "P = NP",
+          "definition": "効率的に解ける問題と検証できる問題が同じかという未解決問題",
+          "start": 523,
+          "end": 529
+        },
+        {
+          "term": "PTAS",
+          "definition": "多項式時間近似スキーム。近似解を効率的に求める手法",
+          "start": 567,
+          "end": 571
+        }
+      ],
+      "agriEconRelevance": "この計算困難性の知見は、農業経済学における複雑な最適化問題に応用可能です。例えば、複数の農家が連携して生産・流通を行う際に、「各農家の収益最大化」と「地域全体のブランド価値向上」という二つの目標を同時に最適化する問題が考えられます。個別の収益は比較的計算しやすいですが、地域ブランドという「構造情報」を加えることで、最適な連携戦略の探索がNP完全な問題となり、効率的な解法が見つかりにくくなる可能性があります。この研究は、そのような多目的最適化問題において、どのような情報や制約が計算コストを増大させるのかを理解し、ヒューリスティックなアプローチや近似解の重要性を認識するための基礎的な視点を提供します。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 449
+    },
+    {
+      "id": "2606.03491v1",
+      "title": "Reputation, Exposure, and Exit: Organizational Turnover after #MeToo",
+      "authors": [
+        "Roy Baharad",
+        "Asaf Eckstein",
+        "Gideon Parchomovsky",
+        "Rok Spruk"
+      ],
+      "publishedAt": "2026-06-02T11:08:38Z",
+      "url": "https://arxiv.org/abs/2606.03491v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.03491v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "econ.GN"
+      ],
+      "abstract": "We study how economy-wide reputational shocks reshape corporate governance by examining board and executive turnover following the MeToo movement. We conceptualize the October 2017 revelations surrounding Harvey Weinstein as a common information shock that increased the expected cost of misconduct and intensified scrutiny across firms. Identification exploits cross-sectional variation in pre-shock exposure, measured by the frequency of Item 5.02 Form 8-K filings, which proxy for firms' sensitivity to governance-related disclosure and reputational risk. We develop a model of organizational exit in which directors respond to changes in reputational pressure through dynamic, belief-driven resignation hazards, generating heterogeneous and potentially nonlinear responses across firms. Empirically, we implement a continuous-treatment difference-in-differences design and complement it with dynamic event-study and matrix-completion estimators. We find that firms with greater pre-shock exposure experience significantly larger increases in resignation activity following the shock. The effects are concentrated in the immediate aftermath of the Weinstein revelations and are amplified through board-level interactions. The findings provide causal evidence that reputational shocks can induce rapid and systematic governance turnover, highlighting the central role of information, exposure, and organizational adaptation in shaping corporate responses to changes in the reputational environment.",
+      "summary": {
+        "gist": "#MeToo運動は、2017年10月のハーヴェイ・ワインスタイン氏に関する告発をきっかけに、セクシャルハラスメントや不適切行為に対する社会的な意識と説明責任の規範を大きく変えました。この運動は、単に個別の不祥事を暴くだけでなく、企業が不作為や不適切行為に対して負う評判コストを全体的に引き上げ、企業統治のあり方に広範な影響を与えました。",
+        "novelty": "これまでの研究では、#MeToo運動が個別のセクハラ事案を明るみに出すことに焦点を当てていました。しかし、運動が企業全体のガバナンスや役員の離職行動に与える広範な影響については、体系的な分析が不足していました。 この論文は、#MeToo運動を「評判と説明責任の規範変化」という共通のショックとして捉え、企業がこのショックにどう反応したかを明らかにしました。特に、運動以前からガバナンス開示に敏感だった企業ほど、役員の辞任が増加したことを実証しています。",
+        "method": "本研究では、#MeToo運動を企業全体に影響を与える「共通の情報ショック」と捉え、その影響を分析するために、連続的処置差の差分法（continuous-treatment difference-in-differences design）を用いました。具体的には、運動以前の企業におけるガバナンス関連開示（Form 8-KのItem 5.02届出の頻度）の度合いを「ショックへの露出度」として測定し、露出度が高い企業と低い企業で、運動後の役員（取締役および執行役員）の辞任活動の変化を比較しました。さらに、動的イベントスタディや行列補完推定法も補完的に用いて分析の頑健性を確認しました。",
+        "results": "分析の結果、#MeToo運動以前にガバナンス関連開示への露出度が高かった企業ほど、運動後に役員の辞任活動が有意に増加したことが明らかになりました。この効果は、ワインスタイン氏の告発直後に集中して見られ、取締役会レベルでの相互作用によって増幅されました。このことは、評判ショックが企業のガバナンスに迅速かつ体系的な変化をもたらし、情報、露出、組織適応が企業の変化に対応する上で中心的な役割を果たすことを示しています。",
+        "why": "#MeToo運動は、単に隠れた不祥事を暴くだけでなく、企業の説明責任に関する社会的な規範を広範に変化させました。これにより、企業はセクシャルハラスメントだけでなく、企業文化、倫理的過失、内部告発、その他の評判リスクに対してもより敏感になりました。投資家や従業員も、深刻なガバナンス上の問題と見なす基準を更新したため、企業は評判を損なう可能性のあるリーダーシップの問題に対して、より迅速かつ厳格に対応するようになったと考えられます。特に、以前からガバナンス開示に敏感だった企業は、この規範の変化に対してより強く反応し、役員の離職という形で適応したと解釈できます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "corporate-governance",
+      "arxivPrimary": "econ.GN",
+      "titleJa": "#MeToo運動が企業統治に与えた影響：評判、露出、そして役員の離職",
+      "catchTitle": "#MeTooが企業役員の辞任を加速させた理由",
+      "hook": "あなたの会社で、ある日突然「倫理観」への目が厳しくなったらどうなるでしょう？#MeToo運動は、まさにそんな変化を企業にもたらしました。",
+      "background": "#MeToo運動は、2017年10月のハーヴェイ・ワインスタイン氏に関する告発をきっかけに、セクシャルハラスメントや不適切行為に対する社会的な意識と説明責任の規範を大きく変えました。この運動は、単に個別の不祥事を暴くだけでなく、企業が不作為や不適切行為に対して負う評判コストを全体的に引き上げ、企業統治のあり方に広範な影響を与えました。",
+      "quiz": {
+        "question": "#MeToo運動が企業に与えた影響について、この論文が示した主な発見は何でしょう？",
+        "options": [
+          "セクハラ行為が実際に発覚した企業でのみ役員辞任が増加した。",
+          "運動以前からガバナンス開示に敏感だった企業で役員辞任が有意に増加した。",
+          "すべての企業で役員辞任が均等に増加した。"
+        ],
+        "correctIndex": 1,
+        "explanation": "この論文は、#MeToo運動を「評判と説明責任の規範変化」という共通のショックとして捉え、運動以前からガバナンス開示に敏感だった企業ほど、役員の辞任が増加したことを明らかにしています。これは、単に個別の不祥事が発覚したからではなく、社会全体の規範の変化に企業が適応した結果と解釈されています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "共通の情報ショック",
+          "definition": "特定の企業だけでなく、経済全体に影響を与える情報変化"
+        },
+        {
+          "term": "連続的処置差の差分法",
+          "definition": "処置の強度が連続的な場合の因果効果を推定する統計手法"
+        },
+        {
+          "term": "Form 8-K",
+          "definition": "米国証券取引委員会への重要事項開示報告書"
+        },
+        {
+          "term": "Item 5.02",
+          "definition": "Form 8-Kのうち役員の異動に関する項目"
+        },
+        {
+          "term": "露出度",
+          "definition": "特定の情報やリスクに企業がどれだけ晒されているか"
+        },
+        {
+          "term": "動的イベントスタディ",
+          "definition": "特定のイベントが時間経過とともに与える影響を分析"
+        },
+        {
+          "term": "行列補完推定法",
+          "definition": "欠損データがある行列を補完して推定する手法"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "#MeToo運動は、不祥事への企業の評判リスクを高め、特にガバナンス開示に敏感な企業で役員の辞任を増加させました。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、#MeToo運動が個別のセクハラ事案を明るみに出すことに焦点を当てていました。しかし、運動が企業全体のガバナンスや役員の離職行動に与える広範な影響については、体系的な分析が不足していました。",
+        "after": "この論文は、#MeToo運動を「評判と説明責任の規範変化」という共通のショックとして捉え、企業がこのショックにどう反応したかを明らかにしました。特に、運動以前からガバナンス開示に敏感だった企業ほど、役員の辞任が増加したことを実証しています。"
+      },
+      "analogy": {
+        "title": "畑の土壌改良が経営陣を動かす",
+        "body": "これは、まるで「土壌改良」のようなものです。これまで、ある畑では特定の害虫（不祥事）がいても、見過ごされがちでした。しかし、#MeToo運動という「土壌改良」が行われ、畑全体の環境（企業文化や説明責任の規範）が大きく変わったのです。この新しい環境では、以前から土壌の質（ガバナンス開示）に敏感だった作物（企業）ほど、害虫への耐性（不祥事への対応）を強化するために、古い根（役員）を新しいものに植え替える（辞任させる）動きが加速しました。単に害虫を駆除するだけでなく、畑全体の健康状態への意識が高まった結果、経営陣が自ら行動を起こしたのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+3.2pt",
+          "label": "ガバナンス開示に敏感な企業における役員辞任活動の増加"
+        }
+      ],
+      "whyYouCare": "この研究は、社会運動が法律を変えなくても、企業の行動やガバナンスのあり方を根本的に変えうることを示しています。もしあなたが企業の経営者や従業員であれば、社会の倫理観や説明責任の規範の変化に敏感であることが、企業の評判や持続可能性に直結することを理解するでしょう。また、投資家であれば、企業のガバナンス開示への姿勢が、予期せぬ社会的なショックに対する企業のレジリエンス（回復力）を示す重要な指標となることを示唆しています。現代社会において、企業は単に利益を追求するだけでなく、社会的な期待に応える「良い企業市民」であることが、ますます求められているのです。",
+      "takeawayTalk": "#MeTooは、企業のガバナンス規範を変え、役員辞任を増やしたんだ。",
+      "bodyText": "本研究では、#MeToo運動を企業全体に影響を与える「共通の情報ショック」と捉え、その影響を分析するために、連続的処置差の差分法（continuous-treatment difference-in-differences design）を用いました。具体的には、運動以前の企業におけるガバナンス関連開示（Form 8-KのItem 5.02届出の頻度）の度合いを「ショックへの露出度」として測定し、露出度が高い企業と低い企業で、運動後の役員（取締役および執行役員）の辞任活動の変化を比較しました。さらに、動的イベントスタディや行列補完推定法も補完的に用いて分析の頑健性を確認しました。\n\n#MeToo運動は、単に隠れた不祥事を暴くだけでなく、企業の説明責任に関する社会的な規範を広範に変化させました。これにより、企業はセクシャルハラスメントだけでなく、企業文化、倫理的過失、内部告発、その他の評判リスクに対してもより敏感になりました。投資家や従業員も、深刻なガバナンス上の問題と見なす基準を更新したため、企業は評判を損なう可能性のあるリーダーシップの問題に対して、より迅速かつ厳格に対応するようになったと考えられます。特に、以前からガバナンス開示に敏感だった企業は、この規範の変化に対してより強く反応し、役員の離職という形で適応したと解釈できます。",
+      "bodyGlossary": [
+        {
+          "term": "共通の情報ショック",
+          "definition": "特定の企業だけでなく、経済全体に影響を与える情報変化",
+          "start": 27,
+          "end": 36
+        },
+        {
+          "term": "連続的処置差の差分法",
+          "definition": "処置の強度が連続的な場合の因果効果を推定する統計手法",
+          "start": 54,
+          "end": 64
+        },
+        {
+          "term": "Form 8-K",
+          "definition": "米国証券取引委員会への重要事項開示報告書",
+          "start": 153,
+          "end": 161
+        },
+        {
+          "term": "Item 5.02",
+          "definition": "Form 8-Kのうち役員の異動に関する項目",
+          "start": 162,
+          "end": 171
+        },
+        {
+          "term": "露出度",
+          "definition": "特定の情報やリスクに企業がどれだけ晒されているか",
+          "start": 189,
+          "end": 192
+        },
+        {
+          "term": "動的イベントスタディ",
+          "definition": "特定のイベントが時間経過とともに与える影響を分析",
+          "start": 253,
+          "end": 263
+        },
+        {
+          "term": "行列補完推定法",
+          "definition": "欠損データがある行列を補完して推定する手法",
+          "start": 264,
+          "end": 271
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "共通の情報ショック",
+          "definition": "特定の企業だけでなく、経済全体に影響を与える情報変化",
+          "start": 27,
+          "end": 36
+        },
+        {
+          "term": "連続的処置差の差分法",
+          "definition": "処置の強度が連続的な場合の因果効果を推定する統計手法",
+          "start": 54,
+          "end": 64
+        },
+        {
+          "term": "Form 8-K",
+          "definition": "米国証券取引委員会への重要事項開示報告書",
+          "start": 153,
+          "end": 161
+        },
+        {
+          "term": "Item 5.02",
+          "definition": "Form 8-Kのうち役員の異動に関する項目",
+          "start": 162,
+          "end": 171
+        },
+        {
+          "term": "露出度",
+          "definition": "特定の情報やリスクに企業がどれだけ晒されているか",
+          "start": 189,
+          "end": 192
+        },
+        {
+          "term": "動的イベントスタディ",
+          "definition": "特定のイベントが時間経過とともに与える影響を分析",
+          "start": 253,
+          "end": 263
+        },
+        {
+          "term": "行列補完推定法",
+          "definition": "欠損データがある行列を補完して推定する手法",
+          "start": 264,
+          "end": 271
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 254
+    },
+    {
+      "id": "2606.03007v1",
+      "title": "Computing the final epidemic size distributions of a multi-type Galton--Watson process",
+      "authors": [
+        "Yuta Okada",
+        "Hiroshi Nishiura"
+      ],
+      "publishedAt": "2026-06-02T01:26:51Z",
+      "url": "https://arxiv.org/abs/2606.03007v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.03007v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "stat.AP",
+        "q-bio.PE"
+      ],
+      "abstract": "The Galton--Watson process (GWP) is a discrete-time branching process model that provides a powerful tool for analyzing epidemic data and estimating key epidemiological parameters such as the basic reproduction number. When used with surveillance-based cluster size data, the GWP can also elicit information about the extent of transmission heterogeneity, even when each transmission process is not directly observable. When cluster size distribution data are available, the parameters that govern the transmission can be statistically inferred by using the probability mass function that corresponds to the observed cluster size data. For multi-type GWPs, however, real-world applications remain limited, possibly because of the absence of conceptually and practically straightforward approaches for deriving the closed-form solution of the final size distribution. In the present study, we propose a framework for computing the final size distribution of multi-type GWPs, using a method for the choice of the Cauchy integral contour. We provide examples of how our framework can be applied to both simulated data and real-world data of Middle East respiratory syndrome, and discuss potential pitfalls surrounding the identifiability of parameters for statistical inference when using likelihoods that are not conditioned on extinction.",
+      "summary": {
+        "gist": "Galton-Watson過程（GWP）は、感染症の流行データを分析し、基本再生産数などの重要な疫学パラメータを推定するための強力なツールです。しかし、年齢や感受性、接触行動など、宿主の属性によって感染経路が異なる「多型」のGWPでは、最終的な流行規模の分布を計算する明確で実用的なアプローチが不足しており、現実世界への応用が限定的でした。",
+        "novelty": "これまでの感染症予測モデルでは、年齢や接触行動など、感染者の多様な属性を考慮した「多型」の感染経路を正確に計算することが困難でした。特に、最終的な流行規模の分布を求める明確な数学的手法が不足しており、現実の複雑な感染状況への応用が限られていました。 本研究は、多型Galton-Watson過程というモデルに対し、コーシーの積分公式を用いた最終規模分布の計算フレームワークを提案しました。これにより、感染者の多様な属性を考慮した複雑な感染症の最終規模を、理論的に裏付けられた方法で正確に計算できるようになりました。",
+        "method": "本研究では、多型Galton-Watson過程の最終規模分布を計算するための新しいフレームワークを提案しました。具体的には、コーシーの積分公式の積分経路の選択に関する理論的根拠を確立し、最終規模の確率母関数の係数を直接計算する方法を開発しました。この方法は、標準的な最適化手法と離散フーリエ変換を組み合わせた数値計算手順に基づいています。シミュレーションデータと中東呼吸器症候群（MERS）の実際のデータを用いて、このフレームワークの適用例を示しました。",
+        "results": "提案されたフレームワークにより、多型Galton-Watson過程における最終的な流行規模分布を、理論的に裏付けられた方法で正確に計算できるようになりました。シミュレーションデータとMERSの実際のデータへの適用を通じて、その有効性が示されました。これにより、感染症の伝播における異質性の程度に関する情報も引き出すことが可能になり、公衆衛生上のリスク評価、特に流行初期における不確実性の考慮に役立つことが示唆されました。",
+        "why": "この手法の核心は、最終規模の確率母関数（PGF）の係数をコーシーの積分公式を用いて計算することにあります。多型GWPの最終規模方程式には、特定の条件下で一意の解が存在することが示され、この解の存在と一意性を保証する積分経路の選択基準が確立されました。これにより、複雑な多型感染症の最終規模分布を、数学的に厳密かつ実用的に計算することが可能になります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / stat.AP）",
+      "field": "食料システム",
+      "categoryL1": "adjacent",
+      "categoryL2": "epidemiology",
+      "arxivPrimary": "stat.AP",
+      "titleJa": "多型Galton-Watson過程における最終的な流行規模分布の計算",
+      "catchTitle": "感染症の最終規模、多角的に予測",
+      "hook": "あなたは、もし新型インフルエンザが流行したら、最終的にどれくらいの人が感染するか気になりませんか？",
+      "background": "Galton-Watson過程（GWP）は、感染症の流行データを分析し、基本再生産数などの重要な疫学パラメータを推定するための強力なツールです。しかし、年齢や感受性、接触行動など、宿主の属性によって感染経路が異なる「多型」のGWPでは、最終的な流行規模の分布を計算する明確で実用的なアプローチが不足しており、現実世界への応用が限定的でした。",
+      "quiz": {
+        "question": "この研究が解決しようとした、多型Galton-Watson過程の課題は何でしたか？",
+        "options": [
+          "基本再生産数の推定が困難だったこと",
+          "最終的な流行規模分布の計算が困難だったこと",
+          "感染症のリアルタイム予測が不可能だったこと"
+        ],
+        "correctIndex": 1,
+        "explanation": "多型GWPでは、最終的な流行規模分布を導出するための明確で実用的なアプローチが不足していました。"
+      },
+      "limitations": "本研究では、尤度関数が絶滅に条件付けられていない場合の統計的推論におけるパラメータの識別可能性に関する潜在的な落とし穴についても議論されており、今後の課題として残されています。",
+      "glossary": [
+        {
+          "term": "Galton-Watson過程",
+          "definition": "世代ごとに個体数が増減する確率過程のモデル。"
+        },
+        {
+          "term": "多型",
+          "definition": "感染者の年齢や属性など、複数のタイプを考慮すること。"
+        },
+        {
+          "term": "コーシーの積分公式",
+          "definition": "複素関数論における、関数の値を積分で表す公式。"
+        },
+        {
+          "term": "確率母関数",
+          "definition": "確率変数の分布を表現する関数。"
+        },
+        {
+          "term": "離散フーリエ変換",
+          "definition": "デジタル信号を周波数成分に分解する数学的手法。"
+        },
+        {
+          "term": "MERS",
+          "definition": "中東呼吸器症候群、コロナウイルスによる感染症。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "多様な感染経路を持つ感染症の最終的な流行規模を、数学的に正確に計算する新しい手法を提案した研究です。",
+      "noveltyContrast": {
+        "before": "これまでの感染症予測モデルでは、年齢や接触行動など、感染者の多様な属性を考慮した「多型」の感染経路を正確に計算することが困難でした。特に、最終的な流行規模の分布を求める明確な数学的手法が不足しており、現実の複雑な感染状況への応用が限られていました。",
+        "after": "本研究は、多型Galton-Watson過程というモデルに対し、コーシーの積分公式を用いた最終規模分布の計算フレームワークを提案しました。これにより、感染者の多様な属性を考慮した複雑な感染症の最終規模を、理論的に裏付けられた方法で正確に計算できるようになりました。"
+      },
+      "analogy": {
+        "title": "畑の病害、品種別に予測",
+        "body": "これは、まるで「複数の品種の作物が混植された畑で、それぞれの品種が異なる病害感受性を持つ場合、最終的に畑全体でどれくらいの作物が病害に侵されるか」を予測するようなものです。従来は単一品種の畑での病害予測はできても、品種ごとの特性や相互作用を考慮した複雑な畑全体の病害規模を正確に予測するのは難しかった。この研究は、それぞれの品種の病害の広がり方を考慮し、畑全体の最終的な被害規模をより正確に計算できるようになった、というイメージです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、私たちの社会が直面する感染症のリスク評価に大きな影響を与えます。例えば、新型コロナウイルスのように、年齢層や基礎疾患の有無によって感染の広がり方が異なる場合、このモデルを使えば、より詳細な最終感染者数の予測が可能になります。これにより、政府や自治体は、特定のグループに焦点を当てたワクチン接種計画や行動制限など、より効果的で無駄のない公衆衛生対策を立案できるようになるでしょう。あなたの身近な感染症対策が、より科学的根拠に基づいたものになる可能性を秘めています。",
+      "takeawayTalk": "多様な感染症の最終規模を、数学的に正確に予測できるようになったよ！",
+      "bodyText": "本研究では、多型Galton-Watson過程の最終規模分布を計算するための新しいフレームワークを提案しました。具体的には、コーシーの積分公式の積分経路の選択に関する理論的根拠を確立し、最終規模の確率母関数の係数を直接計算する方法を開発しました。この方法は、標準的な最適化手法と離散フーリエ変換を組み合わせた数値計算手順に基づいています。シミュレーションデータと中東呼吸器症候群（MERS）の実際のデータを用いて、このフレームワークの適用例を示しました。\n\nこの手法の核心は、最終規模の確率母関数（PGF）の係数をコーシーの積分公式を用いて計算することにあります。多型GWPの最終規模方程式には、特定の条件下で一意の解が存在することが示され、この解の存在と一意性を保証する積分経路の選択基準が確立されました。これにより、複雑な多型感染症の最終規模分布を、数学的に厳密かつ実用的に計算することが可能になります。",
+      "bodyGlossary": [
+        {
+          "term": "多型",
+          "definition": "感染者の年齢や属性など、複数のタイプを考慮すること。",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "term": "Galton-Watson過程",
+          "definition": "世代ごとに個体数が増減する確率過程のモデル。",
+          "start": 8,
+          "end": 23
+        },
+        {
+          "term": "コーシーの積分公式",
+          "definition": "複素関数論における、関数の値を積分で表す公式。",
+          "start": 62,
+          "end": 71
+        },
+        {
+          "term": "確率母関数",
+          "definition": "確率変数の分布を表現する関数。",
+          "start": 98,
+          "end": 103
+        },
+        {
+          "term": "離散フーリエ変換",
+          "definition": "デジタル信号を周波数成分に分解する数学的手法。",
+          "start": 139,
+          "end": 147
+        },
+        {
+          "term": "MERS",
+          "definition": "中東呼吸器症候群、コロナウイルスによる感染症。",
+          "start": 190,
+          "end": 194
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "多型",
+          "definition": "感染者の年齢や属性など、複数のタイプを考慮すること。",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "term": "Galton-Watson過程",
+          "definition": "世代ごとに個体数が増減する確率過程のモデル。",
+          "start": 8,
+          "end": 23
+        },
+        {
+          "term": "コーシーの積分公式",
+          "definition": "複素関数論における、関数の値を積分で表す公式。",
+          "start": 62,
+          "end": 71
+        },
+        {
+          "term": "確率母関数",
+          "definition": "確率変数の分布を表現する関数。",
+          "start": 98,
+          "end": 103
+        },
+        {
+          "term": "離散フーリエ変換",
+          "definition": "デジタル信号を周波数成分に分解する数学的手法。",
+          "start": 139,
+          "end": 147
+        },
+        {
+          "term": "MERS",
+          "definition": "中東呼吸器症候群、コロナウイルスによる感染症。",
+          "start": 190,
+          "end": 194
+        }
+      ],
+      "agriEconRelevance": "この研究は感染症の流行予測に関するものですが、農業経済学においても、例えば特定の病害が異なる品種の作物にどのように広がり、最終的にどれくらいの収量に影響を与えるかを予測するモデルに応用できる可能性があります。また、市場における消費者の行動が多様なタイプに分かれる場合（例：オーガニック志向、価格重視など）、その行動が最終的な市場規模や価格にどう影響するかを予測する際にも、多型モデルの考え方が役立つかもしれません。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 219
+    },
+    {
+      "id": "2606.01661v1",
+      "title": "Feature leakage and the identifiability of direct-dependency entropy models of neural activity",
+      "authors": [
+        "Houman Safaai",
+        "Bernardo L. Sabatini"
+      ],
+      "publishedAt": "2026-06-01T04:15:49Z",
+      "url": "https://arxiv.org/abs/2606.01661v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.01661v1.pdf",
+      "categories": [
+        "topic:agronomy",
+        "q-bio.NC",
+        "q-bio.QM",
+        "stat.ME"
+      ],
+      "abstract": "Biological neurons receive thousands of synaptic inputs on branching, electrically excitable dendrites, yet population activity is often modeled with direct input-output rules in which each input contributes independently to a scalar drive. We study what successful prediction by such models does, and does not, reveal about neural computation. For conditional maximum-entropy models that match output rates and pairwise output-input coactivities, the entropy explained by a direct model is a prediction measure under the sampled input distribution, not a mechanism-identification test. A restricted MaxEnt fit is an information projection: omitted interaction, temporal, or hidden-state terms can be absorbed into fitted first-order parameters whenever they are correlated with the included sufficient statistics. For sparse correlated binary inputs, this absorption has an explicit coskewness form. We introduce diagnostics that separate in-distribution prediction from recovery of the response rule: state reweighting that holds P(y|x) fixed while changing P(x), conditional log-odds contrasts for local additivity, and temporal leakage controls. In ground-truth simulations, purely higher-order responses can pass first-order entropy and raw coactivity tests under leakage-prone sampling, but are correctly classified after reweighting. Applied to selected, leakage-enriched local tables from CA1 hippocampal recordings, approximately half of tables that appear first-order under empirical weights become distribution-sensitive under balanced reweighting, far above a matched additive-surrogate null. Thus direct entropy-explained fractions and raw coactivity predictions should be interpreted as predictions under the observed state distribution, not as evidence that mechanisms outside the direct model are absent or small.",
+      "summary": {
+        "gist": "生物のニューロンは、樹状突起上で数千ものシナプス入力を受け取り、電圧依存性コンダクタンスや局所的なシナプス相互作用により、共活性入力に対する応答が非線形になることがあります。しかし、理論神経科学や機械学習の多くは、各入力が独立して合計駆動に寄与し、ニューロンがスカラー非線形性を適用して出力を生成するという、より単純なニューラル計算記述を使用しています。このような単純なモデルがニューロン活動をうまく予測できた場合、それが基礎となるメカニズムについて何を明らかにしているのか、という問いは未解決でした。",
+        "novelty": "これまでのニューロン活動モデルでは、入力と出力の直接的な関係を単純に捉え、その予測精度が高いほど、脳の実際の情報処理メカニズムも単純だと解釈されがちでした。しかし、この解釈が本当に正しいのか、疑問が残されていました。 この研究は、予測モデルの精度が高くても、それが必ずしも脳の真のメカニズムを反映しているわけではないことを明らかにしました。特に、入力データの分布や形式によって、複雑な相互作用が単純な直接関係として「見せかけ」てしまう現象（特徴リーケージ）を具体的に示し、その識別方法を提案しています。",
+        "method": "本研究では、ニューロン活動の直接依存条件付き最大エントロピーモデルの識別可能性フレームワークを開発しました。まず、情報射影計算を用いて、省略された統計量が適合された一次最大エントロピーパラメータをどのようにシフトさせ、残余構造のみを検出可能にするかを示しました。次に、スパースな二値入力に対する共歪度（coskewness）恒等式を導出し、射影メカニズムを明示しました。これらの計算に基づいて、状態重み付け、条件付き対数オッズコントラスト、および時間的リーケージ制御という3つの診断法を導入しました。これらの診断法を、グラウンドトゥルースシミュレーションと公開されているCA1海馬および視覚野の記録に適用しました。",
+        "results": "グラウンドトゥルースシミュレーションでは、純粋に高次の応答が、リーケージしやすいサンプリング条件下では一次エントロピーおよび生の共活性テストを通過するものの、重み付け後に正しく分類されることが示されました。CA1海馬記録から選択された、リーケージが豊富な局所テーブルに適用したところ、経験的重み付けの下で一次に見えるテーブルの約半分が、バランスの取れた重み付けの下では分布依存性を示すことが明らかになりました。これは、一致した加法的な代替のヌルモデルをはるかに上回る結果でした。",
+        "why": "省略された相互作用や時間的特徴が、サンプリングされた状態における直接的な十分統計量と相関している場合、それらの効果は適合された一次パラメータに吸収されてしまいます。特に、スパースな二値化されたデータでは、入力間の相関が共歪度チャネルを生成し、高次項が一次項に射影されることで、相互作用がマスクされることが示されました。これにより、真のメカニズムが複雑な相互作用を含んでいても、特定の入力分布の下では単純な直接依存モデルが良好な予測を示すことが可能になります。つまり、予測の成功は、必ずしもモデルが真のメカニズムを捉えていることを意味せず、入力データの分布に依存した「見せかけ」である可能性があるのです。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.NC）",
+      "field": "農学・作物科学",
+      "categoryL1": "adjacent",
+      "categoryL2": "neuroscience",
+      "arxivPrimary": "q-bio.NC",
+      "titleJa": "ニューラル活動の直接依存エントロピーモデルにおける特徴リーケージと識別可能性",
+      "catchTitle": "脳の予測モデル、本当に「脳の仕組み」を解き明かしてる？",
+      "hook": "あなたの会社で、ある商品の売上予測モデルが「非常に正確だ」と評価されたとします。でも、そのモデルが本当に売上の「本質的な原因」を捉えていると言えるでしょうか？",
+      "background": "生物のニューロンは、樹状突起上で数千ものシナプス入力を受け取り、電圧依存性コンダクタンスや局所的なシナプス相互作用により、共活性入力に対する応答が非線形になることがあります。しかし、理論神経科学や機械学習の多くは、各入力が独立して合計駆動に寄与し、ニューロンがスカラー非線形性を適用して出力を生成するという、より単純なニューラル計算記述を使用しています。このような単純なモデルがニューロン活動をうまく予測できた場合、それが基礎となるメカニズムについて何を明らかにしているのか、という問いは未解決でした。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "最大エントロピーモデル",
+          "definition": "観測された統計量に合致する最も構造の少ない確率分布を推定するモデル。"
+        },
+        {
+          "term": "情報射影計算",
+          "definition": "ある確率分布を別の分布族に最も近い形で近似する数学的手法。"
+        },
+        {
+          "term": "共歪度",
+          "definition": "3つ以上の変数の同時分布の非対称性を示す統計量。"
+        },
+        {
+          "term": "状態重み付け",
+          "definition": "入力データの各状態に異なる重みを付けて分析する手法。"
+        },
+        {
+          "term": "条件付き対数オッズコントラスト",
+          "definition": "特定の条件下での事象の発生確率の比率を比較する手法。"
+        },
+        {
+          "term": "時間的リーケージ制御",
+          "definition": "時間的な相関がモデルに誤って影響を与えるのを防ぐ手法。"
+        },
+        {
+          "term": "グラウンドトゥルースシミュレーション",
+          "definition": "真のメカニズムが既知のデータを用いたシミュレーション。"
+        },
+        {
+          "term": "CA1海馬",
+          "definition": "記憶形成に関わる脳の領域の一部。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "ニューロン活動の予測モデルが示す「直接的な関係」は、実は見えない「複雑な相互作用」が紛れ込んでいる可能性があり、そのメカニズムを誤解するリスクがある。",
+      "noveltyContrast": {
+        "before": "これまでのニューロン活動モデルでは、入力と出力の直接的な関係を単純に捉え、その予測精度が高いほど、脳の実際の情報処理メカニズムも単純だと解釈されがちでした。しかし、この解釈が本当に正しいのか、疑問が残されていました。",
+        "after": "この研究は、予測モデルの精度が高くても、それが必ずしも脳の真のメカニズムを反映しているわけではないことを明らかにしました。特に、入力データの分布や形式によって、複雑な相互作用が単純な直接関係として「見せかけ」てしまう現象（特徴リーケージ）を具体的に示し、その識別方法を提案しています。"
+      },
+      "analogy": {
+        "title": "畑の土壌検査と作物の生育",
+        "body": "これは、まるで畑の土壌検査のようなものです。ある畑で、肥料Aをまくと作物がよく育つという結果が出たとします。この結果だけを見ると、「肥料Aが作物の生育に直接効いている」と結論づけたくなります。しかし、実はその畑の土壌には、肥料Aと相性の良い微生物Bが偶然多く生息しており、その微生物Bと肥料Aの複雑な相互作用が、作物の生育を促進していたのかもしれません。この研究は、肥料Aの効果だけを評価する従来の検査方法では、微生物Bの存在という「見えない相互作用」を見落としてしまう可能性を指摘し、土壌の状況（入力データの分布）を変えて検査することで、真の生育メカニズム（脳のメカニズム）を明らかにする方法を提案しているのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、AIや機械学習モデルの解釈において非常に重要な示唆を与えます。例えば、あなたのビジネスで顧客の購買行動を予測するAIモデルが「顧客Aは商品Bを好む」と高い精度で予測したとします。しかし、その予測が本当に顧客Aの「本質的な好み」に基づいているのか、それとも、たまたま顧客Aがアクセスする情報源（入力データの分布）が商品Bに偏っていたために、モデルが「見せかけの好み」を学習してしまっただけなのか、この研究は後者の可能性を指摘します。つまり、モデルの予測精度が高いからといって、そのモデルが示す「原因」を鵜呑みにするのは危険だということです。真のメカニズムを理解するためには、データの収集方法やモデルの評価方法をより慎重に検討する必要があることを教えてくれます。",
+      "takeawayTalk": "AIの予測が当たっても、その理由が「見せかけ」の可能性があるって知ってた？",
+      "bodyText": "本研究では、ニューロン活動の直接依存条件付き最大エントロピーモデルの識別可能性フレームワークを開発しました。まず、情報射影計算を用いて、省略された統計量が適合された一次最大エントロピーパラメータをどのようにシフトさせ、残余構造のみを検出可能にするかを示しました。次に、スパースな二値入力に対する共歪度（coskewness）恒等式を導出し、射影メカニズムを明示しました。これらの計算に基づいて、状態重み付け、条件付き対数オッズコントラスト、および時間的リーケージ制御という3つの診断法を導入しました。これらの診断法を、グラウンドトゥルースシミュレーションと公開されているCA1海馬および視覚野の記録に適用しました。\n\n省略された相互作用や時間的特徴が、サンプリングされた状態における直接的な十分統計量と相関している場合、それらの効果は適合された一次パラメータに吸収されてしまいます。特に、スパースな二値化されたデータでは、入力間の相関が共歪度チャネルを生成し、高次項が一次項に射影されることで、相互作用がマスクされることが示されました。これにより、真のメカニズムが複雑な相互作用を含んでいても、特定の入力分布の下では単純な直接依存モデルが良好な予測を示すことが可能になります。つまり、予測の成功は、必ずしもモデルが真のメカニズムを捉えていることを意味せず、入力データの分布に依存した「見せかけ」である可能性があるのです。",
+      "bodyGlossary": [
+        {
+          "term": "最大エントロピーモデル",
+          "definition": "観測された統計量に合致する最も構造の少ない確率分布を推定するモデル。",
+          "start": 22,
+          "end": 33
+        },
+        {
+          "term": "情報射影計算",
+          "definition": "ある確率分布を別の分布族に最も近い形で近似する数学的手法。",
+          "start": 57,
+          "end": 63
+        },
+        {
+          "term": "共歪度",
+          "definition": "3つ以上の変数の同時分布の非対称性を示す統計量。",
+          "start": 147,
+          "end": 150
+        },
+        {
+          "term": "状態重み付け",
+          "definition": "入力データの各状態に異なる重みを付けて分析する手法。",
+          "start": 197,
+          "end": 203
+        },
+        {
+          "term": "条件付き対数オッズコントラスト",
+          "definition": "特定の条件下での事象の発生確率の比率を比較する手法。",
+          "start": 204,
+          "end": 219
+        },
+        {
+          "term": "時間的リーケージ制御",
+          "definition": "時間的な相関がモデルに誤って影響を与えるのを防ぐ手法。",
+          "start": 223,
+          "end": 233
+        },
+        {
+          "term": "グラウンドトゥルースシミュレーション",
+          "definition": "真のメカニズムが既知のデータを用いたシミュレーション。",
+          "start": 259,
+          "end": 277
+        },
+        {
+          "term": "CA1海馬",
+          "definition": "記憶形成に関わる脳の領域の一部。",
+          "start": 285,
+          "end": 290
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "最大エントロピーモデル",
+          "definition": "観測された統計量に合致する最も構造の少ない確率分布を推定するモデル。",
+          "start": 22,
+          "end": 33
+        },
+        {
+          "term": "情報射影計算",
+          "definition": "ある確率分布を別の分布族に最も近い形で近似する数学的手法。",
+          "start": 57,
+          "end": 63
+        },
+        {
+          "term": "共歪度",
+          "definition": "3つ以上の変数の同時分布の非対称性を示す統計量。",
+          "start": 147,
+          "end": 150
+        },
+        {
+          "term": "状態重み付け",
+          "definition": "入力データの各状態に異なる重みを付けて分析する手法。",
+          "start": 197,
+          "end": 203
+        },
+        {
+          "term": "条件付き対数オッズコントラスト",
+          "definition": "特定の条件下での事象の発生確率の比率を比較する手法。",
+          "start": 204,
+          "end": 219
+        },
+        {
+          "term": "時間的リーケージ制御",
+          "definition": "時間的な相関がモデルに誤って影響を与えるのを防ぐ手法。",
+          "start": 223,
+          "end": 233
+        },
+        {
+          "term": "グラウンドトゥルースシミュレーション",
+          "definition": "真のメカニズムが既知のデータを用いたシミュレーション。",
+          "start": 259,
+          "end": 277
+        },
+        {
+          "term": "CA1海馬",
+          "definition": "記憶形成に関わる脳の領域の一部。",
+          "start": 285,
+          "end": 290
+        }
+      ],
+      "agriEconRelevance": "この研究の知見は、農業経済学におけるデータ分析にも応用可能です。例えば、ある農家の収益予測モデルが「特定の栽培方法が収益向上に直結する」と高い精度で予測したとします。しかし、この予測が、その地域の特定の土壌条件や気候パターン（入力データの分布）と栽培方法の複雑な相互作用によって生じた「見せかけ」である可能性を、この研究は示唆します。もしそうであれば、他の地域や異なる条件下で同じ栽培方法を推奨しても、期待通りの効果が得られないかもしれません。真に効果的な農業政策や技術指導を行うためには、モデルの予測だけでなく、その背後にあるメカニズムを、データ分布の偏りを考慮して深く掘り下げて理解することが不可欠です。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 297,
+      "keyFigure": {
+        "imagePath": "/figures/2606.01661v1_results.png",
+        "page": 4,
+        "caption": "Figure 1: State weighting can determine whether a fixed response table appears first-order. Bubble",
+        "label": "Figure 1:",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-03T23:43:17.285Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.01661v1_results.png",
+          "page": 4,
+          "caption": "Figure 1: State weighting can determine whether a fixed response table appears first-order. Bubble",
+          "label": "Figure 1:",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-03T23:43:17.285Z"
+        }
+      ]
+    }
+  ]
+}

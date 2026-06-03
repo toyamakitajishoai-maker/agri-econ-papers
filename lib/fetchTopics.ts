@@ -21,8 +21,8 @@ export const FETCH_TOPICS: FetchTopic[] = [
     labelJa: "農業経済",
     openAlexQuery: "agricultural economics food security rural development",
     semanticQuery: "agricultural economics",
-    arxivCategories: ["econ.GN", "q-fin.EC"],
-    weight: 0.5,
+    arxivCategories: ["econ.AG", "econ.GN", "q-fin.EC"],
+    weight: 1.2,
   },
   {
     id: "food-system",

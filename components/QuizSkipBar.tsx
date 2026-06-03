@@ -38,9 +38,7 @@ export default function QuizSkipBar({ paperId }: QuizSkipBarProps) {
 
   return (
     <div className="flex flex-col items-center gap-2 rounded-2xl border border-dashed border-[#d8d2c4] bg-[#faf8f5] px-4 py-4">
-      <p className="text-center text-xs text-[#8a908a]">
-        <span aria-hidden>⚡</span> 今日は急いでいる方はこちら
-      </p>
+      <p className="text-center text-xs text-[#8a908a]">今日は急いでいる方はこちら</p>
       <button
         type="button"
         onClick={handleSkip}

@@ -2,60 +2,67 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 
-import type { GlossaryTerm } from "@/lib/types";
+import {
+  buildSegmentsFromSpans,
+  spansFromGlossaryTerms,
+  type TextSegment,
+} from "@/lib/glossarySpans";
+import { stripInlineMarkup } from "@/lib/paperV2Validate";
+import type { GlossarySpan, GlossaryTerm } from "@/lib/types";
 
 type GlossaryTextProps = {
   text: string;
   glossary?: GlossaryTerm[];
+  /** v2: 位置指定（優先）。本文はプレーンテキストのまま */
+  spans?: GlossarySpan[];
 };
 
-type Segment =
-  | { kind: "text"; value: string }
-  | { kind: "term"; value: string; term: GlossaryTerm };
-
-/** 正規表現特殊文字をエスケープ */
 function escapeForRegExp(str: string): string {
   return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
-/**
- * 用語を本文長い順にマッチさせ、各出現を1回ずつだけハイライト
- */
-function buildSegments(text: string, glossary: GlossaryTerm[]): Segment[] {
+/** v1 フォールバック: 正規表現マッチ（重なり除去を強化） */
+function buildSegmentsLegacy(text: string, glossary: GlossaryTerm[]): TextSegment[] {
   if (!text) return [];
-  if (glossary.length === 0) return [{ kind: "text", value: text }];
+  if (!glossary.length) return [{ kind: "text", value: text }];
 
   const sorted = [...glossary].sort((a, b) => b.term.length - a.term.length);
-  type Match = { start: number; end: number; term: GlossaryTerm };
+  type Match = { start: number; end: number; definition: string; reading?: string; value: string };
   const matches: Match[] = [];
-  const usedTerms = new Set<string>();
 
   for (const term of sorted) {
-    if (!term.term.trim()) continue;
-    if (usedTerms.has(term.term)) continue;
-    const re = new RegExp(escapeForRegExp(term.term), "i");
+    const label = term.term.trim();
+    if (!label) continue;
+    const re = new RegExp(escapeForRegExp(label), "i");
     const m = re.exec(text);
-    if (!m) continue;
+    if (!m || m.index === undefined) continue;
     const start = m.index;
     const end = start + m[0].length;
     if (matches.some((x) => !(end <= x.start || start >= x.end))) continue;
-    matches.push({ start, end, term });
-    usedTerms.add(term.term);
+    matches.push({
+      start,
+      end,
+      definition: term.definition,
+      reading: term.reading,
+      value: text.slice(start, end),
+    });
   }
 
   matches.sort((a, b) => a.start - b.start);
   if (matches.length === 0) return [{ kind: "text", value: text }];
 
-  const segments: Segment[] = [];
+  const segments: TextSegment[] = [];
   let cursor = 0;
   for (const m of matches) {
+    if (m.start < cursor) continue;
     if (m.start > cursor) {
       segments.push({ kind: "text", value: text.slice(cursor, m.start) });
     }
     segments.push({
       kind: "term",
-      value: text.slice(m.start, m.end),
-      term: m.term,
+      value: m.value,
+      definition: m.definition,
+      reading: m.reading,
     });
     cursor = m.end;
   }
@@ -65,7 +72,38 @@ function buildSegments(text: string, glossary: GlossaryTerm[]): Segment[] {
   return segments;
 }
 
-function TermTooltip({ segment, value }: { segment: GlossaryTerm; value: string }) {
+function resolveSegments(
+  text: string,
+  glossary: GlossaryTerm[],
+  spans?: GlossarySpan[]
+): TextSegment[] {
+  if (spans?.length) {
+    const fromSpans = buildSegmentsFromSpans(text, spans);
+    if (fromSpans.length > 1 || (fromSpans.length === 1 && fromSpans[0].kind === "term")) {
+      return fromSpans;
+    }
+  }
+  if (glossary.length) {
+    const autoSpans = spansFromGlossaryTerms(text, glossary);
+    if (autoSpans.length) {
+      return buildSegmentsFromSpans(text, autoSpans);
+    }
+    return buildSegmentsLegacy(text, glossary);
+  }
+  return [{ kind: "text", value: text }];
+}
+
+function TermTooltip({
+  value,
+  definition,
+  reading,
+  displayTerm,
+}: {
+  value: string;
+  definition: string;
+  reading?: string;
+  displayTerm?: string;
+}) {
   const [open, setOpen] = useState(false);
   const wrapperRef = useRef<HTMLSpanElement>(null);
 
@@ -86,7 +124,7 @@ function TermTooltip({ segment, value }: { segment: GlossaryTerm; value: string 
   }, [open]);
 
   return (
-    <span ref={wrapperRef} className="relative inline-block">
+    <span ref={wrapperRef} className="relative inline">
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
@@ -95,7 +133,7 @@ function TermTooltip({ segment, value }: { segment: GlossaryTerm; value: string 
         onFocus={() => setOpen(true)}
         onBlur={() => setOpen(false)}
         aria-expanded={open}
-        className="cursor-help border-b border-dotted border-[#9a8460] text-[#3d4540] decoration-[#9a8460]/60 underline-offset-[3px] transition-colors hover:bg-[#fef9ea]"
+        className="cursor-help border-b border-dotted border-[#9a8460] text-inherit decoration-[#9a8460]/60 underline-offset-[3px] transition-colors hover:bg-[#fef9ea]"
       >
         {value}
       </button>
@@ -106,32 +144,42 @@ function TermTooltip({ segment, value }: { segment: GlossaryTerm; value: string 
           style={{ top: "100%" }}
         >
           <span className="block text-[11px] font-semibold text-[#9a8460]">
-            {segment.term}
-            {segment.reading ? (
-              <span className="ml-1 font-normal text-[#c8cdc8]">／ {segment.reading}</span>
+            {displayTerm ?? value}
+            {reading ? (
+              <span className="ml-1 font-normal text-[#c8cdc8]">／ {reading}</span>
             ) : null}
           </span>
-          <span className="mt-1 block text-[#e8ebe8]">{segment.definition}</span>
+          <span className="mt-1 block text-[#e8ebe8]">{definition}</span>
         </span>
       ) : null}
     </span>
   );
 }
 
-export default function GlossaryText({ text, glossary }: GlossaryTextProps) {
-  const segments = useMemo(() => buildSegments(text, glossary ?? []), [text, glossary]);
+export default function GlossaryText({ text, glossary = [], spans }: GlossaryTextProps) {
+  const plainText = useMemo(() => stripInlineMarkup(text), [text]);
+  const segments = useMemo(
+    () => resolveSegments(plainText, glossary, spans),
+    [plainText, glossary, spans]
+  );
 
-  if (segments.length === 0) return null;
+  if (!plainText) return null;
 
   return (
     <>
       {segments.map((seg, i) =>
         seg.kind === "text" ? (
-          <span key={i} className="whitespace-pre-line">
+          <span key={`t-${i}`} className="whitespace-pre-line">
             {seg.value}
           </span>
         ) : (
-          <TermTooltip key={i} segment={seg.term} value={seg.value} />
+          <TermTooltip
+            key={`g-${i}`}
+            value={seg.value}
+            definition={seg.definition}
+            reading={seg.reading}
+            displayTerm={seg.value}
+          />
         )
       )}
     </>

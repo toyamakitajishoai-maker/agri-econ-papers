@@ -72,6 +72,56 @@ export type GlossaryTerm = {
   definition: string;
 };
 
+/** 1日5本枠の大分類（サイトのコア分類） */
+export type CategoryL1 = "agri-econ" | "adjacent" | "serendipity";
+
+/** 比喩の出典領域 */
+export type AnalogyDomain = "farming" | "cooking" | "market" | "weather" | "daily" | "other";
+
+/** v2: 何が新しいか（Before / After） */
+export type NoveltyContrast = {
+  before: string;
+  after: string;
+};
+
+/** v2: たとえると（必須） */
+export type AnalogyBlock = {
+  title: string;
+  body: string;
+  domain?: AnalogyDomain;
+};
+
+/** body_text 内の用語注釈（位置は UTF-16 index） */
+export type BodyGlossaryEntry = {
+  term: string;
+  definition: string;
+  start: number;
+  end: number;
+  reading?: string;
+};
+
+/** v2: ピックアップ数字 */
+export type KpiItem = {
+  value: string;
+  label: string;
+};
+
+/** v2: 用語の出現位置（UTF-16 code unit） */
+export type GlossarySpan = {
+  term: string;
+  start: number;
+  end: number;
+  definition: string;
+  reading?: string;
+};
+
+/** v2: 図表ブロック */
+export type ArticleFigureV2 = {
+  imageUrl: string;
+  captionJa: string;
+  whatToSee: string;
+};
+
 export type KeyFigure = {
   /** 例: /figures/W123.png */
   imagePath: string;
@@ -163,4 +213,36 @@ export type Paper = {
   keyFigure?: KeyFigure;
   /** PDF から抽出した複数図（新形式: わかったこと用・なぜそうなるのか用など） */
   keyFigures?: KeyFigure[];
+
+  // ─── 記事 v2（既存フィールドと併存・optional） ───
+  /** v2 テンプレートを明示的に使う */
+  useArticleV2?: boolean;
+  /** ひとことで言うと（80字以内） */
+  oneLiner?: string;
+  /** 新規性の対比 */
+  noveltyContrast?: NoveltyContrast;
+  analogy?: AnalogyBlock;
+  kpi?: KpiItem[];
+  /** 専門外の読者への関連 */
+  whyYouCare?: string;
+  /** 読了後に話せる一文 */
+  takeawayTalk?: string;
+  /** 5本枠: コア農経 / 隣接 / セレンディピティ */
+  categoryL1?: CategoryL1;
+  /** 農経サブテーマ（例: farm-management） */
+  categoryL2?: string;
+  /** arXiv primary category（例: econ.AG） */
+  arxivPrimary?: string;
+  readingTimeSec?: number;
+  /** 用語タグを含まないプレーン本文（method + mechanism 等） */
+  bodyText?: string;
+  /** body_text 内の用語位置（優先） */
+  bodyGlossary?: BodyGlossaryEntry[];
+  /** @deprecated bodyGlossary を優先。後方互換 */
+  glossarySpans?: GlossarySpan[];
+  /** セレンディピティ枠: 農経への応用可能性（120字） */
+  agriEconRelevance?: string;
+  /** 比喩が3回 NG のとき人間レビュー待ち */
+  analogyNeedsReview?: boolean;
+  articleFiguresV2?: ArticleFigureV2[];
 };

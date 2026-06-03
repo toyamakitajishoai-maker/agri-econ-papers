@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import {
   isPaperReadUnlocked,
@@ -17,8 +17,7 @@ type QuizGateProps = {
 };
 
 /**
- * 「まずここだけ」以降の本文を、未解除時のみブラー。
- * 解除条件: クイズ回答済み or スキップ済み（paper-read-*、30日有効）
+ * クイズ回答・スキップまで本文を折りたたみ表示（ブラーなし）。
  */
 export default function QuizGate({ paperId, skip, children }: QuizGateProps) {
   const [mounted, setMounted] = useState(false);
@@ -50,32 +49,52 @@ export default function QuizGate({ paperId, skip, children }: QuizGateProps) {
     };
   }, [paperId, refresh]);
 
-  if (skip || !mounted) return <>{children}</>;
+  const wasLockedRef = useRef<boolean | null>(null);
 
-  const locked = !unlocked;
+  useEffect(() => {
+    if (!mounted || skip) return;
+    const locked = !unlocked;
+    if (wasLockedRef.current && !locked) {
+      const el = document.getElementById("article-content");
+      if (el) {
+        const t = window.setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 120);
+        return () => window.clearTimeout(t);
+      }
+    }
+    wasLockedRef.current = locked;
+  }, [mounted, unlocked, skip]);
 
-  return (
-    <div className="relative">
-      <div
-        className={
-          locked
-            ? "pointer-events-none select-none blur-sm transition duration-200"
-            : "transition-opacity duration-200 ease-out animate-[fadeIn_0.2s_ease-out]"
-        }
-        aria-hidden={locked}
-      >
+  if (skip) return <>{children}</>;
+
+  const locked = !mounted || !unlocked;
+
+  if (!locked) {
+    return (
+      <div id="article-content" className="scroll-mt-24 animate-[fadeIn_0.35s_ease-out]">
         {children}
       </div>
-      {locked ? (
-        <div
-          className="pointer-events-none absolute inset-0 flex items-start justify-center pt-12"
-          aria-live="polite"
-        >
-          <p className="max-w-[min(100%,20rem)] rounded-2xl border border-[#e8e4dc] bg-[#faf8f5]/95 px-5 py-3 text-center text-xs leading-relaxed text-[#6b726b] shadow-sm backdrop-blur-sm">
-            上のクイズに答えると、ここから先の本文が表示されます。
-          </p>
+    );
+  }
+
+  return (
+    <div className="space-y-4">
+      <div
+        className="relative overflow-hidden rounded-2xl border border-[#ebe7df] bg-white/60"
+        aria-hidden
+      >
+        <div className="pointer-events-none max-h-[min(42vh,320px)] select-none opacity-40">
+          {children}
         </div>
-      ) : null}
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#faf8f5] via-[#faf8f5]/90 to-transparent"
+          aria-hidden
+        />
+      </div>
+      <p className="rounded-2xl border border-[#e8e4dc] bg-[#faf8f5] px-5 py-4 text-center text-sm leading-relaxed text-[#5c635c]">
+        上のクイズに答えるか、「スキップして読む」を押すと、本文が読めるようになります。
+      </p>
     </div>
   );
 }

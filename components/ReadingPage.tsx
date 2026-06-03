@@ -56,7 +56,7 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
 
   return (
     <>
-      <article className="mx-auto max-w-[680px]">
+      <article className="mx-auto max-w-[680px] pb-28 sm:pb-12">
         <header className="space-y-5 pb-8">
           <ReadingMeta readMinutes={view.readMinutes} tags={view.tags} date={date} />
           <h1 className="font-serif text-2xl font-semibold leading-[1.35] tracking-tight text-[#1a1f1c] sm:text-[2rem]">
@@ -246,7 +246,7 @@ export default function ReadingPage({ paper, date, siblings }: ReadingPageProps)
 
       </article>
 
-      <StickyReadCta label="本文へ" />
+      <StickyReadCta paperId={paper.id} skipGate={!paper.quiz} label="本文を読む" />
     </>
   );
 }

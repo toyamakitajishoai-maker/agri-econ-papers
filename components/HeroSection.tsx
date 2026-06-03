@@ -1,17 +1,18 @@
-import Link from "next/link";
+import InterestLink from "@/components/InterestLink";
+import type { Paper } from "@/lib/types";
 
 type HeroSectionProps = {
   date: string;
   count: number;
   isPastDateDisplay: boolean;
-  featuredId?: string;
+  featured?: Paper;
 };
 
 export default function HeroSection({
   date,
   count,
   isPastDateDisplay,
-  featuredId,
+  featured,
 }: HeroSectionProps) {
   const formatted = new Intl.DateTimeFormat("ja-JP", {
     timeZone: "Asia/Tokyo",
@@ -29,9 +30,10 @@ export default function HeroSection({
       <h1 className="mt-3 max-w-xl text-balance font-serif text-3xl font-semibold leading-tight tracking-tight text-[#1a1f1c] sm:text-4xl">
         今日の研究を、3分で。
       </h1>
-      <p className="mt-4 max-w-md text-pretty text-sm leading-relaxed text-[#5c635c] sm:text-base">
-        論文ではなく、発見を読むための場所。
-        {count > 0 ? ` きょうは ${count} 本に厳選しました。` : ""}
+      <p className="mt-4 max-w-lg text-pretty text-sm leading-relaxed text-[#5c635c] sm:text-base">
+        論文ではなく、発見を読むための場所。新鮮さと多様性を両立した
+        {count > 0 ? `きょうの ${count} 本` : "きょうの厳選"}
+        を、クイズとストーリーで読めます。下の「きょうの気分」で絞り込みもできます。
       </p>
 
       {isPastDateDisplay ? (
@@ -40,14 +42,15 @@ export default function HeroSection({
         </p>
       ) : null}
 
-      {featuredId ? (
-        <Link
-          href={`/papers/${encodeURIComponent(featuredId)}`}
+      {featured ? (
+        <InterestLink
+          href={`/papers/${encodeURIComponent(featured.id)}`}
+          paper={featured}
           className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#2f4a3a] px-5 py-2.5 text-sm font-medium text-white shadow-sm transition hover:bg-[#243a2d]"
         >
           今日の1本を読む
           <span aria-hidden>→</span>
-        </Link>
+        </InterestLink>
       ) : null}
     </section>
   );

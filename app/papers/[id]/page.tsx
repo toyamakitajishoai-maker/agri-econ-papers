@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import PaperArticleV2 from "@/components/PaperArticleV2";
 import ReadingPage from "@/components/ReadingPage";
+import { shouldRenderArticleV2 } from "@/lib/articleV2";
 import { getPaperWithSiblings } from "@/lib/data";
 import { buildEditorialView } from "@/lib/editorial";
 import { getMergedRelatedPapers } from "@/lib/relatedPapers";
@@ -60,8 +62,7 @@ export default async function PaperDetailPage({ params }: PaperDetailPageProps) 
   }
 
   const { paper, date, siblings } = ctx;
-  /** 埋め込み類似度で「次に読む3本」を取得。失敗時は同日論文にフォールバック */
-  const related = await getMergedRelatedPapers(paper, siblings);
+  const related = await getMergedRelatedPapers(paper, date, siblings);
 
   return (
     <div className="pb-24 sm:pb-12">
@@ -71,7 +72,11 @@ export default async function PaperDetailPage({ params }: PaperDetailPageProps) 
       >
         ← きょうの一覧
       </Link>
-      <ReadingPage paper={paper} date={date} siblings={related} />
+      {shouldRenderArticleV2(paper) ? (
+        <PaperArticleV2 paper={paper} date={date} siblings={related} />
+      ) : (
+        <ReadingPage paper={paper} date={date} siblings={related} />
+      )}
     </div>
   );
 }

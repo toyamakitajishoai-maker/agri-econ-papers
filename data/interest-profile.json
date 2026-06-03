@@ -1,0 +1,4 @@
+{
+  "vector": {},
+  "_comment": "サーバー側選出ブースト用。USE_INTEREST_BOOST=1 で fetch 時に加算。ブラウザの interest_vector_v1 とは別。"
+}

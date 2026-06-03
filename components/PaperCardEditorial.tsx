@@ -1,5 +1,4 @@
-import Link from "next/link";
-
+import InterestLink from "@/components/InterestLink";
 import TagChips from "@/components/TagChips";
 import { buildEditorialView } from "@/lib/editorial";
 import { getJournalLabel } from "@/lib/journal";
@@ -24,9 +23,13 @@ export default function PaperCardEditorial({ paper, index }: PaperCardEditorialP
       </div>
 
       <h2 className="mt-4 font-serif text-xl font-semibold leading-snug tracking-tight text-[#1a1f1c] sm:text-2xl">
-        <Link className="hover:text-[#2f4a3a]" href={`/papers/${encodeURIComponent(paper.id)}`}>
+        <InterestLink
+          className="hover:text-[#2f4a3a]"
+          href={`/papers/${encodeURIComponent(paper.id)}`}
+          paper={paper}
+        >
           {view.catchTitle}
-        </Link>
+        </InterestLink>
       </h2>
 
       <p className="mt-3 text-pretty text-[15px] leading-relaxed text-[#5c635c]">{view.hook}</p>
@@ -55,12 +58,13 @@ export default function PaperCardEditorial({ paper, index }: PaperCardEditorialP
             {journal !== "掲載誌情報なし" ? ` · ${journal}` : ""}
           </p>
         </div>
-        <Link
+        <InterestLink
           href={`/papers/${encodeURIComponent(paper.id)}`}
+          paper={paper}
           className="inline-flex shrink-0 items-center justify-center rounded-full bg-[#2f4a3a] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[#243a2d]"
         >
           3分で読む
-        </Link>
+        </InterestLink>
       </footer>
     </article>
   );

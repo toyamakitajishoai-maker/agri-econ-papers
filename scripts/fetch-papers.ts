@@ -17,8 +17,10 @@ import {
 } from "@/lib/fetchTopics";
 import { fetchOpenAlexRecentWorks } from "@/lib/openAlex";
 import { fetchSemanticScholarArxivPapers } from "@/lib/semanticScholar";
+import { classifyPaper } from "@/lib/classifyPaper";
+import { selectWithQuotaMMR } from "@/lib/selectDailyPapers";
 import { writeJsonFileAtomic } from "@/lib/safeWriteJson";
-import type { Paper } from "@/lib/types";
+import type { CategoryL1, Paper } from "@/lib/types";
 import { resolvePdfUrl } from "@/lib/pdfResolve";
 import { extractPdfTextExcerpt } from "@/lib/extractPdfText";
 
@@ -39,6 +41,7 @@ const SEMANTIC_LIMIT = Number(process.env.SEMANTIC_LIMIT ?? 25);
 
 const MAX_PAPERS = Number(process.env.MAX_PAPERS ?? 5);
 const CANDIDATE_POOL_SIZE = Math.max(MAX_PAPERS * 10, 50);
+const USE_SMART_SELECTION = process.env.USE_SMART_SELECTION !== "0";
 
 function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -88,7 +91,31 @@ function toPaperSchema(input: ArxivPaper): Paper {
     source,
     journal: input.journal,
     field: input.field,
+    ...(() => {
+      const c = classifyPaper({
+        categories: input.categories,
+        abstract: input.abstract,
+        title: input.title,
+        field: input.field,
+      });
+      return {
+        categoryL1: c.categoryL1,
+        categoryL2: c.categoryL2,
+        arxivPrimary: c.arxivPrimary,
+      };
+    })(),
   };
+}
+
+async function loadInterestVector(): Promise<Partial<Record<CategoryL1, number>>> {
+  const path = process.env.INTEREST_PROFILE_PATH ?? "data/interest-profile.json";
+  try {
+    const raw = await readFile(path, "utf-8");
+    const parsed = JSON.parse(raw) as { vector?: Partial<Record<CategoryL1, number>> };
+    return parsed.vector ?? (parsed as Partial<Record<CategoryL1, number>>);
+  } catch {
+    return {};
+  }
 }
 
 function tagTopic(paper: ArxivPaper, topic: FetchTopic): ArxivPaper {
@@ -327,8 +354,35 @@ async function main() {
     console.warn("Semantic Scholar fetch skipped:", error);
   }
 
-  const pool = shuffleInPlace(dedupeByArxivId(candidates)).slice(0, CANDIDATE_POOL_SIZE);
-  console.log(`候補 ${pool.length}件（シャッフル済み）から PDF取得可能な論文を最大 ${MAX_PAPERS} 件選びます…`);
+  const deduped = dedupeByArxivId(candidates);
+  let pool: ArxivPaper[];
+
+  if (USE_SMART_SELECTION) {
+    const interestVector = await loadInterestVector();
+    const useInterest = process.env.USE_INTEREST_BOOST === "1";
+    const selection = await selectWithQuotaMMR(deduped, {
+      maxPapers: CANDIDATE_POOL_SIZE,
+      todayDate: today,
+      now,
+      interestVector,
+      useInterestBoost: useInterest,
+    });
+    pool = selection.ordered;
+    console.log(
+      `候補 ${pool.length}件（農経2+隣接2+セレン1 クォータ）から PDF検証で最大 ${MAX_PAPERS} 件確定…`
+    );
+    const quotaIds = selection.quotaPicks.map((q) => `${q.paper.id}[${q.categoryL1}]`).join(", ");
+    console.log(`  クォータ選定: ${quotaIds}`);
+    for (const w of selection.warnings) {
+      console.warn(`  [選出警告] ${w}`);
+    }
+    if (useInterest) {
+      console.log("  興味ブースト: ON（data/interest-profile.json）");
+    }
+  } else {
+    pool = shuffleInPlace(deduped).slice(0, CANDIDATE_POOL_SIZE);
+    console.log(`候補 ${pool.length}件（シャッフル済み）から PDF取得可能な論文を最大 ${MAX_PAPERS} 件選びます…`);
+  }
 
   const finalList = await selectPapersWithDownloadablePdf(pool, MAX_PAPERS);
 

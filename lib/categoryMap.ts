@@ -1,4 +1,25 @@
+import {
+  CATEGORY_MAP,
+  SLOT_LABELS,
+  classifyPaper,
+  classifyFromPaper,
+  resolvePaperSlot,
+} from "@/lib/classifyPaper";
+import { CATEGORY_L1_LABELS, inferCategoryL1, inferCategoryL2 } from "@/lib/categoryL1";
 import { FETCH_TOPICS } from "@/lib/fetchTopics";
+import type { CategoryL1 } from "@/lib/types";
+
+export {
+  CATEGORY_MAP,
+  SLOT_LABELS,
+  classifyPaper,
+  classifyFromPaper,
+  resolvePaperSlot,
+  CATEGORY_L1_LABELS,
+  inferCategoryL1,
+  inferCategoryL2,
+};
+export type { CategoryL1 };
 
 /**
  * arXiv カテゴリ・OpenAlex 概念 → 日本語タグの単一ソース。

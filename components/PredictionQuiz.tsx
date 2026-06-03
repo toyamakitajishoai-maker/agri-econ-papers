@@ -48,7 +48,7 @@ export default function PredictionQuiz({ quiz, paperId, field }: PredictionQuizP
   const feedback = picked !== null ? getOptionFeedback(quiz, picked) : "";
 
   return (
-    <section className="rounded-3xl border-2 border-dashed border-[#d4c4a8] bg-gradient-to-br from-[#fffdf8] to-[#f5f0e6] px-5 py-6 sm:px-7">
+    <section className="rounded-2xl border border-[#e8e4dc] bg-white px-5 py-6 shadow-[0_1px_0_rgba(0,0,0,0.04)] sm:px-6">
       <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#9a8460]">
         予想クイズ
       </p>

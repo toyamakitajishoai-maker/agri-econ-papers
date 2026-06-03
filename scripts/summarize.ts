@@ -7,7 +7,15 @@ loadEnv();
 import { buildAudioForPaper, isAudioFresh, isReadyForAudio } from "@/lib/buildAudio";
 import { extractPdfTextExcerpt } from "@/lib/extractPdfText";
 import { isWeakPdfUrl, resolvePdfUrl } from "@/lib/pdfResolve";
+import { classifyFromPaper } from "@/lib/classifyPaper";
 import { summarizeAbstractWithGemini } from "@/lib/gemini";
+import type { GeminiV2SummaryResult } from "@/lib/geminiV2";
+import {
+  isSummarizeArticleV2Enabled,
+  needsArticleV2Fields,
+  summarizeWithGeminiV2,
+} from "@/lib/geminiV2";
+import { estimateReadingTimeSecV2 } from "@/lib/readingTime";
 import { writeJsonFileAtomic } from "@/lib/safeWriteJson";
 import { isAcademicSummary } from "@/lib/summary";
 import type { ArxivPaper } from "@/lib/arxiv";
@@ -65,6 +73,62 @@ function needsSummarize(paper: Paper): boolean {
   return false;
 }
 
+function needsProcessing(paper: Paper, useV2: boolean): boolean {
+  if (needsSummarize(paper)) return true;
+  if (useV2 && needsArticleV2Fields(paper)) return true;
+  return false;
+}
+
+function applyV2ResultToPaper(
+  paper: Paper,
+  result: GeminiV2SummaryResult,
+  pdfExcerpt: string | null,
+  resolvedPdfUrl: string
+): Paper {
+  const merged: Paper = {
+    ...paper,
+    pdfUrl: resolvedPdfUrl || paper.pdfUrl,
+    titleJa: result.titleJa ?? paper.titleJa,
+    catchTitle: result.catchTitle ?? paper.catchTitle,
+    hook: result.hook ?? paper.hook,
+    hookLead: result.hookLead ?? paper.hookLead,
+    background: result.background ?? paper.background,
+    threeLineSummary: result.threeLineSummary ?? paper.threeLineSummary,
+    quiz: result.quiz ?? paper.quiz,
+    limitations: pdfExcerpt ? (result.limitations ?? "") : paper.limitations,
+    glossary: result.glossary ?? paper.glossary,
+    takeaway: result.takeaway ?? paper.takeaway,
+    storyCards: result.storyCards ?? paper.storyCards,
+    summary: result.summary,
+    useArticleV2: true,
+    oneLiner: result.oneLiner ?? paper.oneLiner,
+    noveltyContrast: result.noveltyContrast ?? paper.noveltyContrast,
+    analogy: result.analogy ?? paper.analogy,
+    kpi: result.kpi ?? paper.kpi,
+    whyYouCare: result.whyYouCare ?? paper.whyYouCare,
+    takeawayTalk: result.takeawayTalk ?? paper.takeawayTalk,
+    bodyText: result.bodyText ?? paper.bodyText,
+    bodyGlossary: result.bodyGlossary ?? paper.bodyGlossary,
+    glossarySpans: result.glossarySpans ?? paper.glossarySpans,
+    agriEconRelevance: result.agriEconRelevance ?? paper.agriEconRelevance,
+    analogyNeedsReview: result.analogyNeedsReview ?? paper.analogyNeedsReview,
+    ...(() => {
+      const c = classifyFromPaper({
+        ...paper,
+        categoryL1: result.categoryL1 ?? paper.categoryL1,
+        categoryL2: result.categoryL2 ?? paper.categoryL2,
+      });
+      return {
+        categoryL1: result.categoryL1 ?? c.categoryL1,
+        categoryL2: result.categoryL2 ?? c.categoryL2,
+        arxivPrimary: c.arxivPrimary,
+      };
+    })(),
+  };
+  merged.readingTimeSec = estimateReadingTimeSecV2(merged);
+  return merged;
+}
+
 async function main() {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
@@ -93,13 +157,18 @@ async function main() {
   const papers = parsed.papers ?? [];
 
   const force = process.env.FORCE_SUMMARIZE === "1" || process.env.FORCE_SUMMARIZE === "true";
+  const useV2 = isSummarizeArticleV2Enabled();
 
   const summarizedPapers: Paper[] = [];
   let skipped = 0;
   let processed = 0;
-  const toProcess = force ? papers.length : papers.filter((p) => needsSummarize(p)).length;
+  const toProcess = force
+    ? papers.length
+    : papers.filter((p) => needsProcessing(p, useV2)).length;
 
-  console.log(`要約開始: ${date}（対象 ${toProcess} 件 / 全 ${papers.length} 件）`);
+  console.log(
+    `要約開始: ${date}（対象 ${toProcess} 件 / 全 ${papers.length} 件${useV2 ? " · 記事v2" : ""}）`
+  );
 
   async function saveProgress() {
     const remaining = papers.slice(summarizedPapers.length);
@@ -112,7 +181,7 @@ async function main() {
   for (let i = 0; i < papers.length; i += 1) {
     const paper = papers[i];
 
-    if (!force && !needsSummarize(paper)) {
+    if (!force && !needsProcessing(paper, useV2)) {
       skipped += 1;
       summarizedPapers.push(paper);
       continue;
@@ -161,21 +230,26 @@ async function main() {
       }
     }
 
-    const result = await summarizeAbstractWithGemini(toArxivPaper(paper), apiKey, 3, pdfExcerpt);
+    const arxiv = toArxivPaper(paper);
+    const result = useV2
+      ? await summarizeWithGeminiV2(arxiv, apiKey, 3, pdfExcerpt)
+      : await summarizeAbstractWithGemini(arxiv, apiKey, 3, pdfExcerpt);
     processed += 1;
-    const updatedPaper: Paper = {
-      ...paper,
-      pdfUrl: resolvedPdfUrl || paper.pdfUrl,
-      titleJa: result.titleJa ?? paper.titleJa,
-      catchTitle: result.catchTitle ?? paper.catchTitle,
-      hook: result.hook ?? paper.hook,
-      quiz: result.quiz ?? paper.quiz,
-      limitations: pdfExcerpt ? (result.limitations ?? "") : paper.limitations,
-      glossary: result.glossary ?? paper.glossary,
-      takeaway: result.takeaway ?? paper.takeaway,
-      storyCards: result.storyCards ?? paper.storyCards,
-      summary: result.summary,
-    };
+    const updatedPaper: Paper = useV2
+      ? applyV2ResultToPaper(paper, result as GeminiV2SummaryResult, pdfExcerpt, resolvedPdfUrl)
+      : {
+          ...paper,
+          pdfUrl: resolvedPdfUrl || paper.pdfUrl,
+          titleJa: result.titleJa ?? paper.titleJa,
+          catchTitle: result.catchTitle ?? paper.catchTitle,
+          hook: result.hook ?? paper.hook,
+          quiz: result.quiz ?? paper.quiz,
+          limitations: pdfExcerpt ? (result.limitations ?? "") : paper.limitations,
+          glossary: result.glossary ?? paper.glossary,
+          takeaway: result.takeaway ?? paper.takeaway,
+          storyCards: result.storyCards ?? paper.storyCards,
+          summary: result.summary,
+        };
 
     // 音声化（無効化したい場合は SKIP_AUDIO=1）
     let audioNote = "";
@@ -198,8 +272,11 @@ async function main() {
         : "限界:記述なし"
       : "";
     const glossaryNote = result.glossary?.length ? ` 用語:${result.glossary.length}件` : "";
+    const v2Note = useV2
+      ? ` v2:${(result as GeminiV2SummaryResult).oneLiner ? "oneLiner" : "—"}/spans:${(result as GeminiV2SummaryResult).glossarySpans?.length ?? 0}`
+      : "";
     console.log(
-      `  → 完了 (${elapsedSec}s) catchTitle: ${result.catchTitle ? "あり" : "なし"}${limNote ? ` ${limNote}` : ""}${glossaryNote}${audioNote}`
+      `  → 完了 (${elapsedSec}s) catchTitle: ${result.catchTitle ? "あり" : "なし"}${limNote ? ` ${limNote}` : ""}${glossaryNote}${v2Note}${audioNote}`
     );
 
     await saveProgress();

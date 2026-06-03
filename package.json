@@ -11,6 +11,9 @@
     "lint": "next lint",
     "fetch": "tsx scripts/fetch-papers.ts",
     "summarize": "tsx scripts/summarize.ts",
+    "summarize:v2": "SUMMARIZE_ARTICLE_V2=1 tsx scripts/summarize.ts",
+    "backfill:article-v2": "tsx scripts/backfill-article-v2.ts",
+    "repair:glossary-spans": "tsx scripts/repair-glossary-spans.ts",
     "figures": "tsx scripts/extract-figures.ts",
     "github:push": "sh scripts/github-auth-and-push.sh",
     "fetch:sample": "tsx scripts/sample-fetch.ts",
@@ -25,6 +28,7 @@
     "preview:fetch": "tsx scripts/preview-fetch.ts",
     "clean:categories": "tsx scripts/clean-categories.ts",
     "build:related": "tsx scripts/build-related.ts",
+    "simulate:selection": "tsx scripts/simulateSelection.ts",
     "backfill:story": "tsx scripts/backfill-story-cards.ts"
   },
   "dependencies": {

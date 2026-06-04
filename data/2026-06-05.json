@@ -1,0 +1,1114 @@
+{
+  "date": "2026-06-05",
+  "papers": [
+    {
+      "id": "2606.04978",
+      "title": "Probing Outcome-Level Resemblance and Mechanism-Level Alignment in LLM Risk Decisions: Evidence from the St. Petersburg Game",
+      "authors": [
+        "Chensong Huang",
+        "Changyu Chen",
+        "Chenwei Lin",
+        "Hanjia Lyu",
+        "Xian Xu",
+        "Jiebo Luo"
+      ],
+      "publishedAt": "2026-06-04T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.04978",
+      "pdfUrl": "https://arxiv.org/pdf/2606.04978.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "cs.CL",
+        "cs.CY",
+        "econ.GN",
+        "q-fin.EC"
+      ],
+      "abstract": "LLMs can appear cautious in risk decision-making tasks, yet cautious-looking outputs do not necessarily indicate alignment with human decision-making mechanisms. We investigate this distinction using the St. Petersburg game as a controlled testbed, a classical paradox in which the expected payoff is infinite, yet humans typically report low, finite willingness to pay. We evaluate 28 LLMs with a structured prompt suite that includes the original game; controlled decision variants that perturb truncation, repeated play, numeric endowment, and occupational identity; a human-perspective prompt that asks models to reason as human decision makers; and paired comparisons between base models and their instruction-tuned counterparts. In the original game, most models generate finite bids, creating the appearance of human-like risk behavior. However, this outcome-level resemblance masks substantial mechanism-level differences. The controlled variants reveal that rather than maintaining human-like behavior seen in the original game, models often shift to conditionally and computationally rational behavior. Human-cue prompting and instruction tuning often lower bids and reduce some visible pathologies, but most mechanism-level response patterns remain largely unchanged. These findings show that behavioral alignment in risk decision-making can be surface-level: LLMs may produce human-like risk decisions without exhibiting human-consistent mechanisms. High-stakes evaluations of LLM decision-making should therefore move beyond outcome similarity and examine whether the alignment is supported by mechanism-level consistency.",
+      "summary": {
+        "gist": "大規模言語モデル（LLM）は、単なるテキスト生成だけでなく、レコメンデーションや意思決定支援など、社会的に重要でリスクの高い場面での活用が期待されています。先行研究では、LLMがプロンプトを通じて人間のようなバイアスや価値観、リスク選好を示すことが報告されています。しかし、人間らしい出力が得られたとしても、それが人間と同じ意思決定メカニズムに基づいているとは限りません。例えば、LLMがリスクのあるシナリオで人間と同じように慎重な判断を下したとしても、それは表面的なプロンプトの手がかりや学習された応答パターンに依存しているだけで、人間のような不確実性に対する推論を行っていない可能性があります。この違いは、現実世界の意思決定がベンチマークのプロンプトと完全に一致することは稀であるため、特にリスクの高い状況で重要になります。安定した推論パターンを持たずに、狭い設定で妥当な出力を再現するだけのモデルは、状況が変化した際に予測不能な振る舞いをする可能性があります。",
+        "novelty": "これまでの研究では、LLMがリスクを伴う意思決定タスクで人間らしい、慎重な判断をすることを示すものがありました。しかし、その「人間らしい」結果が、本当に人間と同じ思考プロセスに基づいているのかは不明でした。 本研究では、サンクトペテルブルクのパラドックスゲームを用いて、LLMの「人間らしい」判断が、結果の類似性（表面的な模倣）に過ぎないのか、それともメカニズムレベルでの人間との一致（本質的な思考の一致）があるのかを初めて区別して検証しました。",
+        "method": "本研究では、サンクトペテルブルクのパラドックスゲームをテストベッドとして使用しました。このゲームは、期待値が無限大であるにもかかわらず、人間は通常、低く有限な支払い意思額を報告するという古典的なパラドックスです。このゲームを用いて、LLMが人間のようなリスク行動を示すか（RQ1）、その行動が人間と一貫した意思決定メカニズムに基づいているか（RQ2）、そして人間視点プロンプトや指示チューニングがメカニズムレベルの一致を改善するか（RQ3）を検証しました。具体的には、28のLLMに対し、オリジナルのゲームに加えて、打ち切り、繰り返しプレイ、数値的資産、職業的アイデンティティといった要素を変化させた制御された決定バリアントを含む構造化されたプロンプトスイートを適用しました。また、モデルに人間として推論するよう求める「人間視点プロンプト」や、ベースモデルと指示チューニング済みモデルの比較も行いました。",
+        "results": "オリジナルのサンクトペテルブルクゲームでは、ほとんどのLLMが人間らしい慎重な行動を示す低く有限な入札額を生成しました。しかし、この結果レベルの類似性は、メカニズムレベルでの大きな違いを隠していました。制御されたバリアント（打ち切りや繰り返しプレイ）では、モデルは人間のような行動を維持するのではなく、条件付きかつ計算論的に合理的な行動にシフトすることが多く見られました。数値的資産や職業的アイデンティティの操作では、行動の変化は弱く、一貫性がなく、不完全でした。人間視点プロンプトや指示チューニングは、一部の極端で非人間的な応答を減らすことで部分的に一致を改善しましたが、ほとんどのメカニズムレベルの応答パターンは大きく変化しませんでした。",
+        "why": "LLMがオリジナルのゲームで人間らしい有限な入札額を生成するのは、リスクのある設定で「妥当な」人間の回答が通常小さい数値であることを学習しているためと考えられます。しかし、ゲームの構造が変化すると、人間は通常、体系的かつ予測可能な方法で推論をシフトさせます。LLMの行動がこれらのバリエーションの下で一貫して変化しない場合、元の人間らしい応答は、人間と一貫した推論ではなく、表面的な模倣に過ぎないことを示唆しています。つまり、LLMは特定の状況下で人間らしい結果を出すように学習しているものの、その結果に至るまでの思考プロセスや、状況変化に対する適応メカニズムが人間とは根本的に異なるため、表面的な類似性しか示さないのです。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.CL）",
+      "field": "農業経済",
+      "categoryL1": "adjacent",
+      "categoryL2": "ai-ethics",
+      "arxivPrimary": "cs.CL",
+      "titleJa": "LLMのリスク意思決定における結果レベルの類似性とメカニズムレベルの一致の検証：サンクトペテルブルクのパラドックスゲームからの証拠",
+      "catchTitle": "LLMの「人間らしい」判断、実は見せかけ？",
+      "hook": "あなたはAIに重要な判断を任せられますか？人間らしい判断をするAIも、その裏側は全く違うかもしれません。",
+      "background": "大規模言語モデル（LLM）は、単なるテキスト生成だけでなく、レコメンデーションや意思決定支援など、社会的に重要でリスクの高い場面での活用が期待されています。先行研究では、LLMがプロンプトを通じて人間のようなバイアスや価値観、リスク選好を示すことが報告されています。しかし、人間らしい出力が得られたとしても、それが人間と同じ意思決定メカニズムに基づいているとは限りません。例えば、LLMがリスクのあるシナリオで人間と同じように慎重な判断を下したとしても、それは表面的なプロンプトの手がかりや学習された応答パターンに依存しているだけで、人間のような不確実性に対する推論を行っていない可能性があります。この違いは、現実世界の意思決定がベンチマークのプロンプトと完全に一致することは稀であるため、特にリスクの高い状況で重要になります。安定した推論パターンを持たずに、狭い設定で妥当な出力を再現するだけのモデルは、状況が変化した際に予測不能な振る舞いをする可能性があります。",
+      "quiz": {
+        "question": "LLMがサンクトペテルブルクのゲームで人間らしい有限な入札額を出したとしても、その判断メカニズムが人間と一致しないのはなぜでしょう？",
+        "options": [
+          "LLMは無限の報酬を理解できないから。",
+          "LLMはリスクのある設定で「妥当な」人間の回答が小さいことを学習しているが、状況変化への適応メカニズムが異なるから。",
+          "LLMは計算能力が人間より劣るから。"
+        ],
+        "correctIndex": 1,
+        "explanation": "LLMは、リスクのある設定で人間が通常出す「小さい数値」というパターンを学習しているため、表面上は人間らしい結果を出します。しかし、ゲームの構造が変化すると、人間が推論をシフトさせるのに対し、LLMは学習したパターンから外れるため、人間と異なる行動を示すことが明らかになりました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。大量のテキストデータで学習したAI。"
+        },
+        {
+          "term": "サンクトペテルブルクのパラドックスゲーム",
+          "definition": "期待値が無限大だが、人間は少額しか払わないゲーム。"
+        },
+        {
+          "term": "支払い意思額",
+          "definition": "あるサービスや商品に対して支払っても良いと考える最大額。"
+        },
+        {
+          "term": "プロンプトスイート",
+          "definition": "複数のプロンプトを組み合わせた一連の質問群。"
+        },
+        {
+          "term": "人間視点プロンプト",
+          "definition": "モデルに人間として推論するよう指示するプロンプト。"
+        },
+        {
+          "term": "指示チューニング",
+          "definition": "特定の指示に従うようモデルを調整する学習方法。"
+        },
+        {
+          "term": "メカニズムレベル",
+          "definition": "意思決定の背後にある思考プロセスや原理のレベル。"
+        },
+        {
+          "term": "表面的な模倣",
+          "definition": "本質的な理解なしに、見た目だけを真似ること。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "LLMは人間らしいリスク判断を示すが、その判断に至るメカニズムは人間とは大きく異なる場合がある。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、LLMがリスクを伴う意思決定タスクで人間らしい、慎重な判断をすることを示すものがありました。しかし、その「人間らしい」結果が、本当に人間と同じ思考プロセスに基づいているのかは不明でした。",
+        "after": "本研究では、サンクトペテルブルクのパラドックスゲームを用いて、LLMの「人間らしい」判断が、結果の類似性（表面的な模倣）に過ぎないのか、それともメカニズムレベルでの人間との一致（本質的な思考の一致）があるのかを初めて区別して検証しました。"
+      },
+      "analogy": {
+        "title": "豊作に見えても土壌は別物",
+        "body": "これはまるで、ある農家が最新のAI農機を導入し、隣のベテラン農家と同じくらい見事な作物を収穫できたようなものです。一見すると、AI農機はベテラン農家と同じくらい優秀に見えます。しかし、天候や土壌の条件が少し変わった時に、ベテラン農家は長年の経験から最適な対応をするのに対し、AI農機は全く違う、効率一辺倒な方法に切り替えてしまい、結果的に収穫量が激減してしまうかもしれません。つまり、同じ「豊作」という結果が出ても、その裏にある「土壌（思考メカニズム）」が人間とは全く異なる可能性がある、ということを示しています。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、私たちがAIを意思決定に活用する上で非常に重要な示唆を与えます。AIが「人間らしい」判断を下したとしても、その裏側で人間とは全く異なるロジックが働いている可能性があるからです。例えば、金融商品のリスク評価、医療診断の補助、あるいは企業の経営戦略策定など、結果のわずかな違いが大きな影響をもたらす場面でAIを利用する場合、表面的な結果だけでなく、その判断に至るプロセスや、状況変化への適応能力を深く理解することが不可欠です。AIの判断メカニズムを検証せずに鵜呑みにすることは、予期せぬリスクにつながる可能性があります。AIの能力を過信せず、その限界を理解した上で、人間が最終的な責任を持つことの重要性を再認識させられます。",
+      "takeawayTalk": "AIの「人間らしい」判断は、実は見せかけかもしれないよ。",
+      "bodyText": "本研究では、サンクトペテルブルクのパラドックスゲームをテストベッドとして使用しました。このゲームは、期待値が無限大であるにもかかわらず、人間は通常、低く有限な支払い意思額を報告するという古典的なパラドックスです。このゲームを用いて、LLMが人間のようなリスク行動を示すか（RQ1）、その行動が人間と一貫した意思決定メカニズムに基づいているか（RQ2）、そして人間視点プロンプトや指示チューニングがメカニズムレベルの一致を改善するか（RQ3）を検証しました。具体的には、28のLLMに対し、オリジナルのゲームに加えて、打ち切り、繰り返しプレイ、数値的資産、職業的アイデンティティといった要素を変化させた制御された決定バリアントを含む構造化されたプロンプトスイートを適用しました。また、モデルに人間として推論するよう求める「人間視点プロンプト」や、ベースモデルと指示チューニング済みモデルの比較も行いました。\n\nLLMがオリジナルのゲームで人間らしい有限な入札額を生成するのは、リスクのある設定で「妥当な」人間の回答が通常小さい数値であることを学習しているためと考えられます。しかし、ゲームの構造が変化すると、人間は通常、体系的かつ予測可能な方法で推論をシフトさせます。LLMの行動がこれらのバリエーションの下で一貫して変化しない場合、元の人間らしい応答は、人間と一貫した推論ではなく、表面的な模倣に過ぎないことを示唆しています。つまり、LLMは特定の状況下で人間らしい結果を出すように学習しているものの、その結果に至るまでの思考プロセスや、状況変化に対する適応メカニズムが人間とは根本的に異なるため、表面的な類似性しか示さないのです。",
+      "bodyGlossary": [
+        {
+          "term": "サンクトペテルブルクのパラドックスゲーム",
+          "definition": "期待値が無限大だが、人間は少額しか払わないゲーム。",
+          "start": 6,
+          "end": 26
+        },
+        {
+          "term": "支払い意思額",
+          "definition": "あるサービスや商品に対して支払っても良いと考える最大額。",
+          "start": 79,
+          "end": 85
+        },
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。大量のテキストデータで学習したAI。",
+          "start": 116,
+          "end": 119
+        },
+        {
+          "term": "人間視点プロンプト",
+          "definition": "モデルに人間として推論するよう指示するプロンプト。",
+          "start": 179,
+          "end": 188
+        },
+        {
+          "term": "指示チューニング",
+          "definition": "特定の指示に従うようモデルを調整する学習方法。",
+          "start": 189,
+          "end": 197
+        },
+        {
+          "term": "メカニズムレベル",
+          "definition": "意思決定の背後にある思考プロセスや原理のレベル。",
+          "start": 198,
+          "end": 206
+        },
+        {
+          "term": "プロンプトスイート",
+          "definition": "複数のプロンプトを組み合わせた一連の質問群。",
+          "start": 321,
+          "end": 330
+        },
+        {
+          "term": "表面的な模倣",
+          "definition": "本質的な理解なしに、見た目だけを真似ること。",
+          "start": 591,
+          "end": 597
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "サンクトペテルブルクのパラドックスゲーム",
+          "definition": "期待値が無限大だが、人間は少額しか払わないゲーム。",
+          "start": 6,
+          "end": 26
+        },
+        {
+          "term": "支払い意思額",
+          "definition": "あるサービスや商品に対して支払っても良いと考える最大額。",
+          "start": 79,
+          "end": 85
+        },
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。大量のテキストデータで学習したAI。",
+          "start": 116,
+          "end": 119
+        },
+        {
+          "term": "人間視点プロンプト",
+          "definition": "モデルに人間として推論するよう指示するプロンプト。",
+          "start": 179,
+          "end": 188
+        },
+        {
+          "term": "指示チューニング",
+          "definition": "特定の指示に従うようモデルを調整する学習方法。",
+          "start": 189,
+          "end": 197
+        },
+        {
+          "term": "メカニズムレベル",
+          "definition": "意思決定の背後にある思考プロセスや原理のレベル。",
+          "start": 198,
+          "end": 206
+        },
+        {
+          "term": "プロンプトスイート",
+          "definition": "複数のプロンプトを組み合わせた一連の質問群。",
+          "start": 321,
+          "end": 330
+        },
+        {
+          "term": "表面的な模倣",
+          "definition": "本質的な理解なしに、見た目だけを真似ること。",
+          "start": 591,
+          "end": 597
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 343,
+      "keyFigure": {
+        "imagePath": "/figures/2606.04978_results.png",
+        "page": 6,
+        "caption": "オリジナルのゲームにおけるLLMの入札額の分布を示しています。",
+        "label": "Figure 3: Maximum willingness-to-pay distributions in the original game. Each density summarizes the model-level",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-04T23:12:09.509Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.04978_results.png",
+          "page": 6,
+          "caption": "オリジナルのゲームにおけるLLMの入札額の分布を示しています。",
+          "label": "Figure 3: Maximum willingness-to-pay distributions in the original game. Each density summarizes the model-level",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-04T23:12:09.509Z"
+        },
+        {
+          "imagePath": "/figures/2606.04978_why.png",
+          "page": 7,
+          "caption": "メカニズムの検証におけるLLMの応答分布をモデルごとに示しています。",
+          "label": "Figure 4: Mechanism probe response distributions. Each row reports the number of models out of 28 classified",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-04T23:12:09.509Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.04551",
+      "title": "Quasi-birth-and-death processes evolving within trees: Applications to comparative phylogenetics",
+      "authors": [
+        "Habtu Kiros Nigus",
+        "Barbara R. Holland",
+        "Malgorzata M. O'Reilly"
+      ],
+      "publishedAt": "2026-06-04T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.04551",
+      "pdfUrl": "https://arxiv.org/pdf/2606.04551.pdf",
+      "categories": [
+        "topic:food-system",
+        "q-bio.PE",
+        "math.PR"
+      ],
+      "abstract": "We consider a quasi-birth-and-process (QBD) that duplicates itself at some fixed times within a tree that contains information about duplication times and potentially partially observed states. We analyse a continuous trait by discretising it to obtain the QBD level variable. Then, the phase variable is used to model the dynamics of the underlying environment. Here, we extend the framework of Soewongsono et al. to enable a more general analysis. We develop an efficient recursive algorithm for computing the likelihood of an observed tree under this model and construct several numerical examples to illustrate its application potential. Through our synthetic data examples, we show a range of potential behaviours that could be modelled with this approach. Further, we apply the framework to two empirical examples from comparative phylogenetics (the evolution of range area and body size traits across a phylogeny of 49 mammals) to gain different insights into the evolution of these continuous traits. In this setting duplication of the QBD represents speciation and continuous trait evolution is modelled in a discretised state space. In our empirical examples, we explore the impact of different parameter choices on the corresponding likelihood of observing a given phylogenetic tree and the observed levels at its tips.",
+      "summary": {
+        "gist": "生物の形質が進化する過程を系統樹上で理解することは、保全生物学や気候変動への適応予測など、多岐にわたる分野で重要です。しかし、形質の連続的な変化と、それを引き起こす環境要因の動的な相互作用を、系統樹の分岐を考慮しつつモデル化することは困難でした。特に、形質が最適な値に収束するような安定化選択をモデル化する既存の手法は、パラメータが多すぎて統計的に扱いにくいという批判がありました。",
+        "novelty": "従来のモデルでは、生物の形質進化を系統樹上で分析する際、環境の変化を単純化しすぎたり、モデルが複雑になりすぎて統計的に扱いにくいという課題がありました。特に、形質が最適な値に近づくような安定化選択をモデル化する際に、パラメータが多すぎて実データへの適用が困難な場合がありました。 この論文では、準誕生死過程（QBD）という確率モデルを系統樹に適用することで、形質（レベル変数）とそれを制御する環境（位相変数）の動的な関係を、より柔軟かつ効率的にモデル化しました。これにより、複雑な進化シナリオや、環境が隠れた要因である場合でも、系統樹と形質の観測データからその進化の可能性を評価できるようになりました。",
+        "method": "本研究では、準誕生死過程（QBD）という確率モデルを系統樹に適用しました。QBDは、連続的な形質を離散的な「レベル変数」として扱い、その形質変化を制御する環境要因を「位相変数」としてモデル化します。このQBDが系統樹の分岐点で複製され、それぞれ独立に進化するという枠組みを構築しました。そして、このモデルの下で、観測された系統樹と形質データが得られる確率（尤度）を効率的に計算するための新しい再帰的アルゴリズムを開発しました。このアルゴリズムは、従来の類似手法よりも一般的で計算が容易になるように改良されています。具体的には、系統樹の各ノード（分岐点）や先端（現存種）における形質の尤度を、ボトムアップ式に計算していくことで、全体の尤度を導き出します。",
+        "results": "開発したアルゴリズムを合成データに適用した結果、幅広い進化行動をモデル化できる可能性が示されました。さらに、哺乳類49種の系統樹における生息域の広さや体サイズの進化という2つの実例に適用し、連続形質の進化に関する新たな知見を得ることができました。特に、異なるパラメータ設定が系統樹の尤度に与える影響を評価し、モデルの柔軟性と適用可能性を示しました。",
+        "why": "QBDモデルの「レベル変数」は、連続的な形質を離散的な状態に分割して表現します。これにより、形質の変化を確率的に追跡できます。「位相変数」は、形質進化の方向や強さを決定する隠れた環境要因や選択圧をモデル化します。この二つの変数が相互作用することで、形質が環境に応じてどのように変化するかを詳細に記述できます。系統樹の分岐はQBDの複製として扱われ、各枝で独立にQBDが進化することで、種の多様化に伴う形質進化を表現します。尤度計算アルゴリズムは、この複雑な確率過程を効率的に遡って計算することで、観測されたデータがどの進化シナリオの下で最も起こりやすいかを特定することを可能にします。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.PE）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "bio-econ",
+      "arxivPrimary": "q-bio.PE",
+      "titleJa": "系統樹内で進化する準誕生死過程：比較系統学への応用",
+      "catchTitle": "生物の進化、環境と形質の関係を解き明かす新モデル",
+      "hook": "なぜある生物の形質は、特定の環境で進化しやすいのでしょうか？その謎を解き明かす新たな数学モデルが登場しました。",
+      "background": "生物の形質が進化する過程を系統樹上で理解することは、保全生物学や気候変動への適応予測など、多岐にわたる分野で重要です。しかし、形質の連続的な変化と、それを引き起こす環境要因の動的な相互作用を、系統樹の分岐を考慮しつつモデル化することは困難でした。特に、形質が最適な値に収束するような安定化選択をモデル化する既存の手法は、パラメータが多すぎて統計的に扱いにくいという批判がありました。",
+      "quiz": {
+        "question": "この研究で、生物の形質進化をモデル化するために使われた主要な数学的手法は何ですか？",
+        "options": [
+          "ブラウン運動モデル",
+          "準誕生死過程（QBD）",
+          "オルンシュタイン＝ウーレンベック過程（OU）"
+        ],
+        "correctIndex": 1,
+        "explanation": "この論文では、準誕生死過程（QBD）を系統樹に適用することで、形質進化をモデル化しています。QBDは、レベル変数と位相変数を用いて、形質と環境の動的な関係を表現します。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "準誕生死過程",
+          "definition": "状態がレベルと位相で決まる確率過程"
+        },
+        {
+          "term": "系統樹",
+          "definition": "生物の進化の歴史を枝分かれで示す図"
+        },
+        {
+          "term": "レベル変数",
+          "definition": "連続的な形質を離散的に表現した状態"
+        },
+        {
+          "term": "位相変数",
+          "definition": "形質変化を制御する環境要因の状態"
+        },
+        {
+          "term": "尤度",
+          "definition": "観測データが特定のモデルの下で得られる確率"
+        },
+        {
+          "term": "再帰的アルゴリズム",
+          "definition": "問題をより小さな同じ問題に分割して解く手法"
+        },
+        {
+          "term": "ボトムアップ式",
+          "definition": "末端から根元へと計算を進める方法"
+        },
+        {
+          "term": "確率過程",
+          "definition": "時間とともに変化する確率的な現象"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "生物の形質進化を、環境要因と結びつけて系統樹上で分析する、より柔軟で効率的なモデルを開発しました。",
+      "noveltyContrast": {
+        "before": "従来のモデルでは、生物の形質進化を系統樹上で分析する際、環境の変化を単純化しすぎたり、モデルが複雑になりすぎて統計的に扱いにくいという課題がありました。特に、形質が最適な値に近づくような安定化選択をモデル化する際に、パラメータが多すぎて実データへの適用が困難な場合がありました。",
+        "after": "この論文では、準誕生死過程（QBD）という確率モデルを系統樹に適用することで、形質（レベル変数）とそれを制御する環境（位相変数）の動的な関係を、より柔軟かつ効率的にモデル化しました。これにより、複雑な進化シナリオや、環境が隠れた要因である場合でも、系統樹と形質の観測データからその進化の可能性を評価できるようになりました。"
+      },
+      "analogy": {
+        "title": "畑の作物の成長と環境変化の記録",
+        "body": "これは、まるで一本の木から枝分かれしていく畑の作物の成長を記録するようなものです。作物の「形質」（例えば、背の高さや実の大きさ）は、その時の「土壌の質」や「天候」といった環境要因によって変化します。この研究は、それぞれの枝（種）がどのように成長し、どのような形質になったかを記録した「系統樹」と、その先端で収穫された作物の「最終的な形質」から、過去の土壌や天候がどのように変化し、それが作物の成長にどう影響したのかを、効率的に逆算して解き明かすようなものです。これにより、将来の品種改良や栽培戦略に役立つ知見が得られます。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、私たちが普段目にする生物の多様な形質が、どのようにして現在の姿になったのかを理解するための強力なツールを提供します。例えば、特定の農作物がなぜその土地でよく育つのか、あるいは病害虫に強い品種がどのように進化したのか、といった疑問に答える手がかりになります。気候変動によって環境が変化する中で、生物がどのように適応していくかを予測したり、絶滅危惧種の保全戦略を立てたりする上でも、このモデルは重要な示唆を与えてくれるでしょう。あなたの身近な環境問題や、食料生産の未来を考える上で、生物進化のメカニズムを深く理解する一助となるはずです。",
+      "takeawayTalk": "生物の形質進化は、環境と密接に関わる複雑な物語を秘めている！",
+      "bodyText": "本研究では、準誕生死過程（QBD）という確率モデルを系統樹に適用しました。QBDは、連続的な形質を離散的な「レベル変数」として扱い、その形質変化を制御する環境要因を「位相変数」としてモデル化します。このQBDが系統樹の分岐点で複製され、それぞれ独立に進化するという枠組みを構築しました。そして、このモデルの下で、観測された系統樹と形質データが得られる確率（尤度）を効率的に計算するための新しい再帰的アルゴリズムを開発しました。このアルゴリズムは、従来の類似手法よりも一般的で計算が容易になるように改良されています。具体的には、系統樹の各ノード（分岐点）や先端（現存種）における形質の尤度を、ボトムアップ式に計算していくことで、全体の尤度を導き出します。\n\nQBDモデルの「レベル変数」は、連続的な形質を離散的な状態に分割して表現します。これにより、形質の変化を確率的に追跡できます。「位相変数」は、形質進化の方向や強さを決定する隠れた環境要因や選択圧をモデル化します。この二つの変数が相互作用することで、形質が環境に応じてどのように変化するかを詳細に記述できます。系統樹の分岐はQBDの複製として扱われ、各枝で独立にQBDが進化することで、種の多様化に伴う形質進化を表現します。尤度計算アルゴリズムは、この複雑な確率過程を効率的に遡って計算することで、観測されたデータがどの進化シナリオの下で最も起こりやすいかを特定することを可能にします。",
+      "bodyGlossary": [
+        {
+          "term": "準誕生死過程",
+          "definition": "状態がレベルと位相で決まる確率過程",
+          "start": 6,
+          "end": 12
+        },
+        {
+          "term": "系統樹",
+          "definition": "生物の進化の歴史を枝分かれで示す図",
+          "start": 26,
+          "end": 29
+        },
+        {
+          "term": "レベル変数",
+          "definition": "連続的な形質を離散的に表現した状態",
+          "start": 54,
+          "end": 59
+        },
+        {
+          "term": "位相変数",
+          "definition": "形質変化を制御する環境要因の状態",
+          "start": 83,
+          "end": 87
+        },
+        {
+          "term": "尤度",
+          "definition": "観測データが特定のモデルの下で得られる確率",
+          "start": 178,
+          "end": 180
+        },
+        {
+          "term": "再帰的アルゴリズム",
+          "definition": "問題をより小さな同じ問題に分割して解く手法",
+          "start": 196,
+          "end": 205
+        },
+        {
+          "term": "ボトムアップ式",
+          "definition": "末端から根元へと計算を進める方法",
+          "start": 295,
+          "end": 302
+        },
+        {
+          "term": "確率過程",
+          "definition": "時間とともに変化する確率的な現象",
+          "start": 556,
+          "end": 560
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "準誕生死過程",
+          "definition": "状態がレベルと位相で決まる確率過程",
+          "start": 6,
+          "end": 12
+        },
+        {
+          "term": "系統樹",
+          "definition": "生物の進化の歴史を枝分かれで示す図",
+          "start": 26,
+          "end": 29
+        },
+        {
+          "term": "レベル変数",
+          "definition": "連続的な形質を離散的に表現した状態",
+          "start": 54,
+          "end": 59
+        },
+        {
+          "term": "位相変数",
+          "definition": "形質変化を制御する環境要因の状態",
+          "start": 83,
+          "end": 87
+        },
+        {
+          "term": "尤度",
+          "definition": "観測データが特定のモデルの下で得られる確率",
+          "start": 178,
+          "end": 180
+        },
+        {
+          "term": "再帰的アルゴリズム",
+          "definition": "問題をより小さな同じ問題に分割して解く手法",
+          "start": 196,
+          "end": 205
+        },
+        {
+          "term": "ボトムアップ式",
+          "definition": "末端から根元へと計算を進める方法",
+          "start": 295,
+          "end": 302
+        },
+        {
+          "term": "確率過程",
+          "definition": "時間とともに変化する確率的な現象",
+          "start": 556,
+          "end": 560
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 262,
+      "keyFigure": {
+        "imagePath": "/figures/2606.04551_results.png",
+        "page": 23,
+        "caption": "哺乳類49種の系統樹データに対するQBD4モデルの尤度を示しています。",
+        "label": "Table 12: The likelihood of the Empirical Dataset 1 (Figure 5) for the QBD4 model, assuming uniform",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-04T23:12:12.597Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.04551_results.png",
+          "page": 23,
+          "caption": "哺乳類49種の系統樹データに対するQBD4モデルの尤度を示しています。",
+          "label": "Table 12: The likelihood of the Empirical Dataset 1 (Figure 5) for the QBD4 model, assuming uniform",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-04T23:12:12.597Z"
+        },
+        {
+          "imagePath": "/figures/2606.04551_why.png",
+          "page": 20,
+          "caption": "49種の哺乳類の系統樹で、枝の長さが赤色で示されています。",
+          "label": "Figure 5: A phylogenetic tree of 49 mammal species, with branch lengths shown on the edges in red,",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-04T23:12:12.598Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.04154",
+      "title": "EpiFormer: Learning Antigen-Antibody Interactions for Epitope Prediction via Geometric Deep Learning",
+      "authors": [
+        "Mansoor Ahmed",
+        "Huirong Chai",
+        "Haoxin Wang",
+        "Hemanth Venkateswara",
+        "Murray Patterson"
+      ],
+      "publishedAt": "2026-06-04T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.04154",
+      "pdfUrl": "https://arxiv.org/pdf/2606.04154.pdf",
+      "categories": [
+        "topic:health",
+        "q-bio.QM",
+        "cs.LG"
+      ],
+      "abstract": "Antibodies neutralize foreign antigens by binding to specific surface regions called epitopes. Computational epitope prediction is critical for understanding immune recognition and guiding antibody engineering. However, existing methods face three fundamental challenges: antibody-aware models encode each chain independently and combine them only at a late stage, failing to capture co-dependent structural features that define binding interfaces, whereas severe class imbalance and scarcity of known antibody-antigen complexes render standard training objectives ineffective. We propose EpiFormer, a general encoder-decoder framework that addresses these challenges jointly. Our key design principle is interleaved cross-attention within GNN encoding layers, enabling bidirectional antigen-antibody information flow throughout representation learning rather than only at the output. This early-fusion principle is backbone-agnostic, providing consistent gains across GNN architectures from simple GCNs to equivariant models. We further show that sparsity-aware objectives are effective when paired with early-fusion architectures for the epitope prediction task. EpiFormer improves over the previous best method by over 40% in F1 score on standard benchmarks, demonstrating generalizability and cross-dataset transferability. Notably, EpiFormer discovers known biological principles as emergent behaviors of end-to-end training, where the learned cross-attention gates favor antigen-to-antibody information flow, consistent with the asymmetric roles of the two chains at the binding interface, and the model's preference for geometric over evolutionary features aligns with the established finding that epitope residues are not evolutionarily conserved. The source code is available at: https://github.com/mansoor181/epiformer.git",
+      "summary": {
+        "gist": "抗体は、病原体などの異物（抗原）の特定の表面領域（エピトープ）に結合して無力化するY字型のタンパク質です。エピトープの正確な特定は、治療用抗体の設計、ワクチン開発、免疫認識の理解に不可欠です。従来の実験的手法は時間とコストがかかるため、計算手法による迅速なスクリーニングが求められています。しかし、既存の計算手法には、抗体と抗原の情報を独立して処理し、結合情報を遅い段階で統合することによる精度不足、結合部位データの少なさ、そして結合部位が抗原表面の5%未満であることによるデータ不均衡といった課題がありました。",
+        "novelty": "従来の抗体・抗原結合部位予測AIは、抗体と抗原の情報を別々に処理し、最後に結合情報を統合していました。このため、結合時に生じる相互依存的な構造変化を捉えきれず、予測精度に限界がありました。また、結合部位のデータが少ないことや、結合部位が全体の5%未満と偏っていることも課題でした。 EpiFormerは、抗体と抗原の情報を学習プロセスの初期段階から相互に交換する「早期融合」という新機軸を導入しました。これにより、結合界面で起こる複雑な構造変化をより正確に捉え、予測精度を大幅に向上させました。さらに、データ偏りに対応する新しい学習目標も開発しました。",
+        "method": "EpiFormerは、抗体と抗原のグラフ構造をそれぞれエンコードする際に、グラフニューラルネットワーク（GNN）の各層内で「相互注意（cross-attention）」を挟み込む「早期融合」という設計原則を採用しました。これにより、抗原と抗体の情報が学習プロセスの初期段階から双方向に流れ、結合界面で生じる相互依存的な構造的特徴を捉えることができます。また、結合部位のデータが少ないことや、結合部位が全体の5%未満と偏っている「クラス不均衡」の問題に対処するため、Dice損失やグラフごとのカウント正則化、二部グラフのエッジ予測、距離教師あり学習といった「スパース性対応型学習目標」を開発し、早期融合アーキテクチャと組み合わせました。さらに、E(3)等変性を持つGNNであるEGNN-Rを導入し、幾何学的特性を保持しながら、各エッジ関係タイプに独自の変換を学習させることで、さらなる精度向上を図っています。",
+        "results": "EpiFormerは、標準的なベンチマークにおいて、F1スコアで既存の最良手法を40%以上上回る改善を示しました。これは、汎用性と異なるデータセットへの転移可能性を実証するものです。また、学習された相互注意メカニズムが、結合界面における抗原と抗体の非対称な役割と一致して、抗原から抗体への情報フローを優先することを発見しました。さらに、モデルが進化的な特徴よりも幾何学的な特徴を優先することも明らかになり、エピトープ残基が進化的には保存されていないという既存の生物学的知見と一致しています。",
+        "why": "この高い予測精度は、「早期融合」と「スパース性対応型学習目標」の組み合わせによって実現されます。早期融合により、抗体と抗原が結合する際に互いの構造に与える影響を、学習の初期段階からモデルが考慮できるようになります。これにより、結合界面の微細な幾何学的変化や相互作用をより正確に表現できます。また、スパース性対応型学習目標は、結合部位データが非常に少ないという現実的な課題に対し、モデルがより効率的に学習し、偏りのない予測を行えるように機能します。結果として、EpiFormerは、結合の生物学的原理を内的に学習し、より信頼性の高いエピトープ予測を可能にしました。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.QM）",
+      "field": "医学・健康",
+      "categoryL1": "adjacent",
+      "categoryL2": "bioinformatics",
+      "arxivPrimary": "q-bio.QM",
+      "titleJa": "EpiFormer: 幾何学的深層学習による抗原抗体相互作用学習とエピトープ予測",
+      "catchTitle": "抗体医薬開発を加速！AIで結合部位を正確予測",
+      "hook": "「この薬、効くかな？」新薬開発の成功率を左右する、抗体と病原体の結合部位特定。あなたもその精度に疑問を感じたことはありませんか？",
+      "background": "抗体は、病原体などの異物（抗原）の特定の表面領域（エピトープ）に結合して無力化するY字型のタンパク質です。エピトープの正確な特定は、治療用抗体の設計、ワクチン開発、免疫認識の理解に不可欠です。従来の実験的手法は時間とコストがかかるため、計算手法による迅速なスクリーニングが求められています。しかし、既存の計算手法には、抗体と抗原の情報を独立して処理し、結合情報を遅い段階で統合することによる精度不足、結合部位データの少なさ、そして結合部位が抗原表面の5%未満であることによるデータ不均衡といった課題がありました。",
+      "quiz": {
+        "question": "EpiFormerが従来の抗体・抗原結合部位予測AIと最も異なる点は何でしょう？",
+        "options": [
+          "抗体と抗原の情報を別々に処理し、最後に結合情報を統合する点",
+          "抗体と抗原の情報を学習プロセスの初期段階から相互に交換する点",
+          "抗体と抗原の情報を全く使用しない点"
+        ],
+        "correctIndex": 1,
+        "explanation": "EpiFormerの最も重要な設計原則は、抗体と抗原の情報を学習プロセスの初期段階から相互に交換する「早期融合」です。これにより、結合時の相互依存的な構造変化をより正確に捉えることができます。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "抗体",
+          "definition": "病原体などの異物を認識し結合するタンパク質"
+        },
+        {
+          "term": "抗原",
+          "definition": "抗体によって認識され結合される異物"
+        },
+        {
+          "term": "エピトープ",
+          "definition": "抗原上で抗体が結合する特定の領域"
+        },
+        {
+          "term": "グラフニューラルネットワーク",
+          "definition": "グラフ構造データから特徴を学習するAI"
+        },
+        {
+          "term": "相互注意",
+          "definition": "異なる情報間で関連性を学習するメカニズム"
+        },
+        {
+          "term": "早期融合",
+          "definition": "異なる情報を学習の初期段階から統合する手法"
+        },
+        {
+          "term": "クラス不均衡",
+          "definition": "データセット内のカテゴリのデータ量に偏りがある状態"
+        },
+        {
+          "term": "E(3)等変性",
+          "definition": "回転や並進移動に対して予測結果が変化しない特性"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "抗体と抗原の結合部位を予測するAIモデルが、両者の情報を早期に統合することで、従来手法より大幅に精度を向上させました。",
+      "noveltyContrast": {
+        "before": "従来の抗体・抗原結合部位予測AIは、抗体と抗原の情報を別々に処理し、最後に結合情報を統合していました。このため、結合時に生じる相互依存的な構造変化を捉えきれず、予測精度に限界がありました。また、結合部位のデータが少ないことや、結合部位が全体の5%未満と偏っていることも課題でした。",
+        "after": "EpiFormerは、抗体と抗原の情報を学習プロセスの初期段階から相互に交換する「早期融合」という新機軸を導入しました。これにより、結合界面で起こる複雑な構造変化をより正確に捉え、予測精度を大幅に向上させました。さらに、データ偏りに対応する新しい学習目標も開発しました。"
+      },
+      "analogy": {
+        "title": "畑の土壌と作物の関係を早期に見極める",
+        "body": "これは、まるで農家が作物を育てる際に、土壌の状態と作物の生育状況を別々に見て、収穫直前にやっと「この土壌と作物、相性良かったね」と判断するのではなく、種まきの段階から土壌の栄養と作物の根の張り方を常に相互に観察し、その都度最適な水やりや肥料の調整を行うようなものです。従来のAIは収穫間際に土壌と作物の情報を合わせていましたが、EpiFormerは種まきから収穫まで、土壌と作物の情報を常に交換し、最適な生育環境を整えることで、より豊かで健康な作物を育てる（＝結合部位を正確に予測する）ことを可能にしました。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+40%",
+          "label": "F1スコアの改善"
+        }
+      ],
+      "whyYouCare": "この研究は、新薬開発、特に抗体医薬やワクチンの開発に革命をもたらす可能性を秘めています。エピトープの正確な予測は、副作用の少ない効果的な抗体医薬の設計や、より広範囲の変異株に対応できるワクチンの開発に直結します。これまで時間とコストがかかっていた結合部位の特定がAIによって高速化・高精度化されれば、パンデミックへの迅速な対応や、がん、自己免疫疾患などの難病治療薬の開発が加速し、私たちの健康と生活の質を大きく向上させるでしょう。また、生物学的な相互作用の理解を深める上でも重要な一歩となります。",
+      "takeawayTalk": "AIが抗体と病原体の結合部位を早期に予測し、新薬開発を加速するよ！",
+      "bodyText": "EpiFormerは、抗体と抗原のグラフ構造をそれぞれエンコードする際に、グラフニューラルネットワーク（GNN）の各層内で「相互注意（cross-attention）」を挟み込む「早期融合」という設計原則を採用しました。これにより、抗原と抗体の情報が学習プロセスの初期段階から双方向に流れ、結合界面で生じる相互依存的な構造的特徴を捉えることができます。また、結合部位のデータが少ないことや、結合部位が全体の5%未満と偏っている「クラス不均衡」の問題に対処するため、Dice損失やグラフごとのカウント正則化、二部グラフのエッジ予測、距離教師あり学習といった「スパース性対応型学習目標」を開発し、早期融合アーキテクチャと組み合わせました。さらに、E(3)等変性を持つGNNであるEGNN-Rを導入し、幾何学的特性を保持しながら、各エッジ関係タイプに独自の変換を学習させることで、さらなる精度向上を図っています。\n\nこの高い予測精度は、「早期融合」と「スパース性対応型学習目標」の組み合わせによって実現されます。早期融合により、抗体と抗原が結合する際に互いの構造に与える影響を、学習の初期段階からモデルが考慮できるようになります。これにより、結合界面の微細な幾何学的変化や相互作用をより正確に表現できます。また、スパース性対応型学習目標は、結合部位データが非常に少ないという現実的な課題に対し、モデルがより効率的に学習し、偏りのない予測を行えるように機能します。結果として、EpiFormerは、結合の生物学的原理を内的に学習し、より信頼性の高いエピトープ予測を可能にしました。",
+      "bodyGlossary": [
+        {
+          "term": "抗体",
+          "definition": "病原体などの異物を認識し結合するタンパク質",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "term": "抗原",
+          "definition": "抗体によって認識され結合される異物",
+          "start": 14,
+          "end": 16
+        },
+        {
+          "term": "グラフニューラルネットワーク",
+          "definition": "グラフ構造データから特徴を学習するAI",
+          "start": 37,
+          "end": 51
+        },
+        {
+          "term": "相互注意",
+          "definition": "異なる情報間で関連性を学習するメカニズム",
+          "start": 62,
+          "end": 66
+        },
+        {
+          "term": "早期融合",
+          "definition": "異なる情報を学習の初期段階から統合する手法",
+          "start": 90,
+          "end": 94
+        },
+        {
+          "term": "クラス不均衡",
+          "definition": "データセット内のカテゴリのデータ量に偏りがある状態",
+          "start": 214,
+          "end": 220
+        },
+        {
+          "term": "E(3)等変性",
+          "definition": "回転や並進移動に対して予測結果が変化しない特性",
+          "start": 321,
+          "end": 328
+        },
+        {
+          "term": "エピトープ",
+          "definition": "抗原上で抗体が結合する特定の領域",
+          "start": 670,
+          "end": 675
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "抗体",
+          "definition": "病原体などの異物を認識し結合するタンパク質",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "term": "抗原",
+          "definition": "抗体によって認識され結合される異物",
+          "start": 14,
+          "end": 16
+        },
+        {
+          "term": "グラフニューラルネットワーク",
+          "definition": "グラフ構造データから特徴を学習するAI",
+          "start": 37,
+          "end": 51
+        },
+        {
+          "term": "相互注意",
+          "definition": "異なる情報間で関連性を学習するメカニズム",
+          "start": 62,
+          "end": 66
+        },
+        {
+          "term": "早期融合",
+          "definition": "異なる情報を学習の初期段階から統合する手法",
+          "start": 90,
+          "end": 94
+        },
+        {
+          "term": "クラス不均衡",
+          "definition": "データセット内のカテゴリのデータ量に偏りがある状態",
+          "start": 214,
+          "end": 220
+        },
+        {
+          "term": "E(3)等変性",
+          "definition": "回転や並進移動に対して予測結果が変化しない特性",
+          "start": 321,
+          "end": 328
+        },
+        {
+          "term": "エピトープ",
+          "definition": "抗原上で抗体が結合する特定の領域",
+          "start": 670,
+          "end": 675
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 292,
+      "keyFigure": {
+        "imagePath": "/figures/2606.04154_results.png",
+        "page": 8,
+        "caption": "EpiFormerが既存手法をF1スコアで40%以上上回ることを示す比較表です。",
+        "label": "Table 4). We compare",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-04T23:12:18.766Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.04154_results.png",
+          "page": 8,
+          "caption": "EpiFormerが既存手法をF1スコアで40%以上上回ることを示す比較表です。",
+          "label": "Table 4). We compare",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-04T23:12:18.766Z"
+        },
+        {
+          "imagePath": "/figures/2606.04154_why.png",
+          "page": 4,
+          "caption": "EpiFormerの全体像を示し、早期融合と相互注意メカニズムの概念図です。",
+          "label": "Figure 1: Overview of EpiFormer. (a) Parallel EGNN-R encoders with interleaved cross-attention.",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-04T23:12:18.766Z"
+        }
+      ]
+    },
+    {
+      "id": "2504.16952",
+      "title": "Last-layer committee machines for uncertainty estimations of benthic imagery",
+      "authors": [
+        "H. Martin Gillis",
+        "Isaac Xu",
+        "Benjamin Misiuk",
+        "Craig J. Brown",
+        "Thomas Trappenberg"
+      ],
+      "publishedAt": "2026-06-04T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2504.16952",
+      "pdfUrl": "https://arxiv.org/pdf/2504.16952.pdf",
+      "categories": [
+        "topic:health",
+        "q-bio.QM"
+      ],
+      "abstract": "Automating the annotation of benthic imagery (i.e., images of the seafloor and its associated organisms, habitats, and geological features) is critical for monitoring rapidly changing ocean ecosystems. Deep learning approaches have succeeded in this purpose; however, consistent annotation remains challenging due to ambiguous seafloor images, potential inter-user annotation disagreements, and out-of-distribution samples. Marine scientists implementing deep learning models often obtain predictions based on one-hot representations trained using a cross-entropy loss objective with softmax normalization, resulting with a single set of model parameters. While efficient, this approach may lead to overconfident predictions for context-challenging datasets, raising reliability concerns that present risks for downstream tasks such as benthic habitat mapping and marine spatial planning. In this study, we investigated classification uncertainty as a tool to improve the labeling of benthic habitat imagery. We developed a framework for two challenging sub-datasets of the recently publicly available BenthicNet dataset using Bayesian neural networks, Monte Carlo dropout inference sampling, and a proposed single last-layer committee machine. This approach resulted with a &gt; 95% reduction of network parameters to obtain per-sample uncertainties while obtaining near-identical performance compared to computationally more expensive strategies such as Bayesian neural networks, Monte Carlo dropout, and deep ensembles. The method proposed in this research provides a strategy for obtaining prioritized lists of uncertain samples for human-in-the-loop interventions to identify ambiguous, mislabeled, out-of-distribution, and/or difficult images for enhancing existing annotation tools for benthic mapping and other applications.",
+      "summary": {
+        "gist": "急速に変化する海洋生態系を監視するためには、海底画像（海底とその生物、生息地、地質学的特徴の画像）の自動アノテーションが不可欠です。深層学習はこの目的で成功を収めていますが、曖昧な海底画像、ユーザー間のアノテーションの不一致、分布外サンプルなどの課題により、一貫したアノテーションは依然として困難です。海洋科学者が深層学習モデルを実装する際、クロスエントロピー損失関数とソフトマックス正規化を用いて訓練された単一のモデルパラメータから予測を得ることが多く、これは効率的ですが、文脈が難しいデータセットに対して過度に自信のある予測につながり、信頼性の懸念が生じます。",
+        "novelty": "従来の深層学習モデルは、海底画像のような曖昧なデータに対して、しばしば過度に自信のある予測を出力し、その信頼性に問題がありました。不確実性を評価するには、複数のモデルを動かすなど計算コストが高い手法が一般的でした。 本研究では、単一の「最終層委員会機械（LLCM）」を用いることで、計算コストを大幅に削減しつつ、AIの予測の不確実性を高精度に推定する新しいフレームワークを提案しました。これにより、人間の専門家が確認すべき画像を効率的に特定できます。",
+        "method": "本研究では、分類の不確実性を海底生息地画像のラベリングを改善するためのツールとして調査しました。BenthicNetデータセットの2つの困難なサブデータセットに対し、ベイジアンニューラルネットワーク、モンテカルロドロップアウト推論サンプリング、そして提案された単一の最終層委員会機械（LLCM）を用いたフレームワークを開発しました。LLCMは、各委員会メンバーに1つの全結合層のみを使用することで、サンプルごとの不確実性を得るためのネットワークパラメータ数を劇的に削減します。これにより、ベイジアンニューラルネットワークやモンテカルロドロップアウトなどの計算コストが高い戦略とほぼ同等の性能を維持しつつ、パラメータ数を95%以上削減しました。",
+        "results": "提案手法は、計算コストの高い戦略（ベイジアンニューラルネットワーク、モンテカルロドロップアウト、ディープアンサンブルなど）と比較して、ほぼ同等の性能を維持しながら、サンプルごとの不確実性を得るためのネットワークパラメータを95%以上削減しました。この方法は、曖昧な画像、誤ってラベル付けされた画像、分布外の画像、または困難な画像を特定するための、人間が介入すべき不確実なサンプルの優先リストを得る戦略を提供します。",
+        "why": "LLCMの主な動機は、サンプルごとの不確実性を迅速に取得するためのモジュール式で計算効率の高いアプローチを提供することです。これは、推論中に単一の順方向パスで実現できます。具体的には、委員会機械の各メンバーに1つの全結合層のみを使用します。これにより、サンプルごとの不確実性を生成するために使用されるネットワークパラメータの数が劇的に削減されます。これは、BMAやMCDアプローチとは対照的で、これらのアプローチでは、サンプルごとの不確実性を得るためにネットワーク全体が複数回（例：100回以上）サンプリングされます。LLCMの各委員会メンバーの勾配は独立して逆伝播され、洗練された損失関数やネットワーク構成は不要です。委員会メンバーの多様性は、訓練中に多様性を促進するための追加技術を適用せずに、ネットワークの重みをランダムに初期化することで得られました。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.QM）",
+      "field": "医学・健康",
+      "categoryL1": "adjacent",
+      "categoryL2": "machine-learning",
+      "arxivPrimary": "q-bio.QM",
+      "titleJa": "海底画像における不確実性推定のための最終層委員会機械",
+      "catchTitle": "AIの「自信過剰」を見抜く新技術",
+      "hook": "AIが海底の画像を「これはサンゴ！」と断言しても、本当にそうでしょうか？あなたの仕事でも、AIの判断に「本当に？」と疑問を感じることはありませんか？",
+      "background": "急速に変化する海洋生態系を監視するためには、海底画像（海底とその生物、生息地、地質学的特徴の画像）の自動アノテーションが不可欠です。深層学習はこの目的で成功を収めていますが、曖昧な海底画像、ユーザー間のアノテーションの不一致、分布外サンプルなどの課題により、一貫したアノテーションは依然として困難です。海洋科学者が深層学習モデルを実装する際、クロスエントロピー損失関数とソフトマックス正規化を用いて訓練された単一のモデルパラメータから予測を得ることが多く、これは効率的ですが、文脈が難しいデータセットに対して過度に自信のある予測につながり、信頼性の懸念が生じます。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "アノテーション",
+          "definition": "画像にラベルや注釈を付ける作業"
+        },
+        {
+          "term": "深層学習",
+          "definition": "多層のニューラルネットワークを用いた機械学習"
+        },
+        {
+          "term": "不確実性",
+          "definition": "AIの予測がどれくらい信頼できるかの度合い"
+        },
+        {
+          "term": "ベイジアンニューラルネットワーク",
+          "definition": "確率論に基づいて不確実性を扱うニューラルネットワーク"
+        },
+        {
+          "term": "モンテカルロドロップアウト",
+          "definition": "ドロップアウトを複数回適用し不確実性を推定する手法"
+        },
+        {
+          "term": "最終層委員会機械",
+          "definition": "ニューラルネットワークの最終層で複数の予測器を結合"
+        },
+        {
+          "term": "全結合層",
+          "definition": "前の層の全てのニューロンと接続する層"
+        },
+        {
+          "term": "パラメータ",
+          "definition": "モデルの学習によって調整される数値"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "AIが海底画像を分類する際の「自信過剰」を、少ない計算量で効率的に評価する新手法を開発しました。",
+      "noveltyContrast": {
+        "before": "従来の深層学習モデルは、海底画像のような曖昧なデータに対して、しばしば過度に自信のある予測を出力し、その信頼性に問題がありました。不確実性を評価するには、複数のモデルを動かすなど計算コストが高い手法が一般的でした。",
+        "after": "本研究では、単一の「最終層委員会機械（LLCM）」を用いることで、計算コストを大幅に削減しつつ、AIの予測の不確実性を高精度に推定する新しいフレームワークを提案しました。これにより、人間の専門家が確認すべき画像を効率的に特定できます。"
+      },
+      "analogy": {
+        "title": "ベテラン農家が作物の出来を最終確認するようなもの",
+        "body": "AIが畑の作物を「これは豊作だ！」と判断する際、従来のAIは、たとえ生育不良の区画があっても一律に「豊作」と断言しがちでした。これは、新米農家が全体の雰囲気だけで判断し、個々の作物の状態を深く見ないようなものです。しかし、この研究のLLCMは、ベテラン農家が畑の最終段階で、個々の作物の生育状況を細かく見て「この区画はもう少し様子を見よう」「ここは手入れが必要だ」と、全体の判断とは別に、個別の不確実性を評価するようなものです。これにより、本当に手入れが必要な作物だけを効率的に見つけ出し、無駄なく対応できるようになります。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "> 95%",
+          "label": "ネットワークパラメータの削減"
+        }
+      ],
+      "whyYouCare": "AIの判断が常に正しいとは限りません。特に、医療診断、自動運転、金融取引など、誤った判断が重大な結果を招く分野では、AIがどれくらい自信を持っているか（不確実性）を知ることが極めて重要です。この研究は、AIの「自信過剰」を見抜き、本当に人間の専門家が確認すべき箇所を効率的に特定する技術を提供します。これにより、AIと人間の協調作業がよりスムーズになり、限られたリソースを最も重要なタスクに集中させることが可能になります。あなたの仕事でAIを活用する際も、この不確実性評価の考え方は、AIの信頼性を高め、より賢い意思決定を支援するでしょう。",
+      "takeawayTalk": "AIの「自信過剰」を、少ない計算で効率的に見抜く技術ができたよ！",
+      "bodyText": "本研究では、分類の不確実性を海底生息地画像のラベリングを改善するためのツールとして調査しました。BenthicNetデータセットの2つの困難なサブデータセットに対し、ベイジアンニューラルネットワーク、モンテカルロドロップアウト推論サンプリング、そして提案された単一の最終層委員会機械（LLCM）を用いたフレームワークを開発しました。LLCMは、各委員会メンバーに1つの全結合層のみを使用することで、サンプルごとの不確実性を得るためのネットワークパラメータ数を劇的に削減します。これにより、ベイジアンニューラルネットワークやモンテカルロドロップアウトなどの計算コストが高い戦略とほぼ同等の性能を維持しつつ、パラメータ数を95%以上削減しました。\n\nLLCMの主な動機は、サンプルごとの不確実性を迅速に取得するためのモジュール式で計算効率の高いアプローチを提供することです。これは、推論中に単一の順方向パスで実現できます。具体的には、委員会機械の各メンバーに1つの全結合層のみを使用します。これにより、サンプルごとの不確実性を生成するために使用されるネットワークパラメータの数が劇的に削減されます。これは、BMAやMCDアプローチとは対照的で、これらのアプローチでは、サンプルごとの不確実性を得るためにネットワーク全体が複数回（例：100回以上）サンプリングされます。LLCMの各委員会メンバーの勾配は独立して逆伝播され、洗練された損失関数やネットワーク構成は不要です。委員会メンバーの多様性は、訓練中に多様性を促進するための追加技術を適用せずに、ネットワークの重みをランダムに初期化することで得られました。",
+      "bodyGlossary": [
+        {
+          "term": "不確実性",
+          "definition": "AIの予測がどれくらい信頼できるかの度合い",
+          "start": 9,
+          "end": 13
+        },
+        {
+          "term": "ベイジアンニューラルネットワーク",
+          "definition": "確率論に基づいて不確実性を扱うニューラルネットワーク",
+          "start": 83,
+          "end": 99
+        },
+        {
+          "term": "モンテカルロドロップアウト",
+          "definition": "ドロップアウトを複数回適用し不確実性を推定する手法",
+          "start": 100,
+          "end": 113
+        },
+        {
+          "term": "最終層委員会機械",
+          "definition": "ニューラルネットワークの最終層で複数の予測器を結合",
+          "start": 133,
+          "end": 141
+        },
+        {
+          "term": "全結合層",
+          "definition": "前の層の全てのニューロンと接続する層",
+          "start": 184,
+          "end": 188
+        },
+        {
+          "term": "パラメータ",
+          "definition": "モデルの学習によって調整される数値",
+          "start": 222,
+          "end": 227
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "不確実性",
+          "definition": "AIの予測がどれくらい信頼できるかの度合い",
+          "start": 9,
+          "end": 13
+        },
+        {
+          "term": "ベイジアンニューラルネットワーク",
+          "definition": "確率論に基づいて不確実性を扱うニューラルネットワーク",
+          "start": 83,
+          "end": 99
+        },
+        {
+          "term": "モンテカルロドロップアウト",
+          "definition": "ドロップアウトを複数回適用し不確実性を推定する手法",
+          "start": 100,
+          "end": 113
+        },
+        {
+          "term": "最終層委員会機械",
+          "definition": "ニューラルネットワークの最終層で複数の予測器を結合",
+          "start": 133,
+          "end": 141
+        },
+        {
+          "term": "全結合層",
+          "definition": "前の層の全てのニューロンと接続する層",
+          "start": 184,
+          "end": 188
+        },
+        {
+          "term": "パラメータ",
+          "definition": "モデルの学習によって調整される数値",
+          "start": 222,
+          "end": 227
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 293,
+      "keyFigure": {
+        "imagePath": "/figures/2504.16952_results.jpeg",
+        "page": 9,
+        "caption": "提案手法が計算コストの高い戦略と同等の性能を維持しつつ、パラメータを大幅に削減したことを示す表です。",
+        "label": "Table 4, CNN). When",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-04T23:12:21.143Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2504.16952_results.jpeg",
+          "page": 9,
+          "caption": "提案手法が計算コストの高い戦略と同等の性能を維持しつつ、パラメータを大幅に削減したことを示す表です。",
+          "label": "Table 4, CNN). When",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-04T23:12:21.143Z"
+        },
+        {
+          "imagePath": "/figures/2504.16952_why.jpeg",
+          "page": 9,
+          "caption": "委員会メンバーの多様性が、追加技術なしにネットワークの重みをランダムに初期化することで得られたことを示す図です。",
+          "label": "Fig. 2: Network diversity (CVSVi",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-04T23:12:21.144Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.04994",
+      "title": "New Benchmarking Shows Limited Generalization Power of TCR Antigenic Epitope Prediction Models",
+      "authors": [
+        "Yiming Liao",
+        "Yiheng Li",
+        "Ning Jiang",
+        "Bo Li",
+        "Keke Chen"
+      ],
+      "publishedAt": "2026-06-04T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.04994",
+      "pdfUrl": "https://arxiv.org/pdf/2606.04994.pdf",
+      "categories": [
+        "topic:health",
+        "cs.LG",
+        "q-bio.QM"
+      ],
+      "abstract": "Accurate computational prediction of T cell receptor (TCR) antigen specificity would transform the study of T cell biology and enable scalable immune engineering, yet existing models lack sufficient sensitivity and specificity for broad applications. A major limitation is the absence of rigorously defined, unseen benchmark datasets that allow unbiased evaluation of model performance and generalizability. Here, we describe two complementary classes of datasets that meet this criterion and argue that they provide both a robust framework for model assessment and a foundation for next-generation TCR-antigen prediction algorithm development.",
+      "summary": {
+        "gist": "T細胞受容体（TCR）と抗原の結合を正確に予測する計算モデルは、T細胞生物学の研究を変革し、免疫工学を大規模に実現する可能性を秘めています。しかし、既存のモデルは幅広い応用には感度と特異性が不十分でした。主な制約は、モデルの性能と汎化能力を公平に評価するための、厳密に定義された未知のベンチマークデータセットが不足していることでした。",
+        "novelty": "これまでのTCR抗原予測AIモデルは、既存のデータセットで高い性能を示していましたが、その評価には未知の抗原に対する汎化能力を厳密に測るための公平なベンチマークが不足していました。そのため、モデルが特定の抗原を「記憶」しているだけではないかという懸念がありました。 この研究では、既存のデータベースにない「真に未知の」抗原とTCRのデータセットを新たに構築し、既存のAIモデルの汎化能力を厳密に評価しました。その結果、モデルはTCRの新規性よりも抗原の新規性に大きく影響され、特定の抗原に過学習していることが明らかになりました。",
+        "method": "本研究では、TCR抗原予測モデルの汎化能力を評価するため、これまでの研究で用いられていない「真に未知の」データセットを新たに構築しました。具体的には、VDJdbやIEDBといった一般的なデータベースには未登録の、高次元・ハイスループットのTCR-抗原マッピングデータセット（TetTCR-SeqHDおよびFingerprintingデータセット）を使用しました。これらのデータセットから、既存のモデルが学習に使用した可能性のあるTCRや抗原を厳密に除去し、データリークを防ぎました。評価指標には、低偽陽性率領域での感度が高いMacro AUC0.1を採用し、ウイルス性抗原と自己抗原、既知抗原と未知抗原のグループに分けてモデル性能を比較しました。",
+        "results": "評価の結果、既存のTCR抗原予測モデルは、TCRの新規性よりも抗原の新規性に大きく影響されることが判明しました。TCRが新規である場合でもモデルの性能は安定していましたが、抗原が新規である場合（特にYLQ R5置換のような真に未知の抗原結合）には、テストした全てのモデルで予測能力が著しく低下しました。これは、モデルが汎化可能な結合ルールを学習するのではなく、暗黙的にエピトープ固有の特徴を記憶していることを示唆しています。現在のモデルは、トレーニングデータに存在する限られたエピトープ多様性に過学習している可能性が高いことが示されました。",
+        "why": "モデルの汎化能力の欠如は、データの品質の不均一性、TCR対エピトープ比の極端な偏り、そして膨大な抗原空間に対してトレーニングデータが限られていることに起因すると考えられます。現在のTCR-エピトープ結合データベースは、少数のよく研究されたウイルスエピトープに偏っており、抗原空間の大部分は未探索です。主にウイルスエピトープでトレーニングされたモデルは、腫瘍ネオ抗原、自己抗原、または新たな病原体エピトープに汎化できない可能性があります。単純にトレーニングデータを増やすだけでは不十分であり、モデルアーキテクチャ、トレーニング戦略、および特徴表現を進化させ、より高次の免疫学的原理を捉える必要があると結論付けられました。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.LG）",
+      "field": "医学・健康",
+      "categoryL1": "serendipity",
+      "categoryL2": "immunology",
+      "arxivPrimary": "cs.LG",
+      "titleJa": "TCR抗原エピトープ予測モデルの限定的な汎化能力を示す新しいベンチマーク",
+      "catchTitle": "AIは「未知の病原体」を見つけられるか？",
+      "hook": "あなたは、AIが新しいウイルスやがん細胞を正確に予測し、治療法を見つける未来を想像したことはありますか？",
+      "background": "T細胞受容体（TCR）と抗原の結合を正確に予測する計算モデルは、T細胞生物学の研究を変革し、免疫工学を大規模に実現する可能性を秘めています。しかし、既存のモデルは幅広い応用には感度と特異性が不十分でした。主な制約は、モデルの性能と汎化能力を公平に評価するための、厳密に定義された未知のベンチマークデータセットが不足していることでした。",
+      "quiz": {
+        "question": "この研究で、TCR抗原予測AIモデルの予測能力低下に最も影響を与えた要因は何でしたか？",
+        "options": [
+          "TCRの新規性",
+          "抗原の新規性",
+          "トレーニングデータの量"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究では、モデルの性能低下はTCRの新規性よりも抗原の新規性に大きく影響されることが示されました。モデルは汎化可能な結合ルールを学習するのではなく、特定の抗原に過学習している可能性が高いと結論付けられています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "TCR",
+          "definition": "T細胞受容体。免疫細胞が抗原を認識する分子。"
+        },
+        {
+          "term": "抗原",
+          "definition": "免疫反応を引き起こす物質。病原体やがん細胞の一部。"
+        },
+        {
+          "term": "エピトープ",
+          "definition": "抗原の中でTCRが特異的に認識する部分。"
+        },
+        {
+          "term": "汎化能力",
+          "definition": "AIモデルが未知のデータに対しても正確に予測する能力。"
+        },
+        {
+          "term": "VDJdb",
+          "definition": "TCR配列と抗原特異性の公開データベース。"
+        },
+        {
+          "term": "IEDB",
+          "definition": "免疫エピトープの公開データベース。"
+        },
+        {
+          "term": "データリーク",
+          "definition": "テストデータがトレーニングデータに含まれてしまうこと。"
+        },
+        {
+          "term": "Macro AUC0.1",
+          "definition": "低偽陽性率領域に特化したモデル性能評価指標。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "T細胞受容体と抗原の結合を予測するAIモデルは、未知の抗原に対しては予測精度が低いことが判明しました。",
+      "noveltyContrast": {
+        "before": "これまでのTCR抗原予測AIモデルは、既存のデータセットで高い性能を示していましたが、その評価には未知の抗原に対する汎化能力を厳密に測るための公平なベンチマークが不足していました。そのため、モデルが特定の抗原を「記憶」しているだけではないかという懸念がありました。",
+        "after": "この研究では、既存のデータベースにない「真に未知の」抗原とTCRのデータセットを新たに構築し、既存のAIモデルの汎化能力を厳密に評価しました。その結果、モデルはTCRの新規性よりも抗原の新規性に大きく影響され、特定の抗原に過学習していることが明らかになりました。"
+      },
+      "analogy": {
+        "title": "特定の畑の土壌に特化した農機",
+        "body": "これは、特定の畑の土壌や作物に特化して設計された最新の農業機械のようなものです。その機械は、これまで作業してきた畑では最高の効率と収穫量を誇ります。しかし、全く異なる土壌や気候条件の新しい畑に持ち込むと、途端に性能が落ち、期待通りの働きができないことが判明しました。この機械が「特定の畑の土壌の特性」を記憶してしまっており、「一般的な土壌を耕すための普遍的な原理」を学習していなかったためです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、AIによる病原体やがんの予測・治療法開発に大きな示唆を与えます。もしAIが特定のウイルス株や既知のがん細胞しか認識できないとしたら、新型ウイルスや変異したがん細胞には対応できません。これは、私たちが直面するパンデミックや難治性がんへの対策に直結する問題です。今回の発見は、より汎用性の高いAIモデルを開発するための重要な一歩であり、将来的に、未知の脅威にも対応できる画期的な治療法やワクチン開発につながる可能性があります。あなたの健康や社会の安全を守る上で、AIの「真の知能」がどこまで通用するのかを理解する上で非常に重要です。",
+      "takeawayTalk": "AIは未知の病原体を見つけるのが苦手！もっと賢いAIが必要だね。",
+      "bodyText": "本研究では、TCR抗原予測モデルの汎化能力を評価するため、これまでの研究で用いられていない「真に未知の」データセットを新たに構築しました。具体的には、VDJdbやIEDBといった一般的なデータベースには未登録の、高次元・ハイスループットのTCR-抗原マッピングデータセット（TetTCR-SeqHDおよびFingerprintingデータセット）を使用しました。これらのデータセットから、既存のモデルが学習に使用した可能性のあるTCRや抗原を厳密に除去し、データリークを防ぎました。評価指標には、低偽陽性率領域での感度が高いMacro AUC0.1を採用し、ウイルス性抗原と自己抗原、既知抗原と未知抗原のグループに分けてモデル性能を比較しました。\n\nモデルの汎化能力の欠如は、データの品質の不均一性、TCR対エピトープ比の極端な偏り、そして膨大な抗原空間に対してトレーニングデータが限られていることに起因すると考えられます。現在のTCR-エピトープ結合データベースは、少数のよく研究されたウイルスエピトープに偏っており、抗原空間の大部分は未探索です。主にウイルスエピトープでトレーニングされたモデルは、腫瘍ネオ抗原、自己抗原、または新たな病原体エピトープに汎化できない可能性があります。単純にトレーニングデータを増やすだけでは不十分であり、モデルアーキテクチャ、トレーニング戦略、および特徴表現を進化させ、より高次の免疫学的原理を捉える必要があると結論付けられました。",
+      "bodyGlossary": [
+        {
+          "term": "TCR",
+          "definition": "T細胞受容体。免疫細胞が抗原を認識する分子。",
+          "start": 6,
+          "end": 9
+        },
+        {
+          "term": "抗原",
+          "definition": "免疫反応を引き起こす物質。病原体やがん細胞の一部。",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "term": "汎化能力",
+          "definition": "AIモデルが未知のデータに対しても正確に予測する能力。",
+          "start": 17,
+          "end": 21
+        },
+        {
+          "term": "VDJdb",
+          "definition": "TCR配列と抗原特異性の公開データベース。",
+          "start": 75,
+          "end": 80
+        },
+        {
+          "term": "IEDB",
+          "definition": "免疫エピトープの公開データベース。",
+          "start": 81,
+          "end": 85
+        },
+        {
+          "term": "データリーク",
+          "definition": "テストデータがトレーニングデータに含まれてしまうこと。",
+          "start": 228,
+          "end": 234
+        },
+        {
+          "term": "Macro AUC0.1",
+          "definition": "低偽陽性率領域に特化したモデル性能評価指標。",
+          "start": 262,
+          "end": 274
+        },
+        {
+          "term": "エピトープ",
+          "definition": "抗原の中でTCRが特異的に認識する部分。",
+          "start": 354,
+          "end": 359
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "TCR",
+          "definition": "T細胞受容体。免疫細胞が抗原を認識する分子。",
+          "start": 6,
+          "end": 9
+        },
+        {
+          "term": "抗原",
+          "definition": "免疫反応を引き起こす物質。病原体やがん細胞の一部。",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "term": "汎化能力",
+          "definition": "AIモデルが未知のデータに対しても正確に予測する能力。",
+          "start": 17,
+          "end": 21
+        },
+        {
+          "term": "VDJdb",
+          "definition": "TCR配列と抗原特異性の公開データベース。",
+          "start": 75,
+          "end": 80
+        },
+        {
+          "term": "IEDB",
+          "definition": "免疫エピトープの公開データベース。",
+          "start": 81,
+          "end": 85
+        },
+        {
+          "term": "データリーク",
+          "definition": "テストデータがトレーニングデータに含まれてしまうこと。",
+          "start": 228,
+          "end": 234
+        },
+        {
+          "term": "Macro AUC0.1",
+          "definition": "低偽陽性率領域に特化したモデル性能評価指標。",
+          "start": 262,
+          "end": 274
+        },
+        {
+          "term": "エピトープ",
+          "definition": "抗原の中でTCRが特異的に認識する部分。",
+          "start": 354,
+          "end": 359
+        }
+      ],
+      "agriEconRelevance": "この研究の知見は、農業経済におけるAI活用にも応用可能です。例えば、特定の病害虫や気候条件に特化したAIモデルは、未知の病害虫の発生や異常気象に対しては予測精度が低下する可能性があります。汎化能力の高いモデルを開発することで、新たな農業課題にも対応できるスマート農業技術の発展に貢献し、食料安全保障の強化につながるでしょう。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 257,
+      "keyFigure": {
+        "imagePath": "/figures/2606.04994_results.png",
+        "page": 4,
+        "caption": "Figure 1: Systematic benchmarking of TCR–peptide binding models across diverse epi- Systematic benchmarking of TCR–peptide binding models across diverse epi-",
+        "label": "Figure 1: Systematic benchmarking of TCR–peptide binding models across diverse epi-",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-04T23:12:22.661Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.04994_results.png",
+          "page": 4,
+          "caption": "Figure 1: Systematic benchmarking of TCR–peptide binding models across diverse epi- Systematic benchmarking of TCR–peptide binding models across diverse epi-",
+          "label": "Figure 1: Systematic benchmarking of TCR–peptide binding models across diverse epi-",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-04T23:12:22.661Z"
+        }
+      ]
+    }
+  ]
+}

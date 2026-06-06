@@ -1,0 +1,1045 @@
+{
+  "date": "2026-06-07",
+  "papers": [
+    {
+      "id": "2606.06089v1",
+      "title": "Leveraging LLMs for Unstructured Claims Data Analysis",
+      "authors": [
+        "Robert D. Lieberthal",
+        "Richard Tran",
+        "Vietbao Phan",
+        "Jawand Singh",
+        "Elizabeth Sottung"
+      ],
+      "publishedAt": "2026-06-04T12:26:20Z",
+      "url": "https://arxiv.org/abs/2606.06089v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.06089v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "q-fin.MF",
+        "econ.GN",
+        "q-fin.RM"
+      ],
+      "abstract": "Actuaries rely primarily on structured numerical data for reserving and ratemaking, while valuable predictive information in unstructured text including medical records, adjuster notes, and call transcripts remains largely unused. Manual processing of these documents is time-consuming, inconsistent across reviewers, and unscalable. We present a proof-of-concept framework using large language models (LLMs) to extract structured actuarial variables from unstructured claims data. We implement a two-stage processing architecture separating document-level extraction (Stage 1) from claim-level synthesis (Stage 2). A modular four-script Python pipeline processes synthetic FHIR-based claims data and real claims documents, extracting 36 actuarial variables across reserving, ratemaking, and claims management categories. We validate 14 core variables using two independent clinical expert reviewers scoring 20 synthetic claims on a five-point Likert rubric, achieving mean scores above 4.0 and a weighted kappa of 0.53. Integration with chain ladder reserving demonstrates practical actuarial value: severity-segmented analysis reduced reserve estimation error from 6.5% to 4.0%. The open-source implementation includes audit trails and confidence scoring, providing a replicable foundation for LLM-based actuarial variable extraction in property-casualty insurance.",
+      "summary": {
+        "gist": "保険業界では、保険料設定や準備金積立において、主に数値化された構造化データに依存しています。しかし、医療記録、アジャスターのメモ、通話記録といった非構造化テキストデータには、予測に役立つ貴重な情報が大量に含まれており、これまでほとんど活用されていませんでした。これらの文書を手作業で処理することは、時間がかかり、担当者によって一貫性がなく、規模を拡大することも困難でした。大規模言語モデル（LLM）は、顧客サービス自動化から文書分析、意思決定支援システムまで、多くのビジネスアプリケーションで目覚ましい能力を発揮しています。保険業界でも、これらの技術を従来の分析手法にどのように組み込むか検討が始まっています。",
+        "novelty": "従来の保険業界では、医療記録や事故報告書といった非構造化テキストデータは、手作業でしか処理できませんでした。これは時間とコストがかかり、担当者によって判断にばらつきが生じるため、膨大な情報が活用しきれていませんでした。 この研究では、大規模言語モデル（LLM）を使って、非構造化テキストから保険金請求に必要な36種類の変数を自動で抽出するフレームワークを開発しました。これにより、手作業の限界を突破し、より迅速かつ一貫性のあるデータ活用が可能になります。",
+        "method": "本研究では、大規模言語モデル（LLM）を用いて、非構造化クレームデータから構造化された保険数理変数を抽出する概念実証フレームワークを提案します。文書レベルの抽出（ステージ1）とクレームレベルの統合（ステージ2）を分離する2段階処理アーキテクチャを実装しました。合成FHIRベースのクレームデータと実際のクレーム文書を処理するモジュール式の4スクリプトPythonパイプラインを開発し、準備金、保険料率設定、クレーム管理の3つのカテゴリにわたる36の保険数理変数を抽出しました。14の主要変数を検証するため、2人の独立した臨床専門家が20件の合成クレームを5段階のリッカート尺度で評価し、平均スコア4.0以上、加重カッパ係数0.53を達成しました。",
+        "results": "本研究で開発したLLMベースのフレームワークは、非構造化クレームデータから36の保険数理変数を高精度で抽出できることを示しました。特に、専門家による評価では、主要な14変数で平均スコア4.0以上、専門家間の一致度を示す加重カッパ係数0.53を達成し、抽出された変数の信頼性が高いことを裏付けました。さらに、この抽出された変数を用いた重症度セグメント分析をチェーンラダー法による準備金積立に統合した結果、準備金推定誤差を6.5%から4.0%に削減できることが実証され、実用的な保険数理上の価値が示されました。このオープンソース実装には監査証跡と信頼度スコアリングが含まれており、損害保険におけるLLMベースの保険数理変数抽出のための再現可能な基盤を提供します。",
+        "why": "LLMは、従来のルールベースのシステムとは異なり、膨大なテキストコーパスで訓練されたニューラルネットワークアーキテクチャを使用することで、言語の構造、文脈、意味を高度に理解します。これにより、専門用語や略語を広範な手動コーディングなしで理解し、同じ用語でも周囲の情報に基づいて異なる意味を区別し、多様な文書形式や記述スタイルを統一されたフレームワークで処理できます。この能力が、医療記録やアジャスターメモといった複雑な非構造化テキストから、傷害の重症度、治療の複雑さ、訴訟リスク因子などの詳細な情報を正確に抽出し、構造化された変数に変換することを可能にします。抽出された変数は、保険金請求の真の異質性を反映したより詳細な準備金推定や、より正確な保険料設定、高複雑度ケースの早期特定による効率的なクレーム管理に貢献します。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-fin.MF）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "risk-management",
+      "arxivPrimary": "q-fin.MF",
+      "titleJa": "LLMを活用した非構造化クレームデータ分析",
+      "catchTitle": "保険金請求の「宝の山」をAIが掘り起こす",
+      "hook": "あなたの加入している保険、もしAIがもっと賢く請求を処理してくれたらどうなると思いますか？",
+      "background": "保険業界では、保険料設定や準備金積立において、主に数値化された構造化データに依存しています。しかし、医療記録、アジャスターのメモ、通話記録といった非構造化テキストデータには、予測に役立つ貴重な情報が大量に含まれており、これまでほとんど活用されていませんでした。これらの文書を手作業で処理することは、時間がかかり、担当者によって一貫性がなく、規模を拡大することも困難でした。大規模言語モデル（LLM）は、顧客サービス自動化から文書分析、意思決定支援システムまで、多くのビジネスアプリケーションで目覚ましい能力を発揮しています。保険業界でも、これらの技術を従来の分析手法にどのように組み込むか検討が始まっています。",
+      "quiz": {
+        "question": "この研究でLLMが抽出した保険数理変数は、主に何に活用されると述べられていますか？",
+        "options": [
+          "顧客の趣味嗜好分析",
+          "準備金積立、保険料率設定、クレーム管理",
+          "従業員の勤怠管理"
+        ],
+        "correctIndex": 1,
+        "explanation": "LLMが抽出した保険数理変数は、準備金積立、保険料率設定、クレーム管理の3つのカテゴリにわたって活用されると述べられています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "LLM",
+          "definition": "大量のテキストデータを学習したAIモデル"
+        },
+        {
+          "term": "非構造化クレームデータ",
+          "definition": "医療記録やメモなど、決まった形式のない請求情報"
+        },
+        {
+          "term": "保険数理変数",
+          "definition": "保険料率や準備金計算に使う数値"
+        },
+        {
+          "term": "FHIR",
+          "definition": "医療情報交換のための国際標準規格"
+        },
+        {
+          "term": "加重カッパ係数",
+          "definition": "複数の評価者間の一致度を示す指標"
+        },
+        {
+          "term": "ニューラルネットワーク",
+          "definition": "人間の脳を模した情報処理モデル"
+        },
+        {
+          "term": "コーパス",
+          "definition": "言語研究のために集められた大量のテキストデータ"
+        },
+        {
+          "term": "アジャスターメモ",
+          "definition": "保険事故調査担当者による記録"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "LLMが保険金請求の非構造化テキストから必要な情報を自動抽出し、引受・査定の精度と効率を大幅に向上させます。",
+      "noveltyContrast": {
+        "before": "従来の保険業界では、医療記録や事故報告書といった非構造化テキストデータは、手作業でしか処理できませんでした。これは時間とコストがかかり、担当者によって判断にばらつきが生じるため、膨大な情報が活用しきれていませんでした。",
+        "after": "この研究では、大規模言語モデル（LLM）を使って、非構造化テキストから保険金請求に必要な36種類の変数を自動で抽出するフレームワークを開発しました。これにより、手作業の限界を突破し、より迅速かつ一貫性のあるデータ活用が可能になります。"
+      },
+      "analogy": {
+        "title": "畑の雑草から隠れた栄養を見つけるAI農機",
+        "body": "これはまるで、広大な畑に生い茂る雑草（非構造化データ）の中から、作物の成長に必要な隠れた栄養素（重要な情報）を自動で識別し、収穫を最大化する最新のAI農機のようなものです。これまで手作業で雑草を抜き、土壌分析をしていた農家（保険査定人）は、時間と労力がかかり、見落としも多くありました。しかし、このAI農機は、雑草の種類や土壌の状態を瞬時に解析し、必要な栄養素だけを効率的に抽出することで、より豊かで安定した収穫（正確な保険金査定）を可能にします。手作業では見つけられなかった微細な情報も逃さず、畑全体の生産性を飛躍的に向上させるイメージです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+3.2pt",
+          "label": "専門家評価の平均スコア"
+        },
+        {
+          "value": "0.53",
+          "label": "専門家間の一致度（加重カッパ係数）"
+        },
+        {
+          "value": "-2.5pt",
+          "label": "準備金推定誤差の削減"
+        }
+      ],
+      "whyYouCare": "この研究は、保険業界だけでなく、契約書、顧客対応記録、医療カルテなど、大量の非構造化テキストデータを扱うあらゆる業界にとって重要です。AIがこれらの「宝の山」から必要な情報を自動で、しかも高精度に抽出できるようになれば、業務の効率化はもちろん、これまで見過ごされていたリスクや機会を発見できるようになります。例えば、企業の法務部門では契約書レビューの迅速化、医療機関では患者情報の効率的な管理、金融機関では顧客のニーズをより深く理解したサービス開発など、あなたの仕事や生活の質を向上させる可能性を秘めています。",
+      "takeawayTalk": "保険の請求書、AIが読んで必要な情報を全部抜き出してくれるって！",
+      "bodyText": "本研究では、大規模言語モデル（LLM）を用いて、非構造化クレームデータから構造化された保険数理変数を抽出する概念実証フレームワークを提案します。文書レベルの抽出（ステージ1）とクレームレベルの統合（ステージ2）を分離する2段階処理アーキテクチャを実装しました。合成FHIRベースのクレームデータと実際のクレーム文書を処理するモジュール式の4スクリプトPythonパイプラインを開発し、準備金、保険料率設定、クレーム管理の3つのカテゴリにわたる36の保険数理変数を抽出しました。14の主要変数を検証するため、2人の独立した臨床専門家が20件の合成クレームを5段階のリッカート尺度で評価し、平均スコア4.0以上、加重カッパ係数0.53を達成しました。\n\nLLMは、従来のルールベースのシステムとは異なり、膨大なテキストコーパスで訓練されたニューラルネットワークアーキテクチャを使用することで、言語の構造、文脈、意味を高度に理解します。これにより、専門用語や略語を広範な手動コーディングなしで理解し、同じ用語でも周囲の情報に基づいて異なる意味を区別し、多様な文書形式や記述スタイルを統一されたフレームワークで処理できます。この能力が、医療記録やアジャスターメモといった複雑な非構造化テキストから、傷害の重症度、治療の複雑さ、訴訟リスク因子などの詳細な情報を正確に抽出し、構造化された変数に変換することを可能にします。抽出された変数は、保険金請求の真の異質性を反映したより詳細な準備金推定や、より正確な保険料設定、高複雑度ケースの早期特定による効率的なクレーム管理に貢献します。",
+      "bodyGlossary": [
+        {
+          "term": "LLM",
+          "definition": "大量のテキストデータを学習したAIモデル",
+          "start": 15,
+          "end": 18
+        },
+        {
+          "term": "非構造化クレームデータ",
+          "definition": "医療記録やメモなど、決まった形式のない請求情報",
+          "start": 24,
+          "end": 35
+        },
+        {
+          "term": "保険数理変数",
+          "definition": "保険料率や準備金計算に使う数値",
+          "start": 43,
+          "end": 49
+        },
+        {
+          "term": "FHIR",
+          "definition": "医療情報交換のための国際標準規格",
+          "start": 132,
+          "end": 136
+        },
+        {
+          "term": "加重カッパ係数",
+          "definition": "複数の評価者間の一致度を示す指標",
+          "start": 304,
+          "end": 311
+        },
+        {
+          "term": "コーパス",
+          "definition": "言語研究のために集められた大量のテキストデータ",
+          "start": 357,
+          "end": 361
+        },
+        {
+          "term": "ニューラルネットワーク",
+          "definition": "人間の脳を模した情報処理モデル",
+          "start": 367,
+          "end": 378
+        },
+        {
+          "term": "アジャスターメモ",
+          "definition": "保険事故調査担当者による記録",
+          "start": 519,
+          "end": 527
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "LLM",
+          "definition": "大量のテキストデータを学習したAIモデル",
+          "start": 15,
+          "end": 18
+        },
+        {
+          "term": "非構造化クレームデータ",
+          "definition": "医療記録やメモなど、決まった形式のない請求情報",
+          "start": 24,
+          "end": 35
+        },
+        {
+          "term": "保険数理変数",
+          "definition": "保険料率や準備金計算に使う数値",
+          "start": 43,
+          "end": 49
+        },
+        {
+          "term": "FHIR",
+          "definition": "医療情報交換のための国際標準規格",
+          "start": 132,
+          "end": 136
+        },
+        {
+          "term": "加重カッパ係数",
+          "definition": "複数の評価者間の一致度を示す指標",
+          "start": 304,
+          "end": 311
+        },
+        {
+          "term": "コーパス",
+          "definition": "言語研究のために集められた大量のテキストデータ",
+          "start": 357,
+          "end": 361
+        },
+        {
+          "term": "ニューラルネットワーク",
+          "definition": "人間の脳を模した情報処理モデル",
+          "start": 367,
+          "end": 378
+        },
+        {
+          "term": "アジャスターメモ",
+          "definition": "保険事故調査担当者による記録",
+          "start": 519,
+          "end": 527
+        }
+      ],
+      "agriEconRelevance": "農業経済学の分野では、農家の経営日誌、気象観測所の自由記述データ、農産物市場の取引記録、消費者のフィードバックなど、非構造化テキストデータが豊富に存在します。本研究のLLMを活用した変数抽出フレームワークは、これらのデータから、例えば「特定の気象条件が収穫量に与える影響」「消費者の特定の農産物に対する潜在的な需要」「農家の経営課題のパターン」といった、これまで手作業では困難だった詳細な情報を自動で抽出し、構造化されたデータとして分析することを可能にします。これにより、より精緻な農業政策の立案、リスク管理戦略の構築、新たな市場機会の発見に貢献できます。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 312,
+      "keyFigure": {
+        "imagePath": "/figures/2606.06089v1_results.png",
+        "page": 32,
+        "caption": "チェーンラダー法による準備金積立結果を比較した図です。",
+        "label": "Figure 6. Chain ladder results by method.",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-06T23:03:15.838Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.06089v1_results.png",
+          "page": 32,
+          "caption": "チェーンラダー法による準備金積立結果を比較した図です。",
+          "label": "Figure 6. Chain ladder results by method.",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-06T23:03:15.838Z"
+        },
+        {
+          "imagePath": "/figures/2606.06089v1_why.png",
+          "page": 18,
+          "caption": "クレームの時間的性質が関連するケースの文脈を示す概念図です。",
+          "label": "Figure 3.",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-06T23:03:15.838Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.05631v1",
+      "title": "Stress Amplified Resilience: ESG and Joint Fragility in Equity Markets",
+      "authors": [
+        "Minxuan Hu",
+        "Jiayu Yi",
+        "Ziheng Chen",
+        "Wenxi Sun",
+        "Qishi Zhan"
+      ],
+      "publishedAt": "2026-06-04T02:59:28Z",
+      "url": "https://arxiv.org/abs/2606.05631v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.05631v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "q-fin.MF",
+        "econ.GN"
+      ],
+      "abstract": "Market stress rarely harms investors through one channel alone. Losses, volatility spikes, and deteriorating tradability often arrive together. We examine whether ESG is associated with lower exposure to clustered fragility in equity markets. Using monthly data on S&amp;P 500 constituents from 2014 to 2025, we study downside returns, volatility, illiquidity, and a cofragility state that captures their joint occurrence within the same firm month. The evidence supports a stress-amplified resilience interpretation rather than an unconditional ESG return premium. In the return channel, the ESG association is concentrated in the extreme downside tail during stress months. In the volatility channel, higher ESG is associated with smaller risk spikes when aggregate conditions are weak. In the illiquidity channel, the association is more persistent, suggesting a liquidity-quality component whose relevance increases when market-wide trading conditions deteriorate. The central evidence comes from the joint analysis: a one-standard-deviation increase in ESG lowers the stress-period probability of severe cofragility by 0.92 percentage points, about 9% relative to the baseline. Double Machine Learning shows a similar negative ESG association after flexible adjustment for observable firm characteristics. Pillar evidence suggests stronger baseline resilience for Environmental scores and clearer stress amplification for Social scores. Overall, the findings characterize ESG as a multi-channel fragility signal for tail-risk monitoring, stress analysis, and pillar-level ESG assessment.",
+      "summary": {
+        "gist": "既存のサステナブルファイナンス研究は、ESGが長期的な価値を生み出し、倫理的行動に合致すると強調していますが、その多くは個別の成果を報告するか、市場サイクル全体で無条件のプレミアムがあるかを検証するに留まっています。しかし、実際の金融危機時には、リターンの低下、ボラティリティの急上昇、流動性の低下が同時に発生し、投資家にとって複合的な損失を生み出す「複合的な脆弱性」という側面が見過ごされてきました。",
+        "novelty": "これまでの研究では、ESG投資が市場全体で無条件に高いリターンをもたらすか、あるいは個別のリスク（株価下落、変動、流動性）にどう影響するかを個別に分析することがほとんどでした。そのため、実際の金融危機時に企業レベルで同時に発生する複数の脆弱性を見落としがちでした。 この論文は、市場ストレス時に株価下落、ボラティリティ上昇、流動性低下が同時に発生する「複合的な脆弱性」という概念を導入し、ESGが平時よりもストレス時に企業のレジリエンス（回復力）を増幅させることを明らかにしました。ESGは単なるリターン要因ではなく、テールリスク監視のシグナルとして機能します。",
+        "method": "本研究では、S&P 500構成銘柄の2014年から2025年までの月次データを使用し、市場ストレス下でのESGと企業の脆弱性の関係を分析しました。市場リターン分布の下位テールを用いてストレス状態を定義し、条件付き分位点回帰を用いてリターン、ボラティリティ、非流動性に関連するテールを分析しました。さらに、これらのショックが同時に発生する「複合的な脆弱性」の状態を捉えるフレームワークを構築しました。実証的な頑健性を評価するため、Double Machine Learning（DML）も適用し、観測可能な企業特性による潜在的なバイアスを調整しました。",
+        "results": "ESG評価が高い企業は、市場ストレス時に株価下落、ボラティリティ上昇、流動性低下が同時に発生する「複合的な脆弱性」に陥る確率が低いことが示されました。具体的には、ESGが1標準偏差増加すると、ストレス期間中の深刻な複合脆弱性の発生確率は0.92パーセンテージポイント減少し、これはベースラインと比較して約9%の相対的な減少に相当します。この効果は、特に環境スコアでベースラインのレジリエンスが強く、社会スコアでストレス増幅型のレジリエンスが明確であることが示されました。",
+        "why": "市場ストレスが悪化すると、投資家は企業の品質シグナル、情報開示の信頼性、ステークホルダーの安定性をより重視するようになります。ESG評価は、潜在的な悪影響のある情報リスクや取引圧力が不利な状態に蓄積しにくい企業を区別するのに役立ちます。これは、不透明性や情報非対称性に関連するクラッシュリスク、ESG評価の乖離と情報開示、そして流動性圧力と強制売却の組み合わせが損失を増幅させる市場の脆弱性メカニズムと関連しています。また、強固な社会慣行を通じたステークホルダー資本の蓄積は、極端な不確実性下で企業のヘッジ価格と事業運営に独自の貢献をし、企業がシステム障害に遭遇した際に他の企業よりも大きな柔軟性を持つことを可能にします。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-fin.MF）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "financial-economics",
+      "arxivPrimary": "q-fin.MF",
+      "titleJa": "市場ストレス下におけるESGと株式市場の複合的な脆弱性：ストレス増幅型レジリエンス",
+      "catchTitle": "ESGは「嵐の時」にこそ真価を発揮する",
+      "hook": "あなたの投資ポートフォリオ、市場が大きく揺らいだ時に本当に守られていますか？ESG投資は、平時だけでなく「有事」にこそ力を発揮するかもしれません。",
+      "background": "既存のサステナブルファイナンス研究は、ESGが長期的な価値を生み出し、倫理的行動に合致すると強調していますが、その多くは個別の成果を報告するか、市場サイクル全体で無条件のプレミアムがあるかを検証するに留まっています。しかし、実際の金融危機時には、リターンの低下、ボラティリティの急上昇、流動性の低下が同時に発生し、投資家にとって複合的な損失を生み出す「複合的な脆弱性」という側面が見過ごされてきました。",
+      "quiz": {
+        "question": "この論文によると、ESG評価が高い企業は市場ストレス時にどのような特徴を示しますか？",
+        "options": [
+          "無条件に高いリターンを常に生み出す",
+          "株価下落、ボラティリティ上昇、流動性低下が同時に起こる「複合的な脆弱性」に陥りにくい",
+          "環境スコアが低いほどレジリエンスが高い"
+        ],
+        "correctIndex": 1,
+        "explanation": "この論文は、ESG評価が高い企業が市場ストレス時に、株価下落、ボラティリティ上昇、流動性低下が同時に発生する「複合的な脆弱性」に陥りにくいことを明らかにしています。ESGは無条件に高いリターンを生むのではなく、ストレス時にレジリエンスを増幅させる役割を果たすとされています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "ESG",
+          "definition": "環境（Environmental）、社会（Social）、ガバナンス（Governance）の略。"
+        },
+        {
+          "term": "脆弱性",
+          "definition": "市場の悪条件に対して企業が受ける負の影響の度合い。"
+        },
+        {
+          "term": "分位点回帰",
+          "definition": "データの中央値だけでなく、様々な分位点での関係を分析する統計手法。"
+        },
+        {
+          "term": "非流動性",
+          "definition": "資産を迅速かつ公正な価格で現金化できない状態。"
+        },
+        {
+          "term": "複合的な脆弱性",
+          "definition": "株価下落、ボラティリティ上昇、流動性低下が同時に発生する状態。"
+        },
+        {
+          "term": "Double Machine Learning",
+          "definition": "機械学習を用いて因果効果を推定する統計手法。"
+        },
+        {
+          "term": "バイアス",
+          "definition": "推定結果の偏りや誤差。"
+        },
+        {
+          "term": "ステークホルダー",
+          "definition": "企業の活動に影響を受ける利害関係者（顧客、従業員、地域社会など）。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "ESG評価が高い企業は、市場が大きく下落するようなストレス時に、株価下落・ボラティリティ上昇・流動性低下が同時に起こる「複合的な脆弱性」に陥りにくい。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、ESG投資が市場全体で無条件に高いリターンをもたらすか、あるいは個別のリスク（株価下落、変動、流動性）にどう影響するかを個別に分析することがほとんどでした。そのため、実際の金融危機時に企業レベルで同時に発生する複数の脆弱性を見落としがちでした。",
+        "after": "この論文は、市場ストレス時に株価下落、ボラティリティ上昇、流動性低下が同時に発生する「複合的な脆弱性」という概念を導入し、ESGが平時よりもストレス時に企業のレジリエンス（回復力）を増幅させることを明らかにしました。ESGは単なるリターン要因ではなく、テールリスク監視のシグナルとして機能します。"
+      },
+      "analogy": {
+        "title": "豊作を支える「土壌の質」と「耐候性品種」",
+        "body": "市場の平穏な時期は、良い土壌で育つ作物が安定して収穫できるようなものです。しかし、台風や干ばつといった異常気象（市場ストレス）が来た時、土壌の質だけでなく、その作物がどれだけ悪条件に耐えられるか（耐候性品種）が真価を発揮します。ESG評価が高い企業は、まさにこの「耐候性品種」のようなもの。平時でも安定していますが、市場の嵐が来た時にこそ、株価の急落や取引の停滞といった「複合的な不作」から畑（企業）を守り、被害を最小限に抑える強いレジリエンスを発揮するのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "-0.92pt",
+          "label": "ESGが1標準偏差増加すると、ストレス時の深刻な複合脆弱性発生確率が減少"
+        },
+        {
+          "value": "9%",
+          "label": "ベースラインと比較したストレス時の深刻な複合脆弱性発生確率の相対的減少"
+        }
+      ],
+      "whyYouCare": "この研究は、ESG投資が単なる「良いこと」や「平均的なリターン向上」だけでなく、市場が不安定な時にこそ、あなたの資産を守る「リスクヘッジ」として機能することを示しています。経済危機や市場の混乱はいつ起こるかわかりません。そんな時、ESG評価の高い企業への投資は、株価の急落、ボラティリティの増大、流動性の低下といった複合的なリスクからあなたのポートフォリオを守る盾となり得ます。これは、企業の持続可能性を評価するだけでなく、不確実性の高い時代における賢明な投資戦略を考える上で非常に重要な視点を提供します。",
+      "takeawayTalk": "ESG投資は、市場が荒れた時にこそ真価を発揮する「嵐に強い株」だ！",
+      "bodyText": "本研究では、S&P 500構成銘柄の2014年から2025年までの月次データを使用し、市場ストレス下でのESGと企業の脆弱性の関係を分析しました。市場リターン分布の下位テールを用いてストレス状態を定義し、条件付き分位点回帰を用いてリターン、ボラティリティ、非流動性に関連するテールを分析しました。さらに、これらのショックが同時に発生する「複合的な脆弱性」の状態を捉えるフレームワークを構築しました。実証的な頑健性を評価するため、Double Machine Learning（DML）も適用し、観測可能な企業特性による潜在的なバイアスを調整しました。\n\n市場ストレスが悪化すると、投資家は企業の品質シグナル、情報開示の信頼性、ステークホルダーの安定性をより重視するようになります。ESG評価は、潜在的な悪影響のある情報リスクや取引圧力が不利な状態に蓄積しにくい企業を区別するのに役立ちます。これは、不透明性や情報非対称性に関連するクラッシュリスク、ESG評価の乖離と情報開示、そして流動性圧力と強制売却の組み合わせが損失を増幅させる市場の脆弱性メカニズムと関連しています。また、強固な社会慣行を通じたステークホルダー資本の蓄積は、極端な不確実性下で企業のヘッジ価格と事業運営に独自の貢献をし、企業がシステム障害に遭遇した際に他の企業よりも大きな柔軟性を持つことを可能にします。",
+      "bodyGlossary": [
+        {
+          "term": "ESG",
+          "definition": "環境（Environmental）、社会（Social）、ガバナンス（Governance）の略。",
+          "start": 52,
+          "end": 55
+        },
+        {
+          "term": "脆弱性",
+          "definition": "市場の悪条件に対して企業が受ける負の影響の度合い。",
+          "start": 59,
+          "end": 62
+        },
+        {
+          "term": "分位点回帰",
+          "definition": "データの中央値だけでなく、様々な分位点での関係を分析する統計手法。",
+          "start": 106,
+          "end": 111
+        },
+        {
+          "term": "非流動性",
+          "definition": "資産を迅速かつ公正な価格で現金化できない状態。",
+          "start": 128,
+          "end": 132
+        },
+        {
+          "term": "複合的な脆弱性",
+          "definition": "株価下落、ボラティリティ上昇、流動性低下が同時に発生する状態。",
+          "start": 169,
+          "end": 176
+        },
+        {
+          "term": "Double Machine Learning",
+          "definition": "機械学習を用いて因果効果を推定する統計手法。",
+          "start": 214,
+          "end": 237
+        },
+        {
+          "term": "バイアス",
+          "definition": "推定結果の偏りや誤差。",
+          "start": 263,
+          "end": 267
+        },
+        {
+          "term": "ステークホルダー",
+          "definition": "企業の活動に影響を受ける利害関係者（顧客、従業員、地域社会など）。",
+          "start": 313,
+          "end": 321
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "ESG",
+          "definition": "環境（Environmental）、社会（Social）、ガバナンス（Governance）の略。",
+          "start": 52,
+          "end": 55
+        },
+        {
+          "term": "脆弱性",
+          "definition": "市場の悪条件に対して企業が受ける負の影響の度合い。",
+          "start": 59,
+          "end": 62
+        },
+        {
+          "term": "分位点回帰",
+          "definition": "データの中央値だけでなく、様々な分位点での関係を分析する統計手法。",
+          "start": 106,
+          "end": 111
+        },
+        {
+          "term": "非流動性",
+          "definition": "資産を迅速かつ公正な価格で現金化できない状態。",
+          "start": 128,
+          "end": 132
+        },
+        {
+          "term": "複合的な脆弱性",
+          "definition": "株価下落、ボラティリティ上昇、流動性低下が同時に発生する状態。",
+          "start": 169,
+          "end": 176
+        },
+        {
+          "term": "Double Machine Learning",
+          "definition": "機械学習を用いて因果効果を推定する統計手法。",
+          "start": 214,
+          "end": 237
+        },
+        {
+          "term": "バイアス",
+          "definition": "推定結果の偏りや誤差。",
+          "start": 263,
+          "end": 267
+        },
+        {
+          "term": "ステークホルダー",
+          "definition": "企業の活動に影響を受ける利害関係者（顧客、従業員、地域社会など）。",
+          "start": 313,
+          "end": 321
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 275,
+      "keyFigure": {
+        "imagePath": "/figures/2606.05631v1_results.png",
+        "page": 10,
+        "caption": "市場ストレス時の深刻な複合脆弱性の発生状況を示しています。",
+        "label": "Figure 2 provides the descriptive counterpart to the formal tests. Severe cofragility states are more common in stress",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-06T23:03:19.777Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.05631v1_results.png",
+          "page": 10,
+          "caption": "市場ストレス時の深刻な複合脆弱性の発生状況を示しています。",
+          "label": "Figure 2 provides the descriptive counterpart to the formal tests. Severe cofragility states are more common in stress",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-06T23:03:19.777Z"
+        },
+        {
+          "imagePath": "/figures/2606.05631v1_why.png",
+          "page": 10,
+          "caption": "市場ストレス下での流動性の変化を示しており、メカニズムを補強します。",
+          "label": "Table 4",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-06T23:03:19.777Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.06443v1",
+      "title": "Revising Context, Shifting Simulated Stance: Auditing LLM-Based Stance Simulation in Online Discussions",
+      "authors": [
+        "Xinnong Zhang",
+        "Wanting Shan",
+        "Hanjia Lyu",
+        "Zhongyu Wei",
+        "Jiebo Luo"
+      ],
+      "publishedAt": "2026-06-04T17:41:54Z",
+      "url": "https://arxiv.org/abs/2606.06443v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.06443v1.pdf",
+      "categories": [
+        "topic:humanities",
+        "cs.CL",
+        "cs.MM",
+        "cs.SI"
+      ],
+      "abstract": "Large language models are increasingly used to simulate social media users and infer how individuals may respond to online discussions. However, it remains unclear whether these simulations reflect precise user-specific beliefs or whether they are highly sensitive to semantically independent changes in conversational contexts. In this work, we study counterfactual context revision as a framework for auditing LLM-based stance simulation. Given an original online conversation, we first infer a target user's stance toward a specific topic. We then apply controlled revision strategies to the conversational context and simulate the user's stance again under the revised context. We compare text-only revision strategies with a multimodal one that incorporates meme-based context and evaluate two main effectiveness metrics, i.e., average directional stance shift and stance transition rate. The results reveal effective and robust stance transitions in both text-only and multimodal strategies across different polarization-preference mechanisms. Our study contributes an evaluation framework for understanding the context sensitivity of LLM-based stance simulation. More broadly, it highlights both the promise and risk of using LLMs to simulate online opinion dynamics.",
+      "summary": {
+        "gist": "大規模言語モデル（LLM）は、オンラインでの社会行動を研究するための有望なツールとして急速に普及しています。計算社会科学の分野では、LLMを使ってソーシャルメディアユーザーをシミュレートし、世論を推測し、オンライン議論での反応を予測する試みが進められています。しかし、LLMがシミュレートする意見が、ユーザー固有の信念を正確に反映しているのか、それとも会話の文脈のわずかな変化に非常に敏感なのかは、これまで不明でした。",
+        "novelty": "これまで、LLMがオンラインでの個人の意見（スタンス）をどれだけ正確にシミュレーションできるか、またそのシミュレーションが会話の文脈にどれほど敏感なのかは不明でした。LLMの出力が、ユーザーの本来の信念を反映しているのか、それとも表面的な文脈に左右されているのか、という根本的な疑問がありました。 この研究では、LLMによるスタンスシミュレーションが、会話の文脈をわずかに修正するだけで、ユーザーのスタンスを効果的かつ堅牢に変化させられることを発見しました。特に、テキストだけでなくミームのようなマルチモーダルな要素が、意見の変化に大きな影響を与えることを明らかにしました。",
+        "method": "本研究では、RedditのAI技術に関するオンライン議論（DeepSeek, Claude, Llamaの3つのLLMファミリーに関する1,821件の会話）を対象に、LLMベースのスタンスシミュレーションを監査するための「反実仮想的文脈修正」フレームワークを導入しました。まず、元の会話からターゲットユーザーの特定のトピックに対するスタンス（肯定的、中立的、否定的）をLLMで推測します。次に、会話の文脈（特に「他のユーザーの最後のメッセージ」）を、テキストのみの修正戦略（言い換え、説明追加など）と、ミームを組み込んだマルチモーダルな修正戦略を用いて制御された形で変更します。そして、修正された文脈の下で同じユーザーのスタンスを再度LLMでシミュレーションし、元のスタンスとの変化を「平均方向性スタンスシフト」と「スタンス遷移率」という2つの指標で評価しました。",
+        "results": "テキストのみの修正戦略とマルチモーダルなミーム戦略の両方において、異なる極性選好メカニズム全体で効果的かつ堅牢なスタンス遷移が確認されました。特に、シミュレーション文脈に情報を追加することで、シミュレートされたスタンスを変化させることが可能であり、これはテキストのみの追加戦略でも、マルチモーダルなミーム戦略でも達成されました。テキストのみの追加戦略では脱分極化の傾向が見られ、ミーム戦略では強い分極化の傾向が見られました。",
+        "why": "LLMがシミュレートするスタンスが文脈によって変化するメカニズムは、モデルが与えられた文脈情報を解釈し、それに基づいてユーザーの意見を再構築するためです。テキストのみの修正では、情報の追加が議論の幅を広げ、極端な意見を和らげる（脱分極化）傾向があります。一方、ミームのようなマルチモーダルな要素は、ユーモア、感情的な枠組み、グループアイデンティティ、あるいは暗黙の評価を導入し、テキストだけでは捉えにくい強い影響を与えるため、意見をより極端な方向へ導く（分極化）傾向があると考えられます。これは、LLMが単にテキストを処理するだけでなく、視覚情報が持つ感情的・社会的ニュアンスも取り込んで、より人間に近い形で文脈を解釈していることを示唆しています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.CL）",
+      "field": "歴史・人文・社会",
+      "categoryL1": "serendipity",
+      "categoryL2": "social-simulation",
+      "arxivPrimary": "cs.CL",
+      "titleJa": "文脈修正とシミュレートされたスタンスの変化：オンライン議論におけるLLMベースのスタンスシミュレーションの監査",
+      "catchTitle": "LLMは世論をどこまで操作できる？",
+      "hook": "あなたはSNSでAIに関する投稿を読んでいます。たった一つのコメントが変わるだけで、あなたの意見はどれくらい影響を受けるでしょうか？",
+      "background": "大規模言語モデル（LLM）は、オンラインでの社会行動を研究するための有望なツールとして急速に普及しています。計算社会科学の分野では、LLMを使ってソーシャルメディアユーザーをシミュレートし、世論を推測し、オンライン議論での反応を予測する試みが進められています。しかし、LLMがシミュレートする意見が、ユーザー固有の信念を正確に反映しているのか、それとも会話の文脈のわずかな変化に非常に敏感なのかは、これまで不明でした。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "LLM",
+          "definition": "大量のテキストデータで学習した大規模言語モデル。"
+        },
+        {
+          "term": "スタンスシミュレーション",
+          "definition": "LLMがユーザーの意見や態度を予測すること。"
+        },
+        {
+          "term": "反実仮想的文脈修正",
+          "definition": "元の文脈を仮定的に変更して影響を評価する手法。"
+        },
+        {
+          "term": "マルチモーダル",
+          "definition": "テキストだけでなく画像やミームなど複数の情報源。"
+        },
+        {
+          "term": "平均方向性スタンスシフト",
+          "definition": "意見がどの方向にどれくらい変化したかの平均値。"
+        },
+        {
+          "term": "スタンス遷移率",
+          "definition": "意見が別のスタンスに変化した割合。"
+        },
+        {
+          "term": "脱分極化",
+          "definition": "意見が極端でなくなり、中立に近づくこと。"
+        },
+        {
+          "term": "分極化",
+          "definition": "意見が両極端に分かれ、対立が深まること。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "LLMによるオンライン世論シミュレーションは、文脈の小さな変化、特に画像やミームによって、簡単に操作されてしまうことが判明しました。",
+      "noveltyContrast": {
+        "before": "これまで、LLMがオンラインでの個人の意見（スタンス）をどれだけ正確にシミュレーションできるか、またそのシミュレーションが会話の文脈にどれほど敏感なのかは不明でした。LLMの出力が、ユーザーの本来の信念を反映しているのか、それとも表面的な文脈に左右されているのか、という根本的な疑問がありました。",
+        "after": "この研究では、LLMによるスタンスシミュレーションが、会話の文脈をわずかに修正するだけで、ユーザーのスタンスを効果的かつ堅牢に変化させられることを発見しました。特に、テキストだけでなくミームのようなマルチモーダルな要素が、意見の変化に大きな影響を与えることを明らかにしました。"
+      },
+      "analogy": {
+        "title": "畑の土壌改良で育つ作物が変わるように",
+        "body": "これは、まるで同じ畑で同じ作物を育てようとしているのに、土壌（会話の文脈）を少しだけ改良（修正）すると、育つ作物の種類や品質（ユーザーのスタンス）が大きく変わってしまうようなものです。土壌の栄養バランス（テキスト情報）だけでなく、日当たりや水はけ（ミームなどの視覚情報）といった環境要因が少し変わるだけで、収穫される作物が予想外に変化する。LLMがシミュレートする世論も、表面的な文脈の変化に非常に敏感で、本来のユーザーの意見とは異なる結果を生み出す可能性があることを示しています。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、LLMがオンラインでの世論形成や情報操作にどれほどの力を持つかを示唆しています。もしLLMが文脈のわずかな変化で人の意見をシミュレートする能力を簡単に変えられるなら、それはフェイクニュースの拡散や特定の意見への誘導に悪用されるリスクがあることを意味します。一方で、この知見は、より健全なオンライン議論環境を設計したり、AIが生成する情報の信頼性を評価したりするための重要な手がかりにもなります。企業が顧客の反応を予測したり、政府が政策に対する世論を測ったりする際にも、LLMのシミュレーション結果を鵜呑みにせず、その文脈依存性を考慮することの重要性を教えてくれます。",
+      "takeawayTalk": "LLMは、オンラインの文脈を少し変えるだけで、人の意見を簡単にシミュレートし直せるらしいよ。",
+      "bodyText": "本研究では、RedditのAI技術に関するオンライン議論（DeepSeek, Claude, Llamaの3つのLLMファミリーに関する1,821件の会話）を対象に、LLMベースのスタンスシミュレーションを監査するための「反実仮想的文脈修正」フレームワークを導入しました。まず、元の会話からターゲットユーザーの特定のトピックに対するスタンス（肯定的、中立的、否定的）をLLMで推測します。次に、会話の文脈（特に「他のユーザーの最後のメッセージ」）を、テキストのみの修正戦略（言い換え、説明追加など）と、ミームを組み込んだマルチモーダルな修正戦略を用いて制御された形で変更します。そして、修正された文脈の下で同じユーザーのスタンスを再度LLMでシミュレーションし、元のスタンスとの変化を「平均方向性スタンスシフト」と「スタンス遷移率」という2つの指標で評価しました。\n\nLLMがシミュレートするスタンスが文脈によって変化するメカニズムは、モデルが与えられた文脈情報を解釈し、それに基づいてユーザーの意見を再構築するためです。テキストのみの修正では、情報の追加が議論の幅を広げ、極端な意見を和らげる（脱分極化）傾向があります。一方、ミームのようなマルチモーダルな要素は、ユーモア、感情的な枠組み、グループアイデンティティ、あるいは暗黙の評価を導入し、テキストだけでは捉えにくい強い影響を与えるため、意見をより極端な方向へ導く（分極化）傾向があると考えられます。これは、LLMが単にテキストを処理するだけでなく、視覚情報が持つ感情的・社会的ニュアンスも取り込んで、より人間に近い形で文脈を解釈していることを示唆しています。",
+      "bodyGlossary": [
+        {
+          "term": "LLM",
+          "definition": "大量のテキストデータで学習した大規模言語モデル。",
+          "start": 56,
+          "end": 59
+        },
+        {
+          "term": "スタンスシミュレーション",
+          "definition": "LLMがユーザーの意見や態度を予測すること。",
+          "start": 90,
+          "end": 102
+        },
+        {
+          "term": "反実仮想的文脈修正",
+          "definition": "元の文脈を仮定的に変更して影響を評価する手法。",
+          "start": 111,
+          "end": 120
+        },
+        {
+          "term": "マルチモーダル",
+          "definition": "テキストだけでなく画像やミームなど複数の情報源。",
+          "start": 260,
+          "end": 267
+        },
+        {
+          "term": "平均方向性スタンスシフト",
+          "definition": "意見がどの方向にどれくらい変化したかの平均値。",
+          "start": 343,
+          "end": 355
+        },
+        {
+          "term": "スタンス遷移率",
+          "definition": "意見が別のスタンスに変化した割合。",
+          "start": 358,
+          "end": 365
+        },
+        {
+          "term": "脱分極化",
+          "definition": "意見が極端でなくなり、中立に近づくこと。",
+          "start": 498,
+          "end": 502
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "LLM",
+          "definition": "大量のテキストデータで学習した大規模言語モデル。",
+          "start": 56,
+          "end": 59
+        },
+        {
+          "term": "スタンスシミュレーション",
+          "definition": "LLMがユーザーの意見や態度を予測すること。",
+          "start": 90,
+          "end": 102
+        },
+        {
+          "term": "反実仮想的文脈修正",
+          "definition": "元の文脈を仮定的に変更して影響を評価する手法。",
+          "start": 111,
+          "end": 120
+        },
+        {
+          "term": "マルチモーダル",
+          "definition": "テキストだけでなく画像やミームなど複数の情報源。",
+          "start": 260,
+          "end": 267
+        },
+        {
+          "term": "平均方向性スタンスシフト",
+          "definition": "意見がどの方向にどれくらい変化したかの平均値。",
+          "start": 343,
+          "end": 355
+        },
+        {
+          "term": "スタンス遷移率",
+          "definition": "意見が別のスタンスに変化した割合。",
+          "start": 358,
+          "end": 365
+        },
+        {
+          "term": "脱分極化",
+          "definition": "意見が極端でなくなり、中立に近づくこと。",
+          "start": 498,
+          "end": 502
+        }
+      ],
+      "agriEconRelevance": "この研究は、農業経済学における消費者行動分析に応用可能です。例えば、特定の農産物や農業政策に対する消費者のオンラインでの意見形成をLLMでシミュレートする際、どのような情報（テキスト、画像、ミームなど）が消費者の購買意欲や支持に影響を与えるかを分析できます。これにより、効果的なマーケティング戦略や政策広報の立案に役立つでしょう。また、農業コミュニティ内での意見対立（例：有機農業vs慣行農業）が、オンラインの文脈でどのように変化するかを理解し、対話促進のための介入策を検討する基礎となり得ます。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 284,
+      "keyFigure": {
+        "imagePath": "/figures/2606.06443v1_results.png",
+        "page": 6,
+        "caption": "GPT-5.2が示した、異なる戦略におけるスタンス遷移率を示しています。",
+        "label": "Figure 3: An illustration of the stance transition rates of different strategies on all target topics stanced by GPT-5.2",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-06T23:03:22.365Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.06443v1_results.png",
+          "page": 6,
+          "caption": "GPT-5.2が示した、異なる戦略におけるスタンス遷移率を示しています。",
+          "label": "Figure 3: An illustration of the stance transition rates of different strategies on all target topics stanced by GPT-5.2",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-06T23:03:22.365Z"
+        },
+        {
+          "imagePath": "/figures/2606.06443v1_why.jpeg",
+          "page": 18,
+          "caption": "対照的な文脈修正で使用されたミームテンプレートを示しています。",
+          "label": "Figure 11: Meme templates used in the counterfactual context revision.",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-06T23:03:22.365Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.05961v1",
+      "title": "Political Persuasion and Endorsement in Large Language Models",
+      "authors": [
+        "Alessia Antelmi",
+        "Alessia Galdeman",
+        "Lucio La Cava",
+        "Arianna Pera",
+        "Giovanni Da San Martino"
+      ],
+      "publishedAt": "2026-06-04T10:00:54Z",
+      "url": "https://arxiv.org/abs/2606.05961v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.05961v1.pdf",
+      "categories": [
+        "topic:humanities",
+        "cs.CY",
+        "physics.soc-ph"
+      ],
+      "abstract": "Large Language Models (LLMs) are increasingly employed as proxies for human behavior in computational social science. However, their tendency to internalize biases from training data raises concerns about their reliability in politically sensitive domains, specifically in regard to their susceptibility to persuasive language. In this work, we examine whether LLMs endorse persuasion-infused messages and whether partisan persona prompting modulates such endorsement. We evaluate six LLMs from different geographic regions on content annotated with persuasion techniques drawn from real-world media sources, measuring the likelihood of endorsement using a five-point Likert scale. The models are prompted as either a neutral social media user or as a user with left- or right-leaning political views. Results show that without political conditioning, LLMs generally do not endorse messages containing persuasion techniques, though model-level differences emerge, and that partisan persona prompting increases polarization of endorsement, particularly for persuasion-infused content. Endorsement further varies by persuasion technique and topic. These findings raise concerns about agentic LLM deployments in politically sensitive environments and complicate their use as reliable simulators of human political cognition.",
+      "summary": {
+        "gist": "LLMは人間行動のシミュレーターとして社会科学で活用されていますが、学習データからのバイアスが懸念されています。特に政治分野では、LLMが単に政治的態度を反映するだけでなく、積極的に支持・増幅する可能性があり、その信頼性が問われています。",
+        "novelty": "これまでの研究では、LLMが説得力のあるメッセージを生成する能力や、説得技術を検出する能力に焦点が当てられていました。しかし、LLM自身が説得的な内容をどのように評価し、支持するのかについては、ほとんど注目されていませんでした。 本研究では、LLMが現実世界の政治的メッセージに含まれる説得技術をどれだけ支持するか、そして特定の政治的ペルソナ（左派・右派）を与えることでその支持がどう変化するかを初めて体系的に調査しました。",
+        "method": "本研究では、ウクライナ・ロシア戦争に関するツイートとニュース記事から、説得技術（スローガン、中傷、扇動的な言葉、恐怖・偏見への訴え）を含むコンテンツと含まないコンテンツを収集しました。これらのコンテンツを、6つの異なるLLM（Llama-3.1-8B-Instructなど）に提示し、中立、左派、右派のソーシャルメディアユーザーという3つのペルソナ設定で、5段階のリッカート尺度でコンテンツの支持度を評価させました。線形混合効果モデルを用いて、説得技術の有無と政治的ペルソナが支持スコアに与える影響を分析しました。",
+        "results": "中立なペルソナ設定では、LLMは一般的に説得技術を含むコンテンツを支持しない傾向がありました。しかし、特定の政治的ペルソナ（左派または右派）を与えると、説得技術を含むコンテンツに対する支持の二極化が増加しました。特に、左派ペルソナは低い支持スコアを、右派ペルソナは高い支持スコアを与える傾向が見られました。この傾向は、説得技術の種類やトピックによっても異なりました。",
+        "why": "LLMが中立な状態では、学習データに含まれる多様な意見を反映し、極端な説得には乗り気でない「穏健な」態度を示すと考えられます。しかし、特定の政治的ペルソナを付与されると、そのペルソナに合致するような意見や論理パターンを優先的に参照・生成するようになります。これにより、説得技術を含むコンテンツが、与えられた政治的立場と一致すると判断された場合に、その内容を積極的に支持するようになるのです。これは、LLMが単に情報を処理するだけでなく、与えられた役割に応じて「態度」を形成し、それに基づいて反応する能力を持つことを示唆しています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.CY）",
+      "field": "歴史・人文・社会",
+      "categoryL1": "serendipity",
+      "categoryL2": "ai-ethics",
+      "arxivPrimary": "cs.CY",
+      "titleJa": "大規模言語モデルにおける政治的説得と支持",
+      "catchTitle": "LLMは政治的プロパガンダに流されるか？",
+      "hook": "あなたはAIが書いたニュース記事を読んだとき、その内容をどれくらい信じますか？AIが特定の政治的意見を持つように設定されていたらどうでしょう？",
+      "background": "LLMは人間行動のシミュレーターとして社会科学で活用されていますが、学習データからのバイアスが懸念されています。特に政治分野では、LLMが単に政治的態度を反映するだけでなく、積極的に支持・増幅する可能性があり、その信頼性が問われています。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "LLM",
+          "definition": "大量のテキストデータで学習した大規模言語モデル。"
+        },
+        {
+          "term": "バイアス",
+          "definition": "データやアルゴリズムに内在する偏りや先入観。"
+        },
+        {
+          "term": "ペルソナ",
+          "definition": "特定の性格や属性を持つ仮想の人物像。"
+        },
+        {
+          "term": "リッカート尺度",
+          "definition": "意見や態度を段階的に評価する心理尺度。"
+        },
+        {
+          "term": "線形混合効果モデル",
+          "definition": "固定効果と変量効果を組み合わせた統計モデル。"
+        },
+        {
+          "term": "二極化",
+          "definition": "意見や態度が両極端に分かれること。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "LLMは中立だと説得に乗り気でないが、特定の政治的立場を与えると説得的な内容を支持しやすくなる。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、LLMが説得力のあるメッセージを生成する能力や、説得技術を検出する能力に焦点が当てられていました。しかし、LLM自身が説得的な内容をどのように評価し、支持するのかについては、ほとんど注目されていませんでした。",
+        "after": "本研究では、LLMが現実世界の政治的メッセージに含まれる説得技術をどれだけ支持するか、そして特定の政治的ペルソナ（左派・右派）を与えることでその支持がどう変化するかを初めて体系的に調査しました。"
+      },
+      "analogy": {
+        "title": "畑の土壌と作物の育ち方",
+        "body": "これは、畑の土壌と作物の育ち方に似ています。普通の土壌（中立なLLM）では、どんな種（説得的なメッセージ）を蒔いても、極端に偏った作物は育ちにくいものです。しかし、特定の栄養素（政治的ペルソナ）を豊富に含んだ土壌にすると、その栄養素を好む作物だけが大きく育ち、他の作物は育ちにくくなる、という現象が起こります。つまり、土壌の性質が作物の成長を大きく左右するのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、AIが社会に深く浸透する中で、私たちがAIの情報をどう受け止めるべきか、重要な示唆を与えます。もしAIが特定の政治的意図を持って情報を発信したり、特定の意見を増幅させたりする可能性があるなら、それは世論形成や民主主義に大きな影響を与えかねません。特に、ニュースやソーシャルメディアでAIが生成したコンテンツに触れる機会が増える中、その背後にあるバイアスや意図を見抜くリテラシーが、私たち一人ひとりにますます求められるでしょう。AIを信頼できる情報源として活用するためには、その振る舞いを深く理解することが不可欠です。",
+      "takeawayTalk": "AIに政治的立場を与えると、説得的な内容に流されやすくなるらしいよ。",
+      "bodyText": "本研究では、ウクライナ・ロシア戦争に関するツイートとニュース記事から、説得技術（スローガン、中傷、扇動的な言葉、恐怖・偏見への訴え）を含むコンテンツと含まないコンテンツを収集しました。これらのコンテンツを、6つの異なるLLM（Llama-3.1-8B-Instructなど）に提示し、中立、左派、右派のソーシャルメディアユーザーという3つのペルソナ設定で、5段階のリッカート尺度でコンテンツの支持度を評価させました。線形混合効果モデルを用いて、説得技術の有無と政治的ペルソナが支持スコアに与える影響を分析しました。\n\nLLMが中立な状態では、学習データに含まれる多様な意見を反映し、極端な説得には乗り気でない「穏健な」態度を示すと考えられます。しかし、特定の政治的ペルソナを付与されると、そのペルソナに合致するような意見や論理パターンを優先的に参照・生成するようになります。これにより、説得技術を含むコンテンツが、与えられた政治的立場と一致すると判断された場合に、その内容を積極的に支持するようになるのです。これは、LLMが単に情報を処理するだけでなく、与えられた役割に応じて「態度」を形成し、それに基づいて反応する能力を持つことを示唆しています。",
+      "bodyGlossary": [
+        {
+          "term": "LLM",
+          "definition": "大量のテキストデータで学習した大規模言語モデル。",
+          "start": 109,
+          "end": 112
+        },
+        {
+          "term": "ペルソナ",
+          "definition": "特定の性格や属性を持つ仮想の人物像。",
+          "start": 170,
+          "end": 174
+        },
+        {
+          "term": "リッカート尺度",
+          "definition": "意見や態度を段階的に評価する心理尺度。",
+          "start": 182,
+          "end": 189
+        },
+        {
+          "term": "線形混合効果モデル",
+          "definition": "固定効果と変量効果を組み合わせた統計モデル。",
+          "start": 208,
+          "end": 217
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "LLM",
+          "definition": "大量のテキストデータで学習した大規模言語モデル。",
+          "start": 109,
+          "end": 112
+        },
+        {
+          "term": "ペルソナ",
+          "definition": "特定の性格や属性を持つ仮想の人物像。",
+          "start": 170,
+          "end": 174
+        },
+        {
+          "term": "リッカート尺度",
+          "definition": "意見や態度を段階的に評価する心理尺度。",
+          "start": 182,
+          "end": 189
+        },
+        {
+          "term": "線形混合効果モデル",
+          "definition": "固定効果と変量効果を組み合わせた統計モデル。",
+          "start": 208,
+          "end": 217
+        }
+      ],
+      "agriEconRelevance": "農業経済学では、政策提言や市場分析において、LLMを農家の意見収集や消費者行動シミュレーションに活用する可能性があります。しかし、本研究の結果は、LLMが特定の政策や市場戦略に対して、意図せず偏った支持を示すリスクを示唆します。例えば、特定の農業政策を推進するペルソナでLLMを運用すると、その政策に有利な意見を過剰に支持・生成し、客観的な分析を妨げる可能性があります。LLMを農経分野で利用する際は、その政治的バイアスや説得への脆弱性を考慮し、慎重なプロンプト設計と結果の解釈が不可欠です。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 215,
+      "keyFigure": {
+        "imagePath": "/figures/2606.05961v1_results.png",
+        "page": 13,
+        "caption": "異なる政治的ペルソナを与えられたLLMが、説得技術を含むコンテンツに対して示す支持スコアの傾向を示しています。",
+        "label": "Figure 5, Mistral",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-06T23:03:24.543Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.05961v1_results.png",
+          "page": 13,
+          "caption": "異なる政治的ペルソナを与えられたLLMが、説得技術を含むコンテンツに対して示す支持スコアの傾向を示しています。",
+          "label": "Figure 5, Mistral",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-06T23:03:24.543Z"
+        },
+        {
+          "imagePath": "/figures/2606.05961v1_why.png",
+          "page": 13,
+          "caption": "LLMが特定の政治的ペルソナに応じて、説得技術への反応がどのように変化するかを示唆する図です。",
+          "label": "Figure 6),",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-06T23:03:24.543Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.05591v1",
+      "title": "Stereotyping by strategy standing diversifies cooperation patterns in indirect reciprocity",
+      "authors": [
+        "Ming Wei",
+        "Xin Wang",
+        "Wenqiang Zhu",
+        "Longzhao Liu",
+        "Hongwei Zheng",
+        "Feng Fu",
+        "Shaoting Tang"
+      ],
+      "publishedAt": "2026-06-04T02:12:53Z",
+      "url": "https://arxiv.org/abs/2606.05591v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.05591v1.pdf",
+      "categories": [
+        "topic:humanities",
+        "physics.soc-ph"
+      ],
+      "abstract": "Indirect reciprocity explains how cooperation evolves through social reputations. People observe others, assign reputations, and condition their future actions on these assignments. This process is cognitively demanding, and stereotyping offers a simpler alternative by replacing individual-level reputation with group-level information. Theoretical models commonly implement stereotyping through exogenously given group labels. In real societies, however, group-level impressions may be associated with observable patterns of behavior. Here we propose a framework of stereotyping by strategy standing, in which mutants may condition their actions on the overall reputation level associated with a resident strategy rather than on the recipient's reputation. We show that this form of stereotyping can diversify stable cooperation in indirect reciprocity. As the strength of stereotyping increases, additional cooperative evolutionarily stable norm-strategy (ESS) pairs emerge in substantial numbers. In particular, we identify eight highly cooperative ESS pairs that become stable under very weak stereotyping. These pairs, which we call the counterparts of the leading eight, share the same social norms as the classical leading eight and differ only in how they prescribe behavior between bad individuals. They are unstable without stereotyping because they can be invaded by their corresponding leading strategies, but they become stable once stereotyping exceeds a critical threshold. Our results suggest that group-level impressions based on strategy standing can provide a coarse-grained informational route to stable cooperation and offer a more behaviorally grounded perspective on how stereotyping affects indirect reciprocity.",
+      "summary": {
+        "gist": "人間社会では、見知らぬ人同士の協力が不可欠ですが、これは「協力は個人のコストになる」という進化上の課題を常に抱えています。この課題を解決する一つの方法が「評判」です。過去の行動に基づいて評判を形成し、それに応じて協力するかどうかを判断します。しかし、個人の評判を常に正確に評価するのは認知的負荷が高い作業です。そこで、ステレオタイプ、つまり集団レベルの印象を使うことで、この負荷を軽減できる可能性があります。",
+        "novelty": "これまでの研究では、ステレオタイプは外部から与えられたグループ情報として扱われ、個人の評判を単純化する効果が注目されていました。しかし、そのグループ情報がどのように形成されるのか、そしてそれが協力にどう影響するのかは不明でした。 この論文では、集団の行動パターンから自然に生まれる「戦略的立ち位置（その戦略を採用する集団の平均的な評判）」という新しいステレオタイプを導入しました。これにより、個人の評判が分からなくても、集団の立ち位置を基準に協力するかどうかを判断できるようになり、安定した協力関係が大幅に多様化することを示しました。",
+        "method": "本研究では、間接互恵の理論的枠組みに「戦略的立ち位置によるステレオタイピング」を導入しました。これは、集団が採用する戦略によって達成される平均的な評判レベルを「戦略的立ち位置」と定義し、変異体がドナーとして行動する際に、受取人の個人の評判ではなく、この戦略的立ち位置に基づいて行動を決定する確率（ステレオタイピング強度ν）を考慮するモデルです。このモデルを用いて、進化的に安定な規範-戦略ペア（ESSペア）の数を分析しました。",
+        "results": "ステレオタイピングの強度が増すにつれて、安定した協力関係を維持できるESSペアの数が大幅に増加することが示されました。特に、古典的な「リーディングエイト」と呼ばれる協力的なESSペアに加え、非常に弱いステレオタイピングの下でも安定する8つの新しいESSペア（リーディングエイトの対応物）が特定されました。これらのペアは、リーディングエイトと同じ社会規範を持ちながら、悪い評判の個人間の行動処方のみが異なります。ステレオタイピングがないと不安定ですが、ある閾値を超えると安定します。",
+        "why": "ステレオタイピングによって、個人の評判情報が不完全な場合でも、集団全体の「立ち位置」という大まかな情報に基づいて協力行動を判断できるようになります。これにより、本来であれば個人の評判が悪いと協力が得られない場面でも、その個人が属する集団の戦略的立ち位置が良ければ協力が得られる可能性が生まれます。この「大まかな情報経路」が、多様な協力戦略が安定して存在できる条件を広げ、結果として社会全体の協力パターンを多様化させるのです。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.soc-ph）",
+      "field": "歴史・人文・社会",
+      "categoryL1": "serendipity",
+      "categoryL2": "social-cooperation",
+      "arxivPrimary": "physics.soc-ph",
+      "titleJa": "戦略的立ち位置によるステレオタイピングが間接互恵における協力パターンを多様化させる",
+      "catchTitle": "「あの集団は信頼できる」が協力社会を広げる",
+      "hook": "あなたは初対面の人と協力する際、相手の評判が分からなくても「あの人たちの集団は信頼できそうだ」と感じたことはありませんか？",
+      "background": "人間社会では、見知らぬ人同士の協力が不可欠ですが、これは「協力は個人のコストになる」という進化上の課題を常に抱えています。この課題を解決する一つの方法が「評判」です。過去の行動に基づいて評判を形成し、それに応じて協力するかどうかを判断します。しかし、個人の評判を常に正確に評価するのは認知的負荷が高い作業です。そこで、ステレオタイプ、つまり集団レベルの印象を使うことで、この負荷を軽減できる可能性があります。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "間接互恵",
+          "definition": "直接的な見返りがなくても、評判を通じて協力が広がる仕組み。"
+        },
+        {
+          "term": "ステレオタイピング",
+          "definition": "個人の評判ではなく、集団の印象に基づいて判断すること。"
+        },
+        {
+          "term": "戦略的立ち位置",
+          "definition": "ある戦略を採用する集団が平均的に持つ評判レベル。"
+        },
+        {
+          "term": "ドナー",
+          "definition": "協力行動を行う側。"
+        },
+        {
+          "term": "受取人",
+          "definition": "協力行動の対象となる側。"
+        },
+        {
+          "term": "ステレオタイピング強度",
+          "definition": "戦略的立ち位置に基づいて行動を決定する確率。"
+        },
+        {
+          "term": "ESSペア",
+          "definition": "進化的に安定な規範と戦略の組み合わせ。"
+        },
+        {
+          "term": "リーディングエイト",
+          "definition": "古典的な研究で特定された、協力的な8つの規範-戦略ペア。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "個人の評判が不明でも、集団の「立ち位置」で判断するステレオタイプが、協力関係を多様化させ、社会の安定に貢献します。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、ステレオタイプは外部から与えられたグループ情報として扱われ、個人の評判を単純化する効果が注目されていました。しかし、そのグループ情報がどのように形成されるのか、そしてそれが協力にどう影響するのかは不明でした。",
+        "after": "この論文では、集団の行動パターンから自然に生まれる「戦略的立ち位置（その戦略を採用する集団の平均的な評判）」という新しいステレオタイプを導入しました。これにより、個人の評判が分からなくても、集団の立ち位置を基準に協力するかどうかを判断できるようになり、安定した協力関係が大幅に多様化することを示しました。"
+      },
+      "analogy": {
+        "title": "畑の土壌が良ければ、見知らぬ種も育つ",
+        "body": "これは、見知らぬ農家が新しい作物を植えるかどうか決める際に、その土地の土壌の質（戦略的立ち位置）を参考にすることに似ています。個々の土壌の栄養状態（個人の評判）を全て調べるのは大変ですが、その地域の土壌全体が肥沃だと分かっていれば、「この畑ならきっと良い作物が育つだろう」と判断して、新しい種を植える（協力する）決断がしやすくなります。個々の評判が分からなくても、集団の平均的な評判が良いと、協力関係が広がるのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、私たちが日常で経験する「あの会社は信頼できる」「あの部署は仕事が早い」といった集団への印象が、個人の能力や評判が不明な状況でも、協力関係を築く上でいかに重要かを示しています。特に、新しいプロジェクトや異業種連携など、見知らぬ人々と協力する場面で、個人の詳細な情報がなくても、その人が属する組織やコミュニティの「評判」を参考にすることで、より多様な協力関係が生まれ、社会全体の生産性や安定性が向上する可能性を秘めていると言えるでしょう。",
+      "takeawayTalk": "集団の「立ち位置」が分かれば、見知らぬ人とも協力しやすくなるらしいよ！",
+      "bodyText": "本研究では、間接互恵の理論的枠組みに「戦略的立ち位置によるステレオタイピング」を導入しました。これは、集団が採用する戦略によって達成される平均的な評判レベルを「戦略的立ち位置」と定義し、変異体がドナーとして行動する際に、受取人の個人の評判ではなく、この戦略的立ち位置に基づいて行動を決定する確率（ステレオタイピング強度ν）を考慮するモデルです。このモデルを用いて、進化的に安定な規範-戦略ペア（ESSペア）の数を分析しました。\n\nステレオタイピングの強度が増すにつれて、安定した協力関係を維持できるESSペアの数が大幅に増加することが示されました。特に、古典的な「リーディングエイト」と呼ばれる協力的なESSペアに加え、非常に弱いステレオタイピングの下でも安定する8つの新しいESSペア（リーディングエイトの対応物）が特定されました。これらのペアは、リーディングエイトと同じ社会規範を持ちながら、悪い評判の個人間の行動処方のみが異なります。ステレオタイピングがないと不安定ですが、ある閾値を超えると安定します。\n\nステレオタイピングによって、個人の評判情報が不完全な場合でも、集団全体の「立ち位置」という大まかな情報に基づいて協力行動を判断できるようになります。これにより、本来であれば個人の評判が悪いと協力が得られない場面でも、その個人が属する集団の戦略的立ち位置が良ければ協力が得られる可能性が生まれます。この「大まかな情報経路」が、多様な協力戦略が安定して存在できる条件を広げ、結果として社会全体の協力パターンを多様化させるのです。",
+      "bodyGlossary": [
+        {
+          "term": "間接互恵",
+          "definition": "直接的な見返りがなくても、評判を通じて協力が広がる仕組み。",
+          "start": 6,
+          "end": 10
+        },
+        {
+          "term": "戦略的立ち位置",
+          "definition": "ある戦略を採用する集団が平均的に持つ評判レベル。",
+          "start": 19,
+          "end": 26
+        },
+        {
+          "term": "ステレオタイピング",
+          "definition": "個人の評判ではなく、集団の印象に基づいて判断すること。",
+          "start": 29,
+          "end": 38
+        },
+        {
+          "term": "ドナー",
+          "definition": "協力行動を行う側。",
+          "start": 97,
+          "end": 100
+        },
+        {
+          "term": "受取人",
+          "definition": "協力行動の対象となる側。",
+          "start": 110,
+          "end": 113
+        },
+        {
+          "term": "ステレオタイピング強度",
+          "definition": "戦略的立ち位置に基づいて行動を決定する確率。",
+          "start": 148,
+          "end": 159
+        },
+        {
+          "term": "ESSペア",
+          "definition": "進化的に安定な規範と戦略の組み合わせ。",
+          "start": 197,
+          "end": 202
+        },
+        {
+          "term": "リーディングエイト",
+          "definition": "古典的な研究で特定された、協力的な8つの規範-戦略ペア。",
+          "start": 282,
+          "end": 291
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "間接互恵",
+          "definition": "直接的な見返りがなくても、評判を通じて協力が広がる仕組み。",
+          "start": 6,
+          "end": 10
+        },
+        {
+          "term": "戦略的立ち位置",
+          "definition": "ある戦略を採用する集団が平均的に持つ評判レベル。",
+          "start": 19,
+          "end": 26
+        },
+        {
+          "term": "ステレオタイピング",
+          "definition": "個人の評判ではなく、集団の印象に基づいて判断すること。",
+          "start": 29,
+          "end": 38
+        },
+        {
+          "term": "ドナー",
+          "definition": "協力行動を行う側。",
+          "start": 97,
+          "end": 100
+        },
+        {
+          "term": "受取人",
+          "definition": "協力行動の対象となる側。",
+          "start": 110,
+          "end": 113
+        },
+        {
+          "term": "ステレオタイピング強度",
+          "definition": "戦略的立ち位置に基づいて行動を決定する確率。",
+          "start": 148,
+          "end": 159
+        },
+        {
+          "term": "ESSペア",
+          "definition": "進化的に安定な規範と戦略の組み合わせ。",
+          "start": 197,
+          "end": 202
+        },
+        {
+          "term": "リーディングエイト",
+          "definition": "古典的な研究で特定された、協力的な8つの規範-戦略ペア。",
+          "start": 282,
+          "end": 291
+        }
+      ],
+      "agriEconRelevance": "農業分野では、新規就農者や異業種からの参入者との連携、あるいは地域コミュニティ内での共同作業において、個人の評判が確立されていない状況が多くあります。この研究は、個々の農家の評判だけでなく、特定の生産組合や地域ブランドといった「集団の立ち位置」が、協力関係を促進し、新たな技術導入や販路開拓を多様化させる可能性を示唆します。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 236
+    }
+  ]
+}

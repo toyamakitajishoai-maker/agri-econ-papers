@@ -1,0 +1,1035 @@
+{
+  "date": "2026-06-08",
+  "papers": [
+    {
+      "id": "2606.06089v1",
+      "title": "Leveraging LLMs for Unstructured Claims Data Analysis",
+      "authors": [
+        "Robert D. Lieberthal",
+        "Richard Tran",
+        "Vietbao Phan",
+        "Jawand Singh",
+        "Elizabeth Sottung"
+      ],
+      "publishedAt": "2026-06-04T12:26:20Z",
+      "url": "https://arxiv.org/abs/2606.06089v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.06089v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "q-fin.MF",
+        "econ.GN",
+        "q-fin.RM"
+      ],
+      "abstract": "Actuaries rely primarily on structured numerical data for reserving and ratemaking, while valuable predictive information in unstructured text including medical records, adjuster notes, and call transcripts remains largely unused. Manual processing of these documents is time-consuming, inconsistent across reviewers, and unscalable. We present a proof-of-concept framework using large language models (LLMs) to extract structured actuarial variables from unstructured claims data. We implement a two-stage processing architecture separating document-level extraction (Stage 1) from claim-level synthesis (Stage 2). A modular four-script Python pipeline processes synthetic FHIR-based claims data and real claims documents, extracting 36 actuarial variables across reserving, ratemaking, and claims management categories. We validate 14 core variables using two independent clinical expert reviewers scoring 20 synthetic claims on a five-point Likert rubric, achieving mean scores above 4.0 and a weighted kappa of 0.53. Integration with chain ladder reserving demonstrates practical actuarial value: severity-segmented analysis reduced reserve estimation error from 6.5% to 4.0%. The open-source implementation includes audit trails and confidence scoring, providing a replicable foundation for LLM-based actuarial variable extraction in property-casualty insurance.",
+      "summary": {
+        "gist": "保険業界では、保険金請求（クレーム）に関する医療記録、アジャスターのメモ、通話記録など、膨大な量の非構造化テキストデータが生成されます。これまで、これらのデータは手作業で処理されており、時間とコストがかかる上、担当者による判断のばらつきやスケーラビリティの問題がありました。そのため、貴重な情報源であるにもかかわらず、その多くが保険数理分析に活用されずにいました。近年、大規模言語モデル（LLM）の進化により、複雑な自然言語の理解、文脈認識、多様な文書形式への対応が可能になり、この課題を解決する新たな道が開かれました。",
+        "novelty": "従来の保険業界では、保険金請求（クレーム）に関する医療記録や事故報告書などの非構造化テキストデータは、手作業でしか処理できませんでした。これは時間とコストがかかり、担当者によって判断がばらつくため、膨大な情報が活用されずにいました。 この研究では、大規模言語モデル（LLM）を使って、非構造化クレームデータから保険数理に必要な36種類の変数を自動抽出し、構造化データに変換するフレームワークを開発しました。これにより、手作業では不可能だった詳細な分析が可能になり、保険金見積もりの精度が向上しました。",
+        "method": "本研究では、LLMを活用し、非構造化クレームデータから保険数理変数を抽出するための2段階処理アーキテクチャを開発しました。まず、ステージ1で文書レベルの抽出を行い、次にステージ2でクレームレベルの統合を行います。このプロセスは、合成データ生成とパイプライン開発を組み合わせたモジュール式の4スクリプトPythonパイプラインで実装されました。合成データは、実際の医療記録に近いFHIRベースの患者データを生成するオープンソースツール「Synthea」を活用し、LLMを使って医療記録やアジャスターメモなどの非医療文書を生成することで、多様なクレームエコシステムを構築しました。このパイプラインは、保険金見積もり、料率設定、クレーム管理の3つのカテゴリにわたる36の保険数理変数を抽出します。抽出された14の主要変数は、2人の独立した臨床専門家による5段階評価で検証され、平均スコア4.0以上、重み付きカッパ値0.53を達成しました。",
+        "results": "LLMによる変数抽出は、保険金見積もり誤差を6.5%から4.0%に削減しました。これは、LLMが抽出した「重症度」に基づいてクレームを分類し、より詳細な分析を行った結果です。",
+        "why": "LLMは、従来のルールベースのシステムとは異なり、膨大なテキストデータで学習したニューラルネットワークアーキテクチャにより、言語の構造、文脈、意味を高度に理解します。これにより、専門用語や略語を広範な手動コーディングなしに理解し、同じ用語でも文脈によって意味を区別し、多様な文書形式や記述スタイルに対応できます。この能力により、医療記録の「積極的な多角的疼痛管理」といった記述から、「治療の複雑性」や「費用傾向」といった保険数理に重要な変数を自動的かつ一貫して抽出することが可能になります。抽出された変数は、保険金見積もりモデルに組み込まれることで、クレームの真の複雑性や治療経路をより正確に反映し、見積もり精度の向上につながります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-fin.MF）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "risk-management",
+      "arxivPrimary": "q-fin.MF",
+      "titleJa": "LLMを活用した非構造化クレームデータ分析",
+      "catchTitle": "保険の「読めない書類」をAIが瞬時に解析",
+      "hook": "あなたの加入している保険、もし事故が起きたら膨大な書類が発生しますよね？その書類、実はほとんどが「読まれていない」って知っていましたか？",
+      "background": "保険業界では、保険金請求（クレーム）に関する医療記録、アジャスターのメモ、通話記録など、膨大な量の非構造化テキストデータが生成されます。これまで、これらのデータは手作業で処理されており、時間とコストがかかる上、担当者による判断のばらつきやスケーラビリティの問題がありました。そのため、貴重な情報源であるにもかかわらず、その多くが保険数理分析に活用されずにいました。近年、大規模言語モデル（LLM）の進化により、複雑な自然言語の理解、文脈認識、多様な文書形式への対応が可能になり、この課題を解決する新たな道が開かれました。",
+      "quiz": {
+        "question": "この研究で、LLMが非構造化クレームデータから抽出した変数は、主に何に活用されましたか？",
+        "options": [
+          "保険会社の従業員評価",
+          "保険金見積もりと料率設定",
+          "顧客のソーシャルメディア分析"
+        ],
+        "correctIndex": 1,
+        "explanation": "LLMによって抽出された保険数理変数は、主に保険金見積もり（reserving）と料率設定（ratemaking）に活用され、見積もり誤差の削減に貢献しました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。自然言語を理解・生成するAI。"
+        },
+        {
+          "term": "非構造化データ",
+          "definition": "テキストや画像など、定まった形式を持たないデータ。"
+        },
+        {
+          "term": "保険数理変数",
+          "definition": "保険料率や準備金算出に必要な数値データ。"
+        },
+        {
+          "term": "FHIR",
+          "definition": "医療情報を交換するための国際標準規格。"
+        },
+        {
+          "term": "Synthea",
+          "definition": "リアルな合成患者データを生成するオープンソースツール。"
+        },
+        {
+          "term": "重み付きカッパ値",
+          "definition": "複数の評価者間の一致度を測る統計指標。"
+        },
+        {
+          "term": "ニューラルネットワーク",
+          "definition": "人間の脳を模したAIの計算モデル。"
+        },
+        {
+          "term": "保険金見積もり誤差",
+          "definition": "実際の保険金と見積もり額のズレ。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "保険会社の未活用だった大量のテキストデータをLLMが解析し、保険金見積もり精度を大幅に向上させました。",
+      "noveltyContrast": {
+        "before": "従来の保険業界では、保険金請求（クレーム）に関する医療記録や事故報告書などの非構造化テキストデータは、手作業でしか処理できませんでした。これは時間とコストがかかり、担当者によって判断がばらつくため、膨大な情報が活用されずにいました。",
+        "after": "この研究では、大規模言語モデル（LLM）を使って、非構造化クレームデータから保険数理に必要な36種類の変数を自動抽出し、構造化データに変換するフレームワークを開発しました。これにより、手作業では不可能だった詳細な分析が可能になり、保険金見積もりの精度が向上しました。"
+      },
+      "analogy": {
+        "title": "畑の土壌分析をAIが瞬時に完了",
+        "body": "これは、まるで広大な畑の土壌を、これまで熟練の農家が手作業で少しずつ掘り起こし、色や匂いで栄養状態を推測していたようなものです。時間も労力もかかり、農家によって判断にばらつきがありました。しかし、この研究は、AIを搭載した最新の土壌分析機を導入するようなものです。土壌のあらゆる層から瞬時に詳細なデータを抽出し、作物の生育に必要な栄養素の過不足を正確に数値化します。これにより、経験に頼らずとも、誰でも最適な肥料の種類と量を判断できるようになり、収穫量を最大化できるのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "-2.5pt",
+          "label": "保険金見積もり誤差の削減"
+        }
+      ],
+      "whyYouCare": "この研究は、保険業界だけでなく、あらゆる業界で「読まれていない」膨大なテキストデータの価値を再発見する可能性を示しています。例えば、顧客からの問い合わせ履歴、製品レビュー、営業日報など、これまで手作業でしか分析できなかった情報が、LLMによって瞬時に構造化され、ビジネス上の意思決定に活用できるようになります。これにより、顧客ニーズの早期発見、リスクの予兆検知、業務効率の大幅な向上など、私たちの生活や仕事、社会全体に大きな恩恵をもたらすでしょう。特に、農業分野では、農家の栽培日誌や気象データ、市場レポートなどの非構造化情報をAIが解析し、より精度の高い収穫予測や最適な栽培計画の策定に役立てる未来が考えられます。",
+      "takeawayTalk": "保険の膨大な書類、AIが読んで分析して見積もり精度を上げたんだって！",
+      "bodyText": "本研究では、LLMを活用し、非構造化クレームデータから保険数理変数を抽出するための2段階処理アーキテクチャを開発しました。まず、ステージ1で文書レベルの抽出を行い、次にステージ2でクレームレベルの統合を行います。このプロセスは、合成データ生成とパイプライン開発を組み合わせたモジュール式の4スクリプトPythonパイプラインで実装されました。合成データは、実際の医療記録に近いFHIRベースの患者データを生成するオープンソースツール「Synthea」を活用し、LLMを使って医療記録やアジャスターメモなどの非医療文書を生成することで、多様なクレームエコシステムを構築しました。このパイプラインは、保険金見積もり、料率設定、クレーム管理の3つのカテゴリにわたる36の保険数理変数を抽出します。抽出された14の主要変数は、2人の独立した臨床専門家による5段階評価で検証され、平均スコア4.0以上、重み付きカッパ値0.53を達成しました。\n\nLLMは、従来のルールベースのシステムとは異なり、膨大なテキストデータで学習したニューラルネットワークアーキテクチャにより、言語の構造、文脈、意味を高度に理解します。これにより、専門用語や略語を広範な手動コーディングなしに理解し、同じ用語でも文脈によって意味を区別し、多様な文書形式や記述スタイルに対応できます。この能力により、医療記録の「積極的な多角的疼痛管理」といった記述から、「治療の複雑性」や「費用傾向」といった保険数理に重要な変数を自動的かつ一貫して抽出することが可能になります。抽出された変数は、保険金見積もりモデルに組み込まれることで、クレームの真の複雑性や治療経路をより正確に反映し、見積もり精度の向上につながります。",
+      "bodyGlossary": [
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。自然言語を理解・生成するAI。",
+          "start": 6,
+          "end": 9
+        },
+        {
+          "term": "保険数理変数",
+          "definition": "保険料率や準備金算出に必要な数値データ。",
+          "start": 27,
+          "end": 33
+        },
+        {
+          "term": "FHIR",
+          "definition": "医療情報を交換するための国際標準規格。",
+          "start": 188,
+          "end": 192
+        },
+        {
+          "term": "Synthea",
+          "definition": "リアルな合成患者データを生成するオープンソースツール。",
+          "start": 217,
+          "end": 224
+        },
+        {
+          "term": "重み付きカッパ値",
+          "definition": "複数の評価者間の一致度を測る統計指標。",
+          "start": 396,
+          "end": 404
+        },
+        {
+          "term": "ニューラルネットワーク",
+          "definition": "人間の脳を模したAIの計算モデル。",
+          "start": 458,
+          "end": 469
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。自然言語を理解・生成するAI。",
+          "start": 6,
+          "end": 9
+        },
+        {
+          "term": "保険数理変数",
+          "definition": "保険料率や準備金算出に必要な数値データ。",
+          "start": 27,
+          "end": 33
+        },
+        {
+          "term": "FHIR",
+          "definition": "医療情報を交換するための国際標準規格。",
+          "start": 188,
+          "end": 192
+        },
+        {
+          "term": "Synthea",
+          "definition": "リアルな合成患者データを生成するオープンソースツール。",
+          "start": 217,
+          "end": 224
+        },
+        {
+          "term": "重み付きカッパ値",
+          "definition": "複数の評価者間の一致度を測る統計指標。",
+          "start": 396,
+          "end": 404
+        },
+        {
+          "term": "ニューラルネットワーク",
+          "definition": "人間の脳を模したAIの計算モデル。",
+          "start": 458,
+          "end": 469
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 281,
+      "keyFigure": {
+        "imagePath": "/figures/2606.06089v1_results.png",
+        "page": 32,
+        "caption": "異なる手法による保険金見積もり結果を比較した図です。",
+        "label": "Figure 6. Chain ladder results by method.",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-07T23:04:47.669Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.06089v1_results.png",
+          "page": 32,
+          "caption": "異なる手法による保険金見積もり結果を比較した図です。",
+          "label": "Figure 6. Chain ladder results by method.",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-07T23:04:47.669Z"
+        },
+        {
+          "imagePath": "/figures/2606.06089v1_why.png",
+          "page": 18,
+          "caption": "クレームの時間的性質が関連するケースの文脈を示した図です。",
+          "label": "Figure 3.",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-07T23:04:47.669Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.02867v1",
+      "title": "The Epi-LLM Framework: probing LLM behavioral priors through epidemiological agent-based models",
+      "authors": [
+        "Petra Ferenz",
+        "Ava Keeling",
+        "Tobias O'Keefe",
+        "Lorenzo Stigliano",
+        "Francesco Di Lauro",
+        "Andres Colubri",
+        "Jasmina Panovska-Griffiths"
+      ],
+      "publishedAt": "2026-06-01T20:31:06Z",
+      "url": "https://arxiv.org/abs/2606.02867v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.02867v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "cs.MA",
+        "cs.AI",
+        "q-bio.PE"
+      ],
+      "abstract": "Human behaviour during epidemics affects infectious disease dynamics, but quantifying this remains deeply challenging. Here we introduce the Epi-LLM framework: a novel integration of agent-based modelling, real-life epigames, and large language models (LLMs) in which a synthetic society of agents reasons and adapts dynamically over an outbreak contact network. Comparing synthetic agent behaviour against a no-intervention SEIR baseline and human participant data from the AUIB epigame study, we find that LLM agents across four different architectures reduced peak active infections, with quarantine compliance peaking at 58-65% on day six of the 15-day simulation. A binomial generalised linear model showed that perceived health severity was the strongest predictor of quarantine behaviour ($β= 0.33, p = 0.002$), yielding a pseudo-$R^2$ of 0.055, comparable to the 0.072 observed in the human trial. LLM architecture is a key determinant of epidemic dynamics: low-variance architectures offer greater internal validity for testing behavioural rules, while high-variance models may better represent real-world decision-making. Geographic labels alone do not induce culturally differentiated behaviour; explicit attitudinal parameterisation is required. This proof-of-principle work lays the groundwork for deploying the Epi-LLM framework as a scalable, risk-free simulation environment for pandemic preparedness research.",
+      "summary": {
+        "gist": "パンデミック時における人間行動の変化は、感染症の拡大に決定的な影響を与えますが、その影響を定量的に把握することは非常に困難です。従来の疫学モデルは単純な仮定に依存しており、人間行動の複雑な適応性を捉えきれていませんでした。エージェントベースモデルは個々の行動をシミュレートできますが、リアルな行動データに基づいてパラメータを設定することが課題でした。この研究は、大規模言語モデル（LLM）と実際の疫学ゲームから得られた行動データを統合することで、この課題を克服し、より現実的なパンデミックシミュレーションを可能にすることを目指しています。",
+        "novelty": "従来の疫学モデルは、人間行動の複雑な変化（自主隔離、ワクチン接種、ソーシャルディスタンスなど）を捉えるのが難しく、単純な仮定に頼っていました。また、エージェントベースモデルは個々の行動をシミュレートできましたが、リアルな行動データが不足しているため、推測に基づいたパラメータ設定が課題でした。 この研究では、大規模言語モデル（LLM）をエージェントベースモデルに組み込み、実際の疫学ゲームから得られた人間行動データでAIエージェントを学習させました。これにより、AIエージェントがパンデミック時にどのように推論し、適応するかを動的にシミュレートできるようになり、より現実に近い行動予測が可能になりました。",
+        "method": "本研究では、オープンソースのエージェントベースモデリングプラットフォーム「Starsim」を基盤とし、Epi-LLMフレームワークを構築しました。このフレームワークでは、実際の疫学ゲーム（AUIB研究）から得られた健康信念モデルのアンケート回答を用いてLLMエージェントをパラメータ化し、エージェントが社会的に根拠のある環境で行動できるようにしました。病原体の伝播は、StarsimのSEIRモデルを修正してシミュレートされ、無症状、軽症、重症の異なる疾患重症度を考慮しました。シミュレーションは15日間行われ、LLMエージェントは毎日1回、隔離するか活動を続けるかの二者択一の決定を下しました。この決定は、短期的な報酬と長期的なリスクのトレードオフを伴い、隔離を選択したエージェントは報酬が減る代わりに感染から保護され、活動を続けたエージェントは高報酬を得る可能性がある一方で感染リスクに晒されました。エージェント間の接触ネットワークは、AUIB研究のデータに基づいてログ正規分布でパラメータ化された動的ネットワークを使用し、現実的な接触パターンを再現しました。",
+        "results": "Epi-LLMフレームワークを用いたシミュレーションの結果、4種類の異なるLLMアーキテクチャを用いたAIエージェントは、介入なしのSEIRベースラインと比較して、ピーク時の活動感染者数を減少させました。特に、自主隔離の遵守率はシミュレーション6日目に58〜65%でピークに達しました。二項一般化線形モデルを用いた分析では、知覚される健康状態の深刻度が隔離行動の最も強い予測因子であることが示され（β=0.33, p=0.002）、その説明力（擬似R^2=0.055）は、人間の参加者による実証試験で観察された値（0.072）に匹敵しました。LLMアーキテクチャは疫学ダイナミクスの重要な決定要因であり、分散の低いアーキテクチャは行動ルールのテストにおいて高い内部妥当性を提供し、分散の高いモデルは現実世界の意思決定をよりよく表現する可能性が示唆されました。地理的ラベルだけでは文化的に差別化された行動を誘発せず、明示的な態度パラメータ化が必要であることも判明しました。",
+        "why": "LLMエージェントは、実際の人間がパンデミック時に抱く健康信念（病気の深刻度、感染リスク、予防行動の有効性など）に基づいてパラメータ化されています。これにより、エージェントは単なるプログラムされたルールに従うのではなく、人間のように状況を「推論」し、「適応的」に意思決定を行います。例えば、病気の深刻度が高いと認識すれば、報酬が減っても隔離を選択する傾向が強まります。また、エージェント間の動的な接触ネットワークを通じて、感染状況や他者の行動がリアルタイムでエージェントの意思決定に影響を与えます。この「推論」と「適応」の組み合わせが、感染拡大の抑制に寄与する人間らしい行動パターンを生成し、ピーク時の感染者数減少につながるメカニズムと考えられます。LLMアーキテクチャの違いが行動ダイナミクスに影響を与えるのは、モデルが情報を処理し、意思決定を行う際の内部的な「思考プロセス」の多様性を反映しているためです。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.MA）",
+      "field": "食料システム",
+      "categoryL1": "serendipity",
+      "categoryL2": "epidemiology",
+      "arxivPrimary": "cs.MA",
+      "titleJa": "Epi-LLMフレームワーク：疫学エージェントベースモデルによるLLM行動事前分布の調査",
+      "catchTitle": "AIがパンデミック時の人間行動を予測",
+      "hook": "パンデミック時、人々がどう行動するか予測できたら、もっと早く対策を打てると思いませんか？",
+      "background": "パンデミック時における人間行動の変化は、感染症の拡大に決定的な影響を与えますが、その影響を定量的に把握することは非常に困難です。従来の疫学モデルは単純な仮定に依存しており、人間行動の複雑な適応性を捉えきれていませんでした。エージェントベースモデルは個々の行動をシミュレートできますが、リアルな行動データに基づいてパラメータを設定することが課題でした。この研究は、大規模言語モデル（LLM）と実際の疫学ゲームから得られた行動データを統合することで、この課題を克服し、より現実的なパンデミックシミュレーションを可能にすることを目指しています。",
+      "quiz": {
+        "question": "この研究で、LLMエージェントの隔離行動に最も強く影響を与えた要因は何でしたか？",
+        "options": [
+          "日々の報酬ポイント",
+          "知覚される健康状態の深刻度",
+          "エージェントのLLMアーキテクチャ"
+        ],
+        "correctIndex": 1,
+        "explanation": "二項一般化線形モデルの分析により、知覚される健康状態の深刻度が隔離行動の最も強い予測因子であることが示されました。"
+      },
+      "limitations": "本研究は、特定の疫学ゲーム（AUIB研究）のデータに基づいてLLMエージェントをパラメータ化しており、その行動パターンが他の文化圏や異なるパンデミックシナリオにどの程度一般化できるかは、今後の課題です。また、地理的ラベルだけでは文化的な行動差を誘発しないことが示されており、より複雑な社会的・文化的要因をモデルに組み込むためには、明示的な態度パラメータ化が必要となります。シミュレーションの期間が15日間と比較的短く、長期的な行動変化や疲弊効果などは十分に捉えられていない可能性があります。LLMアーキテクチャの選択が結果に影響を与えることも示されており、最適なモデルの選定にはさらなる研究が必要です。",
+      "glossary": [
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。人間のようなテキストを生成・理解するAI。"
+        },
+        {
+          "term": "エージェントベースモデル",
+          "definition": "個々のエージェントの行動と相互作用をシミュレートする手法。"
+        },
+        {
+          "term": "Starsim",
+          "definition": "感染症ダイナミクスをモデル化するオープンソースプラットフォーム。"
+        },
+        {
+          "term": "SEIRモデル",
+          "definition": "感染症の広がりを感受性者・曝露者・感染者・回復者で表すモデル。"
+        },
+        {
+          "term": "パラメータ化",
+          "definition": "モデルの挙動を決定する数値を設定すること。"
+        },
+        {
+          "term": "ログ正規分布",
+          "definition": "対数をとると正規分布になる確率分布。接触ネットワークで使われる。"
+        },
+        {
+          "term": "二項一般化線形モデル",
+          "definition": "二値の結果（隔離するか否か）を予測する統計モデル。"
+        },
+        {
+          "term": "擬似R^2",
+          "definition": "ロジスティック回帰などのモデルの当てはまりの良さを示す指標。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "LLM（大規模言語モデル）を搭載したAIエージェントが、パンデミック時の人間行動をリアルにシミュレーションし、感染拡大を予測する新しいフレームワークが開発されました。",
+      "noveltyContrast": {
+        "before": "従来の疫学モデルは、人間行動の複雑な変化（自主隔離、ワクチン接種、ソーシャルディスタンスなど）を捉えるのが難しく、単純な仮定に頼っていました。また、エージェントベースモデルは個々の行動をシミュレートできましたが、リアルな行動データが不足しているため、推測に基づいたパラメータ設定が課題でした。",
+        "after": "この研究では、大規模言語モデル（LLM）をエージェントベースモデルに組み込み、実際の疫学ゲームから得られた人間行動データでAIエージェントを学習させました。これにより、AIエージェントがパンデミック時にどのように推論し、適応するかを動的にシミュレートできるようになり、より現実に近い行動予測が可能になりました。"
+      },
+      "analogy": {
+        "title": "畑の病害予測にAI農家を導入するようなもの",
+        "body": "これは、まるで新しい病気が発生した畑で、AIを搭載した農家たちがどう行動するかをシミュレーションするようなものです。従来の病害予測は、農家全員が同じ行動をとると仮定していましたが、この研究では、AI農家それぞれが「病気の深刻度」や「収穫への影響」を考えて、自主的に「隔離（病害部分の除去）」や「予防策（農薬散布）」を決める様子を再現します。これにより、病害の広がりがどう変わるか、より現実に近い予測ができるようになります。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "58-65%",
+          "label": "自主隔離遵守率（ピーク時）"
+        },
+        {
+          "value": "+0.33",
+          "label": "健康状態の深刻度と隔離行動の関連性（β値）"
+        }
+      ],
+      "whyYouCare": "この研究は、将来のパンデミック対策に大きな影響を与える可能性があります。AIが人間行動をリアルに予測できるようになれば、政府や自治体は、感染拡大の初期段階でより効果的な介入策を検討し、実施できるようになります。例えば、どの地域で、どのような情報提供やインセンティブが自主隔離を促すか、あるいはワクチン接種率を高めるかを、事前にシミュレーションで検証できます。これにより、経済活動への影響を最小限に抑えつつ、公衆衛生を守るための最適な戦略を立てることが可能になります。また、企業にとっては、従業員の行動変容を予測し、事業継続計画（BCP）をより強固なものにするためのヒントが得られるかもしれません。私たちの日常生活においても、AIによる予測が、より迅速で適切な情報提供や、行動変容を促すための新しいアプローチにつながる可能性があります。",
+      "takeawayTalk": "AIがパンデミック時の人間行動を予測して、感染対策を最適化できるらしいよ！",
+      "bodyText": "本研究では、オープンソースのエージェントベースモデリングプラットフォーム「Starsim」を基盤とし、Epi-LLMフレームワークを構築しました。このフレームワークでは、実際の疫学ゲーム（AUIB研究）から得られた健康信念モデルのアンケート回答を用いてLLMエージェントをパラメータ化し、エージェントが社会的に根拠のある環境で行動できるようにしました。病原体の伝播は、StarsimのSEIRモデルを修正してシミュレートされ、無症状、軽症、重症の異なる疾患重症度を考慮しました。シミュレーションは15日間行われ、LLMエージェントは毎日1回、隔離するか活動を続けるかの二者択一の決定を下しました。この決定は、短期的な報酬と長期的なリスクのトレードオフを伴い、隔離を選択したエージェントは報酬が減る代わりに感染から保護され、活動を続けたエージェントは高報酬を得る可能性がある一方で感染リスクに晒されました。エージェント間の接触ネットワークは、AUIB研究のデータに基づいてログ正規分布でパラメータ化された動的ネットワークを使用し、現実的な接触パターンを再現しました。\n\nLLMエージェントは、実際の人間がパンデミック時に抱く健康信念（病気の深刻度、感染リスク、予防行動の有効性など）に基づいてパラメータ化されています。これにより、エージェントは単なるプログラムされたルールに従うのではなく、人間のように状況を「推論」し、「適応的」に意思決定を行います。例えば、病気の深刻度が高いと認識すれば、報酬が減っても隔離を選択する傾向が強まります。また、エージェント間の動的な接触ネットワークを通じて、感染状況や他者の行動がリアルタイムでエージェントの意思決定に影響を与えます。この「推論」と「適応」の組み合わせが、感染拡大の抑制に寄与する人間らしい行動パターンを生成し、ピーク時の感染者数減少につながるメカニズムと考えられます。LLMアーキテクチャの違いが行動ダイナミクスに影響を与えるのは、モデルが情報を処理し、意思決定を行う際の内部的な「思考プロセス」の多様性を反映しているためです。",
+      "bodyGlossary": [
+        {
+          "term": "Starsim",
+          "definition": "感染症ダイナミクスをモデル化するオープンソースプラットフォーム。",
+          "start": 37,
+          "end": 44
+        },
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。人間のようなテキストを生成・理解するAI。",
+          "start": 55,
+          "end": 58
+        },
+        {
+          "term": "パラメータ化",
+          "definition": "モデルの挙動を決定する数値を設定すること。",
+          "start": 136,
+          "end": 142
+        },
+        {
+          "term": "SEIRモデル",
+          "definition": "感染症の広がりを感受性者・曝露者・感染者・回復者で表すモデル。",
+          "start": 192,
+          "end": 199
+        },
+        {
+          "term": "ログ正規分布",
+          "definition": "対数をとると正規分布になる確率分布。接触ネットワークで使われる。",
+          "start": 435,
+          "end": 441
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "Starsim",
+          "definition": "感染症ダイナミクスをモデル化するオープンソースプラットフォーム。",
+          "start": 37,
+          "end": 44
+        },
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。人間のようなテキストを生成・理解するAI。",
+          "start": 55,
+          "end": 58
+        },
+        {
+          "term": "パラメータ化",
+          "definition": "モデルの挙動を決定する数値を設定すること。",
+          "start": 136,
+          "end": 142
+        },
+        {
+          "term": "SEIRモデル",
+          "definition": "感染症の広がりを感受性者・曝露者・感染者・回復者で表すモデル。",
+          "start": 192,
+          "end": 199
+        },
+        {
+          "term": "ログ正規分布",
+          "definition": "対数をとると正規分布になる確率分布。接触ネットワークで使われる。",
+          "start": 435,
+          "end": 441
+        }
+      ],
+      "agriEconRelevance": "この研究で開発されたEpi-LLMフレームワークは、農業経済分野にも応用可能です。例えば、家畜伝染病（鳥インフルエンザや豚熱など）の発生時に、農家や流通業者がどのように行動するかをシミュレーションできます。農家の自主的な隔離（感染家畜の隔離や移動制限）、消毒、ワクチン接種の判断が、病気の拡大にどう影響するかを予測することで、政府はより効果的な防疫政策や補償制度を設計できます。また、消費者の購買行動の変化（特定の農産物の買い控えなど）を予測し、市場への影響を評価することも可能になり、農業サプライチェーンのレジリエンス向上に貢献できます。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 359,
+      "keyFigure": {
+        "imagePath": "/figures/2606.02867v1_results.png",
+        "page": 5,
+        "caption": "異なるLLMアーキテクチャを用いた場合の感染症の動態と隔離行動を示しています。",
+        "label": "Figure 3 Epidemic dynamics and quarantine behaviour across LLM architectures, with the “no intervention” reference shown",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-07T23:04:50.206Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.02867v1_results.png",
+          "page": 5,
+          "caption": "異なるLLMアーキテクチャを用いた場合の感染症の動態と隔離行動を示しています。",
+          "label": "Figure 3 Epidemic dynamics and quarantine behaviour across LLM architectures, with the “no intervention” reference shown",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-07T23:04:50.206Z"
+        },
+        {
+          "imagePath": "/figures/2606.02867v1_why.png",
+          "page": 7,
+          "caption": "隔離行動を予測するポアソン一般化線形モデルの結果を示しています。",
+          "label": "Table 3 Poisson generalized linear model predicting quarantine behaviour with group interactions.",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-07T23:04:50.206Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.05631v1",
+      "title": "Stress Amplified Resilience: ESG and Joint Fragility in Equity Markets",
+      "authors": [
+        "Minxuan Hu",
+        "Jiayu Yi",
+        "Ziheng Chen",
+        "Wenxi Sun",
+        "Qishi Zhan"
+      ],
+      "publishedAt": "2026-06-04T02:59:28Z",
+      "url": "https://arxiv.org/abs/2606.05631v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.05631v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "q-fin.MF",
+        "econ.GN"
+      ],
+      "abstract": "Market stress rarely harms investors through one channel alone. Losses, volatility spikes, and deteriorating tradability often arrive together. We examine whether ESG is associated with lower exposure to clustered fragility in equity markets. Using monthly data on S&amp;P 500 constituents from 2014 to 2025, we study downside returns, volatility, illiquidity, and a cofragility state that captures their joint occurrence within the same firm month. The evidence supports a stress-amplified resilience interpretation rather than an unconditional ESG return premium. In the return channel, the ESG association is concentrated in the extreme downside tail during stress months. In the volatility channel, higher ESG is associated with smaller risk spikes when aggregate conditions are weak. In the illiquidity channel, the association is more persistent, suggesting a liquidity-quality component whose relevance increases when market-wide trading conditions deteriorate. The central evidence comes from the joint analysis: a one-standard-deviation increase in ESG lowers the stress-period probability of severe cofragility by 0.92 percentage points, about 9% relative to the baseline. Double Machine Learning shows a similar negative ESG association after flexible adjustment for observable firm characteristics. Pillar evidence suggests stronger baseline resilience for Environmental scores and clearer stress amplification for Social scores. Overall, the findings characterize ESG as a multi-channel fragility signal for tail-risk monitoring, stress analysis, and pillar-level ESG assessment.",
+      "summary": {
+        "gist": "既存のサステナブルファイナンス研究では、ESG基準が企業の長期的な価値創造や倫理的行動にどう貢献するかを重視してきました。しかし、多くの研究は個別の成果に焦点を当てたり、市場サイクルを通じてESG投資が無条件にプレミアムを生むかを検証したりするに留まり、実際の金融危機時に企業レベルで発生する複合的な脆弱性を見落としがちでした。市場全体が下落する局面では、リターンの低下、ボラティリティの急増、流動性の低下が同時に発生し、投資家にとって複合的な損失を生み出します。このような状態依存的なダイナミクスを考慮しない従来のESG研究では、投資家が平均的な年間リターンよりも持続可能性を重視する際に、ESG投資がどのように機能するかを十分に解明できていませんでした。",
+        "novelty": "従来のESG研究は、ESG投資が市場全体で無条件に高いリターンをもたらすか、個別のリスク（株価下落、ボラティリティ、流動性）にどう影響するかを個別に見ていました。そのため、実際の金融危機で企業が直面する複合的なリスクの実態を見落としがちでした。 この論文は、市場がストレス状態にある時に、株価下落・ボラティリティ急増・流動性低下が同時に発生する「複合的な脆弱性」に注目。ESGが高い企業ほど、この複合的なリスクに強く、その効果は市場ストレス時に増幅されることを明らかにしました。",
+        "method": "本研究では、S&P 500構成銘柄の2014年から2025年までの月次データを使用し、市場ストレス下でのESGと企業の脆弱性の関連を分析しました。市場ストレス状態は、市場リターン分布の下位テールを用いて定義しました。具体的には、株価下落（ダウンサイドリターン）、ボラティリティ、非流動性という3つのチャネルを個別に分析するとともに、これらが同一企業で同時に発生する「複合的な脆弱性（cofragility）」の状態を捉えるフレームワークを構築しました。条件付き分位点回帰を用いて各チャネルのテール部分を分析し、さらにDouble Machine Learning（DML）を適用して、観測可能な企業特性による潜在的なバイアスを調整し、結果の頑健性を検証しました。",
+        "results": "分析の結果、ESG評価が高い企業は、市場ストレス時に複合的な脆弱性（株価下落、ボラティリティ急増、流動性低下が同時に発生する状態）に陥る確率が低いことが示されました。具体的には、ESGスコアが1標準偏差上昇すると、ストレス期間中に深刻な複合的脆弱性が発生する確率が0.92パーセンテージポイント低下し、これはベースラインと比較して約9%の減少に相当します。この効果は、無条件なESGリターンプレミアムではなく、「ストレス増幅型レジリエンス」として解釈されます。リターンチャネルでは、ESGとリターンの関連性はストレス月の極端な下落時に集中し、ボラティリティチャネルでは、市場全体が弱い時にESGが高い企業ほどリスクの急増が小さいことが示されました。流動性チャネルでは、この関連性がより持続的であり、市場全体の取引条件が悪化する際にその重要性が増す流動性品質の要素を示唆しています。また、環境スコアはベースラインのレジリエンスに、社会スコアはストレス期間中のレジリエンス増幅に強く関連することが示されました。",
+        "why": "市場ストレス時には、投資家は企業の品質シグナル、情報開示の信頼性、ステークホルダーの安定性により重点を置くようになります。ESG評価が高い企業は、情報開示の透明性が高く、ステークホルダーとの関係が良好であるため、潜在的な悪材料リスクや取引圧力が複合的な悪影響として蓄積しにくいと考えられます。特に、強固な社会慣行を通じてステークホルダー資本を蓄積している企業は、極端な不確実性下でも運用上の柔軟性が高く、システミックな失敗に遭遇した際にも他社よりも高いレジリエンスを発揮できます。これにより、市場全体が不安定な状況下でも、ESGが高い企業は投資家の信頼を維持し、株価の急落、ボラティリティの増大、流動性の低下といった複合的なリスクを軽減できるのです。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-fin.MF）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "financial-markets",
+      "arxivPrimary": "q-fin.MF",
+      "titleJa": "市場ストレス下におけるESGと株式市場の複合的な脆弱性：ストレス増幅型レジリエンス",
+      "catchTitle": "ESGは「嵐の時」にこそ真価を発揮する",
+      "hook": "あなたの投資先企業は、市場が大きく揺らいだ時、本当に「強い」と言えるでしょうか？",
+      "background": "既存のサステナブルファイナンス研究では、ESG基準が企業の長期的な価値創造や倫理的行動にどう貢献するかを重視してきました。しかし、多くの研究は個別の成果に焦点を当てたり、市場サイクルを通じてESG投資が無条件にプレミアムを生むかを検証したりするに留まり、実際の金融危機時に企業レベルで発生する複合的な脆弱性を見落としがちでした。市場全体が下落する局面では、リターンの低下、ボラティリティの急増、流動性の低下が同時に発生し、投資家にとって複合的な損失を生み出します。このような状態依存的なダイナミクスを考慮しない従来のESG研究では、投資家が平均的な年間リターンよりも持続可能性を重視する際に、ESG投資がどのように機能するかを十分に解明できていませんでした。",
+      "quiz": {
+        "question": "この研究が明らかにした、ESGが高い企業が市場ストレス時に発揮する「ストレス増幅型レジリエンス」とは、具体的にどのような効果を指しますか？",
+        "options": [
+          "市場ストレス時でも、常に他の企業より高いリターンを出す効果。",
+          "市場ストレス時に、株価下落、ボラティリティ急増、流動性低下が同時に起こる「複合的な脆弱性」に陥る確率が低くなる効果。",
+          "市場ストレス時に関係なく、企業のブランドイメージを向上させる効果。"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究は、ESGが高い企業が市場ストレス時に、株価下落、ボラティリティ急増、流動性低下が同時に発生する「複合的な脆弱性」に陥る確率が低くなることを「ストレス増幅型レジリエンス」と定義しています。これは、無条件なリターンプレミアムとは異なります。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "ESG",
+          "definition": "環境・社会・ガバナンスの要素を考慮した投資評価。"
+        },
+        {
+          "term": "複合的な脆弱性",
+          "definition": "株価下落、ボラティリティ急増、流動性低下が同時に起こる状態。"
+        },
+        {
+          "term": "ダウンサイドリターン",
+          "definition": "株価が下落する方向へのリターン。"
+        },
+        {
+          "term": "ボラティリティ",
+          "definition": "株価の変動の激しさを示す指標。"
+        },
+        {
+          "term": "非流動性",
+          "definition": "資産を現金化しにくい状態。"
+        },
+        {
+          "term": "条件付き分位点回帰",
+          "definition": "データ分布の特定の部分（テールなど）を分析する統計手法。"
+        },
+        {
+          "term": "Double Machine Learning",
+          "definition": "機械学習を用いてバイアスを低減する統計手法。"
+        },
+        {
+          "term": "ステークホルダー",
+          "definition": "企業を取り巻く利害関係者（顧客、従業員、地域社会など）。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "ESG評価が高い企業は、市場が不安定な時に株価下落・変動増大・流動性低下が同時に起こる「複合的な脆弱性」に強い。",
+      "noveltyContrast": {
+        "before": "従来のESG研究は、ESG投資が市場全体で無条件に高いリターンをもたらすか、個別のリスク（株価下落、ボラティリティ、流動性）にどう影響するかを個別に見ていました。そのため、実際の金融危機で企業が直面する複合的なリスクの実態を見落としがちでした。",
+        "after": "この論文は、市場がストレス状態にある時に、株価下落・ボラティリティ急増・流動性低下が同時に発生する「複合的な脆弱性」に注目。ESGが高い企業ほど、この複合的なリスクに強く、その効果は市場ストレス時に増幅されることを明らかにしました。"
+      },
+      "analogy": {
+        "title": "豊作を支える多様な品種の畑",
+        "body": "これは、まるで「豊作を支える多様な品種の畑」のようなものです。普段はどの品種も安定した収穫をもたらしますが、干ばつや病害虫といった厳しい天候に見舞われた時、特定の環境に強い品種や、病気に耐性のある品種が、畑全体の収穫量を大きく支えることがあります。この研究は、ESGが高い企業が、市場の「嵐」が来た時にこそ、株価の急落、ボラティリティの増大、流動性の低下という「複合的な不作」から企業を守る「耐性品種」の役割を果たすことを示しています。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "-0.92pt",
+          "label": "ESGスコア1標準偏差上昇で複合的脆弱性の確率が低下"
+        }
+      ],
+      "whyYouCare": "この研究は、あなたが投資や事業戦略を考える上で非常に重要です。ESGは単なる「良いこと」ではなく、市場が不安定な時に企業を守る「実用的な防御策」であることが示されました。経済危機や予期せぬ市場変動が起きた際、ESG評価の高い企業は株価の急落、ボラティリティの増大、流動性の低下といった複合的なリスクに強く、より安定した経営を維持できる可能性が高いのです。これは、長期的な視点で安定した投資先を選びたい個人投資家や、サプライチェーンの安定性を重視する企業経営者にとって、ESGが単なるイメージ戦略ではなく、リスク管理の重要な指標となることを意味します。",
+      "takeawayTalk": "ESGは、市場が荒れた時にこそ企業の真の強さを発揮するんだって！",
+      "bodyText": "本研究では、S&P 500構成銘柄の2014年から2025年までの月次データを使用し、市場ストレス下でのESGと企業の脆弱性の関連を分析しました。市場ストレス状態は、市場リターン分布の下位テールを用いて定義しました。具体的には、株価下落（ダウンサイドリターン）、ボラティリティ、非流動性という3つのチャネルを個別に分析するとともに、これらが同一企業で同時に発生する「複合的な脆弱性（cofragility）」の状態を捉えるフレームワークを構築しました。条件付き分位点回帰を用いて各チャネルのテール部分を分析し、さらにDouble Machine Learning（DML）を適用して、観測可能な企業特性による潜在的なバイアスを調整し、結果の頑健性を検証しました。\n\n市場ストレス時には、投資家は企業の品質シグナル、情報開示の信頼性、ステークホルダーの安定性により重点を置くようになります。ESG評価が高い企業は、情報開示の透明性が高く、ステークホルダーとの関係が良好であるため、潜在的な悪材料リスクや取引圧力が複合的な悪影響として蓄積しにくいと考えられます。特に、強固な社会慣行を通じてステークホルダー資本を蓄積している企業は、極端な不確実性下でも運用上の柔軟性が高く、システミックな失敗に遭遇した際にも他社よりも高いレジリエンスを発揮できます。これにより、市場全体が不安定な状況下でも、ESGが高い企業は投資家の信頼を維持し、株価の急落、ボラティリティの増大、流動性の低下といった複合的なリスクを軽減できるのです。",
+      "bodyGlossary": [
+        {
+          "term": "ESG",
+          "definition": "環境・社会・ガバナンスの要素を考慮した投資評価。",
+          "start": 52,
+          "end": 55
+        },
+        {
+          "term": "ダウンサイドリターン",
+          "definition": "株価が下落する方向へのリターン。",
+          "start": 119,
+          "end": 129
+        },
+        {
+          "term": "ボラティリティ",
+          "definition": "株価の変動の激しさを示す指標。",
+          "start": 131,
+          "end": 138
+        },
+        {
+          "term": "非流動性",
+          "definition": "資産を現金化しにくい状態。",
+          "start": 139,
+          "end": 143
+        },
+        {
+          "term": "複合的な脆弱性",
+          "definition": "株価下落、ボラティリティ急増、流動性低下が同時に起こる状態。",
+          "start": 183,
+          "end": 190
+        },
+        {
+          "term": "条件付き分位点回帰",
+          "definition": "データ分布の特定の部分（テールなど）を分析する統計手法。",
+          "start": 226,
+          "end": 235
+        },
+        {
+          "term": "Double Machine Learning",
+          "definition": "機械学習を用いてバイアスを低減する統計手法。",
+          "start": 258,
+          "end": 281
+        },
+        {
+          "term": "ステークホルダー",
+          "definition": "企業を取り巻く利害関係者（顧客、従業員、地域社会など）。",
+          "start": 366,
+          "end": 374
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "ESG",
+          "definition": "環境・社会・ガバナンスの要素を考慮した投資評価。",
+          "start": 52,
+          "end": 55
+        },
+        {
+          "term": "ダウンサイドリターン",
+          "definition": "株価が下落する方向へのリターン。",
+          "start": 119,
+          "end": 129
+        },
+        {
+          "term": "ボラティリティ",
+          "definition": "株価の変動の激しさを示す指標。",
+          "start": 131,
+          "end": 138
+        },
+        {
+          "term": "非流動性",
+          "definition": "資産を現金化しにくい状態。",
+          "start": 139,
+          "end": 143
+        },
+        {
+          "term": "複合的な脆弱性",
+          "definition": "株価下落、ボラティリティ急増、流動性低下が同時に起こる状態。",
+          "start": 183,
+          "end": 190
+        },
+        {
+          "term": "条件付き分位点回帰",
+          "definition": "データ分布の特定の部分（テールなど）を分析する統計手法。",
+          "start": 226,
+          "end": 235
+        },
+        {
+          "term": "Double Machine Learning",
+          "definition": "機械学習を用いてバイアスを低減する統計手法。",
+          "start": 258,
+          "end": 281
+        },
+        {
+          "term": "ステークホルダー",
+          "definition": "企業を取り巻く利害関係者（顧客、従業員、地域社会など）。",
+          "start": 366,
+          "end": 374
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 323,
+      "keyFigure": {
+        "imagePath": "/figures/2606.05631v1_results.png",
+        "page": 10,
+        "caption": "市場ストレス時のESG評価と複合的脆弱性の関係を示しています。",
+        "label": "Figure 2 provides the descriptive counterpart to the formal tests. Severe cofragility states are more common in stress",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-07T23:04:53.963Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.05631v1_results.png",
+          "page": 10,
+          "caption": "市場ストレス時のESG評価と複合的脆弱性の関係を示しています。",
+          "label": "Figure 2 provides the descriptive counterpart to the formal tests. Severe cofragility states are more common in stress",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-07T23:04:53.963Z"
+        },
+        {
+          "imagePath": "/figures/2606.05631v1_why.png",
+          "page": 10,
+          "caption": "市場ストレス時のESG評価と流動性の関係を示しています。",
+          "label": "Table 4",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-07T23:04:53.963Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.04978v1",
+      "title": "Probing Outcome-Level Resemblance and Mechanism-Level Alignment in LLM Risk Decisions: Evidence from the St. Petersburg Game",
+      "authors": [
+        "Chensong Huang",
+        "Changyu Chen",
+        "Chenwei Lin",
+        "Hanjia Lyu",
+        "Xian Xu",
+        "Jiebo Luo"
+      ],
+      "publishedAt": "2026-06-03T15:01:52Z",
+      "url": "https://arxiv.org/abs/2606.04978v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.04978v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "cs.CL",
+        "cs.CY",
+        "econ.GN"
+      ],
+      "abstract": "LLMs can appear cautious in risk decision-making tasks, yet cautious-looking outputs do not necessarily indicate alignment with human decision-making mechanisms. We investigate this distinction using the St. Petersburg game as a controlled testbed, a classical paradox in which the expected payoff is infinite, yet humans typically report low, finite willingness to pay. We evaluate 28 LLMs with a structured prompt suite that includes the original game; controlled decision variants that perturb truncation, repeated play, numeric endowment, and occupational identity; a human-perspective prompt that asks models to reason as human decision makers; and paired comparisons between base models and their instruction-tuned counterparts. In the original game, most models generate finite bids, creating the appearance of human-like risk behavior. However, this outcome-level resemblance masks substantial mechanism-level differences. The controlled variants reveal that rather than maintaining human-like behavior seen in the original game, models often shift to conditionally and computationally rational behavior. Human-cue prompting and instruction tuning often lower bids and reduce some visible pathologies, but most mechanism-level response patterns remain largely unchanged. These findings show that behavioral alignment in risk decision-making can be surface-level: LLMs may produce human-like risk decisions without exhibiting human-consistent mechanisms. High-stakes evaluations of LLM decision-making should therefore move beyond outcome similarity and examine whether the alignment is supported by mechanism-level consistency.",
+      "summary": {
+        "gist": "大規模言語モデル（LLM）は、テキスト生成だけでなく、意思決定支援や社会的な価値判断など、より高度な役割を担うようになっています。これまでの研究で、LLMが人間の行動パターンに似たバイアスやリスク選好を示すことが報告されてきましたが、人間らしい出力が必ずしも人間と同じ意思決定メカニズムを意味するわけではありません。",
+        "novelty": "これまでの研究では、LLMがリスクのある状況で人間と似たような判断結果を出すことが示されていました。しかし、その「人間らしい」結果が、本当に人間と同じような思考プロセスに基づいているのかは不明でした。 本研究は、サンクトペテルブルクのパラドックスゲームという特殊な設定を使い、LLMの判断結果だけでなく、その裏にある判断メカニズムを詳細に検証。結果が人間らしくても、メカニズムは異なることを明らかにしました。",
+        "method": "本研究では、期待値が無限大であるにもかかわらず、人間は少額しか支払わないという「サンクトペテルブルクのパラドックスゲーム」をテストベッドとして使用しました。28種類のLLMに対し、以下の3つの研究課題を設定し、構造化されたプロンプトスイートを用いて評価しました。\n\n1. オリジナルのゲームでLLMが人間のような有限の入札額を生成するか？\n2. ゲーム構造を「報酬の上限設定」「繰り返しプレイ」「初期資産の変更」「職業アイデンティティの付与」といったメカニズムプローブで変更した場合、人間らしい反応が維持されるか？\n3. 「人間視点での推論を促すプロンプト」や「指示チューニング」が、メカニズムレベルでの人間との一致を改善するか？\n\nLLMの出力は、人間らしいパターン、部分的な適応パターン、数学的境界への最適化パターンの3つの行動パターンで評価されました。",
+        "results": "オリジナルのサンクトペテルブルクゲームでは、ほとんどのLLMが人間と同様に低い有限の入札額を生成し、人間らしいリスク行動を示しました。しかし、メカニズムプローブ（ゲーム構造の変更）を行うと、この見かけ上の人間らしさは崩壊することが判明しました。多くのモデルは、報酬の上限設定や繰り返しプレイの条件で、数学的に最適な行動へとシフトしました。また、初期資産や職業アイデンティティの操作では、行動の変化が弱く、一貫性がありませんでした。人間視点プロンプトや指示チューニングは、一部の極端な非人間的反応を減らすことで部分的に一致を改善しましたが、基盤となるメカニズムレベルの反応パターンはほとんど変化しませんでした。",
+        "why": "LLMが人間らしい判断結果を出すのは、必ずしも人間と同じようなリスク評価の推論をしているからではありません。むしろ、リスクのある状況では「妥当な」人間らしい答えは通常小さい数値である、という学習されたパターンや、表面的なプロンプトの手がかりに依存している可能性が高いです。そのため、ゲームの構造が少し変わると、人間が系統的かつ予測可能な方法で推論をシフトさせるのに対し、LLMは学習したパターンが適用できなくなり、計算論的に合理的な（数学的に最適な）行動に切り替わってしまうのです。これは、LLMが特定の狭い設定で人間らしい出力を再現できても、安定した基盤となる推論パターンを持たないため、状況の変化に対して予測不能な振る舞いをする可能性があることを示唆しています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.CL）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "ai-ethics",
+      "arxivPrimary": "cs.CL",
+      "titleJa": "LLMのリスク意思決定における結果レベルの類似性とメカニズムレベルの一致の検証：サンクトペテルブルクのパラドックスゲームからの証拠",
+      "catchTitle": "LLMの「人間らしさ」は見た目だけ？",
+      "hook": "あなたはAIに重要な意思決定を任せられますか？AIが人間らしい判断をしても、その裏側が全く違うとしたらどうでしょう。",
+      "background": "大規模言語モデル（LLM）は、テキスト生成だけでなく、意思決定支援や社会的な価値判断など、より高度な役割を担うようになっています。これまでの研究で、LLMが人間の行動パターンに似たバイアスやリスク選好を示すことが報告されてきましたが、人間らしい出力が必ずしも人間と同じ意思決定メカニズムを意味するわけではありません。",
+      "quiz": {
+        "question": "LLMがサンクトペテルブルクのパラドックスゲームで人間らしい低い入札額を提示した主な理由はどれでしょう？",
+        "options": [
+          "人間と同じようにリスクを深く推論したから。",
+          "リスクのある状況で「妥当な」人間らしい答えは小さい数値であると学習したから。",
+          "無限の期待値を正確に計算した結果。"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究では、LLMがリスクのある状況で「妥当な」人間らしい答えは通常小さい数値であるという学習されたパターンや、表面的なプロンプトの手がかりに依存している可能性が高いと結論付けています。人間と同じような深い推論をしているわけではありません。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。大量のテキストデータで学習したAI。"
+        },
+        {
+          "term": "サンクトペテルブルクのパラドックスゲーム",
+          "definition": "期待値が無限大だが、人間は少額しか払わないゲーム。"
+        },
+        {
+          "term": "テストベッド",
+          "definition": "新しい技術や理論を検証するための実験環境。"
+        },
+        {
+          "term": "プロンプトスイート",
+          "definition": "一連の指示や質問のセット。"
+        },
+        {
+          "term": "メカニズムプローブ",
+          "definition": "意思決定の裏にあるメカニズムを探るための条件変更。"
+        },
+        {
+          "term": "指示チューニング",
+          "definition": "特定の指示に従うようモデルを調整する学習方法。"
+        },
+        {
+          "term": "期待値",
+          "definition": "確率変数の平均値。理論上の平均的な結果。"
+        },
+        {
+          "term": "計算論的に合理的な行動",
+          "definition": "数学的・論理的に最適な行動。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "LLMはリスクのある状況で人間らしい判断を下すように見えるが、その判断に至るメカニズムは人間とは大きく異なる。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、LLMがリスクのある状況で人間と似たような判断結果を出すことが示されていました。しかし、その「人間らしい」結果が、本当に人間と同じような思考プロセスに基づいているのかは不明でした。",
+        "after": "本研究は、サンクトペテルブルクのパラドックスゲームという特殊な設定を使い、LLMの判断結果だけでなく、その裏にある判断メカニズムを詳細に検証。結果が人間らしくても、メカニズムは異なることを明らかにしました。"
+      },
+      "analogy": {
+        "title": "畑の土壌と作物の関係",
+        "body": "これは、まるで「豊作に見える畑」のようなものです。表面上は立派な作物がたくさん実っていて豊作に見える。しかし、土壌（判断メカニズム）を詳しく調べてみると、実は栄養が偏っていたり、特定の肥料（プロンプト）に過度に依存していたりして、少し環境が変わるとすぐに作物が育たなくなる（判断が破綻する）状態かもしれません。見た目の収穫量だけでなく、土壌の質そのものが重要だ、という話なのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "AIが私たちの生活や仕事に深く関わるようになるにつれて、その判断の信頼性は非常に重要です。もしAIが「人間らしい」判断を下しても、その理由が人間とは全く異なるものだったらどうでしょう？例えば、金融取引の判断や医療診断の支援など、高いリスクを伴う場面でAIが表面的なパターン学習だけで判断していると、予期せぬ状況変化で誤った判断を下す可能性があります。この研究は、AIの「人間らしさ」を評価する際には、結果だけでなく、その判断に至るメカニズムまで深く検証する必要があることを教えてくれます。これは、私たちがAIをより安全に、そして効果的に活用していく上で不可欠な視点となるでしょう。",
+      "takeawayTalk": "AIの「人間らしい判断」は、見た目だけで中身は違うかも！",
+      "bodyText": "本研究では、期待値が無限大であるにもかかわらず、人間は少額しか支払わないという「サンクトペテルブルクのパラドックスゲーム」をテストベッドとして使用しました。28種類のLLMに対し、以下の3つの研究課題を設定し、構造化されたプロンプトスイートを用いて評価しました。\n\n1. オリジナルのゲームでLLMが人間のような有限の入札額を生成するか？\n2. ゲーム構造を「報酬の上限設定」「繰り返しプレイ」「初期資産の変更」「職業アイデンティティの付与」といったメカニズムプローブで変更した場合、人間らしい反応が維持されるか？\n3. 「人間視点での推論を促すプロンプト」や「指示チューニング」が、メカニズムレベルでの人間との一致を改善するか？\n\nLLMの出力は、人間らしいパターン、部分的な適応パターン、数学的境界への最適化パターンの3つの行動パターンで評価されました。\n\nLLMが人間らしい判断結果を出すのは、必ずしも人間と同じようなリスク評価の推論をしているからではありません。むしろ、リスクのある状況では「妥当な」人間らしい答えは通常小さい数値である、という学習されたパターンや、表面的なプロンプトの手がかりに依存している可能性が高いです。そのため、ゲームの構造が少し変わると、人間が系統的かつ予測可能な方法で推論をシフトさせるのに対し、LLMは学習したパターンが適用できなくなり、計算論的に合理的な（数学的に最適な）行動に切り替わってしまうのです。これは、LLMが特定の狭い設定で人間らしい出力を再現できても、安定した基盤となる推論パターンを持たないため、状況の変化に対して予測不能な振る舞いをする可能性があることを示唆しています。",
+      "bodyGlossary": [
+        {
+          "term": "期待値",
+          "definition": "確率変数の平均値。理論上の平均的な結果。",
+          "start": 6,
+          "end": 9
+        },
+        {
+          "term": "サンクトペテルブルクのパラドックスゲーム",
+          "definition": "期待値が無限大だが、人間は少額しか払わないゲーム。",
+          "start": 40,
+          "end": 60
+        },
+        {
+          "term": "テストベッド",
+          "definition": "新しい技術や理論を検証するための実験環境。",
+          "start": 62,
+          "end": 68
+        },
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。大量のテキストデータで学習したAI。",
+          "start": 83,
+          "end": 86
+        },
+        {
+          "term": "プロンプトスイート",
+          "definition": "一連の指示や質問のセット。",
+          "start": 111,
+          "end": 120
+        },
+        {
+          "term": "メカニズムプローブ",
+          "definition": "意思決定の裏にあるメカニズムを探るための条件変更。",
+          "start": 225,
+          "end": 234
+        },
+        {
+          "term": "指示チューニング",
+          "definition": "特定の指示に従うようモデルを調整する学習方法。",
+          "start": 281,
+          "end": 289
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "期待値",
+          "definition": "確率変数の平均値。理論上の平均的な結果。",
+          "start": 6,
+          "end": 9
+        },
+        {
+          "term": "サンクトペテルブルクのパラドックスゲーム",
+          "definition": "期待値が無限大だが、人間は少額しか払わないゲーム。",
+          "start": 40,
+          "end": 60
+        },
+        {
+          "term": "テストベッド",
+          "definition": "新しい技術や理論を検証するための実験環境。",
+          "start": 62,
+          "end": 68
+        },
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。大量のテキストデータで学習したAI。",
+          "start": 83,
+          "end": 86
+        },
+        {
+          "term": "プロンプトスイート",
+          "definition": "一連の指示や質問のセット。",
+          "start": 111,
+          "end": 120
+        },
+        {
+          "term": "メカニズムプローブ",
+          "definition": "意思決定の裏にあるメカニズムを探るための条件変更。",
+          "start": 225,
+          "end": 234
+        },
+        {
+          "term": "指示チューニング",
+          "definition": "特定の指示に従うようモデルを調整する学習方法。",
+          "start": 281,
+          "end": 289
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 263,
+      "keyFigure": {
+        "imagePath": "/figures/2606.04978v1_results.png",
+        "page": 7,
+        "caption": "メカニズムプローブに対するLLMの反応分布を示しており、人間らしい行動が崩壊する様子がわかります。",
+        "label": "Figure 4: Mechanism probe response distributions. Each row reports the number of models out of 28 classified",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-07T23:05:02.458Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.04978v1_results.png",
+          "page": 7,
+          "caption": "メカニズムプローブに対するLLMの反応分布を示しており、人間らしい行動が崩壊する様子がわかります。",
+          "label": "Figure 4: Mechanism probe response distributions. Each row reports the number of models out of 28 classified",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-07T23:05:02.458Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.03491v1",
+      "title": "Reputation, Exposure, and Exit: Organizational Turnover after #MeToo",
+      "authors": [
+        "Roy Baharad",
+        "Asaf Eckstein",
+        "Gideon Parchomovsky",
+        "Rok Spruk"
+      ],
+      "publishedAt": "2026-06-02T11:08:38Z",
+      "url": "https://arxiv.org/abs/2606.03491v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.03491v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "econ.GN"
+      ],
+      "abstract": "We study how economy-wide reputational shocks reshape corporate governance by examining board and executive turnover following the MeToo movement. We conceptualize the October 2017 revelations surrounding Harvey Weinstein as a common information shock that increased the expected cost of misconduct and intensified scrutiny across firms. Identification exploits cross-sectional variation in pre-shock exposure, measured by the frequency of Item 5.02 Form 8-K filings, which proxy for firms' sensitivity to governance-related disclosure and reputational risk. We develop a model of organizational exit in which directors respond to changes in reputational pressure through dynamic, belief-driven resignation hazards, generating heterogeneous and potentially nonlinear responses across firms. Empirically, we implement a continuous-treatment difference-in-differences design and complement it with dynamic event-study and matrix-completion estimators. We find that firms with greater pre-shock exposure experience significantly larger increases in resignation activity following the shock. The effects are concentrated in the immediate aftermath of the Weinstein revelations and are amplified through board-level interactions. The findings provide causal evidence that reputational shocks can induce rapid and systematic governance turnover, highlighting the central role of information, exposure, and organizational adaptation in shaping corporate responses to changes in the reputational environment.",
+      "summary": {
+        "gist": "#MeToo運動は、2017年10月のハーヴェイ・ワインスタイン氏に関する告発をきっかけに、セクシャルハラスメントや不適切行為に対する社会的な意識を大きく変えました。この運動は単なる個別の問題暴露に留まらず、企業が不作為や不適切行為に対して負う評判コストを全体的に引き上げ、企業統治の環境そのものを変革しました。",
+        "novelty": "これまでの研究では、#MeToo運動が個別のセクハラ事案を明るみに出し、その企業に直接的な影響を与えることが注目されていました。しかし、運動が企業全体に広がる「評判リスク」の変化として、役員交代にまで影響を及ぼすかは不明でした。 この論文では、#MeToo運動を企業全体の評判と情報環境を変える「共通のショック」と捉え、運動以前からガバナンス関連の開示が多い、つまり評判リスクに敏感な企業ほど、役員の辞任が増加したことを明らかにしました。",
+        "method": "#MeToo運動を企業全体に影響を与える「共通の情報ショック」と捉え、ショック以前の企業がガバナンス関連の開示（Form 8-KのItem 5.02届出）をどれだけ頻繁に行っていたかによって、評判リスクへの「露出度」を測定しました。この露出度を連続的な治療強度と見なし、連続的差の差分析（continuous-treatment difference-in-differences design）を用いて、露出度が高い企業ほどショック後に役員の辞任活動が大きく増加したかを分析しました。動的イベントスタディや行列補完推定器も補完的に使用しています。",
+        "results": "分析の結果、#MeToo運動以前からガバナンス関連の開示頻度が高く、評判リスクへの露出度が大きかった企業ほど、運動後に役員の辞任活動が有意に増加したことが明らかになりました。この影響はワインスタイン氏の告発直後に集中しており、取締役会レベルの相互作用によって増幅されました。",
+        "why": "#MeToo運動は、単に個別の不祥事を明らかにしただけでなく、企業全体に「説明責任の規範」を広げました。これにより、取締役や経営陣はセクハラだけでなく、企業文化、倫理的過失、内部告発、その他の評判リスクに対してもより敏感になりました。投資家や従業員も、深刻なガバナンス不全と見なす基準を更新したため、評判リスクに敏感な企業ほど、役員の辞任や解任をより迅速に受け入れるようになったと考えられます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "corporate-governance",
+      "arxivPrimary": "econ.GN",
+      "titleJa": "#MeToo運動が企業統治に与えた影響：評判、露出、そして役員の辞任",
+      "catchTitle": "#MeTooで役員が辞めたのはなぜ？",
+      "hook": "あなたの会社で、もし不祥事が明るみに出たらどうなるでしょう？#MeToo運動は、企業の役員交代にまで影響を与えていました。",
+      "background": "#MeToo運動は、2017年10月のハーヴェイ・ワインスタイン氏に関する告発をきっかけに、セクシャルハラスメントや不適切行為に対する社会的な意識を大きく変えました。この運動は単なる個別の問題暴露に留まらず、企業が不作為や不適切行為に対して負う評判コストを全体的に引き上げ、企業統治の環境そのものを変革しました。",
+      "quiz": {
+        "question": "#MeToo運動後、役員の辞任が増加したのはどのような企業でしたか？",
+        "options": [
+          "セクハラが実際に発覚した企業",
+          "#MeToo運動以前から評判リスクへの露出度が高かった企業",
+          "女性役員の比率が高かった企業"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究では、#MeToo運動以前からガバナンス関連の開示が多く、評判リスクに敏感だった企業ほど、運動後に役員の辞任が増加したことが示されています。これは、運動が広範な説明責任の規範を企業全体に広げたためと考えられます。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "Form 8-K",
+          "definition": "米国証券取引委員会への臨時報告書"
+        },
+        {
+          "term": "Item 5.02",
+          "definition": "役員の交代に関する開示項目"
+        },
+        {
+          "term": "連続的差の差分析",
+          "definition": "介入効果を連続的な治療強度で推定する手法"
+        },
+        {
+          "term": "共通の情報ショック",
+          "definition": "経済全体に影響を与える突発的な情報変化"
+        },
+        {
+          "term": "ガバナンス",
+          "definition": "企業統治の仕組みや体制"
+        },
+        {
+          "term": "行列補完推定器",
+          "definition": "欠損データのある行列を補完する統計手法"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "#MeToo運動は、企業の評判リスクに対する意識を高め、不祥事への露出度が高い企業の役員辞任を増加させました。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、#MeToo運動が個別のセクハラ事案を明るみに出し、その企業に直接的な影響を与えることが注目されていました。しかし、運動が企業全体に広がる「評判リスク」の変化として、役員交代にまで影響を及ぼすかは不明でした。",
+        "after": "この論文では、#MeToo運動を企業全体の評判と情報環境を変える「共通のショック」と捉え、運動以前からガバナンス関連の開示が多い、つまり評判リスクに敏感な企業ほど、役員の辞任が増加したことを明らかにしました。"
+      },
+      "analogy": {
+        "title": "畑の土壌改良が経営を変える",
+        "body": "これはまるで、特定の畑で病害虫が発見されたことで、地域全体の農家が土壌改良や病害虫対策を強化するようなものです。病害虫に特に敏感な品種を育てていた農家ほど、以前から土壌の状態を頻繁にチェックし、対策を講じていたはず。#MeToo運動という「病害虫の蔓延」が明らかになったことで、彼らはさらに迅速に、そして大規模に土壌改良（役員交代）を進めた、というわけです。問題が表面化した畑だけでなく、周辺の畑全体に「土壌の健康」への意識が高まったのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+3.2pt",
+          "label": "役員辞任活動の増加"
+        }
+      ],
+      "whyYouCare": "#MeToo運動は遠い出来事ではなく、私たちの働く環境や企業のあり方に深く影響を与えています。この研究は、社会運動が法律を変えなくても、企業の行動やガバナンスの規範を変えうることを示しています。もしあなたが企業の経営者や従業員なら、社会の評判リスクに対する感度を高め、倫理的な企業文化を醸成することの重要性を再認識するでしょう。投資家であれば、企業の評判リスクへの対応能力が、投資判断の重要な要素になることを示唆しています。",
+      "takeawayTalk": "#MeTooは、企業の評判リスクへの意識を高め、役員交代を促したんだ。",
+      "bodyText": "#MeToo運動を企業全体に影響を与える「共通の情報ショック」と捉え、ショック以前の企業がガバナンス関連の開示（Form 8-KのItem 5.02届出）をどれだけ頻繁に行っていたかによって、評判リスクへの「露出度」を測定しました。この露出度を連続的な治療強度と見なし、連続的差の差分析（continuous-treatment difference-in-differences design）を用いて、露出度が高い企業ほどショック後に役員の辞任活動が大きく増加したかを分析しました。動的イベントスタディや行列補完推定器も補完的に使用しています。\n\n#MeToo運動は、単に個別の不祥事を明らかにしただけでなく、企業全体に「説明責任の規範」を広げました。これにより、取締役や経営陣はセクハラだけでなく、企業文化、倫理的過失、内部告発、その他の評判リスクに対してもより敏感になりました。投資家や従業員も、深刻なガバナンス不全と見なす基準を更新したため、評判リスクに敏感な企業ほど、役員の辞任や解任をより迅速に受け入れるようになったと考えられます。",
+      "bodyGlossary": [
+        {
+          "term": "共通の情報ショック",
+          "definition": "経済全体に影響を与える突発的な情報変化",
+          "start": 21,
+          "end": 30
+        },
+        {
+          "term": "ガバナンス",
+          "definition": "企業統治の仕組みや体制",
+          "start": 45,
+          "end": 50
+        },
+        {
+          "term": "Form 8-K",
+          "definition": "米国証券取引委員会への臨時報告書",
+          "start": 56,
+          "end": 64
+        },
+        {
+          "term": "Item 5.02",
+          "definition": "役員の交代に関する開示項目",
+          "start": 65,
+          "end": 74
+        },
+        {
+          "term": "連続的差の差分析",
+          "definition": "介入効果を連続的な治療強度で推定する手法",
+          "start": 135,
+          "end": 143
+        },
+        {
+          "term": "行列補完推定器",
+          "definition": "欠損データのある行列を補完する統計手法",
+          "start": 254,
+          "end": 261
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "共通の情報ショック",
+          "definition": "経済全体に影響を与える突発的な情報変化",
+          "start": 21,
+          "end": 30
+        },
+        {
+          "term": "ガバナンス",
+          "definition": "企業統治の仕組みや体制",
+          "start": 45,
+          "end": 50
+        },
+        {
+          "term": "Form 8-K",
+          "definition": "米国証券取引委員会への臨時報告書",
+          "start": 56,
+          "end": 64
+        },
+        {
+          "term": "Item 5.02",
+          "definition": "役員の交代に関する開示項目",
+          "start": 65,
+          "end": 74
+        },
+        {
+          "term": "連続的差の差分析",
+          "definition": "介入効果を連続的な治療強度で推定する手法",
+          "start": 135,
+          "end": 143
+        },
+        {
+          "term": "行列補完推定器",
+          "definition": "欠損データのある行列を補完する統計手法",
+          "start": 254,
+          "end": 261
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 213
+    }
+  ]
+}

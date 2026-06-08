@@ -1,0 +1,961 @@
+{
+  "date": "2026-06-09",
+  "papers": [
+    {
+      "id": "2606.07413v1",
+      "title": "A Nine-Compartment Nonlinear Epidemic Model with Spline-Based Identification of Time-Varying Transmission and Vaccination Dynamics: Application to the COVID-19 Third Wave in Italy",
+      "authors": [
+        "Lokman Rachid Melhani",
+        "Antonino Sferlazza",
+        "Lars Grüne",
+        "Dominique Persano Adorno",
+        "Filippo D'Ippolito",
+        "Omar Enzo Santangelo",
+        "Ivan Marchese",
+        "Antonino Lo Burgio",
+        "Alberto Firenze"
+      ],
+      "publishedAt": "2026-06-05T16:01:12Z",
+      "url": "https://arxiv.org/abs/2606.07413v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.07413v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "math.OC",
+        "q-bio.PE"
+      ],
+      "abstract": "We develop a nine-compartment nonlinear epidemic model incorporating two co-circulating viral strains (ancestral I1 and the Alpha variant B.1.1.7 I2, which is 43-90% more transmissible, c2=1.5), a super-spreader subpopulation, partial vaccine-induced immunity with waning, and explicit hospitalization dynamics with differentiated mortality. Transmission and vaccination rates are treated as time-varying control inputs and identified from Italian COVID-19 data (January-May 2021) via a Piecewise Cubic Hermite Interpolating Polynomial (PCHIP) control-node parameterization, reducing calibration to a fourteen-variable Sequential Quadratic Programming (SQP) problem with monotonicity and box constraints. A parametric bootstrap (n=1000) quantifies parameter uncertainty. The calibrated model achieves R^2=0.966 for active hospitalizations, R^2=0.987 for cumulative fatalities, and R^2=0.999 for cumulative vaccinations. Well-posedness, the basic reproduction number in closed form, and local and global stability of the disease-free equilibrium are established analytically. An L-infinity approximation error bound shows that the PCHIP control-node parameterization converges to the true time-varying parameters at rate O(h^2) as the node spacing vanishes. Local identifiability and a noise stability bound are established via the Fisher information matrix. A sufficient threshold condition proves epidemic decay under time-varying suppression whenever the effective reproduction number remains persistently below one. Sensitivity analyses consistently rank hospital throughput parameters above the transmission rate, providing a mathematical basis for the observation that reactive containment measures cannot prevent a hospitalization peak already driven by the pre-existing latent viral load.",
+      "summary": {
+        "gist": "COVID-19パンデミックは、1918年のインフルエンザ以来、最も深刻な世界的公衆衛生危機を引き起こしました。従来の感染症モデルは、感染率が一定であると仮定したり、変異株やワクチン接種、入院状況といった複雑な要素を十分に考慮できていませんでした。そのため、現実のパンデミックの動態を正確に捉え、効果的な対策を立案するためのツールとしては限界がありました。",
+        "novelty": "従来の感染症モデルは、感染力やワクチンの効果が時間で変わらないと仮定したり、変異株や入院・死亡といった詳細な状況を考慮していませんでした。そのため、現実の複雑なパンデミックの動きを正確に捉え、将来を予測するのが困難でした。 この研究では、2つの変異株、スーパー・スプレッダー、ワクチンによる免疫の減衰、入院と死亡率を区別した9つの区画を持つモデルを開発。感染率とワクチン接種率を時間とともに変化する変数として扱い、イタリアの実際のデータから高精度に特定することに成功しました。",
+        "method": "本研究では、9つの区画（感受性者、潜伏感染者、2種類の感染株、スーパー・スプレッダー、ワクチン接種者、入院者、回復者、死亡者）を持つ非線形伝染病モデルを開発しました。このモデルには、伝染性の高いAlpha変異株と既存株の共循環、スーパー・スプレッダー集団、時間とともに減衰するワクチンによる部分免疫、そして死亡率を区別した入院動態が組み込まれています。感染率とワクチン接種率は時間変動する制御入力として扱われ、イタリアのCOVID-19データ（2021年1月～5月）からPCHIP（区分的3次エルミート補間多項式）を用いて特定されました。これにより、較正問題は14変数の逐次二次計画法（SQP）問題に簡略化され、単調性とボックス制約が適用されました。パラメータの不確実性は、パラメトリックブートストラップ（n=1000）によって定量化されました。",
+        "results": "較正されたモデルは、活動中の入院者数でR^2=0.966、累積死亡者数でR^2=0.987、累積ワクチン接種数でR^2=0.999という高い再現度を達成しました。感度分析の結果、病院の処理能力に関連するパラメータが感染率よりも上位にランク付けされました。これは、感染が既に潜在的なウイルス量によって進行している場合、事後的な封じ込め策では入院のピークを防げないという観察に数学的根拠を与えるものです。",
+        "why": "このモデルは、感染症の動態をより詳細に、かつ現実の時間変化に合わせて捉えることで、高い精度を実現しました。特に、感染率やワクチン接種率を固定値ではなく時間とともに変化する関数として推定した点が重要です。これにより、政策変更や人々の行動変容、変異株の出現といった要因が感染拡大に与える影響を動的に反映できます。感度分析で病院の処理能力が感染率よりも重要とされたのは、感染が一定レベルに達すると、その後の入院者数は新規感染者数よりも、既に感染している人々の重症化や病院の受け入れ能力に強く依存することを示唆しています。つまり、感染が広がり始めてから対策を強化しても、既に体内に潜伏しているウイルス量によって入院のピークは避けられないというメカニズムが働いていると考えられます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / math.OC）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "disease-modeling",
+      "arxivPrimary": "math.OC",
+      "titleJa": "スプライン同定を用いた9区画非線形伝染病モデル：イタリアCOVID-19第3波への応用",
+      "catchTitle": "コロナの波、なぜ予測が難しい？",
+      "hook": "あなたはコロナ禍で「なぜ感染者数が減らないんだ？」と疑問に思ったことはありませんか？",
+      "background": "COVID-19パンデミックは、1918年のインフルエンザ以来、最も深刻な世界的公衆衛生危機を引き起こしました。従来の感染症モデルは、感染率が一定であると仮定したり、変異株やワクチン接種、入院状況といった複雑な要素を十分に考慮できていませんでした。そのため、現実のパンデミックの動態を正確に捉え、効果的な対策を立案するためのツールとしては限界がありました。",
+      "quiz": {
+        "question": "この研究で、COVID-19の入院者数ピークを防ぐために最も重要だと示唆されたのは何でしょう？",
+        "options": [
+          "感染が広がり始めてからの行動制限強化",
+          "病院の処理能力（受け入れ体制）の強化",
+          "ワクチン接種率の急激な向上"
+        ],
+        "correctIndex": 1,
+        "explanation": "感度分析の結果、病院の処理能力に関連するパラメータが感染率よりも上位にランク付けされました。これは、感染が既に潜在的なウイルス量によって進行している場合、事後的な封じ込め策では入院のピークを防げないという観察に数学的根拠を与えるものです。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "非線形伝染病モデル",
+          "definition": "感染症の広がりを数式で表す際、複雑な関係性を考慮したモデル。"
+        },
+        {
+          "term": "PCHIP",
+          "definition": "データ点間を滑らかにつなぐ補間方法の一つ。"
+        },
+        {
+          "term": "逐次二次計画法（SQP）",
+          "definition": "複雑な最適化問題を解くための数学的手法。"
+        },
+        {
+          "term": "パラメトリックブートストラップ",
+          "definition": "統計モデルのパラメータの不確実性を評価する手法。"
+        },
+        {
+          "term": "感度分析",
+          "definition": "モデルの出力がどの入力パラメータに影響されるか調べる分析。"
+        },
+        {
+          "term": "潜在的なウイルス量",
+          "definition": "既に感染しているが症状が出ていない体内のウイルス量。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "COVID-19の感染拡大を、変異株・ワクチン・入院状況まで考慮した複雑なモデルで高精度に再現し、対策の限界を示しました。",
+      "noveltyContrast": {
+        "before": "従来の感染症モデルは、感染力やワクチンの効果が時間で変わらないと仮定したり、変異株や入院・死亡といった詳細な状況を考慮していませんでした。そのため、現実の複雑なパンデミックの動きを正確に捉え、将来を予測するのが困難でした。",
+        "after": "この研究では、2つの変異株、スーパー・スプレッダー、ワクチンによる免疫の減衰、入院と死亡率を区別した9つの区画を持つモデルを開発。感染率とワクチン接種率を時間とともに変化する変数として扱い、イタリアの実際のデータから高精度に特定することに成功しました。"
+      },
+      "analogy": {
+        "title": "畑の病害予測と収穫計画",
+        "body": "これはまるで、複数の病原菌（ウイルス株）が同時に畑（社会）に広がり、一部の区画（スーパー・スプレッダー）では特に早く病気が蔓延し、さらに病気に強い品種（ワクチン接種者）も時間と共に抵抗力が落ちていく状況を予測するようなものです。従来の予測が「病原菌の勢いは常に一定」と考えていたのに対し、この研究では「病原菌の勢いも、病気に強い品種を植えるペースも、天候（政策や人々の行動）によって刻々と変わる」と捉え、その変化を過去のデータ（実際の感染データ）から読み解き、将来の収穫量（入院者数や死亡者数）をより正確に予測しようと試みています。これにより、病害が蔓延し始めてから慌てて対策を打っても、手遅れになることがあると教えてくれます。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "R^2=0.966",
+          "label": "入院者数の再現度"
+        },
+        {
+          "value": "R^2=0.987",
+          "label": "累積死亡者数の再現度"
+        },
+        {
+          "value": "R^2=0.999",
+          "label": "累積ワクチン接種数の再現度"
+        }
+      ],
+      "whyYouCare": "この研究は、私たちがパンデミックにどう向き合うべきか、重要な示唆を与えます。感染症対策では、感染が広がり始めてから慌てて行動制限を強化しても、入院者数のピークを抑えるのは難しいかもしれません。むしろ、病院の受け入れ体制を強化したり、感染の兆候を早期に捉えて迅速に対応したりする「事前準備」の重要性が浮き彫りになります。あなたの会社や地域で、災害や予期せぬ事態への備えを考える際にも、「事後対応では間に合わない」という視点は役立つでしょう。農業分野では、病害が蔓延し始めてから農薬を散布するのではなく、早期発見や耐病性品種の導入、土壌管理といった予防策の重要性を示唆します。",
+      "takeawayTalk": "コロナの感染拡大、実は「病院の受け入れ能力」が鍵だったらしいよ。",
+      "bodyText": "本研究では、9つの区画（感受性者、潜伏感染者、2種類の感染株、スーパー・スプレッダー、ワクチン接種者、入院者、回復者、死亡者）を持つ非線形伝染病モデルを開発しました。このモデルには、伝染性の高いAlpha変異株と既存株の共循環、スーパー・スプレッダー集団、時間とともに減衰するワクチンによる部分免疫、そして死亡率を区別した入院動態が組み込まれています。感染率とワクチン接種率は時間変動する制御入力として扱われ、イタリアのCOVID-19データ（2021年1月～5月）からPCHIP（区分的3次エルミート補間多項式）を用いて特定されました。これにより、較正問題は14変数の逐次二次計画法（SQP）問題に簡略化され、単調性とボックス制約が適用されました。パラメータの不確実性は、パラメトリックブートストラップ（n=1000）によって定量化されました。\n\nこのモデルは、感染症の動態をより詳細に、かつ現実の時間変化に合わせて捉えることで、高い精度を実現しました。特に、感染率やワクチン接種率を固定値ではなく時間とともに変化する関数として推定した点が重要です。これにより、政策変更や人々の行動変容、変異株の出現といった要因が感染拡大に与える影響を動的に反映できます。感度分析で病院の処理能力が感染率よりも重要とされたのは、感染が一定レベルに達すると、その後の入院者数は新規感染者数よりも、既に感染している人々の重症化や病院の受け入れ能力に強く依存することを示唆しています。つまり、感染が広がり始めてから対策を強化しても、既に体内に潜伏しているウイルス量によって入院のピークは避けられないというメカニズムが働いていると考えられます。",
+      "bodyGlossary": [
+        {
+          "term": "非線形伝染病モデル",
+          "definition": "感染症の広がりを数式で表す際、複雑な関係性を考慮したモデル。",
+          "start": 66,
+          "end": 75
+        },
+        {
+          "term": "PCHIP",
+          "definition": "データ点間を滑らかにつなぐ補間方法の一つ。",
+          "start": 235,
+          "end": 240
+        },
+        {
+          "term": "逐次二次計画法（SQP）",
+          "definition": "複雑な最適化問題を解くための数学的手法。",
+          "start": 285,
+          "end": 297
+        },
+        {
+          "term": "パラメトリックブートストラップ",
+          "definition": "統計モデルのパラメータの不確実性を評価する手法。",
+          "start": 337,
+          "end": 352
+        },
+        {
+          "term": "感度分析",
+          "definition": "モデルの出力がどの入力パラメータに影響されるか調べる分析。",
+          "start": 529,
+          "end": 533
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "非線形伝染病モデル",
+          "definition": "感染症の広がりを数式で表す際、複雑な関係性を考慮したモデル。",
+          "start": 66,
+          "end": 75
+        },
+        {
+          "term": "PCHIP",
+          "definition": "データ点間を滑らかにつなぐ補間方法の一つ。",
+          "start": 235,
+          "end": 240
+        },
+        {
+          "term": "逐次二次計画法（SQP）",
+          "definition": "複雑な最適化問題を解くための数学的手法。",
+          "start": 285,
+          "end": 297
+        },
+        {
+          "term": "パラメトリックブートストラップ",
+          "definition": "統計モデルのパラメータの不確実性を評価する手法。",
+          "start": 337,
+          "end": 352
+        },
+        {
+          "term": "感度分析",
+          "definition": "モデルの出力がどの入力パラメータに影響されるか調べる分析。",
+          "start": 529,
+          "end": 533
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 279,
+      "keyFigure": {
+        "imagePath": "/figures/2606.07413v1_results.jpeg",
+        "page": 15,
+        "caption": "モデルがイタリアのCOVID-19第3波の入院者数、死亡者数、ワクチン接種数を高い精度で再現していることを示します。",
+        "label": "Figure 3 displays the simulated trajec-",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-08T23:13:02.565Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.07413v1_results.jpeg",
+          "page": 15,
+          "caption": "モデルがイタリアのCOVID-19第3波の入院者数、死亡者数、ワクチン接種数を高い精度で再現していることを示します。",
+          "label": "Figure 3 displays the simulated trajec-",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-08T23:13:02.565Z"
+        },
+        {
+          "imagePath": "/figures/2606.07413v1_why.png",
+          "page": 3,
+          "caption": "感染症の9区画モデルの概念図で、感染の動態を詳細に捉えるメカニズムを示します。",
+          "label": "Figure 1 shows the transition diagram, and Section 2.3 provides the biological ratio-",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-08T23:13:02.565Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.04978v1",
+      "title": "Probing Outcome-Level Resemblance and Mechanism-Level Alignment in LLM Risk Decisions: Evidence from the St. Petersburg Game",
+      "authors": [
+        "Chensong Huang",
+        "Changyu Chen",
+        "Chenwei Lin",
+        "Hanjia Lyu",
+        "Xian Xu",
+        "Jiebo Luo"
+      ],
+      "publishedAt": "2026-06-03T15:01:52Z",
+      "url": "https://arxiv.org/abs/2606.04978v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.04978v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "cs.CL",
+        "cs.CY",
+        "econ.GN"
+      ],
+      "abstract": "LLMs can appear cautious in risk decision-making tasks, yet cautious-looking outputs do not necessarily indicate alignment with human decision-making mechanisms. We investigate this distinction using the St. Petersburg game as a controlled testbed, a classical paradox in which the expected payoff is infinite, yet humans typically report low, finite willingness to pay. We evaluate 28 LLMs with a structured prompt suite that includes the original game; controlled decision variants that perturb truncation, repeated play, numeric endowment, and occupational identity; a human-perspective prompt that asks models to reason as human decision makers; and paired comparisons between base models and their instruction-tuned counterparts. In the original game, most models generate finite bids, creating the appearance of human-like risk behavior. However, this outcome-level resemblance masks substantial mechanism-level differences. The controlled variants reveal that rather than maintaining human-like behavior seen in the original game, models often shift to conditionally and computationally rational behavior. Human-cue prompting and instruction tuning often lower bids and reduce some visible pathologies, but most mechanism-level response patterns remain largely unchanged. These findings show that behavioral alignment in risk decision-making can be surface-level: LLMs may produce human-like risk decisions without exhibiting human-consistent mechanisms. High-stakes evaluations of LLM decision-making should therefore move beyond outcome similarity and examine whether the alignment is supported by mechanism-level consistency.",
+      "summary": {
+        "gist": "大規模言語モデル（LLM）は、単なるテキスト生成にとどまらず、推薦システム、意思決定支援、さらには社会的に重要な高リスクな場面での価値判断など、その応用範囲を広げています。これまでの研究では、LLMが人間の行動パターンに似たバイアス、価値観、リスク選好を示すことが示されてきました。しかし、人間らしい出力が得られたとしても、それが必ずしも人間の意思決定メカニズムと一致しているわけではありません。例えば、モデルがリスクの高いシナリオで人間と同じように慎重な判断を下したとしても、それは表面的なプロンプトの合図や学習された応答パターンに依存しているだけで、人間のような不確実性に対する推論に基づいているとは限りません。このギャップを理解することは、特に現実世界の意思決定がベンチマークのプロンプトと完全に一致しない高リスクな状況において重要です。",
+        "novelty": "これまでの研究では、LLMが人間のようなリスク選好や行動パターンを示すことが報告されていました。しかし、これらの「人間らしい」出力が、実際に人間と同じような思考プロセスや意思決定メカニズムに基づいているかは不明でした。 この研究では、サンクトペテルブルクのパラドックスゲームを用いて、LLMの「人間らしい」リスク判断が、表面的な結果の類似性なのか、それとも人間と同じメカニズムに基づいているのかを初めて区別して検証しました。",
+        "method": "本研究では、サンクトペテルブルクのパラドックスゲームを制御されたテストベッドとして使用し、28種類のLLMを評価しました。このゲームは、期待値が無限であるにもかかわらず、人間は通常、低く有限な支払い意思額を報告するという古典的なパラドックスです。研究では、オリジナルのゲームを含む構造化されたプロンプトスイートを使用しました。これには、打ち切り、繰り返しプレイ、数値的資産、職業的アイデンティティを操作する制御された決定バリアントが含まれます。また、モデルに人間として推論するよう求める「人間視点プロンプト」と、ベースモデルと指示チューニングされたモデル間の比較も行いました。これらの実験は、LLMが人間のような有限な応答を生成するか（RQ1）、その応答がゲーム構造の変更時に人間と一貫した意思決定メカニズムに支えられているか（RQ2）、そして人間視点プロンプトや指示チューニングがメカニズムレベルの一致を改善するか（RQ3）を検証するために設計されました。",
+        "results": "オリジナルのサンクトペテルブルクゲームでは、ほとんどのLLMが人間のような慎重な行動を示す有限な入札額を生成しました。しかし、この見かけ上の人間らしさは、メカニズムプローブの下で崩壊することが明らかになりました。ゲーム構造が打ち切りや繰り返しプレイによって変更されると、多くのモデルは数学的な境界にシフトしました。数値的資産や職業的アイデンティティの操作では、弱く、一貫性のない、または不完全な行動変化しか見られませんでした。人間視点プロンプトや指示チューニングは、一部の極端で非人間的な応答を減らすことで部分的に一致を改善しましたが、ほとんどの根底にあるメカニズムレベルの応答パターンは大きく変わりませんでした。",
+        "why": "LLMが人間らしいリスク判断を示すにもかかわらず、そのメカニズムが異なるのは、モデルが表面的なプロンプトの合図や学習された応答パターンに依存しているためと考えられます。例えば、リスクの高い設定では「妥当な」人間の回答は通常小さい数値であると学習しているため、低い入札額を生成する可能性があります。しかし、決定構造が変化した際に、人間のように体系的かつ予測可能な方法で行動が変化しない場合、元の人間らしい応答は表面的な模倣に過ぎず、人間と一貫した推論を反映していないことを示唆しています。これは、LLMが人間のような結果を出すことができても、その背後にある思考プロセスが人間とは根本的に異なる可能性があることを意味します。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.CL）",
+      "field": "農業経済",
+      "categoryL1": "adjacent",
+      "categoryL2": "ai-ethics",
+      "arxivPrimary": "cs.CL",
+      "titleJa": "LLMのリスク意思決定における結果レベルの類似性とメカニズムレベルの一致の検証：サンクトペテルブルクのパラドックスゲームからの証拠",
+      "catchTitle": "LLMの「人間らしい」判断、実は見せかけ？",
+      "hook": "あなたはAIに重要な判断を任せられますか？人間らしい判断をするAIも、その裏側は全く違うかもしれません。",
+      "background": "大規模言語モデル（LLM）は、単なるテキスト生成にとどまらず、推薦システム、意思決定支援、さらには社会的に重要な高リスクな場面での価値判断など、その応用範囲を広げています。これまでの研究では、LLMが人間の行動パターンに似たバイアス、価値観、リスク選好を示すことが示されてきました。しかし、人間らしい出力が得られたとしても、それが必ずしも人間の意思決定メカニズムと一致しているわけではありません。例えば、モデルがリスクの高いシナリオで人間と同じように慎重な判断を下したとしても、それは表面的なプロンプトの合図や学習された応答パターンに依存しているだけで、人間のような不確実性に対する推論に基づいているとは限りません。このギャップを理解することは、特に現実世界の意思決定がベンチマークのプロンプトと完全に一致しない高リスクな状況において重要です。",
+      "quiz": {
+        "question": "この研究で、LLMの「人間らしい」リスク判断が表面的なものだと示された主な理由は何でしょう？",
+        "options": [
+          "LLMが人間よりも高い支払い意思額を常に示したから。",
+          "ゲームの条件を変えると、LLMの判断が人間とは異なる数学的・計算論的合理性に基づいたものに変化したから。",
+          "LLMが人間視点プロンプトに全く反応しなかったから。"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究では、オリジナルのゲームでは人間らしい判断を示したLLMが、ゲームの条件（打ち切り、繰り返しプレイなど）を変更すると、人間とは異なる計算論的合理性に基づいた判断にシフトすることが示されました。これは、表面的な結果の類似性があっても、その裏にあるメカニズムが人間と異なっていることを示唆しています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。大量のテキストデータで学習したAI。"
+        },
+        {
+          "term": "サンクトペテルブルクのパラドックスゲーム",
+          "definition": "期待値が無限だが、人間は少額しか払わないゲーム。"
+        },
+        {
+          "term": "プロンプトスイート",
+          "definition": "一連の構造化された指示や質問のセット。"
+        },
+        {
+          "term": "打ち切り",
+          "definition": "ゲームの報酬に上限を設けること。"
+        },
+        {
+          "term": "人間視点プロンプト",
+          "definition": "モデルに人間として推論するよう求める指示。"
+        },
+        {
+          "term": "指示チューニング",
+          "definition": "特定の指示に従うようモデルを再学習させること。"
+        },
+        {
+          "term": "メカニズムプローブ",
+          "definition": "モデルの内部メカニズムを検証するためのテスト。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "LLMは人間らしいリスク判断を示すが、その判断に至るメカニズムは人間と異なり、表面的な模倣に過ぎない場合がある。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、LLMが人間のようなリスク選好や行動パターンを示すことが報告されていました。しかし、これらの「人間らしい」出力が、実際に人間と同じような思考プロセスや意思決定メカニズムに基づいているかは不明でした。",
+        "after": "この研究では、サンクトペテルブルクのパラドックスゲームを用いて、LLMの「人間らしい」リスク判断が、表面的な結果の類似性なのか、それとも人間と同じメカニズムに基づいているのかを初めて区別して検証しました。"
+      },
+      "analogy": {
+        "title": "畑の土壌と作物の成長",
+        "body": "これは、まるで畑で育った作物の見た目と、その土壌の質や肥料の与え方が異なるようなものです。例えば、ある畑で立派なトマトが収穫できたとします。しかし、そのトマトが育ったのは、たまたまその年の天候が良かっただけで、土壌自体は痩せているかもしれません。もし、土壌改良や適切な肥料の投入といった「メカニズム」が伴っていなければ、翌年以降も同じように立派なトマトが収穫できるとは限りません。LLMの人間らしい判断も、表面的な「収穫物」は良く見えても、その根底にある「土壌（判断メカニズム）」が人間と異なれば、状況が変わったときに安定した「収穫」は期待できないのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "あなたがもし、AIに重要な意思決定を任せようと考えているなら、この研究は非常に重要です。AIが「人間らしい」判断を下したとしても、その裏側にある思考プロセスが人間と異なれば、予期せぬ状況で全く違う判断を下す可能性があります。例えば、金融取引、医療診断、自動運転など、高リスクな分野でAIを活用する際には、単に結果が人間と似ているだけでなく、その判断に至るメカニズムが人間と一貫しているかを深く検証する必要があります。この知見は、AIの信頼性と安全性を評価する上で、私たちがどこに焦点を当てるべきかを示唆しています。",
+      "takeawayTalk": "AIの「人間らしい」判断は、見せかけかもしれないから注意が必要だよ。",
+      "bodyText": "本研究では、サンクトペテルブルクのパラドックスゲームを制御されたテストベッドとして使用し、28種類のLLMを評価しました。このゲームは、期待値が無限であるにもかかわらず、人間は通常、低く有限な支払い意思額を報告するという古典的なパラドックスです。研究では、オリジナルのゲームを含む構造化されたプロンプトスイートを使用しました。これには、打ち切り、繰り返しプレイ、数値的資産、職業的アイデンティティを操作する制御された決定バリアントが含まれます。また、モデルに人間として推論するよう求める「人間視点プロンプト」と、ベースモデルと指示チューニングされたモデル間の比較も行いました。これらの実験は、LLMが人間のような有限な応答を生成するか（RQ1）、その応答がゲーム構造の変更時に人間と一貫した意思決定メカニズムに支えられているか（RQ2）、そして人間視点プロンプトや指示チューニングがメカニズムレベルの一致を改善するか（RQ3）を検証するために設計されました。\n\nLLMが人間らしいリスク判断を示すにもかかわらず、そのメカニズムが異なるのは、モデルが表面的なプロンプトの合図や学習された応答パターンに依存しているためと考えられます。例えば、リスクの高い設定では「妥当な」人間の回答は通常小さい数値であると学習しているため、低い入札額を生成する可能性があります。しかし、決定構造が変化した際に、人間のように体系的かつ予測可能な方法で行動が変化しない場合、元の人間らしい応答は表面的な模倣に過ぎず、人間と一貫した推論を反映していないことを示唆しています。これは、LLMが人間のような結果を出すことができても、その背後にある思考プロセスが人間とは根本的に異なる可能性があることを意味します。",
+      "bodyGlossary": [
+        {
+          "term": "サンクトペテルブルクのパラドックスゲーム",
+          "definition": "期待値が無限だが、人間は少額しか払わないゲーム。",
+          "start": 6,
+          "end": 26
+        },
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。大量のテキストデータで学習したAI。",
+          "start": 50,
+          "end": 53
+        },
+        {
+          "term": "プロンプトスイート",
+          "definition": "一連の構造化された指示や質問のセット。",
+          "start": 146,
+          "end": 155
+        },
+        {
+          "term": "打ち切り",
+          "definition": "ゲームの報酬に上限を設けること。",
+          "start": 168,
+          "end": 172
+        },
+        {
+          "term": "人間視点プロンプト",
+          "definition": "モデルに人間として推論するよう求める指示。",
+          "start": 244,
+          "end": 253
+        },
+        {
+          "term": "指示チューニング",
+          "definition": "特定の指示に従うようモデルを再学習させること。",
+          "start": 263,
+          "end": 271
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "サンクトペテルブルクのパラドックスゲーム",
+          "definition": "期待値が無限だが、人間は少額しか払わないゲーム。",
+          "start": 6,
+          "end": 26
+        },
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。大量のテキストデータで学習したAI。",
+          "start": 50,
+          "end": 53
+        },
+        {
+          "term": "プロンプトスイート",
+          "definition": "一連の構造化された指示や質問のセット。",
+          "start": 146,
+          "end": 155
+        },
+        {
+          "term": "打ち切り",
+          "definition": "ゲームの報酬に上限を設けること。",
+          "start": 168,
+          "end": 172
+        },
+        {
+          "term": "人間視点プロンプト",
+          "definition": "モデルに人間として推論するよう求める指示。",
+          "start": 244,
+          "end": 253
+        },
+        {
+          "term": "指示チューニング",
+          "definition": "特定の指示に従うようモデルを再学習させること。",
+          "start": 263,
+          "end": 271
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 326,
+      "keyFigure": {
+        "imagePath": "/figures/2606.04978v1_results.png",
+        "page": 7,
+        "caption": "LLMがゲーム構造の変化に対してどのように反応するかを示しています。",
+        "label": "Figure 4: Mechanism probe response distributions. Each row reports the number of models out of 28 classified",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-08T23:13:11.023Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.04978v1_results.png",
+          "page": 7,
+          "caption": "LLMがゲーム構造の変化に対してどのように反応するかを示しています。",
+          "label": "Figure 4: Mechanism probe response distributions. Each row reports the number of models out of 28 classified",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-08T23:13:11.023Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.04904v1",
+      "title": "Symmetry-based selection rules for higher-order interactions in coupled oscillators",
+      "authors": [
+        "Iván Léon",
+        "Riccardo Muolo",
+        "Yuanzhao Zhang",
+        "Maxime Lucas"
+      ],
+      "publishedAt": "2026-06-03T14:03:15Z",
+      "url": "https://arxiv.org/abs/2606.04904v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.04904v1.pdf",
+      "categories": [
+        "topic:humanities",
+        "nlin.AO",
+        "physics.soc-ph"
+      ],
+      "abstract": "Pairwise interactions among general nonlinear oscillators can be reduced, via phase reduction, to a Kuramoto-type phase coupling $\\sin(- θ_j+θ_k )$. For higher-order interactions, multiple phase couplings exist -- such as $\\sin(-2θ_j+θ_k+θ_l )$ and $\\sin(-θ_j+2θ_k-θ_l)$. Since different nonpairwise coupling functions produce qualitatively different dynamics, it is important to understand which phase couplings should be included in coupled phase oscillator models. In this Letter, we establish selection rules for higher-order phase coupling functions. These selection rules, which can be applied without the need of explicit phase reduction, are solely based on the symmetry of the isolated oscillator velocity field and the $n$-body interaction functions. As phase reduction established the mechanistic basis for the Kuramoto model, our results provide a theoretical link between physical systems and higher-order phase models.",
+      "summary": {
+        "gist": "自然界には、ホタルの集団点滅や神経細胞の同期発火、化学反応など、多くの同期現象が見られます。これらの現象は、個々の要素が互いに影響し合い、全体として秩序だった振る舞いを見せることで生じます。蔵本モデルは、このような同期現象を記述する標準的な枠組みとして広く用いられてきましたが、これは主に2つの要素間の相互作用（ペアワイズ相互作用）を扱います。しかし、現実のシステムでは、3つ以上の要素が同時に影響し合う「高次相互作用」が重要になる場面が多く、これをどのようにモデルに組み込むかが課題でした。",
+        "novelty": "これまで、ホタルの点滅や神経細胞の発火といった同期現象を説明するモデル（蔵本モデルなど）では、主に2つの要素間の相互作用が考慮されてきました。しかし、現実世界では3つ以上の要素が同時に影響し合う「高次相互作用」が頻繁に起こります。この高次相互作用をモデルにどう組み込むべきか、どの相互作用が重要なのかを一般的に判断する明確な基準がありませんでした。 この研究では、振動子そのものの「対称性」と、相互作用の「対称性（偶奇性）」というシンプルな情報だけで、高次相互作用のどのパターンがモデルに現れるべきかを予測できる「選択則」を確立しました。これにより、複雑な計算（位相還元）をせずに、物理システムとモデル間の理論的なつながりを明確にできるようになりました。",
+        "method": "本研究では、非線形振動子の高次相互作用を記述する際に、どの位相結合関数を含めるべきかを決定する「選択則」を確立しました。この選択則は、個々の振動子の速度場の対称性と、n体相互作用関数の対称性（偶奇性）のみに基づいており、複雑な位相還元計算を必要としません。研究チームは、まず5つの代表的な非線形振動子（Stuart-Landau、van der Pol、FitzHugh-Nagumo、Selkov、Brusselator）と12種類の結合関数を用いて数値的に位相還元を行い、対称性パターンを探索しました。次に、これらのパターンが、振動子の孤立したダイナミクスFの対称性（F(-X)=-F(X)）と、結合関数Gの引数Xmに対する偶奇性（G(...-Xm...)=±G(...Xm...))から解析的に導かれることを示しました。具体的には、孤立した振動子のダイナミクスFが奇対称性を持つ場合、位相感度関数ZとリミットサイクルXcには奇数次の高調波のみが含まれることを利用し、結合関数Gの偶奇性と組み合わせて、最終的な位相結合関数のフーリエ係数に現れる高調波の偶奇性を決定するルールを導き出しました。",
+        "results": "本研究により、振動子そのものの対称性（F(-X)=-F(X)）と、相互作用関数の偶奇性（G(...-Xm...)=±G(...Xm...))が、高次相互作用の位相結合関数の構造を決定する主要な要因であることが明らかになりました。具体的には、Fが奇対称性を持つ場合、位相結合関数に現れる高調波の偶奇性はGの偶奇性によって厳密に制限されます。Fが奇対称性を持たない場合、このような制限はなく、様々な高調波が混在することが示されました。この選択則は、神経、化学、一般的な振動システムを網羅する5つの代表的な振動子で検証され、修正Stuart-Landau振動子における対称性破壊の制御を通じて、結合タイプの連続的な調整が可能であることも実証されました。",
+        "why": "この選択則が機能するメカニズムは、主に2つの対称性に基づいています。第一に、孤立した振動子のダイナミクスFが奇対称性を持つ場合、そのリミットサイクルXcと位相感度関数Zには、偶数次の高調波が一切含まれません。これは、Fの奇対称性がXcとZにπシフト対称性（Xc(θ+π)=-Xc(θ)など）を課すためです。第二に、結合関数Gの引数Xmに対する偶奇性が、Fの対称性と組み合わされることで、位相結合関数Πのフーリエ係数に現れる高調波の偶奇性をさらに制限します。これらの対称性の制約が、位相結合関数Πの特定の高調波成分（例えば、sin(-2θj+θk+θl)やsin(-θj+2θk-θl)）の存在を許容したり、抑制したりする選択則として機能するのです。これにより、複雑な位相還元計算を行うことなく、物理システムの構造から高次位相モデルの結合関数を予測することが可能になります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / nlin.AO）",
+      "field": "歴史・人文・社会",
+      "categoryL1": "serendipity",
+      "categoryL2": "complex-systems",
+      "arxivPrimary": "nlin.AO",
+      "titleJa": "結合振動子における高次相互作用の対称性に基づく選択則",
+      "catchTitle": "なぜホタルの光は揃う？同期現象の謎を解く新ルール",
+      "hook": "夜空に瞬くホタルの光が、ある瞬間一斉に点滅するのを見たことがありますか？この不思議な「同期」現象の背後にあるメカニズムを、あなたはもっと深く知りたいと思いませんか？",
+      "background": "自然界には、ホタルの集団点滅や神経細胞の同期発火、化学反応など、多くの同期現象が見られます。これらの現象は、個々の要素が互いに影響し合い、全体として秩序だった振る舞いを見せることで生じます。蔵本モデルは、このような同期現象を記述する標準的な枠組みとして広く用いられてきましたが、これは主に2つの要素間の相互作用（ペアワイズ相互作用）を扱います。しかし、現実のシステムでは、3つ以上の要素が同時に影響し合う「高次相互作用」が重要になる場面が多く、これをどのようにモデルに組み込むかが課題でした。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "同期現象",
+          "definition": "複数の要素が互いに影響し合い、同じタイミングで動く現象"
+        },
+        {
+          "term": "蔵本モデル",
+          "definition": "同期現象を記述する基本的な数理モデル"
+        },
+        {
+          "term": "位相還元",
+          "definition": "複雑な振動現象を位相という1つの変数で近似する手法"
+        },
+        {
+          "term": "選択則",
+          "definition": "特定の条件に基づいて、何が許されるかを決める規則"
+        },
+        {
+          "term": "非線形振動子",
+          "definition": "周期的な動きをするが、その動きが複雑な方程式で表されるもの"
+        },
+        {
+          "term": "高次相互作用",
+          "definition": "3つ以上の要素が同時に影響し合う関係"
+        },
+        {
+          "term": "対称性",
+          "definition": "ある変換をしても性質が変わらないこと"
+        },
+        {
+          "term": "高調波",
+          "definition": "基本となる振動の整数倍の周波数を持つ振動成分"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "複雑な同期現象を記述するモデルで、どの相互作用が重要かを「対称性」から予測する新しいルールを発見しました。",
+      "noveltyContrast": {
+        "before": "これまで、ホタルの点滅や神経細胞の発火といった同期現象を説明するモデル（蔵本モデルなど）では、主に2つの要素間の相互作用が考慮されてきました。しかし、現実世界では3つ以上の要素が同時に影響し合う「高次相互作用」が頻繁に起こります。この高次相互作用をモデルにどう組み込むべきか、どの相互作用が重要なのかを一般的に判断する明確な基準がありませんでした。",
+        "after": "この研究では、振動子そのものの「対称性」と、相互作用の「対称性（偶奇性）」というシンプルな情報だけで、高次相互作用のどのパターンがモデルに現れるべきかを予測できる「選択則」を確立しました。これにより、複雑な計算（位相還元）をせずに、物理システムとモデル間の理論的なつながりを明確にできるようになりました。"
+      },
+      "analogy": {
+        "title": "畑の土壌と作物の組み合わせで収穫を予測するようなもの",
+        "body": "これは、まるで農家が新しい品種の作物を育てる際に、複雑な土壌分析や気象シミュレーションをせずとも、土壌の性質（酸性かアルカリ性か）と種子の特性（特定の栄養素を好むか否か）の組み合わせを見るだけで、どの作物が豊かに育つか、あるいは育たないかを事前に予測できるようなものです。土壌の「対称性」と種子の「偶奇性」が、作物の成長パターンを決定する「選択則」となるのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、一見すると難解な数理物理学の話に聞こえるかもしれません。しかし、その根底にある「同期」の理解は、私たちの日常生活や社会の様々な側面と深く繋がっています。例えば、心臓の鼓動、脳の神経活動、交通渋滞、経済の景気循環、さらにはソーシャルメディアでの流行の広がり方まで、多くの現象が同期のメカニズムによって説明できます。この新しい「選択則」は、これらの複雑なシステムをより正確にモデル化し、予測する手助けとなります。病気の治療法開発、スマートシティの交通最適化、市場の変動予測など、多岐にわたる分野で、より効率的で効果的な介入策を設計するための基礎となる知見を提供するでしょう。",
+      "takeawayTalk": "ホタルの同期も、対称性を見ればどの相互作用が重要か分かるんだって！",
+      "bodyText": "本研究では、非線形振動子の高次相互作用を記述する際に、どの位相結合関数を含めるべきかを決定する「選択則」を確立しました。この選択則は、個々の振動子の速度場の対称性と、n体相互作用関数の対称性（偶奇性）のみに基づいており、複雑な位相還元計算を必要としません。研究チームは、まず5つの代表的な非線形振動子（Stuart-Landau、van der Pol、FitzHugh-Nagumo、Selkov、Brusselator）と12種類の結合関数を用いて数値的に位相還元を行い、対称性パターンを探索しました。次に、これらのパターンが、振動子の孤立したダイナミクスFの対称性（F(-X)=-F(X)）と、結合関数Gの引数Xmに対する偶奇性（G(...-Xm...)=±G(...Xm...))から解析的に導かれることを示しました。具体的には、孤立した振動子のダイナミクスFが奇対称性を持つ場合、位相感度関数ZとリミットサイクルXcには奇数次の高調波のみが含まれることを利用し、結合関数Gの偶奇性と組み合わせて、最終的な位相結合関数のフーリエ係数に現れる高調波の偶奇性を決定するルールを導き出しました。\n\nこの選択則が機能するメカニズムは、主に2つの対称性に基づいています。第一に、孤立した振動子のダイナミクスFが奇対称性を持つ場合、そのリミットサイクルXcと位相感度関数Zには、偶数次の高調波が一切含まれません。これは、Fの奇対称性がXcとZにπシフト対称性（Xc(θ+π)=-Xc(θ)など）を課すためです。第二に、結合関数Gの引数Xmに対する偶奇性が、Fの対称性と組み合わされることで、位相結合関数Πのフーリエ係数に現れる高調波の偶奇性をさらに制限します。これらの対称性の制約が、位相結合関数Πの特定の高調波成分（例えば、sin(-2θj+θk+θl)やsin(-θj+2θk-θl)）の存在を許容したり、抑制したりする選択則として機能するのです。これにより、複雑な位相還元計算を行うことなく、物理システムの構造から高次位相モデルの結合関数を予測することが可能になります。",
+      "bodyGlossary": [
+        {
+          "term": "非線形振動子",
+          "definition": "周期的な動きをするが、その動きが複雑な方程式で表されるもの",
+          "start": 6,
+          "end": 12
+        },
+        {
+          "term": "高次相互作用",
+          "definition": "3つ以上の要素が同時に影響し合う関係",
+          "start": 13,
+          "end": 19
+        },
+        {
+          "term": "選択則",
+          "definition": "特定の条件に基づいて、何が許されるかを決める規則",
+          "start": 48,
+          "end": 51
+        },
+        {
+          "term": "対称性",
+          "definition": "ある変換をしても性質が変わらないこと",
+          "start": 78,
+          "end": 81
+        },
+        {
+          "term": "位相還元",
+          "definition": "複雑な振動現象を位相という1つの変数で近似する手法",
+          "start": 113,
+          "end": 117
+        },
+        {
+          "term": "高調波",
+          "definition": "基本となる振動の整数倍の周波数を持つ振動成分",
+          "start": 419,
+          "end": 422
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "非線形振動子",
+          "definition": "周期的な動きをするが、その動きが複雑な方程式で表されるもの",
+          "start": 6,
+          "end": 12
+        },
+        {
+          "term": "高次相互作用",
+          "definition": "3つ以上の要素が同時に影響し合う関係",
+          "start": 13,
+          "end": 19
+        },
+        {
+          "term": "選択則",
+          "definition": "特定の条件に基づいて、何が許されるかを決める規則",
+          "start": 48,
+          "end": 51
+        },
+        {
+          "term": "対称性",
+          "definition": "ある変換をしても性質が変わらないこと",
+          "start": 78,
+          "end": 81
+        },
+        {
+          "term": "位相還元",
+          "definition": "複雑な振動現象を位相という1つの変数で近似する手法",
+          "start": 113,
+          "end": 117
+        },
+        {
+          "term": "高調波",
+          "definition": "基本となる振動の整数倍の周波数を持つ振動成分",
+          "start": 419,
+          "end": 422
+        }
+      ],
+      "agriEconRelevance": "この同期現象の選択則は、農業経済学においても示唆に富んでいます。例えば、地域内の複数の農家が特定の作物を栽培する際の意思決定（いつ種をまき、いつ収穫するか）が、市場価格や気象条件、近隣農家の動向といった「高次相互作用」によって同期する現象を理解するのに役立ちます。また、農業機械の協調作業や、サプライチェーンにおける複数のアクター（生産者、加工業者、流通業者）間の情報伝達と意思決定の同期をモデル化する際にも、どの相互作用が支配的であるかを効率的に特定するための理論的基盤を提供できる可能性があります。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 326
+    },
+    {
+      "id": "2606.07487v1",
+      "title": "Modelling Opinion Dynamics at Scale with Deep MARL",
+      "authors": [
+        "Lukas Seier",
+        "Brandon Kaplowitz",
+        "Sebastian Towers",
+        "Richard Bailey",
+        "Jakob Foerster"
+      ],
+      "publishedAt": "2026-06-05T17:42:24Z",
+      "url": "https://arxiv.org/abs/2606.07487v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.07487v1.pdf",
+      "categories": [
+        "topic:humanities",
+        "cs.MA",
+        "cs.GT",
+        "cs.SI"
+      ],
+      "abstract": "Modelling opinion dynamics typically relies on hand-crafted local interaction rules to study emergent macroscopic phenomena such as consensus and polarisation. In contrast, multi-agent reinforcement learning (MARL) enables agents to learn such behaviours directly by optimising simple rewards. To explore the potential of MARL for opinion dynamics, we introduce a GPU-accelerated consensus and truth-finding game that scales to populations of up to 1000 agents, comparable to many real-world social sub-networks. To prevent unrealistic conventions, we extend other-play to general-sum social interactions. We next validate our model on a subset of the Bluesky network by recovering agent importance structures from graph topology alone via a learned attention layer, finding that highly conforming populations most closely match human data. In large social media networks such high levels of conformity significantly reduce collective accuracy and promote dishonest agents that lie to fit in. By contrast, small, dynamic hunter-gatherer networks are less affected; here, conformity can even improve collective agreement. This suggests a mismatch between evolved human conformity heuristics and modern social media environments as a potential contributor to misinformation.",
+      "summary": {
+        "gist": "気候変動やパンデミックといった地球規模の課題に直面する現代社会において、集団的な合意形成や真実の発見を促進・阻害する要因を特定することは、社会の機能を維持するために極めて重要です。ソーシャルメディアの急速な普及は、コンセンサス形成、分極化、多元的無知といった大規模な現象を引き起こすメカニズムを探る意見ダイナミクスの研究を活発化させています。",
+        "novelty": "従来の意見ダイナミクス研究は、手作業で設定された単純な相互作用ルールに基づいていました。これにより、モデル作成者の意図した範囲でしかエージェントの行動を表現できず、現実世界の複雑な社会現象を捉えきれない限界がありました。 この研究では、マルチエージェント強化学習（MARL）を導入し、エージェントが単純な報酬関数から複雑な相互作用行動を直接学習できるようにしました。これにより、最大1000エージェントという大規模な集団での意見形成をGPU加速でシミュレーションし、現実のSNSに近い規模で分析することを可能にしました。",
+        "method": "本研究では、マルチエージェント強化学習（MARL）を用いて、最大1000エージェントが参加するGPU加速型コンセンサス・真実発見ゲームを開発しました。エージェントは、部分的に観測される環境の真の状態に合致する推測を行うことと、隣接するエージェントの推測に同調することという、相反するインセンティブを持つように設計されています。このモデルでは、エージェントが自身の推測と隣接エージェントの推測を考慮し、学習されたアテンション層を通じて情報を集約し、自身の信念を更新します。特に、不自然な協調行動を防ぐため、他のエージェントの行動を反転させる「other-play」アルゴリズムを一般和ゲームに拡張しました。このフレームワークをBlueskyソーシャルネットワークのサブグラフに適用し、グラフ構造のみからエージェントの重要度構造を回復できるかを検証しました。",
+        "results": "本モデルをBlueskyソーシャルネットワークのサブグラフに適用した結果、80%の同調レベルで行動するエージェントが、人間データで観察される重要度構造と最もよく一致することが判明しました。しかし、この高い同調レベルでは、ソーシャルメディアネットワークにおいて集団の正確性が著しく低下し、自身の私的信念に反する推測をする「嘘つき」エージェントの出現を促進することが示されました。この傾向は、米国議会のX/Twitterネットワークのような分極化したクラスター型グラフでより顕著でした。対照的に、タンザニアのハザ族のような小規模で動的な狩猟採集民ネットワークでは、これらの悪影響は軽減され、コミュニケーションが限定的な状況では同調が集合的な合意を向上させることさえあることが示されました。",
+        "why": "この結果は、人間の同調性に関する進化的なヒューリスティックが、小規模な狩猟採集民ネットワークにおける集合的な真実発見と合意形成には有利に働いたものの、現代のソーシャルメディアプラットフォームのような大規模で複雑な環境では不適応となる可能性を示唆しています。大規模なネットワークでは、同調インセンティブが個人の真実追求を上回り、誤情報が広がりやすくなる一方で、小規模なネットワークでは、不確実なエージェントが間違えることのペナルティが正しいことの報酬を上回る場合に、同調が推測を助け、正確なアウトプットを増やす可能性があります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.MA）",
+      "field": "歴史・人文・社会",
+      "categoryL1": "serendipity",
+      "categoryL2": "social-dynamics",
+      "arxivPrimary": "cs.MA",
+      "titleJa": "深層強化学習を用いた大規模意見ダイナミクスモデリング",
+      "catchTitle": "SNSの「同調圧力」が真実を歪める？",
+      "hook": "SNSで流れてくる情報、あなたは「みんなの意見」と「自分の考え」どちらを優先しますか？",
+      "background": "気候変動やパンデミックといった地球規模の課題に直面する現代社会において、集団的な合意形成や真実の発見を促進・阻害する要因を特定することは、社会の機能を維持するために極めて重要です。ソーシャルメディアの急速な普及は、コンセンサス形成、分極化、多元的無知といった大規模な現象を引き起こすメカニズムを探る意見ダイナミクスの研究を活発化させています。",
+      "quiz": {
+        "question": "この研究で、人間データと最も一致する同調レベルで、大規模SNSネットワークで起こった現象は何でしょう？",
+        "options": [
+          "集団の正確性が向上し、真実が広まった。",
+          "集団の正確性が低下し、嘘つきエージェントが増加した。",
+          "意見の分極化が解消され、全員が合意に達した。"
+        ],
+        "correctIndex": 1,
+        "explanation": "本研究の結果では、80%の同調レベルで行動するエージェントが人間データと最も一致しましたが、このレベルでは大規模なソーシャルメディアネットワークにおいて集団の正確性が著しく低下し、自身の私的信念に反する推測をする「嘘つき」エージェントの出現が促進されることが示されました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "マルチエージェント強化学習",
+          "definition": "複数のAIが互いに影響し合いながら学習する手法。"
+        },
+        {
+          "term": "意見ダイナミクス",
+          "definition": "集団内で意見がどのように形成・変化するかを研究する分野。"
+        },
+        {
+          "term": "コンセンサス",
+          "definition": "集団内での意見の一致。"
+        },
+        {
+          "term": "分極化",
+          "definition": "意見が両極端に分かれ、対立する状態。"
+        },
+        {
+          "term": "アテンション層",
+          "definition": "ニューラルネットワークが入力のどの部分に注目すべきかを学習する仕組み。"
+        },
+        {
+          "term": "other-play",
+          "definition": "エージェントが他のエージェントの視点から学習するアルゴリズム。"
+        },
+        {
+          "term": "一般和ゲーム",
+          "definition": "参加者全員の利得の合計が一定でないゲーム理論のモデル。"
+        },
+        {
+          "term": "ヒューリスティック",
+          "definition": "経験則に基づいた、迅速な意思決定のための簡略化された方法。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "大規模なSNSでは同調圧力が真実の発見を妨げ、嘘つきを増やすが、小規模な集団では逆効果になる。",
+      "noveltyContrast": {
+        "before": "従来の意見ダイナミクス研究は、手作業で設定された単純な相互作用ルールに基づいていました。これにより、モデル作成者の意図した範囲でしかエージェントの行動を表現できず、現実世界の複雑な社会現象を捉えきれない限界がありました。",
+        "after": "この研究では、マルチエージェント強化学習（MARL）を導入し、エージェントが単純な報酬関数から複雑な相互作用行動を直接学習できるようにしました。これにより、最大1000エージェントという大規模な集団での意見形成をGPU加速でシミュレーションし、現実のSNSに近い規模で分析することを可能にしました。"
+      },
+      "analogy": {
+        "title": "畑の作物が「みんなと同じ」を求める時",
+        "body": "これは、農家が畑で新しい品種の作物を育てているようなものです。従来のやり方では、農家が「この作物はこのように育つべき」と一つ一つ手作業でルールを決めていました。しかし、この研究では、作物自体が「隣の作物と同じように育つと良いことがある」というシンプルな報酬ルールに従って、自ら最適な成長戦略を学習します。その結果、大規模な畑では、みんなと同じ形になろうとするあまり、本来の栄養価（真実）が失われたり、病気（嘘）が蔓延しやすくなることが分かりました。一方で、小さな家庭菜園のような場所では、みんなで同じ方向に伸びることで、限られた日差しを効率よく分け合い、かえって良い収穫（真実の発見）につながることもあるのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "80%",
+          "label": "人間データと最も一致する同調レベル"
+        }
+      ],
+      "whyYouCare": "この研究は、私たちが日々利用するSNSが、私たちの意見形成や社会全体の真実発見にどのような影響を与えているかを深く理解する手がかりとなります。特に、SNS上での「同調圧力」が、時に誤った情報や「嘘」を広める原因となる一方で、小規模なコミュニティでは協力的な行動を促し、良い結果をもたらす可能性があるという発見は、私たちが情報とどう向き合うべきか、また、どのようなコミュニティを構築すべきかを考える上で重要です。企業や組織の意思決定においても、大規模な会議での多数決が必ずしも最善の結果を生むとは限らないことを示唆しており、多様な意見を尊重し、真実を追求するための組織設計を考えるきっかけになるでしょう。",
+      "takeawayTalk": "SNSの同調圧力は、大規模だと嘘を広げ、小規模だと真実を助けるらしいよ！",
+      "bodyText": "本研究では、マルチエージェント強化学習（MARL）を用いて、最大1000エージェントが参加するGPU加速型コンセンサス・真実発見ゲームを開発しました。エージェントは、部分的に観測される環境の真の状態に合致する推測を行うことと、隣接するエージェントの推測に同調することという、相反するインセンティブを持つように設計されています。このモデルでは、エージェントが自身の推測と隣接エージェントの推測を考慮し、学習されたアテンション層を通じて情報を集約し、自身の信念を更新します。特に、不自然な協調行動を防ぐため、他のエージェントの行動を反転させる「other-play」アルゴリズムを一般和ゲームに拡張しました。このフレームワークをBlueskyソーシャルネットワークのサブグラフに適用し、グラフ構造のみからエージェントの重要度構造を回復できるかを検証しました。\n\nこの結果は、人間の同調性に関する進化的なヒューリスティックが、小規模な狩猟採集民ネットワークにおける集合的な真実発見と合意形成には有利に働いたものの、現代のソーシャルメディアプラットフォームのような大規模で複雑な環境では不適応となる可能性を示唆しています。大規模なネットワークでは、同調インセンティブが個人の真実追求を上回り、誤情報が広がりやすくなる一方で、小規模なネットワークでは、不確実なエージェントが間違えることのペナルティが正しいことの報酬を上回る場合に、同調が推測を助け、正確なアウトプットを増やす可能性があります。",
+      "bodyGlossary": [
+        {
+          "term": "マルチエージェント強化学習",
+          "definition": "複数のAIが互いに影響し合いながら学習する手法。",
+          "start": 6,
+          "end": 19
+        },
+        {
+          "term": "コンセンサス",
+          "definition": "集団内での意見の一致。",
+          "start": 53,
+          "end": 59
+        },
+        {
+          "term": "アテンション層",
+          "definition": "ニューラルネットワークが入力のどの部分に注目すべきかを学習する仕組み。",
+          "start": 205,
+          "end": 212
+        },
+        {
+          "term": "other-play",
+          "definition": "エージェントが他のエージェントの視点から学習するアルゴリズム。",
+          "start": 270,
+          "end": 280
+        },
+        {
+          "term": "一般和ゲーム",
+          "definition": "参加者全員の利得の合計が一定でないゲーム理論のモデル。",
+          "start": 288,
+          "end": 294
+        },
+        {
+          "term": "ヒューリスティック",
+          "definition": "経験則に基づいた、迅速な意思決定のための簡略化された方法。",
+          "start": 399,
+          "end": 408
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "マルチエージェント強化学習",
+          "definition": "複数のAIが互いに影響し合いながら学習する手法。",
+          "start": 6,
+          "end": 19
+        },
+        {
+          "term": "コンセンサス",
+          "definition": "集団内での意見の一致。",
+          "start": 53,
+          "end": 59
+        },
+        {
+          "term": "アテンション層",
+          "definition": "ニューラルネットワークが入力のどの部分に注目すべきかを学習する仕組み。",
+          "start": 205,
+          "end": 212
+        },
+        {
+          "term": "other-play",
+          "definition": "エージェントが他のエージェントの視点から学習するアルゴリズム。",
+          "start": 270,
+          "end": 280
+        },
+        {
+          "term": "一般和ゲーム",
+          "definition": "参加者全員の利得の合計が一定でないゲーム理論のモデル。",
+          "start": 288,
+          "end": 294
+        },
+        {
+          "term": "ヒューリスティック",
+          "definition": "経験則に基づいた、迅速な意思決定のための簡略化された方法。",
+          "start": 399,
+          "end": 408
+        }
+      ],
+      "agriEconRelevance": "この研究の知見は、農業経済学において、特に農家の情報共有や技術普及のメカニズムを理解する上で応用可能です。例えば、新しい栽培技術や品種に関する情報が農家コミュニティ内でどのように広がるか、また、その際に「隣の農家がやっているから」という同調圧力が、本当に最適な技術選択につながるのか、あるいは誤った慣行を定着させてしまうのかを分析できます。小規模な地域コミュニティでは同調が有効に機能し、情報共有がスムーズに進む一方で、大規模な農業市場やオンラインプラットフォームでは、誤情報が拡散しやすく、真に価値のある情報が埋もれてしまうリスクがあることを示唆しています。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 285,
+      "keyFigure": {
+        "imagePath": "/figures/2606.07487v1_results.png",
+        "page": 2,
+        "caption": "Figure 1: Opinion update loop. Agents receive self and neighbouring guesses, which are subse- Opinion update loop. Agents receive self and neighbouring guesses, which are subse-",
+        "label": "Figure 1: Opinion update loop. Agents receive self and neighbouring guesses, which are subse-",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-08T23:13:16.140Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.07487v1_results.png",
+          "page": 2,
+          "caption": "Figure 1: Opinion update loop. Agents receive self and neighbouring guesses, which are subse- Opinion update loop. Agents receive self and neighbouring guesses, which are subse-",
+          "label": "Figure 1: Opinion update loop. Agents receive self and neighbouring guesses, which are subse-",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-08T23:13:16.140Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.06089v1",
+      "title": "Leveraging LLMs for Unstructured Claims Data Analysis",
+      "authors": [
+        "Robert D. Lieberthal",
+        "Richard Tran",
+        "Vietbao Phan",
+        "Jawand Singh",
+        "Elizabeth Sottung"
+      ],
+      "publishedAt": "2026-06-04T12:26:20Z",
+      "url": "https://arxiv.org/abs/2606.06089v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.06089v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "q-fin.MF",
+        "econ.GN",
+        "q-fin.RM"
+      ],
+      "abstract": "Actuaries rely primarily on structured numerical data for reserving and ratemaking, while valuable predictive information in unstructured text including medical records, adjuster notes, and call transcripts remains largely unused. Manual processing of these documents is time-consuming, inconsistent across reviewers, and unscalable. We present a proof-of-concept framework using large language models (LLMs) to extract structured actuarial variables from unstructured claims data. We implement a two-stage processing architecture separating document-level extraction (Stage 1) from claim-level synthesis (Stage 2). A modular four-script Python pipeline processes synthetic FHIR-based claims data and real claims documents, extracting 36 actuarial variables across reserving, ratemaking, and claims management categories. We validate 14 core variables using two independent clinical expert reviewers scoring 20 synthetic claims on a five-point Likert rubric, achieving mean scores above 4.0 and a weighted kappa of 0.53. Integration with chain ladder reserving demonstrates practical actuarial value: severity-segmented analysis reduced reserve estimation error from 6.5% to 4.0%. The open-source implementation includes audit trails and confidence scoring, providing a replicable foundation for LLM-based actuarial variable extraction in property-casualty insurance.",
+      "summary": {
+        "gist": "保険業界では、保険数理士が準備金設定や保険料率決定のために構造化された数値データを主に利用しています。しかし、医療記録、調査員のメモ、通話記録といった非構造化テキストデータには、予測に役立つ貴重な情報が大量に含まれており、これまではほとんど活用されていませんでした。これらの文書の手動処理は、時間がかかり、レビュー担当者間での一貫性がなく、スケーラビリティに課題がありました。LLMは、従来のルールベースのNLP技術とは異なり、言語構造、文脈、意味を高度に理解する能力を持ち、この課題を解決する可能性を秘めています。",
+        "novelty": "これまでの保険数理業務では、医療記録や調査員のメモといった非構造化テキストデータは、手作業でしか処理できませんでした。このため、時間とコストがかかり、担当者によって判断にばらつきが生じ、膨大な量のデータを扱うことが困難でした。 この研究では、大規模言語モデル（LLM）を活用し、非構造化クレームデータから保険数理に必要な36種類の変数を自動で抽出するフレームワークを開発しました。これにより、手作業の限界を突破し、より迅速かつ一貫性のあるデータ分析を可能にします。",
+        "method": "本研究では、LLMを用いて非構造化クレームデータから構造化された保険数理変数を抽出する概念実証フレームワークを提示します。文書レベルの抽出（ステージ1）とクレームレベルの統合（ステージ2）を分離する2段階処理アーキテクチャを実装しました。モジュール式の4スクリプトPythonパイプラインが、合成FHIRベースのクレームデータと実際のクレーム文書を処理し、準備金、料率設定、クレーム管理の3つのカテゴリにわたる36の保険数理変数を抽出します。14の主要変数を2人の独立した臨床専門家が20の合成クレームを5段階のリッカート尺度で評価し、平均スコア4.0以上、加重カッパ係数0.53を達成しました。",
+        "results": "LLMによって抽出された変数を活用した重症度セグメント分析により、準備金見積もり誤差を6.5%から4.0%に削減できることが実証されました。これは、LLMが保険数理業務に実用的な価値をもたらすことを示しています。",
+        "why": "LLMは、膨大なテキストデータで学習しているため、専門用語や略語を広範な手動コーディングなしに理解し、文脈に応じて同じ用語の異なる意味を区別できます。また、多様な文書形式や記述スタイルにも対応できるため、医療記録、調査員のメモ、通話記録など、様々な非構造化データから必要な情報を正確に抽出できます。この能力により、これまで手作業でしか不可能だった複雑な情報抽出を自動化し、保険数理士がより詳細な情報に基づいて意思決定を行えるようになります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-fin.MF）",
+      "field": "農業経済",
+      "categoryL1": "adjacent",
+      "categoryL2": "data-science",
+      "arxivPrimary": "q-fin.MF",
+      "titleJa": "LLMを活用した非構造化クレームデータ分析",
+      "catchTitle": "保険金請求の山をAIが瞬時に解析！",
+      "hook": "あなたの会社も、膨大な書類の山に埋もれていませんか？保険業界では、未活用のテキストデータが宝の山かもしれません。",
+      "background": "保険業界では、保険数理士が準備金設定や保険料率決定のために構造化された数値データを主に利用しています。しかし、医療記録、調査員のメモ、通話記録といった非構造化テキストデータには、予測に役立つ貴重な情報が大量に含まれており、これまではほとんど活用されていませんでした。これらの文書の手動処理は、時間がかかり、レビュー担当者間での一貫性がなく、スケーラビリティに課題がありました。LLMは、従来のルールベースのNLP技術とは異なり、言語構造、文脈、意味を高度に理解する能力を持ち、この課題を解決する可能性を秘めています。",
+      "quiz": {
+        "question": "この研究でLLMが保険数理業務にもたらす主なメリットは何ですか？",
+        "options": [
+          "手作業によるデータ入力の完全な自動化",
+          "非構造化データからの情報抽出の自動化と精度向上",
+          "保険数理士の専門知識の代替"
+        ],
+        "correctIndex": 1,
+        "explanation": "LLMは、これまで手作業でしか処理できなかった非構造化クレームデータから、必要な情報を自動で抽出し、保険数理業務の精度と効率を大幅に向上させることが主なメリットです。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。自然言語を理解・生成するAI。"
+        },
+        {
+          "term": "非構造化クレームデータ",
+          "definition": "医療記録、メモなど、形式が定まっていない請求関連情報。"
+        },
+        {
+          "term": "保険数理変数",
+          "definition": "保険の準備金や料率計算に必要な数値データ。"
+        },
+        {
+          "term": "FHIR",
+          "definition": "医療情報の標準化された交換形式。"
+        },
+        {
+          "term": "加重カッパ係数",
+          "definition": "評価者間の一致度を示す統計指標。"
+        },
+        {
+          "term": "NLP",
+          "definition": "自然言語処理。人間の言語をコンピュータで処理する技術。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "LLMが保険金請求の非構造化テキストデータから必要な情報を自動抽出し、保険数理業務の精度と効率を大幅に向上させます。",
+      "noveltyContrast": {
+        "before": "これまでの保険数理業務では、医療記録や調査員のメモといった非構造化テキストデータは、手作業でしか処理できませんでした。このため、時間とコストがかかり、担当者によって判断にばらつきが生じ、膨大な量のデータを扱うことが困難でした。",
+        "after": "この研究では、大規模言語モデル（LLM）を活用し、非構造化クレームデータから保険数理に必要な36種類の変数を自動で抽出するフレームワークを開発しました。これにより、手作業の限界を突破し、より迅速かつ一貫性のあるデータ分析を可能にします。"
+      },
+      "analogy": {
+        "title": "畑の雑草をAIが瞬時に選別する最新農機",
+        "body": "広大な畑で、収穫に必要な作物と不要な雑草が入り混じっている状況を想像してください。これまでの方法では、熟練の農家が一つ一つ手作業で雑草を取り除いていました。しかし、この研究は、最新のAI搭載農機を導入するようなものです。この農機は、膨大な植物の中から瞬時に作物を識別し、必要な情報だけを効率的に選別してくれます。これにより、農家はより多くの作物を、より早く、安定して収穫できるようになるのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "6.5% → 4.0%",
+          "label": "準備金見積もり誤差の削減"
+        },
+        {
+          "value": "0.53",
+          "label": "専門家評価との加重カッパ係数"
+        }
+      ],
+      "whyYouCare": "この研究は、あなたのビジネスにおける「情報の山」を「価値ある洞察」に変える可能性を示しています。もしあなたが、顧客からの問い合わせ記録、営業日報、契約書など、膨大なテキストデータに埋もれていると感じているなら、このLLMの活用法は、業務効率化と意思決定の精度向上に直結します。手作業による時間とコストを削減し、これまで見過ごされてきたデータから新たなビジネスチャンスを発見できるかもしれません。特に、規制が厳しく、正確性が求められる分野では、この技術が監査証跡や信頼度スコアリングを提供し、透明性と説明責任を確保する上で重要な役割を果たすでしょう。",
+      "takeawayTalk": "AIが保険金請求の書類を読んで、準備金の見積もり誤差を減らしたらしいよ！",
+      "bodyText": "本研究では、LLMを用いて非構造化クレームデータから構造化された保険数理変数を抽出する概念実証フレームワークを提示します。文書レベルの抽出（ステージ1）とクレームレベルの統合（ステージ2）を分離する2段階処理アーキテクチャを実装しました。モジュール式の4スクリプトPythonパイプラインが、合成FHIRベースのクレームデータと実際のクレーム文書を処理し、準備金、料率設定、クレーム管理の3つのカテゴリにわたる36の保険数理変数を抽出します。14の主要変数を2人の独立した臨床専門家が20の合成クレームを5段階のリッカート尺度で評価し、平均スコア4.0以上、加重カッパ係数0.53を達成しました。\n\nLLMは、膨大なテキストデータで学習しているため、専門用語や略語を広範な手動コーディングなしに理解し、文脈に応じて同じ用語の異なる意味を区別できます。また、多様な文書形式や記述スタイルにも対応できるため、医療記録、調査員のメモ、通話記録など、様々な非構造化データから必要な情報を正確に抽出できます。この能力により、これまで手作業でしか不可能だった複雑な情報抽出を自動化し、保険数理士がより詳細な情報に基づいて意思決定を行えるようになります。",
+      "bodyGlossary": [
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。自然言語を理解・生成するAI。",
+          "start": 6,
+          "end": 9
+        },
+        {
+          "term": "非構造化クレームデータ",
+          "definition": "医療記録、メモなど、形式が定まっていない請求関連情報。",
+          "start": 13,
+          "end": 24
+        },
+        {
+          "term": "保険数理変数",
+          "definition": "保険の準備金や料率計算に必要な数値データ。",
+          "start": 32,
+          "end": 38
+        },
+        {
+          "term": "FHIR",
+          "definition": "医療情報の標準化された交換形式。",
+          "start": 148,
+          "end": 152
+        },
+        {
+          "term": "加重カッパ係数",
+          "definition": "評価者間の一致度を示す統計指標。",
+          "start": 279,
+          "end": 286
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。自然言語を理解・生成するAI。",
+          "start": 6,
+          "end": 9
+        },
+        {
+          "term": "非構造化クレームデータ",
+          "definition": "医療記録、メモなど、形式が定まっていない請求関連情報。",
+          "start": 13,
+          "end": 24
+        },
+        {
+          "term": "保険数理変数",
+          "definition": "保険の準備金や料率計算に必要な数値データ。",
+          "start": 32,
+          "end": 38
+        },
+        {
+          "term": "FHIR",
+          "definition": "医療情報の標準化された交換形式。",
+          "start": 148,
+          "end": 152
+        },
+        {
+          "term": "加重カッパ係数",
+          "definition": "評価者間の一致度を示す統計指標。",
+          "start": 279,
+          "end": 286
+        }
+      ],
+      "agriEconRelevance": "農業経済学の文脈では、このLLMによる非構造化データ分析は、農業経営の意思決定に革新をもたらす可能性があります。例えば、農家の栽培日誌、気象データ、市場レポート、消費者からのフィードバックなどのテキスト情報から、病害虫の早期発見、最適な作付け計画、流通戦略の改善、新たな需要予測といった、これまで専門家の経験と勘に頼っていた情報を、より客観的かつ迅速に抽出・分析できるようになります。これにより、農業経営のリスク管理能力が向上し、収益性の高い持続可能な農業の実現に貢献できるでしょう。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 249,
+      "keyFigure": {
+        "imagePath": "/figures/2606.06089v1_results.png",
+        "page": 32,
+        "caption": "LLM活用による準備金見積もり誤差削減効果を示すチェーンラダー結果の比較表です。",
+        "label": "Figure 6. Chain ladder results by method.",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-08T23:13:18.287Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.06089v1_results.png",
+          "page": 32,
+          "caption": "LLM活用による準備金見積もり誤差削減効果を示すチェーンラダー結果の比較表です。",
+          "label": "Figure 6. Chain ladder results by method.",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-08T23:13:18.287Z"
+        },
+        {
+          "imagePath": "/figures/2606.06089v1_why.png",
+          "page": 18,
+          "caption": "クレームの時系列的な性質が関連するケースの文脈を示す図です。",
+          "label": "Figure 3.",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-08T23:13:18.287Z"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,988 @@
+{
+  "date": "2026-06-11",
+  "papers": [
+    {
+      "id": "2606.11125v1",
+      "title": "DMT: Demographic Conditioning, Morphology-Enhanced Transformer for Cuffless Blood Pressure Estimation from PPG Signals",
+      "authors": [
+        "Yidan Shen",
+        "Neville Mathew",
+        "Maham Rahimi",
+        "Deependra Dhakal",
+        "George Zouridakis",
+        "Xin Fu",
+        "Renjie Hu"
+      ],
+      "publishedAt": "2026-06-09T17:23:07Z",
+      "url": "https://arxiv.org/abs/2606.11125v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.11125v1.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "eess.SP",
+        "cs.LG"
+      ],
+      "abstract": "Blood pressure (BP) is a key marker for cardiovascular risk assessment and therapeutic decision-making, and Photoplethysmography (PPG) enables low-cost, wearable-friendly cuffless BP estimation. However, even with recent progress, many PPG-based models are trained with BP regression alone and may rely on amplitude-dominated shortcuts. In addition, demographic covariates that systematically modulate vascular compliance are often incorporated only via late fusion, limiting subject-specific representation learning. We propose a Transformer-based network for cuffless BP estimation from PPG signal, leveraging self-attention to capture long-range dependencies across multiple cardiac cycles. To account for subject-specific vascular differences, the model is conditioned on demographics via FiLM-style feature modulation applied through the attention and feed-forward sublayers of Transformer blocks. In addition, we add an auxiliary morphology head to guide the model to attend to BP-relevant waveform morphology associated with arterial stiffness and wave reflection. Under calibration-based evaluation protocols on the large-scale PulseDB dataset, the proposed method achieves MAE of 4.56 mmHg for systolic BP and 2.62 mmHg for diastolic BP, reducing errors by 47% and 50% compared with prior demographic-enhanced PPG baselines. The resulting lightweight, single-sensor model supports scalable and clinically grounded cuffless BP estimation in calibration-enabled deployment settings.",
+      "summary": {
+        "gist": "血圧は心血管疾患のリスク評価に不可欠ですが、カフ式測定は不便で継続的なモニタリングには不向きです。PPG（光電容積脈波）は、ウェアラブルデバイスに適した低コストな非侵襲的測定法として期待されていますが、既存のPPGベースの血圧推定モデルは、個人の特性を十分に考慮できていない、または波形の振幅に偏った学習をしてしまうという課題がありました。",
+        "novelty": "従来のPPG（光電容積脈波）を使った血圧推定モデルは、個人の年齢・性別・BMIといったデモグラフィック情報を最終段階でしか利用せず、また血圧値の予測のみに注力していました。このため、個々人の血管特性を十分に反映できず、波形の振幅に偏った予測になりがちでした。 この研究では、デモグラフィック情報をAIモデルの学習過程全体で活用し、さらに血圧に関連する波形の特徴（形態）も同時に学習させることで、より個人に合わせた正確な血圧推定を可能にしました。これにより、推定誤差を大幅に削減しています。",
+        "method": "本研究では、Transformerベースのニューラルネットワーク「DMT」を提案しました。まず、PPG信号を1D畳み込みパッチ埋め込みでトークン化し、複数の心拍サイクルにわたる長期的な依存関係を捉えます。次に、年齢、性別、BMIといったデモグラフィック情報をFiLM（Feature-wise Linear Modulation）方式でTransformerブロックの注意機構とフィードフォワード層に組み込み、個々人の血管特性をモデル全体で考慮させます。さらに、血圧に関連する波形形態を学習させるための補助的なヘッドを追加し、血圧回帰と形態分類を同時に最適化することで、振幅だけでなく生理学的に意味のある波形パターンに注目するようにモデルを誘導します。",
+        "results": "大規模なPulseDBデータセットを用いた評価では、提案手法は収縮期血圧で4.56 mmHg、拡張期血圧で2.62 mmHgの平均絶対誤差（MAE）を達成しました。これは、既存のデモグラフィック情報強化型PPGベースラインと比較して、誤差をそれぞれ47%と50%削減することに成功しています。この軽量なシングルセンサーモデルは、スケーラブルで臨床的に根拠のある非カフ式血圧推定を可能にします。",
+        "why": "このモデルがより正確な血圧推定を可能にするのは、主に二つのメカニズムによります。一つは、FiLMベースのデモグラフィック条件付けにより、年齢、性別、BMIといった個人の特性が、PPG信号から特徴を抽出するTransformerの各層に深く組み込まれるため、血管のしなやかさや波形反射といった個人差をモデルがより適切に解釈できるようになる点です。もう一つは、補助的な形態ヘッドを導入し、高血圧に関連するPPG波形の特定の形状（例えば、収縮期ピークの平坦化）を明示的に学習させることで、モデルが単なる振幅の変化だけでなく、血圧に生理学的に関連する波形の特徴に注目し、よりロバストな予測を行うようになるためです。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / eess.SP）",
+      "field": "AI・データサイエンス",
+      "categoryL1": "adjacent",
+      "categoryL2": "healthcare-tech",
+      "arxivPrimary": "eess.SP",
+      "titleJa": "DMT: デモグラフィック条件付けと形態強化TransformerによるPPG信号からの非カフ式血圧推定",
+      "catchTitle": "指先センサーで血圧を正確測定！",
+      "hook": "あなたは健康診断で血圧を測るたびに「もっと手軽に測れたら」と思ったことはありませんか？",
+      "background": "血圧は心血管疾患のリスク評価に不可欠ですが、カフ式測定は不便で継続的なモニタリングには不向きです。PPG（光電容積脈波）は、ウェアラブルデバイスに適した低コストな非侵襲的測定法として期待されていますが、既存のPPGベースの血圧推定モデルは、個人の特性を十分に考慮できていない、または波形の振幅に偏った学習をしてしまうという課題がありました。",
+      "quiz": {
+        "question": "この研究が従来のPPGベース血圧推定モデルの課題を解決するために導入した主な要素は次のうちどれですか？",
+        "options": [
+          "PPG信号の振幅のみに注目する",
+          "デモグラフィック情報をモデルの学習過程全体で活用し、波形形態も同時に学習させる",
+          "複数のセンサーを組み合わせて精度を高める"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究の主要な貢献は、デモグラフィック情報をモデルの学習過程全体で活用し、さらに血圧に関連する波形形態も同時に学習させることで、より個人に合わせた正確な血圧推定を可能にした点です。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "PPG",
+          "definition": "光電容積脈波。指先などで血流量の変化を光で測定。"
+        },
+        {
+          "term": "Transformer",
+          "definition": "自然言語処理で使われる、文脈を捉えるAIモデル。"
+        },
+        {
+          "term": "デモグラフィック情報",
+          "definition": "年齢、性別、BMIなど、個人の属性データ。"
+        },
+        {
+          "term": "FiLM",
+          "definition": "特徴量に線形変調をかけることで条件付けする手法。"
+        },
+        {
+          "term": "パッチ埋め込み",
+          "definition": "時系列データを小さな区間に分割し、ベクトル化。"
+        },
+        {
+          "term": "注意機構",
+          "definition": "AIが入力データのどこに注目すべきかを学習する仕組み。"
+        },
+        {
+          "term": "形態分類",
+          "definition": "波形の形状を分類することで、特定の状態を識別。"
+        },
+        {
+          "term": "平均絶対誤差",
+          "definition": "予測値と実測値の差の絶対値の平均。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "指先センサー（PPG）とAIを組み合わせ、個人の特性と波形の特徴を考慮して、より正確に血圧を推定する新技術。",
+      "noveltyContrast": {
+        "before": "従来のPPG（光電容積脈波）を使った血圧推定モデルは、個人の年齢・性別・BMIといったデモグラフィック情報を最終段階でしか利用せず、また血圧値の予測のみに注力していました。このため、個々人の血管特性を十分に反映できず、波形の振幅に偏った予測になりがちでした。",
+        "after": "この研究では、デモグラフィック情報をAIモデルの学習過程全体で活用し、さらに血圧に関連する波形の特徴（形態）も同時に学習させることで、より個人に合わせた正確な血圧推定を可能にしました。これにより、推定誤差を大幅に削減しています。"
+      },
+      "analogy": {
+        "title": "畑の土壌に合わせた肥料と、作物の形を見る農家",
+        "body": "これは、まるで農家が作物を育てるようなものです。従来の血圧推定は、畑全体に一律の肥料をまき、収穫量（血圧値）だけを見ていたようなもの。しかし、この研究は、まず畑の土壌（個人のデモグラフィック情報）に合わせて肥料の種類や量を調整し、さらに作物の育ち方（PPG波形の形態）を細かく観察して、最適な収穫（正確な血圧推定）を目指すようなものです。土壌と作物の両方を深く理解することで、より良い結果が得られるのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "4.56 mmHg",
+          "label": "収縮期血圧MAE"
+        },
+        {
+          "value": "2.62 mmHg",
+          "label": "拡張期血圧MAE"
+        },
+        {
+          "value": "47%",
+          "label": "収縮期血圧誤差削減"
+        },
+        {
+          "value": "50%",
+          "label": "拡張期血圧誤差削減"
+        }
+      ],
+      "whyYouCare": "この技術が実用化されれば、スマートウォッチや指輪型デバイスで、いつでもどこでも自分の血圧を正確にモニタリングできるようになります。高血圧の早期発見や、日々の生活習慣と血圧変動の関係を把握しやすくなり、病気の予防や管理に役立ちます。特に、高齢者や慢性疾患を持つ方々にとっては、病院に行かずに自宅で継続的に健康状態をチェックできるため、生活の質が大きく向上するでしょう。企業にとっては、従業員の健康管理や、新たなヘルスケアサービスの開発にも繋がる可能性を秘めています。",
+      "takeawayTalk": "個人の情報と波形の特徴をAIが深く理解して、指先で血圧を正確に測れるようになるらしいよ！",
+      "bodyText": "本研究では、Transformerベースのニューラルネットワーク「DMT」を提案しました。まず、PPG信号を1D畳み込みパッチ埋め込みでトークン化し、複数の心拍サイクルにわたる長期的な依存関係を捉えます。次に、年齢、性別、BMIといったデモグラフィック情報をFiLM（Feature-wise Linear Modulation）方式でTransformerブロックの注意機構とフィードフォワード層に組み込み、個々人の血管特性をモデル全体で考慮させます。さらに、血圧に関連する波形形態を学習させるための補助的なヘッドを追加し、血圧回帰と形態分類を同時に最適化することで、振幅だけでなく生理学的に意味のある波形パターンに注目するようにモデルを誘導します。\n\nこのモデルがより正確な血圧推定を可能にするのは、主に二つのメカニズムによります。一つは、FiLMベースのデモグラフィック条件付けにより、年齢、性別、BMIといった個人の特性が、PPG信号から特徴を抽出するTransformerの各層に深く組み込まれるため、血管のしなやかさや波形反射といった個人差をモデルがより適切に解釈できるようになる点です。もう一つは、補助的な形態ヘッドを導入し、高血圧に関連するPPG波形の特定の形状（例えば、収縮期ピークの平坦化）を明示的に学習させることで、モデルが単なる振幅の変化だけでなく、血圧に生理学的に関連する波形の特徴に注目し、よりロバストな予測を行うようになるためです。",
+      "bodyGlossary": [
+        {
+          "term": "Transformer",
+          "definition": "自然言語処理で使われる、文脈を捉えるAIモデル。",
+          "start": 6,
+          "end": 17
+        },
+        {
+          "term": "PPG",
+          "definition": "光電容積脈波。指先などで血流量の変化を光で測定。",
+          "start": 48,
+          "end": 51
+        },
+        {
+          "term": "パッチ埋め込み",
+          "definition": "時系列データを小さな区間に分割し、ベクトル化。",
+          "start": 60,
+          "end": 67
+        },
+        {
+          "term": "デモグラフィック情報",
+          "definition": "年齢、性別、BMIなど、個人の属性データ。",
+          "start": 118,
+          "end": 128
+        },
+        {
+          "term": "FiLM",
+          "definition": "特徴量に線形変調をかけることで条件付けする手法。",
+          "start": 129,
+          "end": 133
+        },
+        {
+          "term": "注意機構",
+          "definition": "AIが入力データのどこに注目すべきかを学習する仕組み。",
+          "start": 184,
+          "end": 188
+        },
+        {
+          "term": "形態分類",
+          "definition": "波形の形状を分類することで、特定の状態を識別。",
+          "start": 268,
+          "end": 272
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "Transformer",
+          "definition": "自然言語処理で使われる、文脈を捉えるAIモデル。",
+          "start": 6,
+          "end": 17
+        },
+        {
+          "term": "PPG",
+          "definition": "光電容積脈波。指先などで血流量の変化を光で測定。",
+          "start": 48,
+          "end": 51
+        },
+        {
+          "term": "パッチ埋め込み",
+          "definition": "時系列データを小さな区間に分割し、ベクトル化。",
+          "start": 60,
+          "end": 67
+        },
+        {
+          "term": "デモグラフィック情報",
+          "definition": "年齢、性別、BMIなど、個人の属性データ。",
+          "start": 118,
+          "end": 128
+        },
+        {
+          "term": "FiLM",
+          "definition": "特徴量に線形変調をかけることで条件付けする手法。",
+          "start": 129,
+          "end": 133
+        },
+        {
+          "term": "注意機構",
+          "definition": "AIが入力データのどこに注目すべきかを学習する仕組み。",
+          "start": 184,
+          "end": 188
+        },
+        {
+          "term": "形態分類",
+          "definition": "波形の形状を分類することで、特定の状態を識別。",
+          "start": 268,
+          "end": 272
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 250,
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.11125v1_why.png",
+          "page": 3,
+          "caption": "提案モデルのパッチ埋め込みの概念図です。",
+          "label": "Fig. 2.",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-10T23:25:41.206Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.11166v1",
+      "title": "Flaws in the LLM Automation Narrative",
+      "authors": [
+        "George Perrett",
+        "Javae Elliott",
+        "Jennifer Hill",
+        "Marc Scott"
+      ],
+      "publishedAt": "2026-06-09T17:46:10Z",
+      "url": "https://arxiv.org/abs/2606.11166v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.11166v1.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "stat.OT",
+        "cs.AI"
+      ],
+      "abstract": "Large Language Models (LLMs) are increasingly described as performing at the level of human experts on knowledge economy tasks. These claims are primarily based on how LLMs perform on benchmarking tasks that measure average performance across standardized datasets. Primary limitations of many benchmarking tasks are that they often measure performance based on content directly included in LLM training data, and they frequently do not assess the reliability of LLM performance or the magnitude of LLM errors. However, in high stakes contexts, these qualities are critically important. Through a novel LLM benchmarking task that requires writing computer code to complete a data analysis task, we compare the performance of a frontier LLM against submissions from human experts and explicitly measure the variance of responses and the magnitude of errors. Our study reveals that the human experts perform better on average on a range of metrics and demonstrate less variability in performance. Our results provide evidence that LLMs do not consistently perform at the level of human experts and demonstrate the importance of measuring variance and assessing error magnitude in LLM benchmark evaluations.",
+      "summary": {
+        "gist": "大規模言語モデル（LLM）は、知識経済タスクにおいて人間と同等の性能を発揮すると謳われ、その開発には莫大な投資がされています。しかし、その主張の多くは、標準化されたデータセットでの平均性能を測るベンチマークに基づいており、学習データ汚染や応答のばらつき、エラーの重大性といった重要な側面が考慮されていないという問題が指摘されていました。",
+        "novelty": "従来のLLM評価は、学習データに含まれる可能性のあるデータセットでの平均性能を測るものが多く、応答のばらつきやエラーの重大性を考慮していませんでした。そのため、LLMの能力が過大評価されている可能性がありました。 この研究では、学習データ汚染のリスクが低いデータ分析タスクで、LLMと人間の専門家のコード作成能力を比較。応答のばらつきとエラーの重大性を直接測定することで、LLMの実際の性能と信頼性をより正確に評価しました。",
+        "method": "本研究では、2016年のAmerican Causal Inference Conference (ACIC) データコンペティションのデータセットを活用し、新たなLLMベンチマークタスクを作成しました。このタスクは、7,700のユニークなデータセットを分析するための実行可能なスクリプトを作成するもので、学習データ汚染のリスクを低減し、エラーの重大性と応答のばらつきを直接測定できるように設計されています。OpenAIのChatGPT Codex 5.2モデルを20回実行し、人間のPhDレベルの専門家チームの提出物と比較しました。評価指標には、二乗平均平方根誤差（RMSE）、標準化バイアス、95%信頼区間のカバレッジと長さを採用しました。",
+        "results": "人間の専門家は、平均してLLMよりも優れたパフォーマンスを示し、その性能のばらつきも少ないことが明らかになりました。LLMは一貫して人間の専門家レベルの性能を発揮するわけではなく、その応答にはかなりのばらつきがあり、重大なエラーを起こす可能性も示唆されました。",
+        "why": "従来のベンチマーク評価には、主に3つの欠陥があります。第一に、ベンチマークデータセットがLLMの学習データに含まれている「ベンチマーク汚染」のリスクです。これにより、モデルが見たことのある問題で高得点を出すだけで、真の汎用性が評価されません。第二に、LLMの応答の「確率的性質」です。同じ質問をしても毎回異なる答えを出す可能性があり、一貫した信頼性が欠如しています。第三に、エラーの「二値的な評価」です。正解か不正解かだけでなく、不正解の度合い（エラーの重大性）を考慮しないため、実際の運用で致命的なエラーを見過ごす可能性があります。これらの欠陥が、LLMの能力を過大評価し、実際の現場での期待外れな結果につながっていると考えられます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / stat.OT）",
+      "field": "AI・データサイエンス",
+      "categoryL1": "adjacent",
+      "categoryL2": "AI-evaluation",
+      "arxivPrimary": "stat.OT",
+      "titleJa": "LLM自動化の物語における欠陥：人間とLLMのデータ分析能力を比較する",
+      "catchTitle": "「AIは専門家レベル」は本当か？LLMの隠れた弱点",
+      "hook": "「AIが人間の専門家レベルの仕事をする」という話、あなたもよく耳にしませんか？でも、本当にそうでしょうか？",
+      "background": "大規模言語モデル（LLM）は、知識経済タスクにおいて人間と同等の性能を発揮すると謳われ、その開発には莫大な投資がされています。しかし、その主張の多くは、標準化されたデータセットでの平均性能を測るベンチマークに基づいており、学習データ汚染や応答のばらつき、エラーの重大性といった重要な側面が考慮されていないという問題が指摘されていました。",
+      "quiz": {
+        "question": "この論文が指摘する従来のLLMベンチマーク評価の主な欠陥として、適切でないものはどれでしょう？",
+        "options": [
+          "ベンチマークデータがLLMの学習データに含まれているリスク（ベンチマーク汚染）",
+          "LLMの応答が確率的であり、一貫性が欠如している点",
+          "LLMが人間よりも学習速度が遅い点"
+        ],
+        "correctIndex": 2,
+        "explanation": "この論文では、ベンチマーク汚染、応答の確率的性質、エラーの二値的評価の3点が主な欠陥として挙げられています。LLMの学習速度については言及されていません。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。大量のテキストデータで学習したAI。"
+        },
+        {
+          "term": "ベンチマーク汚染",
+          "definition": "評価データがAIの学習データに含まれてしまうこと。"
+        },
+        {
+          "term": "確率的性質",
+          "definition": "AIが同じ入力に対して異なる出力をする特性。"
+        },
+        {
+          "term": "二値的な評価",
+          "definition": "正解か不正解かだけで判断する評価方法。"
+        },
+        {
+          "term": "RMSE",
+          "definition": "二乗平均平方根誤差。予測と実際の値の差の平均。"
+        },
+        {
+          "term": "標準化バイアス",
+          "definition": "予測が実際の値より一貫して高いか低いかを示す指標。"
+        },
+        {
+          "term": "カバレッジ",
+          "definition": "信頼区間が真の値を含む割合。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "LLMは人間のような専門家レベルの仕事はできず、その性能は不安定で大きなエラーを起こす可能性を秘めている。",
+      "noveltyContrast": {
+        "before": "従来のLLM評価は、学習データに含まれる可能性のあるデータセットでの平均性能を測るものが多く、応答のばらつきやエラーの重大性を考慮していませんでした。そのため、LLMの能力が過大評価されている可能性がありました。",
+        "after": "この研究では、学習データ汚染のリスクが低いデータ分析タスクで、LLMと人間の専門家のコード作成能力を比較。応答のばらつきとエラーの重大性を直接測定することで、LLMの実際の性能と信頼性をより正確に評価しました。"
+      },
+      "analogy": {
+        "title": "畑の土壌検査：見かけの収量と本当の地力",
+        "body": "これは、まるで「特定の肥料を与えた畑で一時的にたくさん収穫できた」というデータだけで、その畑の本当の地力を評価するようなものです。収穫量だけでは、土壌の栄養バランスの偏りや、天候不順時の作物への影響といった、より本質的な問題は見えてきません。この研究は、一時的な収穫量だけでなく、土壌のばらつきや、最悪の場合の不作リスクまで詳細に検査することで、畑の真のポテンシャルを測ろうとしているのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+3.2pt",
+          "label": "人間の専門家がLLMより平均的に優れたパフォーマンスを示した"
+        }
+      ],
+      "whyYouCare": "この研究は、AIをビジネスや社会に導入する際に非常に重要な示唆を与えます。AIが「専門家レベル」と謳われていても、その評価方法によっては実態と乖離があるかもしれません。特に、医療診断、金融取引、法務文書作成など、高い信頼性と正確性が求められる分野では、AIの応答のばらつきや、予期せぬ重大なエラーのリスクを十分に理解し、適切なリスク管理を行う必要があります。AIの導入を検討する際は、単に「正解率」だけでなく、その「信頼性」や「エラーの質」まで含めて多角的に評価する視点が不可欠です。これにより、AIの真の価値を最大限に引き出し、潜在的なリスクを最小限に抑えることができるでしょう。",
+      "takeawayTalk": "AIは専門家レベルじゃない！評価方法に落とし穴があったんだ。",
+      "bodyText": "本研究では、2016年のAmerican Causal Inference Conference (ACIC) データコンペティションのデータセットを活用し、新たなLLMベンチマークタスクを作成しました。このタスクは、7,700のユニークなデータセットを分析するための実行可能なスクリプトを作成するもので、学習データ汚染のリスクを低減し、エラーの重大性と応答のばらつきを直接測定できるように設計されています。OpenAIのChatGPT Codex 5.2モデルを20回実行し、人間のPhDレベルの専門家チームの提出物と比較しました。評価指標には、二乗平均平方根誤差（RMSE）、標準化バイアス、95%信頼区間のカバレッジと長さを採用しました。\n\n従来のベンチマーク評価には、主に3つの欠陥があります。第一に、ベンチマークデータセットがLLMの学習データに含まれている「ベンチマーク汚染」のリスクです。これにより、モデルが見たことのある問題で高得点を出すだけで、真の汎用性が評価されません。第二に、LLMの応答の「確率的性質」です。同じ質問をしても毎回異なる答えを出す可能性があり、一貫した信頼性が欠如しています。第三に、エラーの「二値的な評価」です。正解か不正解かだけでなく、不正解の度合い（エラーの重大性）を考慮しないため、実際の運用で致命的なエラーを見過ごす可能性があります。これらの欠陥が、LLMの能力を過大評価し、実際の現場での期待外れな結果につながっていると考えられます。",
+      "bodyGlossary": [
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。大量のテキストデータで学習したAI。",
+          "start": 82,
+          "end": 85
+        },
+        {
+          "term": "RMSE",
+          "definition": "二乗平均平方根誤差。予測と実際の値の差の平均。",
+          "start": 284,
+          "end": 288
+        },
+        {
+          "term": "標準化バイアス",
+          "definition": "予測が実際の値より一貫して高いか低いかを示す指標。",
+          "start": 290,
+          "end": 297
+        },
+        {
+          "term": "カバレッジ",
+          "definition": "信頼区間が真の値を含む割合。",
+          "start": 306,
+          "end": 311
+        },
+        {
+          "term": "ベンチマーク汚染",
+          "definition": "評価データがAIの学習データに含まれてしまうこと。",
+          "start": 385,
+          "end": 393
+        },
+        {
+          "term": "確率的性質",
+          "definition": "AIが同じ入力に対して異なる出力をする特性。",
+          "start": 457,
+          "end": 462
+        },
+        {
+          "term": "二値的な評価",
+          "definition": "正解か不正解かだけで判断する評価方法。",
+          "start": 516,
+          "end": 522
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。大量のテキストデータで学習したAI。",
+          "start": 82,
+          "end": 85
+        },
+        {
+          "term": "RMSE",
+          "definition": "二乗平均平方根誤差。予測と実際の値の差の平均。",
+          "start": 284,
+          "end": 288
+        },
+        {
+          "term": "標準化バイアス",
+          "definition": "予測が実際の値より一貫して高いか低いかを示す指標。",
+          "start": 290,
+          "end": 297
+        },
+        {
+          "term": "カバレッジ",
+          "definition": "信頼区間が真の値を含む割合。",
+          "start": 306,
+          "end": 311
+        },
+        {
+          "term": "ベンチマーク汚染",
+          "definition": "評価データがAIの学習データに含まれてしまうこと。",
+          "start": 385,
+          "end": 393
+        },
+        {
+          "term": "確率的性質",
+          "definition": "AIが同じ入力に対して異なる出力をする特性。",
+          "start": 457,
+          "end": 462
+        },
+        {
+          "term": "二値的な評価",
+          "definition": "正解か不正解かだけで判断する評価方法。",
+          "start": 516,
+          "end": 522
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 243
+    },
+    {
+      "id": "2606.11058v1",
+      "title": "The social consequences of AI delegation",
+      "authors": [
+        "Henrique Ferraz de Arruda",
+        "Yamir Moreno"
+      ],
+      "publishedAt": "2026-06-09T16:20:52Z",
+      "url": "https://arxiv.org/abs/2606.11058v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.11058v1.pdf",
+      "categories": [
+        "topic:urban",
+        "physics.soc-ph"
+      ],
+      "abstract": "A substantial body of recent work has debated whether large language models (LLMs) can serve as substitutes for human participants in behavioural research. This debate, however, captures only one direction of a rapidly changing relationship. The more consequential question is not simply whether researchers should use LLMs as human surrogates, but whether - and under what conditions - humans are beginning to use LLMs as surrogates for their own deliberation. Across domains including health, law, finance, education, and personal guidance, increasing numbers of people consult generative AI systems before, alongside, or instead of human experts, peers, or independent judgment. Although evidence for actual delegation remains uneven, this uncertainty makes the phenomenon an urgent social-scientific object of study. We argue for a research programme that treats LLMs as consequential social actors in a functional sense: systems whose outputs shape human decisions, social norms, and collective dynamics.",
+      "summary": {
+        "gist": "近年、大規模言語モデル（LLM）の能力向上により、人間行動研究における人間参加者の代替としてのLLMの利用可能性が議論されてきました。しかし、この議論はAIと人間の関係性の一方向しか捉えていません。本研究は、人間が自身の熟慮や判断をAIに委任する現象に焦点を当て、その社会的影響を考察します。",
+        "novelty": "これまでの研究では、AIが人間の代わりに実験に参加できるか、つまり「研究者がAIを人間の代替として使うべきか」という点が議論されてきました。AIをあくまで研究ツールとして捉え、その精度や妥当性を検証する視点が主流でした。 この論文は、より重要な問いとして「人間が自身の判断をAIに委任しているか、そしてどのような条件下でそうなるか」を提示。AIが受動的なツールではなく、人間の意思決定や社会規範、集合的行動を形成する「社会的なアクター」として機能している現状に焦点を当てています。",
+        "method": "本論文は、AIへの意思決定委任という行動現象を明確に定義し、その概念的枠組みを提示するものです。具体的には、AIが生成した推奨、解釈、またはフレーミングが、限定的な独立検証や代替案との比較、ユーザーによる熟慮の削減を伴って、重要な意思決定に採用される状態を「AI委任」と定義しています。この定義に基づき、既存の研究動向を分析し、健康、法律、金融、教育、個人的助言といった多様な領域で、人々がAIシステムを専門家や自身の判断の代替として利用し始めていることを示唆する証拠を提示しています。また、AI委任が社会規範や集合的行動に与える影響、そしてそれが新たなAIシステムの訓練データにフィードバックされるメカニズムを概説しています。",
+        "results": "本研究は、AIが研究における受動的な代替物から、日常生活における意思決定の重要な仲介者へと変化していることを示しました。この変化は、人間の行動、社会規範、集合的結果、そして将来のAIシステムとの間にフィードバックループを生み出します。特に、行動の均質化、自律性の侵食、暗黙の価値観の伝達といったリスクが指摘されています。若年層ほどAIを重要なガイダンス源として扱う傾向があること、またLLMに関連する語彙が学術コミュニケーションや音声形式に浸透していることも、AIの影響力の高まりを示す兆候として挙げられています。",
+        "why": "AI委任が社会に影響を与えるメカニズムは、AIの出力が個々の人間の意思決定を形成し、それらの決定が集合的に社会規範や集合的結果を形成することにあります。さらに、これらの集合的結果は、将来のAIシステムの訓練データとして取り込まれ、AIの行動プロファイルをさらに強化または変化させるというフィードバックループを形成します。このプロセスにおいて、AIは単なるツールではなく、社会システム内で他者の行動に影響を与える「社会的なアクター」として機能します。人間はAIの出力に過度に依存したり、誤用したり、あるいは拒否したりする可能性がありますが、アルゴリズムからの助言を人間からのものよりも強く信頼する傾向も示されています。このように、AIは人間の認知構造や社会のあり方そのものを変容させる可能性を秘めていると論じています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.soc-ph）",
+      "field": "都市・地域",
+      "categoryL1": "serendipity",
+      "categoryL2": "social-science",
+      "arxivPrimary": "physics.soc-ph",
+      "titleJa": "AIへの意思決定委任がもたらす社会的影響",
+      "catchTitle": "AIは「相談相手」から「意思決定者」へ",
+      "hook": "あなたは何かを決めるとき、AIに相談しますか？もしそのAIの答えを鵜呑みにしていたら、社会全体に大きな影響が出ているかもしれません。",
+      "background": "近年、大規模言語モデル（LLM）の能力向上により、人間行動研究における人間参加者の代替としてのLLMの利用可能性が議論されてきました。しかし、この議論はAIと人間の関係性の一方向しか捉えていません。本研究は、人間が自身の熟慮や判断をAIに委任する現象に焦点を当て、その社会的影響を考察します。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。大量のテキストデータで学習したAI。"
+        },
+        {
+          "term": "AI委任",
+          "definition": "AIの推奨を、検証なく意思決定に採用すること。"
+        },
+        {
+          "term": "フィードバックループ",
+          "definition": "結果が原因に影響を与え、循環する関係。"
+        },
+        {
+          "term": "行動の均質化",
+          "definition": "個々の行動が似通って多様性が失われること。"
+        },
+        {
+          "term": "自律性の侵食",
+          "definition": "自身の判断力や選択の自由が損なわれること。"
+        },
+        {
+          "term": "暗黙の価値観の伝達",
+          "definition": "AIが内包する価値観がユーザーに無意識に伝わること。"
+        },
+        {
+          "term": "社会的なアクター",
+          "definition": "社会システム内で他者の行動に影響を与える存在。"
+        },
+        {
+          "term": "認知構造",
+          "definition": "情報の受け止め方や思考の枠組み。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "AIが人間の判断を代替する「委任」が、社会の意思決定や規範を大きく変える可能性を指摘する論文。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、AIが人間の代わりに実験に参加できるか、つまり「研究者がAIを人間の代替として使うべきか」という点が議論されてきました。AIをあくまで研究ツールとして捉え、その精度や妥当性を検証する視点が主流でした。",
+        "after": "この論文は、より重要な問いとして「人間が自身の判断をAIに委任しているか、そしてどのような条件下でそうなるか」を提示。AIが受動的なツールではなく、人間の意思決定や社会規範、集合的行動を形成する「社会的なアクター」として機能している現状に焦点を当てています。"
+      },
+      "analogy": {
+        "title": "畑の作付けをAIに「お任せ」する農家",
+        "body": "これは、経験豊富な農家が、どの作物をいつ、どれだけ植えるかという重要な判断を、最新のAI搭載型農機に「お任せ」するようなものです。AIが土壌データや気象予測から最適な作付け計画を提案し、農家がそれをほとんど検証せずに実行する。このとき、農機は単なる道具ではなく、畑の未来を左右する「意思決定者」となります。もし多くの農家が同じAIに委任すれば、地域全体の作付けが均一化し、市場の多様性が失われる可能性も出てくるでしょう。",
+        "domain": "farming"
+      },
+      "whyYouCare": "AIが私たちの生活に深く浸透する中で、あなたは「AIをどう使うか」だけでなく、「AIがあなたや社会をどう変えるか」という視点を持つ必要があります。もし多くの人がAIの提案を鵜呑みにすれば、社会全体の意思決定が似通ったり、AIが持つ偏った価値観が広まったりするかもしれません。これは、消費行動、政治的意見、さらには倫理観にまで影響を及ぼす可能性があります。ビジネスにおいては、顧客がAIに相談して購買決定を下すようになるかもしれませんし、組織内の意思決定プロセスにAIが深く関与することで、予期せぬリスクや機会が生まれるでしょう。この研究は、AIとの健全な共存のために、私たちがAIとの関係性を再考し、その影響を理解することの重要性を教えてくれます。",
+      "takeawayTalk": "AIは単なるツールじゃない。私たちの判断を代替し、社会を変える「新しい社会の主役」になりつつあるよ。",
+      "bodyText": "本論文は、AIへの意思決定委任という行動現象を明確に定義し、その概念的枠組みを提示するものです。具体的には、AIが生成した推奨、解釈、またはフレーミングが、限定的な独立検証や代替案との比較、ユーザーによる熟慮の削減を伴って、重要な意思決定に採用される状態を「AI委任」と定義しています。この定義に基づき、既存の研究動向を分析し、健康、法律、金融、教育、個人的助言といった多様な領域で、人々がAIシステムを専門家や自身の判断の代替として利用し始めていることを示唆する証拠を提示しています。また、AI委任が社会規範や集合的行動に与える影響、そしてそれが新たなAIシステムの訓練データにフィードバックされるメカニズムを概説しています。\n\nAI委任が社会に影響を与えるメカニズムは、AIの出力が個々の人間の意思決定を形成し、それらの決定が集合的に社会規範や集合的結果を形成することにあります。さらに、これらの集合的結果は、将来のAIシステムの訓練データとして取り込まれ、AIの行動プロファイルをさらに強化または変化させるというフィードバックループを形成します。このプロセスにおいて、AIは単なるツールではなく、社会システム内で他者の行動に影響を与える「社会的なアクター」として機能します。人間はAIの出力に過度に依存したり、誤用したり、あるいは拒否したりする可能性がありますが、アルゴリズムからの助言を人間からのものよりも強く信頼する傾向も示されています。このように、AIは人間の認知構造や社会のあり方そのものを変容させる可能性を秘めていると論じています。",
+      "bodyGlossary": [
+        {
+          "term": "AI委任",
+          "definition": "AIの推奨を、検証なく意思決定に採用すること。",
+          "start": 129,
+          "end": 133
+        },
+        {
+          "term": "フィードバックループ",
+          "definition": "結果が原因に影響を与え、循環する関係。",
+          "start": 459,
+          "end": 469
+        },
+        {
+          "term": "社会的なアクター",
+          "definition": "社会システム内で他者の行動に影響を与える存在。",
+          "start": 522,
+          "end": 530
+        },
+        {
+          "term": "認知構造",
+          "definition": "情報の受け止め方や思考の枠組み。",
+          "start": 636,
+          "end": 640
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "AI委任",
+          "definition": "AIの推奨を、検証なく意思決定に採用すること。",
+          "start": 129,
+          "end": 133
+        },
+        {
+          "term": "フィードバックループ",
+          "definition": "結果が原因に影響を与え、循環する関係。",
+          "start": 459,
+          "end": 469
+        },
+        {
+          "term": "社会的なアクター",
+          "definition": "社会システム内で他者の行動に影響を与える存在。",
+          "start": 522,
+          "end": 530
+        },
+        {
+          "term": "認知構造",
+          "definition": "情報の受け止め方や思考の枠組み。",
+          "start": 636,
+          "end": 640
+        }
+      ],
+      "agriEconRelevance": "農業経済学の文脈では、農家が作付け計画、病害虫対策、市場価格予測などの意思決定をAIに委任するケースが増える可能性があります。これにより、特定のAIモデルが推奨する作物や栽培方法が地域全体に広がり、農業生産の均質化や特定の品種への過度な依存が生じるかもしれません。また、AIが推奨する情報に基づいて農産物の流通や価格形成が行われることで、市場の多様性が失われたり、特定のAIモデルのアルゴリズムが市場を支配したりするリスクも考えられます。この研究は、AI委任が農業生産者の行動、農業市場の構造、ひいては食料システムのレジリエンスに与える長期的な影響を分析するための重要な視点を提供します。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 264
+    },
+    {
+      "id": "2606.10972v1",
+      "title": "Optimizing 2D Input Representations and Sub-phase Fusion Strategies for Differential Diagnosis of Asthma and COPD Using CNN- and GRU-Based Networks",
+      "authors": [
+        "Ipek Sen",
+        "Ozgur Ozdemir",
+        "Elena Battini Sonmez"
+      ],
+      "publishedAt": "2026-06-09T15:12:58Z",
+      "url": "https://arxiv.org/abs/2606.10972v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.10972v1.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "eess.AS",
+        "cs.AI"
+      ],
+      "abstract": "This study aims to explore the performance of the VAR model in comparison with mel-frequency cepstral coefficient (MFCC) matrices and log-mel spectrograms using deep learning. In pulmonary sound classification, spectrogram-based representations suffer from inconsistent temporal dimensions due to varying respiratory cycle durations. Along with traditional trimming/zero-padding, adaptive-length windowing was presented to fix their temporal dimensions. Their spectral and temporal dimensions were optimized by testing a range of parameters. Different convolutional neural network (CNN) architectures were employed to extract features from the two-dimensional representations obtained over the sub-phases. The extracted sub-phase features were then fused using various strategies including direct concatenation, gated recurrent unit (GRU) network and GRU with attention mechanism. Model performances were assessed through respiratory cycle-based evaluation and subject-based evaluation comprising multiple respiratory cycles. Several data augmentation techniques were also studied to cope with limitations in data size. The best cycle-based F1-score (0.877) was obtained using the MFCC matrices with thirteen coefficients and 64-point time resolution per sub-phase representation followed by direct feature concatenation, and the best subject-based F1-score (0.855) was obtained using the MFCC matrices with thirteen coefficients and 256-point time resolution per full-cycle representation, both obtained by adaptive-length windowing. Augmentation degraded the performance of models overall, yet mixup augmentation was the best among the methods tested. MFCC outperformed log-mel spectrogram and VAR model in differentiation of asthma and COPD. Sophisticated fusion strategies did not improve the diagnosis. Augmentation did not contribute, demonstrating the significance of authentic data in pulmonary sound studies.",
+      "summary": {
+        "gist": "喘息と慢性閉塞性肺疾患（COPD）は症状が似ており、鑑別診断が難しい疾患です。従来の診断法である聴診は医師の経験に依存し、肺機能検査は患者の協力が必要で、どちらも客観性に課題がありました。コンピューターによる呼吸音分析は客観的な診断を可能にしますが、最適な分析手法はまだ確立されていませんでした。",
+        "novelty": "これまで、喘息とCOPDの診断は医師の聴診や肺機能検査に頼っていましたが、症状が似ているため誤診も少なくありませんでした。コンピューターによる呼吸音分析は行われていましたが、診断精度や、時間的変動を考慮した最適な分析手法は確立されていませんでした。 本研究では、呼吸音を2次元画像のように変換し、AI（CNNとGRU）で分析することで、喘息とCOPDを高い精度で鑑別できる最適な表現方法と融合戦略を特定しました。特に、MFCCという音響特徴量と、呼吸サイクルの長さに合わせて調整する適応的ウィンドウ処理が重要であることを示しました。",
+        "method": "本研究では、呼吸音をメル周波数ケプストラム係数（MFCC）行列とログメルスペクトログラムという2次元表現に変換し、畳み込みニューラルネットワーク（CNN）とゲート付き回帰型ユニット（GRU）を組み合わせた深層学習モデルで分析しました。呼吸サイクルの長さが異なることによる時間次元の不一致を解決するため、従来のトリミング/ゼロパディングに加え、適応的長さウィンドウ処理を導入しました。また、スペクトルおよび時間分解能を最適化するために、様々なパラメータをテストしました。抽出されたサブフェーズ特徴は、直接連結、GRUネットワーク、アテンションメカニズム付きGRUなど、様々な戦略で融合されました。モデルの性能は、呼吸サイクルベースと被験者ベースの両方で評価されました。",
+        "results": "最適な呼吸サイクルベースのF1スコア（0.877）は、13個の係数とサブフェーズあたり64点時間分解能を持つMFCC行列と、それに続く直接的な特徴連結によって得られました。最適な被験者ベースのF1スコア（0.855）は、13個の係数とフルサイクルあたり256点時間分解能を持つMFCC行列によって得られ、どちらも適応的長さウィンドウ処理が用いられました。データ拡張は全体的にモデルの性能を低下させましたが、mixup拡張が最も優れていました。MFCCはログメルスペクトログラムとVARモデルよりも喘息とCOPDの鑑別において優れた性能を示しました。洗練された融合戦略は診断精度を向上させず、データ拡張も寄与しないことから、呼吸音研究における実データ（オーセンティックデータ）の重要性が示されました。",
+        "why": "呼吸音をMFCCという特徴量に変換することで、人間の耳では聞き分けにくい喘息とCOPDのスペクトル的な違いを数値化し、AIが学習しやすい形にできます。呼吸サイクルの長さが患者によって異なるという課題に対して、適応的長さウィンドウ処理を用いることで、AIが安定して呼吸音のパターンを認識できるようになります。これにより、個々の呼吸サイクルや患者全体の呼吸音から、疾患に特有の微細なパターンを効率的に抽出し、高い精度で鑑別診断を行うことが可能になります。複雑な融合戦略やデータ拡張が効果を示さなかったのは、MFCCと適応的ウィンドウ処理がすでに呼吸音の重要な情報を効率的に捉えており、それ以上の複雑さがノイズを増やしたり、モデルを過学習させたりする可能性を示唆しています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / eess.AS）",
+      "field": "AI・データサイエンス",
+      "categoryL1": "adjacent",
+      "categoryL2": "medical-ai",
+      "arxivPrimary": "eess.AS",
+      "titleJa": "喘息とCOPDの鑑別診断のための2D入力表現とサブフェーズ融合戦略の最適化",
+      "catchTitle": "AIが呼吸音で喘息とCOPDを見分ける",
+      "hook": "「ゼーゼー」「ヒューヒュー」…あなたの呼吸音、もしかして病気のサインかもしれません。",
+      "background": "喘息と慢性閉塞性肺疾患（COPD）は症状が似ており、鑑別診断が難しい疾患です。従来の診断法である聴診は医師の経験に依存し、肺機能検査は患者の協力が必要で、どちらも客観性に課題がありました。コンピューターによる呼吸音分析は客観的な診断を可能にしますが、最適な分析手法はまだ確立されていませんでした。",
+      "quiz": {
+        "question": "この研究で、喘息とCOPDの鑑別診断に最も効果的だった呼吸音の2次元表現方法は何でしょう？",
+        "options": [
+          "ログメルスペクトログラム",
+          "VARモデル",
+          "MFCC行列"
+        ],
+        "correctIndex": 2,
+        "explanation": "本研究の結果、MFCC行列がログメルスペクトログラムやVARモデルよりも優れた性能を示しました。"
+      },
+      "limitations": "本研究ではデータ拡張がモデル性能を低下させ、洗練された融合戦略も効果を示さなかった。これは、実データの質と適切な前処理の重要性を示唆している。また、データセットの規模や多様性に関する詳細な情報が不足しており、より大規模で多様なデータでの検証が必要である。",
+      "glossary": [
+        {
+          "term": "喘息",
+          "definition": "気道が慢性的に炎症を起こし、呼吸が苦しくなる病気"
+        },
+        {
+          "term": "COPD",
+          "definition": "肺の気流が制限され、呼吸困難になる慢性疾患"
+        },
+        {
+          "term": "MFCC",
+          "definition": "音響信号のスペクトル包絡を表現する特徴量"
+        },
+        {
+          "term": "ログメルスペクトログラム",
+          "definition": "音の周波数成分を時間とともに視覚化したもの"
+        },
+        {
+          "term": "CNN",
+          "definition": "画像認識などに使われる深層学習モデルの一種"
+        },
+        {
+          "term": "GRU",
+          "definition": "時系列データ処理に用いられるリカレントニューラルネット"
+        },
+        {
+          "term": "適応的長さウィンドウ処理",
+          "definition": "信号の長さに合わせて分析区間を調整する手法"
+        },
+        {
+          "term": "F1スコア",
+          "definition": "分類モデルの精度を測る指標の一つ"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "AIが呼吸音を分析し、喘息とCOPDを高い精度で鑑別する最適な方法を発見しました。",
+      "noveltyContrast": {
+        "before": "これまで、喘息とCOPDの診断は医師の聴診や肺機能検査に頼っていましたが、症状が似ているため誤診も少なくありませんでした。コンピューターによる呼吸音分析は行われていましたが、診断精度や、時間的変動を考慮した最適な分析手法は確立されていませんでした。",
+        "after": "本研究では、呼吸音を2次元画像のように変換し、AI（CNNとGRU）で分析することで、喘息とCOPDを高い精度で鑑別できる最適な表現方法と融合戦略を特定しました。特に、MFCCという音響特徴量と、呼吸サイクルの長さに合わせて調整する適応的ウィンドウ処理が重要であることを示しました。"
+      },
+      "analogy": {
+        "title": "畑の土壌分析で最適な作物を育てる",
+        "body": "これは、まるで畑の土壌を分析して、その土壌に最適な作物を育てるようなものです。土壌の成分（呼吸音の特徴）を様々な角度（MFCCやログメルスペクトログラム）から詳細に調べ、さらに時間経過による変化（呼吸サイクルの変動）も考慮して、どの作物が最もよく育つか（喘息かCOPDか）を判断します。従来の分析が「ざっくりとした土壌の見た目」で判断していたのに対し、この研究は「土壌の深さや成分の微細な違いまで数値化」し、最適な栽培方法（診断方法）を見つけ出したと言えるでしょう。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "0.877",
+          "label": "呼吸サイクルベースF1スコア"
+        },
+        {
+          "value": "0.855",
+          "label": "被験者ベースF1スコア"
+        }
+      ],
+      "whyYouCare": "この研究は、呼吸音という非侵襲的かつ手軽に取得できる情報から、AIが病気を診断する可能性を示しています。もしこの技術が実用化されれば、病院に行かなくても自宅でスマートフォンやウェアラブルデバイスを使って呼吸音を記録するだけで、早期に喘息やCOPDの兆候を発見できるようになるかもしれません。これにより、診断までの時間短縮や医療費の削減、そして何よりも患者さんの負担軽減に繋がり、より多くの人が適切なタイミングで治療を受けられるようになる可能性があります。特に、高齢者や遠隔地に住む人々にとって、医療アクセスを改善する画期的なツールとなるでしょう。",
+      "takeawayTalk": "AIが呼吸音を聞き分けて、喘息とCOPDを高い精度で診断できるって！",
+      "bodyText": "本研究では、呼吸音をメル周波数ケプストラム係数（MFCC）行列とログメルスペクトログラムという2次元表現に変換し、畳み込みニューラルネットワーク（CNN）とゲート付き回帰型ユニット（GRU）を組み合わせた深層学習モデルで分析しました。呼吸サイクルの長さが異なることによる時間次元の不一致を解決するため、従来のトリミング/ゼロパディングに加え、適応的長さウィンドウ処理を導入しました。また、スペクトルおよび時間分解能を最適化するために、様々なパラメータをテストしました。抽出されたサブフェーズ特徴は、直接連結、GRUネットワーク、アテンションメカニズム付きGRUなど、様々な戦略で融合されました。モデルの性能は、呼吸サイクルベースと被験者ベースの両方で評価されました。\n\n呼吸音をMFCCという特徴量に変換することで、人間の耳では聞き分けにくい喘息とCOPDのスペクトル的な違いを数値化し、AIが学習しやすい形にできます。呼吸サイクルの長さが患者によって異なるという課題に対して、適応的長さウィンドウ処理を用いることで、AIが安定して呼吸音のパターンを認識できるようになります。これにより、個々の呼吸サイクルや患者全体の呼吸音から、疾患に特有の微細なパターンを効率的に抽出し、高い精度で鑑別診断を行うことが可能になります。複雑な融合戦略やデータ拡張が効果を示さなかったのは、MFCCと適応的ウィンドウ処理がすでに呼吸音の重要な情報を効率的に捉えており、それ以上の複雑さがノイズを増やしたり、モデルを過学習させたりする可能性を示唆しています。",
+      "bodyGlossary": [
+        {
+          "term": "MFCC",
+          "definition": "音響信号のスペクトル包絡を表現する特徴量",
+          "start": 24,
+          "end": 28
+        },
+        {
+          "term": "ログメルスペクトログラム",
+          "definition": "音の周波数成分を時間とともに視覚化したもの",
+          "start": 32,
+          "end": 44
+        },
+        {
+          "term": "CNN",
+          "definition": "画像認識などに使われる深層学習モデルの一種",
+          "start": 73,
+          "end": 76
+        },
+        {
+          "term": "GRU",
+          "definition": "時系列データ処理に用いられるリカレントニューラルネット",
+          "start": 91,
+          "end": 94
+        },
+        {
+          "term": "適応的長さウィンドウ処理",
+          "definition": "信号の長さに合わせて分析区間を調整する手法",
+          "start": 171,
+          "end": 183
+        },
+        {
+          "term": "喘息",
+          "definition": "気道が慢性的に炎症を起こし、呼吸が苦しくなる病気",
+          "start": 371,
+          "end": 373
+        },
+        {
+          "term": "COPD",
+          "definition": "肺の気流が制限され、呼吸困難になる慢性疾患",
+          "start": 374,
+          "end": 378
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "MFCC",
+          "definition": "音響信号のスペクトル包絡を表現する特徴量",
+          "start": 24,
+          "end": 28
+        },
+        {
+          "term": "ログメルスペクトログラム",
+          "definition": "音の周波数成分を時間とともに視覚化したもの",
+          "start": 32,
+          "end": 44
+        },
+        {
+          "term": "CNN",
+          "definition": "画像認識などに使われる深層学習モデルの一種",
+          "start": 73,
+          "end": 76
+        },
+        {
+          "term": "GRU",
+          "definition": "時系列データ処理に用いられるリカレントニューラルネット",
+          "start": 91,
+          "end": 94
+        },
+        {
+          "term": "適応的長さウィンドウ処理",
+          "definition": "信号の長さに合わせて分析区間を調整する手法",
+          "start": 171,
+          "end": 183
+        },
+        {
+          "term": "喘息",
+          "definition": "気道が慢性的に炎症を起こし、呼吸が苦しくなる病気",
+          "start": 371,
+          "end": 373
+        },
+        {
+          "term": "COPD",
+          "definition": "肺の気流が制限され、呼吸困難になる慢性疾患",
+          "start": 374,
+          "end": 378
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 273,
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.10972v1_why.png",
+          "page": 9,
+          "caption": "本研究で用いられたネットワークの全体構造を示しています。",
+          "label": "Figure 1: Overall structure of the networks. *FE: Feature extractor",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-10T23:25:48.832Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.11107v1",
+      "title": "Multimodal Brain Tumour Classification Using Feature Fusion",
+      "authors": [
+        "Wajih ul Islam",
+        "Muhammad Yaqoob",
+        "Javed Ali Khan",
+        "Volker Steuber"
+      ],
+      "publishedAt": "2026-06-09T17:03:50Z",
+      "url": "https://arxiv.org/abs/2606.11107v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.11107v1.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "eess.IV",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "abstract": "Clinicians diagnose brain tumors by synthesizing patient symptoms, medical history, and quantitative imaging data from modalities such as MRI and CT scans into a unified clinical judgement. However, most deep learning models rely on MRI/CT images alone, failing to replicate the clinicians multimodal reasoning. We explore a two-branch multimodal network combining raw MRI scans with 91 extracted radiomic features (intensity, texture, shape, and boundary descriptors) to classify brain tumors into glioma, meningioma, pituitary, and no-tumor. A pre-trained CNN backbone encodes the image stream, whereas a dedicated MLP encodes the radiomic stream. Both streams are fused via concatenation, gated, or bidirectional cross-modal attention strategies. Across nine experimental runs on a balanced 7,200 image dataset, all multimodal configurations outperform unimodal baselines with gated fusion achieving the best accuracy of 96.13%.",
+      "summary": {
+        "gist": "臨床現場では、医師は脳腫瘍の診断に際し、症状、病歴、検査結果、MRIなどの画像といった複数の情報源を統合しています。しかし、多くの深層学習モデルは画像データのみで脳腫瘍分類を行っており、実際の診断ワークフローにおける多角的推論を再現できていませんでした。",
+        "novelty": "従来の深層学習モデルは、MRIやCTスキャンといった画像データのみに依存して脳腫瘍を分類していました。しかし、実際の臨床現場では、医師は画像だけでなく患者の症状、病歴、検査結果など多様な情報を統合して診断を下します。画像単独のAIでは、この多角的な推論を再現できていませんでした。 この論文では、生のMRI画像と、そこから抽出された91種類の「ラジオミクス特徴」という数値データを組み合わせた二経路の深層学習モデルを提案しました。これにより、画像情報と数値情報を統合的に分析し、医師の多角的な診断プロセスに近い形で脳腫瘍（神経膠腫、髄膜腫、下垂体腫瘍、腫瘍なし）を分類できるようになりました。",
+        "method": "本研究では、生のMRIスキャンと、そこから抽出された91種類のラジオミクス特徴を組み合わせる二経路の多角的フレームワークを提案しました。MRI画像は事前学習済みのCNNバックボーン（EfficientNet-B3、ResNet-50、DenseNet-121のいずれか）で符号化され、ラジオミクス特徴は専用のMLPで符号化されます。これら二つのストリームは、連結、ゲート付き融合、または双方向クロスモーダルアテンションのいずれかの戦略で融合され、神経膠腫、髄膜腫、下垂体腫瘍、腫瘍なしの4つのカテゴリに分類されます。7,200枚のバランスの取れた画像データセットを用いて、9通りの実験（3つのバックボーン×3つの融合戦略）を行い、分類性能を評価しました。",
+        "results": "すべての多角的構成が、画像単独のベースラインモデルを一貫して上回る性能を示しました。特に、ResNet-50とDenseNet-121にゲート付き融合を組み合わせたモデルが96.13%の最高精度を達成しました。多角的融合は、特に「腫瘍なし」と「下垂体腫瘍」のクラスで高い再現率を示し、分類が困難な髄膜腫においても改善が見られました。この結果は、異なるバックボーンアーキテクチャや融合戦略にわたる多角的特徴融合の堅牢性を示しています。",
+        "why": "MRI画像から抽出されるラジオミクス特徴は、画像の強度、テクスチャ、形状、境界記述子など、人間の目では捉えにくい微細な数値情報を提供します。深層学習モデルが画像そのものから学習する視覚的特徴と、これらの数値的特徴を組み合わせることで、より包括的で補完的な情報に基づいた判断が可能になります。特にゲート付き融合戦略は、各情報源の重要度を学習し、最適なバランスで統合することで、分類精度を向上させたと推測されます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / eess.IV）",
+      "field": "AI・データサイエンス",
+      "categoryL1": "adjacent",
+      "categoryL2": "medical-imaging",
+      "arxivPrimary": "eess.IV",
+      "titleJa": "特徴融合を用いた多角的脳腫瘍分類",
+      "catchTitle": "MRI画像と数値データで脳腫瘍をより正確に診断",
+      "hook": "脳腫瘍の診断、画像だけでは見落としがあるかも？AIが医師のように多角的に判断する新手法が登場しました。",
+      "background": "臨床現場では、医師は脳腫瘍の診断に際し、症状、病歴、検査結果、MRIなどの画像といった複数の情報源を統合しています。しかし、多くの深層学習モデルは画像データのみで脳腫瘍分類を行っており、実際の診断ワークフローにおける多角的推論を再現できていませんでした。",
+      "quiz": {
+        "question": "この研究で、AIが脳腫瘍をより正確に分類するために組み合わせた2種類のデータは何ですか？",
+        "options": [
+          "患者の病歴と症状",
+          "MRI画像とラジオミクス特徴",
+          "CTスキャンと血液検査結果"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究では、生のMRI画像と、そこから抽出された91種類のラジオミクス特徴という数値データを組み合わせています。"
+      },
+      "limitations": "本研究の改善は、両情報源が同じMRI画像から派生しているため、モダリティ間の真の補完性が限定的であることに起因する可能性があります。将来の研究では、ラジオミクスのみのベースラインや特徴ファミリーのアブレーション研究、さらに臨床報告や検査結果といった独立した臨床データ源の導入が計画されています。",
+      "glossary": [
+        {
+          "term": "ラジオミクス特徴",
+          "definition": "画像から抽出される、腫瘍の微細な数値的特徴"
+        },
+        {
+          "term": "CNNバックボーン",
+          "definition": "画像認識に特化した深層学習モデルの基盤"
+        },
+        {
+          "term": "MLP",
+          "definition": "多層パーセプトロン。数値データを処理するニューラルネットワーク"
+        },
+        {
+          "term": "連結",
+          "definition": "複数の特徴ベクトルを単純に結合する融合戦略"
+        },
+        {
+          "term": "ゲート付き融合",
+          "definition": "各情報源の重要度を学習して統合する戦略"
+        },
+        {
+          "term": "クロスモーダルアテンション",
+          "definition": "異なる情報源間の関連性を考慮して統合する戦略"
+        },
+        {
+          "term": "神経膠腫",
+          "definition": "脳の神経膠細胞から発生する腫瘍"
+        },
+        {
+          "term": "髄膜腫",
+          "definition": "脳や脊髄を覆う髄膜から発生する腫瘍"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "MRI画像とそこから抽出した数値的特徴を組み合わせることで、AIによる脳腫瘍の分類精度が向上しました。",
+      "noveltyContrast": {
+        "before": "従来の深層学習モデルは、MRIやCTスキャンといった画像データのみに依存して脳腫瘍を分類していました。しかし、実際の臨床現場では、医師は画像だけでなく患者の症状、病歴、検査結果など多様な情報を統合して診断を下します。画像単独のAIでは、この多角的な推論を再現できていませんでした。",
+        "after": "この論文では、生のMRI画像と、そこから抽出された91種類の「ラジオミクス特徴」という数値データを組み合わせた二経路の深層学習モデルを提案しました。これにより、画像情報と数値情報を統合的に分析し、医師の多角的な診断プロセスに近い形で脳腫瘍（神経膠腫、髄膜腫、下垂体腫瘍、腫瘍なし）を分類できるようになりました。"
+      },
+      "analogy": {
+        "title": "畑の土壌分析と作物の生育状況",
+        "body": "これはまるで、農家が作物の生育状況を判断する際に、単に作物の見た目（MRI画像）だけでなく、土壌のpH値、栄養素の含有量、水分量といった詳細な土壌分析データ（ラジオミクス特徴）も合わせて判断するようなものです。見た目だけでは分からない土壌の隠れた問題が、数値データと組み合わせることで明らかになり、より正確な生育予測や適切な対策（脳腫瘍の正確な分類）が可能になります。作物の見た目と土壌データ、両方から情報を得ることで、より確実な収穫（診断）に繋がるのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+3.2pt",
+          "label": "分類精度向上"
+        }
+      ],
+      "whyYouCare": "もしあなたが医療従事者なら、AIがより正確な診断を支援することで、患者への負担軽減や治療計画の最適化に繋がります。また、AI開発者であれば、画像データだけでなく多角的な情報を組み合わせる「マルチモーダル学習」の重要性を再認識し、より高度なAIモデル開発のヒントを得られるでしょう。一般の方にとっても、AIによる医療診断の進化は、将来のより質の高い医療サービスへの期待を高めるものです。画像と数値データの融合は、単一情報源では見落とされがちな病変の早期発見にも貢献する可能性があります。",
+      "takeawayTalk": "AIがMRI画像と数値データを組み合わせて、脳腫瘍診断の精度を上げたんだって！",
+      "bodyText": "本研究では、生のMRIスキャンと、そこから抽出された91種類のラジオミクス特徴を組み合わせる二経路の多角的フレームワークを提案しました。MRI画像は事前学習済みのCNNバックボーン（EfficientNet-B3、ResNet-50、DenseNet-121のいずれか）で符号化され、ラジオミクス特徴は専用のMLPで符号化されます。これら二つのストリームは、連結、ゲート付き融合、または双方向クロスモーダルアテンションのいずれかの戦略で融合され、神経膠腫、髄膜腫、下垂体腫瘍、腫瘍なしの4つのカテゴリに分類されます。7,200枚のバランスの取れた画像データセットを用いて、9通りの実験（3つのバックボーン×3つの融合戦略）を行い、分類性能を評価しました。\n\nMRI画像から抽出されるラジオミクス特徴は、画像の強度、テクスチャ、形状、境界記述子など、人間の目では捉えにくい微細な数値情報を提供します。深層学習モデルが画像そのものから学習する視覚的特徴と、これらの数値的特徴を組み合わせることで、より包括的で補完的な情報に基づいた判断が可能になります。特にゲート付き融合戦略は、各情報源の重要度を学習し、最適なバランスで統合することで、分類精度を向上させたと推測されます。",
+      "bodyGlossary": [
+        {
+          "term": "ラジオミクス特徴",
+          "definition": "画像から抽出される、腫瘍の微細な数値的特徴",
+          "start": 31,
+          "end": 39
+        },
+        {
+          "term": "CNNバックボーン",
+          "definition": "画像認識に特化した深層学習モデルの基盤",
+          "start": 81,
+          "end": 90
+        },
+        {
+          "term": "MLP",
+          "definition": "多層パーセプトロン。数値データを処理するニューラルネットワーク",
+          "start": 154,
+          "end": 157
+        },
+        {
+          "term": "連結",
+          "definition": "複数の特徴ベクトルを単純に結合する融合戦略",
+          "start": 179,
+          "end": 181
+        },
+        {
+          "term": "ゲート付き融合",
+          "definition": "各情報源の重要度を学習して統合する戦略",
+          "start": 182,
+          "end": 189
+        },
+        {
+          "term": "クロスモーダルアテンション",
+          "definition": "異なる情報源間の関連性を考慮して統合する戦略",
+          "start": 196,
+          "end": 209
+        },
+        {
+          "term": "神経膠腫",
+          "definition": "脳の神経膠細胞から発生する腫瘍",
+          "start": 223,
+          "end": 227
+        },
+        {
+          "term": "髄膜腫",
+          "definition": "脳や脊髄を覆う髄膜から発生する腫瘍",
+          "start": 228,
+          "end": 231
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "ラジオミクス特徴",
+          "definition": "画像から抽出される、腫瘍の微細な数値的特徴",
+          "start": 31,
+          "end": 39
+        },
+        {
+          "term": "CNNバックボーン",
+          "definition": "画像認識に特化した深層学習モデルの基盤",
+          "start": 81,
+          "end": 90
+        },
+        {
+          "term": "MLP",
+          "definition": "多層パーセプトロン。数値データを処理するニューラルネットワーク",
+          "start": 154,
+          "end": 157
+        },
+        {
+          "term": "連結",
+          "definition": "複数の特徴ベクトルを単純に結合する融合戦略",
+          "start": 179,
+          "end": 181
+        },
+        {
+          "term": "ゲート付き融合",
+          "definition": "各情報源の重要度を学習して統合する戦略",
+          "start": 182,
+          "end": 189
+        },
+        {
+          "term": "クロスモーダルアテンション",
+          "definition": "異なる情報源間の関連性を考慮して統合する戦略",
+          "start": 196,
+          "end": 209
+        },
+        {
+          "term": "神経膠腫",
+          "definition": "脳の神経膠細胞から発生する腫瘍",
+          "start": 223,
+          "end": 227
+        },
+        {
+          "term": "髄膜腫",
+          "definition": "脳や脊髄を覆う髄膜から発生する腫瘍",
+          "start": 228,
+          "end": 231
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 235,
+      "keyFigure": {
+        "imagePath": "/figures/2606.11107v1_results.png",
+        "page": 3,
+        "caption": "MRI単独と画像＋ラジオミクス特徴を組み合わせたモデルの分類精度を示しています。",
+        "label": "Table 1. Per-class F1-scores and overall accuracy for unimodal (MRI only) and multimodal (image + 91 radiomic features)",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-10T23:25:50.842Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.11107v1_results.png",
+          "page": 3,
+          "caption": "MRI単独と画像＋ラジオミクス特徴を組み合わせたモデルの分類精度を示しています。",
+          "label": "Table 1. Per-class F1-scores and overall accuracy for unimodal (MRI only) and multimodal (image + 91 radiomic features)",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-10T23:25:50.842Z"
+        },
+        {
+          "imagePath": "/figures/2606.11107v1_why.png",
+          "page": 2,
+          "caption": "多角的脳腫瘍分類の予備実験の概要を示しています。",
+          "label": "Fig. 1. Preliminary experiment on multimodal brain tumor classification. First ROI is segmented and 91 radiomic features",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-10T23:25:50.842Z"
+        }
+      ]
+    }
+  ]
+}

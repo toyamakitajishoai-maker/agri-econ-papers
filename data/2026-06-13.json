@@ -1,0 +1,947 @@
+{
+  "date": "2026-06-13",
+  "papers": [
+    {
+      "id": "2606.12097v1",
+      "title": "Weibull-Stationary Stochastic Differential Equations for Conditional Long-Horizon Wind Power Forecasting",
+      "authors": [
+        "Luca Di Persio",
+        "Mehrdad Ghadiri"
+      ],
+      "publishedAt": "2026-06-10T13:54:42Z",
+      "url": "https://arxiv.org/abs/2606.12097v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.12097v1.pdf",
+      "categories": [
+        "topic:health",
+        "stat.AP",
+        "physics.data-an"
+      ],
+      "abstract": "We present a one-month-ahead conditional probabilistic framework for wind-power forecasting at ten-minute resolution. Monthly Weibull shape and scale parameters are estimated from serially dependent SCADA wind-speed data, corrected through a Godambe covariance, and forecast by a heteroskedastic Kalman filter on a bivariate VAR(1) state-space model. Conditional on the MMSE forecasted Weibull invariant law, we construct and compare three positive wind-speed SDE models: an Ornstein-Uhlenbeck-Weibull transform, a Fokker-Planck drift-first diffusion, and a Fokker-Planck diffusion-first model. The simulated wind-speed ensembles are mapped to power through a calibrated XGBoost power curve. Applied to January 2021 data from a Senvion MM92 turbine at Kelmarsh Wind Farm, the three SDE formulations are statistically indistinguishable in probabilistic accuracy, with mean CRPS values between 1.569 and 1.575 m/s. The diffusion-first model is therefore preferred on computational grounds, reducing runtime by about a factor of seven relative to the OU-Weibull model. In the power domain, the Wasserstein distance between simulated and observed distributions is 26.1-27.6 kW, below $1.4\\%$ of rated capacity, while the monthly energy-yield bias is about $-7.3\\%$ for the examined month. Exceedance-probability errors remain below 1.6 percentage points over the 0-1500 kW range and about 2.2 percentage points near rated power. These quantities provide decision-relevant probabilistic inputs for downstream operational problems, rather than completed reserve, storage, market, or fatigue-optimization decisions. Full marginalisation over the Kalman predictive law of the Weibull parameters is left as a natural extension.",
+      "summary": {
+        "gist": "風力エネルギーは、クリーンで持続可能な電力への世界的な移行において重要な柱となっています。しかし、風力発電は風の不規則性や非線形な変動特性により、予測が非常に困難です。特に数時間以上の長期予測では、予測誤差が蓄積し、従来の決定論的モデルでは信頼性が低下するという問題がありました。グリッド運用者は、出力変動を予測し、システムの安定性を維持し、予備力を計画するために、信頼性の高い予測を必要としています。",
+        "novelty": "従来の風力発電予測モデルは、過去のデータから風速分布のパラメータを固定して予測していました。そのため、季節変動や月ごとの変動、予測に伴う不確実性を十分に考慮できず、長期予測では精度が低下するという課題がありました。 この研究では、風速分布のパラメータ自体が時間とともに変動することを考慮し、それを予測する仕組みを導入しました。これにより、未来の不確実性を織り込んだ、より現実的で信頼性の高い1ヶ月先の風力発電量予測が可能になりました。",
+        "method": "本研究では、1ヶ月先の風力発電量を予測するための条件付き確率的フレームワークを提案しました。まず、SCADAデータから月ごとのワイブル分布の形状パラメータと尺度パラメータを推定し、時系列依存性を考慮して共分散を補正します。次に、これらのパラメータの変動を異時点分散カルマンフィルタを用いた二変量VAR(1)状態空間モデルで予測します。この予測されたワイブル分布に基づいて、3種類の確率微分方程式（SDE）モデル（Ornstein-Uhlenbeck-Weibull変換、Fokker-Planckドリフト優先拡散、Fokker-Planck拡散優先モデル）を構築し、風速アンサンブルをシミュレーションします。最後に、シミュレーションされた風速アンサンブルを、XGBoostで校正された出力曲線を通じて電力に変換します。",
+        "results": "英国ケルマーシュ風力発電所のデータに適用した結果、3つのSDEモデルは確率的精度において統計的に区別できない性能を示し、平均CRPS値は1.569から1.575 m/sでした。計算効率の観点から、拡散優先モデルがOrnstein-Uhlenbeck-Weibullモデルと比較して実行時間を約7分の1に短縮できるため、推奨されます。電力領域では、シミュレーションされた分布と観測された分布間のワッサースタイン距離は26.1-27.6 kWで、定格容量の1.4%未満でした。月間エネルギー収量バイアスは約-7.3%であり、超過確率誤差は0-1500 kWの範囲で1.6パーセンテージポイント未満、定格出力付近で約2.2パーセンテージポイントでした。これらの結果は、運用上の問題に対する意思決定に関連する確率的入力情報を提供します。",
+        "why": "このモデルの核となるのは、風速の確率分布を特徴づけるワイブルパラメータが時間とともに変動するという考え方です。従来のモデルではこれらのパラメータを固定していましたが、本研究ではカルマンフィルタを用いてこれらのパラメータ自体を予測します。これにより、未来の風況の不確実性を予測に組み込むことが可能になります。さらに、確率微分方程式を用いることで、風速の物理的なダイナミクスと確率的な変動を組み合わせ、より現実的な風速の時系列をシミュレーションできます。この予測された風速の確率分布を、高精度に校正された出力曲線（風速から電力への変換）に通すことで、未来の風力発電量の確率的な予測を実現しています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / stat.AP）",
+      "field": "医学・健康",
+      "categoryL1": "agri-econ",
+      "categoryL2": "energy-economics",
+      "arxivPrimary": "stat.AP",
+      "titleJa": "条件付き長期風力発電量予測のためのワイブル定常確率微分方程式",
+      "catchTitle": "風力発電の未来を予測！1ヶ月先の発電量を高精度に",
+      "hook": "あなたの会社の再エネ導入計画、風力発電の不安定さに悩んでいませんか？1ヶ月先の発電量を高い精度で予測できたら、計画はもっとスムーズになるはずです。",
+      "background": "風力エネルギーは、クリーンで持続可能な電力への世界的な移行において重要な柱となっています。しかし、風力発電は風の不規則性や非線形な変動特性により、予測が非常に困難です。特に数時間以上の長期予測では、予測誤差が蓄積し、従来の決定論的モデルでは信頼性が低下するという問題がありました。グリッド運用者は、出力変動を予測し、システムの安定性を維持し、予備力を計画するために、信頼性の高い予測を必要としています。",
+      "quiz": {
+        "question": "この研究の主な新規性は、風力発電予測のどの点にありますか？",
+        "options": [
+          "風力タービンの物理的構造を詳細にモデリングした点",
+          "風速分布のパラメータ自体が時間変動することを考慮し、それを予測に組み込んだ点",
+          "短期予測の精度を大幅に向上させた点"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究の最も重要な新規性は、風速分布のパラメータが固定ではなく時間とともに変動すると捉え、カルマンフィルタを用いてその変動を予測し、長期予測の不確実性をより正確に捉えた点にあります。"
+      },
+      "limitations": "本研究は、特定の風力タービンと1ヶ月のデータに焦点を当てた概念実証であり、タービン間の普遍性やより長期の予測については今後の研究課題です。また、ワイブルパラメータのカルマン予測分布に対する完全な周辺化は、本数値研究の対象外とされています。",
+      "glossary": [
+        {
+          "term": "SCADAデータ",
+          "definition": "産業制御システムから収集されるリアルタイムデータ"
+        },
+        {
+          "term": "ワイブル分布",
+          "definition": "風速の確率分布を表現するのに適した統計モデル"
+        },
+        {
+          "term": "共分散",
+          "definition": "2つの変数の関係性の強さを示す統計量"
+        },
+        {
+          "term": "カルマンフィルタ",
+          "definition": "時系列データから状態を推定・予測するアルゴリズム"
+        },
+        {
+          "term": "VAR(1)状態空間モデル",
+          "definition": "複数の時系列変数の関係を表現する統計モデル"
+        },
+        {
+          "term": "確率微分方程式（SDE）",
+          "definition": "ランダムな変動を含む現象を記述する数学モデル"
+        },
+        {
+          "term": "XGBoost",
+          "definition": "高い予測精度を持つ機械学習アルゴリズム"
+        },
+        {
+          "term": "CRPS",
+          "definition": "確率予測の精度を評価する指標"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "風速の変動を確率的に捉え、1ヶ月先の風力発電量を高精度に予測する新しいモデルを開発しました。",
+      "noveltyContrast": {
+        "before": "従来の風力発電予測モデルは、過去のデータから風速分布のパラメータを固定して予測していました。そのため、季節変動や月ごとの変動、予測に伴う不確実性を十分に考慮できず、長期予測では精度が低下するという課題がありました。",
+        "after": "この研究では、風速分布のパラメータ自体が時間とともに変動することを考慮し、それを予測する仕組みを導入しました。これにより、未来の不確実性を織り込んだ、より現実的で信頼性の高い1ヶ月先の風力発電量予測が可能になりました。"
+      },
+      "analogy": {
+        "title": "畑の土壌を毎年分析し、最適な作付け計画を立てるようなもの",
+        "body": "これは、毎年同じ畑で同じ作物を育てていても、土壌の栄養状態や水分量が年ごとに変わるため、その年の土壌の状態をきちんと分析し、それに合わせて肥料の量や水やり、品種を選ぶようなものです。従来の予測が「去年の土壌データで今年も作付け」だったのに対し、この研究は「今年の土壌データを予測し、最適な作付け計画を立てる」ことで、より安定した収穫を目指します。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "-7.3%",
+          "label": "月間エネルギー収量バイアス"
+        },
+        {
+          "value": "1.4%",
+          "label": "定格容量に対するワッサースタイン距離"
+        }
+      ],
+      "whyYouCare": "この研究は、風力発電の不安定性という大きな課題に対し、長期的な視点での解決策を提示しています。あなたの会社が再生可能エネルギー導入を検討しているなら、この予測モデルは発電計画の精度を飛躍的に向上させ、電力系統の安定化、蓄電池の最適運用、さらには電力市場での取引戦略にも貢献するでしょう。不確実性を数値化することで、リスクを管理し、より賢明な投資判断を下すための強力なツールとなります。結果として、再エネ導入の加速とコスト削減に繋がり、持続可能な社会の実現に貢献します。",
+      "takeawayTalk": "風力発電の未来は、風速の変動を予測する新技術でより安定する！",
+      "bodyText": "本研究では、1ヶ月先の風力発電量を予測するための条件付き確率的フレームワークを提案しました。まず、SCADAデータから月ごとのワイブル分布の形状パラメータと尺度パラメータを推定し、時系列依存性を考慮して共分散を補正します。次に、これらのパラメータの変動を異時点分散カルマンフィルタを用いた二変量VAR(1)状態空間モデルで予測します。この予測されたワイブル分布に基づいて、3種類の確率微分方程式（SDE）モデル（Ornstein-Uhlenbeck-Weibull変換、Fokker-Planckドリフト優先拡散、Fokker-Planck拡散優先モデル）を構築し、風速アンサンブルをシミュレーションします。最後に、シミュレーションされた風速アンサンブルを、XGBoostで校正された出力曲線を通じて電力に変換します。\n\nこのモデルの核となるのは、風速の確率分布を特徴づけるワイブルパラメータが時間とともに変動するという考え方です。従来のモデルではこれらのパラメータを固定していましたが、本研究ではカルマンフィルタを用いてこれらのパラメータ自体を予測します。これにより、未来の風況の不確実性を予測に組み込むことが可能になります。さらに、確率微分方程式を用いることで、風速の物理的なダイナミクスと確率的な変動を組み合わせ、より現実的な風速の時系列をシミュレーションできます。この予測された風速の確率分布を、高精度に校正された出力曲線（風速から電力への変換）に通すことで、未来の風力発電量の確率的な予測を実現しています。",
+      "bodyGlossary": [
+        {
+          "term": "SCADAデータ",
+          "definition": "産業制御システムから収集されるリアルタイムデータ",
+          "start": 49,
+          "end": 57
+        },
+        {
+          "term": "ワイブル分布",
+          "definition": "風速の確率分布を表現するのに適した統計モデル",
+          "start": 63,
+          "end": 69
+        },
+        {
+          "term": "共分散",
+          "definition": "2つの変数の関係性の強さを示す統計量",
+          "start": 101,
+          "end": 104
+        },
+        {
+          "term": "カルマンフィルタ",
+          "definition": "時系列データから状態を推定・予測するアルゴリズム",
+          "start": 132,
+          "end": 140
+        },
+        {
+          "term": "VAR(1)状態空間モデル",
+          "definition": "複数の時系列変数の関係を表現する統計モデル",
+          "start": 147,
+          "end": 160
+        },
+        {
+          "term": "確率微分方程式（SDE）",
+          "definition": "ランダムな変動を含む現象を記述する数学モデル",
+          "start": 190,
+          "end": 202
+        },
+        {
+          "term": "XGBoost",
+          "definition": "高い予測精度を持つ機械学習アルゴリズム",
+          "start": 329,
+          "end": 336
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "SCADAデータ",
+          "definition": "産業制御システムから収集されるリアルタイムデータ",
+          "start": 49,
+          "end": 57
+        },
+        {
+          "term": "ワイブル分布",
+          "definition": "風速の確率分布を表現するのに適した統計モデル",
+          "start": 63,
+          "end": 69
+        },
+        {
+          "term": "共分散",
+          "definition": "2つの変数の関係性の強さを示す統計量",
+          "start": 101,
+          "end": 104
+        },
+        {
+          "term": "カルマンフィルタ",
+          "definition": "時系列データから状態を推定・予測するアルゴリズム",
+          "start": 132,
+          "end": 140
+        },
+        {
+          "term": "VAR(1)状態空間モデル",
+          "definition": "複数の時系列変数の関係を表現する統計モデル",
+          "start": 147,
+          "end": 160
+        },
+        {
+          "term": "確率微分方程式（SDE）",
+          "definition": "ランダムな変動を含む現象を記述する数学モデル",
+          "start": 190,
+          "end": 202
+        },
+        {
+          "term": "XGBoost",
+          "definition": "高い予測精度を持つ機械学習アルゴリズム",
+          "start": 329,
+          "end": 336
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 275,
+      "keyFigure": {
+        "imagePath": "/figures/2606.12097v1_results.png",
+        "page": 25,
+        "caption": "フォッカー・プランクドリフトベースSDEを用いた統計的性能分析を示しています。",
+        "label": "Figure 8: Statistical Performance analysis of Using Fokker–Planck Drift-Based SDE.",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-12T23:17:04.411Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.12097v1_results.png",
+          "page": 25,
+          "caption": "フォッカー・プランクドリフトベースSDEを用いた統計的性能分析を示しています。",
+          "label": "Figure 8: Statistical Performance analysis of Using Fokker–Planck Drift-Based SDE.",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-12T23:17:04.411Z"
+        },
+        {
+          "imagePath": "/figures/2606.12097v1_why.png",
+          "page": 15,
+          "caption": "2021年1月のワイブル分布の予測診断表示を示しています。",
+          "label": "Figure 5: Diagnostic display of the forecasted Weibull distribution for January 2021 at",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-12T23:17:04.412Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.13314v1",
+      "title": "The Privilege of Exposure: Caste and Generative AI in India's Graduate Labour Market",
+      "authors": [
+        "Kaibalyapati Mishra"
+      ],
+      "publishedAt": "2026-06-11T13:09:43Z",
+      "url": "https://arxiv.org/abs/2606.13314v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.13314v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "econ.GN"
+      ],
+      "abstract": "Who is exposed to generative AI in a developing-country labour market? We map three occupational AI-exposure indices to India's redesigned Periodic Labour Force Survey (2025) and document a steep caste gradient among 83,000 employed graduates: graduates from the Scheduled Castes and the Scheduled Tribes are 0.24--0.37 standard deviations less exposed than upper-caste graduates within the same district. Two channels drive the gap: one in four SC and one in three ST graduates work in farm or elementary occupations untouched by AI, and those in white-collar work are underrepresented in managerial, software, and finance occupations. Because exposure commands a wage premium of up to 20 per cent, generative AI stands to widen, not narrow, India's caste earnings gap.",
+      "summary": {
+        "gist": "AIの進化は労働市場に大きな影響を与えていますが、その影響が社会の異なる層にどのように分配されるかは重要な問題です。特にインドのような発展途上国では、カースト制度が職業選択や賃金に深く関わっており、AIがこの既存の社会構造にどう作用するのかが注目されています。",
+        "novelty": "これまでの研究では、AIへの接触機会が教育水準や職種によってどう異なるかは分析されてきましたが、発展途上国における社会集団間の格差、特にカーストのような歴史的階層がどう影響するかは不明でした。 この論文は、インドの8万3千人以上の大卒者を対象に、カースト別に生成AIへの接触機会を初めて定量化しました。その結果、上位カーストの大卒者に比べて、指定カースト・指定部族の大卒者はAIへの接触機会が著しく低いことを明らかにしました。",
+        "method": "本研究では、インドの2025年版定期労働力調査（PLFS）のデータ（約8万3千人の大卒者を対象）と、3種類のAI職業接触指数を組み合わせました。これらの指数は、職業のタスク内容とAIの能力を照合して、各職業がAIにどれだけ「接触」するかを数値化したものです。このデータを用いて、カースト別にAI接触機会の差を分析し、その格差が生じるメカニズムを特定しました。",
+        "results": "分析の結果、大卒者のAI接触機会はカーストの優位性に比例して単調に増加することが判明しました。同じ地域の上位カーストの大卒者と比較して、指定カースト（SC）の大卒者はAI接触機会が0.24〜0.27標準偏差低く、指定部族（ST）の大卒者は0.31〜0.37標準偏差低いことが明らかになりました。この格差は、主に2つの要因によって引き起こされています。第一に、SC大卒者の24.6%、ST大卒者の32.0%が、AI接触がほぼゼロである農業または単純労働に従事していること。第二に、ホワイトカラー職の中でも、上位カーストの大卒者が管理職、ソフトウェア開発、金融といったAI接触機会の高い職種に偏って就いていることです。さらに、AIへの接触は賃金を最大20%押し上げる効果があるため、この格差はインドにおけるカースト間の賃金格差をさらに拡大させる可能性が示唆されました。",
+        "why": "このカースト間のAI接触機会の格差は、主に「職業上の降格」と「ホワイトカラー職内での選別」という二つのメカニズムによって生じています。指定カーストや指定部族の大卒者は、教育を受けているにもかかわらず、AIの影響を受けにくい農業や単純労働といった職種に就く割合が上位カーストの大卒者よりもはるかに高いです。これは、彼らが労働市場においてすでに不利な立場に置かれていることを示しています。また、ホワイトカラー職に就いたとしても、上位カーストの大卒者はソフトウェア開発者、金融専門家、管理職といったAIと密接に関わる高スキル職に集中しているのに対し、指定カースト・指定部族の大卒者はこれらの職種に過小評価されています。結果として、AIがもたらす生産性向上や賃金プレミアムの恩恵は、既存の社会経済的階層構造を強化する形で分配されることになります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "labor-market",
+      "arxivPrimary": "econ.GN",
+      "titleJa": "インドの労働市場におけるカーストと生成AIへの接触機会の格差",
+      "catchTitle": "生成AIはカースト格差を広げる",
+      "hook": "あなたはAIが仕事を奪うと心配していませんか？インドでは、AIへの「接触機会」が、むしろ高収入につながる特権となっています。",
+      "background": "AIの進化は労働市場に大きな影響を与えていますが、その影響が社会の異なる層にどのように分配されるかは重要な問題です。特にインドのような発展途上国では、カースト制度が職業選択や賃金に深く関わっており、AIがこの既存の社会構造にどう作用するのかが注目されています。",
+      "quiz": {
+        "question": "インドの大卒者におけるAI接触機会の格差は、主に何によって引き起こされていますか？",
+        "options": [
+          "地理的な居住地の違い",
+          "職業上の降格とホワイトカラー職内での選別",
+          "AI技術への関心の有無"
+        ],
+        "correctIndex": 1,
+        "explanation": "論文では、指定カースト・指定部族の大卒者がAI接触の少ない農業や単純労働に就く割合が高いこと（職業上の降格）と、ホワイトカラー職内でも上位カーストが大卒者がAIと関連性の高い職種に集中していること（ホワイトカラー職内での選別）が主な原因であると説明されています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "生成AI",
+          "definition": "文章や画像を自動生成する人工知能"
+        },
+        {
+          "term": "カースト",
+          "definition": "インドの伝統的な社会階層制度"
+        },
+        {
+          "term": "PLFS",
+          "definition": "インドの定期労働力調査"
+        },
+        {
+          "term": "AI接触指数",
+          "definition": "職業がAIにどれだけ影響されるかを示す指標"
+        },
+        {
+          "term": "標準偏差",
+          "definition": "データのばらつき度合いを示す統計量"
+        },
+        {
+          "term": "指定カースト",
+          "definition": "インドで歴史的に差別されてきた社会集団"
+        },
+        {
+          "term": "指定部族",
+          "definition": "インドの先住民族に相当する社会集団"
+        },
+        {
+          "term": "ホワイトカラー職",
+          "definition": "事務職や専門職など、主に知的労働を行う職種"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "インドの労働市場では、生成AIへの接触機会はカーストによって大きく異なり、この格差が賃金格差をさらに広げる可能性があります。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、AIへの接触機会が教育水準や職種によってどう異なるかは分析されてきましたが、発展途上国における社会集団間の格差、特にカーストのような歴史的階層がどう影響するかは不明でした。",
+        "after": "この論文は、インドの8万3千人以上の大卒者を対象に、カースト別に生成AIへの接触機会を初めて定量化しました。その結果、上位カーストの大卒者に比べて、指定カースト・指定部族の大卒者はAIへの接触機会が著しく低いことを明らかにしました。"
+      },
+      "analogy": {
+        "title": "豊作の畑と日陰の畑",
+        "body": "これは、まるで同じ地域にありながら、日当たりが良く肥沃な土壌で最新の農機を使って豊作を期待できる畑と、日陰になりがちで土壌も痩せ、昔ながらの道具で細々と耕すしかない畑があるようなものです。上位カーストの大卒者がAIという最新の農機が導入される「豊作の畑」で働く機会が多いのに対し、指定カースト・指定部族の大卒者はAIが届かない「日陰の畑」で働くことが多い。結果として、AIがもたらす豊かさの恩恵は、すでに豊かな畑に集中し、格差がさらに広がってしまうのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "-0.24～-0.37SD",
+          "label": "指定カースト・指定部族の大卒者のAI接触機会（上位カースト比）"
+        },
+        {
+          "value": "+20%",
+          "label": "AI接触による賃金プレミアム"
+        }
+      ],
+      "whyYouCare": "AIの進化は、私たちの仕事や社会に大きな変化をもたらすと期待されています。しかし、この研究が示すように、AIの恩恵は公平に分配されるとは限りません。特に、既存の社会経済的格差がある国では、AIがその格差をさらに拡大させる可能性があります。これは、日本においても、地域間格差や学歴格差、ジェンダー格差など、既存の社会構造がAIの恩恵の分配にどう影響するかを考える上で重要な示唆を与えます。AIを導入する際には、その技術が社会全体にポジティブな影響を与えるよう、既存の格差を考慮した政策や教育機会の提供が不可欠であることを示唆しています。",
+      "takeawayTalk": "インドではAIがカースト間の賃金格差を広げているらしいよ。",
+      "bodyText": "本研究では、インドの2025年版定期労働力調査（PLFS）のデータ（約8万3千人の大卒者を対象）と、3種類のAI職業接触指数を組み合わせました。これらの指数は、職業のタスク内容とAIの能力を照合して、各職業がAIにどれだけ「接触」するかを数値化したものです。このデータを用いて、カースト別にAI接触機会の差を分析し、その格差が生じるメカニズムを特定しました。\n\nこのカースト間のAI接触機会の格差は、主に「職業上の降格」と「ホワイトカラー職内での選別」という二つのメカニズムによって生じています。指定カーストや指定部族の大卒者は、教育を受けているにもかかわらず、AIの影響を受けにくい農業や単純労働といった職種に就く割合が上位カーストの大卒者よりもはるかに高いです。これは、彼らが労働市場においてすでに不利な立場に置かれていることを示しています。また、ホワイトカラー職に就いたとしても、上位カーストの大卒者はソフトウェア開発者、金融専門家、管理職といったAIと密接に関わる高スキル職に集中しているのに対し、指定カースト・指定部族の大卒者はこれらの職種に過小評価されています。結果として、AIがもたらす生産性向上や賃金プレミアムの恩恵は、既存の社会経済的階層構造を強化する形で分配されることになります。",
+      "bodyGlossary": [
+        {
+          "term": "PLFS",
+          "definition": "インドの定期労働力調査",
+          "start": 24,
+          "end": 28
+        },
+        {
+          "term": "カースト",
+          "definition": "インドの伝統的な社会階層制度",
+          "start": 139,
+          "end": 143
+        },
+        {
+          "term": "ホワイトカラー職",
+          "definition": "事務職や専門職など、主に知的労働を行う職種",
+          "start": 212,
+          "end": 220
+        },
+        {
+          "term": "指定カースト",
+          "definition": "インドで歴史的に差別されてきた社会集団",
+          "start": 248,
+          "end": 254
+        },
+        {
+          "term": "指定部族",
+          "definition": "インドの先住民族に相当する社会集団",
+          "start": 255,
+          "end": 259
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "PLFS",
+          "definition": "インドの定期労働力調査",
+          "start": 24,
+          "end": 28
+        },
+        {
+          "term": "カースト",
+          "definition": "インドの伝統的な社会階層制度",
+          "start": 139,
+          "end": 143
+        },
+        {
+          "term": "ホワイトカラー職",
+          "definition": "事務職や専門職など、主に知的労働を行う職種",
+          "start": 212,
+          "end": 220
+        },
+        {
+          "term": "指定カースト",
+          "definition": "インドで歴史的に差別されてきた社会集団",
+          "start": 248,
+          "end": 254
+        },
+        {
+          "term": "指定部族",
+          "definition": "インドの先住民族に相当する社会集団",
+          "start": 255,
+          "end": 259
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 257
+    },
+    {
+      "id": "2606.13305v1",
+      "title": "Semiparametric Bayesian inference for causal mediation in cluster randomized trials",
+      "authors": [
+        "Woojung Bae",
+        "Michael Daniels",
+        "Joseph Hogan",
+        "Rajesh Vedanthan",
+        "Stavroula Chrysanthopoulou"
+      ],
+      "publishedAt": "2026-06-11T13:01:10Z",
+      "url": "https://arxiv.org/abs/2606.13305v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.13305v1.pdf",
+      "categories": [
+        "topic:health",
+        "stat.ME",
+        "stat.AP",
+        "stat.CO"
+      ],
+      "abstract": "Cluster randomized trials (CRTs) are frequently used to evaluate interventions, yet conducting causal mediation analysis in these settings remains challenging, particularly when the mediator is measured at the cluster level and the number of clusters is small. Standard inference methods often rely on asymptotic assumptions that fail in finite-sample settings, leading to biased variance estimation and invalid confidence intervals. In this paper, we propose a robust inference framework for causal mediation analysis in CRTs. We utilize parametric Bayesian models for the outcome and mediator to ensure computational efficiency and interpretability. Crucially, to quantify uncertainty, we specify a novel similarity-weighted Bayesian bootstrap (SWBB) with a `distance' metric between clusters; this avoids the need for restrictive parametric assumptions and allows the model to borrow more information from `closer' clusters. By combining observed data models with causal assumptions, our approach accurately estimates natural direct and indirect effects even with limited clusters. Simulation studies demonstrate that our method achieves nominal coverage probability across diverse scenarios. We illustrate the practical utility of our approach by assessing mediation in a CRT in Kenya.",
+      "summary": {
+        "gist": "クラスター無作為化比較試験（CRT）は、医療サービス研究などで複雑な介入の効果を評価するためによく用いられます。しかし、介入が組織や地域レベルで行われ、その効果がクラスターレベルの媒介変数を通じて個人の結果に影響する場合、因果媒介分析は困難を極めます。特にクラスター数が少ない場合、従来の漸近仮定に基づく手法では、分散推定が不正確になり、信頼区間が無効になる問題がありました。",
+        "novelty": "従来の因果媒介分析手法は、クラスター無作為化比較試験（CRT）でクラスターレベルの媒介変数があり、クラスター数が少ない場合に、漸近仮定に依存するため分散推定が偏り、信頼区間が無効になるという課題がありました。 本研究では、クラスター間の「距離」を考慮した類似度重み付きベイズブートストラップ（SWBB）を導入。これにより、制限的なパラメトリック仮定なしに、近いクラスターからより多くの情報を借りて、少ないクラスター数でも正確な因果媒介効果を推定できるようになりました。",
+        "method": "本研究では、クラスター無作為化比較試験における因果媒介分析のための頑健な推論フレームワークを提案します。具体的には、結果変数と媒介変数に対してパラメトリックベイズモデルを使用し、計算効率と解釈可能性を確保します。不確実性を定量化するために、クラスター間の「距離」指標を用いた新しい類似度重み付きベイズブートストラップ（SWBB）を導入しました。このSWBBは、制限的なパラメトリック仮定を必要とせず、より「近い」クラスターからより多くの情報を借りることを可能にします。観測データモデルと因果仮定を組み合わせることで、限られたクラスター数でも自然直接効果と自然間接効果を正確に推定します。",
+        "results": "シミュレーション研究では、提案手法が多様なシナリオで名目上のカバレッジ確率を達成することを示しました。ケニアで行われたクラスター無作為化比較試験に適用し、統合ケアが社会ネットワーク特性の変化を通じて血圧に与える媒介効果を評価することで、本アプローチの実用的な有用性を実証しました。",
+        "why": "この手法の核となるのは、類似度重み付きベイズブートストラップ（SWBB）です。SWBBは、クラスター間の「距離」に基づいて情報を借りることで、個々のクラスターの特性を考慮しつつ、全体としての推定精度を向上させます。これにより、クラスターレベルの交絡因子と個人レベルの交絡因子の同時分布を推定する際に、特定のパラメトリックな仮定を置くことなく、柔軟かつ効率的に情報を統合できます。結果として、少ないデータでも頑健な因果媒介効果の推定が可能になります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / stat.ME）",
+      "field": "医学・健康",
+      "categoryL1": "adjacent",
+      "categoryL2": "causal-inference",
+      "arxivPrimary": "stat.ME",
+      "titleJa": "クラスター無作為化比較試験における因果媒介分析のためのセミパラメトリックベイズ推論",
+      "catchTitle": "少ないデータでも因果を解明！",
+      "hook": "あなたの会社で新しい働き方を導入した時、その効果は本当に狙い通りでしたか？何がどう影響したのか、正確に知りたいと思いませんか？",
+      "background": "クラスター無作為化比較試験（CRT）は、医療サービス研究などで複雑な介入の効果を評価するためによく用いられます。しかし、介入が組織や地域レベルで行われ、その効果がクラスターレベルの媒介変数を通じて個人の結果に影響する場合、因果媒介分析は困難を極めます。特にクラスター数が少ない場合、従来の漸近仮定に基づく手法では、分散推定が不正確になり、信頼区間が無効になる問題がありました。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "クラスター無作為化比較試験",
+          "definition": "集団単位で介入をランダムに割り付ける試験"
+        },
+        {
+          "term": "因果媒介分析",
+          "definition": "介入が結果に及ぼす経路を特定する分析"
+        },
+        {
+          "term": "パラメトリックベイズモデル",
+          "definition": "特定の確率分布を仮定するベイズ統計モデル"
+        },
+        {
+          "term": "類似度重み付きベイズブートストラップ",
+          "definition": "クラスター間の類似度で情報を重み付けする手法"
+        },
+        {
+          "term": "漸近仮定",
+          "definition": "サンプルサイズが無限大のときに成り立つ仮定"
+        },
+        {
+          "term": "自然直接効果",
+          "definition": "媒介変数を固定した場合の介入の直接効果"
+        },
+        {
+          "term": "自然間接効果",
+          "definition": "媒介変数を介した介入の間接効果"
+        },
+        {
+          "term": "交絡因子",
+          "definition": "介入と結果の両方に影響する変数"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "クラスター無作為化比較試験において、少ないデータでも因果関係の媒介効果を正確に推定する頑健な手法を開発しました。",
+      "noveltyContrast": {
+        "before": "従来の因果媒介分析手法は、クラスター無作為化比較試験（CRT）でクラスターレベルの媒介変数があり、クラスター数が少ない場合に、漸近仮定に依存するため分散推定が偏り、信頼区間が無効になるという課題がありました。",
+        "after": "本研究では、クラスター間の「距離」を考慮した類似度重み付きベイズブートストラップ（SWBB）を導入。これにより、制限的なパラメトリック仮定なしに、近いクラスターからより多くの情報を借りて、少ないクラスター数でも正確な因果媒介効果を推定できるようになりました。"
+      },
+      "analogy": {
+        "title": "畑の土壌分析、隣の畑のデータを借りる",
+        "body": "これは、まるで新しい品種の作物を育てるために、自分の畑の土壌を分析するようなものです。しかし、自分の畑のデータだけでは情報が少なすぎる。そこで、近くにある似たような土壌の畑（「距離」が近いクラスター）の分析結果を参考にすることで、より正確な土壌の状態を把握し、最適な肥料（介入）や栽培方法（媒介変数）を見つけることができる、というイメージです。自分の畑のデータが少ない場合でも、周辺の畑から賢く情報を借りて、より良い収穫（成果）を目指すのに役立ちます。",
+        "domain": "farming"
+      },
+      "whyYouCare": "新しい政策やプログラムを導入する際、その効果がどのように現れるのか、また何がその効果を媒介しているのかを正確に知ることは、次の意思決定に不可欠です。例えば、地域単位で健康増進プログラムを導入した際、参加者の意識変化（クラスターレベルの媒介変数）が個人の健康状態（個人レベルの結果）にどう影響したかを、少ない実施地域からでも信頼性高く評価できるようになります。これにより、限られたリソースの中で、より効果的な介入策を立案し、社会全体のwell-being向上に貢献できるでしょう。",
+      "takeawayTalk": "少ないデータでも、似た地域から情報を借りて因果関係を正確に解明できるよ！",
+      "bodyText": "本研究では、クラスター無作為化比較試験における因果媒介分析のための頑健な推論フレームワークを提案します。具体的には、結果変数と媒介変数に対してパラメトリックベイズモデルを使用し、計算効率と解釈可能性を確保します。不確実性を定量化するために、クラスター間の「距離」指標を用いた新しい類似度重み付きベイズブートストラップ（SWBB）を導入しました。このSWBBは、制限的なパラメトリック仮定を必要とせず、より「近い」クラスターからより多くの情報を借りることを可能にします。観測データモデルと因果仮定を組み合わせることで、限られたクラスター数でも自然直接効果と自然間接効果を正確に推定します。\n\nこの手法の核となるのは、類似度重み付きベイズブートストラップ（SWBB）です。SWBBは、クラスター間の「距離」に基づいて情報を借りることで、個々のクラスターの特性を考慮しつつ、全体としての推定精度を向上させます。これにより、クラスターレベルの交絡因子と個人レベルの交絡因子の同時分布を推定する際に、特定のパラメトリックな仮定を置くことなく、柔軟かつ効率的に情報を統合できます。結果として、少ないデータでも頑健な因果媒介効果の推定が可能になります。",
+      "bodyGlossary": [
+        {
+          "term": "クラスター無作為化比較試験",
+          "definition": "集団単位で介入をランダムに割り付ける試験",
+          "start": 6,
+          "end": 19
+        },
+        {
+          "term": "因果媒介分析",
+          "definition": "介入が結果に及ぼす経路を特定する分析",
+          "start": 23,
+          "end": 29
+        },
+        {
+          "term": "パラメトリックベイズモデル",
+          "definition": "特定の確率分布を仮定するベイズ統計モデル",
+          "start": 71,
+          "end": 84
+        },
+        {
+          "term": "類似度重み付きベイズブートストラップ",
+          "definition": "クラスター間の類似度で情報を重み付けする手法",
+          "start": 140,
+          "end": 158
+        },
+        {
+          "term": "自然直接効果",
+          "definition": "媒介変数を固定した場合の介入の直接効果",
+          "start": 270,
+          "end": 276
+        },
+        {
+          "term": "自然間接効果",
+          "definition": "媒介変数を介した介入の間接効果",
+          "start": 277,
+          "end": 283
+        },
+        {
+          "term": "交絡因子",
+          "definition": "介入と結果の両方に影響する変数",
+          "start": 417,
+          "end": 421
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "クラスター無作為化比較試験",
+          "definition": "集団単位で介入をランダムに割り付ける試験",
+          "start": 6,
+          "end": 19
+        },
+        {
+          "term": "因果媒介分析",
+          "definition": "介入が結果に及ぼす経路を特定する分析",
+          "start": 23,
+          "end": 29
+        },
+        {
+          "term": "パラメトリックベイズモデル",
+          "definition": "特定の確率分布を仮定するベイズ統計モデル",
+          "start": 71,
+          "end": 84
+        },
+        {
+          "term": "類似度重み付きベイズブートストラップ",
+          "definition": "クラスター間の類似度で情報を重み付けする手法",
+          "start": 140,
+          "end": 158
+        },
+        {
+          "term": "自然直接効果",
+          "definition": "媒介変数を固定した場合の介入の直接効果",
+          "start": 270,
+          "end": 276
+        },
+        {
+          "term": "自然間接効果",
+          "definition": "媒介変数を介した介入の間接効果",
+          "start": 277,
+          "end": 283
+        },
+        {
+          "term": "交絡因子",
+          "definition": "介入と結果の両方に影響する変数",
+          "start": 417,
+          "end": 421
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 231
+    },
+    {
+      "id": "2606.13094v1",
+      "title": "Efficient Estimation of A-basis and B-Basis Value under Epistemic Uncertainty using Importance Sampling and Control Variates",
+      "authors": [
+        "Elton Donfack-Siewe",
+        "Jérôme Morio",
+        "Sylvain Dubreuil",
+        "Jean-Philippe Navarro",
+        "Christian Fagiano"
+      ],
+      "publishedAt": "2026-06-11T09:23:38Z",
+      "url": "https://arxiv.org/abs/2606.13094v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.13094v1.pdf",
+      "categories": [
+        "topic:health",
+        "stat.AP"
+      ],
+      "abstract": "In aerospace certification and other safety-critical domains, conservative quantile estimation such as A- and B-basis values is essential to guarantee reliability. While these metrics are traditionally derived from experimental campaigns, this work focuses on their estimation using a validated deterministic numerical model. The problem is formulated under mixed aleatory-epistemic uncertainty, accounting for limited material data, finite sampling effects, and surrogate modeling errors. We propose a methodology for estimating conservative design quantiles with statistical guarantees under mixed uncertainties. The proposed method leverages importance sampling and control variates to achieve accurate and efficient estimates within a fixed computational budget. One key point is the surrogate model's role solely as a variance reduction device, which guarantees unbiased and consistent quantile estimation. By explicitly integrating all sources of uncertainty, the proposed framework provides a numerical alternative to estimate A-basis and B-Basis. Furthermore, Sobol-based sensitivity indices are obtained at no additional cost, offering insight into the dominant epistemic sources. Numerical experiments on structural models demonstrate the method's reliability and computational efficiency. In particular, the application to large-scale industrial simulations confirms its suitability for aerospace certification workflows and highlights its relevance for real world engineering environments.",
+      "summary": {
+        "gist": "航空宇宙分野のような安全性が極めて重要な領域では、材料や部品の信頼性を保証するため、A-basis値（99%の確率で95%の信頼度で性能を満たす下限値）やB-basis値（90%の確率で95%の信頼度で性能を満たす下限値）といった保守的な統計的基準値の推定が不可欠です。これらの値は、システムの固有のばらつき（偶然的不確実性）と、データ不足やモデルの不完全性による知識の不足（認識論的不確実性）の両方を考慮する必要があります。しかし、従来の実験や高精度シミュレーションはコストが高く、限られたデータでこれらの不確実性を効率的に扱う方法が課題でした。",
+        "novelty": "従来、航空機の材料や部品の安全性を示すA/B基準値は、膨大な実験データに基づいて決定されてきました。しかし、実験には莫大なコストと時間がかかり、数値シミュレーションも計算コストが高いという課題がありました。また、データ不足やモデルの不完全性から生じる「認識論的（エピステミック）不確実性」を統計的に厳密に扱う方法は確立されていませんでした。 この研究では、重要度サンプリングと制御変量という統計手法を組み合わせることで、限られた実験データや計算資源でも、認識論的（エピステミック）不確実性を考慮しつつ、A/B基準値を高精度かつ効率的に推定する数値的な代替手段を提案しました。これにより、安全性を確保しつつ、開発コストと時間を大幅に削減できる可能性を示しています。",
+        "method": "本研究では、A/B基準値の推定を、混合型（偶然的・認識論的）不確実性の下での保守的な設計クォンタイル推定問題として定式化しました。この問題を解決するため、重要度サンプリング（IS）と制御変量（CV）という2つの分散低減技術を組み合わせた新しい推定手法を提案しています。重要度サンプリングは、関心のある領域に重点的にサンプリングを行うことで、少ないサンプル数で精度を高めます。制御変量は、安価に評価できる代理モデル（サロゲートモデル）の出力と真のモデルの出力の相関を利用して、推定の分散を低減します。この手法では、代理モデルは分散低減の手段としてのみ使用され、推定の不偏性と一貫性を保証します。これにより、限られた計算予算内で、正確かつ効率的な推定を可能にしています。",
+        "results": "提案手法は、構造モデルを用いた数値実験と大規模な産業シミュレーションに適用され、その信頼性と計算効率が実証されました。特に、航空宇宙認証ワークフローへの適用可能性が確認され、実世界のエンジニアリング環境におけるその関連性が強調されています。このフレームワークは、すべての不確実性の発生源を明示的に統合することで、A-basis値とB-basis値を推定するための数値的な代替手段を提供します。さらに、Sobolベースの感度指標も追加コストなしで得られ、支配的な認識論的不確実性の発生源に関する洞察を提供します。",
+        "why": "この手法のメカニズムは、主に2つの統計的技術の組み合わせにあります。まず、重要度サンプリングは、評価したい稀な事象（例えば、材料が基準値を下回る確率）が起こりやすい領域に、より多くの計算資源を集中させることで、効率的に情報を収集します。次に、制御変量は、計算コストの高い精密なシミュレーション結果と、計算コストの低い簡易的なモデル（代理モデル）の結果の間の関係性を利用します。代理モデルは、真のモデルの振る舞いをある程度模倣するため、その誤差を「制御」することで、精密なシミュレーションの推定精度を向上させることができます。この際、代理モデルはあくまで補助的な役割に徹するため、代理モデル自体の不正確さが最終的な推定結果に偏りをもたらすことを防ぎます。これにより、限られた計算回数で、統計的に信頼できる保守的な基準値を導き出すことが可能になります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / stat.AP）",
+      "field": "医学・健康",
+      "categoryL1": "adjacent",
+      "categoryL2": "risk-management",
+      "arxivPrimary": "stat.AP",
+      "titleJa": "重要度サンプリングと制御変量を用いた不確実性下でのA/B基準値の効率的推定",
+      "catchTitle": "少ないデータで航空機の安全性を高める新技術",
+      "hook": "航空機の部品が本当に安全か、少ないデータでどう確認しますか？この疑問に答える研究です。",
+      "background": "航空宇宙分野のような安全性が極めて重要な領域では、材料や部品の信頼性を保証するため、A-basis値（99%の確率で95%の信頼度で性能を満たす下限値）やB-basis値（90%の確率で95%の信頼度で性能を満たす下限値）といった保守的な統計的基準値の推定が不可欠です。これらの値は、システムの固有のばらつき（偶然的不確実性）と、データ不足やモデルの不完全性による知識の不足（認識論的不確実性）の両方を考慮する必要があります。しかし、従来の実験や高精度シミュレーションはコストが高く、限られたデータでこれらの不確実性を効率的に扱う方法が課題でした。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "A-basis値",
+          "definition": "99%の確率で95%の信頼度で性能を満たす下限値"
+        },
+        {
+          "term": "B-basis値",
+          "definition": "90%の確率で95%の信頼度で性能を満たす下限値"
+        },
+        {
+          "term": "クォンタイル",
+          "definition": "データを小さい順に並べたときの特定の位置の値"
+        },
+        {
+          "term": "重要度サンプリング",
+          "definition": "稀な事象が起こりやすい領域に重点的にサンプリング"
+        },
+        {
+          "term": "制御変量",
+          "definition": "相関の高い補助変数で推定の分散を低減する手法"
+        },
+        {
+          "term": "分散低減技術",
+          "definition": "推定値のばらつきを減らし精度を高める統計手法"
+        },
+        {
+          "term": "代理モデル",
+          "definition": "計算コストの高いモデルの代わりに使う簡易モデル"
+        },
+        {
+          "term": "不偏性",
+          "definition": "推定値が真の値から系統的にずれない性質"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "限られたデータと計算資源で、航空宇宙分野の安全基準値を高精度かつ効率的に推定する新手法を開発。",
+      "noveltyContrast": {
+        "before": "従来、航空機の材料や部品の安全性を示すA/B基準値は、膨大な実験データに基づいて決定されてきました。しかし、実験には莫大なコストと時間がかかり、数値シミュレーションも計算コストが高いという課題がありました。また、データ不足やモデルの不完全性から生じる「認識論的（エピステミック）不確実性」を統計的に厳密に扱う方法は確立されていませんでした。",
+        "after": "この研究では、重要度サンプリングと制御変量という統計手法を組み合わせることで、限られた実験データや計算資源でも、認識論的（エピステミック）不確実性を考慮しつつ、A/B基準値を高精度かつ効率的に推定する数値的な代替手段を提案しました。これにより、安全性を確保しつつ、開発コストと時間を大幅に削減できる可能性を示しています。"
+      },
+      "analogy": {
+        "title": "豊作を予測するベテラン農家の知恵",
+        "body": "これは、まるでベテラン農家が限られた情報から今年の豊作を予測するようなものです。通常、豊作を確実にするには、広大な畑で何年もかけて様々な品種を育て、土壌や天候データを詳細に記録する必要があります。しかし、この研究は、過去の経験（既存のシミュレーションデータ）と、今年の特定の畑の状況（新しいデータ）を組み合わせることで、より少ない試行錯誤で、高い確信度を持って収穫量を予測する「勘どころ」を見つけるようなものです。つまり、全ての畑を詳細に調べる代わりに、重要なポイントに絞って効率的に情報を集め、経験則と新しい知見を賢く組み合わせることで、精度の高い予測を可能にするのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、航空機や自動車、医療機器など、高い安全性が求められる製品の開発・認証プロセスに大きな影響を与えます。限られた実験データやシミュレーション予算の中で、製品の信頼性を統計的に保証できるようになるため、開発期間の短縮とコスト削減に貢献します。また、安全性評価の透明性が向上し、より客観的な根拠に基づいた意思決定が可能になります。これは、消費者にとってより安全で信頼性の高い製品が市場に出回ることを意味し、企業にとっては競争力強化につながるでしょう。特に、新しい材料や設計を導入する際の障壁を低減し、イノベーションを加速させる可能性を秘めています。",
+      "takeawayTalk": "少ないデータでも航空機の安全基準を統計的に高精度に推定できるようになったよ！",
+      "bodyText": "本研究では、A/B基準値の推定を、混合型（偶然的・認識論的）不確実性の下での保守的な設計クォンタイル推定問題として定式化しました。この問題を解決するため、重要度サンプリング（IS）と制御変量（CV）という2つの分散低減技術を組み合わせた新しい推定手法を提案しています。重要度サンプリングは、関心のある領域に重点的にサンプリングを行うことで、少ないサンプル数で精度を高めます。制御変量は、安価に評価できる代理モデル（サロゲートモデル）の出力と真のモデルの出力の相関を利用して、推定の分散を低減します。この手法では、代理モデルは分散低減の手段としてのみ使用され、推定の不偏性と一貫性を保証します。これにより、限られた計算予算内で、正確かつ効率的な推定を可能にしています。\n\nこの手法のメカニズムは、主に2つの統計的技術の組み合わせにあります。まず、重要度サンプリングは、評価したい稀な事象（例えば、材料が基準値を下回る確率）が起こりやすい領域に、より多くの計算資源を集中させることで、効率的に情報を収集します。次に、制御変量は、計算コストの高い精密なシミュレーション結果と、計算コストの低い簡易的なモデル（代理モデル）の結果の間の関係性を利用します。代理モデルは、真のモデルの振る舞いをある程度模倣するため、その誤差を「制御」することで、精密なシミュレーションの推定精度を向上させることができます。この際、代理モデルはあくまで補助的な役割に徹するため、代理モデル自体の不正確さが最終的な推定結果に偏りをもたらすことを防ぎます。これにより、限られた計算回数で、統計的に信頼できる保守的な基準値を導き出すことが可能になります。",
+      "bodyGlossary": [
+        {
+          "term": "クォンタイル",
+          "definition": "データを小さい順に並べたときの特定の位置の値",
+          "start": 44,
+          "end": 50
+        },
+        {
+          "term": "重要度サンプリング",
+          "definition": "稀な事象が起こりやすい領域に重点的にサンプリング",
+          "start": 77,
+          "end": 86
+        },
+        {
+          "term": "制御変量",
+          "definition": "相関の高い補助変数で推定の分散を低減する手法",
+          "start": 91,
+          "end": 95
+        },
+        {
+          "term": "分散低減技術",
+          "definition": "推定値のばらつきを減らし精度を高める統計手法",
+          "start": 105,
+          "end": 111
+        },
+        {
+          "term": "代理モデル",
+          "definition": "計算コストの高いモデルの代わりに使う簡易モデル",
+          "start": 201,
+          "end": 206
+        },
+        {
+          "term": "不偏性",
+          "definition": "推定値が真の値から系統的にずれない性質",
+          "start": 282,
+          "end": 285
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "クォンタイル",
+          "definition": "データを小さい順に並べたときの特定の位置の値",
+          "start": 44,
+          "end": 50
+        },
+        {
+          "term": "重要度サンプリング",
+          "definition": "稀な事象が起こりやすい領域に重点的にサンプリング",
+          "start": 77,
+          "end": 86
+        },
+        {
+          "term": "制御変量",
+          "definition": "相関の高い補助変数で推定の分散を低減する手法",
+          "start": 91,
+          "end": 95
+        },
+        {
+          "term": "分散低減技術",
+          "definition": "推定値のばらつきを減らし精度を高める統計手法",
+          "start": 105,
+          "end": 111
+        },
+        {
+          "term": "代理モデル",
+          "definition": "計算コストの高いモデルの代わりに使う簡易モデル",
+          "start": 201,
+          "end": 206
+        },
+        {
+          "term": "不偏性",
+          "definition": "推定値が真の値から系統的にずれない性質",
+          "start": 282,
+          "end": 285
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 309,
+      "keyFigure": {
+        "imagePath": "/figures/2606.13094v1_results.png",
+        "page": 29,
+        "caption": "提案手法が保守的な基準値を導き出すことを示す、真の分位数との比較です。",
+        "label": "Figure 6: Assessment of conservatism. The vertical green line represents the true quantile.",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-12T23:17:16.051Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.13094v1_results.png",
+          "page": 29,
+          "caption": "提案手法が保守的な基準値を導き出すことを示す、真の分位数との比較です。",
+          "label": "Figure 6: Assessment of conservatism. The vertical green line represents the true quantile.",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-12T23:17:16.051Z"
+        },
+        {
+          "imagePath": "/figures/2606.13094v1_why.png",
+          "page": 23,
+          "caption": "重要度サンプリングの基礎となる、テストサンプルの分布とカーネル密度推定です。",
+          "label": "Figure 2: Distribution and Kernel Density Estimation (KDE) of the test sample for the",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-12T23:17:16.051Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.13581v1",
+      "title": "The Tone of Awareness: Topic, Sentiment, and Toxicity Maps During Mental Health Month on TikTok",
+      "authors": [
+        "Henrique Ferraz de Arruda",
+        "Andreia Sofia Teixeira",
+        "Pranay Gundala Reddy",
+        "Anindya Mondal",
+        "Kleber Andrade Oliveira",
+        "Filipi Nascimento Silva"
+      ],
+      "publishedAt": "2026-06-11T17:04:11Z",
+      "url": "https://arxiv.org/abs/2606.13581v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.13581v1.pdf",
+      "categories": [
+        "topic:education",
+        "cs.CY",
+        "cs.CL",
+        "cs.HC",
+        "physics.soc-ph"
+      ],
+      "abstract": "Despite raising concerns about the mental health effects associated with the usage of TikTok, little is known about how related content is framed by creators and received by audiences. We collect the content of 28,341 TikTok videos and 80,130 comments from Mental Health Awareness Month (May) in 2023 and 2024 via the TikTok Research API, and study how the tone of awareness varies across topics and years. We characterize \"tone\" as the emotional and interpersonal framing of mental health discourse, operationalized through sentiment and toxicity measures. We extract topics from video text using BERTopic and log-odds keywords, then quantify topic-conditioned sentiment (XLM-T) and toxicity (Detoxify) separately for video transcriptions and comments. Sentiment captures the affective valence of content, while toxicity reflects the presence of harmful or abusive language. We find a stable set of recurring themes across years, spanning clinical conditions, emotional disclosure, self-care, and campaign-oriented content, with engagement highly skewed toward a small subset of topics. All sentiment and toxicity analyses are computed separately for video content and comments, allowing us to distinguish between content production and audience reception. Sentiment in videos is often negative for emotionally charged topics, while comments tend to shift toward more mixed or positive polarity, especially for suicide prevention. Toxicity is low in median overall, but exhibits longer-tailed outliers in comments than in videos that are more pronounced in comments and concentrated in specific topics (e.g., \"Duet\", \"Suicide Prevention\", and \"Psychisch\"). Overall, our results provide a topic-level decomposition of mental health discourse on TikTok during awareness-month campaigns.",
+      "summary": {
+        "gist": "メンタルヘルスは世界中で10億人以上が影響を受ける深刻な問題であり、オンライン空間、特にTikTokのようなSNSは、感情を共有し、ピアサポートを育む場であると同時に、有害なコンテンツにさらされるリスクも持ち合わせています。TikTokの短尺動画と共有・コメントのしやすさは、個人的で感情的な内容をパフォーマンス性の高い開示に変え、エンゲージメントに結びつくことがあります。これにより、共有された脆弱性によるポジティブな効果もあれば、過度な利用につながる可能性もあります。政策議論も進む中、TikTokデータの分析は、その複雑性から困難が伴います。",
+        "novelty": "これまでの研究では、TikTokにおけるメンタルヘルスコンテンツの全体的な感情や有害性については議論されてきましたが、動画の内容とそれに対するコメントの「トーン」の違いや、具体的なトピックごとの詳細な分析は不足していました。 この論文では、メンタルヘルス啓発月間のTikTok動画とそのコメントを詳細に分析し、動画のトピックごとに感情（ポジティブかネガティブか）と有害性（攻撃的か否か）を測定。動画とコメントでトーンがどう異なるかを明らかにしました。",
+        "method": "本研究では、2023年と2024年のメンタルヘルス啓発月間（5月）にTikTok Research APIを通じて収集した28,341本の動画と80,130件のコメントを分析しました。動画のテキストからBERTopicを用いてトピックを抽出し、XLM-Tで感情（ポジティブ・ネガティブ）を、Detoxifyで有害性（有害な言葉の有無）を定量化しました。これらの分析は、動画のトランスクリプションとコメントで別々に行い、コンテンツの生成側と視聴者の受容側の違いを区別できるようにしました。特定のトピックでコメント数が500を超える場合は、均一なランダムサンプリングを行い、外れ値の影響を軽減しました。",
+        "results": "経年的に安定した一連のテーマ（臨床的状態、感情の開示、セルフケア、キャンペーン関連コンテンツなど）が見られ、エンゲージメントは少数のトピックに集中していました。動画の感情は、感情的なトピックでしばしばネガティブでしたが、コメントは特に自殺予防に関して、より混合的またはポジティブな極性にシフトする傾向がありました。有害性は全体的に中央値は低かったものの、動画よりもコメントで長い裾を持つ外れ値が顕著であり、「Duet」「Suicide Prevention」「Psychisch」といった特定のトピックに集中していました。",
+        "why": "動画の感情がネガティブな内容であっても、コメントがポジティブに傾くのは、視聴者が共感やサポートを提供しようとする「ピアサポート」のメカニズムが働いているためと考えられます。特に自殺予防のようなデリケートなトピックでは、視聴者が積極的に支援的な言葉を選ぶ傾向が強いことが示唆されます。一方で、有害なコメントが特定のトピックに集中するのは、それらのトピックが議論を呼びやすく、意見の対立や攻撃的な表現が生まれやすい性質を持っているためと考えられます。動画とコメントでトーンが異なるのは、コンテンツ制作者の意図と、それを受け取る視聴者の反応が必ずしも一致しないことを示しています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.CY）",
+      "field": "教育",
+      "categoryL1": "serendipity",
+      "categoryL2": "social-media-analysis",
+      "arxivPrimary": "cs.CY",
+      "titleJa": "TikTokにおけるメンタルヘルス啓発月間のトーン：トピック、感情、有害性マップ",
+      "catchTitle": "TikTokのメンタルヘルス投稿、本音と建前",
+      "hook": "あなたはSNSでメンタルヘルスに関する投稿を見たとき、その内容とコメント欄の雰囲気が違うと感じたことはありませんか？",
+      "background": "メンタルヘルスは世界中で10億人以上が影響を受ける深刻な問題であり、オンライン空間、特にTikTokのようなSNSは、感情を共有し、ピアサポートを育む場であると同時に、有害なコンテンツにさらされるリスクも持ち合わせています。TikTokの短尺動画と共有・コメントのしやすさは、個人的で感情的な内容をパフォーマンス性の高い開示に変え、エンゲージメントに結びつくことがあります。これにより、共有された脆弱性によるポジティブな効果もあれば、過度な利用につながる可能性もあります。政策議論も進む中、TikTokデータの分析は、その複雑性から困難が伴います。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "BERTopic",
+          "definition": "テキストからトピックを抽出する機械学習フレームワーク。"
+        },
+        {
+          "term": "XLM-T",
+          "definition": "多言語対応の感情分析モデル。"
+        },
+        {
+          "term": "Detoxify",
+          "definition": "テキストの有害性（攻撃性）を検出するツール。"
+        },
+        {
+          "term": "感情",
+          "definition": "テキストがポジティブかネガティブかを示す指標。"
+        },
+        {
+          "term": "有害性",
+          "definition": "テキストに含まれる攻撃的または不快な言葉の度合い。"
+        },
+        {
+          "term": "ピアサポート",
+          "definition": "同じような経験を持つ人々がお互いを支え合うこと。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "TikTokのメンタルヘルス関連動画はネガティブでも、コメントはポジティブに傾き、有害性は低いが一部で顕著になる。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、TikTokにおけるメンタルヘルスコンテンツの全体的な感情や有害性については議論されてきましたが、動画の内容とそれに対するコメントの「トーン」の違いや、具体的なトピックごとの詳細な分析は不足していました。",
+        "after": "この論文では、メンタルヘルス啓発月間のTikTok動画とそのコメントを詳細に分析し、動画のトピックごとに感情（ポジティブかネガティブか）と有害性（攻撃的か否か）を測定。動画とコメントでトーンがどう異なるかを明らかにしました。"
+      },
+      "analogy": {
+        "title": "畑の作物の「見た目」と「土壌の栄養」の違い",
+        "body": "これは、畑で育つ作物の「見た目」と、その作物を育む「土壌の栄養状態」のようなものです。動画の内容は、畑に実った作物そのもの。一見すると元気がないように見える作物（ネガティブな動画）でも、土壌（コメント欄）には豊かな栄養（ポジティブなサポート）が満ちていることがあります。逆に、一部の土壌（特定のトピックのコメント）には、作物の成長を阻害するような有害物質（有害なコメント）が集中している場合もあります。この研究は、作物の表面的な状態だけでなく、それを支える土壌の質まで深く掘り下げて分析しているのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、SNSがメンタルヘルスに関する情報共有やサポートの場として、いかに複雑な役割を担っているかを浮き彫りにします。企業がSNSマーケティングで感情に訴えかけるコンテンツを扱う際、動画自体のメッセージだけでなく、コメント欄でどのような反応が起こりうるかを予測し、適切なモデレーションやサポート体制を構築する上で示唆を与えます。また、個人がSNSでメンタルヘルスに関する情報を発信する際、自分の発信がどのように受け止められ、どのような対話が生まれる可能性があるかを理解する助けにもなります。特に、デリケートな話題では、意図しない有害な反応を防ぐための配慮の重要性も示唆しています。",
+      "takeawayTalk": "TikTokのメンタルヘルス動画は暗くても、コメントは意外と優しい！",
+      "bodyText": "本研究では、2023年と2024年のメンタルヘルス啓発月間（5月）にTikTok Research APIを通じて収集した28,341本の動画と80,130件のコメントを分析しました。動画のテキストからBERTopicを用いてトピックを抽出し、XLM-Tで感情（ポジティブ・ネガティブ）を、Detoxifyで有害性（有害な言葉の有無）を定量化しました。これらの分析は、動画のトランスクリプションとコメントで別々に行い、コンテンツの生成側と視聴者の受容側の違いを区別できるようにしました。特定のトピックでコメント数が500を超える場合は、均一なランダムサンプリングを行い、外れ値の影響を軽減しました。\n\n動画の感情がネガティブな内容であっても、コメントがポジティブに傾くのは、視聴者が共感やサポートを提供しようとする「ピアサポート」のメカニズムが働いているためと考えられます。特に自殺予防のようなデリケートなトピックでは、視聴者が積極的に支援的な言葉を選ぶ傾向が強いことが示唆されます。一方で、有害なコメントが特定のトピックに集中するのは、それらのトピックが議論を呼びやすく、意見の対立や攻撃的な表現が生まれやすい性質を持っているためと考えられます。動画とコメントでトーンが異なるのは、コンテンツ制作者の意図と、それを受け取る視聴者の反応が必ずしも一致しないことを示しています。",
+      "bodyGlossary": [
+        {
+          "term": "BERTopic",
+          "definition": "テキストからトピックを抽出する機械学習フレームワーク。",
+          "start": 101,
+          "end": 109
+        },
+        {
+          "term": "XLM-T",
+          "definition": "多言語対応の感情分析モデル。",
+          "start": 122,
+          "end": 127
+        },
+        {
+          "term": "感情",
+          "definition": "テキストがポジティブかネガティブかを示す指標。",
+          "start": 128,
+          "end": 130
+        },
+        {
+          "term": "Detoxify",
+          "definition": "テキストの有害性（攻撃性）を検出するツール。",
+          "start": 145,
+          "end": 153
+        },
+        {
+          "term": "有害性",
+          "definition": "テキストに含まれる攻撃的または不快な言葉の度合い。",
+          "start": 154,
+          "end": 157
+        },
+        {
+          "term": "ピアサポート",
+          "definition": "同じような経験を持つ人々がお互いを支え合うこと。",
+          "start": 358,
+          "end": 364
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "BERTopic",
+          "definition": "テキストからトピックを抽出する機械学習フレームワーク。",
+          "start": 101,
+          "end": 109
+        },
+        {
+          "term": "XLM-T",
+          "definition": "多言語対応の感情分析モデル。",
+          "start": 122,
+          "end": 127
+        },
+        {
+          "term": "感情",
+          "definition": "テキストがポジティブかネガティブかを示す指標。",
+          "start": 128,
+          "end": 130
+        },
+        {
+          "term": "Detoxify",
+          "definition": "テキストの有害性（攻撃性）を検出するツール。",
+          "start": 145,
+          "end": 153
+        },
+        {
+          "term": "有害性",
+          "definition": "テキストに含まれる攻撃的または不快な言葉の度合い。",
+          "start": 154,
+          "end": 157
+        },
+        {
+          "term": "ピアサポート",
+          "definition": "同じような経験を持つ人々がお互いを支え合うこと。",
+          "start": 358,
+          "end": 364
+        }
+      ],
+      "agriEconRelevance": "農業経済学の文脈では、この知見は農業コミュニティ内での情報伝達や、消費者とのコミュニケーション戦略に応用できます。例えば、農産物のブランドイメージや持続可能性に関する情報発信（動画）と、それに対する消費者の反応（コメント）のギャップを分析することで、より効果的なマーケティング戦略を構築できます。また、農業従事者のメンタルヘルスサポートに関するオンラインコミュニティを設計する際、ネガティブな感情の開示がポジティブなピアサポートにつながるメカニズムを理解し、有害な言動を抑制する仕組みを導入する上で役立つでしょう。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 283,
+      "keyFigure": {
+        "imagePath": "/figures/2606.13581v1_results.jpx",
+        "page": 6,
+        "caption": "table Mental Health",
+        "label": "table",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-12T23:17:17.209Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.13581v1_results.jpx",
+          "page": 6,
+          "caption": "table Mental Health",
+          "label": "table",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-12T23:17:17.209Z"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,939 @@
+{
+  "date": "2026-06-14",
+  "papers": [
+    {
+      "id": "2606.13314v1",
+      "title": "The Privilege of Exposure: Caste and Generative AI in India's Graduate Labour Market",
+      "authors": [
+        "Kaibalyapati Mishra"
+      ],
+      "publishedAt": "2026-06-11T13:09:43Z",
+      "url": "https://arxiv.org/abs/2606.13314v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.13314v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "econ.GN"
+      ],
+      "abstract": "Who is exposed to generative AI in a developing-country labour market? We map three occupational AI-exposure indices to India's redesigned Periodic Labour Force Survey (2025) and document a steep caste gradient among 83,000 employed graduates: graduates from the Scheduled Castes and the Scheduled Tribes are 0.24--0.37 standard deviations less exposed than upper-caste graduates within the same district. Two channels drive the gap: one in four SC and one in three ST graduates work in farm or elementary occupations untouched by AI, and those in white-collar work are underrepresented in managerial, software, and finance occupations. Because exposure commands a wage premium of up to 20 per cent, generative AI stands to widen, not narrow, India's caste earnings gap.",
+      "summary": {
+        "gist": "AIが労働市場に与える影響は世界中で注目されていますが、特に発展途上国では、教育水準だけでなく歴史的な社会階層が職業選択や賃金に大きく影響します。インドではカースト制度が依然として強く、高学歴者でさえ職業達成や賃金に影響を与えています。生成AIの導入が進むIT、金融、ビジネスサービスといった分野は、上位カーストの大卒者が集中しているため、AIへの接触機会がカースト間でどう異なるのかを理解することは重要です。",
+        "novelty": "これまでの研究では、AIへの接触機会が教育水準や職種によってどう異なるかは分析されてきましたが、発展途上国における社会集団間の格差についてはほとんど分かっていませんでした。 この論文は、インドの8万3千人以上の大卒者を対象に、カースト別に生成AIへの職業的接触機会を初めて定量的に示し、既存の社会階層がAIの恩恵を享受する機会にどう影響するかを明らかにしました。",
+        "method": "本研究では、インドの2025年版定期労働力調査（PLFS）のデータ（約83,000人の大卒者を含む）と、3つの異なるAI職業接触指数を組み合わせました。これらの指数は、職業のタスク内容とAIの能力を照合して、各職業がAIにどれだけ触れる可能性があるかを測定します。具体的には、Felten et al. (2021)の能力ベースのAI職業接触指数（AIOE）、Eloundou et al. (2024)のタスクベースの指数（LLMがタスク完了時間を半減させる割合）、およびGmyrek et al. (2025)のILO生成AIスコアを使用しました。これらの指数をインドの国家職業分類（NCO-2015）にマッピングし、カーストグループ別にAI接触機会の平均値を比較しました。さらに、地域や人口統計学的要因を調整した上で、カースト間のAI接触格差を分析し、その格差がどのようなメカニズムによって生じるのかを分解しました。",
+        "results": "分析の結果、大卒者のAI接触機会はカーストの優位性と単調に上昇することが明らかになりました。同じ地域の上位カースト（Others）の大卒者と比較して、指定カースト（SC）の大卒者は0.24～0.27標準偏差、指定部族（ST）の大卒者は0.31～0.37標準偏差、AIへの接触機会が少ないことが判明しました。この格差は、使用した3つの指数全てでほぼ同じでした。この格差は主に2つの要因によって説明されます。第一に、職業的降格です。SC大卒者の24.6%、ST大卒者の32.0%が、AIへの接触がほとんどない農業または初等的な職業（農家、農業労働者、建設労働者など）に従事しているのに対し、上位カーストでは12.1%でした。第二に、ホワイトカラー職内での選別です。農業・初等職業を除いた場合でも格差は残ります。上位カーストの大卒者は、マネージャー、ソフトウェア開発者、金融専門家といったAI接触機会の多い職業に過剰に代表されているのに対し、SC大卒者ではこれらの職業への従事が少ないことが示されました。AI接触機会は賃金に最大20%のプレミアムをもたらすため、生成AIはインドのカースト間賃金格差を縮小するのではなく、拡大させる可能性が高いと結論付けられました。",
+        "why": "カースト間のAI接触機会の格差は、主に「職業的降格」と「ホワイトカラー職内での選別」という2つのメカニズムによって生じます。まず、職業的降格とは、指定カーストや指定部族の大卒者が、その学歴に見合わない、AIとの関連性が低い農業や初等的な肉体労働に従事せざるを得ない状況を指します。これらの職業はAIによる自動化や拡張の恩恵をほとんど受けません。次に、ホワイトカラー職内での選別とは、たとえホワイトカラー職に就けたとしても、上位カーストの大卒者がソフトウェア開発者、金融専門家、経営職といったAIとの接触機会が多い高スキル職に集中する一方で、指定カーストや指定部族の大卒者はこれらの職種に十分にアクセスできないことを意味します。これらのメカニズムが複合的に作用することで、生成AIがもたらす賃金プレミアムの恩恵が上位カーストに偏り、既存のカースト間賃金格差がさらに拡大する可能性が高まります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "labor-market",
+      "arxivPrimary": "econ.GN",
+      "titleJa": "インドの労働市場におけるカーストと生成AIへの接触機会の格差",
+      "catchTitle": "生成AIはカースト格差を広げる",
+      "hook": "あなたはAIが仕事を奪うと心配していませんか？インドでは、AIへの「接触」が、すでに存在する社会格差をさらに広げています。",
+      "background": "AIが労働市場に与える影響は世界中で注目されていますが、特に発展途上国では、教育水準だけでなく歴史的な社会階層が職業選択や賃金に大きく影響します。インドではカースト制度が依然として強く、高学歴者でさえ職業達成や賃金に影響を与えています。生成AIの導入が進むIT、金融、ビジネスサービスといった分野は、上位カーストの大卒者が集中しているため、AIへの接触機会がカースト間でどう異なるのかを理解することは重要です。",
+      "quiz": {
+        "question": "インドの大卒者において、指定カースト・指定部族のAI接触機会が上位カーストよりも低い主な理由は何ですか？",
+        "options": [
+          "AI技術への関心が低いから",
+          "AI関連の教育機関が少ないから",
+          "AIに触れない農業や初等的な職業に多く従事しているから"
+        ],
+        "correctIndex": 2,
+        "explanation": "論文によると、指定カースト・指定部族の大卒者は、AIへの接触がほとんどない農業や初等的な職業に多く従事していることが、AI接触機会の格差の主な要因の一つです。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "生成AI",
+          "definition": "文章や画像を自動生成するAI技術"
+        },
+        {
+          "term": "カースト",
+          "definition": "インドの伝統的な社会階層制度"
+        },
+        {
+          "term": "PLFS",
+          "definition": "インドの定期労働力調査"
+        },
+        {
+          "term": "AI職業接触指数",
+          "definition": "職業がAIにどれだけ触れるかを示す指標"
+        },
+        {
+          "term": "NCO-2015",
+          "definition": "インドの国家職業分類"
+        },
+        {
+          "term": "標準偏差",
+          "definition": "データのばらつきを示す統計量"
+        },
+        {
+          "term": "職業的降格",
+          "definition": "学歴に見合わない低い地位の職業に就くこと"
+        },
+        {
+          "term": "賃金プレミアム",
+          "definition": "特定の要因によって得られる追加的な賃金"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "インドでは、高学歴でもカーストが低いほど生成AIに触れる機会が少なく、この格差が賃金格差を拡大させる可能性があります。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、AIへの接触機会が教育水準や職種によってどう異なるかは分析されてきましたが、発展途上国における社会集団間の格差についてはほとんど分かっていませんでした。",
+        "after": "この論文は、インドの8万3千人以上の大卒者を対象に、カースト別に生成AIへの職業的接触機会を初めて定量的に示し、既存の社会階層がAIの恩恵を享受する機会にどう影響するかを明らかにしました。"
+      },
+      "analogy": {
+        "title": "畑の土壌が収穫を左右するように",
+        "body": "これは、肥沃な土壌を持つ畑（上位カースト）では最新の高性能な農機（生成AI）が導入され、より効率的に豊作（高賃金）をもたらす一方で、痩せた土壌の畑（指定カースト・指定部族）では、そもそも農機が使えないような作物を育てているか、あるいは農機があっても古いタイプのものしか使わせてもらえない状況に似ています。つまり、AIという新しい技術が、すでに存在する「土壌の質」という格差をさらに広げてしまうようなものです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "-0.24～-0.37SD",
+          "label": "指定カースト・指定部族の大卒者のAI接触機会（上位カースト比）"
+        },
+        {
+          "value": "+20%",
+          "label": "AI接触による賃金プレミアム"
+        }
+      ],
+      "whyYouCare": "あなたはAIが社会をより公平にすると期待していませんか？しかし、この研究は、AIが既存の社会格差を固定し、さらに拡大させる可能性を示唆しています。もしあなたが企業の人事担当者なら、AI関連の職務へのアクセスが特定の層に偏っていないか、採用や研修の機会を見直す必要があるかもしれません。政策立案者であれば、AI教育やデジタルスキルの習得機会を、社会的に不利な立場にある人々に積極的に提供する施策が不可欠です。私たち一人ひとりも、AIの恩恵が誰に届き、誰が取り残されるのか、その構造を理解し、より公平な社会を目指すための議論に参加するきっかけになるでしょう。",
+      "takeawayTalk": "インドではAIがカースト格差を広げ、高学歴でも不利なカーストはAIに触れる機会が少ないんだ。",
+      "bodyText": "本研究では、インドの2025年版定期労働力調査（PLFS）のデータ（約83,000人の大卒者を含む）と、3つの異なるAI職業接触指数を組み合わせました。これらの指数は、職業のタスク内容とAIの能力を照合して、各職業がAIにどれだけ触れる可能性があるかを測定します。具体的には、Felten et al. (2021)の能力ベースのAI職業接触指数（AIOE）、Eloundou et al. (2024)のタスクベースの指数（LLMがタスク完了時間を半減させる割合）、およびGmyrek et al. (2025)のILO生成AIスコアを使用しました。これらの指数をインドの国家職業分類（NCO-2015）にマッピングし、カーストグループ別にAI接触機会の平均値を比較しました。さらに、地域や人口統計学的要因を調整した上で、カースト間のAI接触格差を分析し、その格差がどのようなメカニズムによって生じるのかを分解しました。\n\nカースト間のAI接触機会の格差は、主に「職業的降格」と「ホワイトカラー職内での選別」という2つのメカニズムによって生じます。まず、職業的降格とは、指定カーストや指定部族の大卒者が、その学歴に見合わない、AIとの関連性が低い農業や初等的な肉体労働に従事せざるを得ない状況を指します。これらの職業はAIによる自動化や拡張の恩恵をほとんど受けません。次に、ホワイトカラー職内での選別とは、たとえホワイトカラー職に就けたとしても、上位カーストの大卒者がソフトウェア開発者、金融専門家、経営職といったAIとの接触機会が多い高スキル職に集中する一方で、指定カーストや指定部族の大卒者はこれらの職種に十分にアクセスできないことを意味します。これらのメカニズムが複合的に作用することで、生成AIがもたらす賃金プレミアムの恩恵が上位カーストに偏り、既存のカースト間賃金格差がさらに拡大する可能性が高まります。",
+      "bodyGlossary": [
+        {
+          "term": "PLFS",
+          "definition": "インドの定期労働力調査",
+          "start": 24,
+          "end": 28
+        },
+        {
+          "term": "AI職業接触指数",
+          "definition": "職業がAIにどれだけ触れるかを示す指標",
+          "start": 58,
+          "end": 66
+        },
+        {
+          "term": "生成AI",
+          "definition": "文章や画像を自動生成するAI技術",
+          "start": 261,
+          "end": 265
+        },
+        {
+          "term": "NCO-2015",
+          "definition": "インドの国家職業分類",
+          "start": 294,
+          "end": 302
+        },
+        {
+          "term": "カースト",
+          "definition": "インドの伝統的な社会階層制度",
+          "start": 311,
+          "end": 315
+        },
+        {
+          "term": "職業的降格",
+          "definition": "学歴に見合わない低い地位の職業に就くこと",
+          "start": 433,
+          "end": 438
+        },
+        {
+          "term": "賃金プレミアム",
+          "definition": "特定の要因によって得られる追加的な賃金",
+          "start": 757,
+          "end": 764
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "PLFS",
+          "definition": "インドの定期労働力調査",
+          "start": 24,
+          "end": 28
+        },
+        {
+          "term": "AI職業接触指数",
+          "definition": "職業がAIにどれだけ触れるかを示す指標",
+          "start": 58,
+          "end": 66
+        },
+        {
+          "term": "生成AI",
+          "definition": "文章や画像を自動生成するAI技術",
+          "start": 261,
+          "end": 265
+        },
+        {
+          "term": "NCO-2015",
+          "definition": "インドの国家職業分類",
+          "start": 294,
+          "end": 302
+        },
+        {
+          "term": "カースト",
+          "definition": "インドの伝統的な社会階層制度",
+          "start": 311,
+          "end": 315
+        },
+        {
+          "term": "職業的降格",
+          "definition": "学歴に見合わない低い地位の職業に就くこと",
+          "start": 433,
+          "end": 438
+        },
+        {
+          "term": "賃金プレミアム",
+          "definition": "特定の要因によって得られる追加的な賃金",
+          "start": 757,
+          "end": 764
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 320
+    },
+    {
+      "id": "2606.13678v1",
+      "title": "A model of local and global reciprocity",
+      "authors": [
+        "Mari Kawakatsu",
+        "Yohsuke Murase",
+        "Taylor A. Kessinger",
+        "Joshua B. Plotkin"
+      ],
+      "publishedAt": "2026-06-11T17:59:49Z",
+      "url": "https://arxiv.org/abs/2606.13678v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.13678v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "physics.soc-ph",
+        "q-bio.PE"
+      ],
+      "abstract": "We often decide how to treat friends based on observations of their past behavior, whereas actions toward strangers are typically guided by their public reputations. These two kinds of information underlie two classical mechanisms for the evolution of cooperation$\\unicode{x2014}$direct and indirect reciprocity$\\unicode{x2014}$which have largely been studied in isolation. They are not interchangeable: we can recall the past actions of only a small circle of close contacts, whereas for the far larger pool of strangers we must rely on public reputations. Here we develop a mathematical framework built on this distinction. Each individual engages in direct reciprocity in local games within a finite neighborhood of friends, whose actions they observe directly, and in indirect reciprocity in global games with a large population of strangers, known only by reputation. Separating local and global interactions allows us to address two questions. First, can cooperation persist under a cognitively simple norm of judgment? We show that combining direct and indirect reciprocity resolves the scoring dilemma: conditional cooperators resist invasion by both unconditional cooperators and unconditional defectors, where indirect reciprocity alone would fail. Second, how should one treat a friend whose past behavior conflicts with their public reputation? We find that the strategies that maximize cooperation are forgiving$\\unicode{x2014}$overlooking whichever piece of information is unfavorable$\\unicode{x2014}$and that these forgiving strategies can often remain robust to invasion. By distinguishing between local and global scales of interaction and integrating information across them, our framework offers a more cognitively realistic account of how reciprocity sustains cooperation.",
+      "summary": {
+        "gist": "私たちは、親しい友人に対してはその人の過去の行動に基づいて接し、見知らぬ人に対しては世間の評判に基づいて行動することがよくあります。しかし、親しい人の行動と世間の評判が食い違う場合、どちらを優先すべきかという問題が生じます。特に、SNSなどで評判が容易に広がる現代社会では、この問題はより重要になっています。社会科学や進化生物学では、自己利益を追求する個人間で協力がどのように維持されるかという問いが長年の関心事であり、互恵関係（相手の行動に応じて自分の行動を変える傾向）がその主要な説明の一つとされてきました。互恵関係には、直接的な経験に基づく「直接互恵関係」と、評判に基づく「間接互恵関係」の2種類がありますが、これまでは別々に研究されてきました。",
+        "novelty": "これまでの研究では、親しい人との直接的な互恵関係と、世間の評判に基づく間接的な互恵関係は、それぞれ独立して研究されてきました。そのため、両者が衝突した場合にどう行動すべきか、また、単純なルールで協力が維持できるのかは不明でした。 この論文では、親しい人との「局所的な直接互恵関係」と、不特定多数との「全体的な間接互恵関係」を統合したモデルを構築。両者の情報が衝突する状況での最適な戦略と、単純な評価ルールでも協力が安定する条件を明らかにしました。",
+        "method": "本研究では、各個人が少数の「近隣者」と「非近隣者」という2種類の集団と交流するモデルを構築しました。近隣者とは、その行動を直接観察し記憶できる少数のグループであり、ここでは直接互恵関係が働きます。一方、非近隣者とは、その行動を直接観察できない多数の集団であり、ここでは世間の評判に基づく間接互恵関係が働きます。このモデルでは、個人は確率λで近隣者と、確率1-λで非近隣者と交流します。各交流は「寄付ゲーム」の形式で行われ、協力するか裏切るかを選択します。近隣者との交流では、相手の直近の行動と世間の評判の両方を考慮して行動を決定し、非近隣者との交流では、相手の世間の評判のみを考慮します。評判は、最も単純な「イメージスコアリング」というルールに基づいて更新されます。このモデルを用いて、協力行動が安定して維持される条件と、直接経験と評判が衝突した場合の最適な戦略を数学的に分析しました。",
+        "results": "本研究の結果、直接互恵関係と間接互恵関係を組み合わせることで、「スコアリングジレンマ」が解消され、協力行動が安定して維持されることが示されました。スコアリングジレンマとは、間接互恵関係だけでは、評判の悪い相手に協力を拒否する人が、自分も悪い評判を受けてしまい、結果的に協力が崩壊してしまう現象です。しかし、本モデルでは、近隣者との関係が小さく、局所的な交流と全体的な交流のバランスが適切であれば、単純なイメージスコアリングという評価ルールのもとでも、条件付き協力者が無条件協力者や無条件裏切り者の侵入に抵抗し、協力が安定することが分かりました。また、直接経験と世間の評判が衝突する場合、協力行動を最大化する戦略は「寛容」であることも判明しました。つまり、不利な情報を無視する戦略が有効であり、特に親しい人の悪い私的行動を許すことの方が、悪い世間の評判を許すことよりも重要である傾向が見られました。適切な寛容戦略は、協力関係を最大化しつつ、侵入者に対しても頑健であることが示されました。",
+        "why": "スコアリングジレンマが解消されるのは、局所的な直接互恵関係が、全体的な間接互恵関係の弱点を補完するためです。間接互恵関係だけでは、評判の悪い相手に協力を拒否した人が「悪い評判」を受けてしまい、協力が崩壊します。しかし、親しい近隣者との間では、直接的な過去の行動に基づいて協力するかどうかを判断するため、評判に左右されすぎずに協力行動を維持できます。この局所的な協力が、全体的な協力の崩壊を防ぐ「緩衝材」として機能します。また、寛容な戦略が有効なのは、相手のたった一度の失敗で関係を断ち切るのではなく、全体的な関係性を維持しようとすることで、長期的な協力関係の利益を最大化できるためです。特に、親しい人との関係では、直接的な経験がより重みを持つため、一時的な悪い行動を許すことが、関係維持に繋がりやすいと考えられます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.soc-ph）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "behavioral-economics",
+      "arxivPrimary": "physics.soc-ph",
+      "titleJa": "地域と全体における互恵関係のモデル：協力行動の進化を解明する",
+      "catchTitle": "身近な人への態度と世間の評判、どう使い分ける？",
+      "hook": "あなたは、親しい友人の「世間での評判」と「直接知る姿」が食い違った時、どちらを信じて行動しますか？",
+      "background": "私たちは、親しい友人に対してはその人の過去の行動に基づいて接し、見知らぬ人に対しては世間の評判に基づいて行動することがよくあります。しかし、親しい人の行動と世間の評判が食い違う場合、どちらを優先すべきかという問題が生じます。特に、SNSなどで評判が容易に広がる現代社会では、この問題はより重要になっています。社会科学や進化生物学では、自己利益を追求する個人間で協力がどのように維持されるかという問いが長年の関心事であり、互恵関係（相手の行動に応じて自分の行動を変える傾向）がその主要な説明の一つとされてきました。互恵関係には、直接的な経験に基づく「直接互恵関係」と、評判に基づく「間接互恵関係」の2種類がありますが、これまでは別々に研究されてきました。",
+      "quiz": {
+        "question": "この研究で、協力行動を最大化する戦略として有効だとされたのはどれ？",
+        "options": [
+          "常に相手の評判を信じる",
+          "不利な情報を無視する「寛容」な戦略",
+          "常に自分の経験だけを信じる"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究では、直接経験と世間の評判が衝突する場合、不利な情報を無視する「寛容」な戦略が協力行動を最大化すると結論付けられています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "直接互恵関係",
+          "definition": "相手の過去の行動に基づいて自分の行動を決める関係。"
+        },
+        {
+          "term": "間接互恵関係",
+          "definition": "相手の世間の評判に基づいて自分の行動を決める関係。"
+        },
+        {
+          "term": "寄付ゲーム",
+          "definition": "協力か裏切りかを選び、コストと利益を分配するゲーム。"
+        },
+        {
+          "term": "イメージスコアリング",
+          "definition": "協力は良い、裏切りは悪いと単純に評価するルール。"
+        },
+        {
+          "term": "スコアリングジレンマ",
+          "definition": "間接互恵関係で協力が崩壊する現象。"
+        },
+        {
+          "term": "条件付き協力者",
+          "definition": "特定の条件で協力する人。"
+        },
+        {
+          "term": "無条件協力者",
+          "definition": "常に協力する人。"
+        },
+        {
+          "term": "無条件裏切り者",
+          "definition": "常に裏切る人。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "親しい人との直接的な経験と、不特定多数の世間の評判を組み合わせることで、協力行動が安定して進化することを発見しました。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、親しい人との直接的な互恵関係と、世間の評判に基づく間接的な互恵関係は、それぞれ独立して研究されてきました。そのため、両者が衝突した場合にどう行動すべきか、また、単純なルールで協力が維持できるのかは不明でした。",
+        "after": "この論文では、親しい人との「局所的な直接互恵関係」と、不特定多数との「全体的な間接互恵関係」を統合したモデルを構築。両者の情報が衝突する状況での最適な戦略と、単純な評価ルールでも協力が安定する条件を明らかにしました。"
+      },
+      "analogy": {
+        "title": "畑の土壌と市場のブランド、どちらを信じる？",
+        "body": "これは、農家が自分の畑の土壌（直接的な経験）をよく知っている一方で、市場に出回る農産物のブランドイメージ（世間の評判）も考慮するようなものです。自分の畑で育てた作物の品質は直接知っていますが、市場で売れるかどうかはブランドイメージに左右されます。この研究は、自分の畑の経験と市場の評判、どちらも考慮して最適な栽培・販売戦略を立てることで、安定した農業経営（協力関係）が成り立つことを示しています。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、私たちが日々の人間関係で直面する「あの人は良い人だけど、世間では評判が悪い」といった葛藤に、科学的な視点からヒントを与えてくれます。SNSが普及し、個人の評判が瞬時に広がる現代において、私たちは誰を信じ、どのように行動すべきか常に問われています。この論文は、親しい人との直接的な経験と、不特定多数の世間の評判をバランス良く組み合わせ、時には「寛容」な態度を取ることが、協力的な社会を維持するために重要であることを示唆しています。これは、ビジネスにおけるチームビルディングや顧客対応、地域コミュニティでの人間関係構築など、様々な場面で応用できる考え方と言えるでしょう。",
+      "takeawayTalk": "親しい人との関係と世間の評判、両方をうまく使うと協力が続くんだって！",
+      "bodyText": "本研究では、各個人が少数の「近隣者」と「非近隣者」という2種類の集団と交流するモデルを構築しました。近隣者とは、その行動を直接観察し記憶できる少数のグループであり、ここでは直接互恵関係が働きます。一方、非近隣者とは、その行動を直接観察できない多数の集団であり、ここでは世間の評判に基づく間接互恵関係が働きます。このモデルでは、個人は確率λで近隣者と、確率1-λで非近隣者と交流します。各交流は「寄付ゲーム」の形式で行われ、協力するか裏切るかを選択します。近隣者との交流では、相手の直近の行動と世間の評判の両方を考慮して行動を決定し、非近隣者との交流では、相手の世間の評判のみを考慮します。評判は、最も単純な「イメージスコアリング」というルールに基づいて更新されます。このモデルを用いて、協力行動が安定して維持される条件と、直接経験と評判が衝突した場合の最適な戦略を数学的に分析しました。\n\nスコアリングジレンマが解消されるのは、局所的な直接互恵関係が、全体的な間接互恵関係の弱点を補完するためです。間接互恵関係だけでは、評判の悪い相手に協力を拒否した人が「悪い評判」を受けてしまい、協力が崩壊します。しかし、親しい近隣者との間では、直接的な過去の行動に基づいて協力するかどうかを判断するため、評判に左右されすぎずに協力行動を維持できます。この局所的な協力が、全体的な協力の崩壊を防ぐ「緩衝材」として機能します。また、寛容な戦略が有効なのは、相手のたった一度の失敗で関係を断ち切るのではなく、全体的な関係性を維持しようとすることで、長期的な協力関係の利益を最大化できるためです。特に、親しい人との関係では、直接的な経験がより重みを持つため、一時的な悪い行動を許すことが、関係維持に繋がりやすいと考えられます。",
+      "bodyGlossary": [
+        {
+          "term": "直接互恵関係",
+          "definition": "相手の過去の行動に基づいて自分の行動を決める関係。",
+          "start": 86,
+          "end": 92
+        },
+        {
+          "term": "間接互恵関係",
+          "definition": "相手の世間の評判に基づいて自分の行動を決める関係。",
+          "start": 143,
+          "end": 149
+        },
+        {
+          "term": "寄付ゲーム",
+          "definition": "協力か裏切りかを選び、コストと利益を分配するゲーム。",
+          "start": 197,
+          "end": 202
+        },
+        {
+          "term": "イメージスコアリング",
+          "definition": "協力は良い、裏切りは悪いと単純に評価するルール。",
+          "start": 304,
+          "end": 314
+        },
+        {
+          "term": "スコアリングジレンマ",
+          "definition": "間接互恵関係で協力が崩壊する現象。",
+          "start": 395,
+          "end": 405
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "直接互恵関係",
+          "definition": "相手の過去の行動に基づいて自分の行動を決める関係。",
+          "start": 86,
+          "end": 92
+        },
+        {
+          "term": "間接互恵関係",
+          "definition": "相手の世間の評判に基づいて自分の行動を決める関係。",
+          "start": 143,
+          "end": 149
+        },
+        {
+          "term": "寄付ゲーム",
+          "definition": "協力か裏切りかを選び、コストと利益を分配するゲーム。",
+          "start": 197,
+          "end": 202
+        },
+        {
+          "term": "イメージスコアリング",
+          "definition": "協力は良い、裏切りは悪いと単純に評価するルール。",
+          "start": 304,
+          "end": 314
+        },
+        {
+          "term": "スコアリングジレンマ",
+          "definition": "間接互恵関係で協力が崩壊する現象。",
+          "start": 395,
+          "end": 405
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 329
+    },
+    {
+      "id": "2606.12838v1",
+      "title": "OCOO-T : A Simple and Scalable Virtual Cell Model for Transcriptional Perturbation Response Prediction",
+      "authors": [
+        "Danning Jiang",
+        "Zheming An",
+        "Yalong Zhao",
+        "Lipeng Lai"
+      ],
+      "publishedAt": "2026-06-11T03:04:38Z",
+      "url": "https://arxiv.org/abs/2606.12838v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.12838v1.pdf",
+      "categories": [
+        "topic:genomics",
+        "q-bio.QM",
+        "cs.AI",
+        "cs.LG",
+        "q-bio.GN"
+      ],
+      "abstract": "Predicting single-cell transcriptional responses to genetic, chemical and cytokine perturbations is a fundamental challenge in computational biology and AI Virtual Cell (AIVC) modeling, with direct implications for drug discovery and the elucidation of gene regulatory networks. Existing approaches often rely on auxiliary cell-state encoders, hierarchical variational autoencoders, dedicated Transformer encoder-decoder modules, or gene-interaction priors to compress high-dimensional expression profiles into latent representations. While effective, these designs increase architectural complexity and may limit scalability and generalizability. This paper introduces OCOO-T, a minimalist flow-matching-based AIVC model for transcriptional perturbation response prediction. OCOO-T utilizes a vanilla Transformer stack that operates directly on continuous gene expression profiles and formulates perturbation response prediction as a continuous-time denoising process. Perturbation embeddings, dosage information, and cell-line/cell-type specificity are integrated through adaptive layer normalization and in-context tokens. Comprehensive evaluations on Tahoe100M, Replogle, and PBMC benchmarks demonstrate that OCOO-T achieves state-of-the-art performance across diverse perturbations and cell types while effectively scaling to long transcriptional profiles through patching and depatching of cellular contexts. By leveraging the simplicity of Transformer-based denoising for single-cell omics, OCOO-T provides an effective and scalable framework for in-silico cellular simulation.",
+      "summary": {
+        "gist": "遺伝子操作や薬剤投与など、細胞に外部から介入した際に、細胞内の遺伝子発現がどのように変化するかを予測することは、新薬開発や遺伝子ネットワークの解明において非常に重要です。しかし、実際に全ての組み合わせを実験で検証することは不可能であり、計算による高精度な予測が求められています。",
+        "novelty": "これまでの細胞応答予測モデルは、遺伝子発現データを一度圧縮してから分析するため、モデルが複雑になり、大規模データへの対応や汎用性に課題がありました。特に、数万に及ぶ遺伝子全てを考慮することは困難でした。 OCOO-Tは、遺伝子発現データを直接扱い、シンプルなAIモデル（Transformer）で細胞の変化を予測します。これにより、モデルの複雑さを大幅に減らしつつ、数万の遺伝子全てを考慮した高精度な予測を可能にしました。",
+        "method": "OCOO-Tは、TransformerというAIモデルを基盤とし、フローマッチングという手法を用いています。遺伝子発現データを直接入力として受け取り、摂動（遺伝子操作など）の種類、投与量、細胞の種類といった情報を適応的な正規化や文脈トークンとして組み込みます。これにより、細胞が摂動によってどのように変化するかを、連続的なノイズ除去プロセスとして予測します。特に、数万に及ぶ長い遺伝子配列も、パッチングというシンプルなメカニズムで効率的に処理できます。",
+        "results": "OCOO-Tは、Tahoe100M（化学摂動）、Replogle（遺伝子摂動）、PBMC（サイトカイン刺激）といった主要なベンチマークデータセットにおいて、多様な摂動と細胞タイプに対して最先端の予測性能を達成しました。また、長い遺伝子発現プロファイルに対しても効率的にスケーリングできることが示されました。",
+        "why": "OCOO-Tの成功は、複雑な補助モデルを介さずに、Transformerが遺伝子発現データを直接「ノイズ除去」するように学習する点にあります。これにより、データ圧縮による情報損失を防ぎ、モデルのシンプルさを保ちながら、細胞の複雑な応答パターンを直接学習できます。摂動情報などを直接条件付けすることで、適切なターゲット分布への生成を誘導できるため、複雑な分布整合モジュールが不要になります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.QM）",
+      "field": "遺伝・ゲノム",
+      "categoryL1": "adjacent",
+      "categoryL2": "bio-tech",
+      "arxivPrimary": "q-bio.QM",
+      "titleJa": "OCOO-T: 転写摂動応答予測のためのシンプルでスケーラブルな仮想細胞モデル",
+      "catchTitle": "遺伝子変化の未来を予測するAI",
+      "hook": "もし、ある遺伝子を操作したら、細胞全体がどう変わるか、事前に分かるとしたらどうでしょう？",
+      "background": "遺伝子操作や薬剤投与など、細胞に外部から介入した際に、細胞内の遺伝子発現がどのように変化するかを予測することは、新薬開発や遺伝子ネットワークの解明において非常に重要です。しかし、実際に全ての組み合わせを実験で検証することは不可能であり、計算による高精度な予測が求められています。",
+      "quiz": {
+        "question": "OCOO-Tが従来のモデルと比べて優れている点は何ですか？",
+        "options": [
+          "遺伝子発現データを直接扱い、モデルがシンプルであること。",
+          "より多くの実験データを必要とすること。",
+          "特定の細胞タイプにしか適用できないこと。"
+        ],
+        "correctIndex": 0,
+        "explanation": "OCOO-Tは、遺伝子発現データを直接扱うことでモデルの複雑さを減らし、高い予測精度とスケーラビリティを実現しています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "遺伝子発現",
+          "definition": "遺伝子情報が細胞内でタンパク質などに変換される過程。"
+        },
+        {
+          "term": "摂動",
+          "definition": "外部からの刺激や操作によってシステムに与えられる変化。"
+        },
+        {
+          "term": "Transformer",
+          "definition": "自然言語処理で使われる、文脈を捉える能力に優れたAIモデル。"
+        },
+        {
+          "term": "フローマッチング",
+          "definition": "連続的な変化をモデル化し、データ生成に用いる機械学習手法。"
+        },
+        {
+          "term": "適応的な正規化",
+          "definition": "入力データに合わせてモデルの層の振る舞いを調整する技術。"
+        },
+        {
+          "term": "文脈トークン",
+          "definition": "特定の情報（摂動の種類など）をAIモデルに伝えるための信号。"
+        },
+        {
+          "term": "ノイズ除去プロセス",
+          "definition": "ランダムなノイズから元のデータを復元するような学習過程。"
+        },
+        {
+          "term": "パッチング",
+          "definition": "長いデータを小さな塊に分割して処理する技術。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "複雑な細胞変化を、シンプルなAIモデルで高精度に予測する新技術が登場しました。",
+      "noveltyContrast": {
+        "before": "これまでの細胞応答予測モデルは、遺伝子発現データを一度圧縮してから分析するため、モデルが複雑になり、大規模データへの対応や汎用性に課題がありました。特に、数万に及ぶ遺伝子全てを考慮することは困難でした。",
+        "after": "OCOO-Tは、遺伝子発現データを直接扱い、シンプルなAIモデル（Transformer）で細胞の変化を予測します。これにより、モデルの複雑さを大幅に減らしつつ、数万の遺伝子全てを考慮した高精度な予測を可能にしました。"
+      },
+      "analogy": {
+        "title": "畑の土壌改良と作物の成長予測",
+        "body": "これは、まるで「この畑の土壌に特定の肥料（遺伝子操作）を与えたら、作物がどう育つか」を予測するようなものです。従来の予測モデルが、土壌の成分を一度別の形に変換してから分析していたのに対し、OCOO-Tは土壌そのもの（遺伝子発現データ）を直接見て、作物の成長（細胞応答）を予測します。これにより、より広い畑（数万の遺伝子）でも、どんな肥料がどんな作物に最適か、シンプルかつ正確に判断できるようになるイメージです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、新薬開発のスピードを劇的に加速させる可能性を秘めています。膨大な数の薬の候補の中から、どの薬が特定の病気の細胞に最も効果的か、または副作用が少ないかを、実験前にコンピュータ上で高精度に予測できるようになります。これにより、開発コストと時間を大幅に削減し、より早く患者さんの元へ新しい治療法を届けられるようになるでしょう。また、遺伝子治療や再生医療の分野でも、細胞の反応を事前にシミュレーションすることで、治療効果の最適化やリスクの低減に貢献します。",
+      "takeawayTalk": "細胞の遺伝子変化を、AIがシンプルに高精度予測するってすごい！",
+      "bodyText": "OCOO-Tは、TransformerというAIモデルを基盤とし、フローマッチングという手法を用いています。遺伝子発現データを直接入力として受け取り、摂動（遺伝子操作など）の種類、投与量、細胞の種類といった情報を適応的な正規化や文脈トークンとして組み込みます。これにより、細胞が摂動によってどのように変化するかを、連続的なノイズ除去プロセスとして予測します。特に、数万に及ぶ長い遺伝子配列も、パッチングというシンプルなメカニズムで効率的に処理できます。\n\nOCOO-Tの成功は、複雑な補助モデルを介さずに、Transformerが遺伝子発現データを直接「ノイズ除去」するように学習する点にあります。これにより、データ圧縮による情報損失を防ぎ、モデルのシンプルさを保ちながら、細胞の複雑な応答パターンを直接学習できます。摂動情報などを直接条件付けすることで、適切なターゲット分布への生成を誘導できるため、複雑な分布整合モジュールが不要になります。",
+      "bodyGlossary": [
+        {
+          "term": "Transformer",
+          "definition": "自然言語処理で使われる、文脈を捉える能力に優れたAIモデル。",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "term": "フローマッチング",
+          "definition": "連続的な変化をモデル化し、データ生成に用いる機械学習手法。",
+          "start": 33,
+          "end": 41
+        },
+        {
+          "term": "遺伝子発現",
+          "definition": "遺伝子情報が細胞内でタンパク質などに変換される過程。",
+          "start": 54,
+          "end": 59
+        },
+        {
+          "term": "摂動",
+          "definition": "外部からの刺激や操作によってシステムに与えられる変化。",
+          "start": 75,
+          "end": 77
+        },
+        {
+          "term": "適応的な正規化",
+          "definition": "入力データに合わせてモデルの層の振る舞いを調整する技術。",
+          "start": 106,
+          "end": 113
+        },
+        {
+          "term": "文脈トークン",
+          "definition": "特定の情報（摂動の種類など）をAIモデルに伝えるための信号。",
+          "start": 114,
+          "end": 120
+        },
+        {
+          "term": "ノイズ除去プロセス",
+          "definition": "ランダムなノイズから元のデータを復元するような学習過程。",
+          "start": 161,
+          "end": 170
+        },
+        {
+          "term": "パッチング",
+          "definition": "長いデータを小さな塊に分割して処理する技術。",
+          "start": 196,
+          "end": 201
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "Transformer",
+          "definition": "自然言語処理で使われる、文脈を捉える能力に優れたAIモデル。",
+          "start": 8,
+          "end": 19
+        },
+        {
+          "term": "フローマッチング",
+          "definition": "連続的な変化をモデル化し、データ生成に用いる機械学習手法。",
+          "start": 33,
+          "end": 41
+        },
+        {
+          "term": "遺伝子発現",
+          "definition": "遺伝子情報が細胞内でタンパク質などに変換される過程。",
+          "start": 54,
+          "end": 59
+        },
+        {
+          "term": "摂動",
+          "definition": "外部からの刺激や操作によってシステムに与えられる変化。",
+          "start": 75,
+          "end": 77
+        },
+        {
+          "term": "適応的な正規化",
+          "definition": "入力データに合わせてモデルの層の振る舞いを調整する技術。",
+          "start": 106,
+          "end": 113
+        },
+        {
+          "term": "文脈トークン",
+          "definition": "特定の情報（摂動の種類など）をAIモデルに伝えるための信号。",
+          "start": 114,
+          "end": 120
+        },
+        {
+          "term": "ノイズ除去プロセス",
+          "definition": "ランダムなノイズから元のデータを復元するような学習過程。",
+          "start": 161,
+          "end": 170
+        },
+        {
+          "term": "パッチング",
+          "definition": "長いデータを小さな塊に分割して処理する技術。",
+          "start": 196,
+          "end": 201
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 197,
+      "keyFigure": {
+        "imagePath": "/figures/2606.12838v1_results.jpeg",
+        "page": 16,
+        "caption": "Figure 6: Comparisons of different cellular context injection methods on Raplogle-Nadig benchmark. S1: cell-line Comparisons of different cellular context injection methods on Raplogle-Nadig benchmark. S1: cell-line",
+        "label": "Figure 6: Comparisons of different cellular context injection methods on Raplogle-Nadig benchmark. S1: cell-line",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-13T23:04:02.398Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.12838v1_results.jpeg",
+          "page": 16,
+          "caption": "Figure 6: Comparisons of different cellular context injection methods on Raplogle-Nadig benchmark. S1: cell-line Comparisons of different cellular context injection methods on Raplogle-Nadig benchmark. S1: cell-line",
+          "label": "Figure 6: Comparisons of different cellular context injection methods on Raplogle-Nadig benchmark. S1: cell-line",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-13T23:04:02.398Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.13581v1",
+      "title": "The Tone of Awareness: Topic, Sentiment, and Toxicity Maps During Mental Health Month on TikTok",
+      "authors": [
+        "Henrique Ferraz de Arruda",
+        "Andreia Sofia Teixeira",
+        "Pranay Gundala Reddy",
+        "Anindya Mondal",
+        "Kleber Andrade Oliveira",
+        "Filipi Nascimento Silva"
+      ],
+      "publishedAt": "2026-06-11T17:04:11Z",
+      "url": "https://arxiv.org/abs/2606.13581v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.13581v1.pdf",
+      "categories": [
+        "topic:education",
+        "cs.CY",
+        "cs.CL",
+        "cs.HC",
+        "physics.soc-ph"
+      ],
+      "abstract": "Despite raising concerns about the mental health effects associated with the usage of TikTok, little is known about how related content is framed by creators and received by audiences. We collect the content of 28,341 TikTok videos and 80,130 comments from Mental Health Awareness Month (May) in 2023 and 2024 via the TikTok Research API, and study how the tone of awareness varies across topics and years. We characterize \"tone\" as the emotional and interpersonal framing of mental health discourse, operationalized through sentiment and toxicity measures. We extract topics from video text using BERTopic and log-odds keywords, then quantify topic-conditioned sentiment (XLM-T) and toxicity (Detoxify) separately for video transcriptions and comments. Sentiment captures the affective valence of content, while toxicity reflects the presence of harmful or abusive language. We find a stable set of recurring themes across years, spanning clinical conditions, emotional disclosure, self-care, and campaign-oriented content, with engagement highly skewed toward a small subset of topics. All sentiment and toxicity analyses are computed separately for video content and comments, allowing us to distinguish between content production and audience reception. Sentiment in videos is often negative for emotionally charged topics, while comments tend to shift toward more mixed or positive polarity, especially for suicide prevention. Toxicity is low in median overall, but exhibits longer-tailed outliers in comments than in videos that are more pronounced in comments and concentrated in specific topics (e.g., \"Duet\", \"Suicide Prevention\", and \"Psychisch\"). Overall, our results provide a topic-level decomposition of mental health discourse on TikTok during awareness-month campaigns.",
+      "summary": {
+        "gist": "メンタルヘルス問題は世界中で10億人以上に影響を与え、オンライン空間は経験を共有する場となっています。TikTokは特にメンタルヘルスコンテンツの主要プラットフォームですが、その影響は賛否両論です。短尺動画と共有・コメントの容易さが、感情的な内容をパフォーマンス化し、ピアサポートを促進する一方で、有害なコンテンツにさらされるリスクも指摘されています。",
+        "novelty": "これまでの研究では、TikTokがメンタルヘルスに与える影響への懸念は示されていましたが、動画作成者がどのようにコンテンツを構成し、視聴者がどのように受け止めているかについては、ほとんど分かっていませんでした。特に動画とコメントの「トーン」の違いは未解明でした。 この研究では、メンタルヘルス啓発月間のTikTok動画とコメントを大規模に分析し、トピックごとの感情（ポジティブかネガティブか）と有害性（攻撃的か否か）を定量化しました。これにより、動画とコメントで異なるトーンが存在することを明らかにしました。",
+        "method": "本研究では、2023年と2024年のメンタルヘルス啓発月間（5月）にTikTok Research APIを通じて収集した28,341本の動画と80,130件のコメントを分析しました。動画のテキストからBERTopicを用いてトピックを抽出し、動画のトランスクリプションとコメントそれぞれについて、XLM-Tで感情（ポジティブ・ネガティブ）を、Detoxifyで有害性（有害な言葉遣い）を定量化しました。これにより、コンテンツ作成（動画）と視聴者の受容（コメント）のトーンの違いをトピックレベルで比較しました。",
+        "results": "動画の感情は、感情的なトピックでしばしばネガティブでしたが、コメントはより混合的またはポジティブな極性を示す傾向がありました。特に自殺予防に関するコメントではこの傾向が顕著でした。有害性は全体的に低いものの、動画よりもコメントで顕著な外れ値が見られ、「Duet」「Suicide Prevention」「Psychisch」といった特定のトピックに集中していました。",
+        "why": "動画作成者は、自身の感情を率直に表現することで、時にネガティブな感情が強く表れるコンテンツを生成します。一方、コメント欄では、視聴者が共感やサポート、アドバイスを提供することで、全体としてよりポジティブなトーンにシフトする傾向があります。しかし、匿名性や特定のトピックへの関心の高さから、一部のコメントでは有害な表現が集中して発生し、動画のトーンとは異なる、より極端な反応が生まれると考えられます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.CY）",
+      "field": "教育",
+      "categoryL1": "serendipity",
+      "categoryL2": "social-media",
+      "arxivPrimary": "cs.CY",
+      "titleJa": "TikTokにおけるメンタルヘルス啓発月間のトーン：トピック、感情、有害性マップ",
+      "catchTitle": "TikTokのメンタルヘルス投稿、本音と建前",
+      "hook": "あなたはSNSでメンタルヘルスに関する投稿を見たとき、その内容とコメント欄の雰囲気に違いを感じたことはありませんか？",
+      "background": "メンタルヘルス問題は世界中で10億人以上に影響を与え、オンライン空間は経験を共有する場となっています。TikTokは特にメンタルヘルスコンテンツの主要プラットフォームですが、その影響は賛否両論です。短尺動画と共有・コメントの容易さが、感情的な内容をパフォーマンス化し、ピアサポートを促進する一方で、有害なコンテンツにさらされるリスクも指摘されています。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "BERTopic",
+          "definition": "トランスフォーマーベースの埋め込みとクラスタリングを組み合わせたトピックモデリングフレームワーク。"
+        },
+        {
+          "term": "XLM-T",
+          "definition": "多言語対応の感情分析モデル。"
+        },
+        {
+          "term": "Detoxify",
+          "definition": "オンラインコンテンツの有害性を検出するツール。"
+        },
+        {
+          "term": "感情（Sentiment）",
+          "definition": "コンテンツの感情的な極性（ポジティブかネガティブか）。"
+        },
+        {
+          "term": "有害性（Toxicity）",
+          "definition": "コンテンツに含まれる有害または攻撃的な言葉の存在。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "TikTokのメンタルヘルス関連動画は感情的だが、コメントはより肯定的で、有害な表現は動画よりコメントで顕著になる。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、TikTokがメンタルヘルスに与える影響への懸念は示されていましたが、動画作成者がどのようにコンテンツを構成し、視聴者がどのように受け止めているかについては、ほとんど分かっていませんでした。特に動画とコメントの「トーン」の違いは未解明でした。",
+        "after": "この研究では、メンタルヘルス啓発月間のTikTok動画とコメントを大規模に分析し、トピックごとの感情（ポジティブかネガティブか）と有害性（攻撃的か否か）を定量化しました。これにより、動画とコメントで異なるトーンが存在することを明らかにしました。"
+      },
+      "analogy": {
+        "title": "畑の土壌と作物の育ち方の違い",
+        "body": "これは、畑の土壌（動画の内容）と、そこで育つ作物（コメント）の育ち方の違いを観察するようなものです。動画という土壌は、時に栄養が偏っていたり（感情的）、病害虫に侵されやすい（有害性）状態でも、コメントという作物は、多様な肥料（共感やアドバイス）によって、より豊かに（肯定的）育つことがあります。しかし、一部の作物には、病害虫が集中して発生し（特定のトピックでの有害コメント）、全体としては健康な畑でも、注意が必要な場所があることを示しています。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、私たちが日常的に利用するSNSが、メンタルヘルスというデリケートな話題をどのように扱っているかを教えてくれます。動画投稿者が発信する「本音」と、それに対する視聴者の「反応」には明確な違いがあることが分かりました。特に、感情的な内容の動画でもコメント欄はポジティブな傾向がある一方で、一部のトピックでは有害なコメントが集中するという事実は、SNS利用時の情報リテラシーや、プラットフォーム運営者によるモデレーションの重要性を示唆しています。企業がSNSマーケティングを行う際や、個人がメンタルヘルス情報を消費する際にも、投稿内容だけでなくコメント欄の「トーン」にも注意を払うべきだという示唆を与えてくれます。",
+      "takeawayTalk": "TikTokのメンタルヘルス動画は感情的だけど、コメントは意外とポジティブなんだって！",
+      "bodyText": "本研究では、2023年と2024年のメンタルヘルス啓発月間（5月）にTikTok Research APIを通じて収集した28,341本の動画と80,130件のコメントを分析しました。動画のテキストからBERTopicを用いてトピックを抽出し、動画のトランスクリプションとコメントそれぞれについて、XLM-Tで感情（ポジティブ・ネガティブ）を、Detoxifyで有害性（有害な言葉遣い）を定量化しました。これにより、コンテンツ作成（動画）と視聴者の受容（コメント）のトーンの違いをトピックレベルで比較しました。\n\n動画の感情は、感情的なトピックでしばしばネガティブでしたが、コメントはより混合的またはポジティブな極性を示す傾向がありました。特に自殺予防に関するコメントではこの傾向が顕著でした。有害性は全体的に低いものの、動画よりもコメントで顕著な外れ値が見られ、「Duet」「Suicide Prevention」「Psychisch」といった特定のトピックに集中していました。動画作成者は、自身の感情を率直に表現することで、時にネガティブな感情が強く表れるコンテンツを生成します。一方、コメント欄では、視聴者が共感やサポート、アドバイスを提供することで、全体としてよりポジティブなトーンにシフトする傾向があります。しかし、匿名性や特定のトピックへの関心の高さから、一部のコメントでは有害な表現が集中して発生し、動画のトーンとは異なる、より極端な反応が生まれると考えられます。",
+      "bodyGlossary": [
+        {
+          "term": "BERTopic",
+          "definition": "トランスフォーマーベースの埋め込みとクラスタリングを組み合わせたトピックモデリングフレームワーク。",
+          "start": 101,
+          "end": 109
+        },
+        {
+          "term": "XLM-T",
+          "definition": "多言語対応の感情分析モデル。",
+          "start": 149,
+          "end": 154
+        },
+        {
+          "term": "Detoxify",
+          "definition": "オンラインコンテンツの有害性を検出するツール。",
+          "start": 172,
+          "end": 180
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "BERTopic",
+          "definition": "トランスフォーマーベースの埋め込みとクラスタリングを組み合わせたトピックモデリングフレームワーク。",
+          "start": 101,
+          "end": 109
+        },
+        {
+          "term": "XLM-T",
+          "definition": "多言語対応の感情分析モデル。",
+          "start": 149,
+          "end": 154
+        },
+        {
+          "term": "Detoxify",
+          "definition": "オンラインコンテンツの有害性を検出するツール。",
+          "start": 172,
+          "end": 180
+        }
+      ],
+      "agriEconRelevance": "この知見は、農業経済分野における情報発信やコミュニティ形成に応用できます。例えば、農業技術の普及や農産物のブランド化において、生産者が発信する情報（動画）と消費者の反応（コメント）のトーンを分析することで、効果的なコミュニケーション戦略を立てられます。特定の技術や品種に関するネガティブな情報が動画で発信されても、コメント欄でポジティブな情報やサポートが提供されることで、全体の受容性が高まる可能性があります。また、有害なコメントが集中するトピックを特定し、早期に対策を講じることで、健全な情報流通を促進し、農業コミュニティの活性化に貢献できるでしょう。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 237,
+      "keyFigure": {
+        "imagePath": "/figures/2606.13581v1_results.jpx",
+        "page": 6,
+        "caption": "table Mental Health",
+        "label": "table",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-13T23:04:03.467Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.13581v1_results.jpx",
+          "page": 6,
+          "caption": "table Mental Health",
+          "label": "table",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-13T23:04:03.467Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.12848v1",
+      "title": "(Human) Attention Is (Still) All You Need: Human oversight makes AI-assisted social science reliable",
+      "authors": [
+        "Chen Zhu",
+        "Xiaolu Wang",
+        "Weilong Zhang"
+      ],
+      "publishedAt": "2026-06-11T03:22:24Z",
+      "url": "https://arxiv.org/abs/2606.12848v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.12848v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "cs.AI",
+        "econ.GN"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly used for tasks once reserved for trained researchers, including hypothesis generation, specification choice, and drafting conclusions. We argue that the reliability of AI-assisted research depends not only on model capability, but also on how cognitive labour is structured between humans and machines. We study this problem through Human-in-the-Loop Economic Research (HLER), a decision architecture based on pre-commitment, decision sequencing, accountability, and attention allocation. In a pre-specified 2*4 factorial experiment with 280 complete research runs across four datasets, an unconstrained multi-agent baseline produced critical failures in 72% of runs. Using the same underlying model, the same agent decomposition, and identical prompts for the shared reasoning agents, HLER reduced the failure rate to 16% by imposing three architectural commitments: LLMs reason but do not execute data work, data and estimation are handled deterministically, and three human decision gates bind the workflow. Fisher's exact test rejects equality of failure rates at p&lt;0.001. Reliability gains were largest on the least publicly represented dataset, a Qing-dynasty population register, consistent with a task-based production model with Frechet-distributed output quality. An 80-run ablation suggests that deterministic computation and human gates contribute independently, with exploratory evidence of complementarity. We interpret HLER as a research harness rather than an autonomous AI scientist: it sharply reduces failures, makes residual weaknesses more visible, and prevents unreliable claims from being advanced as publication-ready outputs.",
+      "summary": {
+        "gist": "大規模言語モデル（LLM）は、仮説生成、仕様選択、結論のドラフト作成など、これまで訓練された研究者のみが行っていたタスクをますます多く担うようになっています。しかし、このAIへの委任が信頼できる科学を生み出すかどうかは、モデルの能力だけでなく、人間と機械の間で認知労働がどのように構造化されるかにかかっています。実証社会科学における信頼性問題（仕様探索、動機付けられた解釈、脆弱な因果関係の主張）は、確率的判断が決定論的規律を必要とする研究段階を支配することを許すときに生じます。LLMは本質的に確率的推論者であり、研究パイプライン全体でLLMをエンドツーエンドで動作させても、これらの失敗モードは排除されず、むしろ増幅されます。",
+        "novelty": "従来のAIを活用した研究では、AIが仮説生成から結論導出まで一貫して担うため、AI特有の誤り（ハルシネーションやPハッキングの増幅）が研究の信頼性を損なうリスクがありました。AIの能力だけに注目し、人間との役割分担が不明確でした。 この研究では、AIの確率的推論能力と人間の決定的な判断力を組み合わせた「Human-in-the-Loop Economic Research (HLER)」という新しい意思決定アーキテクチャを提案。AIの得意な部分と人間の監視を明確に分けることで、研究の失敗率を大幅に削減できることを示しました。",
+        "method": "本研究では、人間とAIの認知労働の分担方法を「Human-in-the-Loop Economic Research (HLER)」という意思決定アーキテクチャを通じて検証しました。HLERは、事前コミットメント、意思決定の順序付け、説明責任、注意配分に基づいています。具体的には、LLMは推論や探索的タスク（仮説生成、識別批判、解釈）を担当し、データ構築と統計的推定は決定論的なコード（再現可能なRスクリプト）によって実行されます。そして、人間が研究課題の選択、識別戦略のレビュー、出版決定という3つの決定的なゲートで介入し、文脈的判断、範囲条件、最終的な説明責任を担います。このアーキテクチャを、同じLLM、同じエージェント分解、同じプロンプトを使用しながら、人間による介入がない「制約なしのマルチエージェントベースライン」と比較する2×4要因実験を、4つの異なるデータセット（UK Biobank、China Health and Nutrition Survey、China Health and Retirement Longitudinal Study、清朝の人口登録データ）で280回実施しました。各実行は完全な研究成果を生成するか、または制約付きの場合には、重大な欠陥が特定された場合に承認を保留するという人間のゲート決定を記録します。出力とゲート決定は、実現可能性、識別の信頼性、出力の一貫性をカバーする事前指定された評価基準を用いて3人の専門家によって独立して評価されました。",
+        "results": "制約なしのパイプラインでは、72%の実行で重大な失敗が発生しました。一方、HLERアーキテクチャを適用した同じパイプラインでは、失敗率が16%にまで減少しました（Fisherの正確検定でp<0.001）。信頼性の向上は、最も公開されていないデータセットである清朝の人口登録データで最大でした。80回の除去実験では、決定論的計算と人間によるゲートが独立して貢献し、相補的な証拠も示唆されました。同じモデル、同じエージェント分解、共有推論エージェントに対する同一のプロンプトを使用しているにもかかわらず、それらを取り巻くアーキテクチャのみが変更され、失敗率が4分の1に削減されました。",
+        "why": "この失敗率の劇的な減少は、AIの確率的推論能力と人間の決定論的判断力を戦略的に組み合わせた意思決定アーキテクチャによるものです。LLMは、その性質上、確率的推論を行うため、そのままでは「Pハッキング」や「ハルシネーション」といった行動的失敗モードを増幅させる可能性があります。人間の認知帯域幅には限界がありますが、LLMはその限界をはるかに超える探索空間を悪用できます。例えば、人間が少数の仕様をPハックするのに対し、LLMエージェントは何千もの仕様でそれを行うことができます。また、人間が時折引用を誤って記憶するのに対し、LLMは参照を幻覚することが基本的な振る舞いです。HLERでは、LLMの確率的柔軟性が資産となる推論集約的・探索的タスクにLLMを限定し、再現性が不可欠で人間の裁量自体が負債となるデータ構築や統計的推定には決定論的なコードを使用します。さらに、人間が研究課題、識別戦略、出版という3つの決定的なゲートで介入することで、文脈的判断、範囲条件、最終的な説明責任を確保します。これにより、AIが生成した推論を決定論的計算、明示的な人間によるゲート、監査可能な研究記録を通じて誘導し、信頼性の低い主張が発表可能な成果として進められるのを防ぎます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.AI）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "research-methodology",
+      "arxivPrimary": "cs.AI",
+      "titleJa": "人間による監視がAI支援型社会科学研究の信頼性を高める",
+      "catchTitle": "AI研究の落とし穴回避術",
+      "hook": "AIが論文を書く時代、あなたは「その研究、本当に信頼できる？」と不安に感じませんか？AIの進化は目覚ましいですが、その成果にはまだ課題があります。",
+      "background": "大規模言語モデル（LLM）は、仮説生成、仕様選択、結論のドラフト作成など、これまで訓練された研究者のみが行っていたタスクをますます多く担うようになっています。しかし、このAIへの委任が信頼できる科学を生み出すかどうかは、モデルの能力だけでなく、人間と機械の間で認知労働がどのように構造化されるかにかかっています。実証社会科学における信頼性問題（仕様探索、動機付けられた解釈、脆弱な因果関係の主張）は、確率的判断が決定論的規律を必要とする研究段階を支配することを許すときに生じます。LLMは本質的に確率的推論者であり、研究パイプライン全体でLLMをエンドツーエンドで動作させても、これらの失敗モードは排除されず、むしろ増幅されます。",
+      "quiz": {
+        "question": "この研究で、AI支援型研究の失敗率を大幅に減らすために最も重要だとされた要素は何でしょう？",
+        "options": [
+          "より高性能なAIモデルの導入",
+          "人間が要所で介入する意思決定アーキテクチャの構築",
+          "AIエージェント間のコミュニケーションの強化"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究では、同じAIモデル、同じエージェント分解、同じプロンプトを使用しながら、人間が要所で介入する「Human-in-the-Loop Economic Research (HLER)」という意思決定アーキテクチャを導入することで、失敗率が72%から16%に大幅に減少しました。これは、AIの能力だけでなく、人間と機械の間で認知労働がどのように構造化されるかが重要であることを示しています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。大量のテキストデータで学習したAI。"
+        },
+        {
+          "term": "ハルシネーション",
+          "definition": "AIが事実に基づかない情報を生成すること。"
+        },
+        {
+          "term": "Pハッキング",
+          "definition": "統計的に有意な結果が出るまで分析を繰り返すこと。"
+        },
+        {
+          "term": "HLER",
+          "definition": "人間が介入するAI支援型研究の意思決定アーキテクチャ。"
+        },
+        {
+          "term": "確率的推論",
+          "definition": "不確実性を含む情報から可能性を導き出す推論。"
+        },
+        {
+          "term": "決定論的",
+          "definition": "常に同じ入力に対して同じ出力が得られること。"
+        },
+        {
+          "term": "要因実験",
+          "definition": "複数の要因を組み合わせて効果を検証する実験。"
+        },
+        {
+          "term": "アブレーション",
+          "definition": "システムの一部を取り除き、その影響を調べる実験。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "AIに研究を任せきりにすると失敗するが、人間が要所で監視することで信頼性が大幅に向上する。",
+      "noveltyContrast": {
+        "before": "従来のAIを活用した研究では、AIが仮説生成から結論導出まで一貫して担うため、AI特有の誤り（ハルシネーションやPハッキングの増幅）が研究の信頼性を損なうリスクがありました。AIの能力だけに注目し、人間との役割分担が不明確でした。",
+        "after": "この研究では、AIの確率的推論能力と人間の決定的な判断力を組み合わせた「Human-in-the-Loop Economic Research (HLER)」という新しい意思決定アーキテクチャを提案。AIの得意な部分と人間の監視を明確に分けることで、研究の失敗率を大幅に削減できることを示しました。"
+      },
+      "analogy": {
+        "title": "畑の土壌改良と品種選定",
+        "body": "AIが研究のアイデアを大量に生み出すのは、まるで畑に様々な品種の種を無数に蒔くようなものです。しかし、ただ蒔くだけでは、土壌に合わない品種や病害虫に弱い品種も育ってしまい、収穫量が不安定になります。そこで、人間が「この土壌にはこの品種が最適だ」と判断し、適切な品種を選んで育てることで、安定して質の良い作物を収穫できるようになります。この研究の「人間が要所で介入するAI研究」は、AIが生成した多様なアイデアの中から、人間が専門知識と経験で最適なものを選び、信頼性の高い研究成果へと導く、まさに土壌改良と品種選定のようなものなのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "-56pt",
+          "label": "研究の失敗率"
+        }
+      ],
+      "whyYouCare": "AIの進化は目覚ましく、私たちの仕事や生活に大きな影響を与えています。しかし、AIが生成する情報や分析結果を鵜呑みにするのは危険です。この研究は、AIを単なるツールとして使うのではなく、人間が賢くAIと協働することで、より信頼性の高い成果を生み出せることを示しています。例えば、あなたの会社でAIを使って市場分析や新商品開発を行っているなら、AIにすべてを任せるのではなく、重要な意思決定の段階で人間が最終確認をする仕組みを導入することで、誤った判断によるリスクを大幅に減らせるでしょう。AIの力を最大限に引き出しつつ、その弱点を補う「人間とAIの最適な協働モデル」は、これからの社会で必須の考え方になります。",
+      "takeawayTalk": "AIに研究を任せきりにすると失敗するけど、人間が要所で監視すれば信頼性が爆上がりするって！",
+      "bodyText": "本研究では、人間とAIの認知労働の分担方法を「Human-in-the-Loop Economic Research (HLER)」という意思決定アーキテクチャを通じて検証しました。HLERは、事前コミットメント、意思決定の順序付け、説明責任、注意配分に基づいています。具体的には、LLMは推論や探索的タスク（仮説生成、識別批判、解釈）を担当し、データ構築と統計的推定は決定論的なコード（再現可能なRスクリプト）によって実行されます。そして、人間が研究課題の選択、識別戦略のレビュー、出版決定という3つの決定的なゲートで介入し、文脈的判断、範囲条件、最終的な説明責任を担います。このアーキテクチャを、同じLLM、同じエージェント分解、同じプロンプトを使用しながら、人間による介入がない「制約なしのマルチエージェントベースライン」と比較する2×4要因実験を、4つの異なるデータセット（UK Biobank、China Health and Nutrition Survey、China Health and Retirement Longitudinal Study、清朝の人口登録データ）で280回実施しました。各実行は完全な研究成果を生成するか、または制約付きの場合には、重大な欠陥が特定された場合に承認を保留するという人間のゲート決定を記録します。出力とゲート決定は、実現可能性、識別の信頼性、出力の一貫性をカバーする事前指定された評価基準を用いて3人の専門家によって独立して評価されました。\n\nこの失敗率の劇的な減少は、AIの確率的推論能力と人間の決定論的判断力を戦略的に組み合わせた意思決定アーキテクチャによるものです。LLMは、その性質上、確率的推論を行うため、そのままでは「Pハッキング」や「ハルシネーション」といった行動的失敗モードを増幅させる可能性があります。人間の認知帯域幅には限界がありますが、LLMはその限界をはるかに超える探索空間を悪用できます。例えば、人間が少数の仕様をPハックするのに対し、LLMエージェントは何千もの仕様でそれを行うことができます。また、人間が時折引用を誤って記憶するのに対し、LLMは参照を幻覚することが基本的な振る舞いです。HLERでは、LLMの確率的柔軟性が資産となる推論集約的・探索的タスクにLLMを限定し、再現性が不可欠で人間の裁量自体が負債となるデータ構築や統計的推定には決定論的なコードを使用します。さらに、人間が研究課題、識別戦略、出版という3つの決定的なゲートで介入することで、文脈的判断、範囲条件、最終的な説明責任を確保します。これにより、AIが生成した推論を決定論的計算、明示的な人間によるゲート、監査可能な研究記録を通じて誘導し、信頼性の低い主張が発表可能な成果として進められるのを防ぎます。",
+      "bodyGlossary": [
+        {
+          "term": "HLER",
+          "definition": "人間が介入するAI支援型研究の意思決定アーキテクチャ。",
+          "start": 60,
+          "end": 64
+        },
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。大量のテキストデータで学習したAI。",
+          "start": 141,
+          "end": 144
+        },
+        {
+          "term": "決定論的",
+          "definition": "常に同じ入力に対して同じ出力が得られること。",
+          "start": 185,
+          "end": 189
+        },
+        {
+          "term": "要因実験",
+          "definition": "複数の要因を組み合わせて効果を検証する実験。",
+          "start": 372,
+          "end": 376
+        },
+        {
+          "term": "確率的推論",
+          "definition": "不確実性を含む情報から可能性を導き出す推論。",
+          "start": 666,
+          "end": 671
+        },
+        {
+          "term": "Pハッキング",
+          "definition": "統計的に有意な結果が出るまで分析を繰り返すこと。",
+          "start": 743,
+          "end": 749
+        },
+        {
+          "term": "ハルシネーション",
+          "definition": "AIが事実に基づかない情報を生成すること。",
+          "start": 752,
+          "end": 760
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "HLER",
+          "definition": "人間が介入するAI支援型研究の意思決定アーキテクチャ。",
+          "start": 60,
+          "end": 64
+        },
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。大量のテキストデータで学習したAI。",
+          "start": 141,
+          "end": 144
+        },
+        {
+          "term": "決定論的",
+          "definition": "常に同じ入力に対して同じ出力が得られること。",
+          "start": 185,
+          "end": 189
+        },
+        {
+          "term": "要因実験",
+          "definition": "複数の要因を組み合わせて効果を検証する実験。",
+          "start": 372,
+          "end": 376
+        },
+        {
+          "term": "確率的推論",
+          "definition": "不確実性を含む情報から可能性を導き出す推論。",
+          "start": 666,
+          "end": 671
+        },
+        {
+          "term": "Pハッキング",
+          "definition": "統計的に有意な結果が出るまで分析を繰り返すこと。",
+          "start": 743,
+          "end": 749
+        },
+        {
+          "term": "ハルシネーション",
+          "definition": "AIが事実に基づかない情報を生成すること。",
+          "start": 752,
+          "end": 760
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 376,
+      "keyFigure": {
+        "imagePath": "/figures/2606.12848v1_results.png",
+        "page": 15,
+        "caption": "AI支援型社会科学研究における主要な失敗モードと、HLERアーキテクチャ適用による失敗率の減少を示しています。",
+        "label": "Table 1. The primary failure mode is intended to diagnose the dominant source of failure",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-13T23:04:05.520Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.12848v1_results.png",
+          "page": 15,
+          "caption": "AI支援型社会科学研究における主要な失敗モードと、HLERアーキテクチャ適用による失敗率の減少を示しています。",
+          "label": "Table 1. The primary failure mode is intended to diagnose the dominant source of failure",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-13T23:04:05.520Z"
+        },
+        {
+          "imagePath": "/figures/2606.12848v1_why.png",
+          "page": 3,
+          "caption": "AIの確率的推論と人間の決定論的判断を組み合わせたHLER意思決定アーキテクチャの概念図です。",
+          "label": "Figure 1: HLER decision architecture. Specialised agents decompose the empirical research workflow. Purple-shaded",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-13T23:04:05.520Z"
+        }
+      ]
+    }
+  ]
+}

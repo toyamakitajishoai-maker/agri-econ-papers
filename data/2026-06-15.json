@@ -1,0 +1,858 @@
+{
+  "date": "2026-06-15",
+  "papers": [
+    {
+      "id": "2606.10605v1",
+      "title": "Modeling pest dynamics in trap cropping to improve yield: the effects of attraction, retention, and land allocation",
+      "authors": [
+        "Matthew H Holden"
+      ],
+      "publishedAt": "2026-06-09T09:05:47Z",
+      "url": "https://arxiv.org/abs/2606.10605v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.10605v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "q-bio.PE"
+      ],
+      "abstract": "Trap crops reduce damage to a cash (main) crop by attracting pests away from it. Yet this protection is weakened when pests disperse back into the cash crop. In this paper, we focus on the importance of preventing this backflow, showing that effective trap cropping depends jointly on how strongly pests are attracted to trap plants and how rarely they leave them. Together with the proportion of the field devoted to trap plants, these processes determine both the efficacy and feasibility of trap cropping at commercial scales. We formalise this relationship using a simple yield-maximisation framework, in which growers weigh pest suppression benefits against the land sacrificed to trap plants. The model shows that when dispersal from trap plants equals that from the cash crop, optimal trap coverage can exceed 20 to 30 percent of the landscape, levels rarely acceptable to growers. However, reducing pest dispersal off trap plants to just one-quarter of cash crop dispersal lowers the optimal required trap area to approximately 5 percent, transforming trap cropping from impractical to feasible. Understanding these relationships can guide trap-cropping design, from plant choice to targeted interventions that reduce pest movement, to minimise damage, maximise yield, and make trap cropping a reliable component of sustainable pest management.",
+      "summary": {
+        "gist": "おとり作物は、主要作物から害虫を引き離すことで被害を減らす持続可能な害虫管理戦略として期待されてきました。しかし、多くの研究でその効果は限定的であり、成功事例はごくわずかでした。特に、おとり作物から主要作物への害虫の「逆流」が問題視されていましたが、この現象が全体的な効果にどう影響するかの詳細な分析は不足していました。",
+        "novelty": "これまで、おとり作物の研究では、害虫をどれだけ強く誘引できるか（誘引力）に焦点が当てられてきました。しかし、誘引力が高いだけでは、実際には効果が限定的で、多くの面積をおとり作物に割く必要があり、農家にとって現実的ではないという課題がありました。 この研究では、害虫を誘引する力だけでなく、一度おとり作物に来た害虫がどれだけそこに留まるか（定着力）が、おとり作物の効果と実用性を決定する上で極めて重要であることを数理モデルで示しました。定着力を高めることで、おとり作物の必要面積を大幅に削減できる可能性を提示しています。",
+        "method": "本研究では、おとり作物と主要作物の間で害虫がどのように移動するかを記述する数理モデルを構築しました。このモデルは、害虫が主要作物から離れる確率（l）、おとり作物から離れる確率（λ）、そして離れた害虫が主要作物に定着する確率（s, σ）という4つの主要なパラメータに基づいています。これらのパラメータと、おとり作物と主要作物の作付面積の比率を組み合わせて、長期的な主要作物上の害虫の割合を予測しました。さらに、農家が害虫抑制の利益とおとり作物に割く土地のコストを比較検討できるような収量最適化の枠組みを導入し、おとり作物の効果と経済的実現可能性を評価しました。",
+        "results": "モデル分析の結果、おとり作物の効果は、害虫を誘引する力だけでなく、おとり作物から害虫が離れるのを防ぐ「定着力」に強く依存することが明らかになりました。おとり作物からの害虫の分散率（λ）が主要作物からの分散率（l）と同じ場合、最適な害虫抑制を達成するためには、畑の20〜30%もの面積をおとり作物に割く必要があり、これは農家にとって非現実的な水準です。しかし、おとり作物からの害虫の分散率を主要作物の4分の1に減らすだけで、必要なおとり作物の面積は約5%にまで低下し、おとり作物が実用的な戦略に変わることが示されました。これは、誘引力と定着力のバランスが、おとり作物の設計において極めて重要であることを意味します。",
+        "why": "この現象は、害虫が主要作物と誘引作物を行き来する動態によって説明されます。おとり作物が害虫を強く誘引しても、そこから簡単に逃げ出して主要作物に戻ってしまうと、最終的に主要作物上の害虫密度は十分に減少しません。しかし、おとり作物に一度引き寄せられた害虫がそこに長く留まる（定着する）場合、主要作物への逆流が大幅に抑制されます。これにより、少ない面積のおとり作物でも、害虫の大部分を効果的にトラップし続けることが可能となり、主要作物の被害を最小限に抑え、収量を最大化できるのです。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.PE）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "pest-management",
+      "arxivPrimary": "q-bio.PE",
+      "titleJa": "おとり作物による害虫管理を最適化する：誘引・定着・土地配分の効果",
+      "catchTitle": "おとり作物の成功は「引き寄せ」より「逃がさない」が鍵",
+      "hook": "「おとり作物」で害虫を減らそうとしても、なぜかうまくいかないと感じたことはありませんか？その原因は、意外なところにありました。",
+      "background": "おとり作物は、主要作物から害虫を引き離すことで被害を減らす持続可能な害虫管理戦略として期待されてきました。しかし、多くの研究でその効果は限定的であり、成功事例はごくわずかでした。特に、おとり作物から主要作物への害虫の「逆流」が問題視されていましたが、この現象が全体的な効果にどう影響するかの詳細な分析は不足していました。",
+      "quiz": {
+        "question": "おとり作物が効果を発揮するために最も重要な要素は何でしょう？",
+        "options": [
+          "おとり作物の誘引力",
+          "おとり作物からの害虫の分散を防ぐ定着力",
+          "おとり作物の作付面積の広さ"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究では、害虫を誘引する力だけでなく、一度おとり作物に来た害虫がどれだけそこに留まるか（定着力）が、おとり作物の効果と実用性を決定する上で極めて重要であることが示されました。定着力を高めることで、必要なおとり作物の面積を大幅に削減できます。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "おとり作物",
+          "definition": "主要作物から害虫を引き離すために植える別の植物。"
+        },
+        {
+          "term": "数理モデル",
+          "definition": "数学的な方程式や関係を用いて現象を表現する手法。"
+        },
+        {
+          "term": "分散率",
+          "definition": "害虫が特定の植物から離れて移動する確率。"
+        },
+        {
+          "term": "誘引力",
+          "definition": "害虫を特定の植物に引き寄せる強さ。"
+        },
+        {
+          "term": "定着力",
+          "definition": "一度引き寄せた害虫を植物に留まらせる強さ。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "おとり作物が効果を発揮するには、害虫を誘引するだけでなく、一度引き寄せた害虫を逃がさない「定着力」が重要であり、これにより必要な作付面積を大幅に減らせる。",
+      "noveltyContrast": {
+        "before": "これまで、おとり作物の研究では、害虫をどれだけ強く誘引できるか（誘引力）に焦点が当てられてきました。しかし、誘引力が高いだけでは、実際には効果が限定的で、多くの面積をおとり作物に割く必要があり、農家にとって現実的ではないという課題がありました。",
+        "after": "この研究では、害虫を誘引する力だけでなく、一度おとり作物に来た害虫がどれだけそこに留まるか（定着力）が、おとり作物の効果と実用性を決定する上で極めて重要であることを数理モデルで示しました。定着力を高めることで、おとり作物の必要面積を大幅に削減できる可能性を提示しています。"
+      },
+      "analogy": {
+        "title": "害虫を捕まえる「粘着トラップ」のようなもの",
+        "body": "おとり作物は、畑に仕掛ける「粘着トラップ」のようなものです。害虫を誘い込む甘い匂いが「誘引力」だとすると、一度トラップにかかった害虫が逃げ出せない粘着力が「定着力」に当たります。いくら良い匂いで誘っても、粘着力が弱ければ、害虫はすぐに逃げてしまい、結局多くのトラップを仕掛けないと効果が薄いでしょう。しかし、粘着力が強ければ、少ないトラップでも効率的に害虫を捕まえられ、大切な作物を守るためのスペースを確保できます。この研究は、おとり作物の成功には、誘引力だけでなく、この「粘着力」が決定的に重要だと教えてくれます。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "25%→5%",
+          "label": "おとり作物必要面積の削減"
+        }
+      ],
+      "whyYouCare": "この研究は、持続可能な農業を目指す私たちにとって非常に重要な示唆を与えます。農薬の使用を減らしながら収量を維持したいと考える農家にとって、おとり作物は魅力的な選択肢です。しかし、これまでは「効果が不安定」「広い面積が必要」という課題がありました。この研究が示す「定着力」の重要性を理解することで、より少ない土地でおとり作物を効果的に活用できるようになります。これは、農家の経営負担を軽減し、環境負荷の低い農業への転換を加速させる可能性を秘めています。消費者としても、農薬使用の少ない安全な農産物が手に入りやすくなるかもしれません。",
+      "takeawayTalk": "おとり作物は、誘引力より「逃がさない力」が成功の鍵！",
+      "bodyText": "本研究では、おとり作物と主要作物の間で害虫がどのように移動するかを記述する数理モデルを構築しました。このモデルは、害虫が主要作物から離れる確率（l）、おとり作物から離れる確率（λ）、そして離れた害虫が主要作物に定着する確率（s, σ）という4つの主要なパラメータに基づいています。これらのパラメータと、おとり作物と主要作物の作付面積の比率を組み合わせて、長期的な主要作物上の害虫の割合を予測しました。さらに、農家が害虫抑制の利益とおとり作物に割く土地のコストを比較検討できるような収量最適化の枠組みを導入し、おとり作物の効果と経済的実現可能性を評価しました。\n\nこの現象は、害虫が主要作物と誘引作物を行き来する動態によって説明されます。おとり作物が害虫を強く誘引しても、そこから簡単に逃げ出して主要作物に戻ってしまうと、最終的に主要作物上の害虫密度は十分に減少しません。しかし、おとり作物に一度引き寄せられた害虫がそこに長く留まる（定着する）場合、主要作物への逆流が大幅に抑制されます。これにより、少ない面積のおとり作物でも、害虫の大部分を効果的にトラップし続けることが可能となり、主要作物の被害を最小限に抑え、収量を最大化できるのです。",
+      "bodyGlossary": [
+        {
+          "term": "おとり作物",
+          "definition": "主要作物から害虫を引き離すために植える別の植物。",
+          "start": 6,
+          "end": 11
+        },
+        {
+          "term": "数理モデル",
+          "definition": "数学的な方程式や関係を用いて現象を表現する手法。",
+          "start": 37,
+          "end": 42
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "おとり作物",
+          "definition": "主要作物から害虫を引き離すために植える別の植物。",
+          "start": 6,
+          "end": 11
+        },
+        {
+          "term": "数理モデル",
+          "definition": "数学的な方程式や関係を用いて現象を表現する手法。",
+          "start": 37,
+          "end": 42
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 259
+    },
+    {
+      "id": "2606.13314v1",
+      "title": "The Privilege of Exposure: Caste and Generative AI in India's Graduate Labour Market",
+      "authors": [
+        "Kaibalyapati Mishra"
+      ],
+      "publishedAt": "2026-06-11T13:09:43Z",
+      "url": "https://arxiv.org/abs/2606.13314v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.13314v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "econ.GN"
+      ],
+      "abstract": "Who is exposed to generative AI in a developing-country labour market? We map three occupational AI-exposure indices to India's redesigned Periodic Labour Force Survey (2025) and document a steep caste gradient among 83,000 employed graduates: graduates from the Scheduled Castes and the Scheduled Tribes are 0.24--0.37 standard deviations less exposed than upper-caste graduates within the same district. Two channels drive the gap: one in four SC and one in three ST graduates work in farm or elementary occupations untouched by AI, and those in white-collar work are underrepresented in managerial, software, and finance occupations. Because exposure commands a wage premium of up to 20 per cent, generative AI stands to widen, not narrow, India's caste earnings gap.",
+      "summary": {
+        "gist": "AIの普及は、労働市場に大きな変化をもたらすと予測されています。しかし、発展途上国では、スキルだけでなく歴史的な社会階層が職業選択に影響を与えるため、AIへの接触機会の分布が先進国とは異なる可能性があります。インドではカースト制度が依然として職業選択や賃金に影響を与えており、生成AIの導入が進むIT、金融、ビジネスサービスといった分野には上位カーストの大卒者が集中しています。",
+        "novelty": "これまでの研究では、AIへの接触機会は学歴が高いほど多く、女性やホワイトカラーで高いとされてきました。しかし、発展途上国における社会集団ごとの接触機会の分布、特にカーストのような歴史的階層がどう影響するかは不明でした。 この論文は、インドの8万3千人以上の大卒者を対象に、カースト別に生成AIへの職業的接触機会を初めて推定しました。その結果、カーストが高いほどAIへの接触機会が多く、この格差が賃金格差を拡大させる可能性を明らかにしました。",
+        "method": "本研究では、インドの2025年版定期労働力調査（PLFS）のデータ（約8万3千人の大卒者を含む）と、3つの異なる生成AI職業接触指数を組み合わせました。これらの指数は、職業のタスク内容とAIの能力を比較してAIへの接触度合いをスコア化したものです。地域、年齢、性別、セクターなどの要因を調整し、カースト別にAIへの接触機会の差を分析しました。",
+        "results": "インドの大卒者において、カーストが高いほど生成AIへの職業的接触機会が多いことが判明しました。同じ地域の上位カーストの大卒者と比較して、指定カースト（SC）の大卒者は0.24〜0.27標準偏差、指定部族（ST）の大卒者は0.31〜0.37標準偏差、AIへの接触機会が少ないことが示されました。この格差は主に二つの要因によって説明されます。一つは、SC大卒者の24.6%、ST大卒者の32.0%が、AIとほとんど無縁な農業または単純労働に従事していること。もう一つは、ホワイトカラー職の中でも、上位カーストの大卒者が管理職、ソフトウェア開発、金融といったAI接触機会の多い職種に偏って就いていることです。AIへの接触は賃金に最大20%のプレミアムをもたらすため、生成AIはインドのカースト間賃金格差を縮小するのではなく、拡大させる可能性が高いと結論付けられました。",
+        "why": "この格差は、主に「職業的降格」と「ホワイトカラー職内での選別」という二つのメカニズムによって生じます。まず、指定カーストや指定部族の大卒者の多くが、本来大卒資格を必要としない農業や単純労働に従事しており、これらの職種は生成AIとの接触機会がほぼゼロです。これは、彼らの学歴が労働市場で十分に評価されていない「資格の価値低下」を示しています。次に、ホワイトカラー職に就いたとしても、上位カーストの大卒者は、ソフトウェア開発者、金融専門家、管理職といったAIとの親和性が高く、賃金プレミアムが得られる職種に集中しています。一方、指定カーストの大卒者はこれらの職種での代表性が低く、結果としてAIによる恩恵を受けにくい構造になっています。つまり、AIはすでに労働市場から排除されている人々を「代替」するのではなく、AIが能力を「拡張」する職種に就ける人々を優遇することで、既存の社会経済的格差をさらに強める方向に作用しているのです。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "labor-market",
+      "arxivPrimary": "econ.GN",
+      "titleJa": "インドの労働市場におけるカーストと生成AIへの接触機会の格差",
+      "catchTitle": "AIが格差を広げる？インドの現実",
+      "hook": "あなたはAIが普及すれば、誰もが恩恵を受け、社会の格差が縮まると思っていませんか？インドの現状は、その逆かもしれません。",
+      "background": "AIの普及は、労働市場に大きな変化をもたらすと予測されています。しかし、発展途上国では、スキルだけでなく歴史的な社会階層が職業選択に影響を与えるため、AIへの接触機会の分布が先進国とは異なる可能性があります。インドではカースト制度が依然として職業選択や賃金に影響を与えており、生成AIの導入が進むIT、金融、ビジネスサービスといった分野には上位カーストの大卒者が集中しています。",
+      "quiz": {
+        "question": "この論文によると、インドの大卒者における生成AIへの接触機会の格差を広げる主な要因は何ですか？",
+        "options": [
+          "都市と地方の教育格差",
+          "カーストによる職業的降格とホワイトカラー職内での選別",
+          "性別によるITリテラシーの差"
+        ],
+        "correctIndex": 1,
+        "explanation": "論文では、指定カースト・指定部族の大卒者がAIと無縁な農業・単純労働に就く「職業的降格」と、ホワイトカラー職内で上位カーストが大卒者がAI接触機会の多い職種に偏る「選別」が主な要因であると説明されています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "生成AI",
+          "definition": "文章や画像を自動生成する人工知能"
+        },
+        {
+          "term": "カースト",
+          "definition": "インドのヒンドゥー社会における身分制度"
+        },
+        {
+          "term": "PLFS",
+          "definition": "インドの定期労働力調査"
+        },
+        {
+          "term": "職業的降格",
+          "definition": "学歴に見合わない職に就くこと"
+        },
+        {
+          "term": "資格の価値低下",
+          "definition": "高学歴でも職場で評価されないこと"
+        },
+        {
+          "term": "賃金プレミアム",
+          "definition": "特定のスキルや経験で得られる追加賃金"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "インドでは、高学歴でもカーストが低いと生成AIに触れる機会が少なく、この格差が賃金格差をさらに広げる可能性があります。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、AIへの接触機会は学歴が高いほど多く、女性やホワイトカラーで高いとされてきました。しかし、発展途上国における社会集団ごとの接触機会の分布、特にカーストのような歴史的階層がどう影響するかは不明でした。",
+        "after": "この論文は、インドの8万3千人以上の大卒者を対象に、カースト別に生成AIへの職業的接触機会を初めて推定しました。その結果、カーストが高いほどAIへの接触機会が多く、この格差が賃金格差を拡大させる可能性を明らかにしました。"
+      },
+      "analogy": {
+        "title": "豊作の畑と日陰の畑",
+        "body": "これは、まるで同じ地域にありながら、日当たりが良く肥沃な「豊作の畑」と、日陰になりがちな「日陰の畑」があるようなものです。豊作の畑では、最新の農機具（生成AI）が導入され、効率的に多くの作物が収穫（高収入の仕事）できます。一方、日陰の畑では、昔ながらの手作業（AIと無縁の仕事）が中心で、収穫量（収入）も限られます。同じ大卒という「種」を蒔いても、カーストという「土壌」によって、AIという「最新農機具」に触れる機会が大きく異なり、結果として収穫量に差が生まれてしまうのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "-0.24〜-0.37SD",
+          "label": "指定カースト・指定部族の大卒者のAI接触機会（上位カースト比）"
+        },
+        {
+          "value": "+20%",
+          "label": "AI接触による賃金プレミアム"
+        }
+      ],
+      "whyYouCare": "AIの進化は、私たちの仕事や社会に大きな影響を与えています。AIがもたらす恩恵は平等に分配されると思われがちですが、この研究は、既存の社会構造や格差がAIの恩恵の分配に影響を与える可能性を示唆しています。もしあなたが企業の人事担当者なら、AI導入時に特定の層が取り残されないような教育・研修プログラムの重要性を再認識するでしょう。政策立案者であれば、AIが社会格差を拡大させないためのセーフティネットや再教育機会の提供を検討する必要があるかもしれません。AIの未来を考える上で、技術の進歩だけでなく、それが社会に与える影響、特に既存の格差をどう増幅・緩和するかという視点が不可欠です。",
+      "takeawayTalk": "インドでは、AIがカーストによる賃金格差をさらに広げているらしいよ。",
+      "bodyText": "本研究では、インドの2025年版定期労働力調査（PLFS）のデータ（約8万3千人の大卒者を含む）と、3つの異なる生成AI職業接触指数を組み合わせました。これらの指数は、職業のタスク内容とAIの能力を比較してAIへの接触度合いをスコア化したものです。地域、年齢、性別、セクターなどの要因を調整し、カースト別にAIへの接触機会の差を分析しました。\n\nこの格差は、主に「職業的降格」と「ホワイトカラー職内での選別」という二つのメカニズムによって生じます。まず、指定カーストや指定部族の大卒者の多くが、本来大卒資格を必要としない農業や単純労働に従事しており、これらの職種は生成AIとの接触機会がほぼゼロです。これは、彼らの学歴が労働市場で十分に評価されていない「資格の価値低下」を示しています。次に、ホワイトカラー職に就いたとしても、上位カーストの大卒者は、ソフトウェア開発者、金融専門家、管理職といったAIとの親和性が高く、賃金プレミアムが得られる職種に集中しています。一方、指定カーストの大卒者はこれらの職種での代表性が低く、結果としてAIによる恩恵を受けにくい構造になっています。つまり、AIはすでに労働市場から排除されている人々を「代替」するのではなく、AIが能力を「拡張」する職種に就ける人々を優遇することで、既存の社会経済的格差をさらに強める方向に作用しているのです。",
+      "bodyGlossary": [
+        {
+          "term": "PLFS",
+          "definition": "インドの定期労働力調査",
+          "start": 24,
+          "end": 28
+        },
+        {
+          "term": "生成AI",
+          "definition": "文章や画像を自動生成する人工知能",
+          "start": 56,
+          "end": 60
+        },
+        {
+          "term": "カースト",
+          "definition": "インドのヒンドゥー社会における身分制度",
+          "start": 147,
+          "end": 151
+        },
+        {
+          "term": "職業的降格",
+          "definition": "学歴に見合わない職に就くこと",
+          "start": 182,
+          "end": 187
+        },
+        {
+          "term": "資格の価値低下",
+          "definition": "高学歴でも職場で評価されないこと",
+          "start": 327,
+          "end": 334
+        },
+        {
+          "term": "賃金プレミアム",
+          "definition": "特定のスキルや経験で得られる追加賃金",
+          "start": 409,
+          "end": 416
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "PLFS",
+          "definition": "インドの定期労働力調査",
+          "start": 24,
+          "end": 28
+        },
+        {
+          "term": "生成AI",
+          "definition": "文章や画像を自動生成する人工知能",
+          "start": 56,
+          "end": 60
+        },
+        {
+          "term": "カースト",
+          "definition": "インドのヒンドゥー社会における身分制度",
+          "start": 147,
+          "end": 151
+        },
+        {
+          "term": "職業的降格",
+          "definition": "学歴に見合わない職に就くこと",
+          "start": 182,
+          "end": 187
+        },
+        {
+          "term": "資格の価値低下",
+          "definition": "高学歴でも職場で評価されないこと",
+          "start": 327,
+          "end": 334
+        },
+        {
+          "term": "賃金プレミアム",
+          "definition": "特定のスキルや経験で得られる追加賃金",
+          "start": 409,
+          "end": 416
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 280
+    },
+    {
+      "id": "2606.09642v1",
+      "title": "The Dispossessed: Large-Scale Land Acquisitions, Elite Capture, and Dissent in Africa",
+      "authors": [
+        "Jonathan Dries"
+      ],
+      "publishedAt": "2026-06-08T15:37:35Z",
+      "url": "https://arxiv.org/abs/2606.09642v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.09642v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "econ.GN"
+      ],
+      "abstract": "Over the past two decades, millions of hectares of land in Africa have been transferred to investors, raising fears of displacement and conflict. This paper estimates the causal impact of large-scale land acquisitions (LSLAs) on local dissent by comparing successfully implemented projects to a control group of exogenously failed deals. Using staggered difference-in-differences estimators across 1,391 geocoded deals, I find that LSLAs cause a sustained increase in civic unrest of 158% relative to the pre-treatment mean. Protest responses are strongest among domestic investors acquiring community or state land for food-crop production, pointing to local dispossession and domestic elite capture. Integrating media, survey, and electoral data consistent with this hypothesis, I document parallel shifts in property-rights media discourse, an erosion of traditional authority, and broader electoral mobilization in affected constituencies.",
+      "summary": {
+        "gist": "過去20年間で、アフリカでは数百万ヘクタールの土地が投資家に譲渡され、住民の立ち退きや紛争への懸念が高まっています。特に、アフリカの多くの地域では、コミュニティが慣習的権利を持つ土地と、政府が法定所有権を主張する未登録の土地という二重の土地所有制度が存在し、この曖昧さが問題を引き起こす温床となっています。",
+        "novelty": "これまで、アフリカでの大規模土地買収が住民の生活に与える影響は議論されてきましたが、実際にどのようなメカニズムで抗議活動に繋がるのか、その因果関係は不明でした。特に、投資家が狙う土地は元々経済活動が活発な場所が多く、土地買収が原因なのか、他の要因なのか区別が難しかったのです。 この研究では、実際に実行された土地買収と、投資家側の予期せぬ理由で失敗した買収を比較することで、土地買収が住民の抗議活動を158%も増加させるという明確な因果関係を明らかにしました。特に、国内投資家による食料作物目的の買収が、伝統的権威の失墜と結びつき、抗議活動を激化させていることを示しています。",
+        "method": "本研究では、アフリカ38カ国における1,391件の大規模土地買収（LSLA）案件を対象に、実際に実行された案件と、投資家側の外生的な理由で失敗した案件を比較する「差の差分析」を用いて、LSLAが地域住民の抗議活動に与える因果関係を推定しました。具体的には、Land Matrixデータベースの成功したLSLAと、運用活動が始まる前に投資家側の摩擦で失敗した取引を比較し、ACLEDの紛争データと組み合わせて分析しました。",
+        "results": "LSLAは、事前平均と比較して市民騒乱を158%持続的に増加させることが判明しました。この抗議活動は、特に国内投資家がコミュニティまたは国有地を食料作物生産のために取得した場合に最も強く現れました。また、メディア報道、世論調査、選挙データもこの仮説と一致し、財産権に関するメディアの議論のシフト、伝統的権威の侵食、影響を受けた選挙区での広範な選挙動員が確認されました。",
+        "why": "この抗議活動のメカニズムは、主に3つの経路で説明されます。第一に、LSLAへの曝露は伝統的指導者への信頼を低下させ、彼らが問題解決者としての役割を果たさなくなることで、コミュニティが不満を公の抗議活動に転じる以外の選択肢を失います。第二に、LSLAサイト周辺では財産権、汚職、農業に関するメディア報道が集中して増加し、地域的な土地紛争がより広範な公共の議論へとエスカレートします。第三に、LSLAの影響を受けた選挙区では野党の得票率と投票率が上昇し、住民が制度への不満を正式な政治の場に持ち込んでいることが示されました。これらの経路は、土地の剥奪と慣習的権威の弱体化が、メディアや政治の場を通じて集団行動へと繋がる政治経済学を示唆しています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "land-tenure",
+      "arxivPrimary": "econ.GN",
+      "titleJa": "アフリカにおける大規模土地買収、エリートによる乗っ取り、そして異議申し立て",
+      "catchTitle": "土地買収が住民の不満を爆発させる",
+      "hook": "アフリカで大規模な土地買収が進むと、なぜ住民の抗議活動が急増するのでしょうか？その裏には、意外な真実が隠されています。",
+      "background": "過去20年間で、アフリカでは数百万ヘクタールの土地が投資家に譲渡され、住民の立ち退きや紛争への懸念が高まっています。特に、アフリカの多くの地域では、コミュニティが慣習的権利を持つ土地と、政府が法定所有権を主張する未登録の土地という二重の土地所有制度が存在し、この曖昧さが問題を引き起こす温床となっています。",
+      "quiz": {
+        "question": "アフリカにおける大規模土地買収が最も市民騒乱を増加させるのは、どのようなケースでしたか？",
+        "options": [
+          "海外投資家によるバイオ燃料作物目的の買収",
+          "国内投資家による食料作物目的の買収",
+          "海外投資家による非食料商業作物目的の買収"
+        ],
+        "correctIndex": 1,
+        "explanation": "研究結果によると、市民騒乱の増加は、特に国内投資家がコミュニティまたは国有地を食料作物生産のために取得した場合に最も顕著でした。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "大規模土地買収",
+          "definition": "大規模な土地が投資家に譲渡されること。"
+        },
+        {
+          "term": "差の差分析",
+          "definition": "介入群と対照群の前後変化を比較する統計手法。"
+        },
+        {
+          "term": "Land Matrix",
+          "definition": "世界の土地取引に関する公開データベース。"
+        },
+        {
+          "term": "ACLED",
+          "definition": "紛争イベントのリアルタイムデータを提供するプロジェクト。"
+        },
+        {
+          "term": "伝統的指導者",
+          "definition": "地域社会の慣習に基づいて権威を持つリーダー。"
+        },
+        {
+          "term": "財産権",
+          "definition": "土地などの財産に対する所有・利用の権利。"
+        },
+        {
+          "term": "慣習的権威",
+          "definition": "伝統や慣習に基づいた地域のリーダーシップ。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "アフリカでの大規模土地買収は、特に国内エリートによる食料作物目的の買収で、住民の抗議活動を大幅に増加させる。",
+      "noveltyContrast": {
+        "before": "これまで、アフリカでの大規模土地買収が住民の生活に与える影響は議論されてきましたが、実際にどのようなメカニズムで抗議活動に繋がるのか、その因果関係は不明でした。特に、投資家が狙う土地は元々経済活動が活発な場所が多く、土地買収が原因なのか、他の要因なのか区別が難しかったのです。",
+        "after": "この研究では、実際に実行された土地買収と、投資家側の予期せぬ理由で失敗した買収を比較することで、土地買収が住民の抗議活動を158%も増加させるという明確な因果関係を明らかにしました。特に、国内投資家による食料作物目的の買収が、伝統的権威の失墜と結びつき、抗議活動を激化させていることを示しています。"
+      },
+      "analogy": {
+        "title": "畑の境界線が曖昧な村の騒動",
+        "body": "これは、昔から村人みんなで使ってきた畑の境界線が曖昧なまま、村の有力者が「これは自分の土地だ」と主張して、勝手に新しい作物を植え始めたようなものです。村人たちは「これまで通り自由に作物を作りたい」と不満を募らせますが、有力者は聞く耳を持ちません。この状況が続くと、村人たちは「もう我慢できない」と声を上げ、集まって抗議活動を始めるでしょう。この研究は、アフリカの土地買収が、まさにこの「畑の境界線が曖昧な村の騒動」のように、住民の不満を爆発させていることを示しています。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+158%",
+          "label": "土地買収後の市民騒乱増加率"
+        }
+      ],
+      "whyYouCare": "この研究は、アフリカの土地問題が単なる経済開発の話ではなく、社会の安定や民主主義の根幹に関わる問題であることを示しています。あなたの会社がアフリカでの事業展開を考えているなら、現地の土地所有制度や住民感情を深く理解し、地域社会との対話を重視することが不可欠です。安易な土地買収は、予期せぬ抗議活動や社会不安を引き起こし、プロジェクトの失敗だけでなく、企業の評判にも悪影響を及ぼす可能性があります。持続可能な開発のためには、地域住民の権利を尊重し、彼らの声に耳を傾ける姿勢が求められます。",
+      "takeawayTalk": "アフリカの土地買収は、国内エリートによる食料作物目的だと住民の抗議を激化させるらしいよ。",
+      "bodyText": "本研究では、アフリカ38カ国における1,391件の大規模土地買収（LSLA）案件を対象に、実際に実行された案件と、投資家側の外生的な理由で失敗した案件を比較する「差の差分析」を用いて、LSLAが地域住民の抗議活動に与える因果関係を推定しました。具体的には、Land Matrixデータベースの成功したLSLAと、運用活動が始まる前に投資家側の摩擦で失敗した取引を比較し、ACLEDの紛争データと組み合わせて分析しました。\n\nこの抗議活動のメカニズムは、主に3つの経路で説明されます。第一に、LSLAへの曝露は伝統的指導者への信頼を低下させ、彼らが問題解決者としての役割を果たさなくなることで、コミュニティが不満を公の抗議活動に転じる以外の選択肢を失います。第二に、LSLAサイト周辺では財産権、汚職、農業に関するメディア報道が集中して増加し、地域的な土地紛争がより広範な公共の議論へとエスカレートします。第三に、LSLAの影響を受けた選挙区では野党の得票率と投票率が上昇し、住民が制度への不満を正式な政治の場に持ち込んでいることが示されました。これらの経路は、土地の剥奪と慣習的権威の弱体化が、メディアや政治の場を通じて集団行動へと繋がる政治経済学を示唆しています。",
+      "bodyGlossary": [
+        {
+          "term": "大規模土地買収",
+          "definition": "大規模な土地が投資家に譲渡されること。",
+          "start": 25,
+          "end": 32
+        },
+        {
+          "term": "差の差分析",
+          "definition": "介入群と対照群の前後変化を比較する統計手法。",
+          "start": 81,
+          "end": 86
+        },
+        {
+          "term": "Land Matrix",
+          "definition": "世界の土地取引に関する公開データベース。",
+          "start": 128,
+          "end": 139
+        },
+        {
+          "term": "ACLED",
+          "definition": "紛争イベントのリアルタイムデータを提供するプロジェクト。",
+          "start": 185,
+          "end": 190
+        },
+        {
+          "term": "伝統的指導者",
+          "definition": "地域社会の慣習に基づいて権威を持つリーダー。",
+          "start": 254,
+          "end": 260
+        },
+        {
+          "term": "財産権",
+          "definition": "土地などの財産に対する所有・利用の権利。",
+          "start": 343,
+          "end": 346
+        },
+        {
+          "term": "慣習的権威",
+          "definition": "伝統や慣習に基づいた地域のリーダーシップ。",
+          "start": 486,
+          "end": 491
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "大規模土地買収",
+          "definition": "大規模な土地が投資家に譲渡されること。",
+          "start": 25,
+          "end": 32
+        },
+        {
+          "term": "差の差分析",
+          "definition": "介入群と対照群の前後変化を比較する統計手法。",
+          "start": 81,
+          "end": 86
+        },
+        {
+          "term": "Land Matrix",
+          "definition": "世界の土地取引に関する公開データベース。",
+          "start": 128,
+          "end": 139
+        },
+        {
+          "term": "ACLED",
+          "definition": "紛争イベントのリアルタイムデータを提供するプロジェクト。",
+          "start": 185,
+          "end": 190
+        },
+        {
+          "term": "伝統的指導者",
+          "definition": "地域社会の慣習に基づいて権威を持つリーダー。",
+          "start": 254,
+          "end": 260
+        },
+        {
+          "term": "財産権",
+          "definition": "土地などの財産に対する所有・利用の権利。",
+          "start": 343,
+          "end": 346
+        },
+        {
+          "term": "慣習的権威",
+          "definition": "伝統や慣習に基づいた地域のリーダーシップ。",
+          "start": 486,
+          "end": 491
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 239,
+      "keyFigure": {
+        "imagePath": "/figures/2606.09642v1_results.png",
+        "page": 39,
+        "caption": "大規模土地買収が選挙結果に与える影響を時系列で示しています。",
+        "label": "Figure 7: Dynamic Event-Study Estimates of Electoral Response",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-14T23:08:53.199Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.09642v1_results.png",
+          "page": 39,
+          "caption": "大規模土地買収が選挙結果に与える影響を時系列で示しています。",
+          "label": "Figure 7: Dynamic Event-Study Estimates of Electoral Response",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-14T23:08:53.199Z"
+        },
+        {
+          "imagePath": "/figures/2606.09642v1_why.png",
+          "page": 35,
+          "caption": "大規模土地買収がメディア報道のテーマに与える影響を時系列で示しています。",
+          "label": "Figure 6: Event-Study Dynamics by Topic of GDELT Thematic Coverage",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-14T23:08:53.200Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.11510v1",
+      "title": "Continuous biome representations from Earth observation embeddings",
+      "authors": [
+        "Maxwell B. Joseph",
+        "Flávia De Souza Mendes",
+        "Dieu My T. Nguyen",
+        "Camile Sothe",
+        "Christopher B. Anderson"
+      ],
+      "publishedAt": "2026-06-09T23:14:00Z",
+      "url": "https://arxiv.org/abs/2606.11510v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.11510v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "q-bio.QM",
+        "q-bio.PE",
+        "stat.ML"
+      ],
+      "abstract": "Biotic communities vary continuously across space, yet biome maps impose categorical boundaries that compress this variation, particularly at ecotones where transitional communities are ecologically distinct. Could Earth observation (EO) foundation models, which encode spectral, spatial, and temporal information with dense embeddings, convert discrete biome maps into continuous representations that better capture ecological variation? Here, we fit a linear classifier on Clay v1.5 satellite image embeddings to predict biome labels from a categorical map. The softmax output yields a continuous probability vector whose dimensions correspond to named biome classes. We evaluate this approach using six Brazilian biomes, 1.3 million embeddings, and 10,015 withheld forest inventory plots spanning 4,672 plant species. The continuous biome representation outperforms discrete biome labels for predicting species occurrence (mean per-species AUC 0.618 vs. 0.570 across 10 spatial cross-validation folds). Decomposing this gain shows that continuity in the graded probability output, rather than label reassignment, accounts for the improvement; the pattern holds across all distances from biome boundaries. The raw 1024-dimensional embedding remains the strongest predictor we tested (mean AUC 0.646 vs. 0.618), but the continuous representation recovers most of the embedding's gain over discrete labels. This simple approach provides a probabilistic replacement for categorical map labels, preserving their meaning while encoding graded variation that discrete maps suppress.",
+      "summary": {
+        "gist": "地球上の生物群集は空間的に連続的に変化しますが、従来のバイオーム地図は、この変化を森、草原、砂漠といったカテゴリに圧縮し、明確な境界を設けていました。しかし、実際の生態系は連続的な環境勾配に沿って変化し、特に境界域（エコトーン）では独自の生物群集が存在するため、従来のカテゴリ分類ではその多様性を十分に表現できていませんでした。近年、衛星画像から地球の表面情報を高次元のベクトル（埋め込み）としてエンコードする地球観測（EO）基盤モデルが登場し、この連続的な変化を捉える可能性が示唆されていました。",
+        "novelty": "従来のバイオーム地図は、森、草原、砂漠のように生態系を明確なカテゴリに分類していました。しかし、実際の生態系は連続的に変化しており、特に境界域（エコトーン）では、どちらのカテゴリにも属さないような独自の生態系が存在するため、従来の地図ではその多様性を捉えきれていませんでした。 この研究では、AIが衛星画像から抽出した情報を使い、各地点が「森である確率」「草原である確率」といった連続的な確率ベクトルで生態系を表現しました。これにより、明確な境界では表現できなかった生態系のグラデーションを捉え、生物の生息予測精度を大幅に向上させることに成功しました。",
+        "method": "本研究では、ブラジルの6つのバイオームを対象に、Clay v1.5衛星画像埋め込みデータ（約130万タイル）と、10,015箇所の森林調査プロット（4,672種の植物種データ）を使用しました。まず、衛星画像埋め込みから既存のカテゴリ別バイオームラベルを予測する線形分類器（多項ロジスティック回帰）を訓練しました。この分類器のソフトマックス出力は、各地点が各バイオームに属する確率を示す連続的な確率ベクトル（連続表現）となります。この連続表現と、従来のカテゴリラベル、そして分類器が予測したカテゴリラベル（ラベル再割り当て）の3種類の表現を用いて、植物種の生息予測精度を比較評価しました。評価には、10分割空間交差検定と、各プロットから最も近いバイオーム境界までの距離に応じた層別分析を行いました。",
+        "results": "連続バイオーム表現は、従来のカテゴリ別地図ラベルと比較して、植物種の生息予測において平均で0.048ポイント（AUC 0.570から0.618へ）のAUC向上を示しました。この改善は、ラベルの再割り当てによるものではなく、連続的な確率出力がもたらす「連続性」に起因することが明らかになりました。特に、バイオーム境界に近い場所でも、連続表現の優位性は一貫して見られました。最も予測性能が高かったのは元の1024次元の衛星画像埋め込み（AUC 0.646）でしたが、連続表現は、この埋め込みが持つ性能向上分の半分以上を、6つの解釈可能なバイオーム次元で回復することができました。",
+        "why": "従来のカテゴリ別バイオーム地図は、生態系の連続的な変化を「森」か「草原」かのように明確に区切ってしまいます。しかし、実際の生態系は、土壌、気候、地形などの環境要因のグラデーションに沿って連続的に変化しています。この研究で開発された連続表現は、AIが衛星画像から読み取った膨大な情報を元に、各地点が「森である確率」「草原である確率」といった形で、生態系の「あいまいさ」や「中間性」を数値として捉えることができます。これにより、特に境界域（エコトーン）で、従来の地図では捉えきれなかった独自の生物群集の情報をより正確に反映できるようになり、結果として植物種の生息予測精度が向上しました。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.QM）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "remote-sensing",
+      "arxivPrimary": "q-bio.QM",
+      "titleJa": "地球観測埋め込みから連続的なバイオーム表現を生成する研究",
+      "catchTitle": "境界が曖昧な生態系をAIが精密に描く",
+      "hook": "あなたは「ここは森？それとも草原？」と、境界がはっきりしない場所に出くわしたことはありませんか？",
+      "background": "地球上の生物群集は空間的に連続的に変化しますが、従来のバイオーム地図は、この変化を森、草原、砂漠といったカテゴリに圧縮し、明確な境界を設けていました。しかし、実際の生態系は連続的な環境勾配に沿って変化し、特に境界域（エコトーン）では独自の生物群集が存在するため、従来のカテゴリ分類ではその多様性を十分に表現できていませんでした。近年、衛星画像から地球の表面情報を高次元のベクトル（埋め込み）としてエンコードする地球観測（EO）基盤モデルが登場し、この連続的な変化を捉える可能性が示唆されていました。",
+      "quiz": {
+        "question": "この研究で開発された「連続バイオーム表現」が、従来のカテゴリ別地図よりも優れている主な理由は次のうちどれでしょう？",
+        "options": [
+          "地図の見た目がよりカラフルになったから",
+          "AIが自動的に新しいバイオーム名を生成したから",
+          "生態系の境界における連続的な変化を数値で捉えられたから"
+        ],
+        "correctIndex": 2,
+        "explanation": "正解は「生態系の境界における連続的な変化を数値で捉えられたから」です。従来の地図では明確な境界で区切られていた生態系を、AIが「森である確率」「草原である確率」といった連続的な確率で表現することで、特に境界域の多様性をより正確に捉え、生物の生息予測精度を向上させました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "バイオーム",
+          "definition": "気候や植生によって分けられる大規模な生態系"
+        },
+        {
+          "term": "エコトーン",
+          "definition": "異なる生態系が接する移行帯"
+        },
+        {
+          "term": "EO基盤モデル",
+          "definition": "衛星画像から地球情報を抽出するAIモデル"
+        },
+        {
+          "term": "埋め込み",
+          "definition": "高次元の情報を圧縮したベクトル表現"
+        },
+        {
+          "term": "線形分類器",
+          "definition": "データを直線で分類するシンプルなAIモデル"
+        },
+        {
+          "term": "ソフトマックス出力",
+          "definition": "複数のカテゴリに属する確率を示す値"
+        },
+        {
+          "term": "AUC",
+          "definition": "予測モデルの性能を評価する指標"
+        },
+        {
+          "term": "空間交差検定",
+          "definition": "地理的な位置を考慮したデータ分割検証"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "AIが衛星画像から生態系の境界を「あいまいな確率」で表現することで、生物の生息予測精度が向上しました。",
+      "noveltyContrast": {
+        "before": "従来のバイオーム地図は、森、草原、砂漠のように生態系を明確なカテゴリに分類していました。しかし、実際の生態系は連続的に変化しており、特に境界域（エコトーン）では、どちらのカテゴリにも属さないような独自の生態系が存在するため、従来の地図ではその多様性を捉えきれていませんでした。",
+        "after": "この研究では、AIが衛星画像から抽出した情報を使い、各地点が「森である確率」「草原である確率」といった連続的な確率ベクトルで生態系を表現しました。これにより、明確な境界では表現できなかった生態系のグラデーションを捉え、生物の生息予測精度を大幅に向上させることに成功しました。"
+      },
+      "analogy": {
+        "title": "畑の土壌マップを「栄養グラデーションマップ」に",
+        "body": "あなたの畑の土壌マップが「粘土質」「砂質」と明確に区切られているようなものです。しかし、実際には粘土質から砂質へ徐々に変化する場所があり、その中間的な土壌にはそれぞれの特性を持つ作物が混在して育つかもしれません。この研究は、この土壌マップを「粘土質である確率50%、砂質である確率50%」のように、土壌の栄養分や水分保持能力が連続的に変化する「栄養グラデーションマップ」に変換するようなものです。これにより、どの作物がどこで一番よく育つかを、より細かく予測できるようになります。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+3.2pt",
+          "label": "種の生息予測AUC向上"
+        }
+      ],
+      "whyYouCare": "この研究は、農業や環境保全に携わるあなたの意思決定を大きく変える可能性があります。例えば、気候変動によって生態系の境界が移動している地域で、どの作物を栽培すべきか、あるいはどの生物種を保護すべきかを判断する際、従来の明確な地図では「ここは森だから」と一律に判断されていました。しかし、この新しい手法を使えば、「森である確率70%、草原である確率30%」といった連続的な情報が得られるため、よりその土地の特性に合った、きめ細やかな農業計画や保全戦略を立てられるようになります。これにより、資源の無駄を減らし、生物多様性の保全にも貢献できるでしょう。",
+      "takeawayTalk": "AIが生態系の境界を「あいまいな確率」で示すことで、生物の生息予測が格段に正確になったらしいよ！",
+      "bodyText": "本研究では、ブラジルの6つのバイオームを対象に、Clay v1.5衛星画像埋め込みデータ（約130万タイル）と、10,015箇所の森林調査プロット（4,672種の植物種データ）を使用しました。まず、衛星画像埋め込みから既存のカテゴリ別バイオームラベルを予測する線形分類器（多項ロジスティック回帰）を訓練しました。この分類器のソフトマックス出力は、各地点が各バイオームに属する確率を示す連続的な確率ベクトル（連続表現）となります。この連続表現と、従来のカテゴリラベル、そして分類器が予測したカテゴリラベル（ラベル再割り当て）の3種類の表現を用いて、植物種の生息予測精度を比較評価しました。評価には、10分割空間交差検定と、各プロットから最も近いバイオーム境界までの距離に応じた層別分析を行いました。\n\n従来のカテゴリ別バイオーム地図は、生態系の連続的な変化を「森」か「草原」かのように明確に区切ってしまいます。しかし、実際の生態系は、土壌、気候、地形などの環境要因のグラデーションに沿って連続的に変化しています。この研究で開発された連続表現は、AIが衛星画像から読み取った膨大な情報を元に、各地点が「森である確率」「草原である確率」といった形で、生態系の「あいまいさ」や「中間性」を数値として捉えることができます。これにより、特に境界域（エコトーン）で、従来の地図では捉えきれなかった独自の生物群集の情報をより正確に反映できるようになり、結果として植物種の生息予測精度が向上しました。",
+      "bodyGlossary": [
+        {
+          "term": "バイオーム",
+          "definition": "気候や植生によって分けられる大規模な生態系",
+          "start": 14,
+          "end": 19
+        },
+        {
+          "term": "埋め込み",
+          "definition": "高次元の情報を圧縮したベクトル表現",
+          "start": 37,
+          "end": 41
+        },
+        {
+          "term": "線形分類器",
+          "definition": "データを直線で分類するシンプルなAIモデル",
+          "start": 130,
+          "end": 135
+        },
+        {
+          "term": "ソフトマックス出力",
+          "definition": "複数のカテゴリに属する確率を示す値",
+          "start": 162,
+          "end": 171
+        },
+        {
+          "term": "空間交差検定",
+          "definition": "地理的な位置を考慮したデータ分割検証",
+          "start": 302,
+          "end": 308
+        },
+        {
+          "term": "エコトーン",
+          "definition": "異なる生態系が接する移行帯",
+          "start": 568,
+          "end": 573
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "バイオーム",
+          "definition": "気候や植生によって分けられる大規模な生態系",
+          "start": 14,
+          "end": 19
+        },
+        {
+          "term": "埋め込み",
+          "definition": "高次元の情報を圧縮したベクトル表現",
+          "start": 37,
+          "end": 41
+        },
+        {
+          "term": "線形分類器",
+          "definition": "データを直線で分類するシンプルなAIモデル",
+          "start": 130,
+          "end": 135
+        },
+        {
+          "term": "ソフトマックス出力",
+          "definition": "複数のカテゴリに属する確率を示す値",
+          "start": 162,
+          "end": 171
+        },
+        {
+          "term": "空間交差検定",
+          "definition": "地理的な位置を考慮したデータ分割検証",
+          "start": 302,
+          "end": 308
+        },
+        {
+          "term": "エコトーン",
+          "definition": "異なる生態系が接する移行帯",
+          "start": 568,
+          "end": 573
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 290,
+      "keyFigure": {
+        "imagePath": "/figures/2606.11510v1_results.png",
+        "page": 4,
+        "caption": "地球観測埋め込みから導出された連続バイオーム表現の予測確率を示しています。",
+        "label": "Fig. 3: Continuous biome representations derived from Earth observation embeddings. Left: predicted probability",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-14T23:08:55.893Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.11510v1_results.png",
+          "page": 4,
+          "caption": "地球観測埋め込みから導出された連続バイオーム表現の予測確率を示しています。",
+          "label": "Fig. 3: Continuous biome representations derived from Earth observation embeddings. Left: predicted probability",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-14T23:08:55.893Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.13678v1",
+      "title": "A model of local and global reciprocity",
+      "authors": [
+        "Mari Kawakatsu",
+        "Yohsuke Murase",
+        "Taylor A. Kessinger",
+        "Joshua B. Plotkin"
+      ],
+      "publishedAt": "2026-06-11T17:59:49Z",
+      "url": "https://arxiv.org/abs/2606.13678v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.13678v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "physics.soc-ph",
+        "q-bio.PE"
+      ],
+      "abstract": "We often decide how to treat friends based on observations of their past behavior, whereas actions toward strangers are typically guided by their public reputations. These two kinds of information underlie two classical mechanisms for the evolution of cooperation$\\unicode{x2014}$direct and indirect reciprocity$\\unicode{x2014}$which have largely been studied in isolation. They are not interchangeable: we can recall the past actions of only a small circle of close contacts, whereas for the far larger pool of strangers we must rely on public reputations. Here we develop a mathematical framework built on this distinction. Each individual engages in direct reciprocity in local games within a finite neighborhood of friends, whose actions they observe directly, and in indirect reciprocity in global games with a large population of strangers, known only by reputation. Separating local and global interactions allows us to address two questions. First, can cooperation persist under a cognitively simple norm of judgment? We show that combining direct and indirect reciprocity resolves the scoring dilemma: conditional cooperators resist invasion by both unconditional cooperators and unconditional defectors, where indirect reciprocity alone would fail. Second, how should one treat a friend whose past behavior conflicts with their public reputation? We find that the strategies that maximize cooperation are forgiving$\\unicode{x2014}$overlooking whichever piece of information is unfavorable$\\unicode{x2014}$and that these forgiving strategies can often remain robust to invasion. By distinguishing between local and global scales of interaction and integrating information across them, our framework offers a more cognitively realistic account of how reciprocity sustains cooperation.",
+      "summary": {
+        "gist": "私たちは、身近な人に対してはその人の過去の行動に基づいて接し、見知らぬ人に対しては世間の評判に基づいて接することがよくあります。しかし、評判と直接の経験が食い違う場合、どのように行動すべきかという問題が常に生じます。特に、SNSなどで評判が簡単に手に入る現代社会では、この問題はより重要になっています。この問いの根底には、自己中心的な個人間で協力がどのように維持されるかという、社会科学や進化生物学における長年の関心事があります。",
+        "novelty": "これまでの研究では、身近な人との「直接互恵性」と、評判に基づく「間接互恵性」は別々に扱われてきました。しかし、現実世界ではこの2つが混ざり合い、特に情報が衝突する際の行動原理は不明でした。 この論文では、身近な少人数のグループ内での直接互恵性と、不特定多数との間接互恵性を組み合わせたモデルを構築。情報が衝突する状況で、協力が持続する条件と、最適な行動戦略（「許容する」戦略）を明らかにしました。",
+        "method": "本研究では、直接互恵性と間接互恵性を統合した数学的モデルを開発しました。各個人は、少人数の「近隣」グループ内で直接互恵性に基づいたゲームを行い、その行動を直接観察・記憶します。同時に、はるかに大規模な「非近隣」集団とは、評判のみに基づいて間接互恵性ゲームを行います。このモデルでは、近隣グループの有限性と、非近隣集団の膨大さを区別し、それぞれに適した情報（直接観察か公開評判か）が用いられると仮定しました。ゲームは、相手にコストを払って利益を与える「協力」か、何も与えない「裏切り」のどちらかを選択する「寄付ゲーム」形式で行われ、行動は単純な「イメージスコアリング」規範に基づいて評価されます。このモデルを用いて、協力が安定する条件と、直接経験と評判が衝突した場合の最適な戦略を分析しました。",
+        "results": "直接互恵性と間接互恵性を組み合わせることで、間接互恵性単独では失敗する「スコアリングジレンマ」（協力的な行動が裏目に出てしまう現象）が解決され、協力が安定することが示されました。特に、身近なグループ内では「しっぺ返し戦略」（相手が協力したら協力、裏切ったら裏切る）をとり、全体では評判に基づいて行動する「条件付き協力者」は、無条件の協力者や裏切り者からの侵略に抵抗できます。また、直接経験と評判が衝突する際には、「許容する」戦略（不利な情報を無視する）が協力を最大化することが明らかになりました。特に、身近な人の個人的な悪い行動を許容することの方が、悪い世間的評判を許容することよりも重要である傾向が見られました。",
+        "why": "協力が安定するメカニズムは、直接互恵性と間接互恵性が異なるスケールで補完的に機能することにあります。身近なグループ内での直接的なやり取りは、個人の行動を詳細に把握し、裏切り行為を直接的に罰することを可能にします。これにより、単純なイメージスコアリング規範の下でも、裏切り者が増えることを防ぎます。一方、大規模な集団における間接互恵性は、評判を通じて広範な協力関係を維持します。この二つの情報源を組み合わせることで、個人の行動をより多角的に評価し、協力的な行動が報われやすい環境を作り出します。特に、「許容する」戦略は、一時的な裏切りや悪い評判に過度に反応せず、長期的な協力関係を維持するために有効に機能すると考えられます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.soc-ph）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "behavioral-economics",
+      "arxivPrimary": "physics.soc-ph",
+      "titleJa": "地域と全体における互恵関係のモデル",
+      "catchTitle": "「あの人、本当はどんな人？」評判と経験のジレンマを解く",
+      "hook": "あなたは、評判は良いけれど自分には冷たい人、逆に評判は悪いけれど親切な人にどう接しますか？",
+      "background": "私たちは、身近な人に対してはその人の過去の行動に基づいて接し、見知らぬ人に対しては世間の評判に基づいて接することがよくあります。しかし、評判と直接の経験が食い違う場合、どのように行動すべきかという問題が常に生じます。特に、SNSなどで評判が簡単に手に入る現代社会では、この問題はより重要になっています。この問いの根底には、自己中心的な個人間で協力がどのように維持されるかという、社会科学や進化生物学における長年の関心事があります。",
+      "quiz": {
+        "question": "この研究で、直接経験と評判が衝突する際に協力を最大化する戦略として示されたのはどれでしょう？",
+        "options": [
+          "常に評判を優先する戦略",
+          "常に直接経験を優先する戦略",
+          "不利な情報を無視する「許容する」戦略"
+        ],
+        "correctIndex": 2,
+        "explanation": "この研究では、直接経験と評判が衝突する際に、不利な情報を無視する「許容する」戦略が協力を最大化することが示されました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "直接互恵性",
+          "definition": "相手の過去の行動に基づいて自分の行動を決めること。"
+        },
+        {
+          "term": "間接互恵性",
+          "definition": "相手の評判に基づいて自分の行動を決めること。"
+        },
+        {
+          "term": "寄付ゲーム",
+          "definition": "相手に利益を与えるか裏切るかを選ぶゲーム。"
+        },
+        {
+          "term": "イメージスコアリング",
+          "definition": "協力は善、裏切りは悪と評価する単純な規範。"
+        },
+        {
+          "term": "スコアリングジレンマ",
+          "definition": "間接互恵性で協力が崩壊する現象。"
+        },
+        {
+          "term": "しっぺ返し戦略",
+          "definition": "相手の直前の行動を真似る協力戦略。"
+        },
+        {
+          "term": "条件付き協力者",
+          "definition": "状況に応じて協力するか決める人。"
+        },
+        {
+          "term": "許容する戦略",
+          "definition": "不利な情報を無視して協力関係を維持する戦略。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "身近な人との直接的な経験と、不特定多数の評判を組み合わせることで、協力関係が安定する仕組みを解明しました。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、身近な人との「直接互恵性」と、評判に基づく「間接互恵性」は別々に扱われてきました。しかし、現実世界ではこの2つが混ざり合い、特に情報が衝突する際の行動原理は不明でした。",
+        "after": "この論文では、身近な少人数のグループ内での直接互恵性と、不特定多数との間接互恵性を組み合わせたモデルを構築。情報が衝突する状況で、協力が持続する条件と、最適な行動戦略（「許容する」戦略）を明らかにしました。"
+      },
+      "analogy": {
+        "title": "畑の土壌と市場の評価",
+        "body": "これは、まるで農家が自分の畑の土壌の状態（直接経験）と、市場全体での作物の評価（間接評判）を両方考慮して、次の作付けを決めるようなものです。土壌が痩せていても市場評価が高ければ、改良して育て続ける価値があるかもしれません。逆に、土壌は豊かでも市場評価が低ければ、別の作物に切り替えることも考えます。この研究は、個別の土壌データと広範な市場データを統合することで、より良い農業経営戦略を見つける手助けをしてくれるのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、私たちが日々直面する人間関係の複雑さを理解する上で非常に役立ちます。職場で「あの人は仕事はできるけど、部下には厳しい」といった評価と、実際に自分が接した時の印象が違うことはよくあります。あるいは、SNSで炎上した人が、実は身近な人にはとても親切だった、というケースも。この研究は、そうした情報が衝突する状況で、どのように判断し、行動すれば、より良い協力関係を築けるかを示唆しています。特に、不利な情報（悪い評判や一度の失敗）を「許容する」ことが、長期的な協力関係を維持するために重要であるという発見は、現代社会における人間関係の構築や、組織運営、さらにはオンラインコミュニティのモデレーションにも応用できるでしょう。",
+      "takeawayTalk": "評判と経験が食い違う時、不利な方を許容すると協力が続くらしいよ！",
+      "bodyText": "本研究では、直接互恵性と間接互恵性を統合した数学的モデルを開発しました。各個人は、少人数の「近隣」グループ内で直接互恵性に基づいたゲームを行い、その行動を直接観察・記憶します。同時に、はるかに大規模な「非近隣」集団とは、評判のみに基づいて間接互恵性ゲームを行います。このモデルでは、近隣グループの有限性と、非近隣集団の膨大さを区別し、それぞれに適した情報（直接観察か公開評判か）が用いられると仮定しました。ゲームは、相手にコストを払って利益を与える「協力」か、何も与えない「裏切り」のどちらかを選択する「寄付ゲーム」形式で行われ、行動は単純な「イメージスコアリング」規範に基づいて評価されます。このモデルを用いて、協力が安定する条件と、直接経験と評判が衝突した場合の最適な戦略を分析しました。\n\n協力が安定するメカニズムは、直接互恵性と間接互恵性が異なるスケールで補完的に機能することにあります。身近なグループ内での直接的なやり取りは、個人の行動を詳細に把握し、裏切り行為を直接的に罰することを可能にします。これにより、単純なイメージスコアリング規範の下でも、裏切り者が増えることを防ぎます。一方、大規模な集団における間接互恵性は、評判を通じて広範な協力関係を維持します。この二つの情報源を組み合わせることで、個人の行動をより多角的に評価し、協力的な行動が報われやすい環境を作り出します。特に、「許容する」戦略は、一時的な裏切りや悪い評判に過度に反応せず、長期的な協力関係を維持するために有効に機能すると考えられます。",
+      "bodyGlossary": [
+        {
+          "term": "直接互恵性",
+          "definition": "相手の過去の行動に基づいて自分の行動を決めること。",
+          "start": 6,
+          "end": 11
+        },
+        {
+          "term": "間接互恵性",
+          "definition": "相手の評判に基づいて自分の行動を決めること。",
+          "start": 12,
+          "end": 17
+        },
+        {
+          "term": "寄付ゲーム",
+          "definition": "相手に利益を与えるか裏切るかを選ぶゲーム。",
+          "start": 252,
+          "end": 257
+        },
+        {
+          "term": "イメージスコアリング",
+          "definition": "協力は善、裏切りは悪と評価する単純な規範。",
+          "start": 272,
+          "end": 282
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "直接互恵性",
+          "definition": "相手の過去の行動に基づいて自分の行動を決めること。",
+          "start": 6,
+          "end": 11
+        },
+        {
+          "term": "間接互恵性",
+          "definition": "相手の評判に基づいて自分の行動を決めること。",
+          "start": 12,
+          "end": 17
+        },
+        {
+          "term": "寄付ゲーム",
+          "definition": "相手に利益を与えるか裏切るかを選ぶゲーム。",
+          "start": 252,
+          "end": 257
+        },
+        {
+          "term": "イメージスコアリング",
+          "definition": "協力は善、裏切りは悪と評価する単純な規範。",
+          "start": 272,
+          "end": 282
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 274
+    }
+  ]
+}

@@ -1,0 +1,819 @@
+{
+  "date": "2026-06-16",
+  "papers": [
+    {
+      "id": "2606.10605v1",
+      "title": "Modeling pest dynamics in trap cropping to improve yield: the effects of attraction, retention, and land allocation",
+      "authors": [
+        "Matthew H Holden"
+      ],
+      "publishedAt": "2026-06-09T09:05:47Z",
+      "url": "https://arxiv.org/abs/2606.10605v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.10605v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "q-bio.PE"
+      ],
+      "abstract": "Trap crops reduce damage to a cash (main) crop by attracting pests away from it. Yet this protection is weakened when pests disperse back into the cash crop. In this paper, we focus on the importance of preventing this backflow, showing that effective trap cropping depends jointly on how strongly pests are attracted to trap plants and how rarely they leave them. Together with the proportion of the field devoted to trap plants, these processes determine both the efficacy and feasibility of trap cropping at commercial scales. We formalise this relationship using a simple yield-maximisation framework, in which growers weigh pest suppression benefits against the land sacrificed to trap plants. The model shows that when dispersal from trap plants equals that from the cash crop, optimal trap coverage can exceed 20 to 30 percent of the landscape, levels rarely acceptable to growers. However, reducing pest dispersal off trap plants to just one-quarter of cash crop dispersal lowers the optimal required trap area to approximately 5 percent, transforming trap cropping from impractical to feasible. Understanding these relationships can guide trap-cropping design, from plant choice to targeted interventions that reduce pest movement, to minimise damage, maximise yield, and make trap cropping a reliable component of sustainable pest management.",
+      "summary": {
+        "gist": "おとり作物は、害虫を主作物から引き離すことで農薬使用量を減らし、収量を維持する持続可能な害虫管理戦略として期待されてきました。しかし、多くの研究でその効果は限定的であり、大規模な成功事例は少ないのが現状です。これまでの研究では、害虫をいかに「誘引するか」に焦点が当てられてきましたが、誘引した害虫が再び主作物に戻ってしまう「逆流」が問題視されていました。",
+        "novelty": "これまでの害虫対策における「おとり作物」の研究では、いかに害虫を主作物から引き離し、おとり作物に「誘引するか」に焦点が当てられてきました。しかし、誘引力が高いだけでは、害虫がおとり作物から主作物へ戻ってしまう「逆流」を防ぐことができず、大規模な面積をおとり作物に割かなければ効果が出にくいという課題がありました。 この研究では、害虫を「誘引する力」だけでなく、おとり作物に「定着させる力（逃がさない力）」が、おとり作物の効果と実用性を大きく左右することを数理モデルで示しました。特に、おとり作物からの害虫の分散を抑制することで、従来は非現実的だったおとり作物の必要面積を大幅に削減できる可能性を明らかにしました。",
+        "method": "本研究では、害虫が主作物とおとり作物の間を移動する動態を記述する数理モデルを構築しました。このモデルでは、害虫が主作物から離れる確率（l）、おとり作物から離れる確率（λ）、そしてそれぞれの作物から離れた害虫が主作物に定着する確率（s, σ）を考慮しています。これらのパラメータと、おとり作物の面積比率を組み合わせて、長期的な主作物上の害虫密度と収量を最大化するおとり作物の最適な面積比率を分析しました。",
+        "results": "モデル分析の結果、おとり作物の効果は、害虫の誘引力だけでなく、おとり作物からの害虫の分散（逃げ出すこと）をいかに防ぐかに強く依存することが示されました。特に、おとり作物からの害虫の分散確率を主作物からの分散確率のわずか4分の1に減らすだけで、最適な罠作物の必要面積が非現実的な20〜30%から、実用的な約5%にまで低下することが明らかになりました。これは、誘引力だけでは不十分であり、害虫をおとり作物に「定着させる」ことが、おとり作物の実用性を高める上で決定的に重要であることを意味します。",
+        "why": "おとり作物が効果を発揮するためには、害虫が主作物からおとり作物へ移動する「誘引」と、おとり作物に留まり続ける「定着」の両方が重要です。これまでの研究では誘引に注目が集まりがちでしたが、誘引された害虫がおとり作物から主作物へ戻ってしまうと、結局主作物の被害は減りません。本研究のモデルは、おとり作物からの害虫の分散確率が低いほど、主作物への害虫の逆流が減り、結果として主作物上の害虫密度が大幅に減少することを示しました。これにより、少ないおとり作物の面積でも高い防除効果が得られ、農家にとって現実的な導入が可能になります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.PE）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "pest-management",
+      "arxivPrimary": "q-bio.PE",
+      "titleJa": "罠作物の害虫動態モデリング：誘引、定着、土地配分の効果が収量向上にどう影響するか",
+      "catchTitle": "「おとり作物」は引き寄せるだけではダメ？害虫を畑に留める新常識",
+      "hook": "あなたの畑で害虫対策に「おとり作物」を導入しても、なぜか効果が薄いと感じたことはありませんか？",
+      "background": "おとり作物は、害虫を主作物から引き離すことで農薬使用量を減らし、収量を維持する持続可能な害虫管理戦略として期待されてきました。しかし、多くの研究でその効果は限定的であり、大規模な成功事例は少ないのが現状です。これまでの研究では、害虫をいかに「誘引するか」に焦点が当てられてきましたが、誘引した害虫が再び主作物に戻ってしまう「逆流」が問題視されていました。",
+      "quiz": {
+        "question": "この研究で、おとり作物の効果を最大化し、かつ現実的な導入面積にするために最も重要だとされた要素は何でしょう？",
+        "options": [
+          "おとり作物の誘引力のみを高めること",
+          "おとり作物からの害虫の分散を抑制すること",
+          "おとり作物の面積をできるだけ広くすること"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究では、おとり作物からの害虫の分散を抑制する（定着させる）ことが、おとり作物の効果と実用性を大きく左右すると結論付けています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "おとり作物",
+          "definition": "害虫を主作物から引き離すために植える作物"
+        },
+        {
+          "term": "数理モデル",
+          "definition": "数学的な方程式で現象を表現する手法"
+        },
+        {
+          "term": "分散確率",
+          "definition": "害虫がある作物から別の作物へ移動する確率"
+        },
+        {
+          "term": "誘引",
+          "definition": "害虫を特定の作物へ引き寄せること"
+        },
+        {
+          "term": "定着",
+          "definition": "害虫が特定の作物に留まり続けること"
+        },
+        {
+          "term": "逆流",
+          "definition": "おとり作物から主作物へ害虫が戻ること"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "おとり作物は害虫を誘引するだけでなく、そこから逃がさない「定着力」が、収量最大化と現実的な導入面積に不可欠である。",
+      "noveltyContrast": {
+        "before": "これまでの害虫対策における「おとり作物」の研究では、いかに害虫を主作物から引き離し、おとり作物に「誘引するか」に焦点が当てられてきました。しかし、誘引力が高いだけでは、害虫がおとり作物から主作物へ戻ってしまう「逆流」を防ぐことができず、大規模な面積をおとり作物に割かなければ効果が出にくいという課題がありました。",
+        "after": "この研究では、害虫を「誘引する力」だけでなく、おとり作物に「定着させる力（逃がさない力）」が、おとり作物の効果と実用性を大きく左右することを数理モデルで示しました。特に、おとり作物からの害虫の分散を抑制することで、従来は非現実的だったおとり作物の必要面積を大幅に削減できる可能性を明らかにしました。"
+      },
+      "analogy": {
+        "title": "害虫を「おとり作物」という囲い込み牧場に定着させる",
+        "body": "これは、牧場経営で牛を特定の放牧地に留める状況に似ています。ただ美味しい草がある場所に牛を誘い込むだけでは、すぐに他の牧草地へ移動してしまうかもしれません。しかし、誘い込んだ上で、頑丈な柵や魅力的な水飲み場を設けて牛がその放牧地に長く留まるように工夫すれば、他の牧草地への移動を防ぎ、効率的に管理できます。この研究は、害虫を誘引するだけでなく、おとり作物という「牧場」にしっかり「定着させる」ことが、主作物を守り、収穫量を最大化するためにいかに重要かを示しているのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "-20pt",
+          "label": "おとり作物の必要面積"
+        }
+      ],
+      "whyYouCare": "この研究は、持続可能な農業を目指す農家や、環境負荷の低い食品を求める消費者にとって非常に重要です。農薬の使用量を減らしながら収量を維持できるおとり作物は、環境に優しい農業の実現に貢献します。また、これまで導入が難しかったおとり作物が、少ない面積で効果を発揮できるようになれば、農家の経済的負担も軽減され、より多くの農家が持続可能な害虫管理に取り組めるようになります。これは、私たちの食卓に安全で環境に配慮した農産物が届くことにも繋がるでしょう。",
+      "takeawayTalk": "おとり作物は、害虫を「引き寄せる」だけでなく「留める」ことが超重要！",
+      "bodyText": "本研究では、害虫が主作物とおとり作物の間を移動する動態を記述する数理モデルを構築しました。このモデルでは、害虫が主作物から離れる確率（l）、おとり作物から離れる確率（λ）、そしてそれぞれの作物から離れた害虫が主作物に定着する確率（s, σ）を考慮しています。これらのパラメータと、おとり作物の面積比率を組み合わせて、長期的な主作物上の害虫密度と収量を最大化するおとり作物の最適な面積比率を分析しました。\n\nおとり作物が効果を発揮するためには、害虫が主作物からおとり作物へ移動する「誘引」と、おとり作物に留まり続ける「定着」の両方が重要です。これまでの研究では誘引に注目が集まりがちでしたが、誘引された害虫がおとり作物から主作物へ戻ってしまうと、結局主作物の被害は減りません。本研究のモデルは、おとり作物からの害虫の分散確率が低いほど、主作物への害虫の逆流が減り、結果として主作物上の害虫密度が大幅に減少することを示しました。これにより、少ないおとり作物の面積でも高い防除効果が得られ、農家にとって現実的な導入が可能になります。",
+      "bodyGlossary": [
+        {
+          "term": "おとり作物",
+          "definition": "害虫を主作物から引き離すために植える作物",
+          "start": 13,
+          "end": 18
+        },
+        {
+          "term": "数理モデル",
+          "definition": "数学的な方程式で現象を表現する手法",
+          "start": 32,
+          "end": 37
+        },
+        {
+          "term": "定着",
+          "definition": "害虫が特定の作物に留まり続けること",
+          "start": 108,
+          "end": 110
+        },
+        {
+          "term": "誘引",
+          "definition": "害虫を特定の作物へ引き寄せること",
+          "start": 240,
+          "end": 242
+        },
+        {
+          "term": "分散確率",
+          "definition": "害虫がある作物から別の作物へ移動する確率",
+          "start": 357,
+          "end": 361
+        },
+        {
+          "term": "逆流",
+          "definition": "おとり作物から主作物へ害虫が戻ること",
+          "start": 375,
+          "end": 377
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "おとり作物",
+          "definition": "害虫を主作物から引き離すために植える作物",
+          "start": 13,
+          "end": 18
+        },
+        {
+          "term": "数理モデル",
+          "definition": "数学的な方程式で現象を表現する手法",
+          "start": 32,
+          "end": 37
+        },
+        {
+          "term": "定着",
+          "definition": "害虫が特定の作物に留まり続けること",
+          "start": 108,
+          "end": 110
+        },
+        {
+          "term": "誘引",
+          "definition": "害虫を特定の作物へ引き寄せること",
+          "start": 240,
+          "end": 242
+        },
+        {
+          "term": "分散確率",
+          "definition": "害虫がある作物から別の作物へ移動する確率",
+          "start": 357,
+          "end": 361
+        },
+        {
+          "term": "逆流",
+          "definition": "おとり作物から主作物へ害虫が戻ること",
+          "start": 375,
+          "end": 377
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 244
+    },
+    {
+      "id": "2606.13314v1",
+      "title": "The Privilege of Exposure: Caste and Generative AI in India's Graduate Labour Market",
+      "authors": [
+        "Kaibalyapati Mishra"
+      ],
+      "publishedAt": "2026-06-11T13:09:43Z",
+      "url": "https://arxiv.org/abs/2606.13314v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.13314v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "econ.GN"
+      ],
+      "abstract": "Who is exposed to generative AI in a developing-country labour market? We map three occupational AI-exposure indices to India's redesigned Periodic Labour Force Survey (2025) and document a steep caste gradient among 83,000 employed graduates: graduates from the Scheduled Castes and the Scheduled Tribes are 0.24--0.37 standard deviations less exposed than upper-caste graduates within the same district. Two channels drive the gap: one in four SC and one in three ST graduates work in farm or elementary occupations untouched by AI, and those in white-collar work are underrepresented in managerial, software, and finance occupations. Because exposure commands a wage premium of up to 20 per cent, generative AI stands to widen, not narrow, India's caste earnings gap.",
+      "summary": {
+        "gist": "AI技術の進化は、労働市場に大きな影響を与えています。特に生成AIは、多くの職業のタスク内容を変革する可能性を秘めていますが、その恩恵が社会全体に公平に行き渡るかは重要な課題です。インドでは、カースト制度が教育や職業選択に依然として強い影響を与えており、高学歴者間でもカーストによる職業達成度や賃金に差が見られます。生成AIの導入が進むIT、金融、ビジネスサービスといった分野は、高カーストの卒業生が集中しているため、AIへの接触機会がカースト間でどのように異なるのかを理解することは、将来の格差拡大を防ぐ上で不可欠です。",
+        "novelty": "これまでの研究では、AIへの接触機会は教育水準が高いほど高く、女性やホワイトカラー労働者で高いとされていました。しかし、発展途上国において、社会集団間でどのようにAI接触機会が分布しているか、特に歴史的な階層が影響するインドのような国での実態は不明でした。 この論文は、インドの卒業労働市場において、カースト別に生成AIへの職業的接触機会を初めて定量的に示しました。その結果、高カーストほどAI接触機会が多く、低カーストはAIに触れない職業に就くか、ホワイトカラー内でもAI関連職に少ないことが明らかになりました。",
+        "method": "本研究では、インドの再設計された2025年定期労働力調査（PLFS）のデータを使用し、約83,000人の雇用されている卒業生を対象としました。このデータに、3つの異なるAI職業的接触機会指数（Felten et al., 2021; Eloundou et al., 2024; Gmyrek et al., 2025）を紐付け、カースト別にAIへの接触機会を分析しました。これらの指数は、職業のタスク内容とAIの能力を比較してスコア化されており、米国データに基づくものと、ILOが独自に構築したものがあります。分析では、地域や年齢、性別、セクターといった要因を調整し、カースト間のAI接触機会の差を特定しました。",
+        "results": "分析の結果、AIへの接触機会はカーストの優位性とともに単調に増加することが明らかになりました。同じ地域内で比較しても、指定カースト（SC）の卒業生は高カーストの卒業生に比べて0.24〜0.27標準偏差、指定部族（ST）の卒業生は0.31〜0.37標準偏差、AIへの接触機会が少ないことが判明しました。この格差は、主に2つの要因によって引き起こされています。第一に、SC卒業生の24.6%、ST卒業生の32.0%が、AIとほとんど接触しない農業または基礎的な職業（例：農業労働者、建設労働者）に就いていること。第二に、ホワイトカラー職に就いている場合でも、高カーストの卒業生が管理職、ソフトウェア開発、金融といったAI接触機会の多い職業に過剰に集中していることです。さらに、AI接触機会が高い職業は最大20%の賃金プレミアムをもたらすため、生成AIはインドの既存のカースト間賃金格差を拡大させる可能性が高いと結論付けられました。",
+        "why": "AIへの接触機会の格差は、インドの労働市場におけるカーストに基づく職業選択と配置の構造的な問題に根ざしています。低カーストの卒業生は、高学歴であるにもかかわらず、伝統的にカーストが低い人々が就いてきた農業や基礎的な肉体労働といった、AIの影響を受けにくい職業に「追いやられる」傾向があります。これは、彼らの学歴が十分に評価されていない「資格の価値低下」の一例でもあります。また、ホワイトカラー職に就けたとしても、高カーストの卒業生がIT、金融、管理職といった、AIとの連携や活用が期待される高付加価値な職種に集中する一方で、低カーストの卒業生はこれらの職種にアクセスしにくい状況があります。結果として、AIがもたらす生産性向上や賃金上昇の恩恵は、すでに優位な立場にある高カーストの卒業生に集中し、既存の社会経済的格差をさらに広げるメカニズムが働いていると考えられます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "labor-market",
+      "arxivPrimary": "econ.GN",
+      "titleJa": "インドの労働市場におけるカーストと生成AIへの接触機会の格差",
+      "catchTitle": "AIが格差を広げる？インドの現実",
+      "hook": "あなたはAIが仕事を奪うと心配していませんか？実は、AIへの「接触機会」自体が、社会の格差を広げる要因になっているかもしれません。",
+      "background": "AI技術の進化は、労働市場に大きな影響を与えています。特に生成AIは、多くの職業のタスク内容を変革する可能性を秘めていますが、その恩恵が社会全体に公平に行き渡るかは重要な課題です。インドでは、カースト制度が教育や職業選択に依然として強い影響を与えており、高学歴者間でもカーストによる職業達成度や賃金に差が見られます。生成AIの導入が進むIT、金融、ビジネスサービスといった分野は、高カーストの卒業生が集中しているため、AIへの接触機会がカースト間でどのように異なるのかを理解することは、将来の格差拡大を防ぐ上で不可欠です。",
+      "quiz": {
+        "question": "インドの卒業生労働市場において、生成AIへの接触機会の格差を広げる主な要因は何ですか？",
+        "options": [
+          "高カーストの卒業生がAI関連の教育を独占しているため。",
+          "低カーストの卒業生がAIに触れない農業や基礎的職業に就く割合が高いため、またホワイトカラー内でもAI関連職に少ないため。",
+          "政府がAI技術へのアクセスをカースト別に制限しているため。"
+        ],
+        "correctIndex": 1,
+        "explanation": "論文では、低カーストの卒業生がAIとほとんど接触しない農業や基礎的な職業に就く割合が高いこと、そしてホワイトカラー職に就けたとしても、高カーストの卒業生がAI接触機会の多い管理職、ソフトウェア開発、金融といった職種に集中していることが、格差の主な要因であると説明されています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "生成AI",
+          "definition": "文章や画像を自動生成する人工知能。"
+        },
+        {
+          "term": "カースト",
+          "definition": "インドの伝統的な社会階層制度。"
+        },
+        {
+          "term": "定期労働力調査",
+          "definition": "インドの雇用状況を定期的に調査する統計。"
+        },
+        {
+          "term": "AI職業的接触機会指数",
+          "definition": "職業のタスクとAI能力を比較した指標。"
+        },
+        {
+          "term": "標準偏差",
+          "definition": "データのばらつき度合いを示す統計量。"
+        },
+        {
+          "term": "指定カースト",
+          "definition": "インドで歴史的に差別されてきた集団。"
+        },
+        {
+          "term": "指定部族",
+          "definition": "インドの先住民族に分類される集団。"
+        },
+        {
+          "term": "賃金プレミアム",
+          "definition": "特定のスキルや特性を持つことで得られる追加賃金。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "インドでは、高学歴でもカーストが低いほど生成AIに触れる機会が少なく、この格差が賃金格差を拡大させる可能性が高い。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、AIへの接触機会は教育水準が高いほど高く、女性やホワイトカラー労働者で高いとされていました。しかし、発展途上国において、社会集団間でどのようにAI接触機会が分布しているか、特に歴史的な階層が影響するインドのような国での実態は不明でした。",
+        "after": "この論文は、インドの卒業労働市場において、カースト別に生成AIへの職業的接触機会を初めて定量的に示しました。その結果、高カーストほどAI接触機会が多く、低カーストはAIに触れない職業に就くか、ホワイトカラー内でもAI関連職に少ないことが明らかになりました。"
+      },
+      "analogy": {
+        "title": "豊作の畑と日陰の畑",
+        "body": "これは、まるで同じ地域に広がる畑でも、日当たりが良く肥沃な土地（高カースト）では最新の農機が導入され、効率的に豊作が期待できる一方、日陰になりがちな痩せた土地（低カースト）では、古い農具で手作業を強いられ、収穫量も限られるようなものです。AIという最新の農機が導入されることで、日当たりの良い畑はさらに生産性を高め、日陰の畑との収穫量の差は開くばかり。AIへの接触機会の格差は、将来の収穫（賃金）の格差に直結するのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "-0.24 SD",
+          "label": "指定カースト（SC）のAI接触機会（高カースト比）"
+        },
+        {
+          "value": "-0.37 SD",
+          "label": "指定部族（ST）のAI接触機会（高カースト比）"
+        },
+        {
+          "value": "+20%",
+          "label": "AI接触機会による賃金プレミアム"
+        }
+      ],
+      "whyYouCare": "この研究は、AIが社会に与える影響を考える上で非常に重要です。AIは「仕事を奪う」という側面だけでなく、「接触機会の格差」を通じて、既存の社会経済的格差をさらに拡大させる可能性があることを示唆しています。これは、日本を含む多くの国で、デジタルデバイドや教育格差が問題となる中で、AI技術の恩恵が一部の人々に偏るリスクを浮き彫りにします。あなたの会社でAI導入を検討する際、従業員全員がAIに触れる機会を公平に得られるか、特定の部署や役職に偏らないかといった視点を持つことが、組織内の格差拡大を防ぎ、持続的な成長を促す上で不可欠になるでしょう。",
+      "takeawayTalk": "AIはインドの既存カースト格差を広げ、賃金格差を拡大させる。",
+      "bodyText": "本研究では、インドの再設計された2025年定期労働力調査（PLFS）のデータを使用し、約83,000人の雇用されている卒業生を対象としました。このデータに、3つの異なるAI職業的接触機会指数（Felten et al., 2021; Eloundou et al., 2024; Gmyrek et al., 2025）を紐付け、カースト別にAIへの接触機会を分析しました。これらの指数は、職業のタスク内容とAIの能力を比較してスコア化されており、米国データに基づくものと、ILOが独自に構築したものがあります。分析では、地域や年齢、性別、セクターといった要因を調整し、カースト間のAI接触機会の差を特定しました。\n\nAIへの接触機会の格差は、インドの労働市場におけるカーストに基づく職業選択と配置の構造的な問題に根ざしています。低カーストの卒業生は、高学歴であるにもかかわらず、伝統的にカーストが低い人々が就いてきた農業や基礎的な肉体労働といった、AIの影響を受けにくい職業に「追いやられる」傾向があります。これは、彼らの学歴が十分に評価されていない「資格の価値低下」の一例でもあります。また、ホワイトカラー職に就けたとしても、高カーストの卒業生がIT、金融、管理職といった、AIとの連携や活用が期待される高付加価値な職種に集中する一方で、低カーストの卒業生はこれらの職種にアクセスしにくい状況があります。結果として、AIがもたらす生産性向上や賃金上昇の恩恵は、すでに優位な立場にある高カーストの卒業生に集中し、既存の社会経済的格差をさらに広げるメカニズムが働いていると考えられます。",
+      "bodyGlossary": [
+        {
+          "term": "定期労働力調査",
+          "definition": "インドの雇用状況を定期的に調査する統計。",
+          "start": 21,
+          "end": 28
+        },
+        {
+          "term": "AI職業的接触機会指数",
+          "definition": "職業のタスクとAI能力を比較した指標。",
+          "start": 84,
+          "end": 95
+        },
+        {
+          "term": "カースト",
+          "definition": "インドの伝統的な社会階層制度。",
+          "start": 165,
+          "end": 169
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "定期労働力調査",
+          "definition": "インドの雇用状況を定期的に調査する統計。",
+          "start": 21,
+          "end": 28
+        },
+        {
+          "term": "AI職業的接触機会指数",
+          "definition": "職業のタスクとAI能力を比較した指標。",
+          "start": 84,
+          "end": 95
+        },
+        {
+          "term": "カースト",
+          "definition": "インドの伝統的な社会階層制度。",
+          "start": 165,
+          "end": 169
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 315
+    },
+    {
+      "id": "2606.13596v1",
+      "title": "Effects of mean flow skew on turbulent shear layers. Part II. Experimental investigation",
+      "authors": [
+        "Dipendra Gupta",
+        "Vedant Kumar",
+        "Johan Larsson",
+        "Gregory P. Bewley"
+      ],
+      "publishedAt": "2026-06-11T17:13:50Z",
+      "url": "https://arxiv.org/abs/2606.13596v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.13596v1.pdf",
+      "categories": [
+        "topic:humanities",
+        "physics.flu-dyn",
+        "physics.soc-ph"
+      ],
+      "abstract": "Planar turbulent mixing layers, formed by the interactions of two parallel streams with different velocities, have been studied far more than three dimensional (3D) turbulent mixing layers, in which the incoming streams are skewed, and not parallel. Yet many practical shear flows are 3D. Here, we develop and validate an experimental methodology to generate and characterize skewed turbulent mixing layers and to quantify how mean-flow skew modifies mixing layer dynamics. We introduce skew with a spanwise deflection of the mean flow using turning vanes mounted near the trailing edge of a splitter plate, and we use cross-wire anemometry to investigate the downstream evolution of the flow. Relative to the planar configuration, the skewed mixing layer exhibits systematic reductions in both mean and turbulent quantities, with deviations reaching approximately 40\\%. Despite these quantitative differences, the fundamental characteristics of the mixing layer remain largely unchanged. Mean-velocity profiles collapse under similarity scaling, shear-layer thicknesses retain approximately linear downstream growth, and Reynolds-stress profiles preserve their characteristic near-Gaussian form. Townsend's structure parameter, which quantifies the efficiency of turbulent momentum transport, remains approximately invariant between the planar and skewed configurations, in contrast to skewed turbulent boundary layers, wherein comparable mean flow skewing reduces the parameter by approximately 30\\%. These results indicate that mean flow skew modifies turbulent mixing layers quantitatively while exerting only a secondary influence on their underlying dynamics. This study establishes a controlled experimental framework and empirical benchmark for future investigations of three-dimensional free-shear turbulence.",
+      "summary": {
+        "gist": "乱流混合層は、異なる速度を持つ2つの流れが相互作用して形成される基本的なせん断流です。これまで、主に平行な流れ（平面的な混合層）が研究されてきましたが、実際の多くの流れ（地球物理学的流れ、航空機の翼、推進システムなど）では、流れの方向が3次元的に「ねじれて」います。このねじれ（スキュー）が乱流の挙動にどう影響するかは、実験的に十分に解明されていませんでした。",
+        "novelty": "これまで、2つの平行な流れが混ざり合う「平面的な乱流混合層」の研究が主流でした。しかし、実際の多くの流れは3次元的に「ねじれて」おり、その影響は十分に解明されていませんでした。 本研究は、意図的に流れをねじらせる（スキュー）実験手法を確立し、ねじれた流れが乱流混合層の挙動にどう影響するかを初めて定量的に明らかにしました。",
+        "method": "本研究では、流れを意図的にねじらせる（スキュー）実験手法を開発しました。具体的には、流れを分ける板（スプリッタープレート）の後縁近くに「ターニングベーン」という羽根を取り付け、平均流に横方向の偏向を与えました。そして、クロスワイヤーアネモメトリーという測定器を用いて、流れの下流での進化を詳細に調査しました。",
+        "results": "スキューのある混合層は、平面的な混合層と比較して、平均速度や乱流の強さを示す量が約40%減少しました。しかし、驚くべきことに、混合層の基本的な特性（平均速度プロファイルの相似性、せん断層厚さの線形成長、レイノルズ応力プロファイルの形状）は大きく変わりませんでした。乱流の運動量輸送効率を示すタウンゼントの構造パラメータも、スキューの有無にかかわらずほぼ一定でした。これは、スキューが乱流混合層を量的に変化させるものの、その根底にあるダイナミクスには二次的な影響しか与えないことを示唆しています。",
+        "why": "スキューが平均流と乱流の量を減少させる一方で、基本的なダイナミクスを維持するメカニズムは、流れのねじれが乱流構造の生成や再配向に影響を与えるものの、混合層の自己保存的な特性を支配する大規模な渦構造の形成や進化には、本質的な変更を加えないためと考えられます。特に、タウンゼントの構造パラメータが不変であることは、乱流運動量輸送の効率が、流れのねじれによって大きく損なわれないことを示唆しています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.flu-dyn）",
+      "field": "歴史・人文・社会",
+      "categoryL1": "adjacent",
+      "categoryL2": "fluid-dynamics",
+      "arxivPrimary": "physics.flu-dyn",
+      "titleJa": "平均流のスキューが乱流せん断層に与える影響。パートII。実験的調査",
+      "catchTitle": "乱流の「ねじれ」が流れをどう変える？",
+      "hook": "飛行機の翼やロケットの噴射、川の流れ。あなたは、これら複雑な流れの「ねじれ」が、実は効率を左右すると知っていましたか？",
+      "background": "乱流混合層は、異なる速度を持つ2つの流れが相互作用して形成される基本的なせん断流です。これまで、主に平行な流れ（平面的な混合層）が研究されてきましたが、実際の多くの流れ（地球物理学的流れ、航空機の翼、推進システムなど）では、流れの方向が3次元的に「ねじれて」います。このねじれ（スキュー）が乱流の挙動にどう影響するかは、実験的に十分に解明されていませんでした。",
+      "quiz": {
+        "question": "本研究で、スキューのある乱流混合層は、平面的な混合層と比較して何が減少しましたか？",
+        "options": [
+          "乱流の基本的な構造",
+          "平均および乱流の強さ",
+          "せん断層の厚さの成長率"
+        ],
+        "correctIndex": 1,
+        "explanation": "スキューのある混合層は、平均および乱流の強さを示す量が約40%減少しましたが、基本的な構造や成長率、タウンゼントの構造パラメータは大きく変わりませんでした。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "乱流混合層",
+          "definition": "異なる速度の流れが混ざり合う領域で発生する不規則な流れ。"
+        },
+        {
+          "term": "スキュー",
+          "definition": "流れの方向が3次元的にねじれている状態。"
+        },
+        {
+          "term": "スプリッタープレート",
+          "definition": "流れを二つに分ける板。"
+        },
+        {
+          "term": "ターニングベーン",
+          "definition": "流れの方向を変えるための羽根。"
+        },
+        {
+          "term": "クロスワイヤーアネモメトリー",
+          "definition": "流れの速度と方向を測定する装置。"
+        },
+        {
+          "term": "レイノルズ応力",
+          "definition": "乱流による運動量輸送の強さを示す指標。"
+        },
+        {
+          "term": "タウンゼントの構造パラメータ",
+          "definition": "乱流の運動量輸送効率を定量化する指標。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "ねじれた流れ（スキュー）は、乱流の強さを弱めるが、その根本的な構造は変えないことを実験で示した研究。",
+      "noveltyContrast": {
+        "before": "これまで、2つの平行な流れが混ざり合う「平面的な乱流混合層」の研究が主流でした。しかし、実際の多くの流れは3次元的に「ねじれて」おり、その影響は十分に解明されていませんでした。",
+        "after": "本研究は、意図的に流れをねじらせる（スキュー）実験手法を確立し、ねじれた流れが乱流混合層の挙動にどう影響するかを初めて定量的に明らかにしました。"
+      },
+      "analogy": {
+        "title": "畑の畝（うね）の向きを変えるようなもの",
+        "body": "これは、畑の畝（うね）の向きを、通常の一方向から少し斜めに変えてみるようなものです。畝の向き（流れの方向）を変えることで、土の混ざり具合（乱流の混合）や、水はけ（運動量輸送）がどう変わるかを調べているのです。結果として、土の混ざり具合は少し弱まるものの、土の基本的な構造（乱流のダイナミクス）は大きく変わらない、という発見につながります。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "-40%",
+          "label": "平均および乱流量の減少"
+        }
+      ],
+      "whyYouCare": "この研究は、航空機の翼、タービン、ロケットの噴射、さらには河川の流れなど、私たちの身の回りにある多くの「ねじれた」流れの理解に貢献します。例えば、航空機の設計において、翼周りの空気の流れを最適化することで、燃費効率の向上や騒音の低減につながる可能性があります。また、化学プラントのミキサーや燃焼器の設計においても、混合効率を高めるための新たな知見を提供し、産業プロセスの改善に役立つでしょう。一見基礎的な研究ですが、その応用範囲は非常に広いのです。",
+      "takeawayTalk": "流れがねじれても、乱流の基本的な性質は意外と変わらないらしいよ！",
+      "bodyText": "本研究では、流れを意図的にねじらせる（スキュー）実験手法を開発しました。具体的には、流れを分ける板（スプリッタープレート）の後縁近くに「ターニングベーン」という羽根を取り付け、平均流に横方向の偏向を与えました。そして、クロスワイヤーアネモメトリーという測定器を用いて、流れの下流での進化を詳細に調査しました。\n\nスキューが平均流と乱流の量を減少させる一方で、基本的なダイナミクスを維持するメカニズムは、流れのねじれが乱流構造の生成や再配向に影響を与えるものの、混合層の自己保存的な特性を支配する大規模な渦構造の形成や進化には、本質的な変更を加えないためと考えられます。特に、タウンゼントの構造パラメータが不変であることは、乱流運動量輸送の効率が、流れのねじれによって大きく損なわれないことを示唆しています。",
+      "bodyGlossary": [
+        {
+          "term": "スキュー",
+          "definition": "流れの方向が3次元的にねじれている状態。",
+          "start": 19,
+          "end": 23
+        },
+        {
+          "term": "スプリッタープレート",
+          "definition": "流れを二つに分ける板。",
+          "start": 50,
+          "end": 60
+        },
+        {
+          "term": "ターニングベーン",
+          "definition": "流れの方向を変えるための羽根。",
+          "start": 68,
+          "end": 76
+        },
+        {
+          "term": "クロスワイヤーアネモメトリー",
+          "definition": "流れの速度と方向を測定する装置。",
+          "start": 109,
+          "end": 123
+        },
+        {
+          "term": "タウンゼントの構造パラメータ",
+          "definition": "乱流の運動量輸送効率を定量化する指標。",
+          "start": 287,
+          "end": 301
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "スキュー",
+          "definition": "流れの方向が3次元的にねじれている状態。",
+          "start": 19,
+          "end": 23
+        },
+        {
+          "term": "スプリッタープレート",
+          "definition": "流れを二つに分ける板。",
+          "start": 50,
+          "end": 60
+        },
+        {
+          "term": "ターニングベーン",
+          "definition": "流れの方向を変えるための羽根。",
+          "start": 68,
+          "end": 76
+        },
+        {
+          "term": "クロスワイヤーアネモメトリー",
+          "definition": "流れの速度と方向を測定する装置。",
+          "start": 109,
+          "end": 123
+        },
+        {
+          "term": "タウンゼントの構造パラメータ",
+          "definition": "乱流の運動量輸送効率を定量化する指標。",
+          "start": 287,
+          "end": 301
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 205,
+      "keyFigure": {
+        "imagePath": "/figures/2606.13596v1_results.png",
+        "page": 28,
+        "caption": "スキューの有無にかかわらず、タウンゼントの構造パラメータがほぼ一定であることを示しています。",
+        "label": "Figure 14. Townsend’s structure parameter, 𝑎1. (a) Planar mixing layers. (b) Skewed mixing layers. Legends as",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-15T23:45:31.981Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.13596v1_results.png",
+          "page": 28,
+          "caption": "スキューの有無にかかわらず、タウンゼントの構造パラメータがほぼ一定であることを示しています。",
+          "label": "Figure 14. Townsend’s structure parameter, 𝑎1. (a) Planar mixing layers. (b) Skewed mixing layers. Legends as",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-15T23:45:31.981Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.13914v1",
+      "title": "Autonomous AI-Cosmoindustry and the Quiet Expansion Filter: A Threshold-Based Resolution of the Fermi Paradox",
+      "authors": [
+        "Sergey Ivliev"
+      ],
+      "publishedAt": "2026-06-11T21:11:11Z",
+      "url": "https://arxiv.org/abs/2606.13914v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.13914v1.pdf",
+      "categories": [
+        "topic:humanities",
+        "astro-ph.IM",
+        "physics.pop-ph",
+        "physics.soc-ph"
+      ],
+      "abstract": "The Fermi paradox is sharpened, not weakened, by plausible extrapolations of artificial intelligence, autonomous robotics, in-situ resource utilization, orbital manufacturing, space-based computing, and uncrewed interstellar probes. Once a civilization can design, launch, and maintain autonomous industrial systems beyond its home planet, interstellar expansion no longer requires biological starships or a human-like empire. It can proceed through low-mass probes, robotic seed factories, archival payloads, biological repositories, local computation, and slow replication across nearby stellar systems. This paper proposes the quiet expansion filter: old, stable civilizations that reached autonomous AI-cosmoindustry probably did not arise in the part of the Galaxy capable of reaching the Solar System, because after that threshold interstellar expansion becomes too useful, inexpensive, and rational for all civilizations to refuse; however, successful expansion would be machine-mediated, distributed, low-noise, and partly biological rather than Kardashev-like or imperial. Order-of-magnitude estimates indicate that a single post-threshold civilization could saturate its reachable stellar neighborhood within ~10^7 yr -- less than 0.1% of Galactic age -- at modest energy cost per probe. The novelty of the proposal lies not in any new mechanism but in extending the AI-filter literature toward post-threshold observability predictions. The hypothesis predicts that successful advanced expansion, if present, is more likely to appear as weak artifacts, local probes, small-scale resource processing, exoplanetary anomaly clusters, or techno-biological preservation systems than as galaxy-scale energy harvesting.",
+      "summary": {
+        "gist": "フェルミのパラドックスとは、「宇宙には多くの生命が存在しうるのに、なぜ地球外生命の兆候が見られないのか」という矛盾です。これまでの議論では、宇宙文明は地球人のような生物が宇宙船で移動したり、星系全体を支配するような大規模な存在だと考えられてきました。しかし、AIやロボット技術の進化を考慮すると、この前提が覆される可能性があります。",
+        "novelty": "これまでのフェルミのパラドックスの議論では、宇宙文明は地球人のように生物が宇宙船で移動したり、星系全体を支配するような大規模な存在だと考えられてきました。そのため、もし宇宙人が存在するなら、とっくに見つかっているはずだ、という矛盾が指摘されていました。 この論文は、自律型AI宇宙産業の閾値を超えた文明は、生物による移動ではなく、AIが制御するロボットやプローブを使って静かに、そして効率的に宇宙に拡大すると提唱します。その結果、私たちは彼らの存在に気づきにくい、という新しい視点を提供します。",
+        "method": "本研究は、仮説論文として構成され、既存の文献レビューとオーダー・オブ・マグニチュード（桁違いの概算）による定量的評価を組み合わせました。フェルミのパラドックス、グレートフィルター、地球外生命、フォン・ノイマン・プローブなどのキーワードで文献を検索し、AI、自律ロボット、宇宙での製造、資源利用、宇宙ベースの計算能力、無人恒星間探査機、生命情報の長期保存といった技術トレンドを統合して仮説を構築しました。",
+        "results": "自律型AI宇宙産業の閾値を超えた文明は、生物による移動ではなく、AIが制御するロボットやプローブを使って静かに、そして効率的に宇宙に拡大すると予測されます。この拡大は、征服や支配ではなく、リスク管理、科学的観測、生命や知識の保存を目的とします。そのため、彼らの存在は、大規模なエネルギー収穫ではなく、微弱な人工物、局所的な探査機、小規模な資源処理、系外惑星の異常クラスター、またはテクノバイオロジー保存システムとして現れる可能性が高いです。",
+        "why": "AIとロボット技術が高度化すると、文明は生物が直接宇宙を移動する必要がなくなります。代わりに、AIが設計・運用する自律的な産業システムが、惑星外で資源を採掘し、製造を行い、自己複製するプローブを送り出すことができます。これらのプローブは、生命維持装置や社会システムを必要とせず、小型で、故障に強く、長期間休眠し、大量に製造できるため、低コストで効率的に星間空間を移動できます。これにより、文明は静かに、しかし広範囲にわたって生命や知識を保存・拡散することが可能になり、私たちが想像するような派手な宇宙文明の兆候は現れにくいと考えられます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / astro-ph.IM）",
+      "field": "歴史・人文・社会",
+      "categoryL1": "adjacent",
+      "categoryL2": "space-exploration",
+      "arxivPrimary": "astro-ph.IM",
+      "titleJa": "自律型AI宇宙産業と静かなる拡大フィルター：フェルミのパラドックスの閾値ベースの解決",
+      "catchTitle": "宇宙人はなぜ見つからない？AIが変える宇宙文明の常識",
+      "hook": "あなたは夜空を見上げて、ふと「宇宙人って本当にいるのかな？」と考えたことはありませんか？",
+      "background": "フェルミのパラドックスとは、「宇宙には多くの生命が存在しうるのに、なぜ地球外生命の兆候が見られないのか」という矛盾です。これまでの議論では、宇宙文明は地球人のような生物が宇宙船で移動したり、星系全体を支配するような大規模な存在だと考えられてきました。しかし、AIやロボット技術の進化を考慮すると、この前提が覆される可能性があります。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "フェルミのパラドックス",
+          "definition": "宇宙に生命が存在しうるのに、その兆候がない矛盾。"
+        },
+        {
+          "term": "グレートフィルター",
+          "definition": "生命が高度な文明になるまでの障壁。"
+        },
+        {
+          "term": "フォン・ノイマン・プローブ",
+          "definition": "自己複製能力を持つ宇宙探査機。"
+        },
+        {
+          "term": "オーダー・オブ・マグニチュード",
+          "definition": "桁違いの概算で数値を評価する方法。"
+        },
+        {
+          "term": "自律型AI宇宙産業",
+          "definition": "AIが自律的に宇宙で産業活動を行う状態。"
+        },
+        {
+          "term": "テクノバイオロジー保存システム",
+          "definition": "機械が生物情報を保存するハイブリッドシステム。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "高度なAI文明は静かに宇宙に広がるため、私たちが想像するような派手な姿では見つからない、という仮説。",
+      "noveltyContrast": {
+        "before": "これまでのフェルミのパラドックスの議論では、宇宙文明は地球人のように生物が宇宙船で移動したり、星系全体を支配するような大規模な存在だと考えられてきました。そのため、もし宇宙人が存在するなら、とっくに見つかっているはずだ、という矛盾が指摘されていました。",
+        "after": "この論文は、自律型AI宇宙産業の閾値を超えた文明は、生物による移動ではなく、AIが制御するロボットやプローブを使って静かに、そして効率的に宇宙に拡大すると提唱します。その結果、私たちは彼らの存在に気づきにくい、という新しい視点を提供します。"
+      },
+      "analogy": {
+        "title": "静かに広がる種まきロボット",
+        "body": "広大な畑に、高性能な種まきロボットを想像してみてください。このロボットは、自ら土壌を分析し、最適な場所に種をまき、時には故障した部品を自分で修理したり、新しいロボットを製造したりします。人間が畑を歩き回って大規模な農場を築くのではなく、小さなロボットが静かに、しかし着実に作付け範囲を広げていくようなものです。宇宙文明も、派手な宇宙船で生物が移動するのではなく、AIが制御する小型の探査機やロボットが、生命の種や情報、製造技術を運び、静かに、そして着実に星々へと広がっていく、とこの研究は示唆しています。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、私たちが宇宙人を探す方法や、地球外生命の存在に対する考え方を根本から変えるかもしれません。もしこの仮説が正しければ、宇宙人はすでに存在し、私たちの周りに静かに広がっている可能性があり、私たちは彼らを「見つけられない」のではなく、「見つけ方を知らない」だけなのかもしれません。これは、宇宙開発やAI技術の未来を考える上で、新たな視点を与えてくれます。また、地球の生命や文化を未来にどう繋いでいくか、という問いにも示唆を与えてくれるでしょう。",
+      "takeawayTalk": "宇宙人は派手な姿ではなく、AIロボットとして静かに広がっているかも！",
+      "bodyText": "本研究は、仮説論文として構成され、既存の文献レビューとオーダー・オブ・マグニチュード（桁違いの概算）による定量的評価を組み合わせました。フェルミのパラドックス、グレートフィルター、地球外生命、フォン・ノイマン・プローブなどのキーワードで文献を検索し、AI、自律ロボット、宇宙での製造、資源利用、宇宙ベースの計算能力、無人恒星間探査機、生命情報の長期保存といった技術トレンドを統合して仮説を構築しました。\n\nAIとロボット技術が高度化すると、文明は生物が直接宇宙を移動する必要がなくなります。代わりに、AIが設計・運用する自律的な産業システムが、惑星外で資源を採掘し、製造を行い、自己複製するプローブを送り出すことができます。これらのプローブは、生命維持装置や社会システムを必要とせず、小型で、故障に強く、長期間休眠し、大量に製造できるため、低コストで効率的に星間空間を移動できます。これにより、文明は静かに、しかし広範囲にわたって生命や知識を保存・拡散することが可能になり、私たちが想像するような派手な宇宙文明の兆候は現れにくいと考えられます。",
+      "bodyGlossary": [
+        {
+          "term": "オーダー・オブ・マグニチュード",
+          "definition": "桁違いの概算で数値を評価する方法。",
+          "start": 27,
+          "end": 42
+        },
+        {
+          "term": "フェルミのパラドックス",
+          "definition": "宇宙に生命が存在しうるのに、その兆候がない矛盾。",
+          "start": 68,
+          "end": 79
+        },
+        {
+          "term": "グレートフィルター",
+          "definition": "生命が高度な文明になるまでの障壁。",
+          "start": 80,
+          "end": 89
+        },
+        {
+          "term": "フォン・ノイマン・プローブ",
+          "definition": "自己複製能力を持つ宇宙探査機。",
+          "start": 96,
+          "end": 109
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "オーダー・オブ・マグニチュード",
+          "definition": "桁違いの概算で数値を評価する方法。",
+          "start": 27,
+          "end": 42
+        },
+        {
+          "term": "フェルミのパラドックス",
+          "definition": "宇宙に生命が存在しうるのに、その兆候がない矛盾。",
+          "start": 68,
+          "end": 79
+        },
+        {
+          "term": "グレートフィルター",
+          "definition": "生命が高度な文明になるまでの障壁。",
+          "start": 80,
+          "end": 89
+        },
+        {
+          "term": "フォン・ノイマン・プローブ",
+          "definition": "自己複製能力を持つ宇宙探査機。",
+          "start": 96,
+          "end": 109
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 230,
+      "keyFigure": {
+        "imagePath": "/figures/2606.13914v1_results.jpeg",
+        "page": 16,
+        "caption": "Figure 1: Modes of interstellar expansion across two dimensions. The horizontal axis Modes of interstellar expansion across two dimensions. The horizontal axis",
+        "label": "Figure 1: Modes of interstellar expansion across two dimensions. The horizontal axis",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-15T23:45:32.965Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.13914v1_results.jpeg",
+          "page": 16,
+          "caption": "Figure 1: Modes of interstellar expansion across two dimensions. The horizontal axis Modes of interstellar expansion across two dimensions. The horizontal axis",
+          "label": "Figure 1: Modes of interstellar expansion across two dimensions. The horizontal axis",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-15T23:45:32.965Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.13581v1",
+      "title": "The Tone of Awareness: Topic, Sentiment, and Toxicity Maps During Mental Health Month on TikTok",
+      "authors": [
+        "Henrique Ferraz de Arruda",
+        "Andreia Sofia Teixeira",
+        "Pranay Gundala Reddy",
+        "Anindya Mondal",
+        "Kleber Andrade Oliveira",
+        "Filipi Nascimento Silva"
+      ],
+      "publishedAt": "2026-06-11T17:04:11Z",
+      "url": "https://arxiv.org/abs/2606.13581v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.13581v1.pdf",
+      "categories": [
+        "topic:humanities",
+        "cs.CY",
+        "cs.CL",
+        "cs.HC",
+        "physics.soc-ph"
+      ],
+      "abstract": "Despite raising concerns about the mental health effects associated with the usage of TikTok, little is known about how related content is framed by creators and received by audiences. We collect the content of 28,341 TikTok videos and 80,130 comments from Mental Health Awareness Month (May) in 2023 and 2024 via the TikTok Research API, and study how the tone of awareness varies across topics and years. We characterize \"tone\" as the emotional and interpersonal framing of mental health discourse, operationalized through sentiment and toxicity measures. We extract topics from video text using BERTopic and log-odds keywords, then quantify topic-conditioned sentiment (XLM-T) and toxicity (Detoxify) separately for video transcriptions and comments. Sentiment captures the affective valence of content, while toxicity reflects the presence of harmful or abusive language. We find a stable set of recurring themes across years, spanning clinical conditions, emotional disclosure, self-care, and campaign-oriented content, with engagement highly skewed toward a small subset of topics. All sentiment and toxicity analyses are computed separately for video content and comments, allowing us to distinguish between content production and audience reception. Sentiment in videos is often negative for emotionally charged topics, while comments tend to shift toward more mixed or positive polarity, especially for suicide prevention. Toxicity is low in median overall, but exhibits longer-tailed outliers in comments than in videos that are more pronounced in comments and concentrated in specific topics (e.g., \"Duet\", \"Suicide Prevention\", and \"Psychisch\"). Overall, our results provide a topic-level decomposition of mental health discourse on TikTok during awareness-month campaigns.",
+      "summary": {
+        "gist": "メンタルヘルスは世界中で10億人以上に影響を与え、オンライン空間は経験を共有する場となっています。TikTokは特にメンタルヘルスコンテンツが活発に議論されるプラットフォームですが、その短尺動画と共有・コメントの容易さが、感情的な内容をパフォーマンス化し、エンゲージメントに結びつけることがあります。これにより、共感を生む一方で、有害なコンテンツに触れるリスクも指摘されています。",
+        "novelty": "これまでの研究では、TikTokがメンタルヘルスに与える影響への懸念は示されていましたが、投稿者と視聴者がどのようにコンテンツを捉え、反応しているか、その「トーン」については十分に解明されていませんでした。 この論文では、メンタルヘルス啓発月間のTikTok動画とコメントを大規模に分析し、トピックごとの感情（ポジティブ/ネガティブ）と有害性（攻撃的/中傷的）を定量化。動画とコメントのトーンの違いを明らかにしました。",
+        "method": "本研究では、2023年と2024年のメンタルヘルス啓発月間（5月）にTikTok Research APIを通じて収集した28,341本の動画と80,130件のコメントを分析しました。まず、BERTopicを用いて動画のテキストから主要なトピックを抽出。次に、各トピックについて、XLM-Tで感情（ポジティブ/ネガティブ）を、Detoxifyで有害性（攻撃的/中傷的）を定量化しました。これらの分析は、動画のトランスクリプションとコメントで別々に行われ、コンテンツの制作側と視聴者の受容側のトーンの違いを比較しました。",
+        "results": "分析の結果、メンタルヘルス関連のトピックは毎年安定しており、臨床症状、感情の開示、セルフケア、キャンペーン関連の内容が含まれることが判明しました。エンゲージメントは一部のトピックに集中していました。動画の感情は、感情的に負荷の高いトピックではネガティブになる傾向がありましたが、コメントはより混合的または肯定的な極性を示すことが多く、特に自殺予防のトピックで顕著でした。有害性は全体的に低いものの、動画よりもコメントで外れ値が長く、特定のトピック（例：「Duet」、「Suicide Prevention」、「Psychisch」）に集中していました。",
+        "why": "動画とコメントでトーンが異なるのは、動画が個人の感情的な経験や苦悩を直接的に表現する場である一方、コメントはそれに対する共感、サポート、情報提供、あるいは議論の場として機能するためと考えられます。特に自殺予防のようなデリケートなトピックでは、動画が問題提起や自身の苦しみを表現する内容であっても、コメント欄では視聴者同士が支え合い、希望を与えるような肯定的な交流が生まれやすい可能性があります。また、有害なコメントが一部のトピックに集中するのは、特定の話題が議論を呼びやすく、感情的な反応を引き出しやすいためと考えられます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.CY）",
+      "field": "歴史・人文・社会",
+      "categoryL1": "serendipity",
+      "categoryL2": "social-media-analysis",
+      "arxivPrimary": "cs.CY",
+      "titleJa": "TikTokにおけるメンタルヘルス啓発月間のトーン：トピック、感情、有害性マップ",
+      "catchTitle": "TikTokのメンタルヘルス投稿、本音と建前",
+      "hook": "あなたはSNSでメンタルヘルスに関する情報を見たとき、その内容が本当に役立つものか、それともただの炎上狙いか気になりませんか？",
+      "background": "メンタルヘルスは世界中で10億人以上に影響を与え、オンライン空間は経験を共有する場となっています。TikTokは特にメンタルヘルスコンテンツが活発に議論されるプラットフォームですが、その短尺動画と共有・コメントの容易さが、感情的な内容をパフォーマンス化し、エンゲージメントに結びつけることがあります。これにより、共感を生む一方で、有害なコンテンツに触れるリスクも指摘されています。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "BERTopic",
+          "definition": "トランスフォーマーベースの埋め込みとクラスタリングを組み合わせたトピックモデリングフレームワーク。"
+        },
+        {
+          "term": "XLM-T",
+          "definition": "多言語対応の感情分析モデル。"
+        },
+        {
+          "term": "Detoxify",
+          "definition": "オンラインコンテンツの有害性を検出するツール。"
+        },
+        {
+          "term": "感情",
+          "definition": "コンテンツの肯定的または否定的な感情的価数。"
+        },
+        {
+          "term": "有害性",
+          "definition": "コンテンツに含まれる攻撃的または中傷的な言葉の有無。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "TikTokのメンタルヘルス投稿は動画とコメントで感情のトーンが異なり、特に自殺予防ではコメントがより肯定的になる。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、TikTokがメンタルヘルスに与える影響への懸念は示されていましたが、投稿者と視聴者がどのようにコンテンツを捉え、反応しているか、その「トーン」については十分に解明されていませんでした。",
+        "after": "この論文では、メンタルヘルス啓発月間のTikTok動画とコメントを大規模に分析し、トピックごとの感情（ポジティブ/ネガティブ）と有害性（攻撃的/中傷的）を定量化。動画とコメントのトーンの違いを明らかにしました。"
+      },
+      "analogy": {
+        "title": "畑の土壌と作物の関係",
+        "body": "これはまるで、畑の土壌とそこで育つ作物の関係のようなものです。動画が「土壌」だとすると、投稿者の意図や表現は土壌の質（栄養や水分）に当たります。一方、コメントは「作物」で、土壌から何が育ち、どう受け止められたかを示します。同じ土壌でも、育つ作物（コメント）は多様で、時には土壌の意図とは異なる実り（ポジティブな反応）をもたらすことがあるのです。特に、自殺予防のようなデリケートな話題では、動画の感情がネガティブでも、コメントは支え合いの場となり、より肯定的な「実り」を生み出す傾向があることが分かりました。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、私たちが日常的に利用するSNS、特にTikTokにおけるメンタルヘルス関連情報の受け止められ方について、新たな視点を提供します。企業がSNSマーケティングで社会貢献的なメッセージを発信する際、動画のメッセージングだけでなく、コメント欄でのユーザーの反応を予測し、適切に管理することの重要性を示唆します。また、教育関係者や保護者にとっては、若者がSNSでメンタルヘルスに関する情報に触れる際、動画の内容だけでなく、コメント欄がどのような影響を与えるかを理解する上で役立ちます。社会全体としては、オンラインでのメンタルヘルス支援策を考える上で、単にネガティブなコンテンツを規制するだけでなく、ポジティブな交流を促進する場の設計が重要であることを示しています。",
+      "takeawayTalk": "TikTokのメンタルヘルス投稿、動画はネガティブでもコメントはポジティブな支え合いの場になるんだって！",
+      "bodyText": "本研究では、2023年と2024年のメンタルヘルス啓発月間（5月）にTikTok Research APIを通じて収集した28,341本の動画と80,130件のコメントを分析しました。まず、BERTopicを用いて動画のテキストから主要なトピックを抽出。次に、各トピックについて、XLM-Tで感情（ポジティブ/ネガティブ）を、Detoxifyで有害性（攻撃的/中傷的）を定量化しました。これらの分析は、動画のトランスクリプションとコメントで別々に行われ、コンテンツの制作側と視聴者の受容側のトーンの違いを比較しました。\n\n動画とコメントでトーンが異なるのは、動画が個人の感情的な経験や苦悩を直接的に表現する場である一方、コメントはそれに対する共感、サポート、情報提供、あるいは議論の場として機能するためと考えられます。特に自殺予防のようなデリケートなトピックでは、動画が問題提起や自身の苦しみを表現する内容であっても、コメント欄では視聴者同士が支え合い、希望を与えるような肯定的な交流が生まれやすい可能性があります。また、有害なコメントが一部のトピックに集中するのは、特定の話題が議論を呼びやすく、感情的な反応を引き出しやすいためと考えられます。",
+      "bodyGlossary": [
+        {
+          "term": "BERTopic",
+          "definition": "トランスフォーマーベースの埋め込みとクラスタリングを組み合わせたトピックモデリングフレームワーク。",
+          "start": 95,
+          "end": 103
+        },
+        {
+          "term": "XLM-T",
+          "definition": "多言語対応の感情分析モデル。",
+          "start": 140,
+          "end": 145
+        },
+        {
+          "term": "感情",
+          "definition": "コンテンツの肯定的または否定的な感情的価数。",
+          "start": 146,
+          "end": 148
+        },
+        {
+          "term": "Detoxify",
+          "definition": "オンラインコンテンツの有害性を検出するツール。",
+          "start": 163,
+          "end": 171
+        },
+        {
+          "term": "有害性",
+          "definition": "コンテンツに含まれる攻撃的または中傷的な言葉の有無。",
+          "start": 172,
+          "end": 175
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "BERTopic",
+          "definition": "トランスフォーマーベースの埋め込みとクラスタリングを組み合わせたトピックモデリングフレームワーク。",
+          "start": 95,
+          "end": 103
+        },
+        {
+          "term": "XLM-T",
+          "definition": "多言語対応の感情分析モデル。",
+          "start": 140,
+          "end": 145
+        },
+        {
+          "term": "感情",
+          "definition": "コンテンツの肯定的または否定的な感情的価数。",
+          "start": 146,
+          "end": 148
+        },
+        {
+          "term": "Detoxify",
+          "definition": "オンラインコンテンツの有害性を検出するツール。",
+          "start": 163,
+          "end": 171
+        },
+        {
+          "term": "有害性",
+          "definition": "コンテンツに含まれる攻撃的または中傷的な言葉の有無。",
+          "start": 172,
+          "end": 175
+        }
+      ],
+      "agriEconRelevance": "この研究の知見は、農業経済分野における情報流通とコミュニティ形成に応用可能です。例えば、新規就農者支援や農業技術の普及において、情報発信（動画）とそれに対する農家間の交流（コメント）のトーンを分析することで、どのような情報が共感を呼び、どのような交流が支援に繋がるかを特定できます。特に、気候変動対策や病害対策といったネガティブな側面を持つ情報でも、コメント欄がポジティブな解決策や経験共有の場となるよう設計することで、情報伝達の効果を高め、コミュニティのレジリエンスを向上させる可能性があります。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 262,
+      "keyFigure": {
+        "imagePath": "/figures/2606.13581v1_results.jpx",
+        "page": 6,
+        "caption": "table Mental Health",
+        "label": "table",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-15T23:45:34.029Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.13581v1_results.jpx",
+          "page": 6,
+          "caption": "table Mental Health",
+          "label": "table",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-15T23:45:34.029Z"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1069 @@
+{
+  "date": "2026-06-17",
+  "papers": [
+    {
+      "id": "2606.16305v1",
+      "title": "Extended Kalman Filter-Based State Estimation for a Nine-Compartment Nonlinear Epidemic Model -- Convergence Analysis and In-Silico Benchmark Calibrated on the COVID-19 Third Wave in Italy",
+      "authors": [
+        "Lokman Rachid Melhani",
+        "Antonino Sferlazza",
+        "Dominique Persano Adorno",
+        "Filippo D'Ippolito",
+        "Antonino Lo Burgio",
+        "Alberto Firenze"
+      ],
+      "publishedAt": "2026-06-15T07:09:06Z",
+      "url": "https://arxiv.org/abs/2606.16305v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.16305v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "math.OC",
+        "eess.SY",
+        "q-bio.PE"
+      ],
+      "abstract": "This paper addresses real-time state estimation for a nine-compartment nonlinear COVID-19 epidemic model with two co-circulating strains, a super-spreader subpopulation, vaccination with waning immunity, hospitalization, and mortality. Time-varying transmission and vaccination rates are known inputs from a companion calibration, leaving the reconstruction of all nine states from three routinely reported observables: hospitalizations H, fatalities F, and vaccinated stock V. The contributions are theoretical rather than in the filter recursion. First, a Lie-derivative observability analysis yields, via a six-step derivation, the closed-form determinant |det(O9)| = delta_w * gamma_a^2 * kappa * rho2 * w1^2 * (delta_i - delta_p)^2 * |r1 - r2|, showing the level-2 codistribution is rank-deficient at the calibrated symmetric parameters (delta_i = delta_p, r1 = r2); the third Lie derivative restores full rank 9, with r2 the symmetry-breaking parameter. Second, an EKF is designed on the Euler-discretized dynamics with a closed-form 9x9 Jacobian and Joseph covariance update. Third, local exponential mean-square boundedness of the error is proved as a full theorem via the Reif-Gunther-Yaz-Unbehauen hypotheses, exploiting the bilinear drift and linear output to obtain a global-radius quadratic remainder bound that extends to bilinear-drift, linear-output systems. Fourth, the noise covariances are designed from calibration residuals and assessed by NEES and innovation-whiteness tests. All experiments use synthetic measurements from the calibrated model, so reported RMSE values (0.07%-2.72%) are methodology benchmarks, not predictive accuracy. A parameter-mismatch study shows measured and directly-coupled channels stay accurate under model error up to +/-30% while indirectly observed states degrade gracefully. The framework provides the state-feedback basis for future Model Predictive Control.",
+      "summary": {
+        "gist": "新型コロナウイルス感染症のパンデミックは、公衆衛生介入の効果が、その介入自体の有効性だけでなく、状況認識の質によっても制限されることを明確に示しました。報告される入院者数、確認された死者数、ワクチン接種者数は、真の感染状況を把握するための小さく不完全な窓に過ぎません。潜在的な曝露人口、まだ症状が出ていない活動的な感染者数、人口の残存免疫割合、増加するワクチン接種済みサブポピュレーションなど、疫学的に重要な量は、どの報告システムも直接測定していません。利用可能な観測値からこれらの隠れた状態をリアルタイムで再構築することは、根本的に状態推定の問題です。",
+        "novelty": "これまでの感染症モデルでは、状態推定の対象が3〜6コンパートメントと小規模で、観測可能性の検証が不十分でした。また、拡張カルマンフィルター（EKF）の収束性も、個別のシステムで厳密に証明されることは稀でした。 この研究では、2つの変異株、スーパー・スプレッダー、ワクチンによる免疫減衰、入院、死亡を考慮した9コンパートメントモデルに対し、観測可能性を数学的に厳密に証明し、EKFの推定誤差が指数関数的に収束することを理論的に示しました。",
+        "method": "本研究では、イタリアのCOVID-19第3波に合わせた9コンパートメント非線形感染症モデル（感受性者、曝露者、ワクチン接種者、オリジナル株感染者、変異株感染者、スーパー・スプレッダー、入院者、回復者、死亡者）の状態推定に、拡張カルマンフィルター（EKF）を適用しました。観測データとして、日常的に報告される入院者数、死亡者数、ワクチン接種者数の3つを用います。まず、リー微分を用いた観測可能性解析により、この9コンパートメントモデルの全状態が、これらの3つの観測値から局所的に観測可能であることを数学的に厳密に証明しました。次に、オイラー離散化されたダイナミクスに基づき、9x9のヤコビアン行列を閉形式で導出し、ジョセフ共分散更新式を用いたEKFを設計しました。さらに、Reif-Gunther-Yaz-Unbehauenの仮説を検証することで、推定誤差が局所的に指数関数的に平均二乗有界であることを定理として証明しました。",
+        "results": "合成データを用いた実験により、本研究で設計されたEKFが、9つの状態を0.07%〜2.72%のRMSE（推定誤差）で正確に推定できることを示しました。これは、フィルター設計が内部的に一貫しており、理論通りに収束することを示すベンチマーク値です。モデル誤差が±30%まであっても、測定されたチャンネルと直接結合されたチャンネルは精度を維持し、間接的に観測される状態も緩やかに劣化するにとどまることが、パラメータ不一致の研究で示されました。",
+        "why": "このモデルの非線形性が双線形構造を持つため、EKFの線形化残差が正確に2次となり、閉形式での誤差範囲を導出できます。この特性が、EKFの収束理論の適用を可能にし、推定誤差の指数関数的な平均二乗有界性を解析的に証明できる理由です。また、観測可能性の厳密な証明は、限られた観測データからでもモデルの全状態を再構築するのに十分な情報が含まれていることを保証し、推定の偏りを防ぎます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / math.OC）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "risk-management",
+      "arxivPrimary": "math.OC",
+      "titleJa": "拡張カルマンフィルターに基づく9コンパートメント非線形感染症モデルの状態推定",
+      "catchTitle": "見えない感染状況をリアルタイムで「見える化」する技術",
+      "hook": "あなたは今、新型コロナウイルスの感染状況を正確に把握したいとします。発表される入院者数や死者数、ワクチン接種者数だけで、本当に全体の状況を理解できるでしょうか？",
+      "background": "新型コロナウイルス感染症のパンデミックは、公衆衛生介入の効果が、その介入自体の有効性だけでなく、状況認識の質によっても制限されることを明確に示しました。報告される入院者数、確認された死者数、ワクチン接種者数は、真の感染状況を把握するための小さく不完全な窓に過ぎません。潜在的な曝露人口、まだ症状が出ていない活動的な感染者数、人口の残存免疫割合、増加するワクチン接種済みサブポピュレーションなど、疫学的に重要な量は、どの報告システムも直接測定していません。利用可能な観測値からこれらの隠れた状態をリアルタイムで再構築することは、根本的に状態推定の問題です。",
+      "quiz": {
+        "question": "この研究で、9つの感染状況を推定するために使われた観測データは次のうちどれでしょう？",
+        "options": [
+          "感染者数、回復者数、死亡者数",
+          "入院者数、死亡者数、ワクチン接種者数",
+          "PCR検査数、抗体検査数、病床使用率"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究では、日常的に報告される「入院者数、死亡者数、ワクチン接種者数」の3つの観測データを用いて、9つの感染状況を推定しています。"
+      },
+      "limitations": "本研究の数値結果は、フィルター設計が内部的に一貫しており、理論通りに収束することを示すための合成データを用いたベンチマークであり、実際の監視データに対するリアルタイム予測精度を測るものではありません。実際のデータに適用する際には、モデルの構造的な誤指定に対するロバスト性や、独立した検証データが必要となります。",
+      "glossary": [
+        {
+          "term": "拡張カルマンフィルター",
+          "definition": "非線形システムの状態を推定するアルゴリズム。"
+        },
+        {
+          "term": "9コンパートメントモデル",
+          "definition": "感染症の進行を9つの状態に分けて表現するモデル。"
+        },
+        {
+          "term": "リー微分",
+          "definition": "非線形システムの観測可能性を解析する数学的手法。"
+        },
+        {
+          "term": "観測可能性",
+          "definition": "観測データからシステムの状態を推定できる性質。"
+        },
+        {
+          "term": "ヤコビアン行列",
+          "definition": "多変数関数の偏導関数を並べた行列。"
+        },
+        {
+          "term": "ジョセフ共分散更新式",
+          "definition": "カルマンフィルターの共分散行列を安定的に更新する式。"
+        },
+        {
+          "term": "平均二乗有界",
+          "definition": "推定誤差の二乗平均がある範囲に収まること。"
+        },
+        {
+          "term": "双線形構造",
+          "definition": "非線形性が特定の積の形で表される性質。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "入院者数、死者数、ワクチン接種者数という限られた情報から、見えない感染者数や免疫保持者数など、9つの感染状況をリアルタイムで正確に推定する技術を開発しました。",
+      "noveltyContrast": {
+        "before": "これまでの感染症モデルでは、状態推定の対象が3〜6コンパートメントと小規模で、観測可能性の検証が不十分でした。また、拡張カルマンフィルター（EKF）の収束性も、個別のシステムで厳密に証明されることは稀でした。",
+        "after": "この研究では、2つの変異株、スーパー・スプレッダー、ワクチンによる免疫減衰、入院、死亡を考慮した9コンパートメントモデルに対し、観測可能性を数学的に厳密に証明し、EKFの推定誤差が指数関数的に収束することを理論的に示しました。"
+      },
+      "analogy": {
+        "title": "畑の土壌成分を見抜く熟練農家の目",
+        "body": "これは、まるで熟練の農家が、畑の表面に現れる作物の生育状況や葉の色、土の湿り具合といった限られた情報から、目には見えない土壌の窒素・リン酸・カリウムのバランスや微生物の活動状況を正確に把握し、次に打つべき対策（肥料の種類や量、水やり）を判断するようなものです。表面的な情報だけでなく、その奥にある複雑な要素を読み解くことで、畑全体の健康状態をリアルタイムで把握し、最適な収穫へと導きます。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "0.07%-2.72%",
+          "label": "RMSE（推定誤差）"
+        }
+      ],
+      "whyYouCare": "この研究は、限られた情報から複雑な状況を正確に把握する重要性を示しています。例えば、農業分野では、土壌センサーや気象データから、目に見えない土壌の栄養状態や病害リスクをリアルタイムで推定し、最適な施肥や農薬散布のタイミングを判断できます。ビジネスでは、売上データや顧客行動から、見えない市場トレンドや顧客の潜在ニーズを予測し、効果的なマーケティング戦略を立てることが可能です。公衆衛生だけでなく、あらゆる分野で「見えないものを見える化」し、より賢明な意思決定を支援する基盤となる技術です。",
+      "takeawayTalk": "限られたデータから見えない感染状況をリアルタイムで正確に推定できるようになったよ！",
+      "bodyText": "本研究では、イタリアのCOVID-19第3波に合わせた9コンパートメント非線形感染症モデル（感受性者、曝露者、ワクチン接種者、オリジナル株感染者、変異株感染者、スーパー・スプレッダー、入院者、回復者、死亡者）の状態推定に、拡張カルマンフィルター（EKF）を適用しました。観測データとして、日常的に報告される入院者数、死亡者数、ワクチン接種者数の3つを用います。まず、リー微分を用いた観測可能性解析により、この9コンパートメントモデルの全状態が、これらの3つの観測値から局所的に観測可能であることを数学的に厳密に証明しました。次に、オイラー離散化されたダイナミクスに基づき、9x9のヤコビアン行列を閉形式で導出し、ジョセフ共分散更新式を用いたEKFを設計しました。さらに、Reif-Gunther-Yaz-Unbehauenの仮説を検証することで、推定誤差が局所的に指数関数的に平均二乗有界であることを定理として証明しました。\n\nこのモデルの非線形性が双線形構造を持つため、EKFの線形化残差が正確に2次となり、閉形式での誤差範囲を導出できます。この特性が、EKFの収束理論の適用を可能にし、推定誤差の指数関数的な平均二乗有界性を解析的に証明できる理由です。また、観測可能性の厳密な証明は、限られた観測データからでもモデルの全状態を再構築するのに十分な情報が含まれていることを保証し、推定の偏りを防ぎます。",
+      "bodyGlossary": [
+        {
+          "term": "拡張カルマンフィルター",
+          "definition": "非線形システムの状態を推定するアルゴリズム。",
+          "start": 111,
+          "end": 122
+        },
+        {
+          "term": "リー微分",
+          "definition": "非線形システムの観測可能性を解析する数学的手法。",
+          "start": 183,
+          "end": 187
+        },
+        {
+          "term": "観測可能性",
+          "definition": "観測データからシステムの状態を推定できる性質。",
+          "start": 191,
+          "end": 196
+        },
+        {
+          "term": "9コンパートメントモデル",
+          "definition": "感染症の進行を9つの状態に分けて表現するモデル。",
+          "start": 204,
+          "end": 216
+        },
+        {
+          "term": "ヤコビアン行列",
+          "definition": "多変数関数の偏導関数を並べた行列。",
+          "start": 290,
+          "end": 297
+        },
+        {
+          "term": "ジョセフ共分散更新式",
+          "definition": "カルマンフィルターの共分散行列を安定的に更新する式。",
+          "start": 306,
+          "end": 316
+        },
+        {
+          "term": "平均二乗有界",
+          "definition": "推定誤差の二乗平均がある範囲に収まること。",
+          "start": 388,
+          "end": 394
+        },
+        {
+          "term": "双線形構造",
+          "definition": "非線形性が特定の積の形で表される性質。",
+          "start": 425,
+          "end": 430
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "拡張カルマンフィルター",
+          "definition": "非線形システムの状態を推定するアルゴリズム。",
+          "start": 111,
+          "end": 122
+        },
+        {
+          "term": "リー微分",
+          "definition": "非線形システムの観測可能性を解析する数学的手法。",
+          "start": 183,
+          "end": 187
+        },
+        {
+          "term": "観測可能性",
+          "definition": "観測データからシステムの状態を推定できる性質。",
+          "start": 191,
+          "end": 196
+        },
+        {
+          "term": "9コンパートメントモデル",
+          "definition": "感染症の進行を9つの状態に分けて表現するモデル。",
+          "start": 204,
+          "end": 216
+        },
+        {
+          "term": "ヤコビアン行列",
+          "definition": "多変数関数の偏導関数を並べた行列。",
+          "start": 290,
+          "end": 297
+        },
+        {
+          "term": "ジョセフ共分散更新式",
+          "definition": "カルマンフィルターの共分散行列を安定的に更新する式。",
+          "start": 306,
+          "end": 316
+        },
+        {
+          "term": "平均二乗有界",
+          "definition": "推定誤差の二乗平均がある範囲に収まること。",
+          "start": 388,
+          "end": 394
+        },
+        {
+          "term": "双線形構造",
+          "definition": "非線形性が特定の積の形で表される性質。",
+          "start": 425,
+          "end": 430
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 275
+    },
+    {
+      "id": "2606.15999v1",
+      "title": "U.S. Policies Unintentionally Accelerated China's Open AI Ecosystems",
+      "authors": [
+        "Wang Jin",
+        "Nadav Kunievsky",
+        "Bowen Lou",
+        "Tianshu Sun",
+        "James Evans"
+      ],
+      "publishedAt": "2026-06-14T19:55:20Z",
+      "url": "https://arxiv.org/abs/2606.15999v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.15999v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "econ.GN",
+        "cs.CY"
+      ],
+      "abstract": "Over the past decade, U.S. policies have increasingly aimed to preserve artificial intelligence (AI) leadership by promoting domestic free-market policies while controlling global technological chokepoints, particularly advanced semiconductors and computational infrastructure. These measures raised the cost of Chinese AI development, but they also increased the strategic value of open and locally adaptable AI systems. Before raising export controls on high-performance chips, both the U.S. and China promoted policies that included support for open-source AI. During the period following major U.S. export-control shocks, China increasingly embedded open-source AI into national technology strategy through proposed ecosystem building, standards coordination, and resilience-oriented deployment. Moreover, Chinese developers increased engagement with open-source large language model repositories substantially more than U.S. developers did, consistent with a shift toward open infrastructure under geopolitical constraints. Subsequently, Chinese-origin open models diffused widely through open-source communities and scientific research. Even though such models remained largely absent from U.S. patent disclosures, American commercial entities use them in open-access research, suggesting their undermeasured importance within the foundation of U.S. commercial activity. These findings suggest that technological containment policies may unintentionally accelerate open innovation ecosystems as a competitive response, with implications for global leadership in both academic and commercial artificial intelligence.",
+      "summary": {
+        "gist": "過去10年間、米国はAI分野でのリーダーシップを維持するため、国内の自由市場政策を推進しつつ、特に先進半導体や計算インフラといった技術的チョークポイントを管理することで、世界の技術をコントロールしようとしてきました。これらの措置は中国のAI開発コストを上昇させましたが、同時にオープンで現地適応可能なAIシステムの戦略的価値を高めることにもなりました。",
+        "novelty": "これまでのAI競争は、最先端のアルゴリズムや高性能な半導体を巡る技術開発競争が中心で、各国が自国の優位性を確保するために閉鎖的なシステムを構築する傾向にあると考えられていました。 本研究は、米国の輸出規制が中国のAI開発コストを上げた結果、中国が外部依存を減らすため、オープンソースAIを国家戦略に組み込み、開発者もオープンなプラットフォームへの関与を強めたことを明らかにしました。",
+        "method": "本研究では、政策文書、オープンモデルのリリース状況、GitHubでの活動、科学論文、特許データを組み合わせて分析しました。米国の高性能チップ輸出規制強化前後の期間を比較し、中国の政策がオープンソースAIを国家技術戦略にどのように組み込んだか、そしてそれがどのような結果をもたらしたかを検証しました。特に、中国の開発者がオープンソース大規模言語モデルのリポジトリへの関与を米国開発者よりも大幅に増やしたことを定量的に示しました。",
+        "results": "米国の輸出規制強化後、中国はオープンソースAIを国家技術戦略に深く組み込み、エコシステム構築、標準化調整、レジリエンス志向の展開を推進しました。中国の開発者は、オープンソース大規模言語モデルのリポジトリへの関与を米国開発者よりも大幅に増加させました。その結果、中国発のオープンモデルはオープンソースコミュニティや科学研究を通じて広く普及しました。これらのモデルは米国の特許開示にはほとんど現れませんでしたが、米国の商業団体はオープンアクセス研究でこれらを積極的に利用しており、米国商業活動の基盤におけるその重要性が過小評価されている可能性が示唆されました。",
+        "why": "米国の技術封じ込め政策は、中国にとって外部からの技術アクセスを不確実で高コストなものにしました。この地政学的制約の下で、中国は外部依存を減らし、自国のAI産業のレジリエンス（回復力）を高めるため、オープンでローカルに適応可能なAIエコシステムへの移行を加速させました。オープンソースは、参加を拡大し、普及を加速させ、外部からの制御に依存しない技術システムを構築するための戦略的な手段として機能したと考えられます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "innovation-policy",
+      "arxivPrimary": "econ.GN",
+      "titleJa": "米国の政策が中国のオープンAIエコシステムを意図せず加速させた",
+      "catchTitle": "米国のAI規制が中国のAIを「オープン」にした？",
+      "hook": "あなたは最新のAI技術が、一部の国や企業に独占される未来を想像していませんか？実は、意外な形でAIのオープン化が進んでいます。",
+      "background": "過去10年間、米国はAI分野でのリーダーシップを維持するため、国内の自由市場政策を推進しつつ、特に先進半導体や計算インフラといった技術的チョークポイントを管理することで、世界の技術をコントロールしようとしてきました。これらの措置は中国のAI開発コストを上昇させましたが、同時にオープンで現地適応可能なAIシステムの戦略的価値を高めることにもなりました。",
+      "quiz": {
+        "question": "米国のAI技術規制が中国に与えた意図せざる影響として、論文が指摘しているのは次のうちどれでしょう？",
+        "options": [
+          "中国のAI開発が完全に停止した。",
+          "中国がオープンソースAIの開発と普及を加速させた。",
+          "中国が米国のAI技術を秘密裏にコピーするようになった。"
+        ],
+        "correctIndex": 1,
+        "explanation": "論文は、米国の技術規制が中国のAI開発コストを上昇させた結果、中国が外部依存を減らすためにオープンソースAIを国家戦略に組み込み、開発と普及を加速させたと指摘しています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "チョークポイント",
+          "definition": "特定の技術や資源の流れを支配できる要所。"
+        },
+        {
+          "term": "オープンソースAI",
+          "definition": "ソースコードが公開され、誰でも利用・改変できるAI。"
+        },
+        {
+          "term": "大規模言語モデル",
+          "definition": "大量のテキストデータで学習したAIモデル。"
+        },
+        {
+          "term": "レジリエンス",
+          "definition": "外部からの衝撃や変化に対する回復力・適応力。"
+        },
+        {
+          "term": "地政学的制約",
+          "definition": "地理的・政治的な要因による活動の制限。"
+        },
+        {
+          "term": "エコシステム",
+          "definition": "複数の企業や技術が相互作用する経済圏。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "米国の対中AI技術規制が、中国におけるオープンソースAIの開発と普及を意図せず加速させていた。",
+      "noveltyContrast": {
+        "before": "これまでのAI競争は、最先端のアルゴリズムや高性能な半導体を巡る技術開発競争が中心で、各国が自国の優位性を確保するために閉鎖的なシステムを構築する傾向にあると考えられていました。",
+        "after": "本研究は、米国の輸出規制が中国のAI開発コストを上げた結果、中国が外部依存を減らすため、オープンソースAIを国家戦略に組み込み、開発者もオープンなプラットフォームへの関与を強めたことを明らかにしました。"
+      },
+      "analogy": {
+        "title": "輸入規制が「自家製種子」を育てる",
+        "body": "高性能な外国産種子（最先端半導体）の輸入が制限された農家（中国）が、自力で品種改良（オープンソースAI開発）を始め、その種子を地域全体で共有（オープンエコシステム）し、独自の強い作物（AIモデル）を育て始めたようなものです。これにより、外部の天候不順（地政学的制約）に左右されにくい、しなやかな農業（AI産業）が育ちます。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、国際的な技術競争が予期せぬ結果を生む可能性を示唆しています。もしあなたが企業経営者なら、サプライチェーンの多様化やオープンイノベーションの活用を再考するきっかけになるでしょう。政策立案者であれば、技術規制が長期的にどのような影響をもたらすか、より多角的な視点を持つことの重要性を教えてくれます。また、AI技術の未来に関心のある一般の方にとっては、AIが一部の巨大企業や国家に独占されるだけでなく、オープンな形で発展していく可能性を示しており、今後の技術動向を理解する上で非常に興味深い視点を提供します。",
+      "takeawayTalk": "米国のAI規制が、中国のオープンAIを加速させたって知ってた？",
+      "bodyText": "本研究では、政策文書、オープンモデルのリリース状況、GitHubでの活動、科学論文、特許データを組み合わせて分析しました。米国の高性能チップ輸出規制強化前後の期間を比較し、中国の政策がオープンソースAIを国家技術戦略にどのように組み込んだか、そしてそれがどのような結果をもたらしたかを検証しました。特に、中国の開発者がオープンソース大規模言語モデルのリポジトリへの関与を米国開発者よりも大幅に増やしたことを定量的に示しました。\n\n米国の技術封じ込め政策は、中国にとって外部からの技術アクセスを不確実で高コストなものにしました。この地政学的制約の下で、中国は外部依存を減らし、自国のAI産業のレジリエンス（回復力）を高めるため、オープンでローカルに適応可能なAIエコシステムへの移行を加速させました。オープンソースは、参加を拡大し、普及を加速させ、外部からの制御に依存しない技術システムを構築するための戦略的な手段として機能したと考えられます。",
+      "bodyGlossary": [
+        {
+          "term": "オープンソースAI",
+          "definition": "ソースコードが公開され、誰でも利用・改変できるAI。",
+          "start": 92,
+          "end": 101
+        },
+        {
+          "term": "大規模言語モデル",
+          "definition": "大量のテキストデータで学習したAIモデル。",
+          "start": 166,
+          "end": 174
+        },
+        {
+          "term": "地政学的制約",
+          "definition": "地理的・政治的な要因による活動の制限。",
+          "start": 265,
+          "end": 271
+        },
+        {
+          "term": "レジリエンス",
+          "definition": "外部からの衝撃や変化に対する回復力・適応力。",
+          "start": 295,
+          "end": 301
+        },
+        {
+          "term": "エコシステム",
+          "definition": "複数の企業や技術が相互作用する経済圏。",
+          "start": 330,
+          "end": 336
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "オープンソースAI",
+          "definition": "ソースコードが公開され、誰でも利用・改変できるAI。",
+          "start": 92,
+          "end": 101
+        },
+        {
+          "term": "大規模言語モデル",
+          "definition": "大量のテキストデータで学習したAIモデル。",
+          "start": 166,
+          "end": 174
+        },
+        {
+          "term": "地政学的制約",
+          "definition": "地理的・政治的な要因による活動の制限。",
+          "start": 265,
+          "end": 271
+        },
+        {
+          "term": "レジリエンス",
+          "definition": "外部からの衝撃や変化に対する回復力・適応力。",
+          "start": 295,
+          "end": 301
+        },
+        {
+          "term": "エコシステム",
+          "definition": "複数の企業や技術が相互作用する経済圏。",
+          "start": 330,
+          "end": 336
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 221,
+      "keyFigure": {
+        "imagePath": "/figures/2606.15999v1_results.png",
+        "page": 11,
+        "caption": "米国と中国のオープンモデルのリリース数の推移を示しています。",
+        "label": "Fig. 1. Open AI ecosystems and responses to U.S. policy shocks. (A) U.S. and Chinese open-model releases over time.",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-16T23:24:34.621Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.15999v1_results.png",
+          "page": 11,
+          "caption": "米国と中国のオープンモデルのリリース数の推移を示しています。",
+          "label": "Fig. 1. Open AI ecosystems and responses to U.S. policy shocks. (A) U.S. and Chinese open-model releases over time.",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-16T23:24:34.621Z"
+        },
+        {
+          "imagePath": "/figures/2606.15999v1_why.png",
+          "page": 13,
+          "caption": "オープンモデルのクロスドメインでの普及状況を、著者所属国別に示しています。",
+          "label": "Fig. 2. Cross-domain diffusion of open models. (A) arXiv model mentions over time by author-country affiliation. (B)",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-16T23:24:34.622Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.15955v1",
+      "title": "Composite sub-micron solid particles engineered to enable safe, controllable, efficient, and practical SAI",
+      "authors": [
+        "A. Spector",
+        "T. Kislev",
+        "Y. Segev",
+        "Y. Yedvab",
+        "E. Waxman"
+      ],
+      "publishedAt": "2026-06-14T18:28:41Z",
+      "url": "https://arxiv.org/abs/2606.15955v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.15955v1.pdf",
+      "categories": [
+        "topic:climate",
+        "physics.ao-ph",
+        "physics.geo-ph",
+        "physics.soc-ph"
+      ],
+      "abstract": "The properties of candidate particles for solar radiation management (SRM) through stratospheric aerosol injection (SAI) should comply with safety, controllability, and functionality requirements. Following the proposal in arXiv:2604.02283 of safety and controllability requirements, we define here a set of functionality requirements on the particles' properties -- optical properties, stratospheric residence time, scalable manufacturing compatibility, and aerial dispersion compatibility -- that, if met, ensure the feasibility of practical implementation, providing reflection of $\\sim1$% of the solar flux. We then present design principles and fabrication methods for sub-micron solid particles that may enable satisfying the combined requirements. These requirements do not identify a unique solution, but favor sub-micron particles with tightly controlled size distributions and stable properties over their stratospheric lifetime, and motivate a composite design where the bulk core composition is selected primarily for optimal radiative properties and the outer shell surface is engineered to control atmospheric chemistry and aging, and enhance aerial dispersion compatibility. We present two specific particle designs that are viable for meeting the coupled requirements: amorphous silica spheres and calcium-carbonate cores surrounded by spherical silica shells (both with appropriate surface treatment). The former is at an advanced stage of experimental verification (described in detail in a companion paper) of meeting all requirements, provides a practical platform for surface engineering, and will enable reaching a substantial fraction of $\\sim\\!1$% solar flux reflection. The latter is under development and will enable reaching $&gt;1$\\% reflection.",
+      "summary": {
+        "gist": "気候変動リスクが深刻化し、排出量削減だけでは短期的な温暖化を抑制しきれない可能性が高まる中、太陽放射管理（SRM）が補完的な介入策として注目されています。中でも成層圏エアロゾル注入（SAI）は、サブミクロンサイズのエアロゾルを成層圏に注入して太陽光の反射を増やす方法として広く議論されています。",
+        "novelty": "これまでの研究では、太陽光を効率よく反射する粒子に焦点を当てていましたが、安全性や環境への影響、そして実際に大規模に散布・管理できるかという「実用性」の観点が十分に考慮されていませんでした。特に、硫酸エアロゾルは成層圏加熱や化学反応のリスク、小規模実験の難しさといった課題を抱えていました。 この論文では、まず「安全性」「制御可能性」「機能性」という3つの厳しい要件を定義。その上で、これらの要件をすべて満たすように設計された、サブミクロンサイズの複合固体粒子を提案しています。特に、核となる部分で太陽光反射を最適化し、外殻で大気化学反応や分散性を制御する二重構造が特徴です。",
+        "method": "本研究では、まずSAIシステムが満たすべき「安全性」「制御可能性」「機能性」という3つの要件を明確に定義しました。安全性と制御可能性は、人間、生態系、大気化学、気候システムへの悪影響を防ぐための粒子特性（組成、形態、サイズ分布、表面化学、経年変化、追跡可能性）に関する制約です。機能性要件は、光学特性、成層圏滞留時間、スケーラブルな製造適合性、空中分散適合性を含み、約1%の太陽光反射を実現するための実用的な実装の実現可能性を保証します。これらの複合要件を満たすサブミクロン固体粒子の設計原理と製造方法を提案し、具体的にはアモルファスシリカ球（GEN1）と、炭酸カルシウム核をシリカシェルで覆った複合粒子（GEN2）の2つの設計案を提示しました。GEN1は実験的検証が進んでおり、GEN2は開発中です。",
+        "results": "提案された粒子設計は、安全性、制御可能性、機能性の複合要件を満たす可能性を示しました。特に、核となる部分で最適な放射特性を、外殻表面で大気化学反応や経年変化の制御、空中分散適合性の向上を目的とした複合設計が有効であることが示されました。GEN1粒子は、約1%の太陽光反射の大部分を達成可能であり、GEN2粒子は1%を超える反射率を目指して開発が進められています。",
+        "why": "この粒子が機能するメカニズムは、主にその複合構造にあります。粒子の核は、太陽光を効率的に反射するための最適な放射特性を持つ材料で構成されます。一方、外殻は、成層圏での化学反応を抑制し、粒子の寿命を延ばし、航空機からの散布時に均一に分散しやすくするための表面処理が施されています。これにより、粒子は成層圏に長期間安定して滞留し、太陽光を効果的に宇宙空間に反射することで、地球の温暖化を緩和する効果が期待されます。また、厳密に制御されたサイズ分布を持つサブミクロン粒子を用いることで、成層圏での挙動を予測しやすくし、意図しない副作用のリスクを低減します。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.ao-ph）",
+      "field": "気候・環境",
+      "categoryL1": "adjacent",
+      "categoryL2": "climate-engineering",
+      "arxivPrimary": "physics.ao-ph",
+      "titleJa": "安全で制御可能な成層圏エアロゾル注入のための複合サブミクロン固体粒子",
+      "catchTitle": "地球を冷やす「魔法の粉」の作り方",
+      "hook": "地球温暖化、このままではマズい…と感じていませんか？実は、空に特殊な粒子を撒いて太陽光を反射させる研究が進んでいます。",
+      "background": "気候変動リスクが深刻化し、排出量削減だけでは短期的な温暖化を抑制しきれない可能性が高まる中、太陽放射管理（SRM）が補完的な介入策として注目されています。中でも成層圏エアロゾル注入（SAI）は、サブミクロンサイズのエアロゾルを成層圏に注入して太陽光の反射を増やす方法として広く議論されています。",
+      "quiz": {
+        "question": "この研究で提案されている粒子設計の主な特徴は何ですか？",
+        "options": [
+          "単一素材で太陽光反射率を最大化する",
+          "核と外殻で異なる機能を担う複合構造",
+          "液体エアロゾルを主成分とする"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究では、核で最適な放射特性を、外殻で大気化学反応の制御や分散性向上を担う複合設計が提案されています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "太陽放射管理",
+          "definition": "太陽光を反射して地球の温度上昇を抑える技術"
+        },
+        {
+          "term": "成層圏エアロゾル注入",
+          "definition": "成層圏に微粒子を散布し太陽光を反射させる方法"
+        },
+        {
+          "term": "サブミクロン",
+          "definition": "1マイクロメートル（1ミリの千分の1）より小さい"
+        },
+        {
+          "term": "光学特性",
+          "definition": "光の吸収、反射、散乱などに関する性質"
+        },
+        {
+          "term": "成層圏滞留時間",
+          "definition": "粒子が成層圏に留まる期間"
+        },
+        {
+          "term": "アモルファスシリカ",
+          "definition": "非晶質の二酸化ケイ素"
+        },
+        {
+          "term": "炭酸カルシウム",
+          "definition": "石灰岩などの主成分"
+        },
+        {
+          "term": "複合構造",
+          "definition": "複数の異なる材料や層を組み合わせた構造"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "地球温暖化対策として成層圏に散布する、安全で効果的、かつ制御可能な特殊な微粒子を設計・製造する研究です。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、太陽光を効率よく反射する粒子に焦点を当てていましたが、安全性や環境への影響、そして実際に大規模に散布・管理できるかという「実用性」の観点が十分に考慮されていませんでした。特に、硫酸エアロゾルは成層圏加熱や化学反応のリスク、小規模実験の難しさといった課題を抱えていました。",
+        "after": "この論文では、まず「安全性」「制御可能性」「機能性」という3つの厳しい要件を定義。その上で、これらの要件をすべて満たすように設計された、サブミクロンサイズの複合固体粒子を提案しています。特に、核となる部分で太陽光反射を最適化し、外殻で大気化学反応や分散性を制御する二重構造が特徴です。"
+      },
+      "analogy": {
+        "title": "畑の土壌改良材と作物の品種改良",
+        "body": "この研究は、まるで「畑の土壌改良材と作物の品種改良を同時に行う」ようなものです。土壌改良材（粒子）は、ただ肥料を撒けばいいわけではなく、土壌（成層圏）の健康を損なわず、作物の生育（太陽光反射）を助け、さらに必要な場所に均一に撒けて、効果が持続する（機能性）必要があります。そして、どんな土壌でも育つ丈夫な品種（粒子設計）を開発することで、安定した収穫（温暖化対策）を目指す。単に収穫量（反射率）だけを追求するのではなく、土壌の質（安全性）や、種まきのしやすさ（分散性）まで考えて、最適な土壌改良材と品種を組み合わせるイメージです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "~1%",
+          "label": "太陽光反射率"
+        }
+      ],
+      "whyYouCare": "この研究は、私たちが直面する気候変動という喫緊の課題に対し、具体的な解決策の可能性を示しています。もし、安全で制御可能なSAIが実現すれば、短期的な温暖化を緩和し、排出量削減や再生可能エネルギーへの移行のための「時間稼ぎ」ができるかもしれません。これは、農業生産の安定化、異常気象による災害リスクの低減、ひいては私たちの生活や経済活動の安定に直結します。また、単に効果だけでなく、環境への影響を最小限に抑えつつ、確実に管理できる技術開発を目指している点は、持続可能な社会を築く上で非常に重要です。",
+      "takeawayTalk": "地球を冷やす「魔法の粉」は、安全性と効果を両立する複合粒子で開発中！",
+      "bodyText": "本研究では、まずSAIシステムが満たすべき「安全性」「制御可能性」「機能性」という3つの要件を明確に定義しました。安全性と制御可能性は、人間、生態系、大気化学、気候システムへの悪影響を防ぐための粒子特性（組成、形態、サイズ分布、表面化学、経年変化、追跡可能性）に関する制約です。機能性要件は、光学特性、成層圏滞留時間、スケーラブルな製造適合性、空中分散適合性を含み、約1%の太陽光反射を実現するための実用的な実装の実現可能性を保証します。これらの複合要件を満たすサブミクロン固体粒子の設計原理と製造方法を提案し、具体的にはアモルファスシリカ球（GEN1）と、炭酸カルシウム核をシリカシェルで覆った複合粒子（GEN2）の2つの設計案を提示しました。\n\nこの粒子が機能するメカニズムは、主にその複合構造にあります。粒子の核は、太陽光を効率的に反射するための最適な放射特性を持つ材料で構成されます。一方、外殻は、成層圏での化学反応を抑制し、粒子の寿命を延ばし、航空機からの散布時に均一に分散しやすくするための表面処理が施されています。これにより、粒子は成層圏に長期間安定して滞留し、太陽光を効果的に宇宙空間に反射することで、地球の温暖化を緩和する効果が期待されます。また、厳密に制御されたサイズ分布を持つサブミクロン粒子を用いることで、成層圏での挙動を予測しやすくし、意図しない副作用のリスクを低減します。",
+      "bodyGlossary": [
+        {
+          "term": "光学特性",
+          "definition": "光の吸収、反射、散乱などに関する性質",
+          "start": 146,
+          "end": 150
+        },
+        {
+          "term": "成層圏滞留時間",
+          "definition": "粒子が成層圏に留まる期間",
+          "start": 151,
+          "end": 158
+        },
+        {
+          "term": "サブミクロン",
+          "definition": "1マイクロメートル（1ミリの千分の1）より小さい",
+          "start": 231,
+          "end": 237
+        },
+        {
+          "term": "アモルファスシリカ",
+          "definition": "非晶質の二酸化ケイ素",
+          "start": 261,
+          "end": 270
+        },
+        {
+          "term": "炭酸カルシウム",
+          "definition": "石灰岩などの主成分",
+          "start": 279,
+          "end": 286
+        },
+        {
+          "term": "複合構造",
+          "definition": "複数の異なる材料や層を組み合わせた構造",
+          "start": 345,
+          "end": 349
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "光学特性",
+          "definition": "光の吸収、反射、散乱などに関する性質",
+          "start": 146,
+          "end": 150
+        },
+        {
+          "term": "成層圏滞留時間",
+          "definition": "粒子が成層圏に留まる期間",
+          "start": 151,
+          "end": 158
+        },
+        {
+          "term": "サブミクロン",
+          "definition": "1マイクロメートル（1ミリの千分の1）より小さい",
+          "start": 231,
+          "end": 237
+        },
+        {
+          "term": "アモルファスシリカ",
+          "definition": "非晶質の二酸化ケイ素",
+          "start": 261,
+          "end": 270
+        },
+        {
+          "term": "炭酸カルシウム",
+          "definition": "石灰岩などの主成分",
+          "start": 279,
+          "end": 286
+        },
+        {
+          "term": "複合構造",
+          "definition": "複数の異なる材料や層を組み合わせた構造",
+          "start": 345,
+          "end": 349
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 251,
+      "keyFigure": {
+        "imagePath": "/figures/2606.15955v1_results.png",
+        "page": 11,
+        "caption": "GEN1粒子のSEM画像と、乾燥粉末散布の代表的な段階を示しています。",
+        "label": "FIG. 5: Representative stages in the dry-powder deployment workflow. Left two panels: SEM images of synthesized GEN1",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-16T23:24:37.997Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.15955v1_results.png",
+          "page": 11,
+          "caption": "GEN1粒子のSEM画像と、乾燥粉末散布の代表的な段階を示しています。",
+          "label": "FIG. 5: Representative stages in the dry-powder deployment workflow. Left two panels: SEM images of synthesized GEN1",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-16T23:24:37.997Z"
+        },
+        {
+          "imagePath": "/figures/2606.15955v1_why.png",
+          "page": 9,
+          "caption": "シラン化に関連するアモルファスシリカの代表的な表面モチーフを模式的に示しています。",
+          "label": "FIG. 3: Representative surface motifs on amorphous silica relevant to silanization. Shown schematically are (1) a",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-16T23:24:37.997Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.15885v1",
+      "title": "Effect of Biofouling on Microplastic Transport in a 3-D Global Eulerian Model",
+      "authors": [
+        "Zih-En Tseng",
+        "Yue Wu",
+        "Chris Ruf",
+        "Dimitris Menemenlis",
+        "Yulin Pan"
+      ],
+      "publishedAt": "2026-06-14T16:07:51Z",
+      "url": "https://arxiv.org/abs/2606.15885v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.15885v1.pdf",
+      "categories": [
+        "topic:climate",
+        "physics.flu-dyn",
+        "physics.ao-ph"
+      ],
+      "abstract": "Biofouling -- the occupation of microplastic (MP) surfaces by marine microbes -- alters particles' buoyancy and transport, yet its effect on the global distribution of MPs has not been well quantified. We present the first three-dimensional global Eulerian model to fully couple MP transport with biofouling, by augmenting the concentration field with an extra dimension representing the biomass attachment density on MP surfaces. This approach embeds time-dependent particle properties directly into the Eulerian concentration field, overcoming a fundamental challenge of tracking property evolution in grid-based models. Idealized simulations show that biofouling significantly reshapes the vertical distribution of MPs when two conditions are met: the particles must be sufficiently buoyant when they are clean to remain near the sea surface, and the local plankton growth rate must exceed the decay rate. In three-dimensional global simulations, biofouling substantially alters the distribution of large MPs ($\\gtrsim 10$ $μ$m): biofouled particles are transported below the mixed layer to 500 m depth, and the subtropical surface garbage patches become more dispersed with reduced peak concentrations. This dispersion is due to a subsurface transport route, where biofouled particles sink into layers with reversed current and are carried outward from the gyre centers before regaining buoyancy. Small particles ($\\lesssim 1$ $μ$m) remain unaffected as they stay effectively neutrally buoyant even when biofouled. A comparison with a global trawler dataset shows that incorporating biofouling reduces the fraction of outlying model-observation data points from 25\\% to 13\\%, demonstrating a meaningful improvement in model skill.",
+      "summary": {
+        "gist": "毎年、最大2760万トンのプラスチック廃棄物が河川や海岸線、船舶ルートを通じて海洋に流入し、マイクロプラスチック（MP）となって海洋生態系や人間の健康、さらには気候変動にまで影響を及ぼしています。MPの海洋における蓄積場所を特定することは、リスク評価と効果的な汚染管理戦略の策定に不可欠です。これまでの研究では、MPは主に海面近くの亜熱帯環流に集積すると考えられてきましたが、実際の観測データとの乖離がありました。特に、MPの表面に海洋微生物が付着する「バイオファウリング」がMPの浮力と輸送に影響を与えることは知られていましたが、その全球的な分布への影響は十分に定量化されていませんでした。",
+        "novelty": "これまでのマイクロプラスチック（MP）の海洋輸送モデルでは、MPの物理的特性（密度や大きさ）は一定だと仮定されていました。そのため、MPは主に海面近くの亜熱帯環流に集積すると予測されていましたが、実際の観測データとは一部でズレがありました。 この研究では、MPの表面に海洋微生物が付着する「バイオファウリング」という現象を、MPの濃度場にバイオマス付着密度という新たな次元を加えることで、3次元全球オイラーモデルに初めて組み込みました。これにより、MPの特性が時間とともに変化する様子をモデル内で追跡できるようになり、より現実に近いMPの分布を予測できるようになりました。",
+        "method": "本研究では、マイクロプラスチック（MP）の輸送をバイオファウリングと完全に結合させた初の3次元全球オイラーモデルを開発しました。このモデルでは、MPの濃度場に、MP表面へのバイオマス付着密度を表す追加の次元を導入しました。これにより、グリッドベースのモデルで粒子の特性変化を追跡するという根本的な課題を克服し、時間依存の粒子特性をオイラー濃度場に直接組み込むことが可能になりました。\nバイオファウリングによる粒子の有効密度と直径の変化を記述する方程式と、バイオファウリングの成長と減衰を記述する方程式をモデルに組み込みました。その後、理想的な1次元シミュレーションでバイオファウリングがMPの鉛直分布を再形成する条件を特定し、続いて3次元全球シミュレーションを実施して、バイオファウリングがMPの全球分布パターンと輸送に与える影響を明らかにしました。",
+        "results": "理想的なシミュレーションでは、MPがきれいな状態では十分に浮力があり海面近くに留まること、そして局所的なプランクトン増殖率が減衰率を上回るという2つの条件が満たされた場合に、バイオファウリングがMPの鉛直分布を大きく変えることが示されました。\n3次元全球シミュレーションでは、バイオファウリングが大型MP（約10 µm以上）の分布を大幅に変化させることが判明しました。バイオファウリングした粒子は混合層の下、水深500mまで輸送され、亜熱帯海面のゴミパッチは分散し、ピーク濃度が減少しました。この分散は、バイオファウリングした粒子が逆流のある層に沈み込み、浮力を取り戻す前に環流の中心から外側に運ばれるという、海面下の輸送経路によるものです。小型粒子（約1 µm以下）は、バイオファウリングしても実質的に中性浮力を保つため、影響を受けませんでした。全球トロール網データとの比較では、バイオファウリングを組み込むことで、モデルと観測データ間の外れ値の割合が25%から13%に減少し、モデルの精度が大幅に向上したことが示されました。",
+        "why": "バイオファウリングは、MP表面に海洋微生物が付着することで、粒子の有効密度と直径を増加させます。これにより、MPの沈降速度が変化し、浮力が低下して海面から深層へと沈み込みます。深層では、日光の減少によりバイオフィルムが分解され、粒子は再び浮力を得て浮上します。この浮沈運動が、MPを混合層の下の深層水塊へと輸送し、亜熱帯環流の中心から外側へと分散させる「海面下輸送経路」を生み出します。特に大型のMPは、この浮沈運動の影響を強く受け、海面での集中が緩和され、より広範囲に分散する結果となります。一方、小型のMPは、バイオファウリングによる密度変化が相対的に小さく、常に中性浮力に近い状態を保つため、その分布は大きく変化しません。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.flu-dyn）",
+      "field": "気候・環境",
+      "categoryL1": "adjacent",
+      "categoryL2": "oceanography",
+      "arxivPrimary": "physics.flu-dyn",
+      "titleJa": "バイオファウリングが全球3次元オイラーモデルにおけるマイクロプラスチック輸送に与える影響",
+      "catchTitle": "海のマイクロプラスチック、実は「生き物」が運んでいた？",
+      "hook": "海のマイクロプラスチック、どこに漂っているかご存知ですか？実はその分布、あなたの想像とは違うかもしれません。",
+      "background": "毎年、最大2760万トンのプラスチック廃棄物が河川や海岸線、船舶ルートを通じて海洋に流入し、マイクロプラスチック（MP）となって海洋生態系や人間の健康、さらには気候変動にまで影響を及ぼしています。MPの海洋における蓄積場所を特定することは、リスク評価と効果的な汚染管理戦略の策定に不可欠です。これまでの研究では、MPは主に海面近くの亜熱帯環流に集積すると考えられてきましたが、実際の観測データとの乖離がありました。特に、MPの表面に海洋微生物が付着する「バイオファウリング」がMPの浮力と輸送に影響を与えることは知られていましたが、その全球的な分布への影響は十分に定量化されていませんでした。",
+      "quiz": {
+        "question": "この研究で、バイオファウリングがマイクロプラスチックの分布に大きな影響を与えるために必要な条件は次のうちどれですか？",
+        "options": [
+          "粒子が十分に小さく、常に中性浮力であること。",
+          "粒子がきれいな状態で十分に浮力があり、プランクトン増殖率が減衰率を上回ること。",
+          "粒子が非常に大きく、海面で常に浮遊していること。"
+        ],
+        "correctIndex": 1,
+        "explanation": "正解は「粒子がきれいな状態で十分に浮力があり、プランクトン増殖率が減衰率を上回ること」です。この2つの条件が揃うことで、バイオファウリングによる浮沈運動が活発になり、マイクロプラスチックの鉛直分布が大きく変化します。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "バイオファウリング",
+          "definition": "マイクロプラスチック表面に微生物が付着する現象"
+        },
+        {
+          "term": "オイラーモデル",
+          "definition": "固定された格子点で物質の濃度変化を追跡するモデル"
+        },
+        {
+          "term": "濃度場",
+          "definition": "空間内の物質の濃度分布を示す場"
+        },
+        {
+          "term": "バイオマス付着密度",
+          "definition": "マイクロプラスチック表面に付着した微生物の量"
+        },
+        {
+          "term": "グリッドベースのモデル",
+          "definition": "空間を格子状に区切って計算するモデル"
+        },
+        {
+          "term": "鉛直分布",
+          "definition": "水深方向の物質の分布"
+        },
+        {
+          "term": "混合層",
+          "definition": "風などにより活発に混合される海面近くの層"
+        },
+        {
+          "term": "亜熱帯環流",
+          "definition": "亜熱帯域に存在する大規模な海流の循環"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "マイクロプラスチックに微生物が付着する「バイオファウリング」が、その海の分布を大きく変えることを3次元モデルで解明した研究。",
+      "noveltyContrast": {
+        "before": "これまでのマイクロプラスチック（MP）の海洋輸送モデルでは、MPの物理的特性（密度や大きさ）は一定だと仮定されていました。そのため、MPは主に海面近くの亜熱帯環流に集積すると予測されていましたが、実際の観測データとは一部でズレがありました。",
+        "after": "この研究では、MPの表面に海洋微生物が付着する「バイオファウリング」という現象を、MPの濃度場にバイオマス付着密度という新たな次元を加えることで、3次元全球オイラーモデルに初めて組み込みました。これにより、MPの特性が時間とともに変化する様子をモデル内で追跡できるようになり、より現実に近いMPの分布を予測できるようになりました。"
+      },
+      "analogy": {
+        "title": "畑の作物が土壌の栄養で育ち、重くなるように",
+        "body": "これは、畑の作物が土壌の栄養を吸収して成長し、実をつけて重くなるようなものです。最初は軽くて風に揺られていた種が、栄養（微生物）を取り込んで成長（バイオファウリング）することで、重くなり、やがて土の中（深海）に沈んでいく。そして、土の中の栄養が少なくなると、再び軽くなり浮上する。この研究は、マイクロプラスチックが海の中で、まるで生き物のように浮き沈みしながら移動するメカニズムを解明しました。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "-12pt",
+          "label": "外れ値データ点の割合"
+        }
+      ],
+      "whyYouCare": "この研究は、私たちが海に流したマイクロプラスチックが、どこに、どのように蓄積していくのかという理解を大きく変えるものです。これまでは海面に漂うゴミの島が注目されがちでしたが、実は微生物の働きで深海へと運ばれ、広範囲に分散している可能性が示されました。これは、漁業資源への影響評価、海洋生態系の保全、そして最終的には私たちの食卓に上る魚介類への影響を考える上で非常に重要です。また、プラスチック汚染対策を考える際にも、海面だけでなく深層への対策も視野に入れる必要性を示唆しており、政策立案者や環境保護活動家にとっても新たな視点を提供するでしょう。",
+      "takeawayTalk": "海のマイクロプラスチック、微生物がくっついて深海に沈み、広範囲に散らばっていた！",
+      "bodyText": "本研究では、マイクロプラスチック（MP）の輸送をバイオファウリングと完全に結合させた初の3次元全球オイラーモデルを開発しました。このモデルでは、MPの濃度場に、MP表面へのバイオマス付着密度を表す追加の次元を導入しました。これにより、グリッドベースのモデルで粒子の特性変化を追跡するという根本的な課題を克服し、時間依存の粒子特性をオイラー濃度場に直接組み込むことが可能になりました。\nバイオファウリングによる粒子の有効密度と直径の変化を記述する方程式と、バイオファウリングの成長と減衰を記述する方程式をモデルに組み込みました。その後、理想的な1次元シミュレーションでバイオファウリングがMPの鉛直分布を再形成する条件を特定し、続いて3次元全球シミュレーションを実施して、バイオファウリングがMPの全球分布パターンと輸送に与える影響を明らかにしました。\n\nバイオファウリングは、MP表面に海洋微生物が付着することで、粒子の有効密度と直径を増加させます。これにより、MPの沈降速度が変化し、浮力が低下して海面から深層へと沈み込みます。深層では、日光の減少によりバイオフィルムが分解され、粒子は再び浮力を得て浮上します。この浮沈運動が、MPを混合層の下の深層水塊へと輸送し、亜熱帯環流の中心から外側へと分散させる「海面下輸送経路」を生み出します。特に大型のMPは、この浮沈運動の影響を強く受け、海面での集中が緩和され、より広範囲に分散する結果となります。一方、小型のMPは、バイオファウリングによる密度変化が相対的に小さく、常に中性浮力に近い状態を保つため、その分布は大きく変化しません。",
+      "bodyGlossary": [
+        {
+          "term": "バイオファウリング",
+          "definition": "マイクロプラスチック表面に微生物が付着する現象",
+          "start": 24,
+          "end": 33
+        },
+        {
+          "term": "オイラーモデル",
+          "definition": "固定された格子点で物質の濃度変化を追跡するモデル",
+          "start": 49,
+          "end": 56
+        },
+        {
+          "term": "濃度場",
+          "definition": "空間内の物質の濃度分布を示す場",
+          "start": 75,
+          "end": 78
+        },
+        {
+          "term": "バイオマス付着密度",
+          "definition": "マイクロプラスチック表面に付着した微生物の量",
+          "start": 86,
+          "end": 95
+        },
+        {
+          "term": "グリッドベースのモデル",
+          "definition": "空間を格子状に区切って計算するモデル",
+          "start": 117,
+          "end": 128
+        },
+        {
+          "term": "鉛直分布",
+          "definition": "水深方向の物質の分布",
+          "start": 296,
+          "end": 300
+        },
+        {
+          "term": "混合層",
+          "definition": "風などにより活発に混合される海面近くの層",
+          "start": 518,
+          "end": 521
+        },
+        {
+          "term": "亜熱帯環流",
+          "definition": "亜熱帯域に存在する大規模な海流の循環",
+          "start": 534,
+          "end": 539
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "バイオファウリング",
+          "definition": "マイクロプラスチック表面に微生物が付着する現象",
+          "start": 24,
+          "end": 33
+        },
+        {
+          "term": "オイラーモデル",
+          "definition": "固定された格子点で物質の濃度変化を追跡するモデル",
+          "start": 49,
+          "end": 56
+        },
+        {
+          "term": "濃度場",
+          "definition": "空間内の物質の濃度分布を示す場",
+          "start": 75,
+          "end": 78
+        },
+        {
+          "term": "バイオマス付着密度",
+          "definition": "マイクロプラスチック表面に付着した微生物の量",
+          "start": 86,
+          "end": 95
+        },
+        {
+          "term": "グリッドベースのモデル",
+          "definition": "空間を格子状に区切って計算するモデル",
+          "start": 117,
+          "end": 128
+        },
+        {
+          "term": "鉛直分布",
+          "definition": "水深方向の物質の分布",
+          "start": 296,
+          "end": 300
+        },
+        {
+          "term": "混合層",
+          "definition": "風などにより活発に混合される海面近くの層",
+          "start": 518,
+          "end": 521
+        },
+        {
+          "term": "亜熱帯環流",
+          "definition": "亜熱帯域に存在する大規模な海流の循環",
+          "start": 534,
+          "end": 539
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 327,
+      "keyFigure": {
+        "imagePath": "/figures/2606.15885v1_results.png",
+        "page": 14,
+        "caption": "バイオファウリングの有無による50 µmマイクロプラスチックの海面濃度を示します。",
+        "label": "Figure 6: The concentration of 50 µm MPs (a) on the ocean surface when they are non-biofouled (case 3D-",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-16T23:24:41.109Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.15885v1_results.png",
+          "page": 14,
+          "caption": "バイオファウリングの有無による50 µmマイクロプラスチックの海面濃度を示します。",
+          "label": "Figure 6: The concentration of 50 µm MPs (a) on the ocean surface when they are non-biofouled (case 3D-",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-16T23:24:41.109Z"
+        },
+        {
+          "imagePath": "/figures/2606.15885v1_why.png",
+          "page": 6,
+          "caption": "きれいなマイクロプラスチック粒子とバイオファウリングした粒子の違いを示します。",
+          "label": "Figure 1 to differentiate a clean and a biofouled MP particle.",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-16T23:24:41.109Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.16469v1",
+      "title": "Probabilistic Identification of Technology Tipping Points in Deeply Decarbonised Energy Systems",
+      "authors": [
+        "Gian Müller",
+        "Thomas Schöb",
+        "Jann M. Weinand",
+        "Iain Staffell"
+      ],
+      "publishedAt": "2026-06-15T09:36:34Z",
+      "url": "https://arxiv.org/abs/2606.16469v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.16469v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "econ.GN"
+      ],
+      "abstract": "Energy policy is often guided by a small set of least-cost pathways to net-zero emissions, despite wide uncertainty in technology performance, fuel prices, demand and weather. To avoid overstating confidence in any single pathway, we quantify the likelihood of alternative technology pathways and identify the assumptions driving divergence, including the conditions under which technologies reach critical tipping points in competitiveness. We couple a sector-linked national optimisation model with Monte Carlo sampling (10,000 runs) across two European power systems (Germany and Great Britain) to generate probability distributions of capacity expansion and robust cost thresholds for key technologies. Results reveal substantial ambiguity in the future roles of wind versus solar, gas with carbon capture, and negative-emissions options. Tipping points vary widely with system conditions, while cross-country differences highlight the role of institutional constraints and resource endowments. Britain exhibits an either-or decision around nuclear power, investing if costs in 2035 fall below EUR 4700/kW, otherwise favouring offshore wind. Germany's uncertainty centres on dispatchable low-carbon options: gas with carbon capture (below EUR 2100/kW), biomass with carbon capture (below EUR 4200/kW), or hydrogen if electrolysis is below EUR 560/kW. We reframe scenario analysis as risk management by linking uncertainty to cost targets and minimum deployment requirements for robust net-zero strategies.",
+      "summary": {
+        "gist": "多くの国が脱炭素目標を掲げ、低炭素なエネルギーシステムへの転換を進めています。政策立案にはエネルギーシステムモデルが用いられますが、これまでは技術性能や燃料価格、需要、天候といった多くの不確実性を十分に考慮せず、単一の最適経路を導き出す決定論的アプローチが主流でした。特に、炭素回収貯留（CCS）や水素製造（Power-to-X）のような新興技術は、技術的・経済的な不確実性が高く、固定的なパラメータ設定が最適なシステム設計や政策提言に大きな影響を与える可能性がありました。",
+        "novelty": "これまでのエネルギー政策の検討では、技術性能や燃料価格、需要、天候などの不確実性を十分に考慮せず、少数の「最も費用対効果の高い」シナリオに頼りがちでした。そのため、特定の技術への過度な信頼や、想定外の事態への脆弱性が課題でした。 この研究では、モンテカルロ法を用いて10,000通りの未来をシミュレーションし、不確実性下での多様な技術経路を明らかにしました。これにより、各技術が競争力を得る「転換点」を確率的に特定し、よりロバストな政策立案を可能にしました。",
+        "method": "本研究では、ドイツと英国のエネルギーシステムを対象に、国レベルのエネルギーシステム最適化モデル「ETHOS.NESTOR」とモンテカルロシミュレーションを組み合わせた新しい手法を導入しました。技術コスト、効率、エネルギー需要レベル、加重平均資本コスト、気象年といった不確実性の高いパラメータについて、文献調査に基づいた確率分布から10,000通りのパラメータセットをサンプリングし、各セットでエネルギーシステム最適化モデルを実行しました。これにより、将来の設備容量拡張の確率分布と、主要技術が競争力を得るための堅牢なコスト閾値（転換点）を特定しました。また、サンプリングプロセスにおいて、電解槽の効率が時間とともに低下しないなど、技術的に妥当なパラメータ軌跡を保証するための「時間的条件付け」を導入しました。",
+        "results": "シミュレーションの結果、将来の風力発電と太陽光発電の役割、CCS付きガス発電、および負排出技術の役割には大きな不確実性があることが明らかになりました。転換点はシステム条件によって大きく異なり、国ごとの違いは制度的制約や資源賦存量の役割を浮き彫りにしました。例えば、英国では原子力発電に関して「やるかやらないか」の決定が明確で、2035年までにコストが4700ユーロ/kWを下回れば投資され、そうでなければ洋上風力が優先されます。ドイツでは、CCS付きガス発電（2100ユーロ/kW以下）、CCS付きバイオマス発電（4200ユーロ/kW以下）、または電解水素（560ユーロ/kW以下）といった、調整可能な低炭素オプションに関する不確実性が中心であることが示されました。",
+        "why": "この研究は、不確実な未来において、どの技術がいつ競争力を持つようになるかという「転換点」を確率的に捉えることで、従来の単一シナリオ分析では見落とされがちな多様な可能性とリスクを可視化します。モンテカルロシミュレーションによって、技術コストや需要、天候など多岐にわたる不確実性要因を網羅的に考慮することで、各技術が市場で優位に立つための具体的なコスト目標を提示できます。これにより、政策立案者は、特定の技術に過度に依存するリスクを避け、複数の選択肢を視野に入れた、より堅牢で柔軟な脱炭素戦略を策定できるようになります。また、時間的条件付けを導入することで、サンプリングされた技術の進展が現実的であると保証され、モデルの信頼性が向上します。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "energy-policy",
+      "arxivPrimary": "econ.GN",
+      "titleJa": "深く脱炭素化されたエネルギーシステムにおける技術転換点の確率的特定",
+      "catchTitle": "脱炭素の未来、どの技術が主役？",
+      "hook": "「脱炭素社会」と聞くと、あなたはどんな未来を想像しますか？実は、その道のりは一つではありません。",
+      "background": "多くの国が脱炭素目標を掲げ、低炭素なエネルギーシステムへの転換を進めています。政策立案にはエネルギーシステムモデルが用いられますが、これまでは技術性能や燃料価格、需要、天候といった多くの不確実性を十分に考慮せず、単一の最適経路を導き出す決定論的アプローチが主流でした。特に、炭素回収貯留（CCS）や水素製造（Power-to-X）のような新興技術は、技術的・経済的な不確実性が高く、固定的なパラメータ設定が最適なシステム設計や政策提言に大きな影響を与える可能性がありました。",
+      "quiz": {
+        "question": "この研究が従来のエネルギーシステム分析と最も異なる点は何でしょう？",
+        "options": [
+          "単一の最適経路に焦点を当てている点",
+          "不確実性を確率的に評価し、多様な技術経路を考慮する点",
+          "特定の技術のコスト削減のみを目的としている点"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究は、技術性能や燃料価格、需要、天候などの不確実性をモンテカルロシミュレーションで確率的に評価し、多様な技術経路と転換点を特定する点が、従来の単一シナリオ分析と大きく異なります。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "脱炭素化",
+          "definition": "二酸化炭素などの温室効果ガス排出量を実質ゼロにすること"
+        },
+        {
+          "term": "モンテカルロシミュレーション",
+          "definition": "乱数を用いて多数の試行を繰り返し、確率的な現象を分析する手法"
+        },
+        {
+          "term": "転換点",
+          "definition": "ある技術が競争力を持ち、大規模に導入され始める閾値"
+        },
+        {
+          "term": "ETHOS.NESTOR",
+          "definition": "ドイツと英国のエネルギーシステムを最適化するモデル"
+        },
+        {
+          "term": "加重平均資本コスト",
+          "definition": "企業が資金を調達する際のコストを平均したもの"
+        },
+        {
+          "term": "確率分布",
+          "definition": "ある事象が起こる確率を数値で示したもの"
+        },
+        {
+          "term": "時間的条件付け",
+          "definition": "技術の進展が時間とともに後退しないよう制約を設けること"
+        },
+        {
+          "term": "堅牢なコスト閾値",
+          "definition": "不確実性があっても耐えうる、信頼性の高いコスト基準"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "不確実な未来の脱炭素化において、どのエネルギー技術がいつ競争力を得るかを確率的に予測します。",
+      "noveltyContrast": {
+        "before": "これまでのエネルギー政策の検討では、技術性能や燃料価格、需要、天候などの不確実性を十分に考慮せず、少数の「最も費用対効果の高い」シナリオに頼りがちでした。そのため、特定の技術への過度な信頼や、想定外の事態への脆弱性が課題でした。",
+        "after": "この研究では、モンテカルロ法を用いて10,000通りの未来をシミュレーションし、不確実性下での多様な技術経路を明らかにしました。これにより、各技術が競争力を得る「転換点」を確率的に特定し、よりロバストな政策立案を可能にしました。"
+      },
+      "analogy": {
+        "title": "豊作を願う農家の品種選び",
+        "body": "これは、まるで農家が未来の天候や市場価格の不確実性の中で、どの作物の品種を育てるか決めるようなものです。従来のやり方では、「過去のデータから最も収益性の高かった品種」を一つだけ選び、それに全力を注いでいました。しかし、この研究は、過去45年間の天候データや市場の変動を10,000通りシミュレーションし、「もし冷夏が続いたらこの品種、猛暑ならこの品種が有利」といったように、多様なシナリオで各品種が豊作になる条件（転換点）を確率的に見つけ出すようなものです。これにより、農家は一つの品種に固執せず、複数の品種を組み合わせたり、特定の条件で有利になる品種を事前に把握したりすることで、どんな天候や市場になっても安定した収穫を目指せるようになります。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "10,000",
+          "label": "モンテカルロシミュレーション実行回数"
+        },
+        {
+          "value": "EUR 4700/kW",
+          "label": "英国の原子力発電コスト転換点（2035年）"
+        },
+        {
+          "value": "EUR 2100/kW",
+          "label": "ドイツのCCS付きガス発電コスト転換点"
+        }
+      ],
+      "whyYouCare": "あなたの会社の事業や、あなたが暮らす社会の未来は、エネルギー政策と密接に関わっています。この研究は、脱炭素社会へ向かう中で、どのエネルギー技術がいつ、どのような条件で主流になるかを確率的に示してくれます。例えば、あなたが再生可能エネルギー関連のビジネスをしているなら、どの技術に投資すべきか、いつがそのタイミングなのかを判断する上で貴重な情報となるでしょう。また、政府や自治体がどのような政策を打ち出すか、その背景にある不確実性を理解することで、より賢明な意思決定ができるようになります。未来のエネルギーシステムが多様な可能性を秘めていることを知り、リスクを管理しながら、より持続可能な社会の実現に貢献するためのヒントが得られます。",
+      "takeawayTalk": "脱炭素の未来は一つじゃない！不確実性込みで最適な技術を見つける研究だよ。",
+      "bodyText": "本研究では、ドイツと英国のエネルギーシステムを対象に、国レベルのエネルギーシステム最適化モデル「ETHOS.NESTOR」とモンテカルロシミュレーションを組み合わせた新しい手法を導入しました。技術コスト、効率、エネルギー需要レベル、加重平均資本コスト、気象年といった不確実性の高いパラメータについて、文献調査に基づいた確率分布から10,000通りのパラメータセットをサンプリングし、各セットでエネルギーシステム最適化モデルを実行しました。これにより、将来の設備容量拡張の確率分布と、主要技術が競争力を得るための堅牢なコスト閾値（転換点）を特定しました。また、サンプリングプロセスにおいて、電解槽の効率が時間とともに低下しないなど、技術的に妥当なパラメータ軌跡を保証するための「時間的条件付け」を導入しました。\n\nこの研究は、不確実な未来において、どの技術がいつ競争力を持つようになるかという「転換点」を確率的に捉えることで、従来の単一シナリオ分析では見落とされがちな多様な可能性とリスクを可視化します。モンテカルロシミュレーションによって、技術コストや需要、天候など多岐にわたる不確実性要因を網羅的に考慮することで、各技術が市場で優位に立つための具体的なコスト目標を提示できます。これにより、政策立案者は、特定の技術に過度に依存するリスクを避け、複数の選択肢を視野に入れた、より堅牢で柔軟な脱炭素戦略を策定できるようになります。また、時間的条件付けを導入することで、サンプリングされた技術の進展が現実的であると保証され、モデルの信頼性が向上します。",
+      "bodyGlossary": [
+        {
+          "term": "ETHOS.NESTOR",
+          "definition": "ドイツと英国のエネルギーシステムを最適化するモデル",
+          "start": 48,
+          "end": 60
+        },
+        {
+          "term": "モンテカルロシミュレーション",
+          "definition": "乱数を用いて多数の試行を繰り返し、確率的な現象を分析する手法",
+          "start": 62,
+          "end": 76
+        },
+        {
+          "term": "加重平均資本コスト",
+          "definition": "企業が資金を調達する際のコストを平均したもの",
+          "start": 116,
+          "end": 125
+        },
+        {
+          "term": "確率分布",
+          "definition": "ある事象が起こる確率を数値で示したもの",
+          "start": 159,
+          "end": 163
+        },
+        {
+          "term": "堅牢なコスト閾値",
+          "definition": "不確実性があっても耐えうる、信頼性の高いコスト基準",
+          "start": 255,
+          "end": 263
+        },
+        {
+          "term": "転換点",
+          "definition": "ある技術が競争力を持ち、大規模に導入され始める閾値",
+          "start": 264,
+          "end": 267
+        },
+        {
+          "term": "時間的条件付け",
+          "definition": "技術の進展が時間とともに後退しないよう制約を設けること",
+          "start": 338,
+          "end": 345
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "ETHOS.NESTOR",
+          "definition": "ドイツと英国のエネルギーシステムを最適化するモデル",
+          "start": 48,
+          "end": 60
+        },
+        {
+          "term": "モンテカルロシミュレーション",
+          "definition": "乱数を用いて多数の試行を繰り返し、確率的な現象を分析する手法",
+          "start": 62,
+          "end": 76
+        },
+        {
+          "term": "加重平均資本コスト",
+          "definition": "企業が資金を調達する際のコストを平均したもの",
+          "start": 116,
+          "end": 125
+        },
+        {
+          "term": "確率分布",
+          "definition": "ある事象が起こる確率を数値で示したもの",
+          "start": 159,
+          "end": 163
+        },
+        {
+          "term": "堅牢なコスト閾値",
+          "definition": "不確実性があっても耐えうる、信頼性の高いコスト基準",
+          "start": 255,
+          "end": 263
+        },
+        {
+          "term": "転換点",
+          "definition": "ある技術が競争力を持ち、大規模に導入され始める閾値",
+          "start": 264,
+          "end": 267
+        },
+        {
+          "term": "時間的条件付け",
+          "definition": "技術の進展が時間とともに後退しないよう制約を設けること",
+          "start": 338,
+          "end": 345
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 311,
+      "keyFigure": {
+        "imagePath": "/figures/2606.16469v1_results.png",
+        "page": 8,
+        "caption": "ドイツと英国で各技術が導入される資本コストの閾値を示しています。",
+        "label": "Figure 4: Capital cost thresholds below which technologies are adopted in Germany and Great",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-16T23:24:43.547Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.16469v1_results.png",
+          "page": 8,
+          "caption": "ドイツと英国で各技術が導入される資本コストの閾値を示しています。",
+          "label": "Figure 4: Capital cost thresholds below which technologies are adopted in Germany and Great",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-16T23:24:43.547Z"
+        },
+        {
+          "imagePath": "/figures/2606.16469v1_why.jpeg",
+          "page": 7,
+          "caption": "英国における小型モジュール炉のコスト転換点の計算方法を示しています。",
+          "label": "Figure 3: Calculation of the cost tipping point for small modular nuclear reactors in Britain (top)",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-16T23:24:43.547Z"
+        }
+      ]
+    }
+  ]
+}

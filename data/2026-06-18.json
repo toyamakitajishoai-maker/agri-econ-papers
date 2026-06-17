@@ -1,0 +1,968 @@
+{
+  "date": "2026-06-18",
+  "papers": [
+    {
+      "id": "2606.17065",
+      "title": "PIVOT: Bridging Black-Scholes Implied-Volatility and Price Objectives via Differentiable J\\\"ackel Operator",
+      "authors": [
+        "Raeid Saqur",
+        "Yannick Limmer",
+        "Anastasis Kratsios",
+        "Blanka Horvath",
+        "Hans Buehler"
+      ],
+      "publishedAt": "2026-06-17T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.17065",
+      "pdfUrl": "https://arxiv.org/pdf/2606.17065.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "q-fin.CP",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "abstract": "Modern option-learning systems operate in two coordinates: price space, where markets quote and no-arbitrage constraints are most naturally enforced, and implied volatility (IV) space, where volatility surfaces are smoothed, regularized, and evaluated. The bottleneck is interface, not approximation: J\\\"ackel's seminal \"Let's Be Rational\" (LBR) solver already inverts the Black-Scholes price to machine precision efficiently. What is missing is a differentiable layer that preserves LBR in the forward pass and avoids backpropagating through its branch logic. Such a layer must also confront the unavoidable singularity of the inverse map in the low-vega regime, where the sensitivity 1/vega diverges as vega -&gt; 0. We close this gap with PIVOT, the Price-Implied-Volatility Objective Translator. PIVOT keeps the LBR forward pass intact and supplies the backward pass by implicit differentiation through the smooth Black-Scholes/Black-76 price map, with an explicit gating contract: invalid domains return NaN, well-conditioned rows receive the exact 1/vega gradient, and low-vega rows are attenuated rather than silently regularized. On a single H100, a fused Triton kernel reaches 1.79e9 IV/s at machine precision (9.3e-14 max relative error vs. the reference C solver); end-to-end label generation sustains 48.9M/s on synthetic chains and 16.6M/s on SPX OptionMetrics. In a HyperIV-style one-day reproduction on SPX, PIVOT-augmented objectives Pareto-dominate the baselines, reducing held-out price MAE by up to 43.4% and the strongest three-seed gated objective improving price MAE by 38.8% and IV MAE by 21.3% jointly; cross-asset results on RUT, VIX, and NDX show directional price-MAE gains of 40.1%, 24.2%, and 16.7%, while an ungated IV-roundtrip control collapses to a degenerate near-zero surface, confirming the gate as a correctness contract rather than a tuning knob.",
+      "summary": {
+        "gist": "オプション価格の評価には、ブラック・ショールズモデルが広く用いられています。このモデルでは、原資産価格、行使価格、満期までの期間、金利、配当利回りに加えて、「ボラティリティ（変動性）」というパラメータが重要です。市場で取引されるオプション価格から逆算されるボラティリティを「インプライド・ボラティリティ（IV）」と呼び、これは市場参加者の将来の変動性に対する期待を反映しています。IVはオプションの価値を評価し、リスクを管理するための重要な指標であり、多くの金融機関やトレーダーが注目しています。",
+        "novelty": "従来のオプション価格予測システムでは、市場価格とインプライド・ボラティリティ（IV）という2つの異なる座標系を扱っていました。価格からIVを計算するJäckelの「Let's Be Rational (LBR)」ソルバーは高精度でしたが、その複雑な内部ロジックのため、AIが学習する際に必要な「微分」を効率的に行うことができませんでした。 この論文では、PIVOT（Price-Implied-Volatility Objective Translator）を提案。LBRソルバーの高速・高精度な順方向計算はそのままに、逆方向の微分計算を「滑らかなブラック・ショールズ価格モデル」を通じて行うことで、AI学習のボトルネックを解消しました。これにより、オプション価格予測の精度が大幅に向上します。",
+        "method": "PIVOTは、Jäckelの「Let's Be Rational (LBR)」アルゴリズムをGPU上でバッチ処理可能なプリミティブとして実装し、順方向の計算（価格からIVへの変換）ではLBRの精度と速度を維持します。逆方向の計算（IVから価格への微分）では、LBRの複雑な分岐ロジックを回避し、滑らかなブラック・ショールズ/ブラック-76価格モデルを通じた陰関数微分を利用します。これにより、勾配計算のコストがソルバーの反復回数に依存せず、正確な逆関数微分を提供します。さらに、低ベガ領域（オプション価格のボラティリティに対する感度が低い領域）での特異点を処理するためのゲーティングメカニズムを導入し、無効なデータや条件の悪いデータがAIの学習に悪影響を与えるのを防ぎます。",
+        "results": "PIVOTは、単一のH100 GPU上で、1秒あたり1.79e9のIVを機械精度で計算できる速度を達成しました。エンドツーエンドのラベル生成では、合成データで48.9M/s、SPX OptionMetricsデータで16.6M/sを維持します。SPXオプションの1日再現実験では、PIVOTを組み込んだ目的関数が、価格の平均絶対誤差（MAE）を最大43.4%削減し、IVのMAEも21.3%削減しました。RUT、VIX、NDXといった他の資産でも、価格MAEがそれぞれ40.1%、24.2%、16.7%改善しました。ゲーティングメカニズムがない場合、モデルは退化したほぼゼロのボラティリティ曲面に収束することが確認され、このメカニズムが正確性を保証する上で不可欠であることが示されました。",
+        "why": "PIVOTの核心は、オプション価格とインプライド・ボラティリティ（IV）の間の変換を、AIが学習しやすい形で「微分可能」にした点にあります。従来のLBRソルバーは、価格からIVを正確に計算する「順方向」は得意でしたが、AIが学習する際に必要な「IVの変化が価格にどう影響するか」という「逆方向」の勾配計算が、内部の複雑な分岐処理のために困難でした。PIVOTは、この逆方向の計算を、ブラック・ショールズモデルの「滑らかな」性質を利用した陰関数微分で行うことで、LBRの複雑なロジックを迂回し、効率的かつ正確な勾配を提供します。これにより、AIはオプション価格とIVの関係性を、まるで滑らかな関数のように捉えて学習できるようになり、予測精度が大幅に向上するのです。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-fin.CP）",
+      "field": "AI・データサイエンス",
+      "categoryL1": "adjacent",
+      "categoryL2": "financial-modeling",
+      "arxivPrimary": "q-fin.CP",
+      "titleJa": "PIVOT: 微分可能なJäckel演算子を介してブラック・ショールズのインプライド・ボラティリティと価格目標を橋渡し",
+      "catchTitle": "オプション価格予測を高速化！AI学習のボトルネック解消",
+      "hook": "オプション取引の価格予測、もっと速く、もっと正確にできたらと思いませんか？AIがオプション市場を学習する際の大きな課題を解決する技術が登場しました。",
+      "background": "オプション価格の評価には、ブラック・ショールズモデルが広く用いられています。このモデルでは、原資産価格、行使価格、満期までの期間、金利、配当利回りに加えて、「ボラティリティ（変動性）」というパラメータが重要です。市場で取引されるオプション価格から逆算されるボラティリティを「インプライド・ボラティリティ（IV）」と呼び、これは市場参加者の将来の変動性に対する期待を反映しています。IVはオプションの価値を評価し、リスクを管理するための重要な指標であり、多くの金融機関やトレーダーが注目しています。",
+      "quiz": {
+        "question": "PIVOTがAI学習のボトルネックを解消するために行った主な貢献は何ですか？",
+        "options": [
+          "Jäckelソルバーを完全に新しいニューラルネットワークに置き換えた。",
+          "順方向計算はJäckelソルバーを使い、逆方向計算は滑らかなブラック・ショールズモデルの陰関数微分を利用した。",
+          "オプション価格の計算を完全に手動で行うように変更した。"
+        ],
+        "correctIndex": 1,
+        "explanation": "PIVOTは、Jäckelソルバーの順方向計算の精度と速度を維持しつつ、逆方向の微分計算を滑らかなブラック・ショールズモデルを通じた陰関数微分で行うことで、AI学習のボトルネックを解消しました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "インプライド・ボラティリティ",
+          "definition": "オプション価格から逆算される将来の変動性予測値。"
+        },
+        {
+          "term": "ブラック・ショールズモデル",
+          "definition": "オプションの理論価格を算出する数理モデル。"
+        },
+        {
+          "term": "Jäckel演算子",
+          "definition": "オプション価格からインプライド・ボラティリティを計算するアルゴリズム。"
+        },
+        {
+          "term": "微分可能",
+          "definition": "関数の変化率（勾配）を計算できる性質。"
+        },
+        {
+          "term": "順方向計算",
+          "definition": "入力から出力を得る通常の計算プロセス。"
+        },
+        {
+          "term": "逆方向計算",
+          "definition": "出力の変化が入力にどう影響するかを計算するプロセス。"
+        },
+        {
+          "term": "陰関数微分",
+          "definition": "陰関数で定義された変数の微分を求める手法。"
+        },
+        {
+          "term": "低ベガ領域",
+          "definition": "オプション価格のボラティリティに対する感度が低い状態。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "オプション価格とインプライド・ボラティリティ間の変換をAIが高速かつ正確に学習できるよう、微分可能な新しい計算手法を開発しました。",
+      "noveltyContrast": {
+        "before": "従来のオプション価格予測システムでは、市場価格とインプライド・ボラティリティ（IV）という2つの異なる座標系を扱っていました。価格からIVを計算するJäckelの「Let's Be Rational (LBR)」ソルバーは高精度でしたが、その複雑な内部ロジックのため、AIが学習する際に必要な「微分」を効率的に行うことができませんでした。",
+        "after": "この論文では、PIVOT（Price-Implied-Volatility Objective Translator）を提案。LBRソルバーの高速・高精度な順方向計算はそのままに、逆方向の微分計算を「滑らかなブラック・ショールズ価格モデル」を通じて行うことで、AI学習のボトルネックを解消しました。これにより、オプション価格予測の精度が大幅に向上します。"
+      },
+      "analogy": {
+        "title": "畑の土壌分析と肥料の最適化",
+        "body": "これは、畑の土壌の状態（インプライド・ボラティリティ）から最適な肥料の量（オプション価格）を導き出すようなものです。従来のシステムでは、土壌の状態から肥料の量を計算するのは得意でしたが、どの肥料が土壌の状態にどう影響するか（微分）をAIが学習しようとすると、計算が複雑すぎて時間がかかっていました。PIVOTは、土壌の状態と肥料の量の関係を「滑らかな成長曲線」として捉え直し、AIが効率的に学習できるようにしたことで、より早く、より正確に最適な肥料の組み合わせを見つけられるようになった、というイメージです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "1.79e9 IV/s",
+          "label": "インプライド・ボラティリティ計算速度"
+        },
+        {
+          "value": "43.4%",
+          "label": "価格MAE（平均絶対誤差）削減率"
+        },
+        {
+          "value": "21.3%",
+          "label": "IV MAE（平均絶対誤差）削減率"
+        }
+      ],
+      "whyYouCare": "この研究は、金融市場におけるAIの活用を大きく前進させる可能性を秘めています。オプション取引は、リスクヘッジや投機など多様な目的で利用され、その市場規模は膨大です。PIVOTによって、AIがオプション価格の変動をより正確に予測できるようになれば、金融機関はリスク管理を高度化し、より効率的なポートフォリオ運用が可能になります。また、個人投資家にとっても、市場の透明性が高まり、より賢明な投資判断を下すためのツールが提供されることにつながるでしょう。AIが金融市場をより深く理解し、予測する能力を高めることで、市場全体の安定性向上にも寄与する画期的な技術と言えます。",
+      "takeawayTalk": "AIがオプション価格を予測する際のボトルネックを解消し、精度を大幅に向上させたよ！",
+      "bodyText": "PIVOTは、Jäckelの「Let's Be Rational (LBR)」アルゴリズムをGPU上でバッチ処理可能なプリミティブとして実装し、順方向の計算（価格からIVへの変換）ではLBRの精度と速度を維持します。逆方向の計算（IVから価格への微分）では、LBRの複雑な分岐ロジックを回避し、滑らかなブラック・ショールズ/ブラック-76価格モデルを通じた陰関数微分を利用します。これにより、勾配計算のコストがソルバーの反復回数に依存せず、正確な逆関数微分を提供します。さらに、低ベガ領域（オプション価格のボラティリティに対する感度が低い領域）での特異点を処理するためのゲーティングメカニズムを導入し、無効なデータや条件の悪いデータがAIの学習に悪影響を与えるのを防ぎます。\n\nPIVOTの核心は、オプション価格とインプライド・ボラティリティ（IV）の間の変換を、AIが学習しやすい形で「微分可能」にした点にあります。従来のLBRソルバーは、価格からIVを正確に計算する「順方向」は得意でしたが、AIが学習する際に必要な「IVの変化が価格にどう影響するか」という「逆方向」の勾配計算が、内部の複雑な分岐処理のために困難でした。PIVOTは、この逆方向の計算を、ブラック・ショールズモデルの「滑らかな」性質を利用した陰関数微分で行うことで、LBRの複雑なロジックを迂回し、効率的かつ正確な勾配を提供します。これにより、AIはオプション価格とIVの関係性を、まるで滑らかな関数のように捉えて学習できるようになり、予測精度が大幅に向上するのです。",
+      "bodyGlossary": [
+        {
+          "term": "陰関数微分",
+          "definition": "陰関数で定義された変数の微分を求める手法。",
+          "start": 178,
+          "end": 183
+        },
+        {
+          "term": "低ベガ領域",
+          "definition": "オプション価格のボラティリティに対する感度が低い状態。",
+          "start": 239,
+          "end": 244
+        },
+        {
+          "term": "インプライド・ボラティリティ",
+          "definition": "オプション価格から逆算される将来の変動性予測値。",
+          "start": 357,
+          "end": 371
+        },
+        {
+          "term": "微分可能",
+          "definition": "関数の変化率（勾配）を計算できる性質。",
+          "start": 394,
+          "end": 398
+        },
+        {
+          "term": "ブラック・ショールズモデル",
+          "definition": "オプションの理論価格を算出する数理モデル。",
+          "start": 530,
+          "end": 543
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "陰関数微分",
+          "definition": "陰関数で定義された変数の微分を求める手法。",
+          "start": 178,
+          "end": 183
+        },
+        {
+          "term": "低ベガ領域",
+          "definition": "オプション価格のボラティリティに対する感度が低い状態。",
+          "start": 239,
+          "end": 244
+        },
+        {
+          "term": "インプライド・ボラティリティ",
+          "definition": "オプション価格から逆算される将来の変動性予測値。",
+          "start": 357,
+          "end": 371
+        },
+        {
+          "term": "微分可能",
+          "definition": "関数の変化率（勾配）を計算できる性質。",
+          "start": 394,
+          "end": 398
+        },
+        {
+          "term": "ブラック・ショールズモデル",
+          "definition": "オプションの理論価格を算出する数理モデル。",
+          "start": 530,
+          "end": 543
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 322
+    },
+    {
+      "id": "2501.00826",
+      "title": "LLM-Powered Multi-Agent System for Automated Crypto Portfolio Management",
+      "authors": [
+        "Yichen Luo",
+        "Yebo Feng",
+        "Jiahua Xu",
+        "Paolo Tasca",
+        "Yang Liu"
+      ],
+      "publishedAt": "2026-06-17T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2501.00826",
+      "pdfUrl": "https://arxiv.org/pdf/2501.00826.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "q-fin.TR",
+        "cs.AI"
+      ],
+      "abstract": "Cryptocurrency portfolio management requires the fusion of heterogeneous multi-modal signals, including structured price and on-chain time series, unstructured news text, and technical indicators, under high-volatility and real-time constraints. While deep learning approaches show predictive capability, their opacity limits practical adoption, and single large language model (LLM) agents struggle to process the breadth of modality-specific inputs needed for robust decision-making. We propose a multi-agent system (MAS) framework in which three modality-specialised agents, a Crypto Agent for market dynamics, a News Agent for weekly news sentiment, and a Trading Agent for signal fusion and portfolio execution, decompose the task across three communication architectures: hierarchical, collaborative, and debate. We evaluate four capability configurations: zero-shot, chain-of-thought (CoT), retrieval-augmented generation (RAG), and skill-augmented. In a 52-week backtest over calendar year 2025 across the top 15 L1 blockchain native cryptocurrencies by market capitalisation as of January 2025, the best configuration, Hierarchical (Skill), achieves a cumulative return of 133.52% and a Sharpe ratio of 1.502, outperforming single-agent variants, passive benchmarks, and deep learning baselines. An ablation study identifies the Crypto Agent as the most critical component, with its removal reducing cumulative return by 42.57 percentage points. A cross-model comparison further shows that MAS outperforms the single-agent baseline under GPT-4o, GPT-5, and Claude Sonnet 4.5, suggesting that the benefit of multi-agent coordination is model-agnostic. Unlike black-box deep learning models, every portfolio decision is traceable to explicit agent reasoning, offering an interpretable and effective approach to multi-modal cryptocurrency portfolio management.",
+      "summary": {
+        "gist": "暗号資産のポートフォリオ管理は、価格やオンチェーンデータ、ニュースといった多様な情報を、高い変動性とリアルタイム性の中で統合する必要がある複雑な課題です。従来の深層学習モデルは予測能力を持つものの、その「ブラックボックス」性から投資家は意思決定の根拠を理解できず、実用化が困難でした。また、単一のLLMエージェントでは、多様な情報を同時に処理し、堅牢な意思決定を行うのが難しいという課題がありました。",
+        "novelty": "従来の深層学習モデルは予測能力があるものの、その「ブラックボックス」性から投資家は意思決定の根拠を理解できず、実用化が進みませんでした。また、単一のLLMエージェントでは、多様な市場データやニュースを同時に処理し、堅牢な投資判断を下すのが困難でした。 この研究では、市場動向分析、ニュース感情分析、そして最終的な取引実行をそれぞれ専門とする3つのLLMエージェントが連携するマルチエージェントシステムを提案。各エージェントの推論過程が明確に記録されるため、なぜその投資判断に至ったのかが追跡可能になり、高いリターンと信頼性を両立しました。",
+        "method": "本研究では、LLMを活用したマルチエージェントシステム（MAS）フレームワークを提案しました。このシステムは、市場動向を分析する「Crypto Agent」、週ごとのニュース感情を分析する「News Agent」、そしてこれらの信号を統合しポートフォリオを実行する「Trading Agent」の3つの専門エージェントで構成されます。これらのエージェントは、階層型、協調型、議論型の3つのコミュニケーションアーキテクチャと、ゼロショット、思考連鎖（CoT）、検索拡張生成（RAG）、スキル拡張の4つの能力構成のいずれかでタスクを分解・実行します。各エージェントは過去のポートフォリオ履歴に基づくローリングメモリと、推論と行動生成を交互に行うReActスタイルのプロンプト構造を持ち、すべてのポートフォリオ決定が追跡可能になっています。2025年のカレンダーイヤーにわたる52週間のバックテストを、時価総額上位15のL1ブロックチェーンネイティブ暗号資産で実施し、単一エージェント、受動的ベンチマーク、深層学習ベースラインと比較しました。",
+        "results": "最適な構成である階層型（スキル拡張）は、累積リターン133.52%、シャープレシオ1.502を達成し、単一エージェント、受動的ベンチマーク、深層学習ベースラインを大幅に上回りました。アブレーション研究により、Crypto Agentが最も重要なコンポーネントであり、これを除去すると累積リターンが42.57パーセンテージポイント減少することが判明しました。また、GPT-4o、GPT-5、Claude Sonnet 4.5といった異なるモデルでもMASが単一エージェントベースラインを上回ることを示し、マルチエージェント連携の利点がモデルに依存しないことを確認しました。深層学習モデルとは異なり、すべてのポートフォリオ決定はエージェントの明確な推論に遡ることができ、解釈可能で効果的なマルチモーダル暗号資産ポートフォリオ管理アプローチを提供します。",
+        "why": "このシステムの成功は、複雑なポートフォリオ管理タスクを、各エージェントの専門分野に特化したサブタスクに分解し、それらを効率的に連携させることで実現されます。Crypto Agentは構造化された市場データから方向性のあるシグナルを生成し、News Agentは非構造化されたニューステキストから市場全体の感情を抽出します。Trading Agentはこれら二つのエージェントからのシグナルとポートフォリオの状態を統合し、最終的な取引行動を決定します。この分業と連携により、各エージェントは自身の専門知識を最大限に活用し、多様な情報を網羅的に分析できます。さらに、ReActスタイルのプロンプトとローリングメモリにより、エージェントは過去の経験から学び、推論過程を明確にすることで、人間が理解し信頼できる意思決定が可能になります。これにより、単一のLLMでは困難だった、多角的かつ長期的な視点での堅牢な投資判断が可能になったと考えられます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-fin.TR）",
+      "field": "AI・データサイエンス",
+      "categoryL1": "adjacent",
+      "categoryL2": "fintech",
+      "arxivPrimary": "q-fin.TR",
+      "titleJa": "LLMを活用したマルチエージェントシステムによる暗号資産ポートフォリオの自動管理",
+      "catchTitle": "AIが賢く分散投資！暗号資産の自動運用",
+      "hook": "「あなた」は暗号資産の価格変動に一喜一憂していませんか？AIが市場ニュースや価格を分析し、自動で賢く投資してくれるとしたらどうでしょう？",
+      "background": "暗号資産のポートフォリオ管理は、価格やオンチェーンデータ、ニュースといった多様な情報を、高い変動性とリアルタイム性の中で統合する必要がある複雑な課題です。従来の深層学習モデルは予測能力を持つものの、その「ブラックボックス」性から投資家は意思決定の根拠を理解できず、実用化が困難でした。また、単一のLLMエージェントでは、多様な情報を同時に処理し、堅牢な意思決定を行うのが難しいという課題がありました。",
+      "quiz": {
+        "question": "このマルチエージェントシステムで最も重要な役割を果たすエージェントはどれでしょう？",
+        "options": [
+          "News Agent",
+          "Crypto Agent",
+          "Trading Agent"
+        ],
+        "correctIndex": 1,
+        "explanation": "アブレーション研究の結果、Crypto Agentを除去すると累積リターンが42.57パーセンテージポイント減少することが判明し、最も重要なコンポーネントであることが示されました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。人間のような文章を生成・理解するAI。"
+        },
+        {
+          "term": "マルチエージェントシステム",
+          "definition": "複数のAIが連携して複雑なタスクを解決するシステム。"
+        },
+        {
+          "term": "Crypto Agent",
+          "definition": "市場の価格や取引量などのデータを分析するAI。"
+        },
+        {
+          "term": "News Agent",
+          "definition": "ニュース記事から市場の感情を読み取るAI。"
+        },
+        {
+          "term": "Trading Agent",
+          "definition": "他のエージェントの情報を統合し、取引を実行するAI。"
+        },
+        {
+          "term": "バックテスト",
+          "definition": "過去のデータを使って戦略の有効性を検証すること。"
+        },
+        {
+          "term": "シャープレシオ",
+          "definition": "投資のリスクとリターンを測る指標。"
+        },
+        {
+          "term": "アブレーション研究",
+          "definition": "システムの一部を取り除き、その影響を調べる分析。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "複数の専門AIエージェントが連携し、市場データとニュース感情を分析することで、人間より高いリターンと透明性で暗号資産を自動運用します。",
+      "noveltyContrast": {
+        "before": "従来の深層学習モデルは予測能力があるものの、その「ブラックボックス」性から投資家は意思決定の根拠を理解できず、実用化が進みませんでした。また、単一のLLMエージェントでは、多様な市場データやニュースを同時に処理し、堅牢な投資判断を下すのが困難でした。",
+        "after": "この研究では、市場動向分析、ニュース感情分析、そして最終的な取引実行をそれぞれ専門とする3つのLLMエージェントが連携するマルチエージェントシステムを提案。各エージェントの推論過程が明確に記録されるため、なぜその投資判断に至ったのかが追跡可能になり、高いリターンと信頼性を両立しました。"
+      },
+      "analogy": {
+        "title": "優秀な農業チームが天候と市場を読んで最適な作物を育てる",
+        "body": "これは、まるで優秀な農業チームが、畑の土壌状態（市場データ）を分析する専門家、天気予報や市場のトレンド（ニュース感情）を読む専門家、そしてそれらの情報を統合して「どの作物を、いつ、どれだけ植えるか」を決めるリーダーが連携して、最高の収穫を目指すようなものです。土壌専門家が「この畑はトマト向きだ」と報告し、天気専門家が「来週は晴れが続くから収穫期だ」と助言。リーダーはそれらを総合して「トマトを収穫し、次の作物はキュウリにしよう」と判断します。この研究のシステムは、各エージェントが専門分野の情報を分析し、互いに連携することで、単独では見逃してしまうような複雑な市場の動きを捉え、より良い投資判断を下すことを可能にします。それぞれの判断理由も記録されるため、なぜその作物を選んだのかが後から検証できる点も共通しています。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+133.52%",
+          "label": "累積リターン"
+        },
+        {
+          "value": "+1.502",
+          "label": "シャープレシオ"
+        }
+      ],
+      "whyYouCare": "この研究は、暗号資産投資における「儲かるけど、なぜ儲かるか分からない」というブラックボックス問題を解決し、透明性と信頼性の高い自動運用を可能にします。これにより、専門知識がない個人投資家でも、AIの力を借りて効率的に資産を増やせる可能性が広がります。また、企業にとっては、より安定した資産運用戦略の構築や、金融商品の開発に役立つでしょう。AIが意思決定の根拠を明確にすることで、規制当局や監査機関もシステムの健全性を評価しやすくなり、金融市場全体の透明性向上にも貢献します。",
+      "takeawayTalk": "専門AIチームが暗号資産を自動運用！儲かる理由もわかるよ。",
+      "bodyText": "本研究では、LLMを活用したマルチエージェントシステム（MAS）フレームワークを提案しました。このシステムは、市場動向を分析する「Crypto Agent」、週ごとのニュース感情を分析する「News Agent」、そしてこれらの信号を統合しポートフォリオを実行する「Trading Agent」の3つの専門エージェントで構成されます。これらのエージェントは、階層型、協調型、議論型の3つのコミュニケーションアーキテクチャと、ゼロショット、思考連鎖（CoT）、検索拡張生成（RAG）、スキル拡張の4つの能力構成のいずれかでタスクを分解・実行します。各エージェントは過去のポートフォリオ履歴に基づくローリングメモリと、推論と行動生成を交互に行うReActスタイルのプロンプト構造を持ち、すべてのポートフォリオ決定が追跡可能になっています。2025年のカレンダーイヤーにわたる52週間のバックテストを、時価総額上位15のL1ブロックチェーンネイティブ暗号資産で実施し、単一エージェント、受動的ベンチマーク、深層学習ベースラインと比較しました。\n\nこのシステムの成功は、複雑なポートフォリオ管理タスクを、各エージェントの専門分野に特化したサブタスクに分解し、それらを効率的に連携させることで実現されます。Crypto Agentは構造化された市場データから方向性のあるシグナルを生成し、News Agentは非構造化されたニューステキストから市場全体の感情を抽出します。Trading Agentはこれら二つのエージェントからのシグナルとポートフォリオの状態を統合し、最終的な取引行動を決定します。この分業と連携により、各エージェントは自身の専門知識を最大限に活用し、多様な情報を網羅的に分析できます。さらに、ReActスタイルのプロンプトとローリングメモリにより、エージェントは過去の経験から学び、推論過程を明確にすることで、人間が理解し信頼できる意思決定が可能になります。これにより、単一のLLMでは困難だった、多角的かつ長期的な視点での堅牢な投資判断が可能になったと考えられます。",
+      "bodyGlossary": [
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。人間のような文章を生成・理解するAI。",
+          "start": 6,
+          "end": 9
+        },
+        {
+          "term": "マルチエージェントシステム",
+          "definition": "複数のAIが連携して複雑なタスクを解決するシステム。",
+          "start": 14,
+          "end": 27
+        },
+        {
+          "term": "Crypto Agent",
+          "definition": "市場の価格や取引量などのデータを分析するAI。",
+          "start": 65,
+          "end": 77
+        },
+        {
+          "term": "News Agent",
+          "definition": "ニュース記事から市場の感情を読み取るAI。",
+          "start": 95,
+          "end": 105
+        },
+        {
+          "term": "Trading Agent",
+          "definition": "他のエージェントの情報を統合し、取引を実行するAI。",
+          "start": 133,
+          "end": 146
+        },
+        {
+          "term": "バックテスト",
+          "definition": "過去のデータを使って戦略の有効性を検証すること。",
+          "start": 390,
+          "end": 396
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。人間のような文章を生成・理解するAI。",
+          "start": 6,
+          "end": 9
+        },
+        {
+          "term": "マルチエージェントシステム",
+          "definition": "複数のAIが連携して複雑なタスクを解決するシステム。",
+          "start": 14,
+          "end": 27
+        },
+        {
+          "term": "Crypto Agent",
+          "definition": "市場の価格や取引量などのデータを分析するAI。",
+          "start": 65,
+          "end": 77
+        },
+        {
+          "term": "News Agent",
+          "definition": "ニュース記事から市場の感情を読み取るAI。",
+          "start": 95,
+          "end": 105
+        },
+        {
+          "term": "Trading Agent",
+          "definition": "他のエージェントの情報を統合し、取引を実行するAI。",
+          "start": 133,
+          "end": 146
+        },
+        {
+          "term": "バックテスト",
+          "definition": "過去のデータを使って戦略の有効性を検証すること。",
+          "start": 390,
+          "end": 396
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 332
+    },
+    {
+      "id": "2606.17115",
+      "title": "Probing, Fusion, and Trustworthiness: A Systematic Evaluation of Foundation Model Representations for Multimodal Cancer Analysis",
+      "authors": [
+        "Jingyu Hu",
+        "Giuseppe Tripodi",
+        "Reed Naidoo",
+        "Sarah F. McGough",
+        "Tapabrata Chakraborti"
+      ],
+      "publishedAt": "2026-06-17T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.17115",
+      "pdfUrl": "https://arxiv.org/pdf/2606.17115.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "cs.LG",
+        "cs.AI",
+        "q-bio.QM"
+      ],
+      "abstract": "Foundation models (FMs) have emerged as powerful representation extractors for medical data, yet their generalizability to datasets under distribution shift remains underexplored. This work systematically evaluates FM-based representations on a suite of computational pathology tasks across two real-world commercial cohorts, IH-BC and IH-NSCLC, drawn from the licensed in-house (IH) oncology dataset. The analysis focuses on two modalities, whole-slide images and transcriptomic profiles, drawn from the IH multimodal data. We first benchmark unimodal probing performance across five FMs on eight downstream classification tasks, and find that image and omics representations carry complementary predictive signals. Then we investigate whether multimodal fusion can yield additional gains over unimodal baselines by comparing three image-omics fusion strategies built on paired representations. The trustworthiness of selected unimodal and multimodal pipelines is further assessed through conformal prediction. Our results show that FM representations achieve competitive performance on out-of-distribution data and that multimodal fusion helps mainly when no single modality dominates the signal. Conformal prediction reveals that in the majority of cases where a point prediction fails, the true diagnosis remains recoverable within the prediction set, reinforcing the value of uncertainty-aware inference for clinical support.",
+      "summary": {
+        "gist": "AIは医療画像診断や病理診断、分子・ゲノム解析、臨床結果予測など、がん診断の様々な分野で有望な性能を示しています。これらの手法では、データから特徴を抽出するエンコーダーが用いられ、その表現力が予測の質を大きく左右します。しかし、新しいタスクごとに専用のエンコーダーをゼロから訓練するのは計算コストが高く、このボトルネックを解決するために、大規模な医療コーパスで事前学習された基盤モデル（FMs）が注目されています。",
+        "novelty": "これまでの医療AIの基盤モデルは、主に公開データセットで評価されてきましたが、実際の医療現場で発生する「未知のデータ」に対する汎用性や信頼性は十分に検証されていませんでした。 この研究では、実際の商業データセットを用いて、基盤モデルが未知のデータに対しても高い診断性能を発揮すること、そして画像と遺伝子情報といった異なる種類のデータを組み合わせることで、より正確な診断が可能になることを明らかにしました。",
+        "method": "本研究では、実際の商業データセット（IH-BCおよびIH-NSCLC）を使用し、がんのマルチモーダル分析における基盤モデルの表現を系統的に評価しました。まず、病理画像とトランスクリプトームプロファイルという2つのモダリティ（情報源）から抽出された単一モダリティの表現の性能を、8つの下流分類タスクでベンチマークしました。次に、3つの異なる画像-オミクス融合戦略を比較し、マルチモーダル融合が単一モダリティのベースラインと比較して追加の診断精度向上をもたらすかを調査しました。最後に、選択された単一モダリティおよびマルチモーダルパイプラインの信頼性を、コンフォーマル予測を用いて評価しました。",
+        "results": "基盤モデルの表現は、未知のデータ（out-of-distribution data）に対しても高い性能を達成しました。単一モダリティの評価では、画像とオミクス表現が相補的な予測シグナルを持つことが示されました。マルチモーダル融合は、単一のモダリティがシグナルを支配しない場合に特に有効であり、いくつかのタスクで単一モダリティのベースラインを上回る性能を示しました。コンフォーマル予測による信頼性評価では、点予測が失敗した場合でも、真の診断が予測セット内に含まれるケースが多数あり、臨床支援における不確実性を考慮した推論の価値が強調されました。",
+        "why": "基盤モデルは、大規模なデータで事前学習されているため、特定のタスクに特化していない未知のデータに対しても、汎用性の高い特徴表現を抽出できます。画像とオミクスデータはそれぞれ異なる側面からがんの情報を捉えるため、これらを融合することで、単一のモダリティでは得られない相補的な情報が活用され、診断精度が向上します。特に、どちらか一方のモダリティが決定的な情報を持たない場合に、複数の情報を組み合わせることでより確実な判断が可能になります。また、コンフォーマル予測は、モデルがどれだけ自信を持って予測しているかを示すことで、誤診のリスクを低減し、臨床医が最終判断を下す際の重要な情報を提供します。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.LG）",
+      "field": "AI・データサイエンス",
+      "categoryL1": "serendipity",
+      "categoryL2": "medical-ai",
+      "arxivPrimary": "cs.LG",
+      "titleJa": "プロービング、融合、信頼性：マルチモーダルがん分析のための基盤モデル表現の系統的評価",
+      "catchTitle": "AIがん診断、基盤モデルの真価",
+      "hook": "あなたの健康診断で「AIが診断しました」と言われたら、その精度と信頼性をどう評価しますか？",
+      "background": "AIは医療画像診断や病理診断、分子・ゲノム解析、臨床結果予測など、がん診断の様々な分野で有望な性能を示しています。これらの手法では、データから特徴を抽出するエンコーダーが用いられ、その表現力が予測の質を大きく左右します。しかし、新しいタスクごとに専用のエンコーダーをゼロから訓練するのは計算コストが高く、このボトルネックを解決するために、大規模な医療コーパスで事前学習された基盤モデル（FMs）が注目されています。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "基盤モデル",
+          "definition": "大規模データで事前学習され、多様なタスクに応用可能なAIモデル。"
+        },
+        {
+          "term": "マルチモーダル",
+          "definition": "画像やテキストなど複数の異なる種類のデータを扱うこと。"
+        },
+        {
+          "term": "トランスクリプトームプロファイル",
+          "definition": "細胞内の遺伝子発現パターンを示すデータ。"
+        },
+        {
+          "term": "モダリティ",
+          "definition": "データが表現される形式や情報源のこと。"
+        },
+        {
+          "term": "コンフォーマル予測",
+          "definition": "AIの予測に信頼区間を与え、不確実性を定量化する手法。"
+        },
+        {
+          "term": "単一モダリティ",
+          "definition": "一つの種類のデータのみを扱うこと。"
+        },
+        {
+          "term": "融合戦略",
+          "definition": "複数のデータやモデルの情報を組み合わせる方法。"
+        },
+        {
+          "term": "オミクス",
+          "definition": "ゲノム、プロテオームなど生体分子全体を網羅的に解析する技術。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "がん診断AIの基盤モデルは、未知のデータでも高い精度を発揮し、複数の情報源を組み合わせることでさらに診断能力を高めることを示しました。",
+      "noveltyContrast": {
+        "before": "これまでの医療AIの基盤モデルは、主に公開データセットで評価されてきましたが、実際の医療現場で発生する「未知のデータ」に対する汎用性や信頼性は十分に検証されていませんでした。",
+        "after": "この研究では、実際の商業データセットを用いて、基盤モデルが未知のデータに対しても高い診断性能を発揮すること、そして画像と遺伝子情報といった異なる種類のデータを組み合わせることで、より正確な診断が可能になることを明らかにしました。"
+      },
+      "analogy": {
+        "title": "畑の土壌分析と品種改良",
+        "body": "これは、まるで新しい品種の種をまく前に、その土地の土壌（画像データ）と気候（遺伝子データ）を別々に分析し、それぞれの情報が持つ「作物の生育ポテンシャル」を評価するようなものです。そして、土壌と気候の情報を組み合わせることで、単独では見えなかった最適な生育条件（がんの診断）が見つかり、より確実に豊かな収穫（正確な診断）に繋がる可能性を探る品種改良に似ています。単一の要素だけでは見落とされがちな、複合的な要因による生育の良し悪しを判断するのに役立ちます。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+3.2pt",
+          "label": "BC-LOHタスクにおけるLateMILのAUC向上"
+        }
+      ],
+      "whyYouCare": "この研究は、AIが私たちの医療にどのように貢献できるかを示す重要な一歩です。特に、がんのような重大な病気の診断において、AIが未知のデータにも対応でき、複数の検査結果を統合してより正確な診断を下せる可能性を示しています。これにより、医師はAIの診断結果をより信頼し、患者はより迅速かつ正確な治療を受けられるようになるかもしれません。また、AIが「自信の度合い」を示すことで、医師はAIの限界を理解し、人間とAIが協力して最適な医療を提供するための道筋を示しています。",
+      "takeawayTalk": "AIのがん診断、複数の情報源を組み合わせると、未知のデータでもっと正確になるらしいよ！",
+      "bodyText": "本研究では、実際の商業データセット（IH-BCおよびIH-NSCLC）を使用し、がんのマルチモーダル分析における基盤モデルの表現を系統的に評価しました。まず、病理画像とトランスクリプトームプロファイルという2つのモダリティ（情報源）から抽出された単一モダリティの表現の性能を、8つの下流分類タスクでベンチマークしました。次に、3つの異なる画像-オミクス融合戦略を比較し、マルチモーダル融合が単一モダリティのベースラインと比較して追加の診断精度向上をもたらすかを調査しました。最後に、選択された単一モダリティおよびマルチモーダルパイプラインの信頼性を、コンフォーマル予測を用いて評価しました。\n\n基盤モデルは、大規模なデータで事前学習されているため、特定のタスクに特化していない未知のデータに対しても、汎用性の高い特徴表現を抽出できます。画像とオミクスデータはそれぞれ異なる側面からがんの情報を捉えるため、これらを融合することで、単一のモダリティでは得られない相補的な情報が活用され、診断精度が向上します。特に、どちらか一方のモダリティが決定的な情報を持たない場合に、複数の情報を組み合わせることでより確実な判断が可能になります。また、コンフォーマル予測は、モデルがどれだけ自信を持って予測しているかを示すことで、誤診のリスクを低減し、臨床医が最終判断を下す際の重要な情報を提供します。",
+      "bodyGlossary": [
+        {
+          "term": "マルチモーダル",
+          "definition": "画像やテキストなど複数の異なる種類のデータを扱うこと。",
+          "start": 43,
+          "end": 50
+        },
+        {
+          "term": "基盤モデル",
+          "definition": "大規模データで事前学習され、多様なタスクに応用可能なAIモデル。",
+          "start": 56,
+          "end": 61
+        },
+        {
+          "term": "トランスクリプトームプロファイル",
+          "definition": "細胞内の遺伝子発現パターンを示すデータ。",
+          "start": 84,
+          "end": 100
+        },
+        {
+          "term": "モダリティ",
+          "definition": "データが表現される形式や情報源のこと。",
+          "start": 106,
+          "end": 111
+        },
+        {
+          "term": "単一モダリティ",
+          "definition": "一つの種類のデータのみを扱うこと。",
+          "start": 123,
+          "end": 130
+        },
+        {
+          "term": "オミクス",
+          "definition": "ゲノム、プロテオームなど生体分子全体を網羅的に解析する技術。",
+          "start": 172,
+          "end": 176
+        },
+        {
+          "term": "融合戦略",
+          "definition": "複数のデータやモデルの情報を組み合わせる方法。",
+          "start": 176,
+          "end": 180
+        },
+        {
+          "term": "コンフォーマル予測",
+          "definition": "AIの予測に信頼区間を与え、不確実性を定量化する手法。",
+          "start": 275,
+          "end": 284
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "マルチモーダル",
+          "definition": "画像やテキストなど複数の異なる種類のデータを扱うこと。",
+          "start": 43,
+          "end": 50
+        },
+        {
+          "term": "基盤モデル",
+          "definition": "大規模データで事前学習され、多様なタスクに応用可能なAIモデル。",
+          "start": 56,
+          "end": 61
+        },
+        {
+          "term": "トランスクリプトームプロファイル",
+          "definition": "細胞内の遺伝子発現パターンを示すデータ。",
+          "start": 84,
+          "end": 100
+        },
+        {
+          "term": "モダリティ",
+          "definition": "データが表現される形式や情報源のこと。",
+          "start": 106,
+          "end": 111
+        },
+        {
+          "term": "単一モダリティ",
+          "definition": "一つの種類のデータのみを扱うこと。",
+          "start": 123,
+          "end": 130
+        },
+        {
+          "term": "オミクス",
+          "definition": "ゲノム、プロテオームなど生体分子全体を網羅的に解析する技術。",
+          "start": 172,
+          "end": 176
+        },
+        {
+          "term": "融合戦略",
+          "definition": "複数のデータやモデルの情報を組み合わせる方法。",
+          "start": 176,
+          "end": 180
+        },
+        {
+          "term": "コンフォーマル予測",
+          "definition": "AIの予測に信頼区間を与え、不確実性を定量化する手法。",
+          "start": 275,
+          "end": 284
+        }
+      ],
+      "agriEconRelevance": "この研究の知見は、農業経済分野における「スマート農業」の発展に応用可能です。例えば、ドローン画像データ（画像モダリティ）と土壌分析データ（オミクスモダリティ）を基盤モデルで統合分析することで、病害虫の早期発見や収穫量予測の精度を向上させることができます。また、未知の環境変化（out-of-distribution data）に対する作物の適応性評価や、複数の情報源を融合した最適な栽培戦略の策定にも役立ち、農業生産性の向上とリスク低減に貢献するでしょう。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 258,
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.17115_why.jpeg",
+          "page": 16,
+          "caption": "マルチモーダルがん分析のための基盤モデル表現のワークフローを示しています。",
+          "label": "Fig. 4. The Detailed Workflow",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-17T23:23:44.163Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.17062",
+      "title": "RadSEM: A Finding-by-Finding Metric for Clinical Consistency in Radiology Reports",
+      "authors": [
+        "Zhenhong Yang",
+        "Zhuoyun Liu",
+        "Jintao Fei",
+        "Wen Tang",
+        "Shichao Quan",
+        "Jun Zhao",
+        "Jun Xu"
+      ],
+      "publishedAt": "2026-06-17T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.17062",
+      "pdfUrl": "https://arxiv.org/pdf/2606.17062.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "q-bio.QM",
+        "cs.LG"
+      ],
+      "abstract": "Radiology report evaluation must distinguish clinical compatibility from surface similarity, because negation, laterality, or normal-abnormal polarity can reverse a finding. We propose RadSEM (Radiology Sentence-Level Evaluation Metric), a constrained LLM-assisted metric for reference-based evaluation of radiology Findings. RadSEM rewrites reference and generated reports into ordered atomic finding sentences, each expressing one site-finding proposition. It then performs contradiction-constrained many-to-many matching: incompatible pairs such as \"effusion\" and \"no effusion\" receive no credit, while compatible granularity differences can receive partial credit. A deterministic stage weights pairs by part-whole and abnormal-detail relationships, counts unmatched findings, and produces an abnormal-focused weighted F1 score. Thus, the LLM supports structured rewriting and local alignment rather than acting as an opaque judge. We evaluate RadSEM with SSREE, a controlled monotonicity stress test built from 2,448 de-identified reports expanded into five graded corruption levels. RadSEM achieves Kendall tau_b of 0.957, all-pairs concordance of 97.8%, adjacent concordance of 95.0%, and strict five-level ordering for 81.9% of reports, outperforming radiology-specific and general text metrics while avoiding the failure in which polarity-inverted reports regain lexical overlap. On the same SSREE set, RadSEM outperforms the Ref-anchored RadSEM-Alt policy, improving adjacent concordance from 90.7% to 95.0% and strict ordering from 67.2% to 81.9%. On a 599-triplet synonym/antonym subset, RadSEM prefers synonyms in 597 cases (99.67%). These results suggest that explicit finding units, contradiction-aware matching, and abnormal-focused deterministic scoring make report scoring more interpretable and sensitive to clinically meaningful errors. Code is available at https://github.com/jdh-algo/RadSEM.",
+      "summary": {
+        "gist": "放射線レポートは、わずかな言葉の違いが臨床的な意味を大きく変えることがあります。例えば、「水腫あり」と「水腫なし」では、患者の状態が全く逆になります。AIが生成する放射線レポートの評価では、単に流暢さや参照レポートとの表面的な類似性だけでなく、個々の所見が臨床的に矛盾なく正しいかが重要です。しかし、既存の自動評価指標では、単語の重複や類似性に基づいて評価するため、臨床的に矛盾する所見を見落とす問題がありました。",
+        "novelty": "従来の評価指標は、レポート全体の単語の類似性や、抽出された医療用語の一致度を見ていました。そのため、「水腫あり」と「水腫なし」のように、単語は似ていても臨床的には真逆の所見を見落とし、不正確な評価をしてしまう問題がありました。 この論文のRadSEMは、レポートを「部位と所見」の最小単位に分解し、一つ一つの所見が参照レポートと矛盾しないかを厳しくチェックします。これにより、単語の類似性ではなく、臨床的な整合性に基づいた正確な評価が可能になりました。",
+        "method": "RadSEMは、参照レポートとAI生成レポートを、それぞれ「部位と所見」を表現する最小単位の「アトミック所見文」に書き換えます。次に、これらのアトミック所見文同士を、矛盾しないという明確な制約の下で照合します。例えば、「水腫あり」と「水腫なし」のように同時に真実でありえないペアは、一切の評価点を与えません。また、表現の粒度が異なる場合でも、臨床的に互換性があれば部分点を付与します。最終的に、異常所見に重点を置いた重み付きF1スコアを算出します。このプロセスにおいて、大規模言語モデル（LLM）は、レポートの構造化された書き換えと局所的なアラインメントを支援する役割を担い、不透明な判断者としては機能しません。",
+        "results": "RadSEMは、2,448件の匿名化されたレポートを5段階の破損レベルに拡張したSSREEというストレステストにおいて、Kendall tau_bで0.957、全ペア一致度で97.8%、隣接ペア一致度で95.0%を達成しました。また、レポートの81.9%で厳密な5段階順序付けを維持し、既存の放射線医学特化型および汎用テキスト指標を上回りました。特に、極性が反転したレポートでも語彙の重複によって高評価を得てしまうという既存指標の失敗を回避しました。",
+        "why": "RadSEMが優れた性能を示すのは、以下の3つのメカニズムによるものです。第一に、「部位と所見」という明確な単位でレポートを分解することで、評価の安定性を確保しています。第二に、臨床的に矛盾する所見のペアを明示的に禁止する「矛盾制約付きマッチング」を導入することで、表面的な類似性ではなく臨床的な整合性に基づいた評価を可能にしています。第三に、異常所見に焦点を当てた重み付けを行うことで、臨床的に重要な情報に対する感度を高めています。これらの要素が組み合わさることで、より解釈可能で、臨床的に意味のあるエラーに敏感なレポート評価を実現しています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.QM）",
+      "field": "AI・データサイエンス",
+      "categoryL1": "adjacent",
+      "categoryL2": "medical-ai-evaluation",
+      "arxivPrimary": "q-bio.QM",
+      "titleJa": "RadSEM: 放射線レポートの臨床的整合性を評価する新しい指標",
+      "catchTitle": "AIの放射線レポート、本当に正しい？",
+      "hook": "AIが書いた放射線レポート、表面上は正しそうに見えても、実は重大な間違いが隠れているかも、と不安に感じませんか？",
+      "background": "放射線レポートは、わずかな言葉の違いが臨床的な意味を大きく変えることがあります。例えば、「水腫あり」と「水腫なし」では、患者の状態が全く逆になります。AIが生成する放射線レポートの評価では、単に流暢さや参照レポートとの表面的な類似性だけでなく、個々の所見が臨床的に矛盾なく正しいかが重要です。しかし、既存の自動評価指標では、単語の重複や類似性に基づいて評価するため、臨床的に矛盾する所見を見落とす問題がありました。",
+      "quiz": {
+        "question": "RadSEMが従来の評価指標よりも優れている主な理由は何ですか？",
+        "options": [
+          "レポート全体の単語の類似性をより詳細に分析するから",
+          "大規模言語モデル（LLM）がレポートの良し悪しを直接判断するから",
+          "個々の所見が臨床的に矛盾しないかを厳しくチェックするから"
+        ],
+        "correctIndex": 2,
+        "explanation": "RadSEMは、レポートを最小単位の所見に分解し、それぞれの所見が臨床的に矛盾しないかを厳しくチェックすることで、従来の表面的な類似性評価の限界を克服しています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "アトミック所見文",
+          "definition": "一つの部位と一つの所見を表現する最小単位の文"
+        },
+        {
+          "term": "矛盾制約付きマッチング",
+          "definition": "同時に真実でありえない所見のペアを禁止する照合"
+        },
+        {
+          "term": "F1スコア",
+          "definition": "適合率と再現率の調和平均で、分類性能を示す指標"
+        },
+        {
+          "term": "大規模言語モデル（LLM）",
+          "definition": "大量のテキストデータで学習したAIモデル"
+        },
+        {
+          "term": "Kendall tau_b",
+          "definition": "順序付けの類似度を測る統計量"
+        },
+        {
+          "term": "SSREE",
+          "definition": "放射線レポート評価のストレステスト用データセット"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "AI生成の放射線レポートが、参照レポートと臨床的に矛盾しないかを、個々の所見レベルで厳密に評価する新しい指標です。",
+      "noveltyContrast": {
+        "before": "従来の評価指標は、レポート全体の単語の類似性や、抽出された医療用語の一致度を見ていました。そのため、「水腫あり」と「水腫なし」のように、単語は似ていても臨床的には真逆の所見を見落とし、不正確な評価をしてしまう問題がありました。",
+        "after": "この論文のRadSEMは、レポートを「部位と所見」の最小単位に分解し、一つ一つの所見が参照レポートと矛盾しないかを厳しくチェックします。これにより、単語の類似性ではなく、臨床的な整合性に基づいた正確な評価が可能になりました。"
+      },
+      "analogy": {
+        "title": "畑の作物の健康診断",
+        "body": "これは、まるで畑の作物の健康診断のようなものです。従来の評価方法は、畑全体を見て「緑が多いから健康そうだ」と判断するようなものでした。しかし、RadSEMは、一本一本の作物に近づき、葉の色、虫食いの有無、実のつき方などを個別に細かくチェックします。もし「この株は病気だ」と診断されたのに、別の診断で「この株は健康だ」となっていたら、それは矛盾していると明確に指摘します。これにより、畑全体の見た目だけでなく、個々の作物の真の健康状態を正確に把握し、問題のある作物を確実に見つけ出すことができるのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "0.957",
+          "label": "Kendall tau_b"
+        },
+        {
+          "value": "97.8%",
+          "label": "全ペア一致度"
+        },
+        {
+          "value": "81.9%",
+          "label": "厳密な5段階順序付け"
+        }
+      ],
+      "whyYouCare": "この研究は、医療AIの信頼性を高める上で非常に重要です。AIが生成する医療レポートは、診断の補助や医師の負担軽減に役立つ一方で、その正確性が常に問われます。RadSEMのような厳密な評価指標が開発されることで、AIが生成するレポートの品質が向上し、医師はより安心してAIの情報を活用できるようになります。これにより、誤診のリスクが減り、患者はより安全で質の高い医療を受けられるようになるでしょう。また、医療AI開発企業にとっては、自社製品の信頼性を客観的に証明するための強力なツールとなります。",
+      "takeawayTalk": "AIの放射線レポート、単語が似てても矛盾してたらダメって厳しく評価するんだって！",
+      "bodyText": "RadSEMは、参照レポートとAI生成レポートを、それぞれ「部位と所見」を表現する最小単位の「アトミック所見文」に書き換えます。次に、これらのアトミック所見文同士を、矛盾しないという明確な制約の下で照合します。例えば、「水腫あり」と「水腫なし」のように同時に真実でありえないペアは、一切の評価点を与えません。また、表現の粒度が異なる場合でも、臨床的に互換性があれば部分点を付与します。最終的に、異常所見に重点を置いた重み付きF1スコアを算出します。このプロセスにおいて、大規模言語モデル（LLM）は、レポートの構造化された書き換えと局所的なアラインメントを支援する役割を担い、不透明な判断者としては機能しません。\n\nRadSEMが優れた性能を示すのは、以下の3つのメカニズムによるものです。第一に、「部位と所見」という明確な単位でレポートを分解することで、評価の安定性を確保しています。第二に、臨床的に矛盾する所見のペアを明示的に禁止する「矛盾制約付きマッチング」を導入することで、表面的な類似性ではなく臨床的な整合性に基づいた評価を可能にしています。第三に、異常所見に焦点を当てた重み付けを行うことで、臨床的に重要な情報に対する感度を高めています。これらの要素が組み合わさることで、より解釈可能で、臨床的に意味のあるエラーに敏感なレポート評価を実現しています。",
+      "bodyGlossary": [
+        {
+          "term": "アトミック所見文",
+          "definition": "一つの部位と一つの所見を表現する最小単位の文",
+          "start": 47,
+          "end": 55
+        },
+        {
+          "term": "F1スコア",
+          "definition": "適合率と再現率の調和平均で、分類性能を示す指標",
+          "start": 212,
+          "end": 217
+        },
+        {
+          "term": "大規模言語モデル（LLM）",
+          "definition": "大量のテキストデータで学習したAIモデル",
+          "start": 235,
+          "end": 248
+        },
+        {
+          "term": "矛盾制約付きマッチング",
+          "definition": "同時に真実でありえない所見のペアを禁止する照合",
+          "start": 420,
+          "end": 431
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "アトミック所見文",
+          "definition": "一つの部位と一つの所見を表現する最小単位の文",
+          "start": 47,
+          "end": 55
+        },
+        {
+          "term": "F1スコア",
+          "definition": "適合率と再現率の調和平均で、分類性能を示す指標",
+          "start": 212,
+          "end": 217
+        },
+        {
+          "term": "大規模言語モデル（LLM）",
+          "definition": "大量のテキストデータで学習したAIモデル",
+          "start": 235,
+          "end": 248
+        },
+        {
+          "term": "矛盾制約付きマッチング",
+          "definition": "同時に真実でありえない所見のペアを禁止する照合",
+          "start": 420,
+          "end": 431
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 260,
+      "keyFigure": {
+        "imagePath": "/figures/2606.17062_results.png",
+        "page": 18,
+        "caption": "RadSEMが既存指標を上回り、レポートの破損レベルを正確に評価していることを示しています。",
+        "label": "Figure 4 SSREE pairwise ordering heatmaps. Each cell reports the fraction of reports for which the metric score of the",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-17T23:23:48.597Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.17062_results.png",
+          "page": 18,
+          "caption": "RadSEMが既存指標を上回り、レポートの破損レベルを正確に評価していることを示しています。",
+          "label": "Figure 4 SSREE pairwise ordering heatmaps. Each cell reports the fraction of reports for which the metric score of the",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-17T23:23:48.597Z"
+        },
+        {
+          "imagePath": "/figures/2606.17062_why.png",
+          "page": 6,
+          "caption": "RadSEMが放射線レポートを処理し、評価するまでの主要な段階を示しています。",
+          "label": "Figure 1 RadSEM pipeline. Stage 1 (report processing) rewrites Ref/Gen into ordered atomic finding sentences; Stage",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-17T23:23:48.598Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.17668",
+      "title": "ASTEROID: A Spatiotemporal Information Transformer for Forecasting Multi-Step Time Series of Molecular Dynamics",
+      "authors": [
+        "Kexin Wu",
+        "Luonan Chen",
+        "Renxiao Wang"
+      ],
+      "publishedAt": "2026-06-17T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.17668",
+      "pdfUrl": "https://arxiv.org/pdf/2606.17668.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "cs.LG",
+        "cs.AI",
+        "q-bio.QM"
+      ],
+      "abstract": "Molecular dynamics (MD) simulation is computationally demanding, particularly for large-scale systems requiring long-term analysis. Accurate forecast of the outcomes of a MD simulation is not only an attractive scientific challenge but also has substantial practical value. In this work, we developed a data-driven framework, termed ASTEROID (Advanced Spatiotemporal TransformER fOr Inferring Dynamics), that can directly predict multi-step atomic coordinates, avoiding conventional iterative integration. For this purpose, our ASTEROID reformulates MD trajectories as high-dimensional spatiotemporal sequences and integrates the Spatiotemporal Information (STI) Transformation equation into a Transformer architecture. The core innovation of ASTEROID lies in its ability to model multiscale spatiotemporal dependencies. In particular, for spatial dependencies, a local-global self-attention mechanism captures both short- and long-range interactions. For temporal dependencies, an encoder-decoder structure integrates global context with autoregressive forecasting. ASTEROID was evaluated on several quantum-mechanics derived molecular datasets. Our results indicate that ASTEROID achieved not only a higher level of accuracy in multi-step prediction than existing methods on various benchmarks, but also significantly reduced computational cost of conventional MD simulation. Moreover, the model supports iterative multi-step forecasting over an extended time scale. This work establishes a robust and generalizable data-driven paradigm for accelerating MD simulations.",
+      "summary": {
+        "gist": "分子動力学（MD）シミュレーションは、生体高分子研究において不可欠なツールですが、原子システムの複雑性と、広範な空間的・時間的スケールでのエネルギーと力の計算に伴う高い計算コストが課題でした。このため、AI技術を統合してシミュレーションを加速する必要性が高まっています。既存のAIアプローチには、量子力学的手法、パラメトリックモデル、時系列予測手法などがありますが、それぞれに課題があり、特に時系列予測では、予測期間が長くなると精度が低下するという問題がありました。",
+        "novelty": "従来の分子動力学シミュレーションは、原子の動きを段階的に計算するため、大規模なシステムや長期間の分析には膨大な計算コストがかかりました。また、既存のAI予測モデルも、予測期間が長くなると精度が落ちる、高次元の分子システムに対応しきれないといった課題がありました。 この論文のASTEROIDは、分子の動きを「高次元の時空間データ」として捉え、時空間情報変換方程式とTransformerモデルを組み合わせることで、一度に複数のステップ先の原子座標を直接予測します。これにより、計算コストを大幅に削減しつつ、高い予測精度を実現しました。",
+        "method": "ASTEROIDは、分子動力学の軌跡を高次元の時空間シーケンスとして再定式化し、時空間情報（STI）変換方程式をTransformerアーキテクチャに統合します。このモデルは、遅延埋め込み定理に基づいて、高次元の空間情報から任意のターゲット変数の将来の値をマッピングするSTIフレームワークを利用します。空間依存性については、局所的・大局的な自己注意メカニズムを用いて短距離および長距離の相互作用を捉え、時間依存性については、エンコーダー・デコーダー構造を用いて大局的な文脈と自己回帰予測を統合します。これにより、従来の反復的な数値積分を回避し、多段階の原子座標を直接予測します。",
+        "results": "ASTEROIDは、複数の量子力学由来の分子データセットで評価され、既存の手法と比較して多段階予測において高い精度を達成しました。また、従来のMDシミュレーションの計算コストを大幅に削減できることが示されました。さらに、このモデルは拡張された時間スケールでの反復的な多段階予測をサポートします。",
+        "why": "ASTEROIDの核心は、マルチスケールの時空間依存性をモデル化する能力にあります。STI変換方程式は、高次元の空間情報から将来の時系列データへのマッピングを確立し、限られたサンプルサイズによる次元の呪いを軽減します。Transformerアーキテクチャは、自己注意メカニズムによって長距離の依存関係を効果的に捉え、エンコーダー・デコーダー構造がグローバルな文脈と自己回帰予測を統合することで、高次元かつ非線形な分子システムの複雑な動態を効率的かつ正確に予測することを可能にします。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.LG）",
+      "field": "AI・データサイエンス",
+      "categoryL1": "serendipity",
+      "categoryL2": "data-science",
+      "arxivPrimary": "cs.LG",
+      "titleJa": "ASTEROID: 分子動力学の多段階時系列予測のための時空間情報トランスフォーマー",
+      "catchTitle": "分子の動きを高速予測！AIで薬開発を加速",
+      "hook": "もし、あなたが新薬開発の研究者だとしたら、分子の動きを予測するシミュレーションに膨大な時間がかかっていませんか？",
+      "background": "分子動力学（MD）シミュレーションは、生体高分子研究において不可欠なツールですが、原子システムの複雑性と、広範な空間的・時間的スケールでのエネルギーと力の計算に伴う高い計算コストが課題でした。このため、AI技術を統合してシミュレーションを加速する必要性が高まっています。既存のAIアプローチには、量子力学的手法、パラメトリックモデル、時系列予測手法などがありますが、それぞれに課題があり、特に時系列予測では、予測期間が長くなると精度が低下するという問題がありました。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "分子動力学シミュレーション",
+          "definition": "原子や分子の動きを計算で再現する手法"
+        },
+        {
+          "term": "時空間シーケンス",
+          "definition": "時間と空間の両方の情報を持つデータ列"
+        },
+        {
+          "term": "時空間情報（STI）変換方程式",
+          "definition": "高次元の空間情報から未来の時系列を導く式"
+        },
+        {
+          "term": "Transformerアーキテクチャ",
+          "definition": "自然言語処理などで使われる深層学習モデル"
+        },
+        {
+          "term": "遅延埋め込み定理",
+          "definition": "単一の時系列から元のシステムの動態を再構築する数学理論"
+        },
+        {
+          "term": "自己注意メカニズム",
+          "definition": "データ内の異なる位置間の関係性を捉える仕組み"
+        },
+        {
+          "term": "エンコーダー・デコーダー構造",
+          "definition": "入力データを圧縮し、目的の出力に変換するモデル"
+        },
+        {
+          "term": "次元の呪い",
+          "definition": "データの次元が増えることで計算が困難になる現象"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "分子の動きを予測するシミュレーションを、AIで高速かつ高精度に行う新しいフレームワークが登場しました。",
+      "noveltyContrast": {
+        "before": "従来の分子動力学シミュレーションは、原子の動きを段階的に計算するため、大規模なシステムや長期間の分析には膨大な計算コストがかかりました。また、既存のAI予測モデルも、予測期間が長くなると精度が落ちる、高次元の分子システムに対応しきれないといった課題がありました。",
+        "after": "この論文のASTEROIDは、分子の動きを「高次元の時空間データ」として捉え、時空間情報変換方程式とTransformerモデルを組み合わせることで、一度に複数のステップ先の原子座標を直接予測します。これにより、計算コストを大幅に削減しつつ、高い予測精度を実現しました。"
+      },
+      "analogy": {
+        "title": "畑の成長を先読みするベテラン農家",
+        "body": "これは、まるでベテラン農家が、今日の土壌や天候、過去の生育データから、数週間先の作物の成長具合や収穫量を瞬時に見通すようなものです。従来のシミュレーションが「毎日畑に行って、今日の成長を測り、明日を予測する」地道な作業だとしたら、ASTEROIDは「過去の膨大なデータと経験則（時空間情報変換方程式）を元に、AI（Transformer）が数週間先の畑の状態を一度に予測する」ようなもの。これにより、日々の計測の手間を省き、より早く、より正確に未来の収穫計画を立てられるようになります。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、新薬開発や材料科学の分野に大きな影響を与えます。分子の動きを高速かつ正確に予測できるようになることで、これまで数ヶ月から数年かかっていたシミュレーション時間を大幅に短縮し、より多くの候補物質を効率的に評価できるようになります。これにより、画期的な新薬や高性能な新素材の発見が加速され、私たちの生活の質を向上させる可能性を秘めています。例えば、病気の治療薬や、環境に優しい新素材の開発がよりスピーディーに進むかもしれません。",
+      "takeawayTalk": "AIで分子の動きを超高速予測！新薬開発が劇的に加速するかも。",
+      "bodyText": "ASTEROIDは、分子動力学の軌跡を高次元の時空間シーケンスとして再定式化し、時空間情報（STI）変換方程式をTransformerアーキテクチャに統合します。このモデルは、遅延埋め込み定理に基づいて、高次元の空間情報から任意のターゲット変数の将来の値をマッピングするSTIフレームワークを利用します。空間依存性については、局所的・大局的な自己注意メカニズムを用いて短距離および長距離の相互作用を捉え、時間依存性については、エンコーダー・デコーダー構造を用いて大局的な文脈と自己回帰予測を統合します。これにより、従来の反復的な数値積分を回避し、多段階の原子座標を直接予測します。\n\nASTEROIDの核心は、マルチスケールの時空間依存性をモデル化する能力にあります。STI変換方程式は、高次元の空間情報から将来の時系列データへのマッピングを確立し、限られたサンプルサイズによる次元の呪いを軽減します。Transformerアーキテクチャは、自己注意メカニズムによって長距離の依存関係を効果的に捉え、エンコーダー・デコーダー構造がグローバルな文脈と自己回帰予測を統合することで、高次元かつ非線形な分子システムの複雑な動態を効率的かつ正確に予測することを可能にします。",
+      "bodyGlossary": [
+        {
+          "term": "時空間シーケンス",
+          "definition": "時間と空間の両方の情報を持つデータ列",
+          "start": 23,
+          "end": 31
+        },
+        {
+          "term": "時空間情報（STI）変換方程式",
+          "definition": "高次元の空間情報から未来の時系列を導く式",
+          "start": 40,
+          "end": 55
+        },
+        {
+          "term": "Transformerアーキテクチャ",
+          "definition": "自然言語処理などで使われる深層学習モデル",
+          "start": 56,
+          "end": 74
+        },
+        {
+          "term": "遅延埋め込み定理",
+          "definition": "単一の時系列から元のシステムの動態を再構築する数学理論",
+          "start": 88,
+          "end": 96
+        },
+        {
+          "term": "自己注意メカニズム",
+          "definition": "データ内の異なる位置間の関係性を捉える仕組み",
+          "start": 171,
+          "end": 180
+        },
+        {
+          "term": "エンコーダー・デコーダー構造",
+          "definition": "入力データを圧縮し、目的の出力に変換するモデル",
+          "start": 213,
+          "end": 227
+        },
+        {
+          "term": "次元の呪い",
+          "definition": "データの次元が増えることで計算が困難になる現象",
+          "start": 389,
+          "end": 394
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "時空間シーケンス",
+          "definition": "時間と空間の両方の情報を持つデータ列",
+          "start": 23,
+          "end": 31
+        },
+        {
+          "term": "時空間情報（STI）変換方程式",
+          "definition": "高次元の空間情報から未来の時系列を導く式",
+          "start": 40,
+          "end": 55
+        },
+        {
+          "term": "Transformerアーキテクチャ",
+          "definition": "自然言語処理などで使われる深層学習モデル",
+          "start": 56,
+          "end": 74
+        },
+        {
+          "term": "遅延埋め込み定理",
+          "definition": "単一の時系列から元のシステムの動態を再構築する数学理論",
+          "start": 88,
+          "end": 96
+        },
+        {
+          "term": "自己注意メカニズム",
+          "definition": "データ内の異なる位置間の関係性を捉える仕組み",
+          "start": 171,
+          "end": 180
+        },
+        {
+          "term": "エンコーダー・デコーダー構造",
+          "definition": "入力データを圧縮し、目的の出力に変換するモデル",
+          "start": 213,
+          "end": 227
+        },
+        {
+          "term": "次元の呪い",
+          "definition": "データの次元が増えることで計算が困難になる現象",
+          "start": 389,
+          "end": 394
+        }
+      ],
+      "agriEconRelevance": "農業経済学の分野では、作物の成長モデルや病害虫の拡散予測、気候変動が農業生産に与える影響のシミュレーションなどに応用できる可能性があります。例えば、高次元の気象データや土壌データから、特定の作物の数週間先の収穫量を高精度に予測したり、病害虫の発生パターンを早期に特定し、最適な対策を講じたりすることで、農業生産の効率化と安定化に貢献できるでしょう。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 246,
+      "keyFigure": {
+        "imagePath": "/figures/2606.17668_results.png",
+        "page": 17,
+        "caption": "ASTEROIDモデルが4つの異なる生体分子システムで予測した結果を示しています。",
+        "label": "Figure 3. Prediction results of the model across four different biomolecular systems. a. Tetrapeptide.",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-17T23:23:51.212Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.17668_results.png",
+          "page": 17,
+          "caption": "ASTEROIDモデルが4つの異なる生体分子システムで予測した結果を示しています。",
+          "label": "Figure 3. Prediction results of the model across four different biomolecular systems. a. Tetrapeptide.",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-17T23:23:51.212Z"
+        },
+        {
+          "imagePath": "/figures/2606.17668_why.png",
+          "page": 10,
+          "caption": "時空間アテンションを備えたエンコーダー・デコーダーモデルのアーキテクチャを示しています。",
+          "label": "Figure 2. Architecture of the encoder-decoder model with the spatiotemporal attention",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-17T23:23:51.212Z"
+        }
+      ]
+    }
+  ]
+}

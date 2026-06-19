@@ -1,0 +1,1002 @@
+{
+  "date": "2026-06-20",
+  "papers": [
+    {
+      "id": "2606.20489v1",
+      "title": "West Nile virus outbreak in Italy modelled with the quantum Game of Life",
+      "authors": [
+        "Andrea Fontana",
+        "Simone Tambascia",
+        "Ciro Di Carluccio",
+        "Andrea Esposito",
+        "Bernardo Spagnolo",
+        "Andrea M. Chiariello"
+      ],
+      "publishedAt": "2026-06-18T17:06:24Z",
+      "url": "https://arxiv.org/abs/2606.20489v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.20489v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "q-bio.PE",
+        "nlin.CG",
+        "physics.bio-ph",
+        "stat.AP"
+      ],
+      "abstract": "In the last years, an anomalously high spreading of West Nile virus (WNV) has been observed in Italy, with particularly high peaks of infections in southern Lazio, Campania and Veneto regions. The main disease vector for WNV is represented by Culex pipiens mosquitoes, which spread human infections through their bites. Here, we investigate WNV fever epidemic diffusion during summer season 2025 in Italy through a computational approach based on a quantum version of the Game of Life (GOL) cellular automaton model. Specifically, human dynamics evolves according to the GOL rules, while stochastic dynamics of disease vectors, i.e., mosquitoes, as well as their interaction with humans, simultaneously occur. We show that this model fits the curves of cumulative infected individuals with high accuracy, either at local and average-regional level, with only optimization of mosquito birth and removal rates parameters. Furthermore, leveraging model flexibility, we show that changes in model parameters values elucidate system response to environmental variations. For instance, we quantify, e.g., the impact of mosquito spreading containment measures or sudden mosquito increasing abundance due to climatic and ecological changes. Overall, we provide a general, quantitative description of WNV infection spreading in Italy which could represent a supportive tool to test different environmental scenarios and could be useful to devise strategies for decision makers to monitor disease vector dynamics and to control consequent virus diffusion.",
+      "summary": {
+        "gist": "近年、イタリアで西ナイルウイルス（WNV）の感染が異常に拡大しており、特に南部ラツィオ州、カンパニア州、ヴェネト州で感染ピークが観測されています。WNVの主な媒介生物はチカイエカで、蚊の刺咬を通じて人間に感染が広がります。このウイルスは、地球温暖化などの気候変動により、これまで流行が見られなかった地域でも発生するようになり、公衆衛生上の大きな課題となっています。",
+        "novelty": "従来の感染症モデルは、人間の行動や環境要因を単純化して扱っていました。特に、蚊のような媒介生物の複雑な動きや、地域ごとの気候・生態学的違いによる影響を詳細に捉えるのが困難でした。 この論文では、人間の動きを量子版ライフゲームで、蚊の動きを確率モデルでシミュレーションし、両者の相互作用を考慮。これにより、地域ごとの感染者数の推移を非常に高い精度で再現し、蚊の発生率や除去率の変化が感染拡大に与える影響を定量的に評価できるようになりました。",
+        "method": "本研究では、2025年夏のイタリアにおける西ナイルウイルス熱の流行拡散を、量子版ライフゲーム（gSCGOL）と呼ばれるセルオートマトンモデルに基づいた計算手法で調査しました。具体的には、人間のダイナミクスはgSCGOLのルールに従って進化し、同時に蚊のような媒介生物の確率的ダイナミクスと人間との相互作用が発生します。人間の人口は100x100の2次元格子上で定義され、各セルは「生きている」または「死んでいる」状態の量子ビットの重ね合わせで表現されます。蚊のシステムも同じサイズの格子上で確率的に進化し、蚊の出生率（α）と除去率（β）が定義されます。感染は、蚊が存在するセルが人間のセルと相互作用し、一定の確率で感染する蚊の刺咬イベントをシミュレートすることで発生します。このモデルは、イタリア国立衛生研究所（ISS）の2025年夏の監視データを用いて検証されました。",
+        "results": "このモデルは、累積感染者数の曲線（地域レベルおよび平均地域レベルの両方）を非常に高い精度で再現できることを示しました。特に、ラツィオ州とカンパニア州の感染者数の急増とその後のプラトー、ヴェネト州のより緩やかな増加を正確に捉えました。モデルの柔軟性を活用することで、蚊の出生率や除去率といったモデルパラメータ値の変化が、環境変動に対するシステム応答をどのように解明するかを示しました。例えば、蚊の拡散抑制策や気候・生態学的変化による蚊の急増の影響を定量化することができました。",
+        "why": "このモデルが感染拡大を正確に予測できるのは、人間の複雑な行動を量子版ライフゲームで、蚊の確率的な増減と人間との相互作用を組み合わせることで、多岐にわたる要因を統合的に捉えているためです。人間の移動性や集団のダイナミクスを量子的な状態として表現することで、従来のモデルでは捉えきれなかった微細な変化をシミュレートできます。また、蚊の出生率や除去率といったパラメータを最適化することで、地域ごとの気候や生態学的条件の違いが感染拡大に与える影響を具体的に反映させることが可能になります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.PE）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "public-health",
+      "arxivPrimary": "q-bio.PE",
+      "titleJa": "量子版ライフゲームでイタリアの西ナイルウイルス流行をモデル化",
+      "catchTitle": "蚊が媒介する感染症、量子で予測",
+      "hook": "あなたの住む地域で、これまで見なかった感染症が流行し始めたらどうしますか？",
+      "background": "近年、イタリアで西ナイルウイルス（WNV）の感染が異常に拡大しており、特に南部ラツィオ州、カンパニア州、ヴェネト州で感染ピークが観測されています。WNVの主な媒介生物はチカイエカで、蚊の刺咬を通じて人間に感染が広がります。このウイルスは、地球温暖化などの気候変動により、これまで流行が見られなかった地域でも発生するようになり、公衆衛生上の大きな課題となっています。",
+      "quiz": {
+        "question": "この研究で西ナイルウイルスの感染拡大をモデル化するために用いられた主な計算手法は何ですか？",
+        "options": [
+          "古典的なSIRモデル",
+          "量子版ライフゲームと確率モデルの組み合わせ",
+          "機械学習による画像認識"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究では、人間のダイナミクスを量子版ライフゲームで、蚊のダイナミクスを確率モデルでシミュレートし、両者の相互作用を考慮しています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "西ナイルウイルス",
+          "definition": "蚊が媒介するフラビウイルス科のウイルス。"
+        },
+        {
+          "term": "量子版ライフゲーム",
+          "definition": "古典的なライフゲームを量子力学的に拡張したモデル。"
+        },
+        {
+          "term": "セルオートマトン",
+          "definition": "格子状のセルが単純な規則で状態変化するモデル。"
+        },
+        {
+          "term": "チカイエカ",
+          "definition": "西ナイルウイルスを媒介する主な蚊の一種。"
+        },
+        {
+          "term": "量子ビット",
+          "definition": "量子情報処理における情報の基本単位。"
+        },
+        {
+          "term": "出生率",
+          "definition": "ある期間に生まれる個体の割合。"
+        },
+        {
+          "term": "除去率",
+          "definition": "ある期間に個体が減少する割合。"
+        },
+        {
+          "term": "刺咬イベント",
+          "definition": "蚊が人間を刺す行為。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "量子版ライフゲームと確率モデルを組み合わせ、蚊が媒介する西ナイルウイルスの感染拡大を正確に予測するモデルを開発しました。",
+      "noveltyContrast": {
+        "before": "従来の感染症モデルは、人間の行動や環境要因を単純化して扱っていました。特に、蚊のような媒介生物の複雑な動きや、地域ごとの気候・生態学的違いによる影響を詳細に捉えるのが困難でした。",
+        "after": "この論文では、人間の動きを量子版ライフゲームで、蚊の動きを確率モデルでシミュレーションし、両者の相互作用を考慮。これにより、地域ごとの感染者数の推移を非常に高い精度で再現し、蚊の発生率や除去率の変化が感染拡大に与える影響を定量的に評価できるようになりました。"
+      },
+      "analogy": {
+        "title": "畑の害虫駆除、ドローンでピンポイント予測",
+        "body": "これはまるで、広大な畑で特定の害虫が異常発生した際に、熟練の農家が長年の経験と勘で「この辺りの作物が危ない」と予測するだけでなく、最新のドローンが畑の隅々まで監視し、害虫の発生パターンや天候、土壌の状態をリアルタイムで分析。さらに、AIが「この区画では数日後に大量発生するから、今のうちにこの農薬を散布すれば被害を最小限に抑えられる」と、ピンポイントで具体的な対策を提案してくれるようなものです。経験と最新技術を組み合わせ、より効果的な対策を打てるようになります。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "高精度",
+          "label": "累積感染者曲線再現"
+        }
+      ],
+      "whyYouCare": "この研究は、気候変動によってこれまで見られなかった地域で感染症が流行する現代において、私たちの生活や社会を守る上で非常に重要です。蚊が媒介する感染症は、農業従事者や屋外で働く人々にとって特にリスクが高く、感染拡大は労働力不足や経済的損失にもつながりかねません。このモデルを使えば、蚊の発生状況や気候変動のシナリオに応じて、いつ、どこで、どの程度の感染が広がるかを予測し、効果的な蚊の駆除や予防策を事前に計画できるようになります。これにより、医療資源の適切な配分や、地域住民への迅速な情報提供が可能となり、私たちの健康と社会経済活動を守るための強力なツールとなるでしょう。",
+      "takeawayTalk": "蚊が媒介する感染症、量子モデルで未来を予測できるって！",
+      "bodyText": "本研究では、2025年夏のイタリアにおける西ナイルウイルス熱の流行拡散を、量子版ライフゲーム（gSCGOL）と呼ばれるセルオートマトンモデルに基づいた計算手法で調査しました。具体的には、人間のダイナミクスはgSCGOLのルールに従って進化し、同時に蚊のような媒介生物の確率的ダイナミクスと人間との相互作用が発生します。人間の人口は100x100の2次元格子上で定義され、各セルは「生きている」または「死んでいる」状態の量子ビットの重ね合わせで表現されます。蚊のシステムも同じサイズの格子上で確率的に進化し、蚊の出生率（α）と除去率（β）が定義されます。感染は、蚊が存在するセルが人間のセルと相互作用し、一定の確率で感染する蚊の刺咬イベントをシミュレートすることで発生します。このモデルは、イタリア国立衛生研究所（ISS）の2025年夏の監視データを用いて検証されました。\n\nこのモデルが感染拡大を正確に予測できるのは、人間の複雑な行動を量子版ライフゲームで、蚊の確率的な増減と人間との相互作用を組み合わせることで、多岐にわたる要因を統合的に捉えているためです。人間の移動性や集団のダイナミクスを量子的な状態として表現することで、従来のモデルでは捉えきれなかった微細な変化をシミュレートできます。また、蚊の出生率や除去率といったパラメータを最適化することで、地域ごとの気候や生態学的条件の違いが感染拡大に与える影響を具体的に反映させることが可能になります。",
+      "bodyGlossary": [
+        {
+          "term": "西ナイルウイルス",
+          "definition": "蚊が媒介するフラビウイルス科のウイルス。",
+          "start": 21,
+          "end": 29
+        },
+        {
+          "term": "量子版ライフゲーム",
+          "definition": "古典的なライフゲームを量子力学的に拡張したモデル。",
+          "start": 37,
+          "end": 46
+        },
+        {
+          "term": "セルオートマトン",
+          "definition": "格子状のセルが単純な規則で状態変化するモデル。",
+          "start": 59,
+          "end": 67
+        },
+        {
+          "term": "量子ビット",
+          "definition": "量子情報処理における情報の基本単位。",
+          "start": 209,
+          "end": 214
+        },
+        {
+          "term": "出生率",
+          "definition": "ある期間に生まれる個体の割合。",
+          "start": 255,
+          "end": 258
+        },
+        {
+          "term": "除去率",
+          "definition": "ある期間に個体が減少する割合。",
+          "start": 262,
+          "end": 265
+        },
+        {
+          "term": "刺咬イベント",
+          "definition": "蚊が人間を刺す行為。",
+          "start": 313,
+          "end": 319
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "西ナイルウイルス",
+          "definition": "蚊が媒介するフラビウイルス科のウイルス。",
+          "start": 21,
+          "end": 29
+        },
+        {
+          "term": "量子版ライフゲーム",
+          "definition": "古典的なライフゲームを量子力学的に拡張したモデル。",
+          "start": 37,
+          "end": 46
+        },
+        {
+          "term": "セルオートマトン",
+          "definition": "格子状のセルが単純な規則で状態変化するモデル。",
+          "start": 59,
+          "end": 67
+        },
+        {
+          "term": "量子ビット",
+          "definition": "量子情報処理における情報の基本単位。",
+          "start": 209,
+          "end": 214
+        },
+        {
+          "term": "出生率",
+          "definition": "ある期間に生まれる個体の割合。",
+          "start": 255,
+          "end": 258
+        },
+        {
+          "term": "除去率",
+          "definition": "ある期間に個体が減少する割合。",
+          "start": 262,
+          "end": 265
+        },
+        {
+          "term": "刺咬イベント",
+          "definition": "蚊が人間を刺す行為。",
+          "start": 313,
+          "end": 319
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 256,
+      "keyFigure": {
+        "imagePath": "/figures/2606.20489v1_results.png",
+        "page": 8,
+        "caption": "モデルがイタリアの西ナイルウイルス感染者数の推移を地域別に再現する様子を示しています。",
+        "label": "Figure 3: Model performances in describing aggregate and regional infection dynamics in",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-19T22:56:30.214Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.20489v1_results.png",
+          "page": 8,
+          "caption": "モデルがイタリアの西ナイルウイルス感染者数の推移を地域別に再現する様子を示しています。",
+          "label": "Figure 3: Model performances in describing aggregate and regional infection dynamics in",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-19T22:56:30.214Z"
+        },
+        {
+          "imagePath": "/figures/2606.20489v1_why.png",
+          "page": 7,
+          "caption": "人間と病原体を媒介する蚊の個体群の計算モデルの概念図です。",
+          "label": "Figure 2: Computational model of human population and disease vectors dynamics. a: Human",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-19T22:56:30.215Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.18805v1",
+      "title": "Emotional driving: Reference-dependent emotions and risky driving behavior after sporting events",
+      "authors": [
+        "Travis Richardson",
+        "Steve Bickley",
+        "Ho Fai Ben Chan",
+        "Benno Torgler",
+        "Shamsunnahar Yasmin",
+        "Tim Pawlowski"
+      ],
+      "publishedAt": "2026-06-17T08:17:05Z",
+      "url": "https://arxiv.org/abs/2606.18805v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.18805v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "econ.GN"
+      ],
+      "abstract": "Using average vehicle speed data in 10-minute increments at the Traffic Message Channel (TMC) location level, along with precise crash timing and location information, we analyze driving behavior around five Florida stadiums before and after NFL and NBA regular season games from 2015 to 2019. We find no evidence of emotional driving following NBA games, but strong and consistent effects following NFL games, concentrated in predicted-close games that end in disappointing home-team losses -- combining high pre-game suspense with negative outcome valence. These games are associated with significant increases in average vehicle speed within 3 km of stadiums during the first post-game hour, dissipating with increasing time and distance from the stadium. Average vehicle speed increases by up to 3 mph relative to predicted-close games that ended in a win -- an effect several times larger than the typical game day versus non-game day speed differential. Overall, our results highlight how the combination of sustained suspense and negative outcome valence in close sporting contests can spill over into risky post-game driving behavior, underscoring the behavioral and public safety implications of affective cues in large-scale sporting events.",
+      "summary": {
+        "gist": "人間は絶対的な結果だけでなく、期待値との比較で物事を評価し、そのギャップから喜びや失望といった感情が生まれます。これらの感情は、一見無関係な行動にも影響を与えることが知られています。特にスポーツイベントは、ファンが明確な期待を持って臨み、結果によって強い感情が引き起こされるため、感情の行動への波及を観察するのに適した場です。運転行動は、その感情の波及を高い時間的・空間的解像度で観察でき、さらに小さな速度変化でも公共の安全に大きな影響を与えるため、研究対象として非常に価値があります。",
+        "novelty": "これまで、スポーツ観戦後の感情が交通死亡事故を増やすことは知られていましたが、その背後にある具体的な行動メカニズム（なぜ、どのように速度が上がるのか）は不明でした。特に、勝利の興奮だけでなく、敗北の失望が運転にどう影響するかは分かっていませんでした。 この研究は、NFLの接戦でホームチームが期待を裏切る形で負けた場合、スタジアム周辺で平均車速が有意に上昇することを、詳細な時空間データで明らかにしました。失望と高い緊張感が組み合わさることで、ファンは無意識に危険な運転行動をとることを示しています。",
+        "method": "本研究では、2015年から2019年のNFLとNBAのレギュラーシーズンにおけるホームゲーム前後のフロリダ州の5つのスタジアム周辺の車両平均速度データを、10分間隔、3km圏内で分析しました。GPSベースの交通データと、試合結果、試合前の賭け率（期待値の代理変数）を組み合わせ、固定効果回帰モデルを用いて、試合結果が運転行動に与える影響を検証しました。特に、接戦と予想された試合でホームチームが負けた場合の運転速度の変化に注目しました。",
+        "results": "NBAの試合後には感情的な運転行動の証拠は見られませんでしたが、NFLの試合後には強く一貫した効果が確認されました。特に、接戦と予想され、ホームチームが惜敗した試合（高い試合前の緊張感とネガティブな結果が組み合わさる）の後には、スタジアムから3km圏内で試合後1時間以内に平均車速が有意に増加しました。この速度増加は、時間と距離がスタジアムから離れるにつれて減少する傾向が見られました。平均車速は、勝利した接戦の試合と比較して最大で3mph（約4.8km/h）増加し、これは通常時の試合日と非試合日の速度差の数倍に相当する効果でした。",
+        "why": "この現象は、期待値に基づいた感情、特に「失望」が運転行動に影響を与えるためと考えられます。接戦と予想された試合での惜敗は、ファンにとって「勝てるはずだった」という強い期待が裏切られることで、大きな失望やフラストレーション、怒りを引き起こします。このような高い感情的覚醒状態は、リスク認識を損ない、注意力の低下や認知制御メカニズムの障害を引き起こし、結果として危険な運転行動（速度超過など）につながると考えられます。感情的な覚醒は一時的なものであるため、その影響は試合直後、スタジアムに近い場所で最も顕著に現れ、時間と距離とともに薄れていくという結果と整合しています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "behavioral-economics",
+      "arxivPrimary": "econ.GN",
+      "titleJa": "スポーツ観戦後の感情が運転に与える影響：期待と結果のギャップが危険運転を誘発",
+      "catchTitle": "熱狂と失望が運転を変える？",
+      "hook": "スポーツ観戦後、あなたは興奮や落胆で運転が荒くなった経験はありませんか？実はその感情、統計的にも裏付けられています。",
+      "background": "人間は絶対的な結果だけでなく、期待値との比較で物事を評価し、そのギャップから喜びや失望といった感情が生まれます。これらの感情は、一見無関係な行動にも影響を与えることが知られています。特にスポーツイベントは、ファンが明確な期待を持って臨み、結果によって強い感情が引き起こされるため、感情の行動への波及を観察するのに適した場です。運転行動は、その感情の波及を高い時間的・空間的解像度で観察でき、さらに小さな速度変化でも公共の安全に大きな影響を与えるため、研究対象として非常に価値があります。",
+      "quiz": {
+        "question": "この研究で、スポーツ観戦後の運転速度が最も増加したのはどのような状況でしたか？",
+        "options": [
+          "NBAの試合でホームチームが劇的な勝利を収めた後",
+          "NFLの試合でホームチームが接戦の末に惜敗した後",
+          "NBAの試合でホームチームが大差で勝利した後"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究では、NFLの接戦でホームチームが惜敗した際に、高い緊張感とネガティブな結果が組み合わさり、最も運転速度が増加することが示されました。"
+      },
+      "limitations": "本研究はフロリダ州のNFLとNBAの試合に限定されており、他のスポーツや地域、文化圏での一般化にはさらなる検証が必要です。また、NBAの試合で効果が見られなかった理由（観客数の少なさ、アリーナの立地、バスケットボールの試合特性など）についても、さらなる詳細な分析が求められます。COVID-19パンデミック前のデータを使用しているため、パンデミック後の行動変容を考慮する必要があります。",
+      "glossary": [
+        {
+          "term": "参照点依存選好",
+          "definition": "結果を絶対値ではなく期待値との比較で評価する傾向。"
+        },
+        {
+          "term": "固定効果回帰モデル",
+          "definition": "個体差や時間差の影響を考慮して分析する統計手法。"
+        },
+        {
+          "term": "感情的覚醒",
+          "definition": "興奮や怒りなど、感情が高ぶった状態。"
+        },
+        {
+          "term": "認知制御メカニズム",
+          "definition": "思考や行動を適切に調整する脳の機能。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "NFLの接戦でホームチームが惜敗すると、ファンは失望から運転速度を上げ、事故リスクを高める。",
+      "noveltyContrast": {
+        "before": "これまで、スポーツ観戦後の感情が交通死亡事故を増やすことは知られていましたが、その背後にある具体的な行動メカニズム（なぜ、どのように速度が上がるのか）は不明でした。特に、勝利の興奮だけでなく、敗北の失望が運転にどう影響するかは分かっていませんでした。",
+        "after": "この研究は、NFLの接戦でホームチームが期待を裏切る形で負けた場合、スタジアム周辺で平均車速が有意に上昇することを、詳細な時空間データで明らかにしました。失望と高い緊張感が組み合わさることで、ファンは無意識に危険な運転行動をとることを示しています。"
+      },
+      "analogy": {
+        "title": "豊作を期待した畑が不作だった時の農家の心境",
+        "body": "これは、丹精込めて育てた作物が、あと一歩で豊作というところで天候不順に見舞われ、収穫量が期待を大きく下回った農家の心境のようなものです。豊作を信じていた分、落胆や焦りが募り、次の作業でいつもより無理をしてしまうかもしれません。この研究も、まさに「豊作（勝利）を期待していたのに不作（敗北）だった」という失望が、運転という次の行動に影響を与えることを示しています。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+3 mph",
+          "label": "惜敗後の平均車速増加"
+        },
+        {
+          "value": "4%",
+          "label": "平均速度1%増で死亡事故確率増加"
+        }
+      ],
+      "whyYouCare": "この研究は、私たちの日常生活に潜む「感情の波及」の危険性を示唆しています。スポーツ観戦に限らず、仕事での大きな成功や失敗、人間関係での喜びや怒りなど、強い感情を経験した後に運転する際は、いつも以上に注意が必要です。特に、期待が大きかった分、結果が裏切られた時の失望感は、無意識のうちに私たちの行動をリスクの高い方向へ導く可能性があります。企業は、従業員が感情的に不安定な状況にある場合の運転について注意喚起を促すなど、安全運転教育にこの知見を活かせるでしょう。また、大規模イベントの主催者や交通管理者にとっては、試合後の交通渋滞対策だけでなく、感情的な運転行動を抑制するための広報や、スタジアム周辺での一時的な速度取り締まり強化など、公共の安全を守るための新たな視点を提供します。",
+      "takeawayTalk": "NFLの接戦で負けると、ファンは失望して運転が荒くなるらしいよ。",
+      "bodyText": "本研究では、2015年から2019年のNFLとNBAのレギュラーシーズンにおけるホームゲーム前後のフロリダ州の5つのスタジアム周辺の車両平均速度データを、10分間隔、3km圏内で分析しました。GPSベースの交通データと、試合結果、試合前の賭け率（期待値の代理変数）を組み合わせ、固定効果回帰モデルを用いて、試合結果が運転行動に与える影響を検証しました。特に、接戦と予想された試合でホームチームが負けた場合の運転速度の変化に注目しました。\n\nこの現象は、期待値に基づいた感情、特に「失望」が運転行動に影響を与えるためと考えられます。接戦と予想された試合での惜敗は、ファンにとって「勝てるはずだった」という強い期待が裏切られることで、大きな失望やフラストレーション、怒りを引き起こします。このような高い感情的覚醒状態は、リスク認識を損ない、注意力の低下や認知制御メカニズムの障害を引き起こし、結果として危険な運転行動（速度超過など）につながると考えられます。感情的な覚醒は一時的なものであるため、その影響は試合直後、スタジアムに近い場所で最も顕著に現れ、時間と距離とともに薄れていくという結果と整合しています。",
+      "bodyGlossary": [
+        {
+          "term": "固定効果回帰モデル",
+          "definition": "個体差や時間差の影響を考慮して分析する統計手法。",
+          "start": 139,
+          "end": 148
+        },
+        {
+          "term": "感情的覚醒",
+          "definition": "興奮や怒りなど、感情が高ぶった状態。",
+          "start": 349,
+          "end": 354
+        },
+        {
+          "term": "認知制御メカニズム",
+          "definition": "思考や行動を適切に調整する脳の機能。",
+          "start": 375,
+          "end": 384
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "固定効果回帰モデル",
+          "definition": "個体差や時間差の影響を考慮して分析する統計手法。",
+          "start": 139,
+          "end": 148
+        },
+        {
+          "term": "感情的覚醒",
+          "definition": "興奮や怒りなど、感情が高ぶった状態。",
+          "start": 349,
+          "end": 354
+        },
+        {
+          "term": "認知制御メカニズム",
+          "definition": "思考や行動を適切に調整する脳の機能。",
+          "start": 375,
+          "end": 384
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 268,
+      "keyFigure": {
+        "imagePath": "/figures/2606.18805v1_results.png",
+        "page": 16,
+        "caption": "NFLの試合結果がスタジアム周辺の車速に与える影響を示しています。",
+        "label": "Figure 1",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-19T22:56:33.633Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.18805v1_results.png",
+          "page": 16,
+          "caption": "NFLの試合結果がスタジアム周辺の車速に与える影響を示しています。",
+          "label": "Figure 1",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-19T22:56:33.633Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.18667v1",
+      "title": "Can neurons speak? Semantic narration of vision at single-cell resolution",
+      "authors": [
+        "Arnau Marin-Llobet",
+        "Richard Hakim",
+        "Sara Matias",
+        "Venkatesh N. Murthy",
+        "Na Li",
+        "Demba Ba"
+      ],
+      "publishedAt": "2026-06-17T04:06:17Z",
+      "url": "https://arxiv.org/abs/2606.18667v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.18667v1.pdf",
+      "categories": [
+        "topic:neuroscience",
+        "q-bio.NC",
+        "q-bio.QM"
+      ],
+      "abstract": "Identifying what individual neurons encode in higher-order visual cortex is an open problem. Responses resist intuitive parameterization, and the deep-network embeddings used in their place are black boxes. Here, we introduce NEURRATOR, a framework that decodes spiking activity into free-form natural-language narration of the viewed scene at single-neuron resolution. A learned encoder maps spike trains from arbitrary subsets of simultaneously-recorded neurons into the patch-embedding space of a frozen CLIP, from which a multimodal language model and sparse autoencoder generates and validates a description with no language-side training. Applied to Neuropixel recordings of mouse visual cortex during natural-movie viewing, NEURRATOR narrates from thousands of neurons, singular cortical regions, local populations, or from a molecularly-defined cell-types. We use this property to (i) quantify how decoding fidelity scales with population size and cortical region, and (ii) \"neurrate\", in plain language, what individual neurons and genetically-tagged inhibitory cell-types contribute to visual representation. This recasts cell identity from a classification target into a functional probe of the visual system, providing a new unit of biological insights in neural systems.",
+      "summary": {
+        "gist": "脳科学における長年の課題は、個々のニューロンがどのような情報を符号化しているかを特定し、説明することでした。特に高次視覚野のニューロンは複雑な視覚特徴に反応するため、その働きを直感的なパラメータで捉えることは困難でした。近年、大規模なニューラルネットワークの潜在空間に画像を埋め込むことで予測性能は向上しましたが、その高次元の活性化を人間が理解できる意味論的仮説や平易な言葉に変換する作業は依然として手作業に頼っていました。",
+        "novelty": "これまでの研究では、個々のニューロンが何に反応するかを特定するのが困難でした。複雑な視覚情報に対するニューロンの反応は、シンプルなパラメータでは説明できず、AIを使ってもその内部表現は「ブラックボックス」で、人間が理解できる言葉に変換するには手作業が必要でした。 この論文では、NEURRATORという新しいフレームワークを導入し、個々のニューロンの発火パターンから、マウスが見ている映像を直接、自然言語で記述することに成功しました。これにより、ブラックボックスだったニューロンの働きを、人間が理解できる言葉で「語る」ことが可能になりました。",
+        "method": "NEURRATORは、マウスの視覚野から記録された個々のニューロンの発火活動を、視覚言語モデル（CLIP）の埋め込み空間にマッピングする学習済みエンコーダと、その埋め込みから自由形式の自然言語記述を生成するマルチモーダル言語モデル（LLaVA）を組み合わせたフレームワークです。エンコーダは、ニューロンの発火パターンをCLIPのパッチ埋め込み空間に変換し、この埋め込みをLLaVAの視覚タワーの出力として直接注入します。これにより、言語モデルは、あたかも実際の画像から生成されたかのように、視覚シーンの自然言語によるナレーションを出力します。言語モデル自体は神経データで訓練されません。この手法により、単一ニューロンレベルでの視覚表現の解読と、その言語化が可能になりました。",
+        "results": "NEURRATORは、数千のニューロン、特定の皮質領域、局所的な集団、または分子的に定義された細胞タイプから、マウスが見ている自然な動画シーンを自然言語で記述することに成功しました。このフレームワークを用いることで、デコードの忠実度がニューロン集団のサイズや皮質領域によってどのように変化するかを定量化し、個々のニューロンや遺伝子タグ付けされた抑制性細胞タイプが視覚表現にどのように貢献しているかを平易な言葉で「ニューレート（narration）」することが可能になりました。さらに、CLIPのスパースオートエンコーダと組み合わせることで、各細胞タイプの貢献を解釈可能な視覚概念特徴に分解し、細胞タイプ固有の概念シグネチャ（例：PV細胞は小さな丸い物体に反応）を特定しました。",
+        "why": "このメカニズムの鍵は、視覚と言語を共通の埋め込み空間で結びつけるコントラスト学習型視覚言語モデル（CLIPなど）と、その埋め込みから自由形式の自然言語を生成するマルチモーダル言語モデル（LLaVAなど）の組み合わせにあります。NEURRATORは、ニューロンの発火活動をこの共通の埋め込み空間に直接マッピングすることで、神経活動を「言語」として解釈する橋渡しをします。言語モデルは、この神経活動由来の埋め込みを、あたかも実際の画像から得られたものとして処理し、その知識に基づいて視覚シーンを記述します。これにより、ニューロンの活動が持つ意味を、人間が理解できる言葉で直接表現することが可能になります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.NC）",
+      "field": "神経・脳科学",
+      "categoryL1": "serendipity",
+      "categoryL2": "neuroscience",
+      "arxivPrimary": "q-bio.NC",
+      "titleJa": "ニューロンは話せるか？単一細胞解像度での視覚のセマンティックナレーション",
+      "catchTitle": "脳のつぶやきを「言葉」にする新技術",
+      "hook": "あなたは今見ているものが、脳のどの部分で、どのように「言葉」として認識されているか考えたことはありますか？",
+      "background": "脳科学における長年の課題は、個々のニューロンがどのような情報を符号化しているかを特定し、説明することでした。特に高次視覚野のニューロンは複雑な視覚特徴に反応するため、その働きを直感的なパラメータで捉えることは困難でした。近年、大規模なニューラルネットワークの潜在空間に画像を埋め込むことで予測性能は向上しましたが、その高次元の活性化を人間が理解できる意味論的仮説や平易な言葉に変換する作業は依然として手作業に頼っていました。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "ニューロン",
+          "definition": "神経系の基本的な構成単位で、電気信号を伝達する細胞。"
+        },
+        {
+          "term": "発火活動",
+          "definition": "ニューロンが電気信号を発生させること。"
+        },
+        {
+          "term": "視覚言語モデル",
+          "definition": "画像とテキストの関係性を学習するAIモデル。"
+        },
+        {
+          "term": "CLIP",
+          "definition": "画像とテキストを共通の空間に埋め込むAIモデル。"
+        },
+        {
+          "term": "埋め込み空間",
+          "definition": "データが特定の意味を持つベクトルとして表現される空間。"
+        },
+        {
+          "term": "マルチモーダル言語モデル",
+          "definition": "複数の種類のデータを扱える言語モデル。"
+        },
+        {
+          "term": "LLaVA",
+          "definition": "画像とテキストを理解し、言語を生成するAIモデル。"
+        },
+        {
+          "term": "パッチ埋め込み",
+          "definition": "画像を小さな領域に分割し、それぞれをベクトル化したもの。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "個々のニューロンの活動から、マウスが見ている映像を自然言語で記述するAIを開発しました。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、個々のニューロンが何に反応するかを特定するのが困難でした。複雑な視覚情報に対するニューロンの反応は、シンプルなパラメータでは説明できず、AIを使ってもその内部表現は「ブラックボックス」で、人間が理解できる言葉に変換するには手作業が必要でした。",
+        "after": "この論文では、NEURRATORという新しいフレームワークを導入し、個々のニューロンの発火パターンから、マウスが見ている映像を直接、自然言語で記述することに成功しました。これにより、ブラックボックスだったニューロンの働きを、人間が理解できる言葉で「語る」ことが可能になりました。"
+      },
+      "analogy": {
+        "title": "畑の土壌が「何を育てているか」を語る",
+        "body": "これはまるで、広大な畑の個々の土壌サンプル（ニューロン）から、そこにどんな作物が育ち、どんな栄養状態にあるか（視覚情報）を、専門家（AI）が詳細なレポート（自然言語）として記述してくれるようなものです。従来は、土壌の色や硬さ（発火パターン）から作物を推測するしかありませんでしたが、この技術を使えば、土壌そのものが「私は今、甘いトマトを育てています」と語りかけてくるようなもの。これにより、どの土壌がどんな作物に貢献しているかを直接理解でき、より効率的な品種改良や栽培方法の改善に繋がります。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、脳の働きを「言葉」で直接理解する新たな扉を開きます。例えば、認知症や精神疾患で視覚情報処理に問題がある場合、患者の脳が「何を見て、どう認識しているか」を客観的に言語化できれば、診断や治療法の開発に役立つかもしれません。また、AIの分野では、ブラックボックス化しがちな深層学習モデルの内部解釈性を高めるヒントにもなります。将来的には、人間が言葉で思考するように、AIが脳活動から直接「思考」を読み取り、コミュニケーションする技術へと発展する可能性も秘めています。",
+      "takeawayTalk": "脳の個々のニューロンが、見ているものを言葉で教えてくれるようになったんだ！",
+      "bodyText": "NEURRATORは、マウスの視覚野から記録された個々のニューロンの発火活動を、視覚言語モデル（CLIP）の埋め込み空間にマッピングする学習済みエンコーダと、その埋め込みから自由形式の自然言語記述を生成するマルチモーダル言語モデル（LLaVA）を組み合わせたフレームワークです。エンコーダは、ニューロンの発火パターンをCLIPのパッチ埋め込み空間に変換し、この埋め込みをLLaVAの視覚タワーの出力として直接注入します。これにより、言語モデルは、あたかも実際の画像から生成されたかのように、視覚シーンの自然言語によるナレーションを出力します。言語モデル自体は神経データで訓練されません。この手法により、単一ニューロンレベルでの視覚表現の解読と、その言語化が可能になりました。\n\nこのメカニズムの鍵は、視覚と言語を共通の埋め込み空間で結びつけるコントラスト学習型視覚言語モデル（CLIPなど）と、その埋め込みから自由形式の自然言語を生成するマルチモーダル言語モデル（LLaVAなど）の組み合わせにあります。NEURRATORは、ニューロンの発火活動をこの共通の埋め込み空間に直接マッピングすることで、神経活動を「言語」として解釈する橋渡しをします。言語モデルは、この神経活動由来の埋め込みを、あたかも実際の画像から得られたものとして処理し、その知識に基づいて視覚シーンを記述します。これにより、ニューロンの活動が持つ意味を、人間が理解できる言葉で直接表現することが可能になります。",
+      "bodyGlossary": [
+        {
+          "term": "ニューロン",
+          "definition": "神経系の基本的な構成単位で、電気信号を伝達する細胞。",
+          "start": 28,
+          "end": 33
+        },
+        {
+          "term": "発火活動",
+          "definition": "ニューロンが電気信号を発生させること。",
+          "start": 34,
+          "end": 38
+        },
+        {
+          "term": "視覚言語モデル",
+          "definition": "画像とテキストの関係性を学習するAIモデル。",
+          "start": 40,
+          "end": 47
+        },
+        {
+          "term": "CLIP",
+          "definition": "画像とテキストを共通の空間に埋め込むAIモデル。",
+          "start": 48,
+          "end": 52
+        },
+        {
+          "term": "埋め込み空間",
+          "definition": "データが特定の意味を持つベクトルとして表現される空間。",
+          "start": 54,
+          "end": 60
+        },
+        {
+          "term": "マルチモーダル言語モデル",
+          "definition": "複数の種類のデータを扱える言語モデル。",
+          "start": 103,
+          "end": 115
+        },
+        {
+          "term": "LLaVA",
+          "definition": "画像とテキストを理解し、言語を生成するAIモデル。",
+          "start": 116,
+          "end": 121
+        },
+        {
+          "term": "パッチ埋め込み",
+          "definition": "画像を小さな領域に分割し、それぞれをベクトル化したもの。",
+          "start": 164,
+          "end": 171
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "ニューロン",
+          "definition": "神経系の基本的な構成単位で、電気信号を伝達する細胞。",
+          "start": 28,
+          "end": 33
+        },
+        {
+          "term": "発火活動",
+          "definition": "ニューロンが電気信号を発生させること。",
+          "start": 34,
+          "end": 38
+        },
+        {
+          "term": "視覚言語モデル",
+          "definition": "画像とテキストの関係性を学習するAIモデル。",
+          "start": 40,
+          "end": 47
+        },
+        {
+          "term": "CLIP",
+          "definition": "画像とテキストを共通の空間に埋め込むAIモデル。",
+          "start": 48,
+          "end": 52
+        },
+        {
+          "term": "埋め込み空間",
+          "definition": "データが特定の意味を持つベクトルとして表現される空間。",
+          "start": 54,
+          "end": 60
+        },
+        {
+          "term": "マルチモーダル言語モデル",
+          "definition": "複数の種類のデータを扱える言語モデル。",
+          "start": 103,
+          "end": 115
+        },
+        {
+          "term": "LLaVA",
+          "definition": "画像とテキストを理解し、言語を生成するAIモデル。",
+          "start": 116,
+          "end": 121
+        },
+        {
+          "term": "パッチ埋め込み",
+          "definition": "画像を小さな領域に分割し、それぞれをベクトル化したもの。",
+          "start": 164,
+          "end": 171
+        }
+      ],
+      "agriEconRelevance": "この技術は、農業経済学において、例えば「作物の健康状態を感知するAI」の解釈性を高めることに応用できるかもしれません。AIが「この畑の作物は栄養不足で、特定の病害の初期症状を示している」と判断した際、その判断がAI内部のどの「ニューロン（特徴検出器）」の活動に基づいているかを言語化できれば、農家はそのAIの診断をより信頼し、具体的な対策を立てやすくなります。また、消費者の購買行動を予測するAIが「なぜその予測をしたのか」を言語で説明できれば、市場戦略の立案に役立つでしょう。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 279,
+      "keyFigure": {
+        "imagePath": "/figures/2606.18667v1_results.png",
+        "page": 9,
+        "caption": "細胞タイプ固有のSAE特徴が解釈可能な視覚概念にどのようにマッピングされるかを示しています。",
+        "label": "Figure 8: Cell-type-unique SAE features map onto interpretable visual concepts. Left: z-scored",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-19T22:56:38.429Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.18667v1_results.png",
+          "page": 9,
+          "caption": "細胞タイプ固有のSAE特徴が解釈可能な視覚概念にどのようにマッピングされるかを示しています。",
+          "label": "Figure 8: Cell-type-unique SAE features map onto interpretable visual concepts. Left: z-scored",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-19T22:56:38.429Z"
+        },
+        {
+          "imagePath": "/figures/2606.18667v1_why.png",
+          "page": 4,
+          "caption": "NEURRATORフレームワークの概要を示し、ニューロン活動から言語への変換プロセスを説明しています。",
+          "label": "Figure 2: Overview of the Neurrator framework. A trainable Neurrator Encoder processes",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-19T22:56:38.430Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.20096v1",
+      "title": "Quadratic Forms for Measuring Geometric Trees in 3-dimensional Space",
+      "authors": [
+        "Yossi Bokor Bleile",
+        "Emanuele Cortinovis",
+        "Herbert Edelsbrunner",
+        "Shota Uka"
+      ],
+      "publishedAt": "2026-06-18T11:14:30Z",
+      "url": "https://arxiv.org/abs/2606.20096v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.20096v1.pdf",
+      "categories": [
+        "topic:neuroscience",
+        "cs.CG",
+        "q-bio.NC"
+      ],
+      "abstract": "Tree-like structures appear in many areas of science, and their shapes can help understand the underlying processes they drive or that give rise to them. By thinking of these structures as geometric graphs in $\\mathbb{R}^3$, we gain access to tools from computational geometry and topology to study them. In this paper, we adopt the theory of quadratic forms to measure the directional spread of geometric graphs, and we introduce the hexplot model -- equipped with a metric derived from the Fisher metric on the standard triangle -- to visualize, measure, and collect statistics.",
+      "summary": {
+        "gist": "樹状構造は、神経細胞の信号伝達から結晶成長、材料の多孔性まで、科学の多くの分野で見られます。これらの構造の形態を理解することは、その機能的特性や生成プロセスを理解する上で不可欠です。しかし、3次元空間におけるこのような分岐構造を定量化し、異なる文脈間で比較することは、依然として大きな課題でした。",
+        "novelty": "従来の樹状構造の分析は、枝の長さ、曲率、分岐角度、直径などの局所的な幾何学的記述子や、全体の長さ、非対称性といった大域的な統計量に依存していました。これらは個々の特徴を捉えるものの、3次元空間における全体的な広がりや方向性を統一的に捉え、比較するのには限界がありました。 この論文では、二次形式という数学的な手法を用いて、3次元空間における樹状構造の「方向への広がり」を定量的に測定します。さらに、その結果を「ヘックスプロット」という新しい可視化モデルで表現することで、形状の比較や統計分析を可能にし、樹状構造の全体的な特徴をより直感的に理解できるようになりました。",
+        "method": "本研究では、3次元空間における樹状構造を幾何学的グラフとして捉え、計算幾何学とトポロジーのツールを適用します。特に、二次形式の理論を採用し、幾何学的グラフの「方向への広がり」を測定します。二次形式は、その等高線が楕円体を定義するもので、3x3の対称行列で表現されます。この行列の固有値は、楕円体の軸の長さを決定し、その比率によって形状（丸い、細長い、扁平など）を特徴づけます。さらに、この二次形式の結果を可視化し、測定し、統計を収集するために、「ヘックスプロットモデル」を導入します。ヘックスプロットは、標準的な三角形上のフィッシャー計量から導出された計量構造を備えており、剛体運動やスケーリングに対して不変な樹状形態の記述子を提供します。",
+        "results": "二次形式を用いることで、樹状構造の方向への広がりを定量的に測定できることが示されました。特に、二次形式の固有値の関係によって、構造が「丸い」「細長い」「扁平」といった形状特性を持つことが特徴づけられます。また、二次形式のトレース（対角成分の和）は、樹状構造の総長さを測定できることが定理として示されました。ヘックスプロットモデルは、これらの二次形式を正規化し、極性情報と組み合わせることで、スケールに依存しない楕円体の表現を可能にし、統計分析のための視覚化ツールとして機能します。これにより、異なる樹状構造の集団間の形状比較が容易になります。",
+        "why": "二次形式は、3次元空間内の点から特定の平面までの距離の二乗和を重み付けして表現することで、樹状構造の広がりを捉えます。各枝の長さと方向を考慮した重み付きの外積の和として二次形式の行列を構築することで、その行列の固有値が構造の主要な広がり方向と大きさを反映するようになります。固有値の相対的な大きさは、対応する楕円体の形状を決定し、構造がどの方向にどれだけ広がっているかを示します。ヘックスプロットは、これらの固有値を正規化し、極性（元の楕円体と双対な楕円体）の情報を組み合わせることで、形状の多様性をコンパクトな2次元空間にマッピングし、視覚的に比較できるようにします。これにより、複雑な3次元構造の形状特徴を、よりシンプルで理解しやすい形で表現できるのです。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.CG）",
+      "field": "神経・脳科学",
+      "categoryL1": "serendipity",
+      "categoryL2": "computational-geometry",
+      "arxivPrimary": "cs.CG",
+      "titleJa": "3次元空間における幾何学的樹状構造の形状測定と可視化：二次形式とヘックスプロットモデル",
+      "catchTitle": "木の枝ぶりを数値化！新しい形状分析ツール",
+      "hook": "あなたは、目の前の植物の枝ぶりを見て「この木はどんな特徴があるんだろう？」と思ったことはありませんか？",
+      "background": "樹状構造は、神経細胞の信号伝達から結晶成長、材料の多孔性まで、科学の多くの分野で見られます。これらの構造の形態を理解することは、その機能的特性や生成プロセスを理解する上で不可欠です。しかし、3次元空間におけるこのような分岐構造を定量化し、異なる文脈間で比較することは、依然として大きな課題でした。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "樹状構造",
+          "definition": "木の枝のように分岐する構造。"
+        },
+        {
+          "term": "幾何学的グラフ",
+          "definition": "頂点と辺が空間に配置されたグラフ。"
+        },
+        {
+          "term": "二次形式",
+          "definition": "変数の二次の項からなる多項式。"
+        },
+        {
+          "term": "楕円体",
+          "definition": "球を押し潰したり引き伸ばしたりした立体。"
+        },
+        {
+          "term": "対称行列",
+          "definition": "転置しても変わらない正方行列。"
+        },
+        {
+          "term": "固有値",
+          "definition": "線形変換で方向が変わらないベクトルの伸縮率。"
+        },
+        {
+          "term": "ヘックスプロットモデル",
+          "definition": "二次形式を可視化するための新しい図。"
+        },
+        {
+          "term": "フィッシャー計量",
+          "definition": "確率分布間の距離を測る幾何学的な尺度。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "3次元の樹状構造の形状を、二次形式と新しい可視化ツール「ヘックスプロット」で定量的に分析する研究です。",
+      "noveltyContrast": {
+        "before": "従来の樹状構造の分析は、枝の長さ、曲率、分岐角度、直径などの局所的な幾何学的記述子や、全体の長さ、非対称性といった大域的な統計量に依存していました。これらは個々の特徴を捉えるものの、3次元空間における全体的な広がりや方向性を統一的に捉え、比較するのには限界がありました。",
+        "after": "この論文では、二次形式という数学的な手法を用いて、3次元空間における樹状構造の「方向への広がり」を定量的に測定します。さらに、その結果を「ヘックスプロット」という新しい可視化モデルで表現することで、形状の比較や統計分析を可能にし、樹状構造の全体的な特徴をより直感的に理解できるようになりました。"
+      },
+      "analogy": {
+        "title": "畑の作物の「広がり方」を測る新しい方法",
+        "body": "これは、まるで畑で育つ作物の「枝葉の広がり方」を数値化するようなものです。従来のやり方では、個々の葉の大きさや枝の長さを測っていましたが、この研究では、作物全体がどの方向に、どれくらいの範囲で広がっているかを、楕円体という形で表現します。例えば、縦に伸びる作物なら細長い楕円、横に広がる作物なら扁平な楕円、均等に広がる作物なら球に近い楕円として捉えるのです。そして、その楕円体の形を「ヘックスプロット」という図に落とし込むことで、異なる品種の作物や、肥料の与え方を変えた作物同士の広がり方を、一目で比較できるようになります。これにより、どの作物が効率的に光を浴び、成長しているかを客観的に評価できるようなものです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、単に数学的な面白さだけでなく、私たちの身の回りにある様々な「枝分かれ」した構造の理解を深める可能性を秘めています。例えば、農学分野では作物の根や枝の広がり方を分析して、より効率的な栽培方法を見つけたり、品種改良に役立てたりできるかもしれません。医学分野では、神経細胞の樹状突起の形状変化を追跡することで、病気の早期発見や治療法の開発につながる可能性があります。都市計画では、道路網やインフラの広がり方を分析し、より効率的で災害に強い都市設計に貢献することも考えられます。このように、複雑な3次元構造の「形」を数値化し、比較する新しいツールは、多岐にわたる分野で新たな発見と応用を生み出すでしょう。",
+      "takeawayTalk": "木の枝ぶりを数値化して、その特徴を新しい図で一目で比較できるようになったんだ！",
+      "bodyText": "本研究では、3次元空間における樹状構造を幾何学的グラフとして捉え、計算幾何学とトポロジーのツールを適用します。特に、二次形式の理論を採用し、幾何学的グラフの「方向への広がり」を測定します。二次形式は、その等高線が楕円体を定義するもので、3x3の対称行列で表現されます。この行列の固有値は、楕円体の軸の長さを決定し、その比率によって形状（丸い、細長い、扁平など）を特徴づけます。さらに、この二次形式の結果を可視化し、測定し、統計を収集するために、「ヘックスプロットモデル」を導入します。ヘックスプロットは、標準的な三角形上のフィッシャー計量から導出された計量構造を備えており、剛体運動やスケーリングに対して不変な樹状形態の記述子を提供します。\n\n二次形式は、3次元空間内の点から特定の平面までの距離の二乗和を重み付けして表現することで、樹状構造の広がりを捉えます。各枝の長さと方向を考慮した重み付きの外積の和として二次形式の行列を構築することで、その行列の固有値が構造の主要な広がり方向と大きさを反映するようになります。固有値の相対的な大きさは、対応する楕円体の形状を決定し、構造がどの方向にどれだけ広がっているかを示します。ヘックスプロットは、これらの固有値を正規化し、極性（元の楕円体と双対な楕円体）の情報を組み合わせることで、形状の多様性をコンパクトな2次元空間にマッピングし、視覚的に比較できるようにします。これにより、複雑な3次元構造の形状特徴を、よりシンプルで理解しやすい形で表現できるのです。",
+      "bodyGlossary": [
+        {
+          "term": "樹状構造",
+          "definition": "木の枝のように分岐する構造。",
+          "start": 15,
+          "end": 19
+        },
+        {
+          "term": "幾何学的グラフ",
+          "definition": "頂点と辺が空間に配置されたグラフ。",
+          "start": 20,
+          "end": 27
+        },
+        {
+          "term": "二次形式",
+          "definition": "変数の二次の項からなる多項式。",
+          "start": 58,
+          "end": 62
+        },
+        {
+          "term": "楕円体",
+          "definition": "球を押し潰したり引き伸ばしたりした立体。",
+          "start": 106,
+          "end": 109
+        },
+        {
+          "term": "対称行列",
+          "definition": "転置しても変わらない正方行列。",
+          "start": 122,
+          "end": 126
+        },
+        {
+          "term": "固有値",
+          "definition": "線形変換で方向が変わらないベクトルの伸縮率。",
+          "start": 139,
+          "end": 142
+        },
+        {
+          "term": "ヘックスプロットモデル",
+          "definition": "二次形式を可視化するための新しい図。",
+          "start": 223,
+          "end": 234
+        },
+        {
+          "term": "フィッシャー計量",
+          "definition": "確率分布間の距離を測る幾何学的な尺度。",
+          "start": 261,
+          "end": 269
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "樹状構造",
+          "definition": "木の枝のように分岐する構造。",
+          "start": 15,
+          "end": 19
+        },
+        {
+          "term": "幾何学的グラフ",
+          "definition": "頂点と辺が空間に配置されたグラフ。",
+          "start": 20,
+          "end": 27
+        },
+        {
+          "term": "二次形式",
+          "definition": "変数の二次の項からなる多項式。",
+          "start": 58,
+          "end": 62
+        },
+        {
+          "term": "楕円体",
+          "definition": "球を押し潰したり引き伸ばしたりした立体。",
+          "start": 106,
+          "end": 109
+        },
+        {
+          "term": "対称行列",
+          "definition": "転置しても変わらない正方行列。",
+          "start": 122,
+          "end": 126
+        },
+        {
+          "term": "固有値",
+          "definition": "線形変換で方向が変わらないベクトルの伸縮率。",
+          "start": 139,
+          "end": 142
+        },
+        {
+          "term": "ヘックスプロットモデル",
+          "definition": "二次形式を可視化するための新しい図。",
+          "start": 223,
+          "end": 234
+        },
+        {
+          "term": "フィッシャー計量",
+          "definition": "確率分布間の距離を測る幾何学的な尺度。",
+          "start": 261,
+          "end": 269
+        }
+      ],
+      "agriEconRelevance": "この3次元形状分析手法は、農業経済学において、作物の成長パターンや根系構造の分析に応用可能です。例えば、異なる栽培環境や品種が、作物の根や枝の広がり方にどのような影響を与えるかを定量的に評価できます。これにより、水や栄養の吸収効率、病害抵抗性、収量との関係を詳細に分析し、最適な栽培管理戦略や、市場価値の高い品種開発のための基礎データを提供できるでしょう。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 275,
+      "keyFigure": {
+        "imagePath": "/figures/2606.20096v1_results.png",
+        "page": 14,
+        "caption": "図1の樹状突起の方向への広がりと、そのヘックスプロット上での進化を示しています。",
+        "label": "Figure 6: Evolution of the directional spread of the dentrites in Figure 1 (on the left) and some of the",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-19T22:56:41.195Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.20096v1_results.png",
+          "page": 14,
+          "caption": "図1の樹状突起の方向への広がりと、そのヘックスプロット上での進化を示しています。",
+          "label": "Figure 6: Evolution of the directional spread of the dentrites in Figure 1 (on the left) and some of the",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-19T22:56:41.195Z"
+        },
+        {
+          "imagePath": "/figures/2606.20096v1_why.png",
+          "page": 4,
+          "caption": "極性を持つ楕円体のペアと、極性の基準となる単位球の関係を示しています。",
+          "label": "Figure 2: A pair of polar ellipsoids, together with the unit sphere with respect to which polarity is",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-19T22:56:41.196Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.19405v1",
+      "title": "Multi-type branching inference on contact trees with application to COVID-19",
+      "authors": [
+        "Augustine Okolie",
+        "Johannes Müller",
+        "Eno Akarawakc",
+        "Isaac Ajiboye"
+      ],
+      "publishedAt": "2026-06-17T13:02:50Z",
+      "url": "https://arxiv.org/abs/2606.19405v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.19405v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "q-bio.QM",
+        "math.DS",
+        "q-bio.PE"
+      ],
+      "abstract": "Inferring epidemiological parameters from transmission trees is essential for understanding infectious disease dynamics. Existing tree-based likelihood methods, including the multi-type birth-death models originally applied in phylodynamic settings, provide powerful tools, but most assume homogeneous mixing and rarely capture how transmission potential changes as an individual infects more of their contacts. In this work, we develop a likelihood framework that operates directly on transmission trees, in which nodes are individuals and edges are reported transmission events, with no sequence data involved. We derive a likelihood for a stochastic SIR process on a rooted contact tree in which each infected individual is characterised by the total number of effective contacts, and the number of already infected downstream contacts. We obtain closed-form ordinary differential equations for the probability that a clade goes entirely unobserved and for the probability density that it produces an observed (sampled) tip in a given state. The resulting likelihood can be evaluated for a rooted contact tree with known tip states, and we extend it to partially resolved trees by treating internal branching times as latent variables. Validation on simulated outbreaks confirms accurate parameter recovery and well calibrated uncertainty. Application to empirical COVID-19 contact-tracing data from Karnataka, India, demonstrates the framework's utility for real epidemiological settings. By incorporating contact-degree heterogeneity in a multi-type branching likelihood, our work provides a principled baseline for inferring both transmission dynamics and contact structure from fully or partially resolved transmission trees, complementing rather than relying on sequence-based phylodynamic inference",
+      "summary": {
+        "gist": "感染症の動態を理解し、その伝播パラメータを推定することは、公衆衛生上極めて重要です。多型分岐過程モデルは、異質な集団における感染伝播をモデル化する強力なフレームワークを提供し、これまでもHIVやインフルエンザなどの研究に適用されてきました。しかし、これらのモデルの多くは、感染者が接触者を感染させる能力が常に一定であるという「均質混合」を仮定しており、感染者がすでに何人の接触者を感染させたかによって伝播能力が変化するという現実の側面を捉えきれていませんでした。",
+        "novelty": "従来の感染症モデルでは、感染者が接触者を感染させる能力は常に一定だと仮定されていました。しかし、実際には感染者が多くの人に感染させるほど、まだ感染させていない接触者が減っていくため、感染させる能力は低下していきます。 この研究では、感染者が「すでに何人の接触者を感染させたか」という情報をモデルに組み込むことで、感染させる能力が接触者の減少とともに低下する「飽和効果」を初めて考慮しました。これにより、より現実的な感染経路の推論が可能になります。",
+        "method": "本研究では、感染経路を直接表現する「接触ツリー」上で動作する尤度フレームワークを開発しました。このモデルでは、各感染者が持つ「総接触者数」と「すでに感染させた接触者数」という2つの情報を組み込むことで、感染者の伝播能力が接触者の減少とともに低下する「飽和効果」を考慮します。具体的には、感染者がまだ感染させていない接触者の数に応じて、感染率が動的に変化するようにモデルを拡張しました。この尤度関数は、感染経路ツリーの各枝に沿って後方微分方程式を伝播させることで計算され、部分的にしか情報がないツリーにも適用できるよう、内部の分岐時間を潜在変数として扱います。このフレームワークを、インドのカルナータカ州におけるCOVID-19の接触者追跡データに適用し、その有効性を検証しました。",
+        "results": "シミュレーションによる検証では、本モデルが正確なパラメータ回復と適切に調整された不確実性を提供することが確認されました。実際のCOVID-19接触者追跡データへの適用では、独立した接触者追跡研究と整合する再生産数を推定するとともに、接触ネットワークの構造が感染経路ツリーの形状をどのように形成するかについて新たな知見をもたらしました。",
+        "why": "感染者が接触者を感染させるたびに、その感染者が持つ「まだ感染させていない接触者」のプールは減少します。このプールの減少は、その感染者の「有効な感染率」を低下させます。つまり、感染者が多くの人に感染させるほど、次に感染させる機会が減るため、感染の広がりが鈍化していくのです。本モデルは、この「接触者の枯渇」による伝播能力の低下を、感染者の状態（すでに感染させた接触者数）として明示的に追跡することで、より現実的な感染動態を捉えることを可能にしました。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.QM）",
+      "field": "食料システム",
+      "categoryL1": "adjacent",
+      "categoryL2": "epidemiology",
+      "arxivPrimary": "q-bio.QM",
+      "titleJa": "COVID-19接触者追跡データを用いた多型分岐推論による感染動態と接触構造の解明",
+      "catchTitle": "感染経路の「飽和」を捉える新モデル",
+      "hook": "あなたは感染症の専門家でなくても、身近な人が次々と感染していく様子に不安を感じたことはありませんか？",
+      "background": "感染症の動態を理解し、その伝播パラメータを推定することは、公衆衛生上極めて重要です。多型分岐過程モデルは、異質な集団における感染伝播をモデル化する強力なフレームワークを提供し、これまでもHIVやインフルエンザなどの研究に適用されてきました。しかし、これらのモデルの多くは、感染者が接触者を感染させる能力が常に一定であるという「均質混合」を仮定しており、感染者がすでに何人の接触者を感染させたかによって伝播能力が変化するという現実の側面を捉えきれていませんでした。",
+      "quiz": {
+        "question": "この研究が従来の感染症モデルと最も異なる点は何ですか？",
+        "options": [
+          "遺伝子配列データを使用していること",
+          "感染者がすでに感染させた接触者の数を考慮すること",
+          "感染者の回復率が一定であると仮定すること"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究の最大の貢献は、感染者が「すでに何人の接触者を感染させたか」という情報をモデルに組み込み、それによって伝播能力が変化する「飽和効果」を考慮した点です。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "尤度フレームワーク",
+          "definition": "観測データからモデルのパラメータを推定する統計的手法"
+        },
+        {
+          "term": "接触ツリー",
+          "definition": "感染経路を個々の感染者と伝播イベントで表現した図"
+        },
+        {
+          "term": "飽和効果",
+          "definition": "感染者が接触者を使い果たすことで感染能力が低下する現象"
+        },
+        {
+          "term": "後方微分方程式",
+          "definition": "ツリー構造の根元から葉に向かって確率を計算する式"
+        },
+        {
+          "term": "潜在変数",
+          "definition": "直接観測できないがモデルに影響を与える変数"
+        },
+        {
+          "term": "伝播能力",
+          "definition": "感染者が他の人に病気をうつす能力"
+        },
+        {
+          "term": "接触者の枯渇",
+          "definition": "感染者が感染させる対象となる接触者が減ること"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "感染症の広がり方を、感染者が接触者を「使い果たす」効果を考慮して、より正確に予測する新しい統計モデルです。",
+      "noveltyContrast": {
+        "before": "従来の感染症モデルでは、感染者が接触者を感染させる能力は常に一定だと仮定されていました。しかし、実際には感染者が多くの人に感染させるほど、まだ感染させていない接触者が減っていくため、感染させる能力は低下していきます。",
+        "after": "この研究では、感染者が「すでに何人の接触者を感染させたか」という情報をモデルに組み込むことで、感染させる能力が接触者の減少とともに低下する「飽和効果」を初めて考慮しました。これにより、より現実的な感染経路の推論が可能になります。"
+      },
+      "analogy": {
+        "title": "畑の種まき、種が減れば成長は鈍る",
+        "body": "これは、農家が畑に種をまくようなものです。最初はたくさんの種（未感染の接触者）があるので、どんどん新しい芽（新規感染者）を出すことができます。しかし、種をまけばまくほど手持ちの種は減っていき、やがてまける種がなくなると、新しい芽を出す活動は止まります。この研究は、感染者が「どれだけ種をまいたか」を記録し、それに応じて「次に種をまく速さ」が変わることをモデル化した点で、従来の「種は無限にある」という前提を覆すものです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、感染症の広がり方をより正確に理解するための重要な一歩です。あなたの会社や地域で感染症が発生した際、このモデルが示す「感染者の伝播能力の飽和」という視点は、対策の優先順位付けに役立つかもしれません。例えば、初期の感染者に対する接触者追跡を強化することで、その後の感染拡大をより効果的に抑制できる可能性を示唆しています。また、ワクチン接種や行動制限の効果を評価する際にも、より現実的なモデルを用いることで、より精度の高い予測や政策決定に貢献できるでしょう。私たちの社会が感染症と共存していく上で、このような精緻なモデルは不可欠なツールとなります。",
+      "takeawayTalk": "感染症は、接触者を使い果たすと広がりが鈍るって知ってた？",
+      "bodyText": "本研究では、感染経路を直接表現する「接触ツリー」上で動作する尤度フレームワークを開発しました。このモデルでは、各感染者が持つ「総接触者数」と「すでに感染させた接触者数」という2つの情報を組み込むことで、感染者の伝播能力が接触者の減少とともに低下する「飽和効果」を考慮します。具体的には、感染者がまだ感染させていない接触者の数に応じて、感染率が動的に変化するようにモデルを拡張しました。この尤度関数は、感染経路ツリーの各枝に沿って後方微分方程式を伝播させることで計算され、部分的にしか情報がないツリーにも適用できるよう、内部の分岐時間を潜在変数として扱います。このフレームワークを、インドのカルナータカ州におけるCOVID-19の接触者追跡データに適用し、その有効性を検証しました。\n\n感染者が接触者を感染させるたびに、その感染者が持つ「まだ感染させていない接触者」のプールは減少します。このプールの減少は、その感染者の「有効な感染率」を低下させます。つまり、感染者が多くの人に感染させるほど、次に感染させる機会が減るため、感染の広がりが鈍化していくのです。本モデルは、この「接触者の枯渇」による伝播能力の低下を、感染者の状態（すでに感染させた接触者数）として明示的に追跡することで、より現実的な感染動態を捉えることを可能にしました。",
+      "bodyGlossary": [
+        {
+          "term": "接触ツリー",
+          "definition": "感染経路を個々の感染者と伝播イベントで表現した図",
+          "start": 18,
+          "end": 23
+        },
+        {
+          "term": "尤度フレームワーク",
+          "definition": "観測データからモデルのパラメータを推定する統計的手法",
+          "start": 30,
+          "end": 39
+        },
+        {
+          "term": "伝播能力",
+          "definition": "感染者が他の人に病気をうつす能力",
+          "start": 105,
+          "end": 109
+        },
+        {
+          "term": "飽和効果",
+          "definition": "感染者が接触者を使い果たすことで感染能力が低下する現象",
+          "start": 125,
+          "end": 129
+        },
+        {
+          "term": "後方微分方程式",
+          "definition": "ツリー構造の根元から葉に向かって確率を計算する式",
+          "start": 214,
+          "end": 221
+        },
+        {
+          "term": "潜在変数",
+          "definition": "直接観測できないがモデルに影響を与える変数",
+          "start": 267,
+          "end": 271
+        },
+        {
+          "term": "接触者の枯渇",
+          "definition": "感染者が感染させる対象となる接触者が減ること",
+          "start": 487,
+          "end": 493
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "接触ツリー",
+          "definition": "感染経路を個々の感染者と伝播イベントで表現した図",
+          "start": 18,
+          "end": 23
+        },
+        {
+          "term": "尤度フレームワーク",
+          "definition": "観測データからモデルのパラメータを推定する統計的手法",
+          "start": 30,
+          "end": 39
+        },
+        {
+          "term": "伝播能力",
+          "definition": "感染者が他の人に病気をうつす能力",
+          "start": 105,
+          "end": 109
+        },
+        {
+          "term": "飽和効果",
+          "definition": "感染者が接触者を使い果たすことで感染能力が低下する現象",
+          "start": 125,
+          "end": 129
+        },
+        {
+          "term": "後方微分方程式",
+          "definition": "ツリー構造の根元から葉に向かって確率を計算する式",
+          "start": 214,
+          "end": 221
+        },
+        {
+          "term": "潜在変数",
+          "definition": "直接観測できないがモデルに影響を与える変数",
+          "start": 267,
+          "end": 271
+        },
+        {
+          "term": "接触者の枯渇",
+          "definition": "感染者が感染させる対象となる接触者が減ること",
+          "start": 487,
+          "end": 493
+        }
+      ],
+      "agriEconRelevance": "このモデルは、農業経済学における病害虫の伝播モデルに応用できる可能性があります。例えば、特定の病気が作物間でどのように広がるか、あるいは家畜の感染症が農場間でどのように伝播するかを分析する際に、従来の均質混合モデルでは捉えきれなかった「感染源となる個体（作物や家畜）が、すでに感染させた個体数に応じて伝播能力を失う」という現実的なメカニズムを組み込むことができます。これにより、病害虫の拡散予測の精度が向上し、より効果的な防除戦略や、感染拡大を抑制するための流通・管理方法の最適化に貢献できるでしょう。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 248
+    }
+  ]
+}

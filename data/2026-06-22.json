@@ -1,0 +1,995 @@
+{
+  "date": "2026-06-22",
+  "papers": [
+    {
+      "id": "2606.20489v1",
+      "title": "West Nile virus outbreak in Italy modelled with the quantum Game of Life",
+      "authors": [
+        "Andrea Fontana",
+        "Simone Tambascia",
+        "Ciro Di Carluccio",
+        "Andrea Esposito",
+        "Bernardo Spagnolo",
+        "Andrea M. Chiariello"
+      ],
+      "publishedAt": "2026-06-18T17:06:24Z",
+      "url": "https://arxiv.org/abs/2606.20489v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.20489v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "q-bio.PE",
+        "nlin.CG",
+        "physics.bio-ph",
+        "stat.AP"
+      ],
+      "abstract": "In the last years, an anomalously high spreading of West Nile virus (WNV) has been observed in Italy, with particularly high peaks of infections in southern Lazio, Campania and Veneto regions. The main disease vector for WNV is represented by Culex pipiens mosquitoes, which spread human infections through their bites. Here, we investigate WNV fever epidemic diffusion during summer season 2025 in Italy through a computational approach based on a quantum version of the Game of Life (GOL) cellular automaton model. Specifically, human dynamics evolves according to the GOL rules, while stochastic dynamics of disease vectors, i.e., mosquitoes, as well as their interaction with humans, simultaneously occur. We show that this model fits the curves of cumulative infected individuals with high accuracy, either at local and average-regional level, with only optimization of mosquito birth and removal rates parameters. Furthermore, leveraging model flexibility, we show that changes in model parameters values elucidate system response to environmental variations. For instance, we quantify, e.g., the impact of mosquito spreading containment measures or sudden mosquito increasing abundance due to climatic and ecological changes. Overall, we provide a general, quantitative description of WNV infection spreading in Italy which could represent a supportive tool to test different environmental scenarios and could be useful to devise strategies for decision makers to monitor disease vector dynamics and to control consequent virus diffusion.",
+      "summary": {
+        "gist": "近年、イタリアを含むこれまで西ナイル熱が一般的でなかった地域で、感染者数の異常な増加が観測されています。このウイルスは主にヒトスジシマカなどの蚊によって媒介され、気候変動による気温上昇や降雨量の変化が蚊の異常な拡散に影響を与えていると考えられています。感染症の拡大は、地域の公衆衛生だけでなく、経済活動にも大きな影響を及ぼすため、その予測と対策は喫緊の課題です。",
+        "novelty": "従来の感染症モデルは、人間の行動や環境要因の複雑な相互作用を捉えきれず、特に蚊が媒介する感染症の地域ごとの流行パターンを正確に予測することが困難でした。気候変動による新たな感染症の出現にも対応しきれていません。 この研究では、量子版ライフゲームと確率的蚊の動態を組み合わせることで、人間の動きと蚊の増減、そしてその相互作用を同時にモデル化。これにより、地域レベルでの感染者数の推移を極めて高い精度で再現し、環境変化が感染拡大に与える影響も定量的に評価できるようになりました。",
+        "method": "本研究では、量子版ライフゲーム（gSCGOL）という計算モデルを用いて、2025年夏のイタリアにおける西ナイル熱の流行を調査しました。このモデルは、人間の集団の動態をgSCGOLのルールに従ってシミュレートし、同時に蚊の動態を確率的なプロセスでモデル化します。人間と蚊の相互作用も組み込まれており、蚊の出生率と除去率のパラメータを最適化することで、実際の感染者数の累積曲線に高い精度で適合することを示しました。モデルの柔軟性を活用し、蚊の拡散抑制策や気候変動による蚊の急増など、環境変化に対するシステムの応答も定量的に評価しました。",
+        "results": "モデルは、イタリアのラツィオ州、カンパニア州、ヴェネト州における2025年夏の西ナイル熱の感染者数の推移を、地域レベルでも集計レベルでも高い精度で再現しました。特に、ラツィオ州とカンパニア州では感染者数の急増とその後のプラトーが、ヴェネト州ではより緩やかな増加が観測されましたが、モデルはいずれのパターンも正確に捉えることができました。蚊の出生率と除去率のパラメータを調整することで、地域ごとの感染拡大メカニズムの違いも説明可能であることが示されました。",
+        "why": "このモデルの鍵は、人間の動態を量子版ライフゲームで、蚊の動態を確率過程でそれぞれ独立にシミュレートしつつ、両者の相互作用を通じて感染が伝播するという点にあります。量子版ライフゲームは、各細胞が「生きている」と「死んでいる」の量子状態の重ね合わせで表現され、周囲の細胞の状態に応じて確率的に変化します。これにより、人間の移動性や集団内の複雑な相互作用をより現実的に表現できます。蚊の動態は、出生率と除去率によって増減し、蚊がいる場所で人間が刺される確率に基づいて感染が起こります。この二つのシステムを組み合わせることで、局所的な接触から広域の流行まで、多岐にわたるスケールでの感染拡大を包括的に記述することが可能になります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.PE）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "public-health",
+      "arxivPrimary": "q-bio.PE",
+      "titleJa": "量子版ライフゲームでイタリアにおける西ナイル熱のアウトブレイクをモデル化",
+      "catchTitle": "蚊が媒介する感染症、量子モデルで予測",
+      "hook": "あなたの住む地域で、これまで見なかった感染症が流行し始めたらどうしますか？",
+      "background": "近年、イタリアを含むこれまで西ナイル熱が一般的でなかった地域で、感染者数の異常な増加が観測されています。このウイルスは主にヒトスジシマカなどの蚊によって媒介され、気候変動による気温上昇や降雨量の変化が蚊の異常な拡散に影響を与えていると考えられています。感染症の拡大は、地域の公衆衛生だけでなく、経済活動にも大きな影響を及ぼすため、その予測と対策は喫緊の課題です。",
+      "quiz": {
+        "question": "この研究で西ナイル熱の感染拡大をモデル化するために用いられた主な手法は何ですか？",
+        "options": [
+          "アンケート調査と統計分析",
+          "量子版ライフゲームと確率的蚊の動態シミュレーション",
+          "過去の感染データに基づく回帰分析"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究では、人間の動態を量子版ライフゲームで、蚊の動態を確率過程でシミュレートし、両者の相互作用をモデル化することで西ナイル熱の感染拡大を予測しています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "量子版ライフゲーム",
+          "definition": "細胞の状態が量子的な重ね合わせで表現されるシミュレーションモデル。"
+        },
+        {
+          "term": "gSCGOL",
+          "definition": "Generalized Semi-Classical Game of Lifeの略称。"
+        },
+        {
+          "term": "確率的プロセス",
+          "definition": "ランダムな要素を含む事象の進行を記述する数学モデル。"
+        },
+        {
+          "term": "パラメータ",
+          "definition": "モデルの挙動を調整するための数値。"
+        },
+        {
+          "term": "累積曲線",
+          "definition": "ある時点までの合計値の推移を示すグラフ。"
+        },
+        {
+          "term": "相互作用",
+          "definition": "複数の要素が互いに影響し合うこと。"
+        },
+        {
+          "term": "量子状態の重ね合わせ",
+          "definition": "複数の状態が同時に存在する量子力学の概念。"
+        },
+        {
+          "term": "プラトー",
+          "definition": "増加が止まり、横ばいになる状態。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "量子版ライフゲームを応用し、イタリアでの西ナイル熱の感染拡大を高い精度で予測するモデルを開発しました。",
+      "noveltyContrast": {
+        "before": "従来の感染症モデルは、人間の行動や環境要因の複雑な相互作用を捉えきれず、特に蚊が媒介する感染症の地域ごとの流行パターンを正確に予測することが困難でした。気候変動による新たな感染症の出現にも対応しきれていません。",
+        "after": "この研究では、量子版ライフゲームと確率的蚊の動態を組み合わせることで、人間の動きと蚊の増減、そしてその相互作用を同時にモデル化。これにより、地域レベルでの感染者数の推移を極めて高い精度で再現し、環境変化が感染拡大に与える影響も定量的に評価できるようになりました。"
+      },
+      "analogy": {
+        "title": "畑の害虫駆除、ドローンで予測するようなもの",
+        "body": "これは、まるで広大な畑で害虫（蚊）の発生と作物の生育（人間）を同時に観察し、ドローン（量子版ライフゲーム）で害虫の増減パターンや作物の被害状況をリアルタイムで予測するようなものです。どの区画で害虫が増えそうか、いつ駆除すれば最も効果的か、といった情報を事前に知ることで、農家（意思決定者）は無駄なく、的確に手を打つことができるようになります。従来の経験則に頼るのではなく、データに基づいた精密な「害虫マップ」と「被害予測」で、収穫（健康）を守るための戦略を立てるイメージです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "高精度",
+          "label": "感染者数カーブの再現"
+        }
+      ],
+      "whyYouCare": "気候変動の影響で、これまで日本で見られなかった熱帯性の感染症が身近になる可能性があります。この研究で開発されたモデルは、蚊が媒介する感染症の流行を地域レベルで高精度に予測できるため、行政や医療機関が迅速かつ効果的な対策を講じるための強力なツールとなります。例えば、蚊の発生を抑えるための殺虫剤散布のタイミングや、感染リスクが高い地域への注意喚起、医療資源の適切な配分などに活用できます。これにより、私たちの健康が守られ、社会経済への影響を最小限に抑えることができるでしょう。",
+      "takeawayTalk": "量子版ライフゲームで蚊の感染症を予測、未来のパンデミック対策に役立つ！",
+      "bodyText": "本研究では、量子版ライフゲーム（gSCGOL）という計算モデルを用いて、2025年夏のイタリアにおける西ナイル熱の流行を調査しました。このモデルは、人間の集団の動態をgSCGOLのルールに従ってシミュレートし、同時に蚊の動態を確率的なプロセスでモデル化します。人間と蚊の相互作用も組み込まれており、蚊の出生率と除去率のパラメータを最適化することで、実際の感染者数の累積曲線に高い精度で適合することを示しました。モデルの柔軟性を活用し、蚊の拡散抑制策や気候変動による蚊の急増など、環境変化に対するシステムの応答も定量的に評価しました。\n\nこのモデルの鍵は、人間の動態を量子版ライフゲームで、蚊の動態を確率過程でそれぞれ独立にシミュレートしつつ、両者の相互作用を通じて感染が伝播するという点にあります。量子版ライフゲームは、各細胞が「生きている」と「死んでいる」の量子状態の重ね合わせで表現され、周囲の細胞の状態に応じて確率的に変化します。これにより、人間の移動性や集団内の複雑な相互作用をより現実的に表現できます。蚊の動態は、出生率と除去率によって増減し、蚊がいる場所で人間が刺される確率に基づいて感染が起こります。この二つのシステムを組み合わせることで、局所的な接触から広域の流行まで、多岐にわたるスケールでの感染拡大を包括的に記述することが可能になります。",
+      "bodyGlossary": [
+        {
+          "term": "量子版ライフゲーム",
+          "definition": "細胞の状態が量子的な重ね合わせで表現されるシミュレーションモデル。",
+          "start": 6,
+          "end": 15
+        },
+        {
+          "term": "gSCGOL",
+          "definition": "Generalized Semi-Classical Game of Lifeの略称。",
+          "start": 16,
+          "end": 22
+        },
+        {
+          "term": "相互作用",
+          "definition": "複数の要素が互いに影響し合うこと。",
+          "start": 135,
+          "end": 139
+        },
+        {
+          "term": "パラメータ",
+          "definition": "モデルの挙動を調整するための数値。",
+          "start": 159,
+          "end": 164
+        },
+        {
+          "term": "累積曲線",
+          "definition": "ある時点までの合計値の推移を示すグラフ。",
+          "start": 182,
+          "end": 186
+        },
+        {
+          "term": "量子状態の重ね合わせ",
+          "definition": "複数の状態が同時に存在する量子力学の概念。",
+          "start": 380,
+          "end": 390
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "量子版ライフゲーム",
+          "definition": "細胞の状態が量子的な重ね合わせで表現されるシミュレーションモデル。",
+          "start": 6,
+          "end": 15
+        },
+        {
+          "term": "gSCGOL",
+          "definition": "Generalized Semi-Classical Game of Lifeの略称。",
+          "start": 16,
+          "end": 22
+        },
+        {
+          "term": "相互作用",
+          "definition": "複数の要素が互いに影響し合うこと。",
+          "start": 135,
+          "end": 139
+        },
+        {
+          "term": "パラメータ",
+          "definition": "モデルの挙動を調整するための数値。",
+          "start": 159,
+          "end": 164
+        },
+        {
+          "term": "累積曲線",
+          "definition": "ある時点までの合計値の推移を示すグラフ。",
+          "start": 182,
+          "end": 186
+        },
+        {
+          "term": "量子状態の重ね合わせ",
+          "definition": "複数の状態が同時に存在する量子力学の概念。",
+          "start": 380,
+          "end": 390
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 247,
+      "keyFigure": {
+        "imagePath": "/figures/2606.20489v1_results.png",
+        "page": 8,
+        "caption": "イタリアの各地域における西ナイル熱の感染者数の推移とモデルの再現性を示しています。",
+        "label": "Figure 3: Model performances in describing aggregate and regional infection dynamics in",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-21T23:12:31.379Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.20489v1_results.png",
+          "page": 8,
+          "caption": "イタリアの各地域における西ナイル熱の感染者数の推移とモデルの再現性を示しています。",
+          "label": "Figure 3: Model performances in describing aggregate and regional infection dynamics in",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-21T23:12:31.379Z"
+        },
+        {
+          "imagePath": "/figures/2606.20489v1_why.png",
+          "page": 7,
+          "caption": "人間と蚊の動態を組み合わせた計算モデルの概念図を示しています。",
+          "label": "Figure 2: Computational model of human population and disease vectors dynamics. a: Human",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-21T23:12:31.380Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.17807v1",
+      "title": "Household coping mechanisms under grid failure: Evidence from a high electrification context in Lebanon",
+      "authors": [
+        "Majd Olleik",
+        "Haytham M. Dbouk",
+        "Anne Neumann",
+        "Elsa Bou Gebrael",
+        "Sebastian Zwickl-Bernhard"
+      ],
+      "publishedAt": "2026-06-16T11:31:42Z",
+      "url": "https://arxiv.org/abs/2606.17807v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.17807v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "econ.GN"
+      ],
+      "abstract": "Despite near-universal electrification in many countries, electricity supply shortages continue to shape household energy use. This paper examines how households adapt to chronic grid failure in high-electrification, high-dependence contexts, using Lebanon as a case study. Drawing on original survey data from 1,000 households, we analyze both supply-side coping mechanisms such as diesel generators and solar photovoltaic (PV)-battery systems, and demand-side adaptations, including load shifting and demand suppression. The results reveal a landscape of household responses, where socioeconomic status plays a central role in determining access to backup solutions and the extent of met demand. While diesel generators remain widespread, a transition toward PV-battery systems is observed, especially among financially capable households. However, decentralized self-generation is associated with inefficiencies, including substantial levels of curtailed solar generation. On the demand side, households exhibit reductions in electricity use, leading to distinct consumption profiles depending on the type of backup system employed. These findings highlight the importance of distinguishing between met and unmet demand when assessing energy needs under unreliable supply. The paper contributes to the literature by providing a quantitative characterization of the interaction between self-generation and demand adaptation in a supply-constrained high-electrification context. It also offers empirical demand profiles that incorporate suppressed consumption, addressing a key gap in electricity system planning. From a policy perspective, the results underscore the need to account for unmet demand, address inequities in access to coping technologies, and reduce inefficiencies in decentralized systems.",
+      "summary": {
+        "gist": "多くの国で電化率はほぼ普遍的であるにもかかわらず、電力供給不足が家計のエネルギー使用を形成し続けています。特に、レバノン、ウクライナ、イラク、南アフリカのような国々では、電化率が高いにもかかわらず慢性的な供給不足に直面しており、電力は家計や経済活動に深く組み込まれているため、停電は大きな問題です。レバノンでは、内戦後の地政学的不安定と2019年の経済危機により、電力供給が日に数時間にまで減少しました。これに対し、家計はディーゼル発電機や太陽光発電（PV）バッテリーシステムなどの自家発電、および負荷シフトや需要抑制といった需要側の適応策で対応しています。しかし、これらの対処メカニズムがどのように相互作用し、社会経済的地位によってどのように異なるのか、またそれが電力システム計画にどのような影響を与えるのかは、これまで十分に研究されていませんでした。",
+        "novelty": "これまでの研究は、電化率が低い国での電力アクセス拡大や、停電時の対策を供給側・需要側で個別に見ていました。また、電化率が高いが停電が頻発する国での家計の具体的な行動や、自家発電と需要調整の相互作用については、定量的なデータが不足していました。 この論文は、電化率が高く電力への依存度も高いにもかかわらず、慢性的な停電に悩むレバノンの1000世帯を対象に、自家発電と需要調整の両面から家計の対処行動を定量的に分析しました。これにより、満たされた需要と満たされない需要を区別し、電力システム計画のギャップを埋める新たな知見を提供しています。",
+        "method": "本研究は、電化率が高く電力への依存度も高いにもかかわらず、慢性的な停電に悩むレバノンの1000世帯を対象に、独自のアンケート調査データを収集しました。このデータを用いて、ディーゼル発電機や太陽光発電（PV）バッテリーシステムといった供給側の対処メカニズムと、負荷シフトや需要抑制といった需要側の適応策の両方を分析しました。特に、社会経済的地位がバックアップソリューションへのアクセスと満たされる需要の程度にどのように影響するかを調査し、満たされた需要と満たされない需要を区別してエネルギー需要を評価することの重要性を強調しています。",
+        "results": "調査の結果、家計の対処行動は多岐にわたり、社会経済的地位がバックアップソリューションへのアクセスと満たされる需要の程度を決定する上で中心的な役割を果たすことが明らかになりました。ディーゼル発電機は依然として広く普及していますが、特に経済的に余裕のある家計の間では、PVバッテリーシステムへの移行が見られます。しかし、分散型自家発電は、かなりの量の太陽光発電が抑制されるなど、非効率性も伴います。需要側では、家計は電力使用量の削減を示し、採用しているバックアップシステムの種類によって異なる消費プロファイルを示しました。これらの結果は、信頼性の低い供給下でのエネルギー需要を評価する際に、満たされた需要と満たされない需要を区別することの重要性を浮き彫りにしています。",
+        "why": "慢性的な停電に直面する家計は、電力供給の不安定性に対応するため、供給側と需要側の両面から適応策を講じます。供給側では、ディーゼル発電機や太陽光発電システムのような自家発電設備を導入することで、停電時でも電力を確保しようとします。特に太陽光発電システムは、初期費用はかかるものの、長期的に見ればディーゼル発電機よりも経済的であるため、経済的に余裕のある家計で導入が進んでいます。しかし、系統連系が不十分な場合、自家発電した電力が余剰となり、無駄になる（抑制される）非効率性も生じます。需要側では、家計は電力料金の高騰や供給不足に対応するため、電力消費量の削減（需要抑制）や、電力が利用可能な時間帯に集中的に消費する（負荷シフト）といった行動をとります。これらの行動は、家計の社会経済的地位や、利用可能なバックアップシステムの種類によって異なり、結果として多様な電力消費パターンが生まれます。このメカニズムは、電力供給が不安定な状況下で、家計がどのように生活を維持し、エネルギー需要を満たそうとするかを示しています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "energy-economics",
+      "arxivPrimary": "econ.GN",
+      "titleJa": "電力網の故障下における家計の対処メカニズム：電化率の高いレバノンからのエビデンス",
+      "catchTitle": "停電だらけの国で、人々はどう電気を使う？",
+      "hook": "あなたの家で毎日数時間、電気が止まったらどうしますか？電化率が高いのに慢性的な停電に悩む国があります。",
+      "background": "多くの国で電化率はほぼ普遍的であるにもかかわらず、電力供給不足が家計のエネルギー使用を形成し続けています。特に、レバノン、ウクライナ、イラク、南アフリカのような国々では、電化率が高いにもかかわらず慢性的な供給不足に直面しており、電力は家計や経済活動に深く組み込まれているため、停電は大きな問題です。レバノンでは、内戦後の地政学的不安定と2019年の経済危機により、電力供給が日に数時間にまで減少しました。これに対し、家計はディーゼル発電機や太陽光発電（PV）バッテリーシステムなどの自家発電、および負荷シフトや需要抑制といった需要側の適応策で対応しています。しかし、これらの対処メカニズムがどのように相互作用し、社会経済的地位によってどのように異なるのか、またそれが電力システム計画にどのような影響を与えるのかは、これまで十分に研究されていませんでした。",
+      "quiz": {
+        "question": "電化率が高いのに慢性的な停電に悩む国で、家計が電力不足に対応するためにとる行動として、この論文で言及されていないものはどれでしょう？",
+        "options": [
+          "ディーゼル発電機の導入",
+          "太陽光発電（PV）バッテリーシステムの導入",
+          "電力消費を別の時間帯にずらす（負荷シフト）"
+        ],
+        "correctIndex": 2,
+        "explanation": "論文では、ディーゼル発電機や太陽光発電システムの導入（供給側）、負荷シフトや需要抑制（需要側）が家計の対処メカニズムとして言及されていますが、電力会社への大規模なデモ活動については触れられていません。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "電化率",
+          "definition": "電気を利用できる世帯の割合。"
+        },
+        {
+          "term": "PVバッテリーシステム",
+          "definition": "太陽光発電と蓄電池を組み合わせたシステム。"
+        },
+        {
+          "term": "負荷シフト",
+          "definition": "電力消費を別の時間帯にずらすこと。"
+        },
+        {
+          "term": "需要抑制",
+          "definition": "電力消費量を全体的に減らすこと。"
+        },
+        {
+          "term": "社会経済的地位",
+          "definition": "所得、教育、職業などに基づく社会的な位置。"
+        },
+        {
+          "term": "分散型自家発電",
+          "definition": "各家庭や施設で個別に発電すること。"
+        },
+        {
+          "term": "消費プロファイル",
+          "definition": "時間帯ごとの電力消費パターンのこと。"
+        },
+        {
+          "term": "系統連系",
+          "definition": "自家発電設備を電力会社の送電網に接続すること。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "電化率が高いのに停電が頻発する国では、裕福な家庭ほど太陽光発電を導入し、電力消費パターンも変化します。",
+      "noveltyContrast": {
+        "before": "これまでの研究は、電化率が低い国での電力アクセス拡大や、停電時の対策を供給側・需要側で個別に見ていました。また、電化率が高いが停電が頻発する国での家計の具体的な行動や、自家発電と需要調整の相互作用については、定量的なデータが不足していました。",
+        "after": "この論文は、電化率が高く電力への依存度も高いにもかかわらず、慢性的な停電に悩むレバノンの1000世帯を対象に、自家発電と需要調整の両面から家計の対処行動を定量的に分析しました。これにより、満たされた需要と満たされない需要を区別し、電力システム計画のギャップを埋める新たな知見を提供しています。"
+      },
+      "analogy": {
+        "title": "不安定な天候下の農家の知恵",
+        "body": "これは、まるで天候が不安定な地域で農業を営む農家が、収穫量を安定させるために様々な工夫をするようなものです。例えば、主要な水源（送電網）が不安定な場合、裕福な農家は自家用の井戸（太陽光発電システム）を掘り、雨水タンク（バッテリー）を設置して水の供給を確保します。一方で、そうでない農家は、水やりを工夫したり（負荷シフト）、水を使う作物の種類を減らしたり（需要抑制）して、限られた水で乗り切ろうとします。この研究は、農家がどのような水源を確保し、どのように水の使い方を変えているかを詳細に調べ、その結果が収穫量（電力消費）にどう影響するかを明らかにしています。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、電力供給が不安定な状況下で、人々がどのように生活を維持し、エネルギーを確保しているかという現実を教えてくれます。もしあなたが電力会社で働いているなら、停電時の需要を正確に把握し、より公平で効率的な電力システムを設計するためのヒントが得られるでしょう。また、再生可能エネルギー関連のビジネスに携わっているなら、太陽光発電システムの導入が進む背景や、その課題（発電抑制など）を理解することで、新たなビジネスチャンスや改善点を見つけられるかもしれません。さらに、一般の私たちにとっても、エネルギーの安定供給がいかに重要か、そしてそれが社会の公平性にどう影響するかを考えるきっかけになります。",
+      "takeawayTalk": "停電だらけの国では、お金持ちほど太陽光発電を導入して生活を守ってるよ。",
+      "bodyText": "本研究は、電化率が高く電力への依存度も高いにもかかわらず、慢性的な停電に悩むレバノンの1000世帯を対象に、独自のアンケート調査データを収集しました。このデータを用いて、ディーゼル発電機や太陽光発電（PV）バッテリーシステムといった供給側の対処メカニズムと、負荷シフトや需要抑制といった需要側の適応策の両方を分析しました。特に、社会経済的地位がバックアップソリューションへのアクセスと満たされる需要の程度にどのように影響するかを調査し、満たされた需要と満たされない需要を区別してエネルギー需要を評価することの重要性を強調しています。\n\n慢性的な停電に直面する家計は、電力供給の不安定性に対応するため、供給側と需要側の両面から適応策を講じます。供給側では、ディーゼル発電機や太陽光発電システムのような自家発電設備を導入することで、停電時でも電力を確保しようとします。特に太陽光発電システムは、初期費用はかかるものの、長期的に見ればディーゼル発電機よりも経済的であるため、経済的に余裕のある家計で導入が進んでいます。しかし、系統連系が不十分な場合、自家発電した電力が余剰となり、無駄になる（抑制される）非効率性も生じます。需要側では、家計は電力料金の高騰や供給不足に対応するため、電力消費量の削減（需要抑制）や、電力が利用可能な時間帯に集中的に消費する（負荷シフト）といった行動をとります。これらの行動は、家計の社会経済的地位や、利用可能なバックアップシステムの種類によって異なり、結果として多様な電力消費パターンが生まれます。このメカニズムは、電力供給が不安定な状況下で、家計がどのように生活を維持し、エネルギー需要を満たそうとするかを示しています。",
+      "bodyGlossary": [
+        {
+          "term": "電化率",
+          "definition": "電気を利用できる世帯の割合。",
+          "start": 5,
+          "end": 8
+        },
+        {
+          "term": "負荷シフト",
+          "definition": "電力消費を別の時間帯にずらすこと。",
+          "start": 129,
+          "end": 134
+        },
+        {
+          "term": "需要抑制",
+          "definition": "電力消費量を全体的に減らすこと。",
+          "start": 135,
+          "end": 139
+        },
+        {
+          "term": "社会経済的地位",
+          "definition": "所得、教育、職業などに基づく社会的な位置。",
+          "start": 164,
+          "end": 171
+        },
+        {
+          "term": "系統連系",
+          "definition": "自家発電設備を電力会社の送電網に接続すること。",
+          "start": 460,
+          "end": 464
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "電化率",
+          "definition": "電気を利用できる世帯の割合。",
+          "start": 5,
+          "end": 8
+        },
+        {
+          "term": "負荷シフト",
+          "definition": "電力消費を別の時間帯にずらすこと。",
+          "start": 129,
+          "end": 134
+        },
+        {
+          "term": "需要抑制",
+          "definition": "電力消費量を全体的に減らすこと。",
+          "start": 135,
+          "end": 139
+        },
+        {
+          "term": "社会経済的地位",
+          "definition": "所得、教育、職業などに基づく社会的な位置。",
+          "start": 164,
+          "end": 171
+        },
+        {
+          "term": "系統連系",
+          "definition": "自家発電設備を電力会社の送電網に接続すること。",
+          "start": 460,
+          "end": 464
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 339,
+      "keyFigure": {
+        "imagePath": "/figures/2606.17807v1_results.png",
+        "page": 10,
+        "caption": "各世帯のディーゼル発電機による月間供給量の分布を示しています。",
+        "label": "Figure 8: Distribution of monthly supply from diesel generator per household",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-21T23:12:34.043Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.17807v1_results.png",
+          "page": 10,
+          "caption": "各世帯のディーゼル発電機による月間供給量の分布を示しています。",
+          "label": "Figure 8: Distribution of monthly supply from diesel generator per household",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-21T23:12:34.043Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.18179v1",
+      "title": "PyPeakRankR: Reproducible Peak-Level Feature Extraction for Regulatory Element Ranking",
+      "authors": [
+        "Saroja Somasundaram",
+        "Nelson J. Johansen",
+        "Trygve E. Bakken",
+        "Jeremy A. Miller"
+      ],
+      "publishedAt": "2026-06-16T17:12:31Z",
+      "url": "https://arxiv.org/abs/2606.18179v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.18179v1.pdf",
+      "categories": [
+        "topic:genomics",
+        "q-bio.GN"
+      ],
+      "abstract": "High-throughput chromatin accessibility assays such as ATAC-seq generate thousands of candidate regulatory elements (peaks), yet no standardized tool exists for assembling the diverse quantitative features needed to prioritize peaks for functional validation. Here we present PyPeakRankR, an open-source Python package that extracts peak-level features, namely BigWig signal summaries, GC content, PhyloP conservation scores, distribution moments (kurtosis, skewness, bimodality), and cell-type specificity rankings, into a single reproducible peak by feature matrix stored as a tab-separated values (TSV) file. PyPeakRankR separates deterministic feature extraction from downstream ranking, enabling transparent benchmarking of prioritization strategies on the same upstream data. The package provides both a command-line interface and a matching Python API, supports cross-assembly scoring via liftOver, and runs in minutes on thousands of peaks. PyPeakRankR was validated in the Brain Initiative Cell Census Network (BICCN) community challenge, where its predecessor PeakRankR ranked among the top 3 of 16 methods for cell-type specific enhancer prediction. In a recent basal ganglia study, PyPeakRankR was used within the Cross-species Enhancer Ranking Pipeline (CERP) to identify enhancer-AAV tools achieving greater than 70% on-target specificity across cell types. PyPeakRankR is freely available under the MIT license at https://github.com/AllenInstitute/PeakRankR/tree/python-package.",
+      "summary": {
+        "gist": "ATAC-seqのようなハイスループットなクロマチンアクセシビリティアッセイは、数千もの候補となる調節要素（ピーク）を生成します。しかし、これらのピークを機能検証のために優先順位付けするために必要な多様な定量的特徴を統合する標準化されたツールは存在しませんでした。既存のツールは問題の一部しか解決せず、統一されたポータブルな特徴量マトリックスを生成できませんでした。このギャップは、特に単一細胞ATAC-seqデータやバルクATAC-seqデータを扱う計算生物学者にとって、実験的な追跡調査、特にエンハンサー発見やアデノ随伴ウイルス（AAV）ツール設計のためにピークを体系的に優先順位付けする必要がある場合に影響を与えていました。",
+        "novelty": "これまでの研究では、ゲノム上の「注目領域（ピーク）」を分析する際、研究者ごとに異なる手法やスクリプトを使っていました。そのため、結果の比較が難しく、再現性も低いという課題がありました。特に、細胞の種類に特異的な遺伝子スイッチを見つける作業は非効率的でした。 この論文で発表されたPyPeakRankRは、様々なゲノムの特徴量（信号強度、GC含有量、進化上の保存性など）を統一された形式で抽出し、再現性の高いデータとして出力します。これにより、研究者間で結果を容易に比較でき、効率的に細胞特異的な遺伝子スイッチを特定できるようになりました。",
+        "method": "PyPeakRankRは、オープンソースのPythonパッケージであり、BigWig信号の要約、GC含有量、PhyloP保存スコア、分布のモーメント（尖度、歪度、二峰性）、細胞タイプ特異性ランキングといったピークレベルの特徴を、タブ区切り値（TSV）ファイルとして保存される単一の再現性のある特徴量マトリックスに抽出します。このツールは、確定的特徴抽出と下流のランキングを分離することで、同じ上流データに対する優先順位付け戦略の透明なベンチマークを可能にします。コマンドラインインターフェースとPython APIの両方を提供し、liftOverを介したクロスアセンブリスコアリングをサポートし、数千のピークに対して数分で実行できます。",
+        "results": "PyPeakRankRは、Brain Initiative Cell Census Network (BICCN) コミュニティチャレンジで検証され、その前身であるPeakRankRは、細胞タイプ特異的エンハンサー予測において16の方法中トップ3にランクインしました。最近の基底核研究では、PyPeakRankRがCross-species Enhancer Ranking Pipeline (CERP) 内で使用され、70%以上のオンターゲット特異性を達成するエンハンサー-AAVツールを特定しました。これにより、PyPeakRankRで実装された特徴抽出およびランキングアプローチの直接的な実験的有用性が確立されました。",
+        "why": "PyPeakRankRは、pyBigWig、pyfaidx、SciPyを組み合わせて、異種の特徴量を単一の再現性のあるTSVテーブルに統合する柔軟なCLIパイプラインを構築しています。設計の核となるのは、「テーブルファースト、柔軟なパイプライン」「特徴抽出とランキングの分離」「コマンドラインインターフェース（CLI）とPython APIの同等性」の3点です。GC含有量は、活性エンハンサーがプロモーターやバルクゲノムDNAよりも低いことを反映し、ヌクレオソーム占有率の違いを示します。PhyloP保存は、種間の精製選択下にあるピークを特定します。信号分布のモーメント（尖度、歪度、二峰性）は、これらの形状特徴が信号強度単独よりも信頼性高くエンハンサーをプロモーターと区別することを示した先行研究に基づいています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.GN）",
+      "field": "遺伝・ゲノム",
+      "categoryL1": "adjacent",
+      "categoryL2": "bioinformatics",
+      "arxivPrimary": "q-bio.GN",
+      "titleJa": "PyPeakRankR: ゲノムの「注目領域」を効率的に見つけるためのツール",
+      "catchTitle": "遺伝子スイッチの「当たり」を見つける",
+      "hook": "あなたの体の中で、どの遺伝子スイッチが、どの細胞で、どんな働きをしているか、気になりませんか？",
+      "background": "ATAC-seqのようなハイスループットなクロマチンアクセシビリティアッセイは、数千もの候補となる調節要素（ピーク）を生成します。しかし、これらのピークを機能検証のために優先順位付けするために必要な多様な定量的特徴を統合する標準化されたツールは存在しませんでした。既存のツールは問題の一部しか解決せず、統一されたポータブルな特徴量マトリックスを生成できませんでした。このギャップは、特に単一細胞ATAC-seqデータやバルクATAC-seqデータを扱う計算生物学者にとって、実験的な追跡調査、特にエンハンサー発見やアデノ随伴ウイルス（AAV）ツール設計のためにピークを体系的に優先順位付けする必要がある場合に影響を与えていました。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "ATAC-seq",
+          "definition": "ゲノムの開いている領域を特定する技術"
+        },
+        {
+          "term": "調節要素",
+          "definition": "遺伝子の働きを制御するゲノム上の領域"
+        },
+        {
+          "term": "ピーク",
+          "definition": "ATAC-seqで検出されるゲノム上の注目領域"
+        },
+        {
+          "term": "BigWig",
+          "definition": "ゲノム上の信号強度データを保存する形式"
+        },
+        {
+          "term": "GC含有量",
+          "definition": "DNA配列中のグアニンとシトシンの割合"
+        },
+        {
+          "term": "PhyloP保存スコア",
+          "definition": "進化の過程でDNA配列がどれだけ保存されたかを示す指標"
+        },
+        {
+          "term": "分布のモーメント",
+          "definition": "データ分布の形状（尖度、歪度、二峰性）を表す統計量"
+        },
+        {
+          "term": "TSVファイル",
+          "definition": "タブで区切られたテキストデータファイル"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "細胞の活動を制御するゲノム上の「注目領域（ピーク）」を、様々な特徴量で評価し、優先順位付けする標準化されたツールです。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、ゲノム上の「注目領域（ピーク）」を分析する際、研究者ごとに異なる手法やスクリプトを使っていました。そのため、結果の比較が難しく、再現性も低いという課題がありました。特に、細胞の種類に特異的な遺伝子スイッチを見つける作業は非効率的でした。",
+        "after": "この論文で発表されたPyPeakRankRは、様々なゲノムの特徴量（信号強度、GC含有量、進化上の保存性など）を統一された形式で抽出し、再現性の高いデータとして出力します。これにより、研究者間で結果を容易に比較でき、効率的に細胞特異的な遺伝子スイッチを特定できるようになりました。"
+      },
+      "analogy": {
+        "title": "豊作の畑から最高の作物を見つける方法",
+        "body": "広大な畑で、どの区画が最も良い作物を生み出すかを見つけたいとします。これまでは、農家がそれぞれ独自の基準（土の色、葉の茂り具合など）で手作業で調べていたため、隣の畑と比べようにも基準がバラバラでした。PyPeakRankRは、畑の土壌データ（GC含有量）、日当たり（信号強度）、過去の収穫実績（進化上の保存性）、さらには作物の生育パターン（信号分布のモーメント）といった多様な情報を、統一されたフォーマットで記録する「スマート農業システム」のようなものです。これにより、どの区画が特定の作物（細胞特異的エンハンサー）にとって最高の場所なのかを、客観的かつ効率的に評価し、次の年の作付け計画（機能検証）に役立てることができます。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": ">70%",
+          "label": "細胞タイプ特異性"
+        }
+      ],
+      "whyYouCare": "この研究は、私たちの体の細胞がどのように機能し、病気がどのように発生するかを理解するための重要な一歩です。例えば、特定の病気に関連する細胞で、どの遺伝子スイッチが異常にオン/オフしているのかを効率的に特定できれば、より効果的な治療法の開発につながります。また、再生医療や遺伝子治療の分野では、狙った細胞だけに遺伝子を導入する技術（AAVツール）の精度向上に貢献し、副作用の少ない安全な治療法の実現に役立ちます。生命科学研究の効率化と、それを通じた医療の進歩に直結する技術と言えるでしょう。",
+      "takeawayTalk": "細胞の遺伝子スイッチの「当たり」を効率的に見つけるツールができたよ！",
+      "bodyText": "PyPeakRankRは、オープンソースのPythonパッケージであり、BigWig信号の要約、GC含有量、PhyloP保存スコア、分布のモーメント（尖度、歪度、二峰性）、細胞タイプ特異性ランキングといったピークレベルの特徴を、タブ区切り値（TSV）ファイルとして保存される単一の再現性のある特徴量マトリックスに抽出します。このツールは、確定的特徴抽出と下流のランキングを分離することで、同じ上流データに対する優先順位付け戦略の透明なベンチマークを可能にします。コマンドラインインターフェースとPython APIの両方を提供し、liftOverを介したクロスアセンブリスコアリングをサポートし、数千のピークに対して数分で実行できます。\n\nPyPeakRankRは、pyBigWig、pyfaidx、SciPyを組み合わせて、異種の特徴量を単一の再現性のあるTSVテーブルに統合する柔軟なCLIパイプラインを構築しています。設計の核となるのは、「テーブルファースト、柔軟なパイプライン」「特徴抽出とランキングの分離」「コマンドラインインターフェース（CLI）とPython APIの同等性」の3点です。GC含有量は、活性エンハンサーがプロモーターやバルクゲノムDNAよりも低いことを反映し、ヌクレオソーム占有率の違いを示します。PhyloP保存は、種間の精製選択下にあるピークを特定します。信号分布のモーメント（尖度、歪度、二峰性）は、これらの形状特徴が信号強度単独よりも信頼性高くエンハンサーをプロモーターと区別することを示した先行研究に基づいています。",
+      "bodyGlossary": [
+        {
+          "term": "BigWig",
+          "definition": "ゲノム上の信号強度データを保存する形式",
+          "start": 36,
+          "end": 42
+        },
+        {
+          "term": "GC含有量",
+          "definition": "DNA配列中のグアニンとシトシンの割合",
+          "start": 48,
+          "end": 53
+        },
+        {
+          "term": "PhyloP保存スコア",
+          "definition": "進化の過程でDNA配列がどれだけ保存されたかを示す指標",
+          "start": 54,
+          "end": 65
+        },
+        {
+          "term": "分布のモーメント",
+          "definition": "データ分布の形状（尖度、歪度、二峰性）を表す統計量",
+          "start": 66,
+          "end": 74
+        },
+        {
+          "term": "ピーク",
+          "definition": "ATAC-seqで検出されるゲノム上の注目領域",
+          "start": 103,
+          "end": 106
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "BigWig",
+          "definition": "ゲノム上の信号強度データを保存する形式",
+          "start": 36,
+          "end": 42
+        },
+        {
+          "term": "GC含有量",
+          "definition": "DNA配列中のグアニンとシトシンの割合",
+          "start": 48,
+          "end": 53
+        },
+        {
+          "term": "PhyloP保存スコア",
+          "definition": "進化の過程でDNA配列がどれだけ保存されたかを示す指標",
+          "start": 54,
+          "end": 65
+        },
+        {
+          "term": "分布のモーメント",
+          "definition": "データ分布の形状（尖度、歪度、二峰性）を表す統計量",
+          "start": 66,
+          "end": 74
+        },
+        {
+          "term": "ピーク",
+          "definition": "ATAC-seqで検出されるゲノム上の注目領域",
+          "start": 103,
+          "end": 106
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 316,
+      "keyFigure": {
+        "imagePath": "/figures/2606.18179v1_results.png",
+        "page": 3,
+        "caption": "Figure 1: Features collected by PyPeakRankR for each candidate peak: GC content, PhyloP Features collected by PyPeakRankR for each candidate peak: GC content, PhyloP",
+        "label": "Figure 1: Features collected by PyPeakRankR for each candidate peak: GC content, PhyloP",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-21T23:12:35.040Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.18179v1_results.png",
+          "page": 3,
+          "caption": "Figure 1: Features collected by PyPeakRankR for each candidate peak: GC content, PhyloP Features collected by PyPeakRankR for each candidate peak: GC content, PhyloP",
+          "label": "Figure 1: Features collected by PyPeakRankR for each candidate peak: GC content, PhyloP",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-21T23:12:35.040Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.20315v1",
+      "title": "bioETH-Beacon: A Confidential On-Chain Genomic Beacon with Encrypted Counts, Filters, and Bounded Noise over a Fully Homomorphic EVM",
+      "authors": [
+        "Christos Galanopoulos",
+        "Kimon Antonios Provatas",
+        "Ilias Georgakopoulos-Soares"
+      ],
+      "publishedAt": "2026-06-18T14:49:13Z",
+      "url": "https://arxiv.org/abs/2606.20315v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.20315v1.pdf",
+      "categories": [
+        "topic:genomics",
+        "q-bio.GN",
+        "cs.CR"
+      ],
+      "abstract": "The Global Alliance for Genomics and Health (GA4GH) Beacon protocol lets researchers ask whether a genomic variant has been observed in a participating cohort and receive aggregate variant-level counts. As Beacon networks grow, two privacy risks remain: host institutions can see plaintext queries, and repeated rare-variant queries can support membership-inference attacks. We present bioETH-Beacon, a smart-contract prototype that runs the Beacon \"aggregate count\" query over encrypted data on a fully homomorphic Ethereum Virtual Machine (fhEVM). Hospitals upload encrypted marker-count entries, authorized researchers submit encrypted marker queries, and the contract returns an encrypted answer that is released, via an off-chain key-management service, only to the requester named in the contract's on-chain ACL. The design is organized as a 3x4 tier-by-query-family grid spanning genotype, sex, age, and phenotype queries, with tiers that trade stronger confidentiality for lower query cost. For genotype paths, the prototype can add bounded on-chain noise to mitigate probing attacks. Experiments on synthetic panels derived from a Polygenic Score (PGS) catalog show the expected scaling behavior and demonstrate that pre-aggregation can substantially reduce query gas when public marker presence is an acceptable trade-off. Overall, bioETH-Beacon provides a research prototype for confidential Beacon-style genomic querying without a trusted compute evaluator.",
+      "summary": {
+        "gist": "GA4GH Beaconプロトコルは、ゲノム変異が特定のコホートで観察されたか、またその集計数を研究者が照会できる仕組みです。しかし、ホスト機関がクエリ内容を平文で見る、希少変異の繰り返しクエリで個人特定のリスクがあるというプライバシー課題がありました。",
+        "novelty": "従来のゲノム情報共有プロトコル（Beacon）では、病院側は研究者の検索内容を、研究者側は検索結果の生データをそれぞれ見ることができ、個人特定のリスクがありました。特に希少な遺伝子変異の繰り返し検索は、個人がコホートに含まれるかを推測する攻撃に利用される可能性がありました。 この論文のbioETH-Beaconは、ゲノム情報を完全に暗号化したままEthereumブロックチェーン上で検索・集計します。病院も研究者も、検索内容や個別の生データを見ることなく、暗号化された集計結果のみを得られます。これにより、プライバシー侵害のリスクを大幅に低減し、安全なゲノム研究を可能にします。",
+        "method": "bioETH-Beaconは、完全準同型暗号（FHE）を拡張したEthereum Virtual Machine（fhEVM）上で動作するスマートコントラクトプロトタイプです。病院は暗号化されたマーカーカウントデータをアップロードし、認可された研究者は暗号化されたマーカークエリを送信します。コントラクトは暗号化された集計結果を返し、オフチェーンの鍵管理サービスを通じて、契約に記載されたリクエスターのみが復号できます。また、プロービング攻撃対策として、オンチェーンでノイズを追加する機能も備えています。",
+        "results": "合成データセットを用いた実験では、期待されるスケーリング挙動を示し、事前集計によりクエリガスを最大94%削減できることが実証されました。これにより、信頼できる計算評価者を必要とせず、機密性の高いゲノムクエリが可能になります。",
+        "why": "このシステムは、データが暗号化されたままで計算できる完全準同型暗号（FHE）と、改ざん不可能なブロックチェーン技術を組み合わせることで実現されています。病院がデータをアップロードする際、そのデータは暗号化され、ブロックチェーン上に記録されます。研究者がクエリを送信する際も、クエリ自体が暗号化されます。ブロックチェーン上のスマートコントラクトは、これらの暗号化されたデータとクエリを、復号することなく処理し、集計結果を暗号化されたまま生成します。最終的な復号は、許可された研究者のみがオフチェーンの鍵管理サービスを通じて行えるため、途中の誰もデータの中身を知ることができません。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.GN）",
+      "field": "遺伝・ゲノム",
+      "categoryL1": "adjacent",
+      "categoryL2": "data-privacy",
+      "arxivPrimary": "q-bio.GN",
+      "titleJa": "bioETH-Beacon: 暗号化されたゲノム情報を安全に照会するオンチェーンプロトタイプ",
+      "catchTitle": "ゲノム情報、秘密のまま検索！",
+      "hook": "あなたのゲノム情報、研究に役立てたいけどプライバシーが心配…そんなジレンマを解決する技術が登場しました。",
+      "background": "GA4GH Beaconプロトコルは、ゲノム変異が特定のコホートで観察されたか、またその集計数を研究者が照会できる仕組みです。しかし、ホスト機関がクエリ内容を平文で見る、希少変異の繰り返しクエリで個人特定のリスクがあるというプライバシー課題がありました。",
+      "quiz": {
+        "question": "bioETH-Beaconが解決しようとしているプライバシー課題は何ですか？",
+        "options": [
+          "病院が研究者の検索内容を平文で見るリスク",
+          "研究者が検索結果の生データを平文で受け取るリスク",
+          "希少変異の繰り返しクエリによる個人特定リスク"
+        ],
+        "correctIndex": 2,
+        "explanation": "bioETH-Beaconは、ホスト機関がクエリ内容を見るリスク、研究者が生データを受け取るリスク、そして繰り返しクエリによる個人特定リスクという、従来のBeaconプロトコルが抱えていた主要なプライバシー課題すべてを解決しようとしています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "GA4GH Beaconプロトコル",
+          "definition": "ゲノム変異の有無や頻度を照会する国際的な標準。"
+        },
+        {
+          "term": "完全準同型暗号",
+          "definition": "暗号化されたデータを復号せずに計算できる技術。"
+        },
+        {
+          "term": "fhEVM",
+          "definition": "完全準同型暗号に対応したEthereum仮想マシン。"
+        },
+        {
+          "term": "スマートコントラクト",
+          "definition": "ブロックチェーン上で自動実行されるプログラム。"
+        },
+        {
+          "term": "マーカーカウントデータ",
+          "definition": "特定の遺伝子変異の存在数を示すデータ。"
+        },
+        {
+          "term": "プロービング攻撃",
+          "definition": "繰り返しクエリで情報を推測する攻撃。"
+        },
+        {
+          "term": "ブロックチェーン",
+          "definition": "分散型台帳技術で、データの改ざんが困難。"
+        },
+        {
+          "term": "コホート",
+          "definition": "特定の特性を持つ集団。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "ゲノム情報を暗号化したままブロックチェーン上で検索し、プライバシーを保護しつつ研究を加速するプロトコルです。",
+      "noveltyContrast": {
+        "before": "従来のゲノム情報共有プロトコル（Beacon）では、病院側は研究者の検索内容を、研究者側は検索結果の生データをそれぞれ見ることができ、個人特定のリスクがありました。特に希少な遺伝子変異の繰り返し検索は、個人がコホートに含まれるかを推測する攻撃に利用される可能性がありました。",
+        "after": "この論文のbioETH-Beaconは、ゲノム情報を完全に暗号化したままEthereumブロックチェーン上で検索・集計します。病院も研究者も、検索内容や個別の生データを見ることなく、暗号化された集計結果のみを得られます。これにより、プライバシー侵害のリスクを大幅に低減し、安全なゲノム研究を可能にします。"
+      },
+      "analogy": {
+        "title": "暗号化された種袋で、品種改良のヒントを探す",
+        "body": "これはまるで、複数の農家がそれぞれ秘密の品種の種袋を持っているようなものです。研究者は「特定の病害に強い品種の種はありますか？」と尋ねますが、農家は種袋の中身を見せず、研究者も個々の種の種類は分かりません。しかし、暗号化された集計システム（ブロックチェーン）が「はい、そのような特徴を持つ種が〇袋あります」と、袋の数だけを教えてくれます。個々の種がどの農家のものか、どんな形をしているかは誰にも分からないまま、品種改良のヒントだけが得られるイメージです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "-94%",
+          "label": "クエリガス削減（事前集計時）"
+        }
+      ],
+      "whyYouCare": "この技術は、あなたの個人情報が関わるあらゆる分野に応用可能です。例えば、医療分野では、病気の原因究明や新薬開発のための大規模なゲノム研究が、プライバシーを完全に保護したまま加速します。金融分野では、個人情報を含むビッグデータ分析が、データ漏洩のリスクなく行えるようになります。また、農業分野では、特定の遺伝子を持つ作物の分布調査などが、生産者の秘密を守りつつ可能になるでしょう。私たちの生活がデータ駆動型になる中で、プライバシーと利便性の両立は不可欠であり、この研究はその未来を拓く一歩となります。",
+      "takeawayTalk": "ゲノム情報を秘密にしたままブロックチェーンで検索できる技術が出たらしいよ！",
+      "bodyText": "bioETH-Beaconは、完全準同型暗号（FHE）を拡張したEthereum Virtual Machine（fhEVM）上で動作するスマートコントラクトプロトタイプです。病院は暗号化されたマーカーカウントデータをアップロードし、認可された研究者は暗号化されたマーカークエリを送信します。コントラクトは暗号化された集計結果を返し、オフチェーンの鍵管理サービスを通じて、契約に記載されたリクエスターのみが復号できます。また、プロービング攻撃対策として、オンチェーンでノイズを追加する機能も備えています。\n\nこのシステムは、データが暗号化されたままで計算できる完全準同型暗号（FHE）と、改ざん不可能なブロックチェーン技術を組み合わせることで実現されています。病院がデータをアップロードする際、そのデータは暗号化され、ブロックチェーン上に記録されます。研究者がクエリを送信する際も、クエリ自体が暗号化されます。ブロックチェーン上のスマートコントラクトは、これらの暗号化されたデータとクエリを、復号することなく処理し、集計結果を暗号化されたまま生成します。最終的な復号は、許可された研究者のみがオフチェーンの鍵管理サービスを通じて行えるため、途中の誰もデータの中身を知ることができません。",
+      "bodyGlossary": [
+        {
+          "term": "完全準同型暗号",
+          "definition": "暗号化されたデータを復号せずに計算できる技術。",
+          "start": 15,
+          "end": 22
+        },
+        {
+          "term": "fhEVM",
+          "definition": "完全準同型暗号に対応したEthereum仮想マシン。",
+          "start": 57,
+          "end": 62
+        },
+        {
+          "term": "スマートコントラクト",
+          "definition": "ブロックチェーン上で自動実行されるプログラム。",
+          "start": 69,
+          "end": 79
+        },
+        {
+          "term": "マーカーカウントデータ",
+          "definition": "特定の遺伝子変異の存在数を示すデータ。",
+          "start": 97,
+          "end": 108
+        },
+        {
+          "term": "プロービング攻撃",
+          "definition": "繰り返しクエリで情報を推測する攻撃。",
+          "start": 213,
+          "end": 221
+        },
+        {
+          "term": "ブロックチェーン",
+          "definition": "分散型台帳技術で、データの改ざんが困難。",
+          "start": 301,
+          "end": 309
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "完全準同型暗号",
+          "definition": "暗号化されたデータを復号せずに計算できる技術。",
+          "start": 15,
+          "end": 22
+        },
+        {
+          "term": "fhEVM",
+          "definition": "完全準同型暗号に対応したEthereum仮想マシン。",
+          "start": 57,
+          "end": 62
+        },
+        {
+          "term": "スマートコントラクト",
+          "definition": "ブロックチェーン上で自動実行されるプログラム。",
+          "start": 69,
+          "end": 79
+        },
+        {
+          "term": "マーカーカウントデータ",
+          "definition": "特定の遺伝子変異の存在数を示すデータ。",
+          "start": 97,
+          "end": 108
+        },
+        {
+          "term": "プロービング攻撃",
+          "definition": "繰り返しクエリで情報を推測する攻撃。",
+          "start": 213,
+          "end": 221
+        },
+        {
+          "term": "ブロックチェーン",
+          "definition": "分散型台帳技術で、データの改ざんが困難。",
+          "start": 301,
+          "end": 309
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 225,
+      "keyFigure": {
+        "imagePath": "/figures/2606.20315v1_results.png",
+        "page": 13,
+        "caption": "bioETH-Beaconのスケーリング挙動とライフサイクルごとのガス消費量を示しています。",
+        "label": "Figure 9:",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-21T23:12:41.706Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.20315v1_results.png",
+          "page": 13,
+          "caption": "bioETH-Beaconのスケーリング挙動とライフサイクルごとのガス消費量を示しています。",
+          "label": "Figure 9:",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-21T23:12:41.706Z"
+        },
+        {
+          "imagePath": "/figures/2606.20315v1_why.png",
+          "page": 2,
+          "caption": "bioETH-Beaconが暗号化されたゲノム情報に対して集計クエリを実行する概念図です。",
+          "label": "Figure 1: Graphical Abstract. bioETH-Beacon executes a Beacon-style aggregate-count primitive entirely in the encrypted",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-21T23:12:41.707Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.18672v1",
+      "title": "scGTN: Deep Siamese Graph Transformer Network for Single-cell RNA Sequencing Clustering",
+      "authors": [
+        "Jinke Wu",
+        "Yifan Wang",
+        "Siyu Yi",
+        "Caiyang Yu",
+        "Ziyue Qiao",
+        "Nan Yin",
+        "Jiancheng Lv",
+        "Wei Ju"
+      ],
+      "publishedAt": "2026-06-17T04:17:49Z",
+      "url": "https://arxiv.org/abs/2606.18672v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.18672v1.pdf",
+      "categories": [
+        "topic:genomics",
+        "cs.LG",
+        "cs.AI",
+        "q-bio.GN"
+      ],
+      "abstract": "Single-cell RNA sequencing (scRNA-seq) serves a pivotal role in characterizing gene expression at the cellular level, enabling the identification of cell types and advancing the understanding of cellular heterogeneity. Despite the significant progress in scRNA-seq data clustering, we argue that current methods always ignore the sparsity and noise, as well as the complex intercellular structural information inherent in scRNA-seq data. Toward this end, in this paper, we propose a novel single-cell RNA-seq clustering framework via deep Siamese Graph Transformer Network (termed scGTN), which explicitly integrates gene expression profile and intercellular structural dependencies for cell clustering. In particular, we formulate scRNA-seq data as a graph and construct two augmented graph views that serve as dual views to capture complementary intercellular information. Then, a Siamese graph transformer network is employed to explicitly incorporate shortest-path information and node-wise distances for capturing richer structural relationships between cells. Finally, we employ an optimal transport strategy to guide the cell clustering in a self-supervised manner. Extensive experiments on multiple benchmark scRNA-seq datasets demonstrate that our scGTN consistently outperforms existing methods. Our code is available at https://github.com/W-RMSL/scGTN.",
+      "summary": {
+        "gist": "シングルセルRNAシーケンス（scRNA-seq）は、個々の細胞レベルで遺伝子発現を解析する技術であり、細胞タイプの特定や細胞の多様性の理解に不可欠です。scRNA-seqデータを用いた細胞クラスタリングは、細胞を生物学的に意味のあるグループに分類し、その機能や相互作用を解明する上で中心的な役割を果たします。しかし、scRNA-seqデータは、遺伝子発現の「まばらさ」や「ノイズ」が多く、細胞間の複雑な構造的情報が十分に活用されていないという課題がありました。",
+        "novelty": "従来の細胞分類（クラスタリング）手法は、遺伝子発現データの「まばらさ」や「ノイズ」に弱く、細胞間の複雑な構造的関係性を見落としがちでした。そのため、似たような細胞が区別しにくいという課題がありました。 この研究では、遺伝子発現情報だけでなく、細胞間の「最短経路」や「距離」といった構造的な関係性を明示的に組み込むことで、より識別力の高い細胞の特徴を学習します。これにより、細胞の多様性を正確に捉え、分類精度を向上させます。",
+        "method": "本研究では、scRNA-seqデータをグラフとして表現し、遺伝子発現プロファイルと細胞間構造的依存関係を統合した新しいクラスタリングフレームワーク「scGTN」を提案します。具体的には、まずscRNA-seqデータから2つの異なる「拡張グラフビュー」を生成し、それぞれが相補的な細胞間情報を捉えるようにします。次に、シャムグラフTransformerネットワークを用いて、最短経路情報とノード間の距離を明示的に組み込み、細胞間のより豊かな構造的関係性を捉えます。最後に、最適な輸送戦略を用いて、自己教師あり学習で細胞クラスタリングをガイドします。",
+        "results": "複数のベンチマークscRNA-seqデータセットを用いた広範な実験により、scGTNは既存の手法を一貫して上回るクラスタリング性能を示しました。特に、遺伝子発現情報のみから得られる細胞の類似性が均質で区別しにくい場合でも、位置関係や最短経路距離などの構造的情報を組み込むことで、細胞間の関係性をより識別力高く特徴づけられることが示されました。",
+        "why": "この手法のメカニズムは、主に3つの要素にあります。第一に、「デュアル拡張モジュール」で遺伝子発現プロファイルと細胞グラフ構造にノイズを加えたり、不要なエッジを除去・拡散させたりすることで、データのまばらさやノイズの影響を軽減し、頑健な表現学習を可能にします。第二に、「シャムグラフTransformerネットワーク融合モジュール」で、遺伝子発現の類似性だけでなく、細胞間の最短経路や相対的な位置関係といった構造情報を明示的に埋め込み、Transformerの注意機構でこれらの情報を統合・洗練することで、より識別力の高い細胞の特徴表現を学習します。第三に、「最適輸送クラスタリングモジュール」で、クラスタリングを分布整合問題として定式化し、最適な輸送理論を用いて、クラスタリングに一貫性のある表現学習を自己教師ありでガイドします。これにより、細胞の多様性をより正確に捉え、分類精度を向上させることができます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.LG）",
+      "field": "遺伝・ゲノム",
+      "categoryL1": "serendipity",
+      "categoryL2": "bioinformatics",
+      "arxivPrimary": "cs.LG",
+      "titleJa": "scGTN: シングルセルRNAシーケンスクラスタリングのためのディープシャムグラフTransformerネットワーク",
+      "catchTitle": "細胞の個性を見抜く！AIが遺伝子情報を深掘り",
+      "hook": "あなたの体を作る細胞たち、実はそれぞれ違う顔を持っているって知っていましたか？その違いをAIがどう見抜くのか、気になりませんか？",
+      "background": "シングルセルRNAシーケンス（scRNA-seq）は、個々の細胞レベルで遺伝子発現を解析する技術であり、細胞タイプの特定や細胞の多様性の理解に不可欠です。scRNA-seqデータを用いた細胞クラスタリングは、細胞を生物学的に意味のあるグループに分類し、その機能や相互作用を解明する上で中心的な役割を果たします。しかし、scRNA-seqデータは、遺伝子発現の「まばらさ」や「ノイズ」が多く、細胞間の複雑な構造的情報が十分に活用されていないという課題がありました。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "scRNA-seq",
+          "definition": "個々の細胞の遺伝子発現を網羅的に解析する技術"
+        },
+        {
+          "term": "クラスタリング",
+          "definition": "データを類似性に基づいてグループ分けする手法"
+        },
+        {
+          "term": "グラフ",
+          "definition": "ノードとエッジで構成されるデータ構造"
+        },
+        {
+          "term": "遺伝子発現プロファイル",
+          "definition": "細胞内の遺伝子がどれくらい活動しているかの情報"
+        },
+        {
+          "term": "シャムグラフTransformerネットワーク",
+          "definition": "グラフ構造とTransformerを組み合わせた深層学習モデル"
+        },
+        {
+          "term": "最短経路情報",
+          "definition": "グラフ上で2つのノードを結ぶ最も短い経路"
+        },
+        {
+          "term": "最適輸送戦略",
+          "definition": "データ分布間の距離を測り、整合させる数学的手法"
+        },
+        {
+          "term": "自己教師あり学習",
+          "definition": "データ自身から教師信号を生成して学習する手法"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "細胞の遺伝子情報から、その「つながり」まで考慮して、AIが細胞の種類をより正確に分類する技術です。",
+      "noveltyContrast": {
+        "before": "従来の細胞分類（クラスタリング）手法は、遺伝子発現データの「まばらさ」や「ノイズ」に弱く、細胞間の複雑な構造的関係性を見落としがちでした。そのため、似たような細胞が区別しにくいという課題がありました。",
+        "after": "この研究では、遺伝子発現情報だけでなく、細胞間の「最短経路」や「距離」といった構造的な関係性を明示的に組み込むことで、より識別力の高い細胞の特徴を学習します。これにより、細胞の多様性を正確に捉え、分類精度を向上させます。"
+      },
+      "analogy": {
+        "title": "畑の土壌分析で隠れたつながりを見つける",
+        "body": "これは、まるで畑の土壌分析のようなものです。従来の分析が、土壌の成分（遺伝子発現）だけを見ていたとすると、この研究は、土壌の成分に加えて、土壌粒子同士の「つながり方」や「水の通り道」（細胞間の構造的関係性）まで詳細に分析するようなものです。表面的な成分が似ていても、その奥にある構造的な違いを見抜くことで、より正確な土壌タイプ（細胞タイプ）を特定し、作物（細胞）の生育環境を最適化するヒントを得られます。単に成分を見るだけでなく、土壌の「骨格」まで理解するイメージです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、私たちの健康や医療に大きな影響を与える可能性があります。病気の早期発見や治療法の開発において、細胞の正確な分類は非常に重要です。例えば、がん細胞の多様性を詳細に理解することで、より効果的な個別化治療薬の開発につながるかもしれません。また、再生医療の分野では、特定の機能を持つ細胞を効率的に見つけ出し、培養する技術の向上に貢献するでしょう。専門家でなくても、AIが細胞の「個性」を深く理解することで、私たちの未来の医療が大きく変わる可能性を感じられるはずです。",
+      "takeawayTalk": "AIが細胞の遺伝子情報だけでなく、細胞間の「つながり」まで見て、細胞の個性を超高精度で見抜くらしいよ！",
+      "bodyText": "本研究では、scRNA-seqデータをグラフとして表現し、遺伝子発現プロファイルと細胞間構造的依存関係を統合した新しいクラスタリングフレームワーク「scGTN」を提案します。具体的には、まずscRNA-seqデータから2つの異なる「拡張グラフビュー」を生成し、それぞれが相補的な細胞間情報を捉えるようにします。次に、シャムグラフTransformerネットワークを用いて、最短経路情報とノード間の距離を明示的に組み込み、細胞間のより豊かな構造的関係性を捉えます。最後に、最適な輸送戦略を用いて、自己教師あり学習で細胞クラスタリングをガイドします。\n\nこの手法のメカニズムは、主に3つの要素にあります。第一に、「デュアル拡張モジュール」で遺伝子発現プロファイルと細胞グラフ構造にノイズを加えたり、不要なエッジを除去・拡散させたりすることで、データのまばらさやノイズの影響を軽減し、頑健な表現学習を可能にします。第二に、「シャムグラフTransformerネットワーク融合モジュール」で、遺伝子発現の類似性だけでなく、細胞間の最短経路や相対的な位置関係といった構造情報を明示的に埋め込み、Transformerの注意機構でこれらの情報を統合・洗練することで、より識別力の高い細胞の特徴表現を学習します。第三に、「最適輸送クラスタリングモジュール」で、クラスタリングを分布整合問題として定式化し、最適な輸送理論を用いて、クラスタリングに一貫性のある表現学習を自己教師ありでガイドします。これにより、細胞の多様性をより正確に捉え、分類精度を向上させることができます。",
+      "bodyGlossary": [
+        {
+          "term": "scRNA-seq",
+          "definition": "個々の細胞の遺伝子発現を網羅的に解析する技術",
+          "start": 6,
+          "end": 15
+        },
+        {
+          "term": "グラフ",
+          "definition": "ノードとエッジで構成されるデータ構造",
+          "start": 19,
+          "end": 22
+        },
+        {
+          "term": "遺伝子発現プロファイル",
+          "definition": "細胞内の遺伝子がどれくらい活動しているかの情報",
+          "start": 29,
+          "end": 40
+        },
+        {
+          "term": "クラスタリング",
+          "definition": "データを類似性に基づいてグループ分けする手法",
+          "start": 59,
+          "end": 66
+        },
+        {
+          "term": "シャムグラフTransformerネットワーク",
+          "definition": "グラフ構造とTransformerを組み合わせた深層学習モデル",
+          "start": 158,
+          "end": 181
+        },
+        {
+          "term": "最短経路情報",
+          "definition": "グラフ上で2つのノードを結ぶ最も短い経路",
+          "start": 186,
+          "end": 192
+        },
+        {
+          "term": "自己教師あり学習",
+          "definition": "データ自身から教師信号を生成して学習する手法",
+          "start": 247,
+          "end": 255
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "scRNA-seq",
+          "definition": "個々の細胞の遺伝子発現を網羅的に解析する技術",
+          "start": 6,
+          "end": 15
+        },
+        {
+          "term": "グラフ",
+          "definition": "ノードとエッジで構成されるデータ構造",
+          "start": 19,
+          "end": 22
+        },
+        {
+          "term": "遺伝子発現プロファイル",
+          "definition": "細胞内の遺伝子がどれくらい活動しているかの情報",
+          "start": 29,
+          "end": 40
+        },
+        {
+          "term": "クラスタリング",
+          "definition": "データを類似性に基づいてグループ分けする手法",
+          "start": 59,
+          "end": 66
+        },
+        {
+          "term": "シャムグラフTransformerネットワーク",
+          "definition": "グラフ構造とTransformerを組み合わせた深層学習モデル",
+          "start": 158,
+          "end": 181
+        },
+        {
+          "term": "最短経路情報",
+          "definition": "グラフ上で2つのノードを結ぶ最も短い経路",
+          "start": 186,
+          "end": 192
+        },
+        {
+          "term": "自己教師あり学習",
+          "definition": "データ自身から教師信号を生成して学習する手法",
+          "start": 247,
+          "end": 255
+        }
+      ],
+      "agriEconRelevance": "この技術は、農業経済分野においても、例えば土壌中の微生物群集の分類や、植物の細胞レベルでの病害抵抗性メカニズムの解明に応用できる可能性があります。土壌微生物の多様性を正確に把握することで、土壌改良や持続可能な農業技術の開発に貢献したり、特定の病気に強い作物の品種改良を加速させたりすることが期待されます。細胞間の複雑な関係性を捉えるこのAIは、農業生態系の理解を深める新たなツールとなるでしょう。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 264,
+      "keyFigure": {
+        "imagePath": "/figures/2606.18672v1_results.png",
+        "page": 5,
+        "caption": "7つのベンチマークデータセットにおけるクラスタリング性能の比較を示しています。",
+        "label": "Table 1: Clustering performance across seven benchmark datasets. The results are reported as mean ± standard deviation, ",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-21T23:12:46.915Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.18672v1_results.png",
+          "page": 5,
+          "caption": "7つのベンチマークデータセットにおけるクラスタリング性能の比較を示しています。",
+          "label": "Table 1: Clustering performance across seven benchmark datasets. The results are reported as mean ± standard deviation, ",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-21T23:12:46.915Z"
+        },
+        {
+          "imagePath": "/figures/2606.18672v1_why.jpeg",
+          "page": 3,
+          "caption": "提案手法scGTNの全体像と、3つの主要モジュール構成を示しています。",
+          "label": "Figure 2: Illustration of the proposed scGTN, which consists of three components: (1) Dual Augmentation for scRNA-seq Da",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-21T23:12:46.915Z"
+        }
+      ]
+    }
+  ]
+}

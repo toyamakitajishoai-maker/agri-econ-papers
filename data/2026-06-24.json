@@ -1,0 +1,950 @@
+{
+  "date": "2026-06-24",
+  "papers": [
+    {
+      "id": "2606.23633v1",
+      "title": "AI Exposure Scores: what they measure, what they miss, and what comes next",
+      "authors": [
+        "Campbell Lund",
+        "Thomas Euyang",
+        "Zanele Munyikwa",
+        "Marzieh Fadaee"
+      ],
+      "publishedAt": "2026-06-22T17:23:33Z",
+      "url": "https://arxiv.org/abs/2606.23633v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.23633v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "cs.AI",
+        "econ.GN"
+      ],
+      "abstract": "A set of exposure scores calculated in 2023 has become a central empirical input to the future of work debate. Produced by Eloundou et al. (2023) and referred to here as the GPTs are GPTs scores, they define exposure as the share of occupational tasks a large language model can assist with. This work is a genuine methodological contribution, but as the scores travel from the time and place they were produced, the limitations the authors named do not always travel with them. Two gaps have widened as a result. The first is structural, between what static exposure scores measure and what policy questions actually require. Taking the diffusion of these scores as a case study, we show how their temporal, geographic, and ontological limitations compound in policy-facing analyses, and we survey five families of research responding to these limits: dynamic and benchmark-based measures, ensemble methods, task-framework extensions, worker-centered metrics, and adoption and usage data. The second gap is the one we argue needs more attention: the coordination between researchers and policymakers. The policy-relevant work which ask who is harmed, who benefits, how, and when, continues to reference the static GPTs are GPTs scores without engagement with the methodological updates that would let these questions be answered more reliably. We then ask what additional steps towards navigating uncertainty remain: ex-post frameworks and the deliberate, political work of reimagining what futures are worthy of building towards are. Closing the research-policy gap is a shared task: policymakers must widen their evidence base, engage workers as epistemic partners, and shift from prediction to preparedness; researchers must build data infrastructure, adopt participatory methods, and write with policymakers in mind. Better measurement matters, but it will not close the second gap alone.",
+      "summary": {
+        "gist": "2023年に発表されたEloundou et al.の「GPTs are GPTs」スコアは、AIが労働市場に与える影響を測る上で最も広く引用される指標となりました。このスコアは、LLMが職業タスクのどれだけを支援できるかを示す「曝露」を定義し、米国労働者の80%が少なくとも10%のタスクでAIに曝露されていると予測しました。しかし、このスコアが時間や場所を超えて利用されるにつれて、元々の著者らが指摘した限界が見過ごされ、政策決定に誤解を生むギャップが拡大しています。",
+        "novelty": "従来のAI曝露スコアは、特定の時点でのAIの技術的実行可能性を測定し、どの仕事がAIに「曝露」されているかを示していました。しかし、これは静的なスナップショットであり、AI技術の急速な進化や、実際の労働市場での影響を捉えきれていませんでした。 この論文は、既存のAI曝露スコアが持つ時間的、地理的、概念的限界を詳細に分析し、それが政策決定に与える影響を明らかにしました。さらに、これらの限界を克服するための新しい測定方法や研究の方向性、そして研究者と政策立案者の連携の重要性を提言しています。",
+        "method": "本研究は、まずEloundou et al. (2023)の「GPTs are GPTs」スコアが何を測定し、何を測定しないのかを詳細に分析しました。具体的には、このスコアが2023年初頭のGPT-4の技術的実行可能性を、米国のO*NETデータベースに基づき、離散的なタスクの50%以上の時間短縮という基準で評価していることを明らかにしました。次に、この静的な曝露スコアが持つ時間的、地理的、概念的限界を、その拡散状況をケーススタディとして示しました。そして、これらの限界に対応する5つの研究分野（動的・ベンチマークベースの測定、アンサンブル法、タスクフレームワーク拡張、労働者中心の指標、採用・利用データ）を調査しました。最後に、研究者と政策立案者の間の連携不足という、より注目すべきギャップを指摘し、このギャップを埋めるための具体的な提言を行いました。",
+        "results": "Eloundou et al.のスコアは、2023年初頭の特定のAIモデルの技術的実行可能性を測定しており、その後のAI能力の急速な進化（2023年以降で約26.0%向上）を反映していません。異なるAIモデルで同じ測定方法を再現すると、平均曝露スコアに3.6倍の乖離が生じることが示されました。また、このスコアは米国の労働市場に特化したものであり、他の地域の状況には適用できません。さらに、タスクの再構築や新しい仕事の創出といったAIによる労働市場の動的な変化を捉えきれていません。これらの限界が、政策立案者がAIの影響を正確に理解し、適切な対策を講じることを困難にしていることが明らかになりました。研究者と政策立案者の間の連携不足が、この問題の根底にあると結論付けられました。",
+        "why": "この問題の根底には、AI曝露スコアが「静的なスナップショット」であるという性質があります。AI技術は日進月歩で進化しており、ある時点でのモデル能力を測定したスコアは、すぐに陳腐化します。また、スコアが特定の国（米国）の労働市場データに基づいて作成されているため、他の国の状況には直接適用できません。さらに、AIは単に既存のタスクを支援するだけでなく、仕事のやり方そのものを変えたり、新しい種類の仕事を創出したりする可能性がありますが、静的なタスク分類ではこれらの動的な変化を捉えられません。政策立案者は、これらの限界を十分に理解しないまま、古い静的なスコアに基づいて意思決定を行う傾向があり、一方で、これらの限界を克服する新しい研究成果は、研究コミュニティ内に留まり、政策決定に十分に活用されていないため、研究と政策の間にギャップが生じています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.AI）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "labor-economics",
+      "arxivPrimary": "cs.AI",
+      "titleJa": "AI曝露スコア：何が測定され、何が見落とされ、次に何が来るのか",
+      "catchTitle": "AIの影響度スコア、その限界と未来",
+      "hook": "「AIがあなたの仕事を奪う」というニュース、鵜呑みにしていませんか？実はその根拠、少し古いかもしれません。",
+      "background": "2023年に発表されたEloundou et al.の「GPTs are GPTs」スコアは、AIが労働市場に与える影響を測る上で最も広く引用される指標となりました。このスコアは、LLMが職業タスクのどれだけを支援できるかを示す「曝露」を定義し、米国労働者の80%が少なくとも10%のタスクでAIに曝露されていると予測しました。しかし、このスコアが時間や場所を超えて利用されるにつれて、元々の著者らが指摘した限界が見過ごされ、政策決定に誤解を生むギャップが拡大しています。",
+      "quiz": {
+        "question": "広く引用されるAI曝露スコアの主な限界として、この論文で指摘されているのはどれですか？",
+        "options": [
+          "AI技術の急速な進化を反映していないこと",
+          "AIが新しい仕事を生み出す可能性を考慮していないこと",
+          "特定の国（米国）の労働市場データに基づいていること"
+        ],
+        "correctIndex": 2,
+        "explanation": "この論文では、AI曝露スコアが時間的（AI技術の進化を反映しない）、地理的（米国に特化）、概念的（新しい仕事やタスクの再構築を捉えきれない）な限界を持つことを詳細に指摘しています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "AI曝露スコア",
+          "definition": "AIが職業タスクを支援できる割合を示す指標。"
+        },
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。GPT-4などが該当。"
+        },
+        {
+          "term": "O*NETデータベース",
+          "definition": "米国労働省が管理する職業情報データベース。"
+        },
+        {
+          "term": "静的なスナップショット",
+          "definition": "特定の時点での情報であり、時間経過で変化しない。"
+        },
+        {
+          "term": "アンサンブル法",
+          "definition": "複数のモデルや手法を組み合わせて精度を高める。"
+        },
+        {
+          "term": "タスクフレームワーク拡張",
+          "definition": "タスク分類の枠組みを広げ、動的な変化に対応。"
+        },
+        {
+          "term": "労働者中心の指標",
+          "definition": "AIの影響を労働者の視点から評価する指標。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "広く引用されるAIの仕事への影響度スコアは、時間、地域、測定方法に限界があり、政策決定に誤解を生む可能性がある。",
+      "noveltyContrast": {
+        "before": "従来のAI曝露スコアは、特定の時点でのAIの技術的実行可能性を測定し、どの仕事がAIに「曝露」されているかを示していました。しかし、これは静的なスナップショットであり、AI技術の急速な進化や、実際の労働市場での影響を捉えきれていませんでした。",
+        "after": "この論文は、既存のAI曝露スコアが持つ時間的、地理的、概念的限界を詳細に分析し、それが政策決定に与える影響を明らかにしました。さらに、これらの限界を克服するための新しい測定方法や研究の方向性、そして研究者と政策立案者の連携の重要性を提言しています。"
+      },
+      "analogy": {
+        "title": "古くなった天気予報で農作業計画を立てるようなもの",
+        "body": "あなたは農業を営んでいて、作物の種まきや収穫の計画を立てるために天気予報を参考にします。しかし、もしその予報が1年前のもので、しかも隣町の天気しか予測していないとしたらどうでしょう？今日の天気は晴れでも、明日は急な嵐が来るかもしれませんし、あなたの畑の局地的な気候は考慮されていません。従来のAI曝露スコアは、まさにこの「古く、限定的な天気予報」のようなものです。AI技術の進化は目覚ましく、今日の能力は昨日とは大きく異なります。また、アメリカの労働市場に特化したデータでは、日本の農業現場の実情は測れません。古い情報や限定的な情報に基づいて、AIが農業に与える影響を評価し、対策を立てようとすることは、刻々と変化する天候に対応できない農家と同じくらい危険なのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+26.0%",
+          "label": "2023年以降のAI能力向上（推定）"
+        },
+        {
+          "value": "3.6倍",
+          "label": "異なるモデルでの平均曝露スコアの乖離"
+        }
+      ],
+      "whyYouCare": "AIが私たちの仕事や社会に与える影響は計り知れません。しかし、その影響を測るための「定規」が古かったり、特定の地域にしか合わなかったりしたら、どうなるでしょう？あなたはAIによる失業やスキルアップの必要性を耳にするかもしれませんが、その情報が最新のAI能力やあなたの業界・地域の状況を反映していない可能性があります。この研究は、AIの影響を正確に理解し、適切な政策や個人のキャリア戦略を立てるためには、より動的で包括的な測定方法が必要だと教えてくれます。古い情報に惑わされず、未来の働き方を賢く選択するために、この研究の示唆は非常に重要です。",
+      "takeawayTalk": "AIの仕事への影響度スコア、実はかなり古い情報に基づいているらしいよ！",
+      "bodyText": "本研究は、まずEloundou et al. (2023)の「GPTs are GPTs」スコアが何を測定し、何を測定しないのかを詳細に分析しました。具体的には、このスコアが2023年初頭のGPT-4の技術的実行可能性を、米国のO*NETデータベースに基づき、離散的なタスクの50%以上の時間短縮という基準で評価していることを明らかにしました。次に、この静的な曝露スコアが持つ時間的、地理的、概念的限界を、その拡散状況をケーススタディとして示しました。そして、これらの限界に対応する5つの研究分野（動的・ベンチマークベースの測定、アンサンブル法、タスクフレームワーク拡張、労働者中心の指標、採用・利用データ）を調査しました。最後に、研究者と政策立案者の間の連携不足という、より注目すべきギャップを指摘し、このギャップを埋めるための具体的な提言を行いました。\n\nこの問題の根底には、AI曝露スコアが「静的なスナップショット」であるという性質があります。AI技術は日進月歩で進化しており、ある時点でのモデル能力を測定したスコアは、すぐに陳腐化します。また、スコアが特定の国（米国）の労働市場データに基づいて作成されているため、他の国の状況には直接適用できません。さらに、AIは単に既存のタスクを支援するだけでなく、仕事のやり方そのものを変えたり、新しい種類の仕事を創出したりする可能性がありますが、静的なタスク分類ではこれらの動的な変化を捉えられません。政策立案者は、これらの限界を十分に理解しないまま、古い静的なスコアに基づいて意思決定を行う傾向があり、一方で、これらの限界を克服する新しい研究成果は、研究コミュニティ内に留まり、政策決定に十分に活用されていないため、研究と政策の間にギャップが生じています。",
+      "bodyGlossary": [
+        {
+          "term": "O*NETデータベース",
+          "definition": "米国労働省が管理する職業情報データベース。",
+          "start": 114,
+          "end": 125
+        },
+        {
+          "term": "アンサンブル法",
+          "definition": "複数のモデルや手法を組み合わせて精度を高める。",
+          "start": 265,
+          "end": 272
+        },
+        {
+          "term": "タスクフレームワーク拡張",
+          "definition": "タスク分類の枠組みを広げ、動的な変化に対応。",
+          "start": 273,
+          "end": 285
+        },
+        {
+          "term": "労働者中心の指標",
+          "definition": "AIの影響を労働者の視点から評価する指標。",
+          "start": 286,
+          "end": 294
+        },
+        {
+          "term": "AI曝露スコア",
+          "definition": "AIが職業タスクを支援できる割合を示す指標。",
+          "start": 390,
+          "end": 397
+        },
+        {
+          "term": "静的なスナップショット",
+          "definition": "特定の時点での情報であり、時間経過で変化しない。",
+          "start": 399,
+          "end": 410
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "O*NETデータベース",
+          "definition": "米国労働省が管理する職業情報データベース。",
+          "start": 114,
+          "end": 125
+        },
+        {
+          "term": "アンサンブル法",
+          "definition": "複数のモデルや手法を組み合わせて精度を高める。",
+          "start": 265,
+          "end": 272
+        },
+        {
+          "term": "タスクフレームワーク拡張",
+          "definition": "タスク分類の枠組みを広げ、動的な変化に対応。",
+          "start": 273,
+          "end": 285
+        },
+        {
+          "term": "労働者中心の指標",
+          "definition": "AIの影響を労働者の視点から評価する指標。",
+          "start": 286,
+          "end": 294
+        },
+        {
+          "term": "AI曝露スコア",
+          "definition": "AIが職業タスクを支援できる割合を示す指標。",
+          "start": 390,
+          "end": 397
+        },
+        {
+          "term": "静的なスナップショット",
+          "definition": "特定の時点での情報であり、時間経過で変化しない。",
+          "start": 399,
+          "end": 410
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 318
+    },
+    {
+      "id": "2606.23660v1",
+      "title": "The Dataset Friction Framework: measuring user-facing friction as a complement to FAIR",
+      "authors": [
+        "Emma Pidduck",
+        "Umberto Modigliani"
+      ],
+      "publishedAt": "2026-06-22T17:45:31Z",
+      "url": "https://arxiv.org/abs/2606.23660v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.23660v1.pdf",
+      "categories": [
+        "topic:education",
+        "physics.ao-ph",
+        "cs.CY"
+      ],
+      "abstract": "Open research data services have matured to the point where the cost of sustaining them at scale has become a primary design constraint, driving providers to make deliberate choices that may reduce user convenience to keep the service viable. The FAIR (Findable, Accessible, Interoperable, Reuseable) principles describe whether a dataset is well stewarded, and FAIR compliance is often treated as a proxy for usability. FAIR does not capture the cost to a user of finding, accessing, interpreting, and applying a dataset. We introduce the Dataset Friction Framework (DFF) as a complement to FAIR, directly addressing usability. DFF measures user-facing friction across six dimensions, distinguishing engineered friction (deliberate data provider design choices that sustain a service) from accidental friction (defects that require remediation). The framework is validated against 18,556 support tickets from the European Centre for Medium-Range Weather Forecasts (January 2024 to May 2026), which serves 280,000 registered users. Restricting the analysis to tickets raised by external reporters reduces the corpus by 12.3%, but every dimension's internal-staff share falls below this baseline -- confirming that the reported friction signals are genuinely user-facing. We then assess three real datasets across three providers and show that FAIR compliance and DFF friction can disagree in both directions: a 92% FAIR-compliant dataset can still carry substantial friction, and a 42% FAIR score can be an artefact of anti-scraping policy rather than poor stewardship. The two measures are non-redundant and jointly informative: FAIR compliance does not predict DFF friction in either direction. This constitutes the first large-scale empirical application of the framework; cross-institutional validation is identified as the immediate next step.",
+      "summary": {
+        "gist": "オープンデータは、科学研究や公共政策において不可欠な要素となっています。特にFAIR原則（Findable, Accessible, Interoperable, Reuseable）は、データ管理の基本的な枠組みとして広く受け入れられ、多くのデータ提供者がこれに準拠するよう努力してきました。しかし、FAIR原則はデータそのものの特性や管理状況を評価するものであり、ユーザーが実際にデータを利用する際にかかる具体的な労力や時間、つまり「使いやすさ」を直接的に捉えるものではありません。このギャップが、オープンデータサービスの持続可能性や、ユーザーの生産的なデータ再利用を阻害する要因となっていました。",
+        "novelty": "これまで、オープンデータの品質はFAIR原則（見つけやすさ、アクセスしやすさ、相互運用性、再利用性）で評価されてきました。しかし、FAIR原則はデータそのものの特性や管理状況を評価するもので、実際にユーザーがデータを見つけ、理解し、利用するまでにかかる時間や労力、つまり「使いやすさ」を直接測るものではありませんでした。 この論文では、FAIR原則では捉えきれなかったユーザー視点の「摩擦」を測定する「データセット摩擦フレームワーク（DFF）」を提案しています。DFFは、データ利用のプロセスを6つの側面から評価し、意図的に設計された摩擦（サービス維持のため）と偶発的な摩擦（不具合）を区別することで、データ提供者がより良いサービス設計を行うための具体的な指標を提供します。",
+        "method": "本研究では、FAIR原則を補完する「データセット摩擦フレームワーク（DFF）」を提案しました。DFFは、データセット、その提供方法、および周辺エコシステムにおいて、ユーザーがデータ認識から生産的な利用に至るまでにかかる労力を増加させるあらゆる属性を「データセット摩擦要因」と定義します。この摩擦を「発見と理解」「アクセスと配信」「ライセンスと法務」「データ構造と形式」「ツールとサポート」「全体的な複雑さ」の6つの側面から評価します。さらに、サービス維持のために意図的に設計された「意図的な摩擦」と、不具合による「偶発的な摩擦」を区別します。DFFの有効性は、欧州中期予報センター（ECMWF）の28万人の登録ユーザーから寄せられた18,556件のサポートチケット（2024年1月から2026年5月）を分析することで検証されました。また、3つの異なるプロバイダーの実際のデータセットを評価し、FAIR準拠度とDFF摩擦が必ずしも一致しないことを示しました。",
+        "results": "分析の結果、FAIR原則に92%準拠しているデータセットであっても、DFFの6つの側面すべてにおいて測定可能なユーザー視点の摩擦が存在することが明らかになりました。FAIR準拠度とDFF摩擦は非冗長な尺度であり、両者の関係は非単調であることが示されました。つまり、FAIRスコアが高いデータセットでも大きな摩擦を抱える可能性があり、逆にFAIRスコアが低い場合でも、それがアンチスクレイピングポリシーのような意図的な設計によるものであれば、必ずしもユーザーにとって使いにくいとは限らないことが判明しました。DFFは、データ提供者がサービス維持のための設計上の選択（意図的な摩擦）を分析し、可視化するための具体的な手段を提供します。",
+        "why": "DFFが機能するメカニズムは、データ利用のプロセスをユーザーの視点から詳細に分解し、各段階で発生する具体的な「手間」を特定することにあります。FAIR原則がデータそのものの静的な特性を評価するのに対し、DFFはユーザーがデータとインタラクションする動的なプロセスに着目します。例えば、データがカタログに掲載されていても（FAIRのFindable）、そのドキュメントが不十分であれば（DFFの発見と理解における摩擦）、ユーザーはデータを利用するまでに多くの労力を費やすことになります。DFFは、このようなユーザー体験のギャップを埋めることで、データ提供者がユーザーのニーズとサービス維持のバランスを取りながら、より効果的なデータサービスを設計できるよう支援します。意図的な摩擦と偶発的な摩擦を区別することで、提供者はどこを改善すべきか、どこを維持すべきかを戦略的に判断できます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.ao-ph）",
+      "field": "教育",
+      "categoryL1": "adjacent",
+      "categoryL2": "data-management",
+      "arxivPrimary": "physics.ao-ph",
+      "titleJa": "データセット摩擦フレームワーク：FAIR原則を補完するユーザー視点の摩擦測定",
+      "catchTitle": "データ利用の「手間」を測る新基準",
+      "hook": "オープンデータ、せっかく公開されても「使いにくい」と感じたことはありませんか？そのモヤモヤ、実は「摩擦」かもしれません。",
+      "background": "オープンデータは、科学研究や公共政策において不可欠な要素となっています。特にFAIR原則（Findable, Accessible, Interoperable, Reuseable）は、データ管理の基本的な枠組みとして広く受け入れられ、多くのデータ提供者がこれに準拠するよう努力してきました。しかし、FAIR原則はデータそのものの特性や管理状況を評価するものであり、ユーザーが実際にデータを利用する際にかかる具体的な労力や時間、つまり「使いやすさ」を直接的に捉えるものではありません。このギャップが、オープンデータサービスの持続可能性や、ユーザーの生産的なデータ再利用を阻害する要因となっていました。",
+      "quiz": {
+        "question": "FAIR原則とDFF（データセット摩擦フレームワーク）の主な違いは何ですか？",
+        "options": [
+          "FAIR原則はデータのセキュリティを評価し、DFFはデータのコストを評価する。",
+          "FAIR原則はデータそのものの特性を評価し、DFFはユーザーがデータを利用する際にかかる労力（摩擦）を評価する。",
+          "FAIR原則はデータの保存期間を評価し、DFFはデータの更新頻度を評価する。"
+        ],
+        "correctIndex": 1,
+        "explanation": "FAIR原則はデータが「見つけやすい、アクセスしやすい、相互運用可能、再利用可能」であるかというデータそのものの特性や管理状況を評価します。一方、DFFは、ユーザーが実際にデータを見つけ、理解し、利用するまでにかかる時間や労力、つまり「使いやすさ」を6つの側面から直接測定します。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "FAIR原則",
+          "definition": "データがFindable（見つけやすい）、Accessible（アクセスしやすい）、Interoperable（相互運用可能）、Reusable（再利用可能）であるための原則。"
+        },
+        {
+          "term": "データセット摩擦フレームワーク（DFF）",
+          "definition": "ユーザーがデータを利用する際にかかる労力（摩擦）を測定するための新しい枠組み。"
+        },
+        {
+          "term": "意図的な摩擦",
+          "definition": "データサービス維持のために、提供者が意図的に設計したユーザーの不便さ。"
+        },
+        {
+          "term": "偶発的な摩擦",
+          "definition": "データサービスの不具合や欠陥によって生じるユーザーの不便さ。"
+        },
+        {
+          "term": "非冗長な尺度",
+          "definition": "互いに異なる側面を測定し、重複しない評価指標。"
+        },
+        {
+          "term": "非単調",
+          "definition": "一方の数値が増加しても、もう一方の数値が必ずしも増加しない関係。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "データが「見つけやすく、アクセスしやすい」だけでは不十分。実際に使う際にかかるユーザーの「手間」を測る新しいフレームワークが開発されました。",
+      "noveltyContrast": {
+        "before": "これまで、オープンデータの品質はFAIR原則（見つけやすさ、アクセスしやすさ、相互運用性、再利用性）で評価されてきました。しかし、FAIR原則はデータそのものの特性や管理状況を評価するもので、実際にユーザーがデータを見つけ、理解し、利用するまでにかかる時間や労力、つまり「使いやすさ」を直接測るものではありませんでした。",
+        "after": "この論文では、FAIR原則では捉えきれなかったユーザー視点の「摩擦」を測定する「データセット摩擦フレームワーク（DFF）」を提案しています。DFFは、データ利用のプロセスを6つの側面から評価し、意図的に設計された摩擦（サービス維持のため）と偶発的な摩擦（不具合）を区別することで、データ提供者がより良いサービス設計を行うための具体的な指標を提供します。"
+      },
+      "analogy": {
+        "title": "畑の土壌と作物の育てやすさ",
+        "body": "FAIR原則が、畑の土壌が「肥沃か、水はけが良いか」といった、作物にとっての基本的な環境が整っているかを評価するようなものです。一方、DFFは、その畑で実際に作物を育てる農家が「種まきから収穫までどれだけ手間がかかるか」を測るようなもの。土壌が良くても、種が手に入りにくかったり、栽培方法が複雑だったり、収穫に特殊な機械が必要だったりすれば、農家は苦労します。DFFは、この「育てやすさ」を具体的に数値化し、どこに改善の余地があるかを教えてくれるのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "18,556件",
+          "label": "サポートチケット分析"
+        },
+        {
+          "value": "92%",
+          "label": "FAIR準拠データでも摩擦"
+        }
+      ],
+      "whyYouCare": "あなたがもし、研究者としてオープンデータを利用する立場なら、このDFFは「なぜこのデータは使いにくいのか」という長年の疑問に答えるヒントを与えてくれます。また、企業でデータ活用を推進する担当者であれば、自社が公開するデータの「真の使いやすさ」を評価し、改善するための具体的な視点を得られるでしょう。政府や自治体でオープンデータ政策に携わる方にとっては、FAIR原則だけでは見えなかったユーザー体験の課題を浮き彫りにし、より実用的なデータ公開のあり方を検討する上で重要な示唆を与えます。データ提供者と利用者の間のギャップを埋め、データ活用の可能性を広げるための重要な一歩となる研究です。",
+      "takeawayTalk": "FAIR原則だけじゃダメ！データ利用の「手間」を測る新基準DFFができたよ。",
+      "bodyText": "本研究では、FAIR原則を補完する「データセット摩擦フレームワーク（DFF）」を提案しました。DFFは、データセット、その提供方法、および周辺エコシステムにおいて、ユーザーがデータ認識から生産的な利用に至るまでにかかる労力を増加させるあらゆる属性を「データセット摩擦要因」と定義します。この摩擦を「発見と理解」「アクセスと配信」「ライセンスと法務」「データ構造と形式」「ツールとサポート」「全体的な複雑さ」の6つの側面から評価します。さらに、サービス維持のために意図的に設計された「意図的な摩擦」と、不具合による「偶発的な摩擦」を区別します。DFFの有効性は、欧州中期予報センター（ECMWF）の28万人の登録ユーザーから寄せられた18,556件のサポートチケット（2024年1月から2026年5月）を分析することで検証されました。また、3つの異なるプロバイダーの実際のデータセットを評価し、FAIR準拠度とDFF摩擦が必ずしも一致しないことを示しました。\n\nDFFが機能するメカニズムは、データ利用のプロセスをユーザーの視点から詳細に分解し、各段階で発生する具体的な「手間」を特定することにあります。FAIR原則がデータそのものの静的な特性を評価するのに対し、DFFはユーザーがデータとインタラクションする動的なプロセスに着目します。例えば、データがカタログに掲載されていても（FAIRのFindable）、そのドキュメントが不十分であれば（DFFの発見と理解における摩擦）、ユーザーはデータを利用するまでに多くの労力を費やすことになります。DFFは、このようなユーザー体験のギャップを埋めることで、データ提供者がユーザーのニーズとサービス維持のバランスを取りながら、より効果的なデータサービスを設計できるよう支援します。意図的な摩擦と偶発的な摩擦を区別することで、提供者はどこを改善すべきか、どこを維持すべきかを戦略的に判断できます。",
+      "bodyGlossary": [
+        {
+          "term": "FAIR原則",
+          "definition": "データがFindable（見つけやすい）、Accessible（アクセスしやすい）、Interoperable（相互運用可能）、Reusable（再利用可能）であるための原則。",
+          "start": 6,
+          "end": 12
+        },
+        {
+          "term": "データセット摩擦フレームワーク（DFF）",
+          "definition": "ユーザーがデータを利用する際にかかる労力（摩擦）を測定するための新しい枠組み。",
+          "start": 18,
+          "end": 38
+        },
+        {
+          "term": "意図的な摩擦",
+          "definition": "データサービス維持のために、提供者が意図的に設計したユーザーの不便さ。",
+          "start": 241,
+          "end": 247
+        },
+        {
+          "term": "偶発的な摩擦",
+          "definition": "データサービスの不具合や欠陥によって生じるユーザーの不便さ。",
+          "start": 257,
+          "end": 263
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "FAIR原則",
+          "definition": "データがFindable（見つけやすい）、Accessible（アクセスしやすい）、Interoperable（相互運用可能）、Reusable（再利用可能）であるための原則。",
+          "start": 6,
+          "end": 12
+        },
+        {
+          "term": "データセット摩擦フレームワーク（DFF）",
+          "definition": "ユーザーがデータを利用する際にかかる労力（摩擦）を測定するための新しい枠組み。",
+          "start": 18,
+          "end": 38
+        },
+        {
+          "term": "意図的な摩擦",
+          "definition": "データサービス維持のために、提供者が意図的に設計したユーザーの不便さ。",
+          "start": 241,
+          "end": 247
+        },
+        {
+          "term": "偶発的な摩擦",
+          "definition": "データサービスの不具合や欠陥によって生じるユーザーの不便さ。",
+          "start": 257,
+          "end": 263
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 339,
+      "keyFigure": {
+        "imagePath": "/figures/2606.23660v1_results.png",
+        "page": 6,
+        "caption": "Figure 1. The Dataset Friction Framework: six dimensions with example factors, indicative descriptors, The Dataset Friction Framework: six dimensions with example factors, indicative descriptors,",
+        "label": "Figure 1. The Dataset Friction Framework: six dimensions with example factors, indicative descriptors,",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-23T23:09:30.900Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.23660v1_results.png",
+          "page": 6,
+          "caption": "Figure 1. The Dataset Friction Framework: six dimensions with example factors, indicative descriptors, The Dataset Friction Framework: six dimensions with example factors, indicative descriptors,",
+          "label": "Figure 1. The Dataset Friction Framework: six dimensions with example factors, indicative descriptors,",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-23T23:09:30.900Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.23616v1",
+      "title": "One country, multiple portraits: representativeness in GPS-based mobility data is source-specific and spatially dependent",
+      "authors": [
+        "Carmen Cabrera",
+        "Francisco Rowe",
+        "Miguel González-Leonardo",
+        "Juan Ignacio Vilchis-García",
+        "Elisa Omodei",
+        "Maribel Hernández-Rosales"
+      ],
+      "publishedAt": "2026-06-22T17:12:49Z",
+      "url": "https://arxiv.org/abs/2606.23616v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.23616v1.pdf",
+      "categories": [
+        "topic:education",
+        "physics.soc-ph",
+        "cs.CY"
+      ],
+      "abstract": "Anonymised GPS-based mobile phone data are increasingly used to estimate population distribution and human mobility, supporting applications across disaster response, public health, urban planning and migration research. Yet whether these data fairly represent the populations they describe, particularly outside high-income countries, remains poorly understood. We quantify coverage bias for 2,478 municipalities in Mexico by comparing population estimates from a single-platform source (Facebook) and a multi-app aggregator (Veraset) against the 2020 Mexican Population Census. We find that the magnitude and spatial distribution of coverage bias differ substantially across sources. Facebook provides higher and more evenly distributed coverage, whereas the multi-app data concentrate users in larger, wealthier and more digitally connected places. Coverage bias is also spatially structured, with neighbouring municipalities showing similar levels of over- or under-coverage. Using explainable machine learning, we show that digital access and material resources are the dominant drivers of bias for the multi-app data, while demographic and population structure dominate for Facebook. Explicitly modelling spatial dependence improves the performance of statistical models for explaining bias and reveals that an appreciable share of spatial variation remains unexplained by observed covariates. These findings show that coverage bias is source-specific and spatially dependent, and provide a foundation for adjustments that improve the representativeness of mobile phone data in unequal, data-scarce settings.",
+      "summary": {
+        "gist": "匿名化されたGPSベースの携帯電話データは、人口分布や人間の移動を推定するために広く利用されており、災害対応、公衆衛生、都市計画、移住研究などに応用されています。特に、国勢調査が頻繁に行われず、世帯調査が粗く、行政の人口登録が不足している低・中所得国では、政策支援において大きな役割を果たすと期待されています。しかし、これらのデータが対象とする人口を公平に代表しているか、特に高所得国以外では十分に理解されていません。",
+        "novelty": "これまでの研究では、スマホの位置情報データの偏り（カバレッジバイアス）は国全体で均一だと仮定されたり、地域ごとの偏りの空間的なつながりが考慮されていませんでした。また、高所得国での検証がほとんどで、所得格差の大きい国での実態は不明でした。 この研究では、メキシコの2,478の自治体を対象に、Facebookと複数アプリ集約型という異なる2つのデータソースを国勢調査と比較。カバレッジバイアスがデータソースごとに大きく異なり、隣接する自治体間で偏りのパターンが似ている（空間的依存性）ことを初めて明らかにしました。",
+        "method": "本研究では、メキシコの2,478の自治体を対象に、GPSベースのモバイルデータにおける人口カバレッジバイアスを評価しました。具体的には、単一プラットフォームのデータソース（Facebook）と、複数アプリ集約型のデータソース（Veraset）から得られた人口推定値を、2020年のメキシコ国勢調査と比較しました。カバレッジバイアスは、モバイルデータから推定された人口と国勢調査の人口の比率（カバレッジ率）が1からどれだけ離れているかで定義されます。このバイアスの大きさと空間分布を定量化し、空間的自己相関分析を用いて、バイアスが空間的に依存しているかを評価しました。さらに、説明可能な機械学習モデル（XGBoost）を用いて、地域の人口統計学的、社会経済的、デジタルアクセス特性がバイアスにどのように影響するかを分析し、空間ラグをモデルに組み込むことで空間的依存性を考慮しました。",
+        "results": "カバレッジバイアスの大きさと空間分布は、データソースによって大きく異なることが判明しました。Facebookデータはより高く、均等に分布したカバレッジを示したのに対し、複数アプリデータは、より大きく、裕福で、デジタル接続が進んだ地域にユーザーが集中する傾向がありました。また、カバレッジバイアスは空間的に構造化されており、隣接する自治体間で同様の過剰または過少カバレッジレベルを示すことが明らかになりました。説明可能な機械学習を用いて、複数アプリデータではデジタルアクセスと物質的資源がバイアスの主要な要因である一方、Facebookデータでは人口統計学的および人口構造が支配的であることが示されました。空間的依存性を明示的にモデル化することで、バイアスを説明する統計モデルの性能が向上し、観測された共変量では説明できない空間的変動の相当な割合が残ることが明らかになりました。",
+        "why": "カバレッジバイアスがデータソースによって異なるのは、各プラットフォームやアプリの利用者が異なる社会経済的・人口統計学的特性を持つためです。例えば、Facebookは幅広い層に普及しているため、比較的均一なカバレッジを示します。一方、複数アプリ集約データは、特定のアプリ利用者に偏りがあり、デジタルインフラが整った都市部や高所得層に集中しやすいと考えられます。また、バイアスが空間的に依存するのは、デジタルアクセス、所得、都市化といったバイアスの要因が地域間で類似しているためです。隣接する地域は、地理的・社会経済的に似た特性を持つことが多く、それがモバイルデータ利用の偏りにも反映されるため、バイアスのパターンも似通う傾向があります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.soc-ph）",
+      "field": "教育",
+      "categoryL1": "serendipity",
+      "categoryL2": "data-science",
+      "arxivPrimary": "physics.soc-ph",
+      "titleJa": "GPSベースのモバイルデータにおける代表性：データソース特有の偏りと空間的依存性",
+      "catchTitle": "スマホ位置情報、どこまで信用できる？",
+      "hook": "あなたは災害時の避難計画や都市開発に、スマホの位置情報データが使われていると聞いたらどう思いますか？",
+      "background": "匿名化されたGPSベースの携帯電話データは、人口分布や人間の移動を推定するために広く利用されており、災害対応、公衆衛生、都市計画、移住研究などに応用されています。特に、国勢調査が頻繁に行われず、世帯調査が粗く、行政の人口登録が不足している低・中所得国では、政策支援において大きな役割を果たすと期待されています。しかし、これらのデータが対象とする人口を公平に代表しているか、特に高所得国以外では十分に理解されていません。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "カバレッジバイアス",
+          "definition": "モバイルデータが実際の人口をどれだけ正確に捉えているかの偏り"
+        },
+        {
+          "term": "空間的自己相関分析",
+          "definition": "隣接する地域間でデータの値がどれだけ似ているかを測る分析手法"
+        },
+        {
+          "term": "XGBoost",
+          "definition": "高い予測精度を持つ機械学習アルゴリズムの一種"
+        },
+        {
+          "term": "空間ラグ",
+          "definition": "隣接する地域の変数の平均値"
+        },
+        {
+          "term": "デジタルアクセス",
+          "definition": "インターネットやデジタル機器への接続可能性"
+        },
+        {
+          "term": "物質的資源",
+          "definition": "所得や資産など、経済的な豊かさを示す指標"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "スマホの位置情報データは、情報源によって偏り方が異なり、地域によっても偏りのパターンが似ている。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、スマホの位置情報データの偏り（カバレッジバイアス）は国全体で均一だと仮定されたり、地域ごとの偏りの空間的なつながりが考慮されていませんでした。また、高所得国での検証がほとんどで、所得格差の大きい国での実態は不明でした。",
+        "after": "この研究では、メキシコの2,478の自治体を対象に、Facebookと複数アプリ集約型という異なる2つのデータソースを国勢調査と比較。カバレッジバイアスがデータソースごとに大きく異なり、隣接する自治体間で偏りのパターンが似ている（空間的依存性）ことを初めて明らかにしました。"
+      },
+      "analogy": {
+        "title": "畑の土壌調査とデータバイアス",
+        "body": "これは、まるで広大な畑の土壌調査のようなものです。同じ畑でも、土壌の質（データソース）が違えば、栄養分の偏り方（バイアス）が大きく異なります。また、隣接する区画（自治体）では、土壌の性質が似ている（空間的依存性）ため、ある区画のデータから隣の区画の偏りを推測できることもあります。この研究は、土壌の偏りを正確に把握し、作物（政策）が育ちやすい環境を整えるための基礎となるのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、あなたの身近なデータ活用にも大きな示唆を与えます。例えば、マーケティングでSNSデータを使う際、そのデータが本当にターゲット層を代表しているか、地域によって偏りがないか、注意が必要です。災害時の避難経路の計画や、新しい店舗の出店場所の選定など、人々の移動や分布を推定するあらゆる場面で、データソースの特性と地域ごとの偏りを理解することは不可欠です。この知見は、より公平で効果的な政策立案やビジネス戦略を可能にし、データに基づいた意思決定の質を高めることに貢献するでしょう。",
+      "takeawayTalk": "スマホの位置情報、データ源と地域で偏りが違うから注意が必要だよ！",
+      "bodyText": "本研究では、メキシコの2,478の自治体を対象に、GPSベースのモバイルデータにおける人口カバレッジバイアスを評価しました。具体的には、単一プラットフォームのデータソース（Facebook）と、複数アプリ集約型のデータソース（Veraset）から得られた人口推定値を、2020年のメキシコ国勢調査と比較しました。カバレッジバイアスは、モバイルデータから推定された人口と国勢調査の人口の比率（カバレッジ率）が1からどれだけ離れているかで定義されます。このバイアスの大きさと空間分布を定量化し、空間的自己相関分析を用いて、バイアスが空間的に依存しているかを評価しました。さらに、説明可能な機械学習モデル（XGBoost）を用いて、地域の人口統計学的、社会経済的、デジタルアクセス特性がバイアスにどのように影響するかを分析し、空間ラグをモデルに組み込むことで空間的依存性を考慮しました。\n\nカバレッジバイアスがデータソースによって異なるのは、各プラットフォームやアプリの利用者が異なる社会経済的・人口統計学的特性を持つためです。例えば、Facebookは幅広い層に普及しているため、比較的均一なカバレッジを示します。一方、複数アプリ集約データは、特定のアプリ利用者に偏りがあり、デジタルインフラが整った都市部や高所得層に集中しやすいと考えられます。また、バイアスが空間的に依存するのは、デジタルアクセス、所得、都市化といったバイアスの要因が地域間で類似しているためです。隣接する地域は、地理的・社会経済的に似た特性を持つことが多く、それがモバイルデータ利用の偏りにも反映されるため、バイアスのパターンも似通う傾向があります。",
+      "bodyGlossary": [
+        {
+          "term": "カバレッジバイアス",
+          "definition": "モバイルデータが実際の人口をどれだけ正確に捉えているかの偏り",
+          "start": 45,
+          "end": 54
+        },
+        {
+          "term": "空間的自己相関分析",
+          "definition": "隣接する地域間でデータの値がどれだけ似ているかを測る分析手法",
+          "start": 245,
+          "end": 254
+        },
+        {
+          "term": "XGBoost",
+          "definition": "高い予測精度を持つ機械学習アルゴリズムの一種",
+          "start": 300,
+          "end": 307
+        },
+        {
+          "term": "デジタルアクセス",
+          "definition": "インターネットやデジタル機器への接続可能性",
+          "start": 329,
+          "end": 337
+        },
+        {
+          "term": "空間ラグ",
+          "definition": "隣接する地域の変数の平均値",
+          "start": 360,
+          "end": 364
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "カバレッジバイアス",
+          "definition": "モバイルデータが実際の人口をどれだけ正確に捉えているかの偏り",
+          "start": 45,
+          "end": 54
+        },
+        {
+          "term": "空間的自己相関分析",
+          "definition": "隣接する地域間でデータの値がどれだけ似ているかを測る分析手法",
+          "start": 245,
+          "end": 254
+        },
+        {
+          "term": "XGBoost",
+          "definition": "高い予測精度を持つ機械学習アルゴリズムの一種",
+          "start": 300,
+          "end": 307
+        },
+        {
+          "term": "デジタルアクセス",
+          "definition": "インターネットやデジタル機器への接続可能性",
+          "start": 329,
+          "end": 337
+        },
+        {
+          "term": "空間ラグ",
+          "definition": "隣接する地域の変数の平均値",
+          "start": 360,
+          "end": 364
+        }
+      ],
+      "agriEconRelevance": "この研究の知見は、農業経済分野におけるデータ活用にも応用可能です。例えば、農家のスマート農業機器の導入状況や、農業従事者の移動パターンをモバイルデータで分析する際、データソースによる偏りや地域差を考慮しなければ、誤った政策やビジネス戦略につながる可能性があります。特定のアプリ利用者に偏りがある場合、小規模農家や高齢農家の実態が見えにくくなるかもしれません。本研究のフレームワークは、農業分野のデータバイアスを診断し、より信頼性の高いデータ活用を促進するための基礎となります。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 284,
+      "keyFigure": {
+        "imagePath": "/figures/2606.23616v1_results.png",
+        "page": 19,
+        "caption": "複数アプリとFacebookデータにおける、カバレッジバイアス推定モデルの入力変数の相対的重要度を示しています。",
+        "label": "Figure 3. Relative importance of input variables in XGBoost models estimating municipal-level coverage bias for the mult",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-23T23:09:34.963Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.23616v1_results.png",
+          "page": 19,
+          "caption": "複数アプリとFacebookデータにおける、カバレッジバイアス推定モデルの入力変数の相対的重要度を示しています。",
+          "label": "Figure 3. Relative importance of input variables in XGBoost models estimating municipal-level coverage bias for the mult",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-23T23:09:34.963Z"
+        },
+        {
+          "imagePath": "/figures/2606.23616v1_why.png",
+          "page": 18,
+          "caption": "自治体レベルのカバレッジバイアスと、人口統計学的・社会経済的・技術的要因との相関関係を示しています。",
+          "label": "Figure 1. Pairwise correlations between municipal-level coverage bias and demographic, socioeconomic and technology",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-23T23:09:34.963Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.23548v1",
+      "title": "SuperCond-GNN: Scalable Graph Neural Network Surrogate for Superconducting Circuit Simulations",
+      "authors": [
+        "Nandana Menon",
+        "Giorgio Vallone"
+      ],
+      "publishedAt": "2026-06-22T16:22:01Z",
+      "url": "https://arxiv.org/abs/2606.23548v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.23548v1.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "physics.acc-ph",
+        "cs.LG"
+      ],
+      "abstract": "This paper presents SuperCond-GNN, a graph neural network-based surrogate model for predicting the voltage distribution in high-temperature superconducting (HTS) magnets. HTS magnets are modeled as lumped-element equivalent circuits and mapped onto graph representations, enabling message passing GNNs to learn the electrical response as a function of circuit topology, material properties, and operating current. As a proof of concept, tape stacks of up to 10 tapes are considered across a range of circuit topologies and operating conditions. The surrogate is trained on data generated from circuit simulations and achieves a mean MAPE of 4.3 % within the prescribed design space. The predicted nodal voltages enable fast and scalable inference of current redistribution and local operating conditions across a wide range of circuit configurations. The effect of incorporating physics-informed regularization via Kirchhoff's current law is also evaluated, and generalizability to unseen topologies is assessed through zero-shot inference and few-shot fine-tuning. While demonstrated on tape stack circuits, the graph-based framework is topology-agnostic and naturally extensible to more complex HTS cable and magnet configurations, offering a scalable alternative to conventional circuit solvers for downstream applications such as design space exploration, current sharing analysis, and real-time magnet monitoring.",
+      "summary": {
+        "gist": "高温超伝導（HTS）磁石は、加速器や核融合、高磁場応用で優れた性能を発揮しますが、故障時の保護が大きな課題です。従来の保護戦略では、故障（クエンチ）が発生してから電圧変化を検知するため、磁石が損傷するリスクがありました。また、複雑な電流分布は、磁石全体の電圧・電流特性の解釈を非常に困難にします。故障を予測するためには、磁石の状態をリアルタイムで捉える高精度なモデルが必要ですが、従来のシミュレーション手法は、回路が複雑化すると計算コストが急増し、スケーラビリティに限界がありました。",
+        "novelty": "従来のシミュレーション手法では、超伝導磁石の設計が少し変わるだけで、モデルの作り直しや膨大な計算時間が必要でした。特に、磁石の規模が大きくなると計算コストが急増し、リアルタイムでの状態監視や故障予測には不向きでした。 この研究では、超伝導回路を「グラフ」として表現し、グラフニューラルネットワーク（GNN）を用いることで、回路の形状や規模が変わっても同じモデルで対応できるようになりました。これにより、設計変更に強く、高速な電圧分布予測が可能になります。",
+        "method": "本研究では、高温超伝導磁石の電気回路を「グラフ」として表現します。回路の各接続点（ノード）には、接地ノードか入力ノードか、他のノードとの接続数、接地からの距離、電流源からの距離といった特徴量を割り当てます。また、回路の各要素（エッジ）には、抵抗、超伝導体、電流源といった種類や、抵抗値、臨界電流、n値などの物理的特性を割り当てます。このグラフ構造を、グラフニューラルネットワーク（GNN）に入力し、回路内の各ノードの電圧分布を予測するように学習させます。学習データは、従来の回路シミュレーター（ngspice）で生成されたデータを使用し、キルヒホッフの電流則を組み込んだ物理情報付き正則化も導入して、予測精度と汎化性能を高めています。これにより、回路のトポロジー（接続構造）や規模が変わっても、同じGNNモデルで対応できる「トポロジーに依存しない」代理モデルを実現しました。",
+        "results": "提案されたSuperCond-GNNモデルは、従来の回路シミュレーションデータに対して平均絶対パーセンテージ誤差4.3%という高い精度で電圧分布を予測できることを示しました。特に、モデルが学習したことのない新しい回路トポロジーに対しても、ゼロショット推論や少量のデータでのファインチューニングによって、高い汎化性能を発揮することが確認されました。これにより、超伝導磁石の電流再分配や局所的な動作条件を、高速かつスケーラブルに推論することが可能になります。",
+        "why": "グラフニューラルネットワーク（GNN）は、グラフ構造のデータから直接学習する能力を持っています。回路をグラフとして表現することで、各ノード（接続点）やエッジ（回路要素）が持つ情報だけでなく、それらの「つながり方」や「相互作用」を学習できます。GNNは、ノード間で情報をやり取りする「メッセージパッシング」という仕組みを通じて、回路全体の複雑な電気的応答を捉えます。この仕組みにより、回路の規模や形状が変わっても、ノードやエッジの基本的な特徴量空間は一定に保たれるため、モデルの再構築なしに様々なトポロジーに対応できるのです。さらに、物理法則（キルヒホッフの電流則）を学習プロセスに組み込むことで、物理的に妥当な予測を生成し、モデルの信頼性と汎化性能を向上させています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.acc-ph）",
+      "field": "AI・データサイエンス",
+      "categoryL1": "adjacent",
+      "categoryL2": "materials-science",
+      "arxivPrimary": "physics.acc-ph",
+      "titleJa": "超伝導回路シミュレーションのためのスケーラブルなグラフニューラルネットワーク代理モデル",
+      "catchTitle": "超伝導磁石の故障予兆をAIで高速予測",
+      "hook": "あなたの身近な電化製品が、突然故障する前に「そろそろ危ない」と教えてくれたらどうでしょう？",
+      "background": "高温超伝導（HTS）磁石は、加速器や核融合、高磁場応用で優れた性能を発揮しますが、故障時の保護が大きな課題です。従来の保護戦略では、故障（クエンチ）が発生してから電圧変化を検知するため、磁石が損傷するリスクがありました。また、複雑な電流分布は、磁石全体の電圧・電流特性の解釈を非常に困難にします。故障を予測するためには、磁石の状態をリアルタイムで捉える高精度なモデルが必要ですが、従来のシミュレーション手法は、回路が複雑化すると計算コストが急増し、スケーラビリティに限界がありました。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "高温超伝導磁石",
+          "definition": "高い温度でも超伝導状態を保つ材料を使った磁石"
+        },
+        {
+          "term": "グラフニューラルネットワーク",
+          "definition": "グラフ構造のデータから特徴を学習するAIの一種"
+        },
+        {
+          "term": "代理モデル",
+          "definition": "複雑なシミュレーションの代わりに高速で予測するモデル"
+        },
+        {
+          "term": "ノード",
+          "definition": "グラフにおける点や接続点"
+        },
+        {
+          "term": "エッジ",
+          "definition": "グラフにおける線や接続"
+        },
+        {
+          "term": "ngspice",
+          "definition": "電気回路シミュレーションに使われるオープンソースソフトウェア"
+        },
+        {
+          "term": "キルヒホッフの電流則",
+          "definition": "回路の分岐点で電流の出入りが等しいという物理法則"
+        },
+        {
+          "term": "トポロジー",
+          "definition": "回路の接続構造や形状"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "超伝導磁石の複雑な電気回路をグラフ構造で表現し、AIが故障につながる電圧分布を高速かつ柔軟に予測する技術です。",
+      "noveltyContrast": {
+        "before": "従来のシミュレーション手法では、超伝導磁石の設計が少し変わるだけで、モデルの作り直しや膨大な計算時間が必要でした。特に、磁石の規模が大きくなると計算コストが急増し、リアルタイムでの状態監視や故障予測には不向きでした。",
+        "after": "この研究では、超伝導回路を「グラフ」として表現し、グラフニューラルネットワーク（GNN）を用いることで、回路の形状や規模が変わっても同じモデルで対応できるようになりました。これにより、設計変更に強く、高速な電圧分布予測が可能になります。"
+      },
+      "analogy": {
+        "title": "畑の健康をAIが診断する「土壌ネットワーク」",
+        "body": "これは、まるで広大な畑の健康状態をリアルタイムで把握する「土壌ネットワーク」のようなものです。従来のやり方では、畑の区画が少し変わるたびに土壌分析の機械を再設定し、膨大な時間をかけていました。この研究は、土壌の粒一つ一つを「ノード」、そのつながりを「エッジ」と見立てたグラフ構造で畑全体を表現します。これにより、区画の形や大きさが変わっても、AIが土壌の栄養分布や水分状態を瞬時に予測し、病害の予兆を教えてくれるようなものです。畑のどこに問題が起きそうか、すぐに手が打てるようになります。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "4.3%",
+          "label": "平均絶対パーセンテージ誤差"
+        }
+      ],
+      "whyYouCare": "この技術は、超伝導磁石の設計・開発を劇的に加速させるだけでなく、稼働中の磁石のリアルタイム監視や故障予兆検知にも応用できます。例えば、MRI装置や核融合炉、リニアモーターカーなど、超伝導技術が使われる様々な分野で、機器の安全性と信頼性を高め、予期せぬダウンタイムを減らすことにつながります。また、設計段階で多様なパターンを高速にシミュレーションできるため、より高性能で安全な超伝導磁石の開発が促進され、私たちの生活を支えるインフラや医療技術の進化に貢献するでしょう。",
+      "takeawayTalk": "超伝導磁石の故障をAIが高速予測！設計変更にも強いんだって。",
+      "bodyText": "本研究では、高温超伝導磁石の電気回路を「グラフ」として表現します。回路の各接続点（ノード）には、接地ノードか入力ノードか、他のノードとの接続数、接地からの距離、電流源からの距離といった特徴量を割り当てます。また、回路の各要素（エッジ）には、抵抗、超伝導体、電流源といった種類や、抵抗値、臨界電流、n値などの物理的特性を割り当てます。このグラフ構造を、グラフニューラルネットワーク（GNN）に入力し、回路内の各ノードの電圧分布を予測するように学習させます。学習データは、従来の回路シミュレーター（ngspice）で生成されたデータを使用し、キルヒホッフの電流則を組み込んだ物理情報付き正則化も導入して、予測精度と汎化性能を高めています。これにより、回路のトポロジー（接続構造）や規模が変わっても、同じGNNモデルで対応できる「トポロジーに依存しない」代理モデルを実現しました。\n\nグラフニューラルネットワーク（GNN）は、グラフ構造のデータから直接学習する能力を持っています。回路をグラフとして表現することで、各ノード（接続点）やエッジ（回路要素）が持つ情報だけでなく、それらの「つながり方」や「相互作用」を学習できます。GNNは、ノード間で情報をやり取りする「メッセージパッシング」という仕組みを通じて、回路全体の複雑な電気的応答を捉えます。この仕組みにより、回路の規模や形状が変わっても、ノードやエッジの基本的な特徴量空間は一定に保たれるため、モデルの再構築なしに様々なトポロジーに対応できるのです。さらに、物理法則（キルヒホッフの電流則）を学習プロセスに組み込むことで、物理的に妥当な予測を生成し、モデルの信頼性と汎化性能を向上させています。",
+      "bodyGlossary": [
+        {
+          "term": "高温超伝導磁石",
+          "definition": "高い温度でも超伝導状態を保つ材料を使った磁石",
+          "start": 6,
+          "end": 13
+        },
+        {
+          "term": "ノード",
+          "definition": "グラフにおける点や接続点",
+          "start": 41,
+          "end": 44
+        },
+        {
+          "term": "エッジ",
+          "definition": "グラフにおける線や接続",
+          "start": 113,
+          "end": 116
+        },
+        {
+          "term": "グラフニューラルネットワーク",
+          "definition": "グラフ構造のデータから特徴を学習するAIの一種",
+          "start": 175,
+          "end": 189
+        },
+        {
+          "term": "ngspice",
+          "definition": "電気回路シミュレーションに使われるオープンソースソフトウェア",
+          "start": 247,
+          "end": 254
+        },
+        {
+          "term": "キルヒホッフの電流則",
+          "definition": "回路の分岐点で電流の出入りが等しいという物理法則",
+          "start": 269,
+          "end": 279
+        },
+        {
+          "term": "トポロジー",
+          "definition": "回路の接続構造や形状",
+          "start": 326,
+          "end": 331
+        },
+        {
+          "term": "代理モデル",
+          "definition": "複雑なシミュレーションの代わりに高速で予測するモデル",
+          "start": 374,
+          "end": 379
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "高温超伝導磁石",
+          "definition": "高い温度でも超伝導状態を保つ材料を使った磁石",
+          "start": 6,
+          "end": 13
+        },
+        {
+          "term": "ノード",
+          "definition": "グラフにおける点や接続点",
+          "start": 41,
+          "end": 44
+        },
+        {
+          "term": "エッジ",
+          "definition": "グラフにおける線や接続",
+          "start": 113,
+          "end": 116
+        },
+        {
+          "term": "グラフニューラルネットワーク",
+          "definition": "グラフ構造のデータから特徴を学習するAIの一種",
+          "start": 175,
+          "end": 189
+        },
+        {
+          "term": "ngspice",
+          "definition": "電気回路シミュレーションに使われるオープンソースソフトウェア",
+          "start": 247,
+          "end": 254
+        },
+        {
+          "term": "キルヒホッフの電流則",
+          "definition": "回路の分岐点で電流の出入りが等しいという物理法則",
+          "start": 269,
+          "end": 279
+        },
+        {
+          "term": "トポロジー",
+          "definition": "回路の接続構造や形状",
+          "start": 326,
+          "end": 331
+        },
+        {
+          "term": "代理モデル",
+          "definition": "複雑なシミュレーションの代わりに高速で予測するモデル",
+          "start": 374,
+          "end": 379
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 279,
+      "keyFigure": {
+        "imagePath": "/figures/2606.23548v1_results.png",
+        "page": 9,
+        "caption": "学習していない回路トポロジーに対するモデルの汎化性能を示しています。",
+        "label": "Figure 5: Baseline model performance. (a) Training and validation loss curves showing the evolution of the baseline SC-G",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-23T23:09:39.784Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.23548v1_results.png",
+          "page": 9,
+          "caption": "学習していない回路トポロジーに対するモデルの汎化性能を示しています。",
+          "label": "Figure 5: Baseline model performance. (a) Training and validation loss curves showing the evolution of the baseline SC-G",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-23T23:09:39.784Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.23509v1",
+      "title": "Variance or Standard Deviation? Shell Geometry and Global-Scale Priors in High-Dimensional Shrinkage",
+      "authors": [
+        "Wayne Yuan Gao",
+        "Zhiheng You"
+      ],
+      "publishedAt": "2026-06-22T15:57:01Z",
+      "url": "https://arxiv.org/abs/2606.23509v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.23509v1.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "stat.ME",
+        "econ.EM",
+        "stat.ML"
+      ],
+      "abstract": "We study how the choice of default prior for a common Gaussian scale affects high-dimensional shrinkage risk, highlighting the role played by high-dimensional geometry. Formally, we consider a high-dimensional setting in which the near-zero behavior of the common scale prior has first-order consequences for shrinkage risk, and show that priors that are flat on the variance and those flat on the standard deviation allocate markedly different mass near the zero-scale boundary, leading to distinct shrinkage behavior and informing principled default prior selection. Specifically, under a radial-power benchmark, we establish that the SD-flat benchmark has a one-unit asymptotic risk advantage near the origin, crosses over in the critical regime, and is second-order equivalent to the variance-flat benchmark for strong signals. Proper single global-scale hyperpriors and bounded coordinate-multiplier mixtures inherit these limits through the near-zero exponent of their SD-scale density. For heavier-tailed or sparse priors, that exponent still classifies the common global-scale component, while local-scale tails, model-size priors, or allocation priors can also affect risk.",
+      "summary": {
+        "gist": "階層ベイズモデルや高次元の収縮推定では、共通のガウススケールに事前分布を設定する際、分散を基準にすべきか、標準偏差を基準にすべきかという選択が繰り返し生じる。これら二つの定式化はしばしば似たようなモデリング選択として扱われるが、高次元ではゼロに近いスケールでの幾何学的な性質が異なるため、推定リスクにどのような影響を与えるかが問題となる。",
+        "novelty": "高次元データ解析において、モデルの不確実性を表現する「事前分布」を設定する際、分散を基準にするか、標準偏差を基準にするかは、これまで「どちらでも大差ない」あるいは「好みの問題」として扱われることが多かった。特に、ゼロに近いスケールでの振る舞いの違いが、推定リスクに与える影響は不明瞭だった。 この研究は、高次元設定では、分散を基準とする事前分布と標準偏差を基準とする事前分布が、ゼロに近いスケールで異なる重み付けを行い、それが推定リスクに明確な差を生むことを示した。特に、信号が弱い場合には標準偏差基準が有利であり、この知見は幅広い事前分布に適用可能である。",
+        "method": "本研究では、高次元のガウス正規平均問題において、動径べき乗ベンチマークを用いて、分散基準と標準偏差基準の二つの事前分布を比較した。信号エネルギー（未知の平均ベクトルの二乗ユークリッドサイズ）の3つの漸近レジーム（弱い信号、臨界信号、強い信号）で、一般化ベイズ事後平均の頻度論的二乗誤差リスクを解析した。高次元空間では体積が球殻に集中するという幾何学的特性に着目し、この特性が事前分布の選択に与える影響を評価した。",
+        "results": "弱い信号のレジームでは、標準偏差基準の事前分布が分散基準の事前分布に比べて漸近リスクを1単位改善することが示された。臨界レジームでは、信号強度が低い場合に標準偏差基準が有利だが、信号強度が上がると逆転する可能性がある。強い信号のレジームでは、両者のリスクは漸近的に同等であった。これらの結果は、単一のグローバルスケールハイパー事前分布や、有界な座標乗数混合モデルなど、より広範な設定にも適用可能であることが証明された。",
+        "why": "高次元ユークリッド空間では、体積が球殻に集中するという幾何学的特性がある。標準偏差基準の事前分布は、ゼロに近いスケール（小さな球殻）に対して、分散基準よりも多くの質量を割り当てる。この異なる重み付けが、特に信号が弱い場合に、推定器の振る舞いに影響を与え、標準偏差基準の事前分布がより良いリスク特性を示す原因となる。この違いは、高次元の極限において、一見局所的な再パラメータ化の選択が定量的なリスク比較に変換されることを意味する。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / stat.ME）",
+      "field": "AI・データサイエンス",
+      "categoryL1": "adjacent",
+      "categoryL2": "statistics",
+      "arxivPrimary": "stat.ME",
+      "titleJa": "高次元統計における事前分布の選択：分散と標準偏差、どちらがベター？",
+      "catchTitle": "高次元データ分析、事前分布の選び方で精度が変わる！",
+      "hook": "あなたは日々、膨大なデータに囲まれていませんか？そのデータから「真の値」を推定する際、実はある「初期設定」が結果に大きく影響することを知っていますか？",
+      "background": "階層ベイズモデルや高次元の収縮推定では、共通のガウススケールに事前分布を設定する際、分散を基準にすべきか、標準偏差を基準にすべきかという選択が繰り返し生じる。これら二つの定式化はしばしば似たようなモデリング選択として扱われるが、高次元ではゼロに近いスケールでの幾何学的な性質が異なるため、推定リスクにどのような影響を与えるかが問題となる。",
+      "quiz": {
+        "question": "高次元データ分析において、弱い信号の推定精度を向上させるために、事前分布はどちらを基準に設定するのが良いと本論文は示唆していますか？",
+        "options": [
+          "分散",
+          "標準偏差",
+          "どちらでも同じ"
+        ],
+        "correctIndex": 1,
+        "explanation": "本論文では、弱い信号のレジームにおいて、標準偏差基準の事前分布が分散基準の事前分布に比べて漸近リスクを1単位改善することが示されています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "事前分布",
+          "definition": "ベイズ統計で、データを見る前に持つ仮説の確率分布。"
+        },
+        {
+          "term": "高次元",
+          "definition": "変数の数が非常に多い状態。"
+        },
+        {
+          "term": "収縮推定",
+          "definition": "推定値をゼロ方向に縮小し、過学習を防ぐ手法。"
+        },
+        {
+          "term": "ガウススケール",
+          "definition": "ガウス分布の広がりを示すパラメータ。"
+        },
+        {
+          "term": "漸近レジーム",
+          "definition": "次元が無限大に近づくときの振る舞い。"
+        },
+        {
+          "term": "一般化ベイズ事後平均",
+          "definition": "不適切な事前分布から導かれるベイズ推定値。"
+        },
+        {
+          "term": "頻度論的二乗誤差リスク",
+          "definition": "推定誤差の平均二乗値を評価する指標。"
+        },
+        {
+          "term": "球殻",
+          "definition": "中心から一定距離にある点の集合。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "高次元データ分析では、分散と標準偏差のどちらを基準に事前分布を設定するかで、推定の精度が大きく変わることが明らかになった。",
+      "noveltyContrast": {
+        "before": "高次元データ解析において、モデルの不確実性を表現する「事前分布」を設定する際、分散を基準にするか、標準偏差を基準にするかは、これまで「どちらでも大差ない」あるいは「好みの問題」として扱われることが多かった。特に、ゼロに近いスケールでの振る舞いの違いが、推定リスクに与える影響は不明瞭だった。",
+        "after": "この研究は、高次元設定では、分散を基準とする事前分布と標準偏差を基準とする事前分布が、ゼロに近いスケールで異なる重み付けを行い、それが推定リスクに明確な差を生むことを示した。特に、信号が弱い場合には標準偏差基準が有利であり、この知見は幅広い事前分布に適用可能である。"
+      },
+      "analogy": {
+        "title": "畑の土壌改良、肥料の与え方で収穫量が変わる！",
+        "body": "これは、まるで広大な畑（高次元データ）で、作物の生育を左右する土壌の栄養状態（モデルのスケール）を改善するようなものです。土壌改良剤（事前分布）を与える際、「土壌全体の栄養量（分散）」を基準に均一に撒くか、「土壌の肥沃度（標準偏差）」を基準に撒くかで、特に生育初期の弱い作物（弱い信号）の成長に大きな差が出ます。どちらの基準で肥料を与えるかによって、最終的な収穫量（推定精度）が変わってくる、という納得の一文です。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+1unit",
+          "label": "弱い信号での漸近リスク改善"
+        }
+      ],
+      "whyYouCare": "AIや機械学習が普及し、私たちは日々、膨大なデータから意思決定を迫られています。例えば、病気の診断、金融市場の予測、新製品の開発など、多くの分野で高次元データ分析が活用されています。この研究は、データ分析の「初期設定」とも言える事前分布の選び方が、最終的な分析結果の精度に大きく影響することを示しています。特に、まだ情報が少ない「弱い信号」から何かを読み取ろうとする際に、標準偏差基準の事前分布を選ぶことで、より正確な情報を引き出せる可能性が高まります。これは、より信頼性の高い予測や意思決定につながり、私たちの生活やビジネスに直接的な恩恵をもたらすでしょう。",
+      "takeawayTalk": "高次元データ分析では、事前分布を標準偏差基準で設定すると、弱い信号の推定精度が上がるらしいよ！",
+      "bodyText": "本研究では、高次元のガウス正規平均問題において、動径べき乗ベンチマークを用いて、分散基準と標準偏差基準の二つの事前分布を比較した。信号エネルギー（未知の平均ベクトルの二乗ユークリッドサイズ）の3つの漸近レジーム（弱い信号、臨界信号、強い信号）で、一般化ベイズ事後平均の頻度論的二乗誤差リスクを解析した。高次元空間では体積が球殻に集中するという幾何学的特性に着目し、この特性が事前分布の選択に与える影響を評価した。\n\n高次元ユークリッド空間では、体積が球殻に集中するという幾何学的特性がある。標準偏差基準の事前分布は、ゼロに近いスケール（小さな球殻）に対して、分散基準よりも多くの質量を割り当てる。この異なる重み付けが、特に信号が弱い場合に、推定器の振る舞いに影響を与え、標準偏差基準の事前分布がより良いリスク特性を示す原因となる。この違いは、高次元の極限において、一見局所的な再パラメータ化の選択が定量的なリスク比較に変換されることを意味する。",
+      "bodyGlossary": [
+        {
+          "term": "高次元",
+          "definition": "変数の数が非常に多い状態。",
+          "start": 6,
+          "end": 9
+        },
+        {
+          "term": "事前分布",
+          "definition": "ベイズ統計で、データを見る前に持つ仮説の確率分布。",
+          "start": 55,
+          "end": 59
+        },
+        {
+          "term": "漸近レジーム",
+          "definition": "次元が無限大に近づくときの振る舞い。",
+          "start": 99,
+          "end": 105
+        },
+        {
+          "term": "一般化ベイズ事後平均",
+          "definition": "不適切な事前分布から導かれるベイズ推定値。",
+          "start": 123,
+          "end": 133
+        },
+        {
+          "term": "頻度論的二乗誤差リスク",
+          "definition": "推定誤差の平均二乗値を評価する指標。",
+          "start": 134,
+          "end": 145
+        },
+        {
+          "term": "球殻",
+          "definition": "中心から一定距離にある点の集合。",
+          "start": 161,
+          "end": 163
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "高次元",
+          "definition": "変数の数が非常に多い状態。",
+          "start": 6,
+          "end": 9
+        },
+        {
+          "term": "事前分布",
+          "definition": "ベイズ統計で、データを見る前に持つ仮説の確率分布。",
+          "start": 55,
+          "end": 59
+        },
+        {
+          "term": "漸近レジーム",
+          "definition": "次元が無限大に近づくときの振る舞い。",
+          "start": 99,
+          "end": 105
+        },
+        {
+          "term": "一般化ベイズ事後平均",
+          "definition": "不適切な事前分布から導かれるベイズ推定値。",
+          "start": 123,
+          "end": 133
+        },
+        {
+          "term": "頻度論的二乗誤差リスク",
+          "definition": "推定誤差の平均二乗値を評価する指標。",
+          "start": 134,
+          "end": 145
+        },
+        {
+          "term": "球殻",
+          "definition": "中心から一定距離にある点の集合。",
+          "start": 161,
+          "end": 163
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 238,
+      "keyFigure": {
+        "imagePath": "/figures/2606.23509v1_results.png",
+        "page": 8,
+        "caption": "弱い信号の状況における、標準偏差基準と分散基準の事前分布によるリスクの差を示しています。",
+        "label": "Figure 1: Weak-Regime Excess Risk",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-23T23:09:43.336Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.23509v1_results.png",
+          "page": 8,
+          "caption": "弱い信号の状況における、標準偏差基準と分散基準の事前分布によるリスクの差を示しています。",
+          "label": "Figure 1: Weak-Regime Excess Risk",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-23T23:09:43.336Z"
+        },
+        {
+          "imagePath": "/figures/2606.23509v1_why.png",
+          "page": 10,
+          "caption": "臨界レジームにおける信号強度とリスクの差の関係を示しており、メカニズムを補強します。",
+          "label": "Figure 2: Critical-Regime Risk Gap",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-23T23:09:43.336Z"
+        }
+      ]
+    }
+  ]
+}

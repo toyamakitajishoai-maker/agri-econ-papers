@@ -1,0 +1,1032 @@
+{
+  "date": "2026-06-25",
+  "papers": [
+    {
+      "id": "2606.24319",
+      "title": "Spatial accessibility to food banks hinders food parcel uptake in England and Wales, particularly in rural areas",
+      "authors": [
+        "Laura Sheppard",
+        "Carmen Cabrera",
+        "Daphne Badounas",
+        "Bonnie Boyana Buyuklieva",
+        "Sukankana Chakraborty",
+        "Huanfa Chen",
+        "Sarah Wise",
+        "Howard Wong",
+        "Rachael Jones",
+        "Neave O'Clery"
+      ],
+      "publishedAt": "2026-06-24T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.24319",
+      "pdfUrl": "https://arxiv.org/pdf/2606.24319.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "econ.GN",
+        "q-fin.EC"
+      ],
+      "abstract": "Food bank use in the UK has soared in recent years. The combination of a global pandemic, over-stretched and underfunded public services, and a cost-of-living crisis has meant that millions of people cannot afford basic essentials such as food, heating, housing, and baby supplies. Food bank use is driven by a complex range of factors, including poverty, health emergencies, income shocks, delays to universal credit payments, housing issues, and homelessness. In this study we identify an urban-rural divide in spatial accessibility to food banks. In cities, food banks tend to be highly accessible by public transport to deprived populations but, on average, have shorter opening hours. In rural areas, however, despite generally longer opening hours, food banks are typically not highly accessible except for the most deprived residents. This matters. We find that spatial accessibility to a Trussell food bank centre is a key predictor of food parcel uptake, with a significantly stronger relationship than factors emphasised in the literature such as disability and Universal Credit. Importantly, this relationship is markedly stronger for rural populations, suggesting an unmet need in deprived rural areas far from food banks. Our work has important implications for food bank policy, suggesting a need for improved public transport in rural areas, and optimising current food bank locations and delivery models.",
+      "summary": {
+        "gist": "英国では、パンデミック、公共サービスの予算不足、生活費危機が重なり、食料不安を抱える人々が急増しています。2023/24年には310万件以上の緊急食料支援が配布され、過去5年間で94%も増加しました。フードバンクの利用は貧困、健康問題、収入の変動など様々な要因によって引き起こされますが、本研究では特に「空間的アクセス」に焦点を当てています。",
+        "novelty": "これまでの研究では、フードバンクの利用は障害の有無や失業手当の受給状況といった個人の経済的・社会的要因が主な決定要因だと考えられていました。また、都市部に焦点を当てた研究が多く、地方におけるアクセス問題は十分に検討されていませんでした。 この論文は、フードバンクへの「空間的アクセス（移動時間や距離）」が、従来の主要因とされてきた要素よりも、食料支援の利用に強く影響することを発見しました。特に地方では、このアクセス問題が都市部よりも深刻で、潜在的なニーズが満たされていない可能性を指摘しています。",
+        "method": "本研究では、イングランドとウェールズのTrussell Trustが運営するフードバンク1,187箇所のデータを使用しました。各地域の最小地理単位（LSOA）ごとに、住民1,000人あたりの食料支援利用件数を従属変数としました。独立変数として、各LSOAの中心から最も近いフードバンクまでの徒歩、自動車、公共交通機関での移動時間や距離を算出しました。さらに、貧困度、障害の有無、失業手当受給者数などの社会経済的要因も考慮し、多変量回帰モデルを用いて、食料支援利用に影響を与える要因を分析しました。都市部と地方のLSOAを区別し、それぞれの地域でのアクセシビリティの影響を比較しました。",
+        "results": "フードバンクへの空間的アクセス（移動時間や距離）は、障害の有無や失業手当の受給状況といった従来の要因よりも、食料支援の利用を強く予測する重要な要因であることが判明しました。特に地方では、この空間的アクセスの影響が都市部よりも顕著であり、フードバンクから遠いほど利用が少ない傾向が見られました。都市部のフードバンクは貧困地域に集中し公共交通機関でのアクセスが良い一方、地方では開所時間が長くてもアクセスが困難な場合が多いことが示されました。",
+        "why": "この結果は、食料支援を必要としている人々が、時間や距離、公共交通機関の不足といった物理的な障壁のために、フードバンクにたどり着けない「未充足のニーズ」が存在することを示唆しています。特に地方では、公共交通機関の選択肢が限られているため、フードバンクが遠いと利用したくてもできない状況が生まれます。これにより、食料支援の利用率が低下し、真に困っている人々が支援から取り残される可能性があります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "food-security",
+      "arxivPrimary": "econ.GN",
+      "titleJa": "フードバンクへの空間的アクセスが食料支援利用を阻害、特に地方で顕著",
+      "catchTitle": "地方のフードバンク、遠いと利用されない？",
+      "hook": "もしあなたが困窮して食料支援が必要になったら、近くにフードバンクはありますか？実は、その「近さ」が利用を大きく左右するかもしれません。",
+      "background": "英国では、パンデミック、公共サービスの予算不足、生活費危機が重なり、食料不安を抱える人々が急増しています。2023/24年には310万件以上の緊急食料支援が配布され、過去5年間で94%も増加しました。フードバンクの利用は貧困、健康問題、収入の変動など様々な要因によって引き起こされますが、本研究では特に「空間的アクセス」に焦点を当てています。",
+      "quiz": {
+        "question": "この研究で、フードバンクの利用を最も強く予測する要因として特定されたものは何ですか？",
+        "options": [
+          "障害の有無",
+          "失業手当の受給状況",
+          "フードバンクへの空間的アクセス（移動時間や距離）"
+        ],
+        "correctIndex": 2,
+        "explanation": "この研究では、フードバンクへの空間的アクセス（移動時間や距離）が、障害の有無や失業手当の受給状況といった従来の要因よりも、食料支援の利用を強く予測する重要な要因であることが判明しました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "フードバンク",
+          "definition": "食品ロス削減と食料支援を行う慈善団体"
+        },
+        {
+          "term": "空間的アクセス",
+          "definition": "施設への移動時間や距離による到達しやすさ"
+        },
+        {
+          "term": "LSOA",
+          "definition": "英国の最小地理単位（400-1200世帯）"
+        },
+        {
+          "term": "従属変数",
+          "definition": "分析で結果として説明される変数"
+        },
+        {
+          "term": "独立変数",
+          "definition": "分析で結果を説明するために用いられる変数"
+        },
+        {
+          "term": "多変量回帰モデル",
+          "definition": "複数の要因が結果に与える影響を分析する統計手法"
+        },
+        {
+          "term": "未充足のニーズ",
+          "definition": "必要としているが満たされていない需要"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "フードバンクの利用は、貧困度合いよりも「どれだけアクセスしやすいか」に強く影響され、特に地方でその傾向が顕著である。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、フードバンクの利用は障害の有無や失業手当の受給状況といった個人の経済的・社会的要因が主な決定要因だと考えられていました。また、都市部に焦点を当てた研究が多く、地方におけるアクセス問題は十分に検討されていませんでした。",
+        "after": "この論文は、フードバンクへの「空間的アクセス（移動時間や距離）」が、従来の主要因とされてきた要素よりも、食料支援の利用に強く影響することを発見しました。特に地方では、このアクセス問題が都市部よりも深刻で、潜在的なニーズが満たされていない可能性を指摘しています。"
+      },
+      "analogy": {
+        "title": "豊作でも届かなければ意味がない",
+        "body": "これはまるで、農家が丹精込めて育てた作物が豊作でたくさん収穫できたのに、市場や消費者の元へ運ぶための道や手段が整備されておらず、多くの作物が畑で腐ってしまうようなものです。どんなに良い作物がたくさんあっても、消費者が手に入れられなければ意味がありません。フードバンクも同じで、どんなに食料が豊富にあっても、困っている人がそこにたどり着けなければ、支援は届かないのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+3.1M",
+          "label": "2023/24年のフードバンク利用件数"
+        },
+        {
+          "value": "+94%",
+          "label": "過去5年間での利用件数増加率"
+        }
+      ],
+      "whyYouCare": "この研究は、食料支援の現場における重要な課題を浮き彫りにします。もしあなたが地域で食料支援活動に関わっているなら、配布場所の選定や移動手段の提供が、支援を必要とする人々に届ける上でどれほど重要かを再認識するでしょう。また、地方創生や地域コミュニティの活性化を考えるビジネスパーソンにとっても、公共交通機関の整備やデリバリーサービスの導入など、新たなビジネスチャンスや社会貢献の可能性を示唆しています。食料不安は誰にとっても他人事ではありません。この知見は、より効果的な支援策を考えるための第一歩となるはずです。",
+      "takeawayTalk": "フードバンクは、遠いと利用されない！特に地方ではアクセス改善が急務。",
+      "bodyText": "本研究では、イングランドとウェールズのTrussell Trustが運営するフードバンク1,187箇所のデータを使用しました。各地域の最小地理単位（LSOA）ごとに、住民1,000人あたりの食料支援利用件数を従属変数としました。独立変数として、各LSOAの中心から最も近いフードバンクまでの徒歩、自動車、公共交通機関での移動時間や距離を算出しました。さらに、貧困度、障害の有無、失業手当受給者数などの社会経済的要因も考慮し、多変量回帰モデルを用いて、食料支援利用に影響を与える要因を分析しました。都市部と地方のLSOAを区別し、それぞれの地域でのアクセシビリティの影響を比較しました。\n\nこの結果は、食料支援を必要としている人々が、時間や距離、公共交通機関の不足といった物理的な障壁のために、フードバンクにたどり着けない「未充足のニーズ」が存在することを示唆しています。特に地方では、公共交通機関の選択肢が限られているため、フードバンクが遠いと利用したくてもできない状況が生まれます。これにより、食料支援の利用率が低下し、真に困っている人々が支援から取り残される可能性があります。",
+      "bodyGlossary": [
+        {
+          "term": "フードバンク",
+          "definition": "食品ロス削減と食料支援を行う慈善団体",
+          "start": 38,
+          "end": 44
+        },
+        {
+          "term": "LSOA",
+          "definition": "英国の最小地理単位（400-1200世帯）",
+          "start": 74,
+          "end": 78
+        },
+        {
+          "term": "従属変数",
+          "definition": "分析で結果として説明される変数",
+          "start": 104,
+          "end": 108
+        },
+        {
+          "term": "独立変数",
+          "definition": "分析で結果を説明するために用いられる変数",
+          "start": 114,
+          "end": 118
+        },
+        {
+          "term": "多変量回帰モデル",
+          "definition": "複数の要因が結果に与える影響を分析する統計手法",
+          "start": 212,
+          "end": 220
+        },
+        {
+          "term": "未充足のニーズ",
+          "definition": "必要としているが満たされていない需要",
+          "start": 361,
+          "end": 368
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "フードバンク",
+          "definition": "食品ロス削減と食料支援を行う慈善団体",
+          "start": 38,
+          "end": 44
+        },
+        {
+          "term": "LSOA",
+          "definition": "英国の最小地理単位（400-1200世帯）",
+          "start": 74,
+          "end": 78
+        },
+        {
+          "term": "従属変数",
+          "definition": "分析で結果として説明される変数",
+          "start": 104,
+          "end": 108
+        },
+        {
+          "term": "独立変数",
+          "definition": "分析で結果を説明するために用いられる変数",
+          "start": 114,
+          "end": 118
+        },
+        {
+          "term": "多変量回帰モデル",
+          "definition": "複数の要因が結果に与える影響を分析する統計手法",
+          "start": 212,
+          "end": 220
+        },
+        {
+          "term": "未充足のニーズ",
+          "definition": "必要としているが満たされていない需要",
+          "start": 361,
+          "end": 368
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 237,
+      "keyFigure": {
+        "imagePath": "/figures/2606.24319_results.png",
+        "page": 20,
+        "caption": "フードバンク利用を予測する要因間の相関関係を示しています。",
+        "label": "Figure 5: Pairwise correlation plot for predictor variables for food bank use. Food parcels per thousand",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-24T23:07:06.280Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.24319_results.png",
+          "page": 20,
+          "caption": "フードバンク利用を予測する要因間の相関関係を示しています。",
+          "label": "Figure 5: Pairwise correlation plot for predictor variables for food bank use. Food parcels per thousand",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-24T23:07:06.280Z"
+        },
+        {
+          "imagePath": "/figures/2606.24319_why.png",
+          "page": 10,
+          "caption": "都市部と地方における公共交通機関でのフードバンクへのアクセス状況を示しています。",
+          "label": "Figure 4: [A] Urban areas are more likely to have access to a Trussell food bank within two hours public transit",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-24T23:07:06.281Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.24415",
+      "title": "Novel Triple-Based Problems for the Construction of Phylogenetic Networks via Least Common Ancestors",
+      "authors": [
+        "Patricia A. Ebert",
+        "Anna Lindeberg",
+        "Marc Hellmuth"
+      ],
+      "publishedAt": "2026-06-24T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.24415",
+      "pdfUrl": "https://arxiv.org/pdf/2606.24415.pdf",
+      "categories": [
+        "topic:food-system",
+        "cs.DM",
+        "q-bio.PE"
+      ],
+      "abstract": "Evolutionary histories are often represented by rooted phylogenetic networks, whose leaves correspond to extant taxa and whose internal vertices represent ancestral lineages. Since such histories must usually be inferred from incomplete data, in particular from genomic sequences of present-day taxa, one often obtains only local information about relative evolutionary proximity. For instance, sequence data may suggest that two taxa $x$ and $y$ are more closely related to each other than either is to a third taxon $z$. This information is classically encoded by a rooted triple $xy|z$. In this paper, we study rooted triples in phylogenetic networks under an ancestor-based interpretation: $xy|z$ is displayed if the unique least common ancestor (LCA) of $x$ and $y$ lies strictly below the unique LCA of $x$ and $z$, respectively of $y$ and $z$, and the latter two LCAs coincide. We also introduce anchored triples $\\underline{x}y|z$, which retain only the asymmetric comparison that the LCA of $x$ and $y$ lies below the LCA of $x$ and $z$. This relaxation is natural in networks, where different pairwise ancestral relationships need not behave as they do in trees. We consider several variants of consistency problems for ordinary and anchored triples, both with and without forbidden triples. Somewhat surprisingly, these ancestor-based consistency questions for triples in phylogenetic networks do not appear to have been addressed before despite their direct biological interpretation and the fact that such constraints can be inferred naturally from genomic sequence data. By translating these questions into realization problems for required and forbidden LCA-constraints, we show that all resulting problems can be solved in polynomial time. Moreover, whenever a solution exists, a suitable realizing DAG and phylogenetic network can be constructed within the same time bound.",
+      "summary": {
+        "gist": "生物の進化の歴史は、しばしば「系統樹」として表現されます。しかし、ハイブリダイゼーション（異種交配）や水平遺伝子転移といった現象は、枝が合流する「系統ネットワーク」として表現する方が適切です。系統ネットワークを構築する際、3つの生物間の相対的な近縁度を示す「トリプル」という情報が使われますが、ネットワークにおけるトリプルの解釈には複数の方法があり、特に遺伝子データから得られる情報と直接結びつく解釈が不足していました。",
+        "novelty": "従来の系統ネットワーク構築では、3つの生物間の関係性を示す「トリプル」という情報を使う際、その解釈に曖昧さがありました。特に、遺伝子データから得られる「どちらがより近いか」という情報と、ネットワーク上での祖先の位置関係を直接結びつける方法が確立されていませんでした。 この研究では、遺伝子データから自然に導かれる「最小共通祖先（LCA）」の相対的な位置関係に基づいた新しいトリプルの解釈（T1）と、さらに柔軟な「アンカー付きトリプル」を導入しました。これにより、より正確で情報量の多い系統ネットワークを効率的に構築できるようになりました。",
+        "method": "本研究では、系統ネットワークにおけるトリプルの解釈として、最小共通祖先（LCA）の相対的な位置関係に基づく新しい定義（T1）を提案しました。具体的には、3つの生物x, y, zについて、xとyのLCAが、xとzのLCAおよびyとzのLCAよりも厳密に下位にあり、かつ後者二つのLCAが一致する場合に、トリプルxy|zが「表示される」と定義します。さらに、この条件を緩和し、xとyのLCAがxとzのLCAよりも下位にあるという非対称な比較のみを考慮する「アンカー付きトリプル」を導入しました。これらの新しいトリプル定義に基づき、与えられたトリプル集合を満たす（または満たさない）系統ネットワークが存在するかどうかを判定し、存在する場合は構築する「一貫性問題」を、既存のLCA制約実現問題に変換することで、全て多項式時間で解けることを示しました。",
+        "results": "提案されたLCAベースのトリプルおよびアンカー付きトリプルの一貫性問題（TC, ATC, TC-F, ATC-F、およびその強化版）は、全て多項式時間で解決可能であることが示されました。また、解が存在する場合には、適切な有向非巡回グラフ（DAG）および系統ネットワークを同じ時間内で構築できることも示されました。これは、遺伝子配列データから自然に推論されるLCAベースの制約を、系統ネットワーク構築に直接適用できることを意味します。",
+        "why": "この効率的な解決は、トリプルの一貫性問題を、既存のLCAベースの制約（特定のLCAが別のLCAより上位にある、または等しい、あるいはそうではない）を満たすDAGを構築する問題に変換することで可能になりました。LCAベースの制約実現問題は、先行研究で多項式時間で解けることが示されており、この成果を応用することで、新しいトリプルの一貫性問題も同様に効率的に解決できることが証明されました。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.DM）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "bioinformatics",
+      "arxivPrimary": "cs.DM",
+      "titleJa": "最小共通祖先に基づく系統ネットワーク構築のための新しいトリプル問題",
+      "catchTitle": "進化の謎を解く！新しい関係性で系統樹を超える",
+      "hook": "あなたの家系図、実はもっと複雑かもしれません。生物の進化も、一本の木では表せない「合流」があるって知っていましたか？",
+      "background": "生物の進化の歴史は、しばしば「系統樹」として表現されます。しかし、ハイブリダイゼーション（異種交配）や水平遺伝子転移といった現象は、枝が合流する「系統ネットワーク」として表現する方が適切です。系統ネットワークを構築する際、3つの生物間の相対的な近縁度を示す「トリプル」という情報が使われますが、ネットワークにおけるトリプルの解釈には複数の方法があり、特に遺伝子データから得られる情報と直接結びつく解釈が不足していました。",
+      "quiz": {
+        "question": "この研究で導入された「アンカー付きトリプル」の主な特徴は何ですか？",
+        "options": [
+          "3つの生物のLCAが全て一致することを要求する",
+          "LCAの非対称な位置関係のみを考慮する",
+          "LCAが全く定義されない場合のみ適用される"
+        ],
+        "correctIndex": 1,
+        "explanation": "アンカー付きトリプルは、LCAの非対称な位置関係、つまり「xとyのLCAがxとzのLCAよりも下位にある」という条件のみを考慮することで、より柔軟な系統ネットワークの構築を可能にします。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "系統ネットワーク",
+          "definition": "生物の進化の歴史を、枝の分岐だけでなく合流も含むグラフで表現したもの。"
+        },
+        {
+          "term": "トリプル",
+          "definition": "3つの生物間の相対的な近縁度を示す情報。"
+        },
+        {
+          "term": "最小共通祖先（LCA）",
+          "definition": "2つの生物の最も近い共通の祖先。"
+        },
+        {
+          "term": "アンカー付きトリプル",
+          "definition": "LCAの非対称な位置関係のみを考慮するトリプル。"
+        },
+        {
+          "term": "一貫性問題",
+          "definition": "与えられた制約を満たすグラフが存在するか判定する問題。"
+        },
+        {
+          "term": "多項式時間",
+          "definition": "問題の規模に対して計算時間が効率的であること。"
+        },
+        {
+          "term": "有向非巡回グラフ（DAG）",
+          "definition": "方向性があり、サイクルを含まないグラフ。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "生物の進化の歴史を、より現実に近い「系統ネットワーク」で効率的に構築する新しい方法を提案しました。",
+      "noveltyContrast": {
+        "before": "従来の系統ネットワーク構築では、3つの生物間の関係性を示す「トリプル」という情報を使う際、その解釈に曖昧さがありました。特に、遺伝子データから得られる「どちらがより近いか」という情報と、ネットワーク上での祖先の位置関係を直接結びつける方法が確立されていませんでした。",
+        "after": "この研究では、遺伝子データから自然に導かれる「最小共通祖先（LCA）」の相対的な位置関係に基づいた新しいトリプルの解釈（T1）と、さらに柔軟な「アンカー付きトリプル」を導入しました。これにより、より正確で情報量の多い系統ネットワークを効率的に構築できるようになりました。"
+      },
+      "analogy": {
+        "title": "畑の作物の「品種改良」と「祖先」の関係",
+        "body": "これは、まるで畑で新しい品種を開発するようなものです。従来の品種改良では、親Aと親Bが交配して子Cができた、という「木の枝」のような関係性で考えていました。しかし、実際には、異なる系統の作物が交雑して新しい品種が生まれる「ネットワーク」のような複雑な関係もあります。この研究は、どの作物がどの作物よりも遺伝的に近いか、という個別の情報（トリプル）を基に、その複雑な交雑の歴史（系統ネットワーク）を効率的に描き出すための新しい「設計図」の読み方を教えてくれるようなものです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、生物の進化の歴史をより正確に理解するための強力なツールを提供します。例えば、農作物や家畜の品種改良において、どの品種がどの品種とどのように交雑して現在の形になったのかを詳細に分析できるようになります。これにより、病害に強い品種や収穫量の多い品種の開発など、より効率的で狙い通りの品種改良戦略を立てることが可能になります。また、感染症ウイルスの進化経路を追跡し、変異のパターンを予測する上でも役立つでしょう。私たちの食料安全保障や公衆衛生に直結する、非常に実用的な研究と言えます。",
+      "takeawayTalk": "進化の歴史は木だけじゃない！新しい方法で複雑な関係が解明できるよ。",
+      "bodyText": "本研究では、系統ネットワークにおけるトリプルの解釈として、最小共通祖先（LCA）の相対的な位置関係に基づく新しい定義（T1）を提案しました。具体的には、3つの生物x, y, zについて、xとyのLCAが、xとzのLCAおよびyとzのLCAよりも厳密に下位にあり、かつ後者二つのLCAが一致する場合に、トリプルxy|zが「表示される」と定義します。さらに、この条件を緩和し、xとyのLCAがxとzのLCAよりも下位にあるという非対称な比較のみを考慮する「アンカー付きトリプル」を導入しました。これらの新しいトリプル定義に基づき、与えられたトリプル集合を満たす（または満たさない）系統ネットワークが存在するかどうかを判定し、存在する場合は構築する「一貫性問題」を、既存のLCA制約実現問題に変換することで、全て多項式時間で解けることを示しました。\n\nこの効率的な解決は、トリプルの一貫性問題を、既存のLCAベースの制約（特定のLCAが別のLCAより上位にある、または等しい、あるいはそうではない）を満たすDAGを構築する問題に変換することで可能になりました。LCAベースの制約実現問題は、先行研究で多項式時間で解けることが示されており、この成果を応用することで、新しいトリプルの一貫性問題も同様に効率的に解決できることが証明されました。",
+      "bodyGlossary": [
+        {
+          "term": "系統ネットワーク",
+          "definition": "生物の進化の歴史を、枝の分岐だけでなく合流も含むグラフで表現したもの。",
+          "start": 6,
+          "end": 14
+        },
+        {
+          "term": "トリプル",
+          "definition": "3つの生物間の相対的な近縁度を示す情報。",
+          "start": 18,
+          "end": 22
+        },
+        {
+          "term": "最小共通祖先（LCA）",
+          "definition": "2つの生物の最も近い共通の祖先。",
+          "start": 29,
+          "end": 40
+        },
+        {
+          "term": "アンカー付きトリプル",
+          "definition": "LCAの非対称な位置関係のみを考慮するトリプル。",
+          "start": 226,
+          "end": 236
+        },
+        {
+          "term": "一貫性問題",
+          "definition": "与えられた制約を満たすグラフが存在するか判定する問題。",
+          "start": 322,
+          "end": 327
+        },
+        {
+          "term": "多項式時間",
+          "definition": "問題の規模に対して計算時間が効率的であること。",
+          "start": 353,
+          "end": 358
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "系統ネットワーク",
+          "definition": "生物の進化の歴史を、枝の分岐だけでなく合流も含むグラフで表現したもの。",
+          "start": 6,
+          "end": 14
+        },
+        {
+          "term": "トリプル",
+          "definition": "3つの生物間の相対的な近縁度を示す情報。",
+          "start": 18,
+          "end": 22
+        },
+        {
+          "term": "最小共通祖先（LCA）",
+          "definition": "2つの生物の最も近い共通の祖先。",
+          "start": 29,
+          "end": 40
+        },
+        {
+          "term": "アンカー付きトリプル",
+          "definition": "LCAの非対称な位置関係のみを考慮するトリプル。",
+          "start": 226,
+          "end": 236
+        },
+        {
+          "term": "一貫性問題",
+          "definition": "与えられた制約を満たすグラフが存在するか判定する問題。",
+          "start": 322,
+          "end": 327
+        },
+        {
+          "term": "多項式時間",
+          "definition": "問題の規模に対して計算時間が効率的であること。",
+          "start": 353,
+          "end": 358
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 256
+    },
+    {
+      "id": "2606.24037",
+      "title": "The Morality Game: An online multiplayer platform to standardize, expedite, and expand research on cooperation",
+      "authors": [
+        "Gregory N. Stanley",
+        "Alan Yang",
+        "Liam Tsimhoni",
+        "Roujia Wang",
+        "Ekdatha Arramreddy",
+        "Rohan Desai",
+        "Shulin Pan",
+        "Michael Ahn",
+        "Vijairam G. Moorthy",
+        "William Mathias",
+        "Mai Xu",
+        "James Kessler",
+        "Yahan Xing",
+        "Yang Li",
+        "Duoming Bian"
+      ],
+      "publishedAt": "2026-06-24T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.24037",
+      "pdfUrl": "https://arxiv.org/pdf/2606.24037.pdf",
+      "categories": [
+        "topic:neuroscience",
+        "q-bio.NC"
+      ],
+      "abstract": "This paper presents the Morality Game, a platform designed to standardize and accelerate research on cooperation and morality through game theory-based experiments. The Morality Game functions as a video game for science, a hub for economic game research, an open-access data repository, and a tool for expediting the research process. It allows researchers to launch customized online multiplayer experiments with zero coding, using game trees to simulate moral dilemmas. The platform automates participant payments, data collection, and analysis, promoting replication and transparency. This paper details the platform's architecture, emphasizing its capabilities for standardizing research methods, unifying data, and enabling rapid aggregation and comparison of results. The Morality Game leverages dynamic, self-correcting game trees to generate well-controlled, abstract experiments that can represent any social scenario. Participants interact through a responsive user interface, making the experiments intuitive and engaging. Researchers can configure experiments through a user-friendly dashboard, specifying various parameters and utilizing pre-created or auto-generated game trees. The platform supports nested belief representation and incorporates artificial agents with customizable traits. Plans include integrating social networking features, enhancing emotional expression capabilities, and expanding the platform's reach to remote small-scale societies to test the ecological validity of findings. By evolving into an integrated ecosystem that supports the entire research lifecycle, the Morality Game aims to foster collaboration, enhance data accessibility, and ultimately increase cooperation. This paper outlines the platform's current features, architectural details, and future directions, demonstrating its potential to advance cooperation research.",
+      "summary": {
+        "gist": "協力行動や道徳的判断に関する研究は、社会科学の重要なテーマですが、実験の再現性の問題や、研究手法の多様性によるデータ統合の困難さが課題でした。特に、複雑な行動実験の設計と実施には専門的なプログラミングスキルが求められ、研究の速度を低下させていました。",
+        "novelty": "従来の協力行動研究では、実験設定やデータ収集が研究者ごとに異なり、結果の比較や再現が困難でした。実験の設計にはプログラミングスキルが必要で、時間と労力がかかり、研究の進展を妨げる一因となっていました。 この論文で紹介される「The Morality Game」は、プログラミング不要でカスタマイズ可能なオンライン実験を可能にします。ゲーム理論に基づくゲームツリーで社会的なジレンマをシミュレートし、データ収集・分析・支払いまで自動化することで、研究の標準化と加速を実現します。",
+        "method": "「The Morality Game」は、ゲーム理論に基づく「ゲームツリー」を用いて、様々な社会的・道徳的ジレンマをシミュレートするオンラインマルチプレイヤー実験プラットフォームです。研究者はコーディング不要で、ユーザーフレンドリーなダッシュボードから実験条件を設定し、既存または自動生成されたゲームツリーを利用して実験を開始できます。参加者の支払い、データ収集、分析はプラットフォームが自動化し、結果は標準化された形式で一元的に保存されます。これにより、研究の再現性と透明性が向上し、異なる研究間のデータ比較や統合が容易になります。",
+        "results": "本論文はプラットフォームのアーキテクチャと機能詳細を説明しており、具体的な実験結果の数値は示されていません。しかし、このプラットフォームが協力行動研究の標準化、迅速化、拡大に貢献する可能性を提示しています。",
+        "why": "このプラットフォームは、動的で自己修正可能なゲームツリーを活用することで、あらゆる社会シナリオを抽象的かつ厳密に制御された形で表現できます。参加者は直感的で魅力的なユーザーインターフェースを通じて実験に参加し、意思決定を行います。研究者は、この標準化された環境で実験を繰り返すことで、協力行動の普遍的なパターンやメカニズムを効率的に特定し、理論の構築と検証を加速させることができます。また、人工エージェントを組み込むことで、人間とAIの相互作用を通じた新たな洞察も期待されます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.NC）",
+      "field": "神経・脳科学",
+      "categoryL1": "adjacent",
+      "categoryL2": "behavioral-economics",
+      "arxivPrimary": "q-bio.NC",
+      "titleJa": "協力行動研究を加速するオンラインプラットフォーム「The Morality Game」",
+      "catchTitle": "協力行動研究、ゲームで加速！",
+      "hook": "あなたは、なぜ人は協力したり裏切ったりするのか、そのメカニズムを深く知りたいと思ったことはありませんか？",
+      "background": "協力行動や道徳的判断に関する研究は、社会科学の重要なテーマですが、実験の再現性の問題や、研究手法の多様性によるデータ統合の困難さが課題でした。特に、複雑な行動実験の設計と実施には専門的なプログラミングスキルが求められ、研究の速度を低下させていました。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "ゲームツリー",
+          "definition": "ゲーム理論で使われる、意思決定の分岐を図で示す構造"
+        },
+        {
+          "term": "ゲーム理論",
+          "definition": "複数の意思決定者の戦略的相互作用を分析する数学"
+        },
+        {
+          "term": "マルチプレイヤー",
+          "definition": "複数の参加者が同時にプレイする形式"
+        },
+        {
+          "term": "ダッシュボード",
+          "definition": "情報を一覧表示し、操作できる管理画面"
+        },
+        {
+          "term": "再現性",
+          "definition": "同じ実験を繰り返したときに同じ結果が得られること"
+        },
+        {
+          "term": "透明性",
+          "definition": "研究プロセスやデータが公開され検証可能なこと"
+        },
+        {
+          "term": "人工エージェント",
+          "definition": "人間を模倣した行動をとるプログラム"
+        },
+        {
+          "term": "ユーザーインターフェース",
+          "definition": "利用者がシステムと対話するための操作画面"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "協力行動や道徳的ジレンマの研究を、ゲーム形式で標準化・加速するオンラインプラットフォームです。",
+      "noveltyContrast": {
+        "before": "従来の協力行動研究では、実験設定やデータ収集が研究者ごとに異なり、結果の比較や再現が困難でした。実験の設計にはプログラミングスキルが必要で、時間と労力がかかり、研究の進展を妨げる一因となっていました。",
+        "after": "この論文で紹介される「The Morality Game」は、プログラミング不要でカスタマイズ可能なオンライン実験を可能にします。ゲーム理論に基づくゲームツリーで社会的なジレンマをシミュレートし、データ収集・分析・支払いまで自動化することで、研究の標準化と加速を実現します。"
+      },
+      "analogy": {
+        "title": "品種改良を効率化するスマート農業プラットフォーム",
+        "body": "これはまるで、新しい作物の品種改良を効率化するスマート農業プラットフォームのようなものです。従来、農家が手作業で交配や生育データを記録していたため、品種改良の試行錯誤には膨大な時間と労力がかかっていました。しかし、このプラットフォームを使えば、様々な交配パターンをデジタル上でシミュレートし、生育環境のデータを自動で収集・分析できます。これにより、どの組み合わせが優れた品種を生み出すかを素早く特定し、効率的に新品種を開発できるようになります。研究の標準化と加速という点で共通しています。",
+        "domain": "farming"
+      },
+      "whyYouCare": "このプラットフォームは、私たちの社会や組織における協力の促進、紛争解決、倫理的意思決定の理解に大きく貢献する可能性があります。例えば、企業内のチームワーク向上策や、地域コミュニティでの合意形成メカニズムの設計、あるいは国際関係における交渉戦略の最適化など、様々な分野に応用できる知見を生み出すでしょう。研究の加速と標準化は、より早く、より信頼性の高い知見が社会に還元されることを意味し、私たちの生活や仕事における「協力」をより深く理解し、実践するための基盤を提供します。",
+      "takeawayTalk": "協力行動の研究が、オンラインゲームで超効率化されるらしいよ！",
+      "bodyText": "「The Morality Game」は、ゲーム理論に基づく「ゲームツリー」を用いて、様々な社会的・道徳的ジレンマをシミュレートするオンラインマルチプレイヤー実験プラットフォームです。研究者はコーディング不要で、ユーザーフレンドリーなダッシュボードから実験条件を設定し、既存または自動生成されたゲームツリーを利用して実験を開始できます。参加者の支払い、データ収集、分析はプラットフォームが自動化し、結果は標準化された形式で一元的に保存されます。これにより、研究の再現性と透明性が向上し、異なる研究間のデータ比較や統合が容易になります。\n\nこのプラットフォームは、動的で自己修正可能なゲームツリーを活用することで、あらゆる社会シナリオを抽象的かつ厳密に制御された形で表現できます。参加者は直感的で魅力的なユーザーインターフェースを通じて実験に参加し、意思決定を行います。研究者は、この標準化された環境で実験を繰り返すことで、協力行動の普遍的なパターンやメカニズムを効率的に特定し、理論の構築と検証を加速させることができます。また、人工エージェントを組み込むことで、人間とAIの相互作用を通じた新たな洞察も期待されます。",
+      "bodyGlossary": [
+        {
+          "term": "ゲーム理論",
+          "definition": "複数の意思決定者の戦略的相互作用を分析する数学",
+          "start": 21,
+          "end": 26
+        },
+        {
+          "term": "ゲームツリー",
+          "definition": "ゲーム理論で使われる、意思決定の分岐を図で示す構造",
+          "start": 31,
+          "end": 37
+        },
+        {
+          "term": "マルチプレイヤー",
+          "definition": "複数の参加者が同時にプレイする形式",
+          "start": 71,
+          "end": 79
+        },
+        {
+          "term": "ダッシュボード",
+          "definition": "情報を一覧表示し、操作できる管理画面",
+          "start": 117,
+          "end": 124
+        },
+        {
+          "term": "再現性",
+          "definition": "同じ実験を繰り返したときに同じ結果が得られること",
+          "start": 231,
+          "end": 234
+        },
+        {
+          "term": "透明性",
+          "definition": "研究プロセスやデータが公開され検証可能なこと",
+          "start": 235,
+          "end": 238
+        },
+        {
+          "term": "ユーザーインターフェース",
+          "definition": "利用者がシステムと対話するための操作画面",
+          "start": 351,
+          "end": 363
+        },
+        {
+          "term": "人工エージェント",
+          "definition": "人間を模倣した行動をとるプログラム",
+          "start": 464,
+          "end": 472
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "ゲーム理論",
+          "definition": "複数の意思決定者の戦略的相互作用を分析する数学",
+          "start": 21,
+          "end": 26
+        },
+        {
+          "term": "ゲームツリー",
+          "definition": "ゲーム理論で使われる、意思決定の分岐を図で示す構造",
+          "start": 31,
+          "end": 37
+        },
+        {
+          "term": "マルチプレイヤー",
+          "definition": "複数の参加者が同時にプレイする形式",
+          "start": 71,
+          "end": 79
+        },
+        {
+          "term": "ダッシュボード",
+          "definition": "情報を一覧表示し、操作できる管理画面",
+          "start": 117,
+          "end": 124
+        },
+        {
+          "term": "再現性",
+          "definition": "同じ実験を繰り返したときに同じ結果が得られること",
+          "start": 231,
+          "end": 234
+        },
+        {
+          "term": "透明性",
+          "definition": "研究プロセスやデータが公開され検証可能なこと",
+          "start": 235,
+          "end": 238
+        },
+        {
+          "term": "ユーザーインターフェース",
+          "definition": "利用者がシステムと対話するための操作画面",
+          "start": 351,
+          "end": 363
+        },
+        {
+          "term": "人工エージェント",
+          "definition": "人間を模倣した行動をとるプログラム",
+          "start": 464,
+          "end": 472
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 210,
+      "keyFigure": {
+        "imagePath": "/figures/2606.24037_results.jpeg",
+        "page": 9,
+        "caption": "研究者が進行中の研究の進捗状況を確認できるダッシュボードの画面です。",
+        "label": "Figure 3 describes how researchers can view the progress of ongoing studies.",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-24T23:07:10.977Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.24037_results.jpeg",
+          "page": 9,
+          "caption": "研究者が進行中の研究の進捗状況を確認できるダッシュボードの画面です。",
+          "label": "Figure 3 describes how researchers can view the progress of ongoing studies.",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-24T23:07:10.977Z"
+        },
+        {
+          "imagePath": "/figures/2606.24037_why.png",
+          "page": 8,
+          "caption": "研究者が実験を設定・管理するためのダッシュボードの画面です。",
+          "label": "Figure 2: Researcher Dashboard:",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-24T23:07:10.978Z"
+        }
+      ]
+    },
+    {
+      "id": "2407.18957",
+      "title": "When AI Meets Finance (StockAgent): Large Language Model-based Stock Trading in Simulated Real-world Environments",
+      "authors": [
+        "Chong Zhang",
+        "Xinyi Liu",
+        "Zhongmou Zhang",
+        "Mingyu Jin",
+        "Lingyao Li",
+        "Zhenting Wang",
+        "Wenyue Hua",
+        "Dong Shu",
+        "Suiyuan Zhu",
+        "Xiaobo Jin",
+        "Sujian Li",
+        "Mengnan Du",
+        "Yongfeng Zhang"
+      ],
+      "publishedAt": "2026-06-24T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2407.18957",
+      "pdfUrl": "https://arxiv.org/pdf/2407.18957.pdf",
+      "categories": [
+        "topic:finance",
+        "q-fin.TR",
+        "cs.AI",
+        "cs.MA"
+      ],
+      "abstract": "Can AI Agents simulate real-world trading environments to investigate the impact of external factors on stock trading activities (e.g., macroeconomics, policy changes, company fundamentals, and global events)? These factors, which frequently influence trading behaviors, are critical elements in the quest for maximizing investors' profits. Our work attempts to solve this problem through large language model based agents. We have developed a multi-agent AI system called StockAgent, driven by LLMs, designed to simulate investors' trading behaviors in response to the real stock market. The StockAgent allows users to evaluate the impact of different external factors on investor trading and to analyze trading behavior and profitability effects. Additionally, StockAgent avoids the test set leakage issue present in existing trading simulation systems based on AI Agents. Specifically, it prevents the model from leveraging prior knowledge it may have acquired related to the test data. We evaluate different LLMs under the framework of StockAgent in a stock trading environment that closely resembles real-world conditions. The experimental results demonstrate the impact of key external factors on stock market trading, including trading behavior and stock price fluctuation rules. This research explores the study of agents' free trading gaps in the context of no prior knowledge related to market data. The patterns identified through StockAgent simulations provide valuable insights for LLM-based investment advice and stock recommendation. The code is available at https://github.com/MingyuJ666/Stockagent.",
+      "summary": {
+        "gist": "株式市場は、個人投資家、機関投資家、自動取引システムなど多様な参加者が競争と協調を繰り返す複雑で変動の激しいエコシステムです。経済動向、地政学的イベント、市場心理といった不確実な要因が常に取引行動に影響を与え、トレーダーが常に情報に基づいた意思決定を行うことを困難にしています。従来は過去データを用いたバックテストが主流でしたが、その静的な性質と後方バイアスが、動的な市場環境での有効性を制限していました。市場の仕組み、特にステークホルダー間の相互作用や市場心理を理解することは、堅牢な投資戦略を開発する上で不可欠です。",
+        "novelty": "従来の株取引シミュレーションは、過去データに基づくバックテストが主流でした。しかし、これらは市場の動的な変化や投資家の感情、流動性といったリアルタイムの要因を十分に反映できず、過学習のリスクがありました。 この論文では、大規模言語モデル（LLM）を搭載したマルチエージェントAIシステム「StockAgent」を開発。マクロ経済、政策変更、企業情報、世界情勢といった外部要因が株取引に与える影響を、実際の市場に近い環境でシミュレートし、投資家の行動と収益性を分析します。",
+        "method": "本研究では、大規模言語モデル（LLM）を基盤としたマルチエージェントAIシステム「StockAgent」を開発しました。このシステムは、GPT（gpt-3.5-turbo-0125）とGemini（Gemini-pro-1.0）の2つのLLMを用いて構築されています。StockAgentは、以下の3つのモジュールで構成されます。\n\n1. 投資エージェントモジュール：ランダムな初期資本と負債、そして「保守的」「攻撃的」「バランス型」「成長志向」の4つの異なるパーソナリティを持つ投資エージェントを初期化します。これらのエージェントは、市場データやBBS（掲示板）での情報交換など、様々な情報を考慮して、ローン、取引、翌日の行動予測、ヒントの共有といった意思決定を行います。不適切な行動を防ぐために「秘書」エージェントが不正な応答を修正します。\n\n2. 取引モジュール：エージェントの売買注文は注文板に記録され、取引が完了すると注文板が更新されます。複数のエージェントが同時に取引する際のデッドロックを防ぐため、ランダムクロックページ置換アルゴリズムが導入されています。\n\n3. BBSモジュール：エージェント間の情報共有をシミュレートします。\n\nStockAgentは、事前取引準備（金利や金融イベント）、取引セッション（取引と口座更新）、取引後（将来の行動と戦略共有）の複数の取引段階をシミュレートします。このシステムは、外部要因（金融データ、市場指標、ベンチマーク金利、緊急事態、取引時間外BBS議論など）、資産量、戦略が取引に与える影響をパラメータ調整によって評価できる点が特徴です。また、モデルがテストデータに関する事前知識を利用する「テストセットリーケージ」の問題を回避します。",
+        "results": "StockAgentの実験結果は、主要な外部要因が株式市場の取引（取引行動や株価変動ルールを含む）に影響を与えることを示しました。特に、市場データに関する事前知識がない状況でのエージェントの自由な取引のギャップを探求しました。StockAgentシミュレーションを通じて特定されたパターンは、LLMベースの投資アドバイスや株式推奨に貴重な洞察を提供します。",
+        "why": "StockAgentのメカニズムは、LLMの高度な推論能力と、エージェントベースのシミュレーションを組み合わせることにあります。LLMは膨大なデータで訓練されており、多様なシナリオを理解し、生成し、推論する能力を持っています。これにより、個々のLLMベースのエージェントが動的に相互作用し、進化する状況下で意思決定を行う複雑なシステムをモデル化できます。特に、人間の感情や行動をシミュレートすることで、従来のデータ分析では捉えきれなかった市場の急速な変化への投資戦略の反応をより正確に近似できます。これにより、マクロ経済、政策変更、企業情報、世界情勢といった外部要因が、個々の投資家のパーソナリティ（保守的、攻撃的など）とどのように相互作用し、最終的な取引行動や市場全体の価格変動に影響を与えるかを、詳細に分析することが可能になります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-fin.TR）",
+      "field": "ファイナンス・保険",
+      "categoryL1": "adjacent",
+      "categoryL2": "financial-modeling",
+      "arxivPrimary": "q-fin.TR",
+      "titleJa": "AIが金融と出会う（StockAgent）：シミュレートされた実世界環境における大規模言語モデルベースの株式取引",
+      "catchTitle": "AIが株取引をシミュレート！市場の未来を読む",
+      "hook": "もしAIが人間の投資家のように市場の動きを予測し、外部要因に反応して取引するとしたら、あなたの投資戦略はどう変わるでしょうか？",
+      "background": "株式市場は、個人投資家、機関投資家、自動取引システムなど多様な参加者が競争と協調を繰り返す複雑で変動の激しいエコシステムです。経済動向、地政学的イベント、市場心理といった不確実な要因が常に取引行動に影響を与え、トレーダーが常に情報に基づいた意思決定を行うことを困難にしています。従来は過去データを用いたバックテストが主流でしたが、その静的な性質と後方バイアスが、動的な市場環境での有効性を制限していました。市場の仕組み、特にステークホルダー間の相互作用や市場心理を理解することは、堅牢な投資戦略を開発する上で不可欠です。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "大規模言語モデル",
+          "definition": "大量のテキストデータを学習し、人間のような文章を生成・理解するAI。"
+        },
+        {
+          "term": "マルチエージェントAIシステム",
+          "definition": "複数の自律的なAIが相互作用し、協調して目標を達成するシステム。"
+        },
+        {
+          "term": "GPT",
+          "definition": "OpenAIが開発した大規模言語モデルシリーズ。"
+        },
+        {
+          "term": "Gemini",
+          "definition": "Googleが開発した大規模言語モデル。"
+        },
+        {
+          "term": "注文板",
+          "definition": "株式などの売買注文状況を一覧表示するもの。"
+        },
+        {
+          "term": "デッドロック",
+          "definition": "複数の処理が互いにリソースを待ち続け、停止する状態。"
+        },
+        {
+          "term": "ランダムクロックページ置換アルゴリズム",
+          "definition": "メモリ管理の一種で、タスク切り替え時の効率を高める。"
+        },
+        {
+          "term": "テストセットリーケージ",
+          "definition": "モデルがテストデータから事前知識を得てしまい、評価が不正確になる問題。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "LLMベースのAIエージェントが、外部要因を考慮したリアルな株取引をシミュレートし、投資行動と収益性を分析するシステムを開発しました。",
+      "noveltyContrast": {
+        "before": "従来の株取引シミュレーションは、過去データに基づくバックテストが主流でした。しかし、これらは市場の動的な変化や投資家の感情、流動性といったリアルタイムの要因を十分に反映できず、過学習のリスクがありました。",
+        "after": "この論文では、大規模言語モデル（LLM）を搭載したマルチエージェントAIシステム「StockAgent」を開発。マクロ経済、政策変更、企業情報、世界情勢といった外部要因が株取引に与える影響を、実際の市場に近い環境でシミュレートし、投資家の行動と収益性を分析します。"
+      },
+      "analogy": {
+        "title": "畑の作付け計画をAIが立てる",
+        "body": "これは、まるで経験豊富な農家が、天気予報（マクロ経済）、政府の補助金政策（政策変更）、土壌の質（企業情報）、そして地球温暖化のような長期トレンド（世界情勢）といった様々な外部要因を総合的に考慮して、どの作物をいつ、どれだけ植えるかを計画するようなものです。AIは、これらの情報から最適な作付け戦略を導き出し、収穫量（利益）を最大化しようとします。単に過去の収穫データを見るだけでなく、リアルタイムの気象情報や市場の需要予測を取り入れることで、より賢く、柔軟な判断が可能になるのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、私たちの投資や経済活動に大きな影響を与える可能性があります。AIがマクロ経済指標、政策変更、企業ニュース、さらにはSNSの感情といった複雑な外部要因を考慮して、よりリアルな市場の動きをシミュレートできるようになれば、私たちはより精度の高い投資戦略を立てられるようになるでしょう。例えば、個人の資産運用において、AIが市場の変動リスクをより正確に予測し、パーソナライズされたアドバイスを提供できるようになるかもしれません。また、企業経営者にとっては、自社の株価が外部環境によってどのように影響を受けるかを事前にシミュレートし、リスク管理やIR戦略の策定に役立てることも可能です。さらに、政策立案者は、特定の政策が市場に与える影響をAIシミュレーションで検証し、より効果的な経済政策を設計できるようになるかもしれません。これは、単なる株取引の効率化にとどまらず、社会全体の経済活動の質を高める可能性を秘めています。",
+      "takeawayTalk": "AIが外部要因を考慮して株取引をシミュレート！未来の投資戦略が変わるかも。",
+      "bodyText": "本研究では、大規模言語モデル（LLM）を基盤としたマルチエージェントAIシステム「StockAgent」を開発しました。このシステムは、GPT（gpt-3.5-turbo-0125）とGemini（Gemini-pro-1.0）の2つのLLMを用いて構築されています。StockAgentは、以下の3つのモジュールで構成されます。\n\n1. 投資エージェントモジュール：ランダムな初期資本と負債、そして「保守的」「攻撃的」「バランス型」「成長志向」の4つの異なるパーソナリティを持つ投資エージェントを初期化します。これらのエージェントは、市場データやBBS（掲示板）での情報交換など、様々な情報を考慮して、ローン、取引、翌日の行動予測、ヒントの共有といった意思決定を行います。不適切な行動を防ぐために「秘書」エージェントが不正な応答を修正します。\n\n2. 取引モジュール：エージェントの売買注文は注文板に記録され、取引が完了すると注文板が更新されます。複数のエージェントが同時に取引する際のデッドロックを防ぐため、ランダムクロックページ置換アルゴリズムが導入されています。\n\n3. BBSモジュール：エージェント間の情報共有をシミュレートします。\n\nStockAgentは、事前取引準備（金利や金融イベント）、取引セッション（取引と口座更新）、取引後（将来の行動と戦略共有）の複数の取引段階をシミュレートします。このシステムは、外部要因（金融データ、市場指標、ベンチマーク金利、緊急事態、取引時間外BBS議論など）、資産量、戦略が取引に与える影響をパラメータ調整によって評価できる点が特徴です。また、モデルがテストデータに関する事前知識を利用する「テストセットリーケージ」の問題を回避します。\n\n\nStockAgentのメカニズムは、LLMの高度な推論能力と、エージェントベースのシミュレーションを組み合わせることにあります。LLMは膨大なデータで訓練されており、多様なシナリオを理解し、生成し、推論する能力を持っています。これにより、個々のLLMベースのエージェントが動的に相互作用し、進化する状況下で意思決定を行う複雑なシステムをモデル化できます。特に、人間の感情や行動をシミュレートすることで、従来のデータ分析では捉えきれなかった市場の急速な変化への投資戦略の反応をより正確に近似できます。これにより、マクロ経済、政策変更、企業情報、世界情勢といった外部要因が、個々の投資家のパーソナリティ（保守的、攻撃的など）とどのように相互作用し、最終的な取引行動や市場全体の価格変動に影響を与えるかを、詳細に分析することが可能になります。",
+      "bodyGlossary": [
+        {
+          "term": "大規模言語モデル",
+          "definition": "大量のテキストデータを学習し、人間のような文章を生成・理解するAI。",
+          "start": 6,
+          "end": 14
+        },
+        {
+          "term": "マルチエージェントAIシステム",
+          "definition": "複数の自律的なAIが相互作用し、協調して目標を達成するシステム。",
+          "start": 25,
+          "end": 40
+        },
+        {
+          "term": "GPT",
+          "definition": "OpenAIが開発した大規模言語モデルシリーズ。",
+          "start": 68,
+          "end": 71
+        },
+        {
+          "term": "Gemini",
+          "definition": "Googleが開発した大規模言語モデル。",
+          "start": 92,
+          "end": 98
+        },
+        {
+          "term": "注文板",
+          "definition": "株式などの売買注文状況を一覧表示するもの。",
+          "start": 397,
+          "end": 400
+        },
+        {
+          "term": "デッドロック",
+          "definition": "複数の処理が互いにリソースを待ち続け、停止する状態。",
+          "start": 444,
+          "end": 450
+        },
+        {
+          "term": "ランダムクロックページ置換アルゴリズム",
+          "definition": "メモリ管理の一種で、タスク切り替え時の効率を高める。",
+          "start": 456,
+          "end": 475
+        },
+        {
+          "term": "テストセットリーケージ",
+          "definition": "モデルがテストデータから事前知識を得てしまい、評価が不正確になる問題。",
+          "start": 723,
+          "end": 734
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "大規模言語モデル",
+          "definition": "大量のテキストデータを学習し、人間のような文章を生成・理解するAI。",
+          "start": 6,
+          "end": 14
+        },
+        {
+          "term": "マルチエージェントAIシステム",
+          "definition": "複数の自律的なAIが相互作用し、協調して目標を達成するシステム。",
+          "start": 25,
+          "end": 40
+        },
+        {
+          "term": "GPT",
+          "definition": "OpenAIが開発した大規模言語モデルシリーズ。",
+          "start": 68,
+          "end": 71
+        },
+        {
+          "term": "Gemini",
+          "definition": "Googleが開発した大規模言語モデル。",
+          "start": 92,
+          "end": 98
+        },
+        {
+          "term": "注文板",
+          "definition": "株式などの売買注文状況を一覧表示するもの。",
+          "start": 397,
+          "end": 400
+        },
+        {
+          "term": "デッドロック",
+          "definition": "複数の処理が互いにリソースを待ち続け、停止する状態。",
+          "start": 444,
+          "end": 450
+        },
+        {
+          "term": "ランダムクロックページ置換アルゴリズム",
+          "definition": "メモリ管理の一種で、タスク切り替え時の効率を高める。",
+          "start": 456,
+          "end": 475
+        },
+        {
+          "term": "テストセットリーケージ",
+          "definition": "モデルがテストデータから事前知識を得てしまい、評価が不正確になる問題。",
+          "start": 723,
+          "end": 734
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 348,
+      "keyFigure": {
+        "imagePath": "/figures/2407.18957_results.png",
+        "page": 18,
+        "caption": "Fig. 8. The comparison of stock trend with external condition ablation. (Stock A is above, and stock B is The comparison of stock trend with external condition ablation. (Stock A is above, and stock B is",
+        "label": "Fig. 8. The comparison of stock trend with external condition ablation. (Stock A is above, and stock B is",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-24T23:07:12.147Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2407.18957_results.png",
+          "page": 18,
+          "caption": "Fig. 8. The comparison of stock trend with external condition ablation. (Stock A is above, and stock B is The comparison of stock trend with external condition ablation. (Stock A is above, and stock B is",
+          "label": "Fig. 8. The comparison of stock trend with external condition ablation. (Stock A is above, and stock B is",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-24T23:07:12.147Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.24394",
+      "title": "Average Rankings Mask Per-Subject Optimality: A Friedman-Nemenyi Benchmark of EEG Motor-Imagery BCI Decoders",
+      "authors": [
+        "Xavier Vasques",
+        "Paul Barbaste",
+        "Olivier Oullier"
+      ],
+      "publishedAt": "2026-06-24T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.24394",
+      "pdfUrl": "https://arxiv.org/pdf/2606.24394.pdf",
+      "categories": [
+        "topic:neuroscience",
+        "cs.HC",
+        "cs.AI",
+        "cs.RO",
+        "q-bio.NC"
+      ],
+      "abstract": "Electroencephalography (EEG) is the dominant non-invasive modality for brain-computer interfaces (BCIs), yet reliable decoding of motor imagery is hampered by inter- and intra-individual variability. A recurring claim is that one decoding pipeline, most often a spatial or Riemannian method, is broadly preferable. We test the weakest version of that claim under the most favourable conditions. Using the Mother of All BCI Benchmarks (MOABB) framework, we evaluated 1,056 decoding configurations (feature extractor x scaler x classifier), &gt;340,000 subject-level model fits, across three public left-versus-right motor-imagery datasets (PhysionetMI, 109 participants; Cho2017, 52; Zhou2016, 4) and two frequency bands (8-15 Hz, 8-30 Hz). Every model is fit and tested within a single session of a single participant, the easiest regime, giving every pipeline its best chance. We apply the statistics standard for multi-classifier comparison: Friedman omnibus tests, Nemenyi critical-difference analysis and Wilcoxon signed-rank tests with effect sizes. Covariance tangent-space projection (cov-tgsp) and Common Spatial Patterns (CSP) are the strongest families, but their ordering is dataset-dependent and, on the largest and most heterogeneous cohort (PhysionetMI), statistically indistinguishable (Nemenyi p = 0.27; Kendall's W = 0.11). At the individual level the single best pipeline is optimal for only 35% of PhysionetMI participants, and nonlinear descriptors are best for roughly one third; matching pipeline to participant adds about seven accuracy points over the best fixed choice. The ranking is not an artefact of dimensionality, and classifier and scaler choices are secondary to the feature representation. Even in the easiest regime, no single pipeline dominates: a lower bound on the personalization problem and a quantitative case for participant-aware model selection rather than a universal decoder.",
+      "summary": {
+        "gist": "脳波（EEG）を用いたBCIは、運動障害を持つ人々にとってコミュニケーションや制御の新たな手段を提供しますが、個々の脳波のばらつきが信頼性の高いデコーディングを妨げています。これまでの研究では、特定のデコーディング手法が優れていると主張されてきましたが、それは平均的な性能に基づいたものでした。",
+        "novelty": "これまでの研究では、脳波（EEG）を使ったBCIにおいて、特定のデコーディング手法（例えば空間フィルタリングやリーマン幾何学的手法）が他の手法よりも優れていると主張されることが多く、万能な「ベストな方法」を探す傾向がありました。しかし、これは平均的な性能に基づいたもので、個々のユーザーに本当に最適かどうかは不明でした。 この研究では、1,000種類以上のデコーディング方法を検証し、最も簡単な条件（個々の参加者の単一セッション内）でも、万能な「ベストな方法」は存在しないことを明らかにしました。むしろ、参加者ごとに最適な方法が異なり、その人に合った方法を選ぶことで、精度が大幅に向上することが示されました。",
+        "method": "本研究では、MOABBフレームワークを用いて、3つの公開された運動イメージングデータセット（PhysionetMI、Cho2017、Zhou2016）から、1,056種類のデコーディング設定（特徴抽出器×スケーラー×分類器）を評価しました。各モデルは、単一の参加者の単一セッション内で適合・テストされ、最も簡単な条件下での各パイプラインの性能を評価しました。統計分析には、Friedman検定、Nemenyiの臨界差分析、Wilcoxon符号順位検定を用い、複数の分類器の比較における標準的な手法を適用しました。",
+        "results": "共分散接空間射影（cov-tgsp）と共通空間パターン（CSP）が最も強力な手法のファミリーでしたが、その順位はデータセットに依存しました。特に、最大かつ最も多様なPhysionetMIコホートでは、統計的に区別できませんでした。個々のレベルでは、単一の最適なパイプラインがPhysionetMI参加者のわずか35%にしか最適ではなく、非線形記述子が約3分の1の参加者で最適でした。参加者ごとに最適なパイプラインを選択することで、最良の固定選択と比較して約7ポイントの精度向上が見られました。",
+        "why": "この結果は、脳波の信号が個人間で大きく異なるため、万能なデコーディング方法が存在しないことを示唆しています。個々の参加者の脳波特性に合わせたカスタマイズされたアプローチが、BCIの性能を最大化するために不可欠であると考えられます。分類器やスケーラーの選択よりも、特徴表現の選択が重要であり、個人の脳波の非定常性が、このパーソナライゼーションの必要性を生み出しています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.HC）",
+      "field": "神経・脳科学",
+      "categoryL1": "serendipity",
+      "categoryL2": "neuroscience",
+      "arxivPrimary": "cs.HC",
+      "titleJa": "脳波BCIデコーダの平均ランキングは被験者ごとの最適性を隠蔽する",
+      "catchTitle": "脳波で機械を動かす！最適な方法は人それぞれ",
+      "hook": "脳波で機械を操作するBCI（ブレイン・コンピュータ・インターフェース）に、あなたも興味はありませんか？でも、どの方法が一番良いのか、実はまだ分かっていないんです。",
+      "background": "脳波（EEG）を用いたBCIは、運動障害を持つ人々にとってコミュニケーションや制御の新たな手段を提供しますが、個々の脳波のばらつきが信頼性の高いデコーディングを妨げています。これまでの研究では、特定のデコーディング手法が優れていると主張されてきましたが、それは平均的な性能に基づいたものでした。",
+      "quiz": {
+        "question": "この研究で明らかになった、BCIデコーディングにおける最も重要な発見は何でしょう？",
+        "options": [
+          "特定のデコーディング方法がすべてのユーザーに最適である。",
+          "デコーディング方法の選択は、分類器の選択よりも重要ではない。",
+          "万能なデコーディング方法は存在せず、ユーザーごとに最適な方法が異なる。"
+        ],
+        "correctIndex": 2,
+        "explanation": "この研究は、最も簡単な条件下でも、単一の最適なデコーディング方法は存在せず、参加者ごとに最適な方法が異なることを明らかにしました。参加者ごとに最適なパイプラインを選択することで、精度が大幅に向上することが示されています。"
+      },
+      "limitations": "本研究では、前処理を最小限に抑えたため、非線形記述子が筋電図や眼球運動アーチファクトに敏感である可能性があり、結果の解釈に注意が必要です。また、Zhou2016データセットは参加者数が少ないため、推論統計からは除外されています。さらに、本研究はセッション内評価に限定されており、セッション間や参加者間の汎化性能については直接評価していません。",
+      "glossary": [
+        {
+          "term": "BCI",
+          "definition": "脳波で外部機器を操作する技術。"
+        },
+        {
+          "term": "EEG",
+          "definition": "頭皮から脳の電気活動を測定する手法。"
+        },
+        {
+          "term": "デコーディング",
+          "definition": "脳波信号から意図を読み取る処理。"
+        },
+        {
+          "term": "MOABB",
+          "definition": "BCIベンチマークのためのフレームワーク。"
+        },
+        {
+          "term": "cov-tgsp",
+          "definition": "共分散行列を接空間に射影する手法。"
+        },
+        {
+          "term": "CSP",
+          "definition": "脳波信号の空間フィルタリング手法。"
+        },
+        {
+          "term": "Friedman検定",
+          "definition": "複数グループの順位を比較する統計手法。"
+        },
+        {
+          "term": "Nemenyiの臨界差分析",
+          "definition": "Friedman検定後の多重比較手法。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "脳波で機械を操作するBCIでは、人それぞれに最適なデコーディング方法があり、万能な方法はない。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、脳波（EEG）を使ったBCIにおいて、特定のデコーディング手法（例えば空間フィルタリングやリーマン幾何学的手法）が他の手法よりも優れていると主張されることが多く、万能な「ベストな方法」を探す傾向がありました。しかし、これは平均的な性能に基づいたもので、個々のユーザーに本当に最適かどうかは不明でした。",
+        "after": "この研究では、1,000種類以上のデコーディング方法を検証し、最も簡単な条件（個々の参加者の単一セッション内）でも、万能な「ベストな方法」は存在しないことを明らかにしました。むしろ、参加者ごとに最適な方法が異なり、その人に合った方法を選ぶことで、精度が大幅に向上することが示されました。"
+      },
+      "analogy": {
+        "title": "畑の土壌改良、万能薬はない",
+        "body": "これは、まるで「どんな畑にも効く万能な土壌改良剤」を探すようなものです。ある農家は粘土質の土壌で水はけを良くしたい、別の農家は砂質の土壌で保水力を高めたい。それぞれの畑の特性（個々の参加者の脳波特性）に合わせて、最適な改良剤（デコーディング方法）を選ぶことで、作物の生育（BCIの精度）が格段に良くなる。万能な改良剤を探すよりも、個々の畑の土壌を診断し、それに合った手入れをすることが、豊かな収穫（高いBCI精度）への近道なのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+7pt",
+          "label": "精度向上"
+        }
+      ],
+      "whyYouCare": "この研究は、脳波で機械を操作するBCI（ブレイン・コンピュータ・インターフェース）の未来を大きく変える可能性を秘めています。もしあなたが、身体的な制約を持つ方々の生活を豊かにするテクノロジーに関心があるなら、この発見は重要です。これまでは「万能なBCI」を探していましたが、実際には一人ひとりに合わせた「オーダーメイドBCI」が最も効果的だと分かったのです。これは、医療や福祉の現場でBCIを導入する際に、個別のニーズに合わせたシステム開発や調整が不可欠であることを示唆しています。将来的には、よりパーソナルで使いやすいBCIが実現し、多くの人々の生活の質を向上させるでしょう。",
+      "takeawayTalk": "脳波で機械を動かすBCIは、人それぞれに最適な方法があるんだって！",
+      "bodyText": "本研究では、MOABBフレームワークを用いて、3つの公開された運動イメージングデータセット（PhysionetMI、Cho2017、Zhou2016）から、1,056種類のデコーディング設定（特徴抽出器×スケーラー×分類器）を評価しました。各モデルは、単一の参加者の単一セッション内で適合・テストされ、最も簡単な条件下での各パイプラインの性能を評価しました。統計分析には、Friedman検定、Nemenyiの臨界差分析、Wilcoxon符号順位検定を用い、複数の分類器の比較における標準的な手法を適用しました。\n\nこの結果は、脳波の信号が個人間で大きく異なるため、万能なデコーディング方法が存在しないことを示唆しています。個々の参加者の脳波特性に合わせたカスタマイズされたアプローチが、BCIの性能を最大化するために不可欠であると考えられます。分類器やスケーラーの選択よりも、特徴表現の選択が重要であり、個人の脳波の非定常性が、このパーソナライゼーションの必要性を生み出しています。",
+      "bodyGlossary": [
+        {
+          "term": "MOABB",
+          "definition": "BCIベンチマークのためのフレームワーク。",
+          "start": 6,
+          "end": 11
+        },
+        {
+          "term": "デコーディング",
+          "definition": "脳波信号から意図を読み取る処理。",
+          "start": 86,
+          "end": 93
+        },
+        {
+          "term": "Friedman検定",
+          "definition": "複数グループの順位を比較する統計手法。",
+          "start": 186,
+          "end": 196
+        },
+        {
+          "term": "Nemenyiの臨界差分析",
+          "definition": "Friedman検定後の多重比較手法。",
+          "start": 197,
+          "end": 210
+        },
+        {
+          "term": "BCI",
+          "definition": "脳波で外部機器を操作する技術。",
+          "start": 344,
+          "end": 347
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "MOABB",
+          "definition": "BCIベンチマークのためのフレームワーク。",
+          "start": 6,
+          "end": 11
+        },
+        {
+          "term": "デコーディング",
+          "definition": "脳波信号から意図を読み取る処理。",
+          "start": 86,
+          "end": 93
+        },
+        {
+          "term": "Friedman検定",
+          "definition": "複数グループの順位を比較する統計手法。",
+          "start": 186,
+          "end": 196
+        },
+        {
+          "term": "Nemenyiの臨界差分析",
+          "definition": "Friedman検定後の多重比較手法。",
+          "start": 197,
+          "end": 210
+        },
+        {
+          "term": "BCI",
+          "definition": "脳波で外部機器を操作する技術。",
+          "start": 344,
+          "end": 347
+        }
+      ],
+      "agriEconRelevance": "この研究の「万能な方法はない、個別最適化が重要」という知見は、農業経済学にも応用可能です。例えば、スマート農業におけるデータ駆動型意思決定において、画一的なAIモデルやアルゴリズムを導入するのではなく、個々の農場の土壌、気候、作物、経営者のスキルレベルといった多様な特性に合わせたカスタマイズされたソリューションが、収益性や持続可能性を最大化する上で不可欠であるという示唆を与えます。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 239,
+      "keyFigure": {
+        "imagePath": "/figures/2606.24394_results.png",
+        "page": 8,
+        "caption": "PhysionetMIデータセットにおけるBCIデコーダの全体的な勝者を示しています。",
+        "label": "Fig. 4). On PhysionetMI, the overall winner (cov-tgsp) was the",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-24T23:07:15.327Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.24394_results.png",
+          "page": 8,
+          "caption": "PhysionetMIデータセットにおけるBCIデコーダの全体的な勝者を示しています。",
+          "label": "Fig. 4). On PhysionetMI, the overall winner (cov-tgsp) was the",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-24T23:07:15.327Z"
+        },
+        {
+          "imagePath": "/figures/2606.24394_why.png",
+          "page": 6,
+          "caption": "ベンチマークのサイズの内訳を示しており、多様なデータセットの必要性を裏付けています。",
+          "label": "Table 1: Decomposition of the benchmark size.",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-24T23:07:15.327Z"
+        }
+      ]
+    }
+  ]
+}

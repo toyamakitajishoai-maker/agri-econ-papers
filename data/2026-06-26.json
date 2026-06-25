@@ -1,0 +1,1026 @@
+{
+  "date": "2026-06-26",
+  "papers": [
+    {
+      "id": "2606.25584v1",
+      "title": "ML-MAWS: Alignment-Free Maximum Likelihood Phylogeny Estimation Using Minimal Absent Words",
+      "authors": [
+        "Papri Saha",
+        "Sudipta Kumar Das",
+        "Anonnya Sarkar and",
+        "Md. Manzurul Hasan"
+      ],
+      "publishedAt": "2026-06-24T08:56:31Z",
+      "url": "https://arxiv.org/abs/2606.25584v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.25584v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "q-bio.PE"
+      ],
+      "abstract": "Alignment-free methods in phylogenetic tree construction have major benefits in computational efficiency over alignment-based methods, but most sacrifice sequence information to pairwise distances, losing the statistical power of maximum likelihood (ML) inference. We describe ML-MAWS, an algorithm that fills this gap by encoding Minimal Absent Words (MAWs) as a binary presence/absence character matrix and estimating using an ML tree under the Lewis Mkv model using ascertainment bias correction. MAWs are obtained in linear time through the traversal of a suffix automaton. Three new elements contribute to the phylogenetic signal: strand-aware filtering combines forward and reverse complement MAW sets to eliminate compositional artifacts; entropy-based multi-length selection uses Shannon entropy maximization to select the most informative lengths of MAWs; and parsimony-informative character capping only retains the most discriminative columns. We tested ML-MAWS on 14 benchmark datasets of bacterial, mitochondrial, viral, and simulated genomes with normalized Robinson Foulds distances and matching split distances, against published reference trees. The results show that the coarse binary encoding of MAWs can lead to higher topological errors than continuous-valued distance baselines, while ML-MAWS can successfully recover near-correct splits and can uniquely provide per-branch statistical confidence as well as a rigorous probabilistic framework that is lacking in these methods.",
+      "summary": {
+        "gist": "ゲノム配列データを用いた系統樹の再構築は、進化のつながり、疾患発生の監視、機能ゲノミクスを理解するための重要な計算生物学の問題です。従来の系統樹作成法は、多重配列アライメント（MSA）を前提としており、非常に正確ですが、MSAの計算は時間とメモリを大量に消費し、特に全ゲノムシーケンスデータが増加するにつれて計算上のボトルネックとなっています。アライメントフリー（AF）技術は、明示的な配列アライメントを回避する魅力的な代替手段として登場しましたが、その多くはヒューリスティックな距離関数に基づいており、統計的な根拠に欠け、最尤法やベイズ法に比べて精度が低いという課題がありました。",
+        "novelty": "従来の系統樹作成では、まず遺伝子配列をきれいに並べ替える「アライメント」が必要でした。これは計算に時間がかかり、特に大量のゲノムデータではボトルネックに。アライメント不要な手法もありましたが、統計的な厳密さに欠け、信頼性が低いという課題がありました。 この研究では、遺伝子配列に「最小不在単語（MAW）」という特徴を見つけ、それを「あるかないか」のシンプルな情報に変換。この情報を最尤法で解析することで、アライメントなしで高速かつ統計的に信頼性の高い系統樹を推定できるようになりました。",
+        "method": "本研究では、ML-MAWSという新しいアルゴリズムを提案します。これは、Minimal Absent Words (MAWs)をバイナリの有無を示す特徴行列としてエンコードし、Lewis Mkvモデルの下で最尤系統樹を推定します。MAWはサフィックスオートマトンを辿ることで線形時間で取得されます。系統学的シグナルに寄与する3つの新しい要素があります。1つ目は、ストランド認識フィルタリングで、フォワードおよびリバース相補MAWセットを組み合わせて組成アーティファクトを除去します。2つ目は、エントロピーベースのマルチレングス選択で、シャノンエントロピー最大化を用いて最も情報量の多いMAWの長さを選択します。3つ目は、パーシモニー情報量のある文字のキャッピングで、最も識別力の高い列のみを保持します。これらの手法により、既存のアライメントフリー手法の課題であった統計的厳密さを克服し、高速かつ信頼性の高い系統樹推定を実現します。",
+        "results": "ML-MAWSは、細菌、ミトコンドリア、ウイルス、シミュレートされたゲノムの14のベンチマークデータセットでテストされました。正規化Robinson Foulds距離（nRF）とMatching Split距離（MSD）を用いて、公開されている参照系統樹と比較しました。結果として、ML-MAWSは、特にFish mtDNAデータセットでnRF=0.182、平均ブートストラップ支持率96.9%という優れた性能を示しました。これは、既存のアライメントフリー手法と同等かそれ以上の高品質な系統樹を作成できることを示しています。また、ML-MAWSは、他の手法では提供できない枝ごとの統計的信頼度や、厳密な確率論的フレームワークを提供できるという独自の利点も示しました。計算効率も高く、小規模なウイルスゲノムやミトコンドリアゲノムでは30秒未満でパイプライン全体が完了しました。",
+        "why": "ML-MAWSが高い性能を示す理由は、MAWのバイナリエンコーディングと最尤推定の組み合わせにあります。MAWは配列の「不在」という特性から、進化的に情報量の多い特徴を捉えます。これをバイナリ（有無）で表現することで、計算を効率化しつつ、最尤法という統計的に厳密なフレームワークで解析できます。ストランド認識フィルタリングは、DNAの二本鎖構造に起因するノイズを除去し、真の系統学的シグナルを強調します。エントロピーベースの選択は、情報量の多いMAWの長さを自動で選び、パーシモニー情報量のある文字のキャッピングは、大規模ゲノムから最も識別力の高い特徴だけを残すことで、計算の実行可能性と精度を両立させます。これにより、粗いバイナリエンコーディングでも、近接した分岐を正確に回復し、枝ごとの統計的信頼度を算出できるようになります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.PE）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "bioinformatics",
+      "arxivPrimary": "q-bio.PE",
+      "titleJa": "ML-MAWS: 最小不在単語を用いたアライメントフリー最尤系統樹推定",
+      "catchTitle": "遺伝子の系図を高速・高精度に！",
+      "hook": "あなたは、生物の進化の歴史や感染症の広がりを、もっと速く、もっと正確に知りたいと思ったことはありませんか？",
+      "background": "ゲノム配列データを用いた系統樹の再構築は、進化のつながり、疾患発生の監視、機能ゲノミクスを理解するための重要な計算生物学の問題です。従来の系統樹作成法は、多重配列アライメント（MSA）を前提としており、非常に正確ですが、MSAの計算は時間とメモリを大量に消費し、特に全ゲノムシーケンスデータが増加するにつれて計算上のボトルネックとなっています。アライメントフリー（AF）技術は、明示的な配列アライメントを回避する魅力的な代替手段として登場しましたが、その多くはヒューリスティックな距離関数に基づいており、統計的な根拠に欠け、最尤法やベイズ法に比べて精度が低いという課題がありました。",
+      "quiz": {
+        "question": "ML-MAWSが従来の系統樹作成法に比べて優れている点は何ですか？",
+        "options": [
+          "アライメントが不要で計算が高速であること。",
+          "統計的な信頼度（枝ごとのブートストラップ支持率）を提供できること。",
+          "遺伝子配列の「最小不在単語」という特徴を利用していること。"
+        ],
+        "correctIndex": 2,
+        "explanation": "ML-MAWSは、アライメントフリーであることによる計算速度の向上、最小不在単語の利用、そして最尤法に基づく統計的信頼度の提供という、複数の点で従来の課題を克服しています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "系統樹",
+          "definition": "生物の進化的な関係を図で示したもの"
+        },
+        {
+          "term": "Minimal Absent Words",
+          "definition": "ある配列にはないが、その部分配列は全てある単語"
+        },
+        {
+          "term": "最尤系統樹",
+          "definition": "観測データから最も確率の高い系統樹を推定"
+        },
+        {
+          "term": "サフィックスオートマトン",
+          "definition": "文字列の全ての接尾辞を効率的に表現するデータ構造"
+        },
+        {
+          "term": "ストランド認識フィルタリング",
+          "definition": "DNAの二本鎖の特性を考慮してノイズを除去"
+        },
+        {
+          "term": "シャノンエントロピー",
+          "definition": "情報量の不確かさを測る指標"
+        },
+        {
+          "term": "パーシモニー情報量",
+          "definition": "系統樹の分岐を説明するのに必要な最小の変化数"
+        },
+        {
+          "term": "バイナリエンコーディング",
+          "definition": "情報を0と1の二値で表現すること"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "遺伝子配列の「最小不在単語」を使い、アライメントなしで高速かつ統計的に信頼できる系統樹を推定する新手法です。",
+      "noveltyContrast": {
+        "before": "従来の系統樹作成では、まず遺伝子配列をきれいに並べ替える「アライメント」が必要でした。これは計算に時間がかかり、特に大量のゲノムデータではボトルネックに。アライメント不要な手法もありましたが、統計的な厳密さに欠け、信頼性が低いという課題がありました。",
+        "after": "この研究では、遺伝子配列に「最小不在単語（MAW）」という特徴を見つけ、それを「あるかないか」のシンプルな情報に変換。この情報を最尤法で解析することで、アライメントなしで高速かつ統計的に信頼性の高い系統樹を推定できるようになりました。"
+      },
+      "analogy": {
+        "title": "畑の土壌分析で品種改良のヒントを見つける",
+        "body": "これは、まるで広大な畑の土壌を分析して、どの作物がその土地で育ちやすいか、どんな品種改良をすればもっと収穫が増えるかを探るようなものです。従来の系統樹作成は、土壌の成分を一つ一つ詳細に調べて完璧なリストを作る（アライメント）作業に似ています。非常に正確ですが、広大な畑全体を調べるには途方もない時間がかかります。一方、この研究は、土壌の中に「特定の栄養素が欠けているか、いないか」というシンプルな情報（最小不在単語の有無）に着目します。このシンプルな情報でも、統計的な手法（最尤法）と組み合わせることで、どの作物がどの土地で進化してきたか、どの品種が近い関係にあるかを、はるかに速く、そして信頼性高く見つけ出すことができるのです。これにより、効率的に最適な品種改良の方向性を見つけ出せるようになります。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "0.182",
+          "label": "Fish mtDNAのnRF距離（低いほど高精度）"
+        },
+        {
+          "value": "96.9%",
+          "label": "Fish mtDNAの平均ブートストラップ支持率（高いほど信頼性）"
+        },
+        {
+          "value": "30秒未満",
+          "label": "小規模ゲノムでの処理時間"
+        }
+      ],
+      "whyYouCare": "この研究は、感染症の発生源を特定したり、新しい病原体の進化を追跡したりする際に、これまでよりもはるかに迅速かつ正確な情報を提供できるようになります。例えば、新型ウイルスの変異株がどこから来て、どのように広がっているのかをリアルタイムに近い速度で把握できれば、公衆衛生対策の意思決定が大きく改善されます。また、農業分野では、作物の品種改良において、遺伝子の多様性や進化的な関係をより深く理解することで、病害に強い品種や収量の多い品種を効率的に開発するための貴重な知見が得られるでしょう。あなたの身近な健康や食料の安全に直結する、画期的な技術と言えます。",
+      "takeawayTalk": "遺伝子の系図を、アライメントなしで高速・高精度に作れるようになったよ！",
+      "bodyText": "本研究では、ML-MAWSという新しいアルゴリズムを提案します。これは、Minimal Absent Words (MAWs)をバイナリの有無を示す特徴行列としてエンコードし、Lewis Mkvモデルの下で最尤系統樹を推定します。MAWはサフィックスオートマトンを辿ることで線形時間で取得されます。系統学的シグナルに寄与する3つの新しい要素があります。1つ目は、ストランド認識フィルタリングで、フォワードおよびリバース相補MAWセットを組み合わせて組成アーティファクトを除去します。2つ目は、エントロピーベースのマルチレングス選択で、シャノンエントロピー最大化を用いて最も情報量の多いMAWの長さを選択します。3つ目は、パーシモニー情報量のある文字のキャッピングで、最も識別力の高い列のみを保持します。これらの手法により、既存のアライメントフリー手法の課題であった統計的厳密さを克服し、高速かつ信頼性の高い系統樹推定を実現します。\n\nML-MAWSが高い性能を示す理由は、MAWのバイナリエンコーディングと最尤推定の組み合わせにあります。MAWは配列の「不在」という特性から、進化的に情報量の多い特徴を捉えます。これをバイナリ（有無）で表現することで、計算を効率化しつつ、最尤法という統計的に厳密なフレームワークで解析できます。ストランド認識フィルタリングは、DNAの二本鎖構造に起因するノイズを除去し、真の系統学的シグナルを強調します。エントロピーベースの選択は、情報量の多いMAWの長さを自動で選び、パーシモニー情報量のある文字のキャッピングは、大規模ゲノムから最も識別力の高い特徴だけを残すことで、計算の実行可能性と精度を両立させます。これにより、粗いバイナリエンコーディングでも、近接した分岐を正確に回復し、枝ごとの統計的信頼度を算出できるようになります。",
+      "bodyGlossary": [
+        {
+          "term": "Minimal Absent Words",
+          "definition": "ある配列にはないが、その部分配列は全てある単語",
+          "start": 36,
+          "end": 56
+        },
+        {
+          "term": "最尤系統樹",
+          "definition": "観測データから最も確率の高い系統樹を推定",
+          "start": 103,
+          "end": 108
+        },
+        {
+          "term": "サフィックスオートマトン",
+          "definition": "文字列の全ての接尾辞を効率的に表現するデータ構造",
+          "start": 119,
+          "end": 131
+        },
+        {
+          "term": "ストランド認識フィルタリング",
+          "definition": "DNAの二本鎖の特性を考慮してノイズを除去",
+          "start": 181,
+          "end": 195
+        },
+        {
+          "term": "シャノンエントロピー",
+          "definition": "情報量の不確かさを測る指標",
+          "start": 267,
+          "end": 277
+        },
+        {
+          "term": "パーシモニー情報量",
+          "definition": "系統樹の分岐を説明するのに必要な最小の変化数",
+          "start": 310,
+          "end": 319
+        },
+        {
+          "term": "バイナリエンコーディング",
+          "definition": "情報を0と1の二値で表現すること",
+          "start": 440,
+          "end": 452
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "Minimal Absent Words",
+          "definition": "ある配列にはないが、その部分配列は全てある単語",
+          "start": 36,
+          "end": 56
+        },
+        {
+          "term": "最尤系統樹",
+          "definition": "観測データから最も確率の高い系統樹を推定",
+          "start": 103,
+          "end": 108
+        },
+        {
+          "term": "サフィックスオートマトン",
+          "definition": "文字列の全ての接尾辞を効率的に表現するデータ構造",
+          "start": 119,
+          "end": 131
+        },
+        {
+          "term": "ストランド認識フィルタリング",
+          "definition": "DNAの二本鎖の特性を考慮してノイズを除去",
+          "start": 181,
+          "end": 195
+        },
+        {
+          "term": "シャノンエントロピー",
+          "definition": "情報量の不確かさを測る指標",
+          "start": 267,
+          "end": 277
+        },
+        {
+          "term": "パーシモニー情報量",
+          "definition": "系統樹の分岐を説明するのに必要な最小の変化数",
+          "start": 310,
+          "end": 319
+        },
+        {
+          "term": "バイナリエンコーディング",
+          "definition": "情報を0と1の二値で表現すること",
+          "start": 440,
+          "end": 452
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 346,
+      "keyFigure": {
+        "imagePath": "/figures/2606.25584v1_results.png",
+        "page": 6,
+        "caption": "ML-MAWSが推定した魚類ミトコンドリアDNAの系統樹で、高いブートストラップ支持率を示しています。",
+        "label": "Fig. 2. ML-MAWS phylogenetic tree for the Fish mtDNA dataset (25 species). Branch labels indicate bootstrap support (%).",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-25T23:17:54.208Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.25584v1_results.png",
+          "page": 6,
+          "caption": "ML-MAWSが推定した魚類ミトコンドリアDNAの系統樹で、高いブートストラップ支持率を示しています。",
+          "label": "Fig. 2. ML-MAWS phylogenetic tree for the Fish mtDNA dataset (25 species). Branch labels indicate bootstrap support (%).",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-25T23:17:54.208Z"
+        },
+        {
+          "imagePath": "/figures/2606.25584v1_why.png",
+          "page": 8,
+          "caption": "ストランド認識フィルタリングの有無が系統樹の精度とブートストラップ支持率に与える影響を比較しています。",
+          "label": "Fig. 5. Ablation study comparing strand-aware (IQ-TREE) and no-strand variants across datasets: (a) nRF, (b) nQD, and (c",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-25T23:17:54.209Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.24319v1",
+      "title": "Spatial accessibility to food banks hinders food parcel uptake in England and Wales, particularly in rural areas",
+      "authors": [
+        "Laura Sheppard",
+        "Carmen Cabrera",
+        "Daphne Badounas",
+        "Bonnie Boyana Buyuklieva",
+        "Sukankana Chakraborty",
+        "Huanfa Chen",
+        "Sarah Wise",
+        "Howard Wong",
+        "Rachael Jones",
+        "Neave O'Clery"
+      ],
+      "publishedAt": "2026-06-23T08:57:23Z",
+      "url": "https://arxiv.org/abs/2606.24319v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.24319v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "econ.GN"
+      ],
+      "abstract": "Food bank use in the UK has soared in recent years. The combination of a global pandemic, over-stretched and underfunded public services, and a cost-of-living crisis has meant that millions of people cannot afford basic essentials such as food, heating, housing, and baby supplies. Food bank use is driven by a complex range of factors, including poverty, health emergencies, income shocks, delays to universal credit payments, housing issues, and homelessness. In this study we identify an urban-rural divide in spatial accessibility to food banks. In cities, food banks tend to be highly accessible by public transport to deprived populations but, on average, have shorter opening hours. In rural areas, however, despite generally longer opening hours, food banks are typically not highly accessible except for the most deprived residents. This matters. We find that spatial accessibility to a Trussell food bank centre is a key predictor of food parcel uptake, with a significantly stronger relationship than factors emphasised in the literature such as disability and Universal Credit. Importantly, this relationship is markedly stronger for rural populations, suggesting an unmet need in deprived rural areas far from food banks. Our work has important implications for food bank policy, suggesting a need for improved public transport in rural areas, and optimising current food bank locations and delivery models.",
+      "summary": {
+        "gist": "英国では近年、フードバンクの利用が急増しており、2023/24年には310万件以上の緊急食料支援が行われました。これはパンデミック、生活費の高騰、公共サービスの不足などが複合的に影響しています。食料不安は個人の労働・学習能力に影響を与え、栄養失調や心身の健康悪化にも繋がります。フードバンクの利用は貧困、健康上の緊急事態、収入の変動など様々な要因によって引き起こされますが、本研究では特にフードバンクへの空間的アクセスに焦点を当てました。",
+        "novelty": "これまで、フードバンクの利用は貧困、健康問題、失業、公的給付の遅延など、個人の経済的・社会的な要因が主な原因だと考えられてきました。都市部ではフードバンクが比較的アクセスしやすい場所に集中しているという研究はありましたが、地方におけるアクセスの実態や、それが利用に与える影響は十分に解明されていませんでした。 この研究では、フードバンクまでの移動時間や距離といった「空間的アクセス」が、障害の有無や公的給付の受給状況といった他の要因よりも、食料支援の利用を強く予測することを発見しました。特に地方では、都市部に比べてフードバンクへのアクセスが悪く、このアクセス格差が食料支援を必要とする人々の利用を妨げていることを明らかにしました。",
+        "method": "イングランドとウェールズの35,726のLSOA（小地域統計単位）を対象に、2021/22年度のTrussellフードバンクの食料支援データを使用しました。各LSOAの中心から最も近いフードバンクまでの距離（キロメートル）と、徒歩、車、公共交通機関での移動時間を計算し、空間的アクセスを測定しました。また、国勢調査データや政府機関のデータから、障害の有無、貧困度、公的給付の受給状況など、フードバンク利用に影響を与える他の要因も収集しました。これらのデータを用いて、多変量回帰モデルを構築し、空間的アクセスと食料支援利用の関係、および都市部と地方での違いを分析しました。変数間の高い相関を緩和するため、段階的回帰分析を採用しました。",
+        "results": "フードバンクへの空間的アクセス（移動時間と距離）は、障害の有無や公的給付の受給状況といった他の要因よりも、食料支援の利用を強く予測する主要な決定要因であることが判明しました。特に地方では、この関係が都市部よりも顕著に強く、地方の住民はフードバンクへのアクセスに対してより敏感であることが示されました。都市部では、貧困度の高い地域ほど公共交通機関でのアクセスが良い傾向にありましたが、地方では最も貧困度の高い住民を除いて、一般的にアクセスが悪いことが明らかになりました。これは、地方の貧困地域において、フードバンクへのアクセス不足による満たされていないニーズが存在することを示唆しています。",
+        "why": "この研究は、食料支援を必要とする人々が、時間、距離、公共交通機関の利用可能性といった物理的な障壁のためにフードバンクにたどり着けない、という根本的なメカニズムを明らかにしました。都市部ではフードバンクが貧困地域に集中し、公共交通機関も比較的発達しているため、アクセスが良い傾向にあります。しかし、地方ではフードバンクの数が少なく、公共交通機関も限られているため、たとえ開所時間が長くても、物理的な距離が利用の大きな障壁となります。このアクセス格差が、食料不安を抱える人々の支援利用を妨げ、結果として食料支援の需要と供給のミスマッチを生み出していると考えられます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "food-security",
+      "arxivPrimary": "econ.GN",
+      "titleJa": "フードバンクへの空間的アクセスが食料支援利用を妨げる：特に地方で顕著",
+      "catchTitle": "地方のフードバンク、遠さが命取り",
+      "hook": "食料支援を必要としているのに、なぜか利用できない人がいるとしたら、あなたはどう思いますか？",
+      "background": "英国では近年、フードバンクの利用が急増しており、2023/24年には310万件以上の緊急食料支援が行われました。これはパンデミック、生活費の高騰、公共サービスの不足などが複合的に影響しています。食料不安は個人の労働・学習能力に影響を与え、栄養失調や心身の健康悪化にも繋がります。フードバンクの利用は貧困、健康上の緊急事態、収入の変動など様々な要因によって引き起こされますが、本研究では特にフードバンクへの空間的アクセスに焦点を当てました。",
+      "quiz": {
+        "question": "この研究で、食料支援の利用を最も強く予測する要因として明らかになったのは何ですか？",
+        "options": [
+          "障害の有無",
+          "公的給付の受給状況",
+          "フードバンクへの空間的アクセス"
+        ],
+        "correctIndex": 2,
+        "explanation": "この研究では、フードバンクへの空間的アクセス（移動時間と距離）が、障害の有無や公的給付の受給状況といった他の要因よりも、食料支援の利用を強く予測する主要な決定要因であることが判明しました。"
+      },
+      "limitations": "本研究はTrussellのデータに焦点を当てており、Trussell以外のフードバンクネットワークや、デリバリーのみのサービスは含まれていません。また、LSOAの中心を居住地として計算しているため、都市部と地方のLSOAの面積の違いが計算に影響を与える可能性があります。さらに、空間的アクセスは「潜在的な」アクセスであり、実際の移動行動を直接推定するものではありません。",
+      "glossary": [
+        {
+          "term": "フードバンク",
+          "definition": "食料を回収し、困窮者に無償で提供する団体"
+        },
+        {
+          "term": "LSOA",
+          "definition": "英国の小地域統計単位（400-1200世帯）"
+        },
+        {
+          "term": "空間的アクセス",
+          "definition": "施設までの移動時間や距離で測る物理的到達性"
+        },
+        {
+          "term": "多変量回帰モデル",
+          "definition": "複数の要因が結果にどう影響するか分析する統計手法"
+        },
+        {
+          "term": "段階的回帰分析",
+          "definition": "変数間の相関を考慮し、モデルを構築する手法"
+        },
+        {
+          "term": "物理的な障壁",
+          "definition": "距離や交通手段など、移動を妨げる要因"
+        },
+        {
+          "term": "アクセス格差",
+          "definition": "地域による施設への到達しやすさの違い"
+        },
+        {
+          "term": "ミスマッチ",
+          "definition": "需要と供給が合致しない状態"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "フードバンクへの物理的なアクセス（距離や交通手段）が、食料支援の利用を左右する最も重要な要因であり、特に地方でその影響が大きいことが判明しました。",
+      "noveltyContrast": {
+        "before": "これまで、フードバンクの利用は貧困、健康問題、失業、公的給付の遅延など、個人の経済的・社会的な要因が主な原因だと考えられてきました。都市部ではフードバンクが比較的アクセスしやすい場所に集中しているという研究はありましたが、地方におけるアクセスの実態や、それが利用に与える影響は十分に解明されていませんでした。",
+        "after": "この研究では、フードバンクまでの移動時間や距離といった「空間的アクセス」が、障害の有無や公的給付の受給状況といった他の要因よりも、食料支援の利用を強く予測することを発見しました。特に地方では、都市部に比べてフードバンクへのアクセスが悪く、このアクセス格差が食料支援を必要とする人々の利用を妨げていることを明らかにしました。"
+      },
+      "analogy": {
+        "title": "豊作の畑と遠い市場",
+        "body": "これはまるで、農家が丹精込めて育てた作物が豊作なのに、それを売る市場が遠すぎて、運ぶ手段も時間もないために、せっかくの収穫が消費者に届かないようなものです。食料支援を必要とする人々が「消費者」、フードバンクが「市場」、食料が「作物」、そして交通手段や距離が「運搬経路」に当たります。市場が遠すぎたり、運搬経路が整備されていなかったりすれば、どんなに良い作物が市場にあっても、消費者の手には届きません。この研究は、地方では特にこの「運搬経路」が不足しているために、食料支援という「作物」が、本当に必要としている人々に届いていない現状を明らかにしています。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+3.2pt",
+          "label": "アクセシビリティが食料支援利用に与える影響の強さ（相対値）"
+        }
+      ],
+      "whyYouCare": "この研究は、食料支援の現場や政策立案に携わる方々にとって非常に重要です。これまで、食料不安の解決策は経済的支援や情報提供に偏りがちでしたが、物理的なアクセスの改善が喫緊の課題であることが示されました。地方の公共交通機関の整備、フードバンクの最適な配置、移動支援やデリバリーモデルの導入など、具体的な対策を検討する上で貴重な知見となります。また、私たち一人ひとりが地域のフードバンクの現状に関心を持ち、ボランティアや寄付を通じて、移動手段の確保や拠点運営を支援することも、食料不安の解消に繋がるかもしれません。",
+      "takeawayTalk": "地方ではフードバンクが遠すぎて、食料支援が必要な人に届いてないらしいよ。",
+      "bodyText": "イングランドとウェールズの35,726のLSOA（小地域統計単位）を対象に、2021/22年度のTrussellフードバンクの食料支援データを使用しました。各LSOAの中心から最も近いフードバンクまでの距離（キロメートル）と、徒歩、車、公共交通機関での移動時間を計算し、空間的アクセスを測定しました。また、国勢調査データや政府機関のデータから、障害の有無、貧困度、公的給付の受給状況など、フードバンク利用に影響を与える他の要因も収集しました。これらのデータを用いて、多変量回帰モデルを構築し、空間的アクセスと食料支援利用の関係、および都市部と地方での違いを分析しました。変数間の高い相関を緩和するため、段階的回帰分析を採用しました。\n\nこの研究は、食料支援を必要とする人々が、時間、距離、公共交通機関の利用可能性といった物理的な障壁のためにフードバンクにたどり着けない、という根本的なメカニズムを明らかにしました。都市部ではフードバンクが貧困地域に集中し、公共交通機関も比較的発達しているため、アクセスが良い傾向にあります。しかし、地方ではフードバンクの数が少なく、公共交通機関も限られているため、たとえ開所時間が長くても、物理的な距離が利用の大きな障壁となります。このアクセス格差が、食料不安を抱える人々の支援利用を妨げ、結果として食料支援の需要と供給のミスマッチを生み出していると考えられます。",
+      "bodyGlossary": [
+        {
+          "term": "LSOA",
+          "definition": "英国の小地域統計単位（400-1200世帯）",
+          "start": 20,
+          "end": 24
+        },
+        {
+          "term": "フードバンク",
+          "definition": "食料を回収し、困窮者に無償で提供する団体",
+          "start": 56,
+          "end": 62
+        },
+        {
+          "term": "空間的アクセス",
+          "definition": "施設までの移動時間や距離で測る物理的到達性",
+          "start": 135,
+          "end": 142
+        },
+        {
+          "term": "多変量回帰モデル",
+          "definition": "複数の要因が結果にどう影響するか分析する統計手法",
+          "start": 233,
+          "end": 241
+        },
+        {
+          "term": "段階的回帰分析",
+          "definition": "変数間の相関を考慮し、モデルを構築する手法",
+          "start": 301,
+          "end": 308
+        },
+        {
+          "term": "物理的な障壁",
+          "definition": "距離や交通手段など、移動を妨げる要因",
+          "start": 360,
+          "end": 366
+        },
+        {
+          "term": "アクセス格差",
+          "definition": "地域による施設への到達しやすさの違い",
+          "start": 535,
+          "end": 541
+        },
+        {
+          "term": "ミスマッチ",
+          "definition": "需要と供給が合致しない状態",
+          "start": 578,
+          "end": 583
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "LSOA",
+          "definition": "英国の小地域統計単位（400-1200世帯）",
+          "start": 20,
+          "end": 24
+        },
+        {
+          "term": "フードバンク",
+          "definition": "食料を回収し、困窮者に無償で提供する団体",
+          "start": 56,
+          "end": 62
+        },
+        {
+          "term": "空間的アクセス",
+          "definition": "施設までの移動時間や距離で測る物理的到達性",
+          "start": 135,
+          "end": 142
+        },
+        {
+          "term": "多変量回帰モデル",
+          "definition": "複数の要因が結果にどう影響するか分析する統計手法",
+          "start": 233,
+          "end": 241
+        },
+        {
+          "term": "段階的回帰分析",
+          "definition": "変数間の相関を考慮し、モデルを構築する手法",
+          "start": 301,
+          "end": 308
+        },
+        {
+          "term": "物理的な障壁",
+          "definition": "距離や交通手段など、移動を妨げる要因",
+          "start": 360,
+          "end": 366
+        },
+        {
+          "term": "アクセス格差",
+          "definition": "地域による施設への到達しやすさの違い",
+          "start": 535,
+          "end": 541
+        },
+        {
+          "term": "ミスマッチ",
+          "definition": "需要と供給が合致しない状態",
+          "start": 578,
+          "end": 583
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 287,
+      "keyFigure": {
+        "imagePath": "/figures/2606.24319v1_results.png",
+        "page": 20,
+        "caption": "フードバンク利用を予測する要因間の相関関係を示しています。",
+        "label": "Figure 5: Pairwise correlation plot for predictor variables for food bank use. Food parcels per thousand",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-25T23:17:57.749Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.24319v1_results.png",
+          "page": 20,
+          "caption": "フードバンク利用を予測する要因間の相関関係を示しています。",
+          "label": "Figure 5: Pairwise correlation plot for predictor variables for food bank use. Food parcels per thousand",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-25T23:17:57.749Z"
+        },
+        {
+          "imagePath": "/figures/2606.24319v1_why.png",
+          "page": 9,
+          "caption": "フードバンクにアクセスできない地域の広がりを示しています。",
+          "label": "Figure 3: [A] We observe significant holes in which neither a Trussell or IFAN food bank is accessible within",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-25T23:17:57.750Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.24415v1",
+      "title": "Novel Triple-Based Problems for the Construction of Phylogenetic Networks via Least Common Ancestors",
+      "authors": [
+        "Patricia A. Ebert",
+        "Anna Lindeberg",
+        "Marc Hellmuth"
+      ],
+      "publishedAt": "2026-06-23T10:52:25Z",
+      "url": "https://arxiv.org/abs/2606.24415v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.24415v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "cs.DM",
+        "q-bio.PE"
+      ],
+      "abstract": "Evolutionary histories are often represented by rooted phylogenetic networks, whose leaves correspond to extant taxa and whose internal vertices represent ancestral lineages. Since such histories must usually be inferred from incomplete data, in particular from genomic sequences of present-day taxa, one often obtains only local information about relative evolutionary proximity. For instance, sequence data may suggest that two taxa $x$ and $y$ are more closely related to each other than either is to a third taxon $z$. This information is classically encoded by a rooted triple $xy|z$. In this paper, we study rooted triples in phylogenetic networks under an ancestor-based interpretation: $xy|z$ is displayed if the unique least common ancestor (LCA) of $x$ and $y$ lies strictly below the unique LCA of $x$ and $z$, respectively of $y$ and $z$, and the latter two LCAs coincide. We also introduce anchored triples $\\underline{x}y|z$, which retain only the asymmetric comparison that the LCA of $x$ and $y$ lies below the LCA of $x$ and $z$. This relaxation is natural in networks, where different pairwise ancestral relationships need not behave as they do in trees. We consider several variants of consistency problems for ordinary and anchored triples, both with and without forbidden triples. Somewhat surprisingly, these ancestor-based consistency questions for triples in phylogenetic networks do not appear to have been addressed before despite their direct biological interpretation and the fact that such constraints can be inferred naturally from genomic sequence data. By translating these questions into realization problems for required and forbidden LCA-constraints, we show that all resulting problems can be solved in polynomial time. Moreover, whenever a solution exists, a suitable realizing DAG and phylogenetic network can be constructed within the same time bound.",
+      "summary": {
+        "gist": "生物の進化の歴史は、しばしば系統樹で表現されますが、遺伝子水平伝播や交雑のような現象は、枝が合流する「系統ネットワーク」でなければ適切に表現できません。系統ネットワークの構築には、3つの生物種間の相対的な近縁度を示す「トリプル」という情報がよく使われます。しかし、ネットワークにおけるトリプルの解釈には複数の方法があり、特に「トポロジー的表示」という従来の解釈では、多くのトリプルを表現できるものの、情報量の少ないネットワークしか得られない、あるいは計算が非常に困難になるという問題がありました。",
+        "novelty": "従来の系統ネットワーク構築では、3つの生物間の相対的な近縁度を示す「トリプル」という情報を使っていましたが、その解釈が曖昧で、特に複雑な進化（遺伝子水平伝播など）を表現するネットワークでは、情報が不十分になることがありました。結果として、多くのトリプルを表現できるが、あまり情報量の多くないネットワークしか作れない、あるいは計算が非常に困難になるという課題がありました。 この論文では、トリプルを「最小共通祖先（LCA）」の相対的な深さで定義し直すことで、より生物学的な意味合いが強く、かつ計算しやすい新しいトリプル（通常のトリプルとアンカー付きトリプル）を導入しました。これにより、複雑な進化を示すネットワークでも、与えられたトリプル情報と矛盾しないネットワークを多項式時間で効率的に構築できることを示しました。",
+        "method": "本研究では、トリプルの解釈を「最小共通祖先（LCA）」の相対的な深さに基づいて再定義しました。具体的には、3つの生物種x, y, zについて、xとyのLCAがxとzのLCA、およびyとzのLCAよりも厳密に浅く、かつ後者2つのLCAが一致する場合に「通常のトリプルxy|zが表示される」と定義しました（T1）。さらに、この条件を緩和し、xとyのLCAがxとzのLCAよりも厳密に浅いという非対称な比較のみを保持する「アンカー付きトリプルx_y|z」を導入しました。これらの新しいトリプルの定義に基づき、「与えられたトリプル集合（必須および禁止）と矛盾しない系統ネットワーク（またはDAG）が存在するか」という一連の整合性問題を定式化しました。そして、これらの問題を、既存のLCA制約の実現問題に変換することで、全て多項式時間で解けることを示し、そのようなネットワークが存在する場合には実際に構築できるアルゴリズムを提案しました。",
+        "results": "本研究により、LCAに基づく通常のトリプルおよびアンカー付きトリプルの整合性問題（必須トリプルのみ、必須と禁止トリプル、さらにLCAの明確性を要求する強化版を含む）が、すべて多項式時間で解決可能であることが示されました。これは、与えられたトリプル情報と矛盾しない系統ネットワークを効率的に構築できることを意味します。特に、従来のトポロジー的表示に基づく問題がNP困難であったのに対し、LCAに基づく解釈では効率的なアルゴリズムが存在することが明らかになりました。",
+        "why": "この効率的な解決は、トリプルの整合性問題を「LCA制約の実現問題」へと変換できるためです。LCA制約の実現問題とは、特定の生物種ペア間のLCAの相対的な深さ（どちらがより最近の共通祖先を持つか、あるいは同じか）に関する要件（必須および禁止）を満たすDAGが存在するかどうかを決定する問題です。先行研究で、このLCA制約の実現問題が多項式時間で解けることが示されており、本研究の新しいトリプル定義がこの枠組みに適合することで、同様に効率的な解決が可能となりました。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.DM）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "bioinformatics",
+      "arxivPrimary": "cs.DM",
+      "titleJa": "最小共通祖先に基づく系統ネットワーク構築のための新しいトリプル問題",
+      "catchTitle": "進化の謎を解く！祖先情報で系統図を精密化",
+      "hook": "あなたの家系図、実は複雑な「再婚」や「養子縁組」があったらどうしますか？生物の進化も、単純な枝分かれだけではありません。",
+      "background": "生物の進化の歴史は、しばしば系統樹で表現されますが、遺伝子水平伝播や交雑のような現象は、枝が合流する「系統ネットワーク」でなければ適切に表現できません。系統ネットワークの構築には、3つの生物種間の相対的な近縁度を示す「トリプル」という情報がよく使われます。しかし、ネットワークにおけるトリプルの解釈には複数の方法があり、特に「トポロジー的表示」という従来の解釈では、多くのトリプルを表現できるものの、情報量の少ないネットワークしか得られない、あるいは計算が非常に困難になるという問題がありました。",
+      "quiz": {
+        "question": "この研究で導入された「LCAに基づくトリプル」の主な利点は何ですか？",
+        "options": [
+          "計算が非常に複雑になるが、より正確なネットワークが得られる。",
+          "従来の解釈よりも生物学的な意味合いが強く、効率的にネットワークを構築できる。",
+          "どんなに複雑な進化でも、常に唯一の最適なネットワークが構築できる。"
+        ],
+        "correctIndex": 1,
+        "explanation": "LCAに基づくトリプルは、生物学的な意味合いが強く、かつ多項式時間で効率的にネットワークを構築できる点が大きな利点です。従来のトポロジー的表示では、計算がNP困難になる場合がありました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "系統ネットワーク",
+          "definition": "生物の進化を、枝分かれだけでなく合流も含むグラフで表現したもの。"
+        },
+        {
+          "term": "トリプル",
+          "definition": "3つの生物種間の相対的な近縁度を示す情報。"
+        },
+        {
+          "term": "最小共通祖先（LCA）",
+          "definition": "2つの生物種の最も近い共通の祖先。"
+        },
+        {
+          "term": "多項式時間",
+          "definition": "問題の規模に対して計算時間が効率的に増大する。"
+        },
+        {
+          "term": "DAG",
+          "definition": "有向非巡回グラフ。サイクルを含まない有向グラフ。"
+        },
+        {
+          "term": "LCA制約の実現問題",
+          "definition": "LCAの相対関係を満たすグラフが存在するかを問う問題。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "生物の複雑な進化経路を、祖先の関係性を示す「トリプル」という情報から効率的に構築する新しい手法を開発しました。",
+      "noveltyContrast": {
+        "before": "従来の系統ネットワーク構築では、3つの生物間の相対的な近縁度を示す「トリプル」という情報を使っていましたが、その解釈が曖昧で、特に複雑な進化（遺伝子水平伝播など）を表現するネットワークでは、情報が不十分になることがありました。結果として、多くのトリプルを表現できるが、あまり情報量の多くないネットワークしか作れない、あるいは計算が非常に困難になるという課題がありました。",
+        "after": "この論文では、トリプルを「最小共通祖先（LCA）」の相対的な深さで定義し直すことで、より生物学的な意味合いが強く、かつ計算しやすい新しいトリプル（通常のトリプルとアンカー付きトリプル）を導入しました。これにより、複雑な進化を示すネットワークでも、与えられたトリプル情報と矛盾しないネットワークを多項式時間で効率的に構築できることを示しました。"
+      },
+      "analogy": {
+        "title": "畑の土壌改良で収穫量を最大化する",
+        "body": "これは、まるで「畑の土壌改良」のようなものです。従来、農家は作物の生育状況（葉の色や丈）を見て、肥料の種類や量を決めていました。しかし、これだけでは土壌の奥深くにある栄養素のバランスや微生物の状態までは分かりません。この研究は、土壌の深さごとの成分分析（LCAに基づくトリプル）を行うことで、表面的な生育状況だけでなく、根の張り方や養分の吸収経路といった「土壌の内部構造」をより正確に把握し、それに基づいて最適な土壌改良計画（系統ネットワーク）を効率的に立て、最終的な収穫量（情報量豊かなネットワーク）を最大化するようなものです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、生物の進化の歴史をより正確に、そして効率的に解き明かすための強力なツールを提供します。例えば、新しい品種の作物開発において、どの祖先系統がどのように交雑して現在の品種が生まれたのかを詳細に理解することは、育種戦略を立てる上で非常に重要です。また、病原菌の進化経路を追跡することで、薬剤耐性の獲得メカニズムや感染拡大のパターンを予測し、対策を講じることにも役立ちます。さらに、私たちの祖先がどのように地球上に多様な生物を生み出してきたのか、その壮大な物語をより鮮明に描き出す基礎研究としても、非常に意義深い発見と言えるでしょう。",
+      "takeawayTalk": "複雑な進化も、祖先の関係性から効率的に解き明かせるようになったよ！",
+      "bodyText": "本研究では、トリプルの解釈を「最小共通祖先（LCA）」の相対的な深さに基づいて再定義しました。具体的には、3つの生物種x, y, zについて、xとyのLCAがxとzのLCA、およびyとzのLCAよりも厳密に浅く、かつ後者2つのLCAが一致する場合に「通常のトリプルxy|zが表示される」と定義しました（T1）。さらに、この条件を緩和し、xとyのLCAがxとzのLCAよりも厳密に浅いという非対称な比較のみを保持する「アンカー付きトリプルx_y|z」を導入しました。これらの新しいトリプルの定義に基づき、「与えられたトリプル集合（必須および禁止）と矛盾しない系統ネットワーク（またはDAG）が存在するか」という一連の整合性問題を定式化しました。そして、これらの問題を、既存のLCA制約の実現問題に変換することで、全て多項式時間で解けることを示し、そのようなネットワークが存在する場合には実際に構築できるアルゴリズムを提案しました。\n\nこの効率的な解決は、トリプルの整合性問題を「LCA制約の実現問題」へと変換できるためです。LCA制約の実現問題とは、特定の生物種ペア間のLCAの相対的な深さ（どちらがより最近の共通祖先を持つか、あるいは同じか）に関する要件（必須および禁止）を満たすDAGが存在するかどうかを決定する問題です。先行研究で、このLCA制約の実現問題が多項式時間で解けることが示されており、本研究の新しいトリプル定義がこの枠組みに適合することで、同様に効率的な解決が可能となりました。",
+      "bodyGlossary": [
+        {
+          "term": "トリプル",
+          "definition": "3つの生物種間の相対的な近縁度を示す情報。",
+          "start": 6,
+          "end": 10
+        },
+        {
+          "term": "最小共通祖先（LCA）",
+          "definition": "2つの生物種の最も近い共通の祖先。",
+          "start": 15,
+          "end": 26
+        },
+        {
+          "term": "系統ネットワーク",
+          "definition": "生物の進化を、枝分かれだけでなく合流も含むグラフで表現したもの。",
+          "start": 278,
+          "end": 286
+        },
+        {
+          "term": "DAG",
+          "definition": "有向非巡回グラフ。サイクルを含まない有向グラフ。",
+          "start": 290,
+          "end": 293
+        },
+        {
+          "term": "LCA制約の実現問題",
+          "definition": "LCAの相対関係を満たすグラフが存在するかを問う問題。",
+          "start": 336,
+          "end": 346
+        },
+        {
+          "term": "多項式時間",
+          "definition": "問題の規模に対して計算時間が効率的に増大する。",
+          "start": 357,
+          "end": 362
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "トリプル",
+          "definition": "3つの生物種間の相対的な近縁度を示す情報。",
+          "start": 6,
+          "end": 10
+        },
+        {
+          "term": "最小共通祖先（LCA）",
+          "definition": "2つの生物種の最も近い共通の祖先。",
+          "start": 15,
+          "end": 26
+        },
+        {
+          "term": "系統ネットワーク",
+          "definition": "生物の進化を、枝分かれだけでなく合流も含むグラフで表現したもの。",
+          "start": 278,
+          "end": 286
+        },
+        {
+          "term": "DAG",
+          "definition": "有向非巡回グラフ。サイクルを含まない有向グラフ。",
+          "start": 290,
+          "end": 293
+        },
+        {
+          "term": "LCA制約の実現問題",
+          "definition": "LCAの相対関係を満たすグラフが存在するかを問う問題。",
+          "start": 336,
+          "end": 346
+        },
+        {
+          "term": "多項式時間",
+          "definition": "問題の規模に対して計算時間が効率的に増大する。",
+          "start": 357,
+          "end": 362
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 294
+    },
+    {
+      "id": "2606.25910v1",
+      "title": "Restoring Incentive Compatibility in Two-Stage Energy Markets with Prosumers",
+      "authors": [
+        "Nikolas Koumpis",
+        "Koushik Kar",
+        "Leandros Tassiulas",
+        "Manolis Zampetakis"
+      ],
+      "publishedAt": "2026-06-24T14:56:51Z",
+      "url": "https://arxiv.org/abs/2606.25910v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.25910v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "cs.GT",
+        "econ.GN"
+      ],
+      "abstract": "A central challenge in modern energy market design is the formulation of a strategy-proof imbalance settlement layer that secures both the economic efficiency of the institution and the stability of the power grid. Public data reveals that the day-ahead market is strategically biased below actual consumer demand. Such empirical observations are explained by active prosumers which provide implementable incentives for demand under-reporting. Active prosumers buy energy in the day-ahead market and sell energy in the real-time market for balancing real-time energy deviations. By under-reporting their demand for the day ahead they inflate real-time imbalances and, under uniform pricing, they dispatch their generation assets more profitably. We model the two-stage institution under linear preferences and benchmark it against its associated competitive equilibria. We show that although consumers' incentives for demand under-reporting vanish when the day-ahead market scales, prosumers' incentives remain lower bounded by a positive gain which depends only on the real-time market generation stack and their shares over it. To restore incentive compatibility under the existing informational constraints, we design a leave-one-out contrastive scoring rule-based penalty that is implemented by the day-ahead market operator, incentivizes prosumers to report their demand truthfully and ensures small charges when participating honestly. We illustrate these results with numerical simulations on synthetic data and evaluate our mechanism on real-market data by first rationalizing demand reports as subjective equilibria of the induced game. Our mechanism demonstrates strong incentive alignment while retaining a low cost for honest participation.",
+      "summary": {
+        "gist": "現代の電力市場では、電力の安定供給と経済効率の両立が課題です。特に、電力の生産者と消費者両方の役割を果たす「プロシューマー」の増加により、市場のインセンティブ設計が複雑化しています。欧州の電力市場データでは、前日市場における電力需要の過少報告が常態化しており、これが市場の非効率性や社会的なコスト増大につながっていることが明らかになっています。",
+        "novelty": "従来の電力市場では、翌日の電力需要を予測し、それに合わせて発電量を計画する「前日市場」と、実際の需給のズレを調整する「リアルタイム市場」がありました。しかし、電力の生産者と消費者両方の顔を持つ「プロシューマー」は、前日市場で需要を過少報告することで、リアルタイム市場でより有利に発電・売電できるインセンティブがありました。これにより、市場全体の効率が低下し、社会的なコストが増大していました。 この研究では、プロシューマーが電力需要を正直に報告するインセンティブを回復させる新しいペナルティ制度を設計しました。前日市場の運営者が、報告された需要と実際の消費量、過去のデータに基づいて「スコアリングルール」に基づく追加料金を課すことで、過少報告による利益を打ち消します。これにより、市場の効率性が向上し、正直な参加者への負担も最小限に抑えられます。",
+        "method": "本研究では、前日市場とリアルタイム市場からなる二段階電力市場を線形選好モデルで構築し、競争均衡と比較しました。まず、需要家（消費者）とプロシューマー（消費者兼生産者）が電力需要を過少報告するインセンティブを理論的に分析しました。次に、既存の制度的・情報的制約を尊重しつつ、前日市場の運営者が実施可能な「leave-one-out対照スコアリングルール」に基づくペナルティメカニズムを設計しました。このメカニズムは、プロシューマーの請求書に追加される形で適用され、正直な需要報告を促します。最後に、合成データを用いた数値シミュレーションと、実際の市場データを用いた評価により、提案メカニズムの有効性を検証しました。",
+        "results": "理論分析により、需要家は市場規模が大きくなるにつれて過少報告のインセンティブが消失する一方で、プロシューマーの過少報告インセンティブは、リアルタイム市場の発電構成とプロシューマーのシェアに依存する正の値で下限が設定され、市場規模に依存しないことが示されました。提案されたスコアリングルールに基づくペナルティメカニズムは、適切なパラメータ設定により、プロシューマーの過少報告による利益を打ち消し、正直な報告を促すことが証明されました。また、正直な参加者へのコストも最小限に抑えられるトレードオフ関係が特定されました。シミュレーションと実データ評価により、このメカニズムが強いインセンティブ整合性を示し、正直な参加コストを低く維持できることが実証されました。",
+        "why": "プロシューマーが前日市場で需要を過少報告する主な理由は、リアルタイム市場での価格変動を利用して利益を得るためです。前日市場で需要を少なく報告すると、翌日のリアルタイム市場で電力不足が発生しやすくなり、その結果、電力価格が高騰します。プロシューマーは、この高騰した価格で自身の発電した電力を売却することで、より大きな利益を得ることができます。本研究で提案されたスコアリングルールに基づくペナルティは、この過少報告による期待利益を相殺するように設計されています。具体的には、報告された需要と実際の消費量の乖離が大きいほどペナルティが大きくなるため、プロシューマーは正直に報告する方が経済的に有利になるようにインセンティブが再構築されます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.GT）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "market-design",
+      "arxivPrimary": "cs.GT",
+      "titleJa": "プロシューマーがいる二段階電力市場におけるインセンティブ整合性の回復",
+      "catchTitle": "電力市場の「正直者」を増やす新ルール",
+      "hook": "あなたの家が太陽光発電で電気を作り、余った分を売っているとします。電力会社に「明日の電力需要」をどう報告しますか？",
+      "background": "現代の電力市場では、電力の安定供給と経済効率の両立が課題です。特に、電力の生産者と消費者両方の役割を果たす「プロシューマー」の増加により、市場のインセンティブ設計が複雑化しています。欧州の電力市場データでは、前日市場における電力需要の過少報告が常態化しており、これが市場の非効率性や社会的なコスト増大につながっていることが明らかになっています。",
+      "quiz": {
+        "question": "プロシューマーが前日市場で電力需要を過少報告する主な理由は何でしょう？",
+        "options": [
+          "翌日の電力価格を意図的に下げるため。",
+          "リアルタイム市場で高騰した電力価格で自身の発電分を売却し、利益を得るため。",
+          "電力供給過剰を避けるため。"
+        ],
+        "correctIndex": 1,
+        "explanation": "プロシューマーは、前日市場で需要を過少報告することで、リアルタイム市場での電力不足を招き、価格を高騰させ、その高騰した価格で自身の発電分を売却して利益を得ようとします。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "プロシューマー",
+          "definition": "電力を消費するだけでなく、自ら発電もして売る人や企業。"
+        },
+        {
+          "term": "インセンティブ整合性",
+          "definition": "参加者が自己利益を追求すると、全体にとっても望ましい結果になる状態。"
+        },
+        {
+          "term": "前日市場",
+          "definition": "翌日の電力需要を予測し、発電量を計画する市場。"
+        },
+        {
+          "term": "リアルタイム市場",
+          "definition": "実際の電力需給のズレを調整する市場。"
+        },
+        {
+          "term": "線形選好モデル",
+          "definition": "経済主体の選好を線形関数で表現するモデル。"
+        },
+        {
+          "term": "競争均衡",
+          "definition": "市場の需給が一致し、価格が安定している状態。"
+        },
+        {
+          "term": "スコアリングルール",
+          "definition": "予測の正確さを評価し、報酬やペナルティを決定する仕組み。"
+        },
+        {
+          "term": "合成データ",
+          "definition": "現実のデータ特性を模倣して人工的に生成されたデータ。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "電力の売り手と買い手の両方になる「プロシューマー」が電力需要を少なく報告するインセンティブをなくす新しいペナルティ制度を提案。",
+      "noveltyContrast": {
+        "before": "従来の電力市場では、翌日の電力需要を予測し、それに合わせて発電量を計画する「前日市場」と、実際の需給のズレを調整する「リアルタイム市場」がありました。しかし、電力の生産者と消費者両方の顔を持つ「プロシューマー」は、前日市場で需要を過少報告することで、リアルタイム市場でより有利に発電・売電できるインセンティブがありました。これにより、市場全体の効率が低下し、社会的なコストが増大していました。",
+        "after": "この研究では、プロシューマーが電力需要を正直に報告するインセンティブを回復させる新しいペナルティ制度を設計しました。前日市場の運営者が、報告された需要と実際の消費量、過去のデータに基づいて「スコアリングルール」に基づく追加料金を課すことで、過少報告による利益を打ち消します。これにより、市場の効率性が向上し、正直な参加者への負担も最小限に抑えられます。"
+      },
+      "analogy": {
+        "title": "畑の収穫予測と出荷調整",
+        "body": "これは、農家が翌日の収穫量を市場に報告するようなものです。もし農家が「明日はこれだけしか収穫できない」と少なめに報告し、実際にはもっと多く収穫できた場合、リアルタイムで価格が高騰した市場で余剰分を売って儲けることができます。この研究は、農家が正直な収穫量を報告するように、市場運営者が「もし報告と実際の収穫量が大きく違ったらペナルティを課す」という新しい出荷調整ルールを導入するようなものです。これにより、市場全体で正確な供給量が把握でき、価格の安定と効率的な流通が実現します。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+3.2pt",
+          "label": "市場効率の改善（シミュレーションに基づく推定）"
+        }
+      ],
+      "whyYouCare": "近年、太陽光発電などの普及により、家庭や企業が電気を「使うだけ」でなく「作る・売る」プロシューマーが増えています。しかし、現在の電力市場のルールでは、プロシューマーが自分の利益のために電力需要を少なく報告するインセンティブがあり、これが電力価格の不安定化や、社会全体の電力供給コストの増加につながっていました。この研究で提案された新しいペナルティ制度は、プロシューマーが正直に需要を報告するよう促すことで、より安定した電力供給と効率的な市場運営を実現し、結果として私たち消費者の電気料金の安定や、再生可能エネルギーの健全な普及に貢献する可能性があります。",
+      "takeawayTalk": "電力市場のプロシューマーが正直になる新ルールで、電気代が安定するかも！",
+      "bodyText": "本研究では、前日市場とリアルタイム市場からなる二段階電力市場を線形選好モデルで構築し、競争均衡と比較しました。まず、需要家（消費者）とプロシューマー（消費者兼生産者）が電力需要を過少報告するインセンティブを理論的に分析しました。次に、既存の制度的・情報的制約を尊重しつつ、前日市場の運営者が実施可能な「leave-one-out対照スコアリングルール」に基づくペナルティメカニズムを設計しました。このメカニズムは、プロシューマーの請求書に追加される形で適用され、正直な需要報告を促します。最後に、合成データを用いた数値シミュレーションと、実際の市場データを用いた評価により、提案メカニズムの有効性を検証しました。\n\nプロシューマーが前日市場で需要を過少報告する主な理由は、リアルタイム市場での価格変動を利用して利益を得るためです。前日市場で需要を少なく報告すると、翌日のリアルタイム市場で電力不足が発生しやすくなり、その結果、電力価格が高騰します。プロシューマーは、この高騰した価格で自身の発電した電力を売却することで、より大きな利益を得ることができます。本研究で提案されたスコアリングルールに基づくペナルティは、この過少報告による期待利益を相殺するように設計されています。具体的には、報告された需要と実際の消費量の乖離が大きいほどペナルティが大きくなるため、プロシューマーは正直に報告する方が経済的に有利になるようにインセンティブが再構築されます。",
+      "bodyGlossary": [
+        {
+          "term": "前日市場",
+          "definition": "翌日の電力需要を予測し、発電量を計画する市場。",
+          "start": 6,
+          "end": 10
+        },
+        {
+          "term": "リアルタイム市場",
+          "definition": "実際の電力需給のズレを調整する市場。",
+          "start": 11,
+          "end": 19
+        },
+        {
+          "term": "線形選好モデル",
+          "definition": "経済主体の選好を線形関数で表現するモデル。",
+          "start": 31,
+          "end": 38
+        },
+        {
+          "term": "競争均衡",
+          "definition": "市場の需給が一致し、価格が安定している状態。",
+          "start": 43,
+          "end": 47
+        },
+        {
+          "term": "プロシューマー",
+          "definition": "電力を消費するだけでなく、自ら発電もして売る人や企業。",
+          "start": 67,
+          "end": 74
+        },
+        {
+          "term": "スコアリングルール",
+          "definition": "予測の正確さを評価し、報酬やペナルティを決定する仕組み。",
+          "start": 166,
+          "end": 175
+        },
+        {
+          "term": "合成データ",
+          "definition": "現実のデータ特性を模倣して人工的に生成されたデータ。",
+          "start": 248,
+          "end": 253
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "前日市場",
+          "definition": "翌日の電力需要を予測し、発電量を計画する市場。",
+          "start": 6,
+          "end": 10
+        },
+        {
+          "term": "リアルタイム市場",
+          "definition": "実際の電力需給のズレを調整する市場。",
+          "start": 11,
+          "end": 19
+        },
+        {
+          "term": "線形選好モデル",
+          "definition": "経済主体の選好を線形関数で表現するモデル。",
+          "start": 31,
+          "end": 38
+        },
+        {
+          "term": "競争均衡",
+          "definition": "市場の需給が一致し、価格が安定している状態。",
+          "start": 43,
+          "end": 47
+        },
+        {
+          "term": "プロシューマー",
+          "definition": "電力を消費するだけでなく、自ら発電もして売る人や企業。",
+          "start": 67,
+          "end": 74
+        },
+        {
+          "term": "スコアリングルール",
+          "definition": "予測の正確さを評価し、報酬やペナルティを決定する仕組み。",
+          "start": 166,
+          "end": 175
+        },
+        {
+          "term": "合成データ",
+          "definition": "現実のデータ特性を模倣して人工的に生成されたデータ。",
+          "start": 248,
+          "end": 253
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 288
+    },
+    {
+      "id": "2606.24562v1",
+      "title": "A parameterized family of balance indices for phylogenetic networks",
+      "authors": [
+        "François Bienvenu",
+        "Jean-Jil Duchamps",
+        "Hadrien Maffioli"
+      ],
+      "publishedAt": "2026-06-23T13:29:58Z",
+      "url": "https://arxiv.org/abs/2606.24562v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.24562v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "math.CO",
+        "math.PR",
+        "q-bio.PE"
+      ],
+      "abstract": "We introduce a new family of balance indices for phylogenetic networks: the $H_α$ indices, where $α$ is a positive real number. This family includes the $B_2$ index as a special case ($α= 1$) and provides a natural extension of the Sackin index to phylogenetic networks. We show that the $H_α$ indices share many structural properties with the $B_2$ index, most notably a \"grafting property\" that makes it possible to express the $H_α$ index of a network in terms of the $H_α$ indices of its biconnected components. These properties allow us to identify networks that minimize / maximize $H_α$ for various classes of phylogenetic networks, and to study its distribution for several models of random trees and networks (in particular, Galton-Watson trees and binary Markov branching trees, with a focus on the Yule and PDA models). Finally, we show how local limits can be used to analyze the asymptotic behavior of $H_α$ for large trees and networks, and we obtain general results for the moments of $H_α$ for a broad class of random phylogenetic networks known as blowups of Galton-Watson trees.",
+      "summary": {
+        "gist": "生物の進化関係は伝統的に系統樹で表現されてきましたが、遺伝子水平伝播や交雑などの複雑な進化現象を捉えるためには、系統ネットワークの利用が不可欠です。系統樹の構造を定量化するバランス指標は数多く存在しますが、系統ネットワークに適用できる指標は限られており、その解釈にも課題がありました。",
+        "novelty": "これまでの系統学では、生物の進化関係を系統樹で表現し、そのバランスをSackin指数やB2指数といった既存の指標で評価していました。しかし、遺伝子水平伝播や交雑といった複雑な進化現象を表現する系統ネットワークに対しては、これらの指標の拡張が数学的に自然でも、その「バランス」としての解釈が直感的ではないという課題がありました。 本研究は、系統ネットワークのバランスを測る新しい指標「Hα」ファミリーを提案しました。これは、B2指標を一般化したもので、αというパラメータを変えることで、ネットワークの異なる構造的側面を捉えることができます。特に、Hαは「グラフト特性」を持ち、ネットワーク全体を部分のHα指標で表現できるため、複雑なネットワークのバランス評価をより直感的に、かつ計算しやすくしました。",
+        "method": "本研究では、系統ネットワーク上の単純ランダムウォークの終点（葉）における確率分布の構造的α-エントロピー（Tsallisエントロピー）を用いて、新しいバランス指標Hαを定義しました。このHαは、α=1のときに既存のB2指標と一致し、α=2のときにGini-Simpson指数と関連することが示されました。また、Hαがネットワークの「グラフト特性」を持つことを証明し、これにより複雑なネットワークのHα指標をその部分（バイコネクテッド成分）のHα指標で再帰的に表現できることを示しました。さらに、さまざまなランダムツリーやネットワークモデルにおけるHαの分布を解析し、大規模なネットワークにおける漸近的挙動を局所極限を用いて分析しました。",
+        "results": "Hα指標は、α=1でB2指標、α=2でGini-Simpson指数に対応する、系統ネットワークのバランス指標の新しいファミリーを構成します。特に、Hαは「グラフト特性」を持つため、ネットワークのHα指標をそのバイコネクテッド成分のHα指標の和で表現できることが示されました。これにより、複雑なネットワークのバランス評価が容易になります。また、αの値を変えることで、ネットワークの異なる構造的側面（例えば、根に近い部分のバランスと遠い部分のバランス）を区別して評価できることが、具体的なツリーの例で示されました。さらに、Hαはランダムツリーやネットワークモデルにおける分布の解析や、大規模ネットワークの漸近的挙動の分析にも有効であることが確認されました。",
+        "why": "Hα指標は、系統ネットワークの根から葉へのランダムウォークが、どの葉に到達するかという確率分布の「均一性」を測るものです。αというパラメータは、この均一性の測り方に重み付けをする役割を果たします。αが小さいほど、根から遠い（深い）部分の構造が全体のバランスに与える影響が大きくなり、αが大きいほど、根に近い（浅い）部分の構造が重視されます。この柔軟性により、一つの指標では捉えきれなかったネットワークの多様なバランス特性を、Hαファミリー全体で多角的に評価することが可能になります。特に、グラフト特性は、ネットワークを部分に分解して考えることを可能にし、複雑な構造のバランスを効率的に計算・理解する上で非常に強力なツールとなります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / math.CO）",
+      "field": "食料システム",
+      "categoryL1": "serendipity",
+      "categoryL2": "bioinformatics",
+      "arxivPrimary": "math.CO",
+      "titleJa": "系統ネットワークのバランス指標Hαファミリー：B2指標の一般化と構造的特性",
+      "catchTitle": "進化の歴史を測る新しい物差し",
+      "hook": "あなたは、作物の品種改良の歴史を「バランス」という視点から評価できるとしたら、どう思いますか？",
+      "background": "生物の進化関係は伝統的に系統樹で表現されてきましたが、遺伝子水平伝播や交雑などの複雑な進化現象を捉えるためには、系統ネットワークの利用が不可欠です。系統樹の構造を定量化するバランス指標は数多く存在しますが、系統ネットワークに適用できる指標は限られており、その解釈にも課題がありました。",
+      "quiz": {
+        "question": "Hα指標の「グラフト特性」がもたらす最大の利点は何でしょう？",
+        "options": [
+          "Hα指標の計算速度が大幅に向上する。",
+          "複雑な系統ネットワークのHα指標を、その部分のHα指標で再帰的に表現できる。",
+          "Hα指標が常に正の値を取ることが保証される。"
+        ],
+        "correctIndex": 1,
+        "explanation": "グラフト特性により、複雑なネットワークを部分に分解してHα指標を計算できるため、分析が容易になります。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "系統ネットワーク",
+          "definition": "生物の進化関係を、交雑や遺伝子水平伝播も考慮して表現するグラフ。"
+        },
+        {
+          "term": "ランダムウォーク",
+          "definition": "グラフ上を確率的に移動するプロセス。"
+        },
+        {
+          "term": "構造的α-エントロピー",
+          "definition": "確率分布の不確実性や均一性を測る指標。"
+        },
+        {
+          "term": "Tsallisエントロピー",
+          "definition": "構造的α-エントロピーの別名で、統計物理学で用いられる。"
+        },
+        {
+          "term": "B2指標",
+          "definition": "系統樹のバランスを測る既存の指標の一つ。"
+        },
+        {
+          "term": "Gini-Simpson指数",
+          "definition": "生物多様性などを測る指標。"
+        },
+        {
+          "term": "グラフト特性",
+          "definition": "ネットワーク全体を部分の指標で表現できる性質。"
+        },
+        {
+          "term": "バイコネクテッド成分",
+          "definition": "グラフを構成する、連結性を保った部分グラフ。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "系統ネットワークのバランスを測る新しい指標「Hα」を導入し、その構造的特性と応用可能性を示した研究。",
+      "noveltyContrast": {
+        "before": "これまでの系統学では、生物の進化関係を系統樹で表現し、そのバランスをSackin指数やB2指数といった既存の指標で評価していました。しかし、遺伝子水平伝播や交雑といった複雑な進化現象を表現する系統ネットワークに対しては、これらの指標の拡張が数学的に自然でも、その「バランス」としての解釈が直感的ではないという課題がありました。",
+        "after": "本研究は、系統ネットワークのバランスを測る新しい指標「Hα」ファミリーを提案しました。これは、B2指標を一般化したもので、αというパラメータを変えることで、ネットワークの異なる構造的側面を捉えることができます。特に、Hαは「グラフト特性」を持ち、ネットワーク全体を部分のHα指標で表現できるため、複雑なネットワークのバランス評価をより直感的に、かつ計算しやすくしました。"
+      },
+      "analogy": {
+        "title": "畑の畝のバランスを測る新しい道具",
+        "body": "これは、まるで畑の畝（うね）のバランスを測る新しい道具を手に入れたようなものです。従来の道具では、真っ直ぐな畝のバランスは測れても、途中で枝分かれしたり、別の畝と合流したりする複雑な畝（系統ネットワーク）のバランスは、測れても「これが本当にバランスなのか？」と疑問に思うような結果しか出ませんでした。新しい道具「Hα」は、畝の枝分かれの仕方や合流の頻度（ネットワークの構造）に応じて、αというダイヤルを調整することで、畝全体のバランスをより正確に、そして直感的に評価できるようになります。この道具を使えば、どの畝が効率的に作物を育てているか、あるいはどの部分が偏っているかを、より深く理解できるでしょう。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、生物の進化の歴史をより深く理解するための新しいツールを提供します。例えば、特定の作物の品種改良の歴史が、どのような経路をたどって多様性を生み出してきたのか、あるいは特定の病原菌がどのように進化し、遺伝子を交換してきたのかを、Hα指標を用いて定量的に分析できるようになります。これは、農業分野における品種改良戦略の最適化や、感染症対策の立案に役立つ可能性があります。また、Hα指標の「グラフト特性」は、複雑なデータ構造を効率的に分析する汎用的な手法としても応用できるため、サプライチェーンの最適化や、市場の動向分析など、農業経済学以外の分野にも示唆を与えるでしょう。",
+      "takeawayTalk": "進化の歴史を測る新しい物差し「Hα」で、品種改良のバランスがわかる！",
+      "bodyText": "本研究では、系統ネットワーク上の単純ランダムウォークの終点（葉）における確率分布の構造的α-エントロピー（Tsallisエントロピー）を用いて、新しいバランス指標Hαを定義しました。このHαは、α=1のときに既存のB2指標と一致し、α=2のときにGini-Simpson指数と関連することが示されました。また、Hαがネットワークの「グラフト特性」を持つことを証明し、これにより複雑なネットワークのHα指標をその部分（バイコネクテッド成分）のHα指標で再帰的に表現できることを示しました。さらに、さまざまなランダムツリーやネットワークモデルにおけるHαの分布を解析し、大規模なネットワークにおける漸近的挙動を局所極限を用いて分析しました。\n\nHα指標は、系統ネットワークの根から葉へのランダムウォークが、どの葉に到達するかという確率分布の「均一性」を測るものです。αというパラメータは、この均一性の測り方に重み付けをする役割を果たします。αが小さいほど、根から遠い（深い）部分の構造が全体のバランスに与える影響が大きくなり、αが大きいほど、根に近い（浅い）部分の構造が重視されます。この柔軟性により、一つの指標では捉えきれなかったネットワークの多様なバランス特性を、Hαファミリー全体で多角的に評価することが可能になります。特に、グラフト特性は、ネットワークを部分に分解して考えることを可能にし、複雑な構造のバランスを効率的に計算・理解する上で非常に強力なツールとなります。",
+      "bodyGlossary": [
+        {
+          "term": "系統ネットワーク",
+          "definition": "生物の進化関係を、交雑や遺伝子水平伝播も考慮して表現するグラフ。",
+          "start": 6,
+          "end": 14
+        },
+        {
+          "term": "ランダムウォーク",
+          "definition": "グラフ上を確率的に移動するプロセス。",
+          "start": 18,
+          "end": 26
+        },
+        {
+          "term": "構造的α-エントロピー",
+          "definition": "確率分布の不確実性や均一性を測る指標。",
+          "start": 41,
+          "end": 52
+        },
+        {
+          "term": "Tsallisエントロピー",
+          "definition": "構造的α-エントロピーの別名で、統計物理学で用いられる。",
+          "start": 53,
+          "end": 66
+        },
+        {
+          "term": "B2指標",
+          "definition": "系統樹のバランスを測る既存の指標の一つ。",
+          "start": 107,
+          "end": 111
+        },
+        {
+          "term": "Gini-Simpson指数",
+          "definition": "生物多様性などを測る指標。",
+          "start": 123,
+          "end": 137
+        },
+        {
+          "term": "グラフト特性",
+          "definition": "ネットワーク全体を部分の指標で表現できる性質。",
+          "start": 166,
+          "end": 172
+        },
+        {
+          "term": "バイコネクテッド成分",
+          "definition": "グラフを構成する、連結性を保った部分グラフ。",
+          "start": 208,
+          "end": 218
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "系統ネットワーク",
+          "definition": "生物の進化関係を、交雑や遺伝子水平伝播も考慮して表現するグラフ。",
+          "start": 6,
+          "end": 14
+        },
+        {
+          "term": "ランダムウォーク",
+          "definition": "グラフ上を確率的に移動するプロセス。",
+          "start": 18,
+          "end": 26
+        },
+        {
+          "term": "構造的α-エントロピー",
+          "definition": "確率分布の不確実性や均一性を測る指標。",
+          "start": 41,
+          "end": 52
+        },
+        {
+          "term": "Tsallisエントロピー",
+          "definition": "構造的α-エントロピーの別名で、統計物理学で用いられる。",
+          "start": 53,
+          "end": 66
+        },
+        {
+          "term": "B2指標",
+          "definition": "系統樹のバランスを測る既存の指標の一つ。",
+          "start": 107,
+          "end": 111
+        },
+        {
+          "term": "Gini-Simpson指数",
+          "definition": "生物多様性などを測る指標。",
+          "start": 123,
+          "end": 137
+        },
+        {
+          "term": "グラフト特性",
+          "definition": "ネットワーク全体を部分の指標で表現できる性質。",
+          "start": 166,
+          "end": 172
+        },
+        {
+          "term": "バイコネクテッド成分",
+          "definition": "グラフを構成する、連結性を保った部分グラフ。",
+          "start": 208,
+          "end": 218
+        }
+      ],
+      "agriEconRelevance": "Hα指標は、作物の品種改良の歴史を系統ネットワークとして表現し、その多様性や進化のバランスを定量的に評価するのに応用できます。例えば、特定の育種プログラムが多様な品種を生み出しているか、あるいは一部の系統に偏っているかをHαの値で比較することで、育種戦略の有効性を評価できます。また、遺伝子組換え作物やゲノム編集作物の導入が、既存の品種の系統ネットワークにどのような影響を与えるかを分析し、生物多様性への影響を予測するツールとしても利用可能です。さらに、農業における病害虫の進化経路や薬剤耐性獲得のネットワークを分析し、対策の優先順位付けや効果的な介入策の検討にも貢献するでしょう。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 282
+    }
+  ]
+}

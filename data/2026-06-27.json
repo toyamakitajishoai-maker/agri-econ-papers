@@ -1,0 +1,1043 @@
+{
+  "date": "2026-06-27",
+  "papers": [
+    {
+      "id": "2606.27376v1",
+      "title": "Ask, Solve, Generate: Self-Evolving Unified Multimodal Understanding and Generation via Self-Consistency Rewards",
+      "authors": [
+        "Ritesh Thawkar",
+        "Shravan Venkatraman",
+        "Omkar Thawakar",
+        "Abdelrahman Shaker",
+        "Fahad Khan",
+        "Hisham Cholakkal",
+        "Salman Khan",
+        "Rao Muhammad Anwer"
+      ],
+      "publishedAt": "2026-06-25T17:59:57Z",
+      "url": "https://arxiv.org/abs/2606.27376v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.27376v1.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "cs.CV"
+      ],
+      "abstract": "Most unified large multimodal models (LMMs) that support both visual understanding and image generation still rely on curated post-training supervision, such as human annotations, preference labels, or external reward models. We ask whether a unified LMM can improve both abilities autonomously using only unlabeled images. We propose a self-evolving training framework with three internal roles: a Proposer that generates visual questions, a Solver that answers and evaluates them, and a Generator that synthesizes images. Training uses only self-derived consistency signals, without human annotations, preference labels, or task-trained external reward/judge models. To stabilize learning, we introduce Solver Token Entropy (STE), a continuous difficulty signal based on token-level prediction uncertainty that remains useful even when sample-level consistency becomes unreliable. For image generation, we design a multi-scale internal evaluation scheme that combines question-answer fidelity scoring with cycle-consistent captioning. This creates a solver-mediated coupling, where better visual understanding enables more reliable generation assessment and stronger internal training signals. The framework preserves the same role decomposition, reward logic, and training schedule across diffusion-based BLIP3o, rectified-flow BAGEL, and autoregressive VARGPT-v1.1 architectures, requiring only each backbone's native prompting and generation interface. Across eight understanding metrics, our method consistently improves over the corresponding base models. On BAGEL, it achieves a $+3.5\\%$ absolute gain on MMMU and improves GenEval image generation performance from $82\\%$ to $85\\%$. Code and models are publicly released.",
+      "summary": {
+        "gist": "画像理解と画像生成を統合したマルチモーダルAIは急速に進化していますが、その能力向上には人間が作成したラベル付きデータや外部評価モデルが不可欠でした。これはコストと労力がかかるだけでなく、学習の柔軟性を損なう原因にもなっていました。特に、ラベルなし画像だけで両方の能力を自律的に向上させる方法は確立されていませんでした。",
+        "novelty": "従来のマルチモーダルAIは、画像理解や画像生成の能力を向上させるために、人間が作成した大量のラベル付きデータ（質問と回答のペア、好みの評価など）や、外部の評価モデルに頼っていました。これはコストが高く、新しいタスクへの応用も難しいという課題がありました。 この論文では、人間によるラベル付けや外部の評価モデルを一切使わず、ラベルなし画像のみでAIが自律的に学習し、画像理解と生成の両方を向上させる自己進化フレームワークを提案。3つの役割（質問生成、回答・評価、画像生成）を持つAIが連携し、内部で一貫性を評価しながら賢くなります。",
+        "method": "本研究では、凍結された基盤モデルに対し、3つの軽量なLoRAアダプター（Proposer、Solver、Generator）を接続する自己進化フレームワークを提案します。Proposerは画像から質問を生成し、Solverは質問に回答し、その回答の一貫性を評価します。Generatorはテキストプロンプトから画像を生成します。学習は、理解ループと生成ループを交互に行います。理解ループでは、ProposerとSolverが、プロンプトの揺らぎに対する回答の一貫性（自己一貫性）と、Solverの回答の不確実性（Solver Token Entropy: STE）に基づいて学習します。STEは、回答が全て同じでもモデルが自信がない場合に、その難易度を測る指標として機能します。生成ループでは、Solverが内部評価器として機能し、生成された画像が元の画像の特徴をどれだけ保持しているか（QA忠実度スコアリング）と、生成画像から再キャプションしたテキストが元のプロンプトとどれだけ一致するか（サイクル一貫性キャプション）を評価し、Generatorに報酬を与えます。これにより、理解能力の向上が生成評価の精度を高め、より鋭い生成報酬につながります。",
+        "results": "提案手法は、BLIP3o、BAGEL、VARGPT-v1.1といった異なるアーキテクチャの基盤モデルに対し、一貫して理解能力と生成能力を向上させました。特に、BAGELではMMMUスコアで+3.5%の絶対的な向上、GenEval画像生成性能で82%から85%への向上が見られました。これは、単一の教師なし自己進化アルゴリズムが、根本的に異なる生成アーキテクチャ全体で両方のタスクを改善できることを示しています。",
+        "why": "このフレームワークの鍵は、Proposer、Solver、Generatorの3つの役割が相互に作用し、内部で学習シグナルを生成する点にあります。Solver Token Entropy（STE）は、従来の自己一貫性評価が陥りがちだった「報酬の退化」（モデルが自信がなくても一貫した回答をしてしまう問題）を解決し、モデルの能力のフロンティアに近い、適切な難易度の質問をProposerが生成できるようにします。また、Solverが生成された画像を評価することで、理解能力の向上が直接的に生成品質の評価精度を高め、より効果的な生成モデルの学習を可能にします。これにより、人間による介入なしに、AIが自律的に画像理解と生成の両方を高める「自己進化」が実現します。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.CV）",
+      "field": "AI・データサイエンス",
+      "categoryL1": "serendipity",
+      "categoryL2": "machine-learning",
+      "arxivPrimary": "cs.CV",
+      "titleJa": "自己進化するマルチモーダルAI：ラベルなし画像だけで理解と生成能力を向上させるフレームワーク",
+      "catchTitle": "AIが自分で賢くなる！ラベル不要の画像理解・生成術",
+      "hook": "あなたはAIに「これ何？」と質問し、その答えで「こんな絵を描いて」と指示する。そんなAIが、誰の手も借りずに賢くなるって信じられますか？",
+      "background": "画像理解と画像生成を統合したマルチモーダルAIは急速に進化していますが、その能力向上には人間が作成したラベル付きデータや外部評価モデルが不可欠でした。これはコストと労力がかかるだけでなく、学習の柔軟性を損なう原因にもなっていました。特に、ラベルなし画像だけで両方の能力を自律的に向上させる方法は確立されていませんでした。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "マルチモーダルAI",
+          "definition": "テキスト、画像、音声など複数の種類のデータを扱うAI。"
+        },
+        {
+          "term": "LoRAアダプター",
+          "definition": "大規模モデルの学習効率を高める軽量な追加モジュール。"
+        },
+        {
+          "term": "自己一貫性",
+          "definition": "異なる表現でも同じ意味の質問に対し、一貫した回答を出すこと。"
+        },
+        {
+          "term": "Solver Token Entropy (STE)",
+          "definition": "AIの回答の各単語レベルでの不確実性を測る指標。"
+        },
+        {
+          "term": "QA忠実度スコアリング",
+          "definition": "生成画像が元の画像の質問応答特性をどれだけ保つか。"
+        },
+        {
+          "term": "サイクル一貫性キャプション",
+          "definition": "生成画像から再生成したキャプションが元のプロンプトと一致するか。"
+        },
+        {
+          "term": "報酬の退化",
+          "definition": "学習シグナルが弱くなり、モデルがうまく学習できなくなる現象。"
+        },
+        {
+          "term": "能力のフロンティア",
+          "definition": "AIがまだ完全に習得していない、学習の伸びしろがある領域。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "ラベルなし画像だけで、AIが自ら質問・回答・生成を繰り返して、画像理解と生成の両方を向上させる自己進化フレームワークを提案。",
+      "noveltyContrast": {
+        "before": "従来のマルチモーダルAIは、画像理解や画像生成の能力を向上させるために、人間が作成した大量のラベル付きデータ（質問と回答のペア、好みの評価など）や、外部の評価モデルに頼っていました。これはコストが高く、新しいタスクへの応用も難しいという課題がありました。",
+        "after": "この論文では、人間によるラベル付けや外部の評価モデルを一切使わず、ラベルなし画像のみでAIが自律的に学習し、画像理解と生成の両方を向上させる自己進化フレームワークを提案。3つの役割（質問生成、回答・評価、画像生成）を持つAIが連携し、内部で一貫性を評価しながら賢くなります。"
+      },
+      "analogy": {
+        "title": "ベテラン農家が若手を育てる「質問と実践」のサイクル",
+        "body": "これはまるで、経験豊富なベテラン農家（Solver）が、新米の若手農家（Proposer）に「この畑の土壌はどう？」と質問させ、その答えを評価し、さらに「この土壌ならどんな作物が育つか？」とアイデアを出す（Generator）ようなものです。若手農家はベテランの評価を受け、より良い質問と実践を学び、ベテラン農家も若手の質問を通じて、自身の知識をさらに深めていきます。誰かに教わるのではなく、畑（ラベルなし画像）と対話し、お互いに高め合うことで、より効率的な農業（AIの能力向上）を実現するのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+3.5%",
+          "label": "画像理解（MMMUスコア）"
+        },
+        {
+          "value": "+3%",
+          "label": "画像生成（GenEvalスコア）"
+        }
+      ],
+      "whyYouCare": "この研究は、AI開発のコストと時間を大幅に削減する可能性を秘めています。これまでAIの能力向上には、人間が膨大な時間と労力をかけて作成したラベル付きデータが不可欠でしたが、この技術があれば、ラベルなしの画像だけでAIが自律的に賢くなれます。これにより、より多様な分野でAIの活用が進み、例えば、農業分野では、特定の作物の病害を自動で識別・診断するAIを、専門家による大量の病害画像ラベルなしに開発できるようになるかもしれません。また、災害現場の画像から状況を理解し、必要な情報を生成するAIなど、これまでデータ収集が困難だった領域でのAI導入を加速させるでしょう。",
+      "takeawayTalk": "AIが自分で質問して、自分で答えを評価して、自分で賢くなるらしいよ！",
+      "bodyText": "本研究では、凍結された基盤モデルに対し、3つの軽量なLoRAアダプター（Proposer、Solver、Generator）を接続する自己進化フレームワークを提案します。Proposerは画像から質問を生成し、Solverは質問に回答し、その回答の一貫性を評価します。Generatorはテキストプロンプトから画像を生成します。学習は、理解ループと生成ループを交互に行います。理解ループでは、ProposerとSolverが、プロンプトの揺らぎに対する回答の一貫性（自己一貫性）と、Solverの回答の不確実性（Solver Token Entropy: STE）に基づいて学習します。STEは、回答が全て同じでもモデルが自信がない場合に、その難易度を測る指標として機能します。生成ループでは、Solverが内部評価器として機能し、生成された画像が元の画像の特徴をどれだけ保持しているか（QA忠実度スコアリング）と、生成画像から再キャプションしたテキストが元のプロンプトとどれだけ一致するか（サイクル一貫性キャプション）を評価し、Generatorに報酬を与えます。これにより、理解能力の向上が生成評価の精度を高め、より鋭い生成報酬につながります。\n\nこのフレームワークの鍵は、Proposer、Solver、Generatorの3つの役割が相互に作用し、内部で学習シグナルを生成する点にあります。Solver Token Entropy（STE）は、従来の自己一貫性評価が陥りがちだった「報酬の退化」（モデルが自信がなくても一貫した回答をしてしまう問題）を解決し、モデルの能力のフロンティアに近い、適切な難易度の質問をProposerが生成できるようにします。また、Solverが生成された画像を評価することで、理解能力の向上が直接的に生成品質の評価精度を高め、より効果的な生成モデルの学習を可能にします。これにより、人間による介入なしに、AIが自律的に画像理解と生成の両方を高める「自己進化」が実現します。",
+      "bodyGlossary": [
+        {
+          "term": "LoRAアダプター",
+          "definition": "大規模モデルの学習効率を高める軽量な追加モジュール。",
+          "start": 26,
+          "end": 35
+        },
+        {
+          "term": "自己一貫性",
+          "definition": "異なる表現でも同じ意味の質問に対し、一貫した回答を出すこと。",
+          "start": 233,
+          "end": 238
+        },
+        {
+          "term": "QA忠実度スコアリング",
+          "definition": "生成画像が元の画像の質問応答特性をどれだけ保つか。",
+          "start": 394,
+          "end": 405
+        },
+        {
+          "term": "サイクル一貫性キャプション",
+          "definition": "生成画像から再生成したキャプションが元のプロンプトと一致するか。",
+          "start": 446,
+          "end": 459
+        },
+        {
+          "term": "報酬の退化",
+          "definition": "学習シグナルが弱くなり、モデルがうまく学習できなくなる現象。",
+          "start": 645,
+          "end": 650
+        },
+        {
+          "term": "能力のフロンティア",
+          "definition": "AIがまだ完全に習得していない、学習の伸びしろがある領域。",
+          "start": 687,
+          "end": 696
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "LoRAアダプター",
+          "definition": "大規模モデルの学習効率を高める軽量な追加モジュール。",
+          "start": 26,
+          "end": 35
+        },
+        {
+          "term": "自己一貫性",
+          "definition": "異なる表現でも同じ意味の質問に対し、一貫した回答を出すこと。",
+          "start": 233,
+          "end": 238
+        },
+        {
+          "term": "QA忠実度スコアリング",
+          "definition": "生成画像が元の画像の質問応答特性をどれだけ保つか。",
+          "start": 394,
+          "end": 405
+        },
+        {
+          "term": "サイクル一貫性キャプション",
+          "definition": "生成画像から再生成したキャプションが元のプロンプトと一致するか。",
+          "start": 446,
+          "end": 459
+        },
+        {
+          "term": "報酬の退化",
+          "definition": "学習シグナルが弱くなり、モデルがうまく学習できなくなる現象。",
+          "start": 645,
+          "end": 650
+        },
+        {
+          "term": "能力のフロンティア",
+          "definition": "AIがまだ完全に習得していない、学習の伸びしろがある領域。",
+          "start": 687,
+          "end": 696
+        }
+      ],
+      "agriEconRelevance": "この自己進化フレームワークは、農業経済分野におけるAI活用のハードルを大きく下げる可能性があります。例えば、特定の地域の気候変動が作物に与える影響を予測するAIを開発する際、過去の衛星画像や気象データ（ラベルなし画像に相当）から、AIが自ら「この時期のこの地域の降水量は？」といった質問を生成し、その答えを評価し、さらに「この降水量なら収穫量はどうなる？」といった予測画像を生成する、といった応用が考えられます。これにより、専門家による複雑なデータラベリングなしに、地域特有の農業課題に対応するAIを効率的に開発し、スマート農業の普及を加速できるでしょう。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 291,
+      "keyFigure": {
+        "imagePath": "/figures/2606.27376v1_results.jpeg",
+        "page": 11,
+        "caption": "自己進化によってAIの画像理解と生成能力が向上したことを示す定性的な比較図です。",
+        "label": "Figure 6: Qualitative comparison of base vs. self-evolved outputs across tasks and backbones. Left (visual",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-26T23:05:24.246Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.27376v1_results.jpeg",
+          "page": 11,
+          "caption": "自己進化によってAIの画像理解と生成能力が向上したことを示す定性的な比較図です。",
+          "label": "Figure 6: Qualitative comparison of base vs. self-evolved outputs across tasks and backbones. Left (visual",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-26T23:05:24.246Z"
+        },
+        {
+          "imagePath": "/figures/2606.27376v1_why.png",
+          "page": 5,
+          "caption": "提案する自己進化フレームワークの全体像を示しており、Proposer、Solver、Generatorの役割がわかります。",
+          "label": "Figure 2: Overview of our Proposer–Solver–Generator self-evolving framework. Given only a frozen backbone",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-26T23:05:24.246Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.27369v1",
+      "title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+      "authors": [
+        "Yingyu Lin",
+        "Qiyue Gao",
+        "Nikki Lijing Kuang",
+        "Xunpeng Huang",
+        "Kun Zhou",
+        "Tongtong Liang",
+        "Zhewei Yao",
+        "Yi-An Ma",
+        "Yuxiong He"
+      ],
+      "publishedAt": "2026-06-25T17:59:36Z",
+      "url": "https://arxiv.org/abs/2606.27369v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.27369v1.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "cs.LG"
+      ],
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) for training LLMs typically rely on ground-truth answers to assign rewards, limiting their applicability to tasks where the ground-truth solution is unknown. We introduce a \\textbf{R}anking-\\textbf{i}nduced \\textbf{VER}ifiable framework (RiVER) that trains LLMs on score-based optimization tasks without ground-truth solutions, using deterministic execution feedback as continuous-valued supervision. When applying group-relative RL to such continuous rewards, we identify two key challenges: \\emph{scale dominance}, where uncalibrated score magnitudes across test instances distort policy updates, and \\emph{frequency dominance}, where repeatedly sampled suboptimal solutions can outweigh rare but stronger candidates. RiVER addresses these challenges with calibrated reward shaping that uses instance-wise comparisons and emphasizes top-ranked solvers while retaining bounded feedback for other valid solutions. We train on 12 AtCoder Heuristic Contest tasks and evaluate on Algorithm Engineering Benchmark (ALE-Bench), LiveCodeBench, and USACO. RiVER advances Qwen3-8B and GLM-Z1-9B-0414 by 8.9\\% and 9.4\\% in ALE rating rank. More importantly, despite training exclusively on score-based tasks without any ground-truth solutions, RiVER also improves the backbones across exact-solution benchmarks such as LiveCodeBench and USACO by an absolute average improvement of 2.4\\% and 3.5\\%. By contrast, baselines trained with raw execution scores improve ALE rating but fail to transfer to exact-solution benchmarks. These results suggest that score-based optimization tasks, combined with proper reward calibration, can serve as effective training environments for general coding ability without ground-truth solutions.",
+      "summary": {
+        "gist": "大規模言語モデル（LLM）の推論能力向上には、強化学習（RL）が有効ですが、従来のRLは「正解」が明確なタスクに限定されていました。しかし、現実世界には、最適解が一つではない、あるいは最適解が不明な最適化問題が多く存在します。例えば、物流ルートの最適化や資源配分など、様々な「良い」解があり、その中で「より良い」解を見つけることが求められます。このような「正解のない」問題に対してLLMを訓練する手法は未開拓でした。",
+        "novelty": "従来のLLM強化学習は、明確な「正解」がある問題（例：数式計算、ユニットテストをパスするコード）に限定されていました。そのため、最適解が不明な、あるいは複数の「良い」解が存在するような最適化問題には適用が困難でした。 この研究では、正解がなくても、複数の候補解を比較して「どれがより良いか」を評価できる最適化タスクに着目。候補解の実行結果を相対的に評価し、特に最も良い解に重み付けして報酬を与えることで、LLMを訓練するRiVERフレームワークを開発しました。",
+        "method": "本研究では、正解が不明な最適化問題において、LLMが生成した複数の候補解を評価し、その相対的な良さに基づいて報酬を与える「RiVER (Ranking-induced VERifiable) 」フレームワークを提案しました。具体的には、まずLLMに複数の解を生成させ、それらを実際の環境で実行してスコアを算出します。次に、これらのスコアをインスタンスごとに比較し、相対的な順位付けを行います。この際、「スケール優位性」（スコアの絶対値が大きいインスタンスが報酬を支配する問題）と「頻度優位性」（質は低いが頻繁に生成される解が報酬を支配する問題）という2つの課題を解決するため、報酬のキャリブレーション（調整）を行います。具体的には、インスタンスごとの比較を行い、グループ内で最も良い解に重み付けされた報酬を与えつつ、他の有効な解にも一定のフィードバックを与える「勝者重視型報酬整形」を導入しました。この手法をAtCoder Heuristic Contestの12タスクで訓練し、ALE-Bench、LiveCodeBench、USACOなどのベンチマークで評価しました。",
+        "results": "RiVERは、Qwen3-8BとGLM-Z1-9B-0414というLLMのALE評価ランキングをそれぞれ8.9%と9.4%向上させました。さらに、正解のないスコアベースのタスクのみで訓練したにもかかわらず、LiveCodeBenchやUSACOのような明確な正解があるベンチマークでも、それぞれ平均2.4%と3.5%の絶対的な改善を示しました。これは、単に実行可能なフィードバックにLLMをさらすだけでなく、適切な報酬のキャリブレーションが、スコアベースの環境から汎用的なコーディング能力への転移学習に不可欠であることを示唆しています。",
+        "why": "RiVERが効果を発揮するメカニズムは、主に2つの報酬調整にあります。1つは「インスタンスごとの順位付け」です。これにより、異なる問題インスタンス間でスコアの絶対値が大きく異なることによる「スケール優位性」を排除し、純粋な相対的な解の質に基づいて学習が進みます。もう1つは「勝者重視型報酬整形」です。これにより、グループ内で最も優れた解に重点的に報酬を与えることで、稀にしか生成されないが質の高い解が、頻繁に生成されるが質の低い解に埋もれてしまう「頻度優位性」を防ぎます。これらの調整により、LLMは「より良い」解を効率的に探索し、汎用的な推論能力を向上させることができたと考えられます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.LG）",
+      "field": "AI・データサイエンス",
+      "categoryL1": "serendipity",
+      "categoryL2": "ai-ml",
+      "arxivPrimary": "cs.LG",
+      "titleJa": "正解のない問題でもLLMを賢くする強化学習フレームワークRiVER",
+      "catchTitle": "「一番マシ」でLLMはもっと賢くなる",
+      "hook": "あなたは、正解が一つではない、あるいは正解が分からない問題に直面した時、どうやって「より良い」答えを見つけますか？",
+      "background": "大規模言語モデル（LLM）の推論能力向上には、強化学習（RL）が有効ですが、従来のRLは「正解」が明確なタスクに限定されていました。しかし、現実世界には、最適解が一つではない、あるいは最適解が不明な最適化問題が多く存在します。例えば、物流ルートの最適化や資源配分など、様々な「良い」解があり、その中で「より良い」解を見つけることが求められます。このような「正解のない」問題に対してLLMを訓練する手法は未開拓でした。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。大量のテキストデータで学習したAI。"
+        },
+        {
+          "term": "強化学習",
+          "definition": "試行錯誤を通じて最適な行動を学習する機械学習手法。"
+        },
+        {
+          "term": "最適化問題",
+          "definition": "特定条件のもとで最良の解を見つける問題。"
+        },
+        {
+          "term": "RiVER",
+          "definition": "本研究で提案された、正解なし強化学習フレームワーク。"
+        },
+        {
+          "term": "スケール優位性",
+          "definition": "スコアの絶対値が大きい問題が報酬を支配する現象。"
+        },
+        {
+          "term": "頻度優位性",
+          "definition": "質の低いが頻繁な解が報酬を支配する現象。"
+        },
+        {
+          "term": "キャリブレーション",
+          "definition": "測定器や評価基準を調整し、正確にする作業。"
+        },
+        {
+          "term": "報酬整形",
+          "definition": "強化学習において、報酬の与え方を調整する技術。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "正解が不明な最適化問題において、生成された複数の回答を比較し、相対的な良さでLLMを訓練する新しい強化学習手法です。",
+      "noveltyContrast": {
+        "before": "従来のLLM強化学習は、明確な「正解」がある問題（例：数式計算、ユニットテストをパスするコード）に限定されていました。そのため、最適解が不明な、あるいは複数の「良い」解が存在するような最適化問題には適用が困難でした。",
+        "after": "この研究では、正解がなくても、複数の候補解を比較して「どれがより良いか」を評価できる最適化タスクに着目。候補解の実行結果を相対的に評価し、特に最も良い解に重み付けして報酬を与えることで、LLMを訓練するRiVERフレームワークを開発しました。"
+      },
+      "analogy": {
+        "title": "畑の土壌改良、一番効果的なのは？",
+        "body": "これは、まるで「どの土壌改良材が一番収穫量を増やすか」を試すようなものです。従来のLLM訓練は、特定の肥料を与えた畑が「目標収穫量に達したか否か」という二択で評価していました。しかし、RiVERは、複数の改良材を試した畑の中から「一番収穫量が多かった畑」を見つけ、その改良材のノウハウを重点的に学ぶことで、より効率的に収穫量を最大化する方法を見つけ出すようなものです。正解の収穫量は分からなくても、相対的な比較で最適な方法を探るのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+8.9%",
+          "label": "ALE評価ランキング（Qwen3-8B）"
+        },
+        {
+          "value": "+9.4%",
+          "label": "ALE評価ランキング（GLM-Z1-9B-0414）"
+        },
+        {
+          "value": "+2.4%",
+          "label": "LiveCodeBench（絶対平均改善）"
+        },
+        {
+          "value": "+3.5%",
+          "label": "USACO（絶対平均改善）"
+        }
+      ],
+      "whyYouCare": "この研究は、LLMが「正解のない」複雑な問題、例えば農業における最適な作付け計画や、流通における最適な配送ルートの探索など、多様な制約の中で「より良い」解を見つける能力を大きく向上させる可能性を秘めています。あなたのビジネスや社会課題解決において、明確な正解がなくても、複数の選択肢の中から最適なものを選び出すAIの活用が現実的になります。これにより、これまで人間が試行錯誤していた領域にAIが参入し、効率化や新たな発見を促すことができるでしょう。",
+      "takeawayTalk": "正解がない問題でも、LLMは「一番マシ」な答えを見つけるのが得意になったよ！",
+      "bodyText": "本研究では、正解が不明な最適化問題において、LLMが生成した複数の候補解を評価し、その相対的な良さに基づいて報酬を与える「RiVER (Ranking-induced VERifiable) 」フレームワークを提案しました。具体的には、まずLLMに複数の解を生成させ、それらを実際の環境で実行してスコアを算出します。次に、これらのスコアをインスタンスごとに比較し、相対的な順位付けを行います。この際、「スケール優位性」（スコアの絶対値が大きいインスタンスが報酬を支配する問題）と「頻度優位性」（質は低いが頻繁に生成される解が報酬を支配する問題）という2つの課題を解決するため、報酬のキャリブレーション（調整）を行います。具体的には、インスタンスごとの比較を行い、グループ内で最も良い解に重み付けされた報酬を与えつつ、他の有効な解にも一定のフィードバックを与える「勝者重視型報酬整形」を導入しました。この手法をAtCoder Heuristic Contestの12タスクで訓練し、ALE-Bench、LiveCodeBench、USACOなどのベンチマークで評価しました。\n\nRiVERが効果を発揮するメカニズムは、主に2つの報酬調整にあります。1つは「インスタンスごとの順位付け」です。これにより、異なる問題インスタンス間でスコアの絶対値が大きく異なることによる「スケール優位性」を排除し、純粋な相対的な解の質に基づいて学習が進みます。もう1つは「勝者重視型報酬整形」です。これにより、グループ内で最も優れた解に重点的に報酬を与えることで、稀にしか生成されないが質の高い解が、頻繁に生成されるが質の低い解に埋もれてしまう「頻度優位性」を防ぎます。これらの調整により、LLMは「より良い」解を効率的に探索し、汎用的な推論能力を向上させることができたと考えられます。",
+      "bodyGlossary": [
+        {
+          "term": "最適化問題",
+          "definition": "特定条件のもとで最良の解を見つける問題。",
+          "start": 12,
+          "end": 17
+        },
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。大量のテキストデータで学習したAI。",
+          "start": 22,
+          "end": 25
+        },
+        {
+          "term": "RiVER",
+          "definition": "本研究で提案された、正解なし強化学習フレームワーク。",
+          "start": 61,
+          "end": 66
+        },
+        {
+          "term": "スケール優位性",
+          "definition": "スコアの絶対値が大きい問題が報酬を支配する現象。",
+          "start": 201,
+          "end": 208
+        },
+        {
+          "term": "頻度優位性",
+          "definition": "質の低いが頻繁な解が報酬を支配する現象。",
+          "start": 240,
+          "end": 245
+        },
+        {
+          "term": "キャリブレーション",
+          "definition": "測定器や評価基準を調整し、正確にする作業。",
+          "start": 291,
+          "end": 300
+        },
+        {
+          "term": "報酬整形",
+          "definition": "強化学習において、報酬の与え方を調整する技術。",
+          "start": 386,
+          "end": 390
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "最適化問題",
+          "definition": "特定条件のもとで最良の解を見つける問題。",
+          "start": 12,
+          "end": 17
+        },
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。大量のテキストデータで学習したAI。",
+          "start": 22,
+          "end": 25
+        },
+        {
+          "term": "RiVER",
+          "definition": "本研究で提案された、正解なし強化学習フレームワーク。",
+          "start": 61,
+          "end": 66
+        },
+        {
+          "term": "スケール優位性",
+          "definition": "スコアの絶対値が大きい問題が報酬を支配する現象。",
+          "start": 201,
+          "end": 208
+        },
+        {
+          "term": "頻度優位性",
+          "definition": "質の低いが頻繁な解が報酬を支配する現象。",
+          "start": 240,
+          "end": 245
+        },
+        {
+          "term": "キャリブレーション",
+          "definition": "測定器や評価基準を調整し、正確にする作業。",
+          "start": 291,
+          "end": 300
+        },
+        {
+          "term": "報酬整形",
+          "definition": "強化学習において、報酬の与え方を調整する技術。",
+          "start": 386,
+          "end": 390
+        }
+      ],
+      "agriEconRelevance": "農業経済学の文脈では、最適な作物の品種選択、肥料の配合、灌漑スケジュールの最適化、サプライチェーン全体の効率化など、明確な「正解」がない多くの最適化問題が存在します。RiVERは、これらの問題に対してLLMが複数の選択肢を生成し、その実行結果を比較して「より良い」解決策を導き出す訓練を可能にします。これにより、農家の意思決定支援や、農業政策の立案において、データに基づいたより高度な最適化提案が可能になるでしょう。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 291,
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.27369v1_why.png",
+          "page": 2,
+          "caption": "従来の検証方法と、RiVERが採用するグループごとの順位付けに基づく検証方法を比較しています。",
+          "label": "Figure 1: Comparison between traditional answer-matching verification and our group-wise rank-induced verifiable",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-26T23:05:26.304Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.27361v1",
+      "title": "Autoregressive Boltzmann Generators",
+      "authors": [
+        "Danyal Rehman",
+        "Charlie B. Tan",
+        "Yoshua Bengio",
+        "Avishek Joey Bose",
+        "Alexander Tong"
+      ],
+      "publishedAt": "2026-06-25T17:58:21Z",
+      "url": "https://arxiv.org/abs/2606.27361v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.27361v1.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "cs.LG",
+        "cs.AI"
+      ],
+      "abstract": "Efficient sampling of molecular systems at thermodynamic equilibrium is a hallmark challenge in statistical physics. This challenge has driven the development of Boltzmann Generators (BGs), which allow rapid generation of uncorrelated equilibrium samples by combining a generative model with exact likelihoods and an importance sampling correction. However, modern BGs predominantly rely on normalizing flows (NFs), which either suffer from limited expressivity due to strict invertibility constraints (discrete time) or computationally expensive likelihoods (continuous time). In this paper, we propose Autoregressive Boltzmann Generators (ArBG) -- a novel autoregressive modelling framework -- that overcomes these limitations by departing from the flow-based BG paradigm. ArBG circumvents the topological constraints of flows and enables sequential inference-time interventions, while offering enhanced scalability by leveraging architectures effective in Large Language Models. We empirically demonstrate that ArBG leads to significant improvements over flow-based models across all benchmarks, but particularly in larger peptide systems such as the 10-residue Chignolin. Furthermore, we introduce Robin, a 132 million parameter transferable model trained with the ArBG framework which improves over the previous state-of-the-art, reducing the zero-shot energy error, E-W$_2$, on 8-residue systems by over 60$\\%$. The code can be found at the following link: https://github.com/danyalrehman/autobg.",
+      "summary": {
+        "gist": "分子システムが熱力学的平衡状態でどのような形状を取るかを効率的にサンプリングすることは、統計物理学における長年の課題です。この課題は、タンパク質の折り畳みや結晶構造の形成といったマクロな現象が、平衡状態におけるミクロな状態のアンサンブルによって支配されるという統計力学の中心的な洞察に基づいています。しかし、平衡分布のモード（安定した形状）はしばしば疎で、高いエネルギー障壁によって隔てられているため、従来の分子動力学（MD）シミュレーションでは、これらの障壁を乗り越えるのに膨大な計算時間が必要でした。ボルツマン生成器（BG）は、生成モデルと厳密な尤度、重点サンプリング補正を組み合わせることで、この課題を回避する強力なフレームワークとして登場しましたが、その実装は主に正規化フロー（NF）に依存しており、表現力の限界や計算コストの高さという新たな課題を抱えていました。",
+        "novelty": "従来のボルツマン生成器（BG）は、分子の多様な形状を効率的にサンプリングする強力な手法ですが、正規化フロー（NF）という技術に依存していました。NFは、分子の複雑な形状変化を捉える際に、表現力の限界や計算コストの高さという課題を抱えていました。特に、複数の安定した形状がエネルギーの壁で隔てられているような複雑な分子では、NFは不安定になりやすく、正確な予測が困難でした。 この論文では、正規化フローに代わる新しい自己回帰モデリングフレームワーク「Autoregressive Boltzmann Generators (ArBG)」を提案しています。ArBGは、大規模言語モデルで培われた技術を活用し、分子の形状を連続的な条件付き確率の系列としてモデル化することで、従来のNFが抱えていた表現力の限界や計算コストの問題を回避します。これにより、より複雑で大規模な分子システムにおいても、安定かつ高精度な平衡状態のサンプリングを可能にしました。",
+        "method": "本研究では、従来のフローベースのボルツマン生成器（BG）のパラダイムから脱却し、新しい自己回帰モデリングフレームワークである「Autoregressive Boltzmann Generators (ArBG)」を提案しています。ArBGは、分子の密度を条件付き密度の系列として因数分解する自己回帰パラダイムを採用しています。具体的には、pθ(x) = Πj p(xj|x<j) のように、各次元xjがそれ以前の次元x<jに条件付けられる形でモデル化されます。この定式化により、ヤコビアン行列の決定式や数値ODEソルバーといった計算コストの高い処理を回避し、単一のパスで厳密な尤度計算が可能になります。また、大規模言語モデル（LLM）で培われた自己回帰モデルのアーキテクチャとスケーリング特性を活用することで、表現力とスケーラビリティを向上させています。連続空間における自己回帰モデルの課題に対しては、混合密度ネットワーク（MDN）や、均一なビニング戦略を用いた新しいパラメータ化を検討しています。",
+        "results": "ArBGは、すべての単一ペプチドベンチマークにおいて、フローベースのモデルを含むすべてのベースライン手法を一貫して上回る性能を示しました。特に、10残基のキグノリンのような大規模なペプチドシステムにおいて、その強力な性能とスケーラビリティが実証されています。さらに、1億3200万パラメータを持つ転移可能なモデル「Robin」をArBGフレームワークで訓練し、未見のペプチドに対するゼロショット汎化性能を評価しました。その結果、Robinは8残基システムにおいて、以前の最先端技術であるProse（離散時間正規化フロー）と比較して、エネルギー誤差（E-W2）を60%以上削減することに成功しました。",
+        "why": "ArBGが従来のフローベースモデルの限界を克服できるのは、主に3つの理由によります。第一に、自己回帰モデルはフローの持つ厳密な可逆性制約（微分同相写像であること）から解放されるため、離散時間フローの表現力のボトルネックを回避し、連続時間フローのような高価な計算コストを伴いません。これにより、複数の安定した状態がエネルギー障壁によって隔てられているような、複雑で不連続な分子の平衡分布をより正確にモデル化できます。第二に、自己回帰モデルは、高歪な微分同相写像を学習する際の数値的不安定性を回避するため、不連続なジャンプや分離したモードを持つ多峰性ターゲット密度をモデル化できます。第三に、ArBGは、現代のLLMを支える離散生成モデリングへの投資と進歩の恩恵を受け、モデルサイズと推論サンプルの両方で同様のスケーリング特性を示します。これにより、大規模な分子システムにおいても効率的かつ高精度なサンプリングが可能になります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.LG）",
+      "field": "AI・データサイエンス",
+      "categoryL1": "serendipity",
+      "categoryL2": "machine-learning",
+      "arxivPrimary": "cs.LG",
+      "titleJa": "自己回帰ボルツマン生成器",
+      "catchTitle": "分子の動きを予測する新AI",
+      "hook": "あなたは、薬の設計や新素材の開発で、分子がどんな形になるか正確に知りたいと思ったことはありませんか？",
+      "background": "分子システムが熱力学的平衡状態でどのような形状を取るかを効率的にサンプリングすることは、統計物理学における長年の課題です。この課題は、タンパク質の折り畳みや結晶構造の形成といったマクロな現象が、平衡状態におけるミクロな状態のアンサンブルによって支配されるという統計力学の中心的な洞察に基づいています。しかし、平衡分布のモード（安定した形状）はしばしば疎で、高いエネルギー障壁によって隔てられているため、従来の分子動力学（MD）シミュレーションでは、これらの障壁を乗り越えるのに膨大な計算時間が必要でした。ボルツマン生成器（BG）は、生成モデルと厳密な尤度、重点サンプリング補正を組み合わせることで、この課題を回避する強力なフレームワークとして登場しましたが、その実装は主に正規化フロー（NF）に依存しており、表現力の限界や計算コストの高さという新たな課題を抱えていました。",
+      "quiz": {
+        "question": "ArBGが従来のボルツマン生成器（BG）の課題を克服できた主な理由は何でしょう？",
+        "options": [
+          "分子動力学シミュレーションの計算速度を大幅に向上させたから。",
+          "正規化フローの厳密な可逆性制約から解放され、複雑な分子形状をより柔軟にモデル化できるから。",
+          "量子コンピュータを活用して、分子のエネルギー計算を高速化したから。"
+        ],
+        "correctIndex": 1,
+        "explanation": "ArBGは、正規化フローの持つ厳密な可逆性制約から解放されることで、複数の安定した状態がエネルギー障壁によって隔てられているような、複雑で不連続な分子の平衡分布をより正確にモデル化できるようになりました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "ボルツマン生成器",
+          "definition": "分子の平衡状態を効率的にサンプリングするモデル"
+        },
+        {
+          "term": "正規化フロー",
+          "definition": "複雑な確率分布を単純な分布に変換する生成モデル"
+        },
+        {
+          "term": "自己回帰モデリング",
+          "definition": "過去のデータに基づいて未来のデータを予測するモデル"
+        },
+        {
+          "term": "尤度",
+          "definition": "あるモデルが与えられたデータを生成する確率"
+        },
+        {
+          "term": "重点サンプリング",
+          "definition": "特定の領域のサンプルを重視して推定精度を高める手法"
+        },
+        {
+          "term": "ヤコビアン行列",
+          "definition": "多変数関数の偏導関数を並べた行列"
+        },
+        {
+          "term": "大規模言語モデル",
+          "definition": "大量のテキストデータで学習されたAIモデル"
+        },
+        {
+          "term": "混合密度ネットワーク",
+          "definition": "複数の確率分布を組み合わせて複雑な分布を表現する"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "分子の安定した形を効率的に予測するAIモデル「ArBG」が、従来の課題を克服し、より大規模な分子でも高精度な予測を可能にしました。",
+      "noveltyContrast": {
+        "before": "従来のボルツマン生成器（BG）は、分子の多様な形状を効率的にサンプリングする強力な手法ですが、正規化フロー（NF）という技術に依存していました。NFは、分子の複雑な形状変化を捉える際に、表現力の限界や計算コストの高さという課題を抱えていました。特に、複数の安定した形状がエネルギーの壁で隔てられているような複雑な分子では、NFは不安定になりやすく、正確な予測が困難でした。",
+        "after": "この論文では、正規化フローに代わる新しい自己回帰モデリングフレームワーク「Autoregressive Boltzmann Generators (ArBG)」を提案しています。ArBGは、大規模言語モデルで培われた技術を活用し、分子の形状を連続的な条件付き確率の系列としてモデル化することで、従来のNFが抱えていた表現力の限界や計算コストの問題を回避します。これにより、より複雑で大規模な分子システムにおいても、安定かつ高精度な平衡状態のサンプリングを可能にしました。"
+      },
+      "analogy": {
+        "title": "畑の土壌分析を効率化する新技術",
+        "body": "これは、まるで広大な畑の土壌の状態を分析するようなものです。従来の技術（正規化フロー）は、土壌の硬さや水分量を測るのに、特定の場所をピンポイントで深く掘り下げていましたが、土壌全体の複雑な構造や、離れた場所にある異なる種類の土壌（安定した分子構造）を一度に理解するのが苦手でした。そのため、広範囲の畑を効率的に分析するには、時間もコストもかかりすぎていました。しかし、新しい技術（ArBG）は、ドローンで畑全体をスキャンし、過去のデータと照らし合わせながら、土壌の組成や状態を連続的に予測していくようなものです。これにより、土壌の多様な特性を素早く、かつ全体的に把握できるようになり、より効率的な作物育成計画を立てられるようになりました。土壌の複雑な構造を、一つ一つの要素が前の要素に影響を与えながら形成されると捉えることで、全体像をより正確に、そして迅速に把握できるのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "-60%",
+          "label": "エネルギー誤差 (E-W2)"
+        }
+      ],
+      "whyYouCare": "この研究は、新薬開発や新素材設計の分野に大きな影響を与える可能性があります。分子がどのような安定した形をとるかを正確に予測できれば、薬の効き目や副作用、素材の強度や特性などを、実験を行う前にコンピュータ上で詳細にシミュレーションできるようになります。これにより、開発期間の短縮、コスト削減、そしてより効果的で安全な製品の創出が期待できます。例えば、特定の病原体に結合しやすいタンパク質の形状を効率的に探索したり、特定の機能を持つ高分子材料の最適な構造を見つけたりすることが可能になります。これは、私たちの生活を豊かにする新たな医薬品や、環境に優しい高性能な素材の開発を加速させるでしょう。",
+      "takeawayTalk": "分子の安定した形をAIが超高速で予測！新薬開発が加速するかも。",
+      "bodyText": "本研究では、従来のフローベースのボルツマン生成器（BG）のパラダイムから脱却し、新しい自己回帰モデリングフレームワークである「Autoregressive Boltzmann Generators (ArBG)」を提案しています。ArBGは、分子の密度を条件付き密度の系列として因数分解する自己回帰パラダイムを採用しています。具体的には、pθ(x) = Πj p(xj|x<j) のように、各次元xjがそれ以前の次元x<jに条件付けられる形でモデル化されます。この定式化により、ヤコビアン行列の決定式や数値ODEソルバーといった計算コストの高い処理を回避し、単一のパスで厳密な尤度計算が可能になります。また、大規模言語モデル（LLM）で培われた自己回帰モデルのアーキテクチャとスケーリング特性を活用することで、表現力とスケーラビリティを向上させています。連続空間における自己回帰モデルの課題に対しては、混合密度ネットワーク（MDN）や、均一なビニング戦略を用いた新しいパラメータ化を検討しています。\n\nArBGが従来のフローベースモデルの限界を克服できるのは、主に3つの理由によります。第一に、自己回帰モデルはフローの持つ厳密な可逆性制約（微分同相写像であること）から解放されるため、離散時間フローの表現力のボトルネックを回避し、連続時間フローのような高価な計算コストを伴いません。これにより、複数の安定した状態がエネルギー障壁によって隔てられているような、複雑で不連続な分子の平衡分布をより正確にモデル化できます。第二に、自己回帰モデルは、高歪な微分同相写像を学習する際の数値的不安定性を回避するため、不連続なジャンプや分離したモードを持つ多峰性ターゲット密度をモデル化できます。第三に、ArBGは、現代のLLMを支える離散生成モデリングへの投資と進歩の恩恵を受け、モデルサイズと推論サンプルの両方で同様のスケーリング特性を示します。これにより、大規模な分子システムにおいても効率的かつ高精度なサンプリングが可能になります。",
+      "bodyGlossary": [
+        {
+          "term": "ボルツマン生成器",
+          "definition": "分子の平衡状態を効率的にサンプリングするモデル",
+          "start": 16,
+          "end": 24
+        },
+        {
+          "term": "自己回帰モデリング",
+          "definition": "過去のデータに基づいて未来のデータを予測するモデル",
+          "start": 43,
+          "end": 52
+        },
+        {
+          "term": "ヤコビアン行列",
+          "definition": "多変数関数の偏導関数を並べた行列",
+          "start": 239,
+          "end": 246
+        },
+        {
+          "term": "尤度",
+          "definition": "あるモデルが与えられたデータを生成する確率",
+          "start": 288,
+          "end": 290
+        },
+        {
+          "term": "大規模言語モデル",
+          "definition": "大量のテキストデータで学習されたAIモデル",
+          "start": 304,
+          "end": 312
+        },
+        {
+          "term": "混合密度ネットワーク",
+          "definition": "複数の確率分布を組み合わせて複雑な分布を表現する",
+          "start": 401,
+          "end": 411
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "ボルツマン生成器",
+          "definition": "分子の平衡状態を効率的にサンプリングするモデル",
+          "start": 16,
+          "end": 24
+        },
+        {
+          "term": "自己回帰モデリング",
+          "definition": "過去のデータに基づいて未来のデータを予測するモデル",
+          "start": 43,
+          "end": 52
+        },
+        {
+          "term": "ヤコビアン行列",
+          "definition": "多変数関数の偏導関数を並べた行列",
+          "start": 239,
+          "end": 246
+        },
+        {
+          "term": "尤度",
+          "definition": "あるモデルが与えられたデータを生成する確率",
+          "start": 288,
+          "end": 290
+        },
+        {
+          "term": "大規模言語モデル",
+          "definition": "大量のテキストデータで学習されたAIモデル",
+          "start": 304,
+          "end": 312
+        },
+        {
+          "term": "混合密度ネットワーク",
+          "definition": "複数の確率分布を組み合わせて複雑な分布を表現する",
+          "start": 401,
+          "end": 411
+        }
+      ],
+      "agriEconRelevance": "この自己回帰モデルは、農業経済学においても、例えば作物の成長モデルや病害の伝播予測に応用できる可能性があります。過去の気象データや土壌データ、病害発生履歴を系列データとして捉え、それらが作物の成長や病害の拡大にどのように影響するかを連続的に予測することで、より精密な農業経営計画やリスク管理が可能になります。特に、複数の要因が複雑に絡み合う農業システムにおいて、従来のモデルでは捉えきれなかった非線形な関係性や、複数の安定状態（例えば、健全な作物状態と病害蔓延状態）への遷移を、より正確にモデル化できるかもしれません。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 388,
+      "keyFigure": {
+        "imagePath": "/figures/2606.27361v1_results.jpeg",
+        "page": 15,
+        "caption": "ArBGが様々なペプチドベンチマークにおいて、他のベースラインモデルと比較して優れた性能を示していることを示しています。",
+        "label": "p.15",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-26T23:05:29.252Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.27361v1_results.jpeg",
+          "page": 15,
+          "caption": "ArBGが様々なペプチドベンチマークにおいて、他のベースラインモデルと比較して優れた性能を示していることを示しています。",
+          "label": "p.15",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-26T23:05:29.252Z"
+        },
+        {
+          "imagePath": "/figures/2606.27361v1_why.png",
+          "page": 24,
+          "caption": "自己回帰モデルがフローベースモデルの制約を克服し、複雑な分子分布をモデル化できるメカニズムを示しています。",
+          "label": "p.24",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-26T23:05:29.252Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.27345v1",
+      "title": "RayPE: Ray-Space Positional Encoding for 3D-Aware Video Generation",
+      "authors": [
+        "Minghao Yin",
+        "Jiahao Lu",
+        "Wenbo Hu",
+        "Wang Zhao",
+        "Shan Ying",
+        "Kai Han"
+      ],
+      "publishedAt": "2026-06-25T17:51:02Z",
+      "url": "https://arxiv.org/abs/2606.27345v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.27345v1.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "cs.CV"
+      ],
+      "abstract": "Modern video diffusion transformers position their tokens through RoPE on the (u,v,t) axes -- a description of the camera's sampling grid that says nothing about the 3D structure of the scene. We observe that the geometric relation between two camera rays is captured by the Plucker reciprocal product, which is bilinear in the two rays -- the same algebraic form as the dot product in Transformer attention. Building on this analogy, we propose RayPE, a positional-encoding extension that injects per-token 6D Plucker coordinates additively into the queries and keys of self-attention, with a query/key flip arrangement under which the symmetric identity configuration coincides exactly with the reciprocal product. The injection is additive, the resulting attention score decomposes into a content term, a geometry term, and two content and geometry cross-terms -- all of which our experiments find individually necessary. To make the encoding stable across video data with heterogeneous camera-translation scales (SfM, deep SLAM, metric), we further decouple ray direction from moment magnitude, gate the encoding by a learned function of the log-magnitude, and apply RMSNorm to align it with the QKNorm-normalized content branch. The full module adds less than 0.1% parameters to a pretrained video DiT, is zero-initialized to start from the pretrained weights, and improves camera controllability, cross-frame 3D consistency, and overall video quality on a four-dataset training mixture.",
+      "summary": {
+        "gist": "大規模なテキスト・画像からの動画生成において、動画拡散トランスフォーマーが主流となっています。これらのモデルは、各フレームを潜在トークンのグリッドに分割し、(u,v,t)軸に沿ったRoPE（回転位置エンコーディング）を通じて位置情報を注入します。このエンコーディングはカメラのサンプリンググリッド上の位置と時間軸を記述しますが、シーンの3D構造については何も語りません。そのため、異なる視点から同じ物理的表面を観測する2つのトークンは、位置関係を持たず、モデルはピクセル内容から幾何学的対応を回復する必要がありました。",
+        "novelty": "従来の動画生成AIは、各フレームのピクセルが画面上のどこにあるか（2D座標）と、時間の流れ（タイムスタンプ）しか知りませんでした。そのため、異なる視点から同じ物体を捉えた場合でも、AIはそれが同じ物体であるという3D的な位置関係をピクセル情報から推測するしかなく、動画の一貫性が損なわれることがありました。 この研究では、各ピクセルがカメラから伸びる「光線（レイ）」として3D空間に存在するという考え方を導入し、その光線の6次元座標（プラッカー座標）をAIの注意機構に直接組み込みました。これにより、AIはピクセル内容だけでなく、光線同士の3D的な位置関係も考慮して動画を生成できるようになりました。",
+        "method": "本研究では、動画ピクセルを生成したカメラ光線として識別し、その光線を6次元のプラッカー座標でパラメータ化します。2つの光線間の幾何学的関係は、プラッカー相互積によって捉えられ、これは2つの光線に対して双線形であり、トランスフォーマーの注意機構におけるドット積と同じ代数形式を持ちます。この類似性に基づき、RayPEを提案します。これは、トークンごとの6Dプラッカー座標を自己注意機構のクエリとキーに加算的に注入する位置エンコーディングの拡張です。注入は加算的であり、結果として得られる注意スコアは、内容項、幾何学項、および2つの内容と幾何学の交差項に分解されます。また、異なるカメラ並進スケールを持つビデオデータ全体でエンコーディングを安定させるため、光線方向をモーメントの大きさから分離し、対数大きさの学習関数によってエンコーディングをゲートし、RMSNormを適用してQKNormで正規化された内容ブランチと整合させます。",
+        "results": "RayPEは、事前学習済みのビデオDiTに0.1%未満のパラメータしか追加せず、事前学習済み重みから開始するためにゼロ初期化されます。4つのデータセットのトレーニング混合において、カメラ制御性、フレーム間の3D一貫性、および全体的なビデオ品質を向上させることが実験で示されました。",
+        "why": "プラッカー相互積は、2つの光線が共平面である（つまり、交差するか、平行であるか、一致する）場合にのみゼロになります。これは、異なるカメラを通して同じ3D点を観測する2つの光線がその点で出会い、共平面であるため、プラッカー相互積がゼロになることを意味します。トランスフォーマーの注意機構はクエリとキーのドット積を計算しますが、これも双線形形式です。これら2つは同じ代数形状を共有しているため、カメラ光線間の幾何学的関係を注意機構のドット積内に組み込むことで、モデルは位置信号と内容信号を既に運んでいる同じチャネルを通じて3D情報を受け取ることができます。これにより、AIはピクセル内容だけでなく、3D空間での光線同士の幾何学的な関係性も考慮して、より現実的で一貫性のある動画を生成できるようになります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.CV）",
+      "field": "AI・データサイエンス",
+      "categoryL1": "serendipity",
+      "categoryL2": "computer-vision",
+      "arxivPrimary": "cs.CV",
+      "titleJa": "RayPE: 3D認識ビデオ生成のためのRay-Space位置エンコーディング",
+      "catchTitle": "動画生成AIに「奥行き」を教える新技術",
+      "hook": "あなたがAIで動画を作るとき、登場人物が不自然に伸び縮みしたり、背景が歪んだりした経験はありませんか？",
+      "background": "大規模なテキスト・画像からの動画生成において、動画拡散トランスフォーマーが主流となっています。これらのモデルは、各フレームを潜在トークンのグリッドに分割し、(u,v,t)軸に沿ったRoPE（回転位置エンコーディング）を通じて位置情報を注入します。このエンコーディングはカメラのサンプリンググリッド上の位置と時間軸を記述しますが、シーンの3D構造については何も語りません。そのため、異なる視点から同じ物理的表面を観測する2つのトークンは、位置関係を持たず、モデルはピクセル内容から幾何学的対応を回復する必要がありました。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "RoPE",
+          "definition": "回転位置エンコーディング。トークンの相対位置を表現。"
+        },
+        {
+          "term": "プラッカー座標",
+          "definition": "3D空間の直線を表現する6次元の座標。"
+        },
+        {
+          "term": "自己注意機構",
+          "definition": "トランスフォーマーの主要部。トークン間の関連性を計算。"
+        },
+        {
+          "term": "クエリ",
+          "definition": "注意機構で、他のトークンとの関連性を問うベクトル。"
+        },
+        {
+          "term": "キー",
+          "definition": "注意機構で、クエリに応答する側のベクトル。"
+        },
+        {
+          "term": "双線形",
+          "definition": "2つの変数それぞれに対して線形である性質。"
+        },
+        {
+          "term": "プラッカー相互積",
+          "definition": "2つの光線の3D幾何学的関係を示す積。"
+        },
+        {
+          "term": "RMSNorm",
+          "definition": "モデルの安定化に使う正規化手法の一つ。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "動画生成AIの「目」に、3D空間での位置関係を直接理解させる新しい位置エンコーディング技術です。",
+      "noveltyContrast": {
+        "before": "従来の動画生成AIは、各フレームのピクセルが画面上のどこにあるか（2D座標）と、時間の流れ（タイムスタンプ）しか知りませんでした。そのため、異なる視点から同じ物体を捉えた場合でも、AIはそれが同じ物体であるという3D的な位置関係をピクセル情報から推測するしかなく、動画の一貫性が損なわれることがありました。",
+        "after": "この研究では、各ピクセルがカメラから伸びる「光線（レイ）」として3D空間に存在するという考え方を導入し、その光線の6次元座標（プラッカー座標）をAIの注意機構に直接組み込みました。これにより、AIはピクセル内容だけでなく、光線同士の3D的な位置関係も考慮して動画を生成できるようになりました。"
+      },
+      "analogy": {
+        "title": "畑の畝（うね）と作物の位置関係を教える",
+        "body": "これは、まるで農家が畑で作業する際に、作物がどの畝の何番目に植えられているか（2D座標と時間）だけでなく、「このトマトとあのキュウリは、同じ水路の隣にあり、互いに日陰を作る可能性がある」といった3D的な位置関係を直接教えるようなものです。従来のAIは、ただ「トマトがここ、キュウリがあそこ」としか知らず、互いの影や成長への影響は、見た目（色や形）から推測するしかありませんでした。しかしRayPEは、畝と水路、そして作物同士の正確な位置関係を最初から教えることで、より自然で一貫性のある畑（動画）を作れるようになるのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この技術は、AIが生成する動画の品質を劇的に向上させる可能性を秘めています。例えば、建築や製品デザインの分野では、AIが生成する3Dモデルの動画がより正確でリアルになり、設計レビューの効率化に貢献するでしょう。エンターテイメント業界では、より自然で没入感のあるCG映像制作が可能になり、クリエイターの表現の幅を広げます。また、農業分野では、ドローンで撮影した作物の生育状況動画から、AIがより正確な3Dモデルを構築し、生育予測や病害虫の早期発見に役立てるなど、産業応用への期待も高まります。",
+      "takeawayTalk": "AIが動画を生成する際、3D空間の奥行きを直接理解できるようになったよ！",
+      "bodyText": "本研究では、動画ピクセルを生成したカメラ光線として識別し、その光線を6次元のプラッカー座標でパラメータ化します。2つの光線間の幾何学的関係は、プラッカー相互積によって捉えられ、これは2つの光線に対して双線形であり、トランスフォーマーの注意機構におけるドット積と同じ代数形式を持ちます。この類似性に基づき、RayPEを提案します。これは、トークンごとの6Dプラッカー座標を自己注意機構のクエリとキーに加算的に注入する位置エンコーディングの拡張です。注入は加算的であり、結果として得られる注意スコアは、内容項、幾何学項、および2つの内容と幾何学の交差項に分解されます。また、異なるカメラ並進スケールを持つビデオデータ全体でエンコーディングを安定させるため、光線方向をモーメントの大きさから分離し、対数大きさの学習関数によってエンコーディングをゲートし、RMSNormを適用してQKNormで正規化された内容ブランチと整合させます。\n\nプラッカー相互積は、2つの光線が共平面である（つまり、交差するか、平行であるか、一致する）場合にのみゼロになります。これは、異なるカメラを通して同じ3D点を観測する2つの光線がその点で出会い、共平面であるため、プラッカー相互積がゼロになることを意味します。トランスフォーマーの注意機構はクエリとキーのドット積を計算しますが、これも双線形形式です。これら2つは同じ代数形状を共有しているため、カメラ光線間の幾何学的関係を注意機構のドット積内に組み込むことで、モデルは位置信号と内容信号を既に運んでいる同じチャネルを通じて3D情報を受け取ることができます。これにより、AIはピクセル内容だけでなく、3D空間での光線同士の幾何学的な関係性も考慮して、より現実的で一貫性のある動画を生成できるようになります。",
+      "bodyGlossary": [
+        {
+          "term": "プラッカー座標",
+          "definition": "3D空間の直線を表現する6次元の座標。",
+          "start": 38,
+          "end": 45
+        },
+        {
+          "term": "プラッカー相互積",
+          "definition": "2つの光線の3D幾何学的関係を示す積。",
+          "start": 71,
+          "end": 79
+        },
+        {
+          "term": "双線形",
+          "definition": "2つの変数それぞれに対して線形である性質。",
+          "start": 100,
+          "end": 103
+        },
+        {
+          "term": "自己注意機構",
+          "definition": "トランスフォーマーの主要部。トークン間の関連性を計算。",
+          "start": 185,
+          "end": 191
+        },
+        {
+          "term": "クエリ",
+          "definition": "注意機構で、他のトークンとの関連性を問うベクトル。",
+          "start": 192,
+          "end": 195
+        },
+        {
+          "term": "キー",
+          "definition": "注意機構で、クエリに応答する側のベクトル。",
+          "start": 196,
+          "end": 198
+        },
+        {
+          "term": "RMSNorm",
+          "definition": "モデルの安定化に使う正規化手法の一つ。",
+          "start": 374,
+          "end": 381
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "プラッカー座標",
+          "definition": "3D空間の直線を表現する6次元の座標。",
+          "start": 38,
+          "end": 45
+        },
+        {
+          "term": "プラッカー相互積",
+          "definition": "2つの光線の3D幾何学的関係を示す積。",
+          "start": 71,
+          "end": 79
+        },
+        {
+          "term": "双線形",
+          "definition": "2つの変数それぞれに対して線形である性質。",
+          "start": 100,
+          "end": 103
+        },
+        {
+          "term": "自己注意機構",
+          "definition": "トランスフォーマーの主要部。トークン間の関連性を計算。",
+          "start": 185,
+          "end": 191
+        },
+        {
+          "term": "クエリ",
+          "definition": "注意機構で、他のトークンとの関連性を問うベクトル。",
+          "start": 192,
+          "end": 195
+        },
+        {
+          "term": "キー",
+          "definition": "注意機構で、クエリに応答する側のベクトル。",
+          "start": 196,
+          "end": 198
+        },
+        {
+          "term": "RMSNorm",
+          "definition": "モデルの安定化に使う正規化手法の一つ。",
+          "start": 374,
+          "end": 381
+        }
+      ],
+      "agriEconRelevance": "この3D認識技術は、農業経済学にも応用可能です。例えば、ドローンで撮影した広範囲の農地の動画から、作物の高さ、密度、傾きといった3D情報を正確に抽出し、生育状況のモニタリング精度を向上させることができます。これにより、収穫量の予測精度が高まり、市場価格の変動リスクを低減するデータを提供できます。また、農地の地形や水はけの3D分析を通じて、最適な灌漑計画や土壌管理戦略を立てることも可能になり、資源の効率的な利用と生産性向上に貢献します。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 288,
+      "keyFigure": {
+        "imagePath": "/figures/2606.27345v1_results.jpeg",
+        "page": 8,
+        "caption": "RayPEが生成したRealEstate10Kデータセットの動画フレームを、他の手法と比較しています。",
+        "label": "Figure 4. Qualitative comparison on RealEstate10K. Each row shows frames from the same clip generated under the same tar",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-26T23:05:31.554Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.27345v1_results.jpeg",
+          "page": 8,
+          "caption": "RayPEが生成したRealEstate10Kデータセットの動画フレームを、他の手法と比較しています。",
+          "label": "Figure 4. Qualitative comparison on RealEstate10K. Each row shows frames from the same clip generated under the same tar",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-26T23:05:31.554Z"
+        },
+        {
+          "imagePath": "/figures/2606.27345v1_why.jpeg",
+          "page": 2,
+          "caption": "注意機構が光線の幾何学的関係を必要とする理由を説明する概念図です。",
+          "label": "Figure 2. Why attention needs ray geometry. Two cameras (blue,",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-26T23:05:31.554Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.27330v1",
+      "title": "Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning",
+      "authors": [
+        "Tianyi Men",
+        "Zhuoran Jin",
+        "Pengfei Cao",
+        "Yubo Chen",
+        "Kang Liu",
+        "Jun Zhao"
+      ],
+      "publishedAt": "2026-06-25T17:44:48Z",
+      "url": "https://arxiv.org/abs/2606.27330v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.27330v1.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "cs.CL",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "abstract": "Multimodal web agents can assist humans in operating repetitive GUI tasks, where effective task planning is essential for decomposing complex tasks into executable actions. While small open source MLLMs are cost efficient and privacy preserving compared with commercial large models, they suffer from weak planning and limited cross website generalization. To address these limitations, we introduce the planning experience exploration and utilization (PEEU) method, which autonomously explores environments to discover experiences and utilizes hindsight experience to synthesize strictly aligned, high level training data. To quantitatively analyze the generalization behaviors driving this performance, we propose the task decomposition hierarchical analysis framework (TDHAF) to systematically study compositional generalization across three task granularities: low, middle and high levels. Our analysis reveals that mastering low level atomic skills does not guarantee high level planning competence, while high level task training yields stronger OOD generalization. Experiments on real world benchmarks demonstrate PEEU's superior effectiveness: our 7B model achieves 30.6% accuracy, outperforming the much larger Qwen2.5-VL-32B model. These demonstrate constructing hindsight high level tasks and leveraging experiences is crucial for OOD planning abilities of small MLLMs.",
+      "summary": {
+        "gist": "マルチモーダルウェブエージェントは、人間がウェブサイト上で行う反復的なGUIタスクを支援する魅力的なソリューションです。特に、商用大規模モデルの高コストやプライバシーリスクを考えると、オープンソースの小型マルチモーダル大規模言語モデル（MLLM）の活用が期待されています。しかし、小型MLLMはタスク計画能力が弱く、未知のウェブサイトへの汎化能力が低いという課題がありました。",
+        "novelty": "従来のAIは、ウェブ操作タスクを「クリック」「入力」といった個別の短い動作（原子レベルタスク）で学習するか、漠然とした高レベルタスクで学習していました。しかし、これでは未知のウェブサイトでの応用が難しく、特に小さなAIモデルでは計画能力が不十分でした。 この研究では、AIが自律的にウェブサイトを探索して経験を積み、その経験を「過去の行動から逆算して、より具体的で厳密な高レベルタスク」として再構築するPEEU（計画経験探索と活用）という新しい学習法を提案。これにより、小さなAIでも未知のウェブサイトで複雑なタスクを高い精度で実行できるようになりました。",
+        "method": "本研究では、PEEU（Planning Experience Exploration and Utilization）という手法を提案しました。これは、AIが自律的にウェブ環境を探索して経験を収集し、その経験を「後知恵経験」として活用することで、厳密に整合性の取れた高レベルの訓練データを生成するものです。具体的には、まずAIがウェブサイトの特性に合わせて探索目標を自律的に設定し、探索ツリーを構築します。次に、この探索で得られた軌跡から価値ある経験を抽出し、それらを元に、より整合性が高く制約の厳しいタスクと軌跡のペアを作成し、小型MLLMの訓練に用います。さらに、タスク分解階層分析フレームワーク（TDHAF）を提案し、低・中・高レベルの3つの粒度でタスクの汎化挙動を体系的に分析しました。",
+        "results": "PEEUは、未知の7つのウェブサイトでの実験において、優れた汎化能力を示しました。特に、Qwen2.5-VL-7Bモデル（2k軌跡で訓練）では、PEEU-SFTが30.6%の精度を達成し、従来のAtomic-SFTベースラインの21.7%を大きく上回りました。この傾向は、モデルサイズ（Qwen2.5-VL-3Bと7B）やデータ量（0.1kと2k軌跡）が異なる場合でも一貫しており、高レベルタスクを用いた訓練が未知のウェブ環境での計画能力に優れた汎化能力をもたらすことを示しています。また、原子レベルのスキルを習得しても高レベルの計画能力は保証されないこと、高レベルタスクでの訓練がより強力なOOD（未知のドメイン）汎化をもたらすことも明らかにしました。",
+        "why": "この研究のメカニズムは、主に「後知恵経験の活用」と「高レベルタスクでの訓練」にあります。従来の学習では、与えられたタスクに対してAIが行動し、その結果を評価していました。しかし、PEEUでは、AIが自律的にウェブサイトを探索して得られた「行動の軌跡」から、後から「この行動の軌跡は、こういう高レベルのタスクを達成したものだった」と逆算して、より具体的で厳密なタスクを生成します。これにより、AIは単なる個別の操作（クリック、入力など）だけでなく、それらの操作が組み合わさって達成される「より大きな目的」を理解し、未知の状況でも応用できる汎化能力を獲得します。高レベルタスクで訓練することで、AIは複雑な状況全体を俯瞰し、柔軟な計画を立てられるようになるため、個別の操作を学ぶだけでは得られない、より強力な汎化能力を発揮できるのです。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.CL）",
+      "field": "AI・データサイエンス",
+      "categoryL1": "serendipity",
+      "categoryL2": "ai-agent",
+      "arxivPrimary": "cs.CL",
+      "titleJa": "自律的な経験探索と過去経験活用によるGUIエージェントのタスク計画能力向上",
+      "catchTitle": "小さなAIが賢くウェブ操作！経験を活かす学習法",
+      "hook": "ウェブサイトの操作、AIに任せたいけど、複雑なタスクは苦手そう…と感じていませんか？",
+      "background": "マルチモーダルウェブエージェントは、人間がウェブサイト上で行う反復的なGUIタスクを支援する魅力的なソリューションです。特に、商用大規模モデルの高コストやプライバシーリスクを考えると、オープンソースの小型マルチモーダル大規模言語モデル（MLLM）の活用が期待されています。しかし、小型MLLMはタスク計画能力が弱く、未知のウェブサイトへの汎化能力が低いという課題がありました。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "GUI",
+          "definition": "グラフィカルユーザーインターフェース。画面上のボタンやアイコン。"
+        },
+        {
+          "term": "MLLM",
+          "definition": "マルチモーダル大規模言語モデル。画像とテキストを理解するAI。"
+        },
+        {
+          "term": "PEEU",
+          "definition": "計画経験探索と活用。AIが自律的に経験を収集・活用する手法。"
+        },
+        {
+          "term": "後知恵経験",
+          "definition": "過去の行動結果から、その行動を導いたタスクを逆算して学ぶ経験。"
+        },
+        {
+          "term": "探索ツリー",
+          "definition": "AIがウェブサイトを探索した経路を記録した構造。"
+        },
+        {
+          "term": "TDHAF",
+          "definition": "タスク分解階層分析フレームワーク。タスクの粒度を分析する枠組み。"
+        },
+        {
+          "term": "汎化能力",
+          "definition": "学習した知識を、未知の状況やデータに応用できる能力。"
+        },
+        {
+          "term": "OOD",
+          "definition": "Out-of-Domain。学習時とは異なる未知のドメイン（領域）。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "小さなAIが自らウェブを探索し、過去の経験を賢く活用することで、複雑なウェブ操作タスクを高い精度でこなせるようになりました。",
+      "noveltyContrast": {
+        "before": "従来のAIは、ウェブ操作タスクを「クリック」「入力」といった個別の短い動作（原子レベルタスク）で学習するか、漠然とした高レベルタスクで学習していました。しかし、これでは未知のウェブサイトでの応用が難しく、特に小さなAIモデルでは計画能力が不十分でした。",
+        "after": "この研究では、AIが自律的にウェブサイトを探索して経験を積み、その経験を「過去の行動から逆算して、より具体的で厳密な高レベルタスク」として再構築するPEEU（計画経験探索と活用）という新しい学習法を提案。これにより、小さなAIでも未知のウェブサイトで複雑なタスクを高い精度で実行できるようになりました。"
+      },
+      "analogy": {
+        "title": "ベテラン農家が新しい畑を耕すように",
+        "body": "新しい畑を耕すとき、ベテラン農家はまず畑全体を見渡し、土壌や地形、日当たりといった「環境特性」を把握して、どんな作物が育ちやすいか、どんな作業が必要かを大まかに計画します。そして、実際に耕しながら「この土壌ならもっと深く耕すべきだった」「この場所は水はけが悪いから畝を高くしよう」といった経験を積み、その経験を元に「この畑で最高の収穫を得るには、こういう手順で作業すべきだ」という、より具体的で厳密な「作業計画」を立て直します。この研究のAIも、初めて訪れるウェブサイト（新しい畑）で、自ら探索（耕す）して経験を積み、その経験から「このサイトで目的を達成するには、こういう手順が最適だ」という高精度なタスク計画（作業計画）を立てるようなものです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+22.8pt",
+          "label": "Qwen2.5-VL-7Bモデルの精度向上"
+        },
+        {
+          "value": "30.6%",
+          "label": "Qwen2.5-VL-7Bモデルの最終精度"
+        }
+      ],
+      "whyYouCare": "この研究は、AIがより賢く、より自律的にウェブサイトを操作できるようになる可能性を示しています。例えば、あなたがECサイトで特定の商品を探したり、複数のサイトを横断して情報を収集したりする際、AIがまるで熟練のアシスタントのように、指示されたタスクを正確に、そして柔軟にこなせるようになるかもしれません。これは、日々の情報収集やオンラインショッピングの効率を劇的に向上させるだけでなく、企業のカスタマーサポートやデータ入力といった定型業務の自動化にも大きく貢献するでしょう。特に、コストやプライバシーの観点から大規模な商用AIモデルの利用が難しい中小企業や個人事業主にとっても、小型AIの能力向上は大きなメリットをもたらします。",
+      "takeawayTalk": "小さなAIも、自分でウェブを探索して賢く経験を活かせば、複雑なタスクもこなせるようになるんだ！",
+      "bodyText": "本研究では、PEEU（Planning Experience Exploration and Utilization）という手法を提案しました。これは、AIが自律的にウェブ環境を探索して経験を収集し、その経験を「後知恵経験」として活用することで、厳密に整合性の取れた高レベルの訓練データを生成するものです。具体的には、まずAIがウェブサイトの特性に合わせて探索目標を自律的に設定し、探索ツリーを構築します。次に、この探索で得られた軌跡から価値ある経験を抽出し、それらを元に、より整合性が高く制約の厳しいタスクと軌跡のペアを作成し、小型MLLMの訓練に用います。さらに、タスク分解階層分析フレームワーク（TDHAF）を提案し、低・中・高レベルの3つの粒度でタスクの汎化挙動を体系的に分析しました。\n\nこの研究のメカニズムは、主に「後知恵経験の活用」と「高レベルタスクでの訓練」にあります。従来の学習では、与えられたタスクに対してAIが行動し、その結果を評価していました。しかし、PEEUでは、AIが自律的にウェブサイトを探索して得られた「行動の軌跡」から、後から「この行動の軌跡は、こういう高レベルのタスクを達成したものだった」と逆算して、より具体的で厳密なタスクを生成します。これにより、AIは単なる個別の操作（クリック、入力など）だけでなく、それらの操作が組み合わさって達成される「より大きな目的」を理解し、未知の状況でも応用できる汎化能力を獲得します。高レベルタスクで訓練することで、AIは複雑な状況全体を俯瞰し、柔軟な計画を立てられるようになるため、個別の操作を学ぶだけでは得られない、より強力な汎化能力を発揮できるのです。",
+      "bodyGlossary": [
+        {
+          "term": "PEEU",
+          "definition": "計画経験探索と活用。AIが自律的に経験を収集・活用する手法。",
+          "start": 6,
+          "end": 10
+        },
+        {
+          "term": "後知恵経験",
+          "definition": "過去の行動結果から、その行動を導いたタスクを逆算して学ぶ経験。",
+          "start": 106,
+          "end": 111
+        },
+        {
+          "term": "探索ツリー",
+          "definition": "AIがウェブサイトを探索した経路を記録した構造。",
+          "start": 191,
+          "end": 196
+        },
+        {
+          "term": "MLLM",
+          "definition": "マルチモーダル大規模言語モデル。画像とテキストを理解するAI。",
+          "start": 267,
+          "end": 271
+        },
+        {
+          "term": "TDHAF",
+          "definition": "タスク分解階層分析フレームワーク。タスクの粒度を分析する枠組み。",
+          "start": 301,
+          "end": 306
+        },
+        {
+          "term": "汎化能力",
+          "definition": "学習した知識を、未知の状況やデータに応用できる能力。",
+          "start": 617,
+          "end": 621
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "PEEU",
+          "definition": "計画経験探索と活用。AIが自律的に経験を収集・活用する手法。",
+          "start": 6,
+          "end": 10
+        },
+        {
+          "term": "後知恵経験",
+          "definition": "過去の行動結果から、その行動を導いたタスクを逆算して学ぶ経験。",
+          "start": 106,
+          "end": 111
+        },
+        {
+          "term": "探索ツリー",
+          "definition": "AIがウェブサイトを探索した経路を記録した構造。",
+          "start": 191,
+          "end": 196
+        },
+        {
+          "term": "MLLM",
+          "definition": "マルチモーダル大規模言語モデル。画像とテキストを理解するAI。",
+          "start": 267,
+          "end": 271
+        },
+        {
+          "term": "TDHAF",
+          "definition": "タスク分解階層分析フレームワーク。タスクの粒度を分析する枠組み。",
+          "start": 301,
+          "end": 306
+        },
+        {
+          "term": "汎化能力",
+          "definition": "学習した知識を、未知の状況やデータに応用できる能力。",
+          "start": 617,
+          "end": 621
+        }
+      ],
+      "agriEconRelevance": "この研究で示された「自律的な経験探索と後知恵経験の活用」は、農業経済分野におけるAIの応用にも大きな示唆を与えます。例えば、スマート農業における農機具の自律制御や、農産物の流通・販売におけるウェブサイト操作の自動化に応用可能です。AIが未知の農地環境（ウェブサイト）を自律的に探索し、過去の作業データ（経験）から「この土壌ではこの肥料が最適だった」といった高レベルな知見を生成・活用することで、より効率的で精密な農業計画を立てられるようになるでしょう。これにより、生産性の向上やコスト削減、さらには新たな販売チャネルの開拓にも繋がる可能性があります。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 309,
+      "keyFigure": {
+        "imagePath": "/figures/2606.27330v1_results.jpeg",
+        "page": 6,
+        "caption": "PEEUが未知のウェブサイトで優れた汎化能力を示す詳細な例です。",
+        "label": "Figure 3 provides a detailed example of",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-26T23:05:33.450Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.27330v1_results.jpeg",
+          "page": 6,
+          "caption": "PEEUが未知のウェブサイトで優れた汎化能力を示す詳細な例です。",
+          "label": "Figure 3 provides a detailed example of",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-26T23:05:33.450Z"
+        },
+        {
+          "imagePath": "/figures/2606.27330v1_why.jpeg",
+          "page": 3,
+          "caption": "AIが自律的にウェブサイトを探索し、高レベルタスクを生成するプロンプトの例です。",
+          "label": "Figure 2. All prompts are",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-26T23:05:33.450Z"
+        }
+      ]
+    }
+  ]
+}

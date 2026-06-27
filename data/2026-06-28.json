@@ -1,0 +1,1035 @@
+{
+  "date": "2026-06-28",
+  "papers": [
+    {
+      "id": "2606.26674v1",
+      "title": "On-farm management strategies for reducing H5N1 transmission in dairy cattle",
+      "authors": [
+        "Oliver Eales",
+        "Scott Ison",
+        "Rachael Gibney",
+        "Zoe Vogels",
+        "James M. McCaw",
+        "Freya M. Shearer"
+      ],
+      "publishedAt": "2026-06-25T07:09:23Z",
+      "url": "https://arxiv.org/abs/2606.26674v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.26674v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "q-bio.PE"
+      ],
+      "abstract": "Introductions of H5N1 clade 2.3.4.4b into dairy cattle have resulted in outbreaks on dairy farms across the United States since early-2024. Outbreaks have significant consequences for animal health, result in economic losses for the dairy industry, and pose a threat to human health. Though the relative contributions of different on-farm transmission pathways remain a key uncertainty, a major route is considered to be through repeated contamination of milking stalls (i.e. the equipment and area where an individual cow is milked) due to the milking of infected animals. Here we develop mathematical models of H5N1 transmission dynamics on dairy farms, considering multiple possible transmission pathways, and identify factors that contribute to outbreak risk and on-farm interventions for mitigating risk. In particular, we demonstrate that dividing cattle into 'milking cohorts', with cohorts kept in separate pens or paddocks and milked in the same order every day, would be highly effective at mitigating outbreaks irrespective of the dominant transmission pathway. Cohorting cattle is most effective when implemented pre-emptively (i.e. before an outbreak) and when newly introduced cattle are kept in the final milking cohort. Additionally, we demonstrate that frequent bulk milk sample testing (e.g. weekly) would enable the rapid detection of outbreaks and implementation of reactive interventions (or scaling up of existing interventions). Our findings can support the development of management guidelines for effectively responding to H5N1 outbreaks in dairy cattle.",
+      "summary": {
+        "gist": "2024年初頭から米国で乳牛におけるH5N1鳥インフルエンザの発生が報告され、動物の健康、酪農産業の経済的損失、そして人への感染リスクが懸念されています。感染経路の特定は不確実な点が多いものの、搾乳施設の繰り返し汚染が主要な感染経路と考えられています。これまでの対策は感染牛の州間移動防止に重点が置かれてきましたが、農場内での感染拡大を抑制する効果的な戦略が求められています。",
+        "novelty": "これまでの鳥インフルエンザ対策は、感染牛の移動制限や、感染が確認された後の対応が中心でした。しかし、これらの対策だけでは農場内での感染拡大を十分に防ぐことが難しく、経済的損失や人への感染リスクが懸念されていました。 この研究では、数理モデルとシミュレーションを用いて、農場内で牛を「搾乳コホート」に分け、毎日同じ順番で搾乳する予防策が、感染経路によらずH5N1の拡大を非常に効果的に抑制できることを示しました。また、定期的な生乳検査も早期発見に役立ちます。",
+        "method": "本研究では、乳牛におけるH5N1伝播ダイナミクスを記述する数理モデルと確率的シミュレーションモデルを開発しました。このモデルは、牛の感染状態（感受性、曝露、感染性、回復）と搾乳施設の汚染状態（非汚染、汚染）を明示的にモデル化しています。直接的な牛から牛への感染と、搾乳施設を介した感染の両方を考慮し、感染拡大のリスク要因と、リスクを軽減するための農場内介入策を特定しました。特に、搾乳施設の清掃強化と、牛を「搾乳コホート」に分けて飼育し、毎日同じ順番で搾乳する戦略の有効性を評価しました。また、介入策を予防的に実施する場合と、感染確認後に反応的に実施する場合の効果、および生乳検査頻度の影響も分析しました。",
+        "results": "数理モデルとシミュレーションの結果、牛を「搾乳コホート」に分け、コホートごとに別々の囲いや放牧地で飼育し、毎日同じ順番で搾乳する戦略が、主要な感染経路によらず、H5N1の農場内感染拡大を非常に効果的に抑制できることが示されました。このコホート分けは、アウトブレイク発生前（予防的）に実施した場合に最も効果が高く、新たに導入される牛を最終搾乳コホートに加えることでさらに効果が増します。加えて、週に一度などの頻繁な生乳サンプル検査は、アウトブレイクの迅速な検出と、その後の介入策の実施（または既存の介入策の強化）を可能にすることが示されました。",
+        "why": "H5N1ウイルスの主要な感染経路は、感染した牛を搾乳する際に搾乳施設（搾乳ユニット、飼料槽、搾乳台など）が汚染され、その汚染された施設を介して他の牛に感染が広がる「牛-搾乳施設-牛」の経路だと考えられています。牛をコホートに分け、同じコホートの牛を同じ順番で搾乳することで、もしコホート内に感染牛がいても、そのコホート内でのみ搾乳施設が汚染され、他のコホートへのウイルスの持ち出しが大幅に減少します。これにより、農場全体への感染拡大が抑制されるのです。また、生乳検査は、感染牛が症状を示す前にウイルスを検出できるため、早期に感染拡大を食い止めるための重要な情報を提供します。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.PE）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "farm-management",
+      "arxivPrimary": "q-bio.PE",
+      "titleJa": "乳牛におけるH5N1伝播を減らすための農場内管理戦略",
+      "catchTitle": "H5N1鳥インフル、牛舎での感染拡大を止める秘策",
+      "hook": "あなたの食卓に並ぶ牛乳。その生産現場で、もし鳥インフルエンザが大流行したらどうなるか考えたことはありますか？",
+      "background": "2024年初頭から米国で乳牛におけるH5N1鳥インフルエンザの発生が報告され、動物の健康、酪農産業の経済的損失、そして人への感染リスクが懸念されています。感染経路の特定は不確実な点が多いものの、搾乳施設の繰り返し汚染が主要な感染経路と考えられています。これまでの対策は感染牛の州間移動防止に重点が置かれてきましたが、農場内での感染拡大を抑制する効果的な戦略が求められています。",
+      "quiz": {
+        "question": "H5N1鳥インフルエンザの農場内感染を抑制するために、最も効果的な対策として本研究で示されたものは何でしょう？",
+        "options": [
+          "感染牛の州間移動を厳しく制限する",
+          "搾乳施設の清掃を強化する",
+          "牛をグループ分けし、同じ順番で搾乳する"
+        ],
+        "correctIndex": 2,
+        "explanation": "本研究では、牛を「搾乳コホート」に分け、コホートごとに別々の囲いや放牧地で飼育し、毎日同じ順番で搾乳する戦略が、主要な感染経路によらず、H5N1の農場内感染拡大を非常に効果的に抑制できることが示されました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "H5N1",
+          "definition": "高病原性鳥インフルエンザウイルスの一種。"
+        },
+        {
+          "term": "数理モデル",
+          "definition": "現象を数学的な方程式で表現したもの。"
+        },
+        {
+          "term": "確率的シミュレーションモデル",
+          "definition": "確率的要素を含むシミュレーションモデル。"
+        },
+        {
+          "term": "搾乳コホート",
+          "definition": "搾乳のために分けられた牛のグループ。"
+        },
+        {
+          "term": "予防的",
+          "definition": "アウトブレイク発生前に行われる対策。"
+        },
+        {
+          "term": "生乳サンプル検査",
+          "definition": "搾乳された牛乳のサンプルを用いた検査。"
+        },
+        {
+          "term": "搾乳施設",
+          "definition": "搾乳に使われる設備や場所。"
+        },
+        {
+          "term": "アウトブレイク",
+          "definition": "特定の地域で病気が突発的に発生すること。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "牛をグループ分けして同じ順番で搾乳することで、H5N1鳥インフルエンザの農場内感染を効果的に抑制できます。",
+      "noveltyContrast": {
+        "before": "これまでの鳥インフルエンザ対策は、感染牛の移動制限や、感染が確認された後の対応が中心でした。しかし、これらの対策だけでは農場内での感染拡大を十分に防ぐことが難しく、経済的損失や人への感染リスクが懸念されていました。",
+        "after": "この研究では、数理モデルとシミュレーションを用いて、農場内で牛を「搾乳コホート」に分け、毎日同じ順番で搾乳する予防策が、感染経路によらずH5N1の拡大を非常に効果的に抑制できることを示しました。また、定期的な生乳検査も早期発見に役立ちます。"
+      },
+      "analogy": {
+        "title": "畑の区画整理と輪作で病害を防ぐ",
+        "body": "これは、まるで広大な畑で特定の病害が流行した際に、畑全体をいくつかの区画に分け、それぞれの区画で同じ種類の作物を同じ順番で栽培する「輪作」のようなものです。病原菌が特定の区画に留まりやすくなり、他の区画への拡散を防ぐことで、畑全体の収穫量への影響を最小限に抑えられます。牛のコホート分けも、感染源が特定のグループに限定されるため、農場全体への病気の広がりを食い止める効果があるのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、私たちの食卓に欠かせない牛乳の安定供給を守る上で非常に重要です。H5N1鳥インフルエンザが酪農場で流行すると、牛の健康被害だけでなく、牛乳の生産量減少や価格上昇につながる可能性があります。さらに、人への感染リスクもゼロではありません。この研究で提案された「搾乳コホート」による管理や定期的な検査は、農家が実践しやすい具体的な対策であり、感染拡大を未然に防ぎ、私たちの健康と経済を守るための有効な手段となります。安全な牛乳を安心して飲み続けるためにも、このような研究は私たちの生活に直結しているのです。",
+      "takeawayTalk": "牛のグループ分けと搾乳順序の工夫で、鳥インフルエンザの感染拡大を防げるんだって！",
+      "bodyText": "本研究では、乳牛におけるH5N1伝播ダイナミクスを記述する数理モデルと確率的シミュレーションモデルを開発しました。このモデルは、牛の感染状態（感受性、曝露、感染性、回復）と搾乳施設の汚染状態（非汚染、汚染）を明示的にモデル化しています。直接的な牛から牛への感染と、搾乳施設を介した感染の両方を考慮し、感染拡大のリスク要因と、リスクを軽減するための農場内介入策を特定しました。特に、搾乳施設の清掃強化と、牛を「搾乳コホート」に分けて飼育し、毎日同じ順番で搾乳する戦略の有効性を評価しました。また、介入策を予防的に実施する場合と、感染確認後に反応的に実施する場合の効果、および生乳検査頻度の影響も分析しました。\n\nH5N1ウイルスの主要な感染経路は、感染した牛を搾乳する際に搾乳施設（搾乳ユニット、飼料槽、搾乳台など）が汚染され、その汚染された施設を介して他の牛に感染が広がる「牛-搾乳施設-牛」の経路だと考えられています。牛をコホートに分け、同じコホートの牛を同じ順番で搾乳することで、もしコホート内に感染牛がいても、そのコホート内でのみ搾乳施設が汚染され、他のコホートへのウイルスの持ち出しが大幅に減少します。これにより、農場全体への感染拡大が抑制されるのです。また、生乳検査は、感染牛が症状を示す前にウイルスを検出できるため、早期に感染拡大を食い止めるための重要な情報を提供します。",
+      "bodyGlossary": [
+        {
+          "term": "H5N1",
+          "definition": "高病原性鳥インフルエンザウイルスの一種。",
+          "start": 12,
+          "end": 16
+        },
+        {
+          "term": "数理モデル",
+          "definition": "現象を数学的な方程式で表現したもの。",
+          "start": 29,
+          "end": 34
+        },
+        {
+          "term": "確率的シミュレーションモデル",
+          "definition": "確率的要素を含むシミュレーションモデル。",
+          "start": 35,
+          "end": 49
+        },
+        {
+          "term": "搾乳施設",
+          "definition": "搾乳に使われる設備や場所。",
+          "start": 86,
+          "end": 90
+        },
+        {
+          "term": "搾乳コホート",
+          "definition": "搾乳のために分けられた牛のグループ。",
+          "start": 204,
+          "end": 210
+        },
+        {
+          "term": "予防的",
+          "definition": "アウトブレイク発生前に行われる対策。",
+          "start": 251,
+          "end": 254
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "H5N1",
+          "definition": "高病原性鳥インフルエンザウイルスの一種。",
+          "start": 12,
+          "end": 16
+        },
+        {
+          "term": "数理モデル",
+          "definition": "現象を数学的な方程式で表現したもの。",
+          "start": 29,
+          "end": 34
+        },
+        {
+          "term": "確率的シミュレーションモデル",
+          "definition": "確率的要素を含むシミュレーションモデル。",
+          "start": 35,
+          "end": 49
+        },
+        {
+          "term": "搾乳施設",
+          "definition": "搾乳に使われる設備や場所。",
+          "start": 86,
+          "end": 90
+        },
+        {
+          "term": "搾乳コホート",
+          "definition": "搾乳のために分けられた牛のグループ。",
+          "start": 204,
+          "end": 210
+        },
+        {
+          "term": "予防的",
+          "definition": "アウトブレイク発生前に行われる対策。",
+          "start": 251,
+          "end": 254
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 252,
+      "keyFigure": {
+        "imagePath": "/figures/2606.26674v1_results.png",
+        "page": 8,
+        "caption": "乳牛を搾乳コホートに分けることによるアウトブレイク抑制効果を示しています。",
+        "label": "Figure 3: The effect of pre-emptively separating the dairy herd into distinct milking cohorts. (A) The total outbreak",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-27T23:01:53.591Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.26674v1_results.png",
+          "page": 8,
+          "caption": "乳牛を搾乳コホートに分けることによるアウトブレイク抑制効果を示しています。",
+          "label": "Figure 3: The effect of pre-emptively separating the dairy herd into distinct milking cohorts. (A) The total outbreak",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-27T23:01:53.591Z"
+        },
+        {
+          "imagePath": "/figures/2606.26674v1_why.png",
+          "page": 12,
+          "caption": "生乳サンプル検査の頻度がアウトブレイク検出に与える影響の例を示しています。",
+          "label": "Figure 5: Example of methods for simulating bulk milk sample testing frequencies. (A) Outbreaks are simulated",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-27T23:01:53.591Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.26536v1",
+      "title": "Too cheap to meter? A stochastic analysis of projected future fusion costs",
+      "authors": [
+        "Stefania Böhnlein",
+        "Fanny Böse",
+        "Christian von Hirschhausen",
+        "Claudia Kemfert",
+        "Alexander Wimmers"
+      ],
+      "publishedAt": "2026-06-25T02:21:51Z",
+      "url": "https://arxiv.org/abs/2606.26536v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.26536v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "econ.GN"
+      ],
+      "abstract": "In recent years, technological developments and activities by private actors have led a reemerged discussion of the potential of nuclear fusion to meet growing global energy demands. So far, however, fusion technologies remain at comparatively low development levels and their deployment in commercial power plants is probably still decades away. Regardless, over the last decades, many cost studies have been conducted that estimate the future cost of potential fusion power plants. But to date, there is no systematic and harmonized assessment of these projections. Therefore, this study conducts a stochastic analysis of future fusion power plant costs for three distint technology lines, magnetic confinement, inertial confinement, and magneto-inertial confinement fusion, including cost assessments of different technology maturity levels. These levels are further assessed to determine projected learning rates for future fusion costs. For mature technologies, mean LCOE are determined at 114.6, 110.3, and 143.9 USD per MWh for MCF, ICF, and MIF devices, respectively. This implies learning rates of more than 30%. We find that these projected values are rather optimistic when compared to other literature or comparable technologies like fission. We therefore urge policymakers to caution when potential fusion developers refer to the potential economic competitiveness of fusion power plants.",
+      "summary": {
+        "gist": "地球温暖化対策として、エネルギーシステムの脱炭素化が喫緊の課題となっています。その中で、核融合は低環境負荷、高エネルギー出力、豊富な燃料資源といった利点から、将来の有望な電力源として注目を集めています。特に、再生可能エネルギーの変動性を補完するベースロード電源としての役割が期待されており、一部の国では長期エネルギー戦略に組み込まれています。しかし、商業規模の核融合発電所はまだ実現しておらず、その技術的・経済的実現可能性は未証明です。特に、初期の高い設備投資をいかに学習効果で低減できるかが経済的成功の鍵となりますが、将来のコストは不確実性が高い状態です。",
+        "novelty": "これまでの核融合発電コスト研究は、特定の設計に基づく単一点のLCOE（均等化発電原価）推定か、統計的な不確実性を考慮しない調査が主流でした。そのため、技術が未成熟な段階でのコスト変動や学習効果の不確実性が十分に評価されていませんでした。 本研究は、磁気閉じ込め、慣性閉じ込め、磁気慣性閉じ込めという3つの主要な核融合技術ラインと、異なる技術成熟度レベル（FOAK, NOAKなど）について、過去のコストデータを体系的に統合し、確率論的な分析を行いました。これにより、将来のコストと学習率の不確実性を定量的に評価することを可能にしました。",
+        "method": "本研究では、過去数十年にわたる核融合発電コストに関する既存文献を広範に分析し、磁気閉じ込め、慣性閉じ込め、磁気慣性閉じ込めという3つの主要な核融合技術ラインと、異なる技術成熟度レベル（FOAK: 初号機、NOAK: n番目の機体、10th-OAK: 10番目の機体など）に関するデータを収集しました。収集したデータには、建設費（OCC）、運転維持費、プラント寿命などのパラメータが含まれます。これらのデータを用いて、モンテカルロシミュレーションによる確率論的分析を実施し、将来の均等化発電原価（LCOE）と、そこから導かれる学習率を算出しました。特に、建設費のデータ分布が正に歪んでいることを考慮し、対数正規分布を適用しました。これにより、従来の決定論的な手法では捉えきれなかった不確実性を定量的に評価しました。",
+        "results": "成熟した核融合技術の平均LCOEは、磁気閉じ込め核融合（MCF）で114.6 USD/MWh、慣性閉じ込め核融合（ICF）で110.3 USD/MWh、磁気慣性閉じ込め核融合（MIF）で143.9 USD/MWhと予測されました。これらのLCOEは、30%を超える高い学習率を前提としています。しかし、本研究の分析結果は、これらの予測値が他の文献や既存の原子力発電（核分裂）のような比較可能な技術と比較して、かなり楽観的である可能性を示唆しています。",
+        "why": "核融合発電のコスト予測が楽観的である主な理由は、その技術がまだ初期開発段階にあり、実際の運転経験が不足しているため、コストに関するデータが仮説に基づいている点にあります。従来の決定論的なコスト評価では、入力パラメータを固定値として扱うため、商業化前のコストデータに内在する不確実性を見落としがちです。また、核融合技術は非常に複雑であり、市場や政策、材料価格の予期せぬ変動が最終的なプロジェクトコストに大きく影響する可能性があります。本研究が用いた確率論的分析は、これらの不確実性を考慮に入れることで、より現実的なコスト範囲と学習率を導き出し、既存研究の楽観的な見通しを修正する結果となりました。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "energy-economics",
+      "arxivPrimary": "econ.GN",
+      "titleJa": "核融合発電の将来コスト予測：確率論的分析",
+      "catchTitle": "夢のエネルギー「核融合」は本当に安い？",
+      "hook": "「夢のエネルギー」として期待される核融合発電。本当に私たちの生活を安価な電気で豊かにしてくれるのでしょうか？",
+      "background": "地球温暖化対策として、エネルギーシステムの脱炭素化が喫緊の課題となっています。その中で、核融合は低環境負荷、高エネルギー出力、豊富な燃料資源といった利点から、将来の有望な電力源として注目を集めています。特に、再生可能エネルギーの変動性を補完するベースロード電源としての役割が期待されており、一部の国では長期エネルギー戦略に組み込まれています。しかし、商業規模の核融合発電所はまだ実現しておらず、その技術的・経済的実現可能性は未証明です。特に、初期の高い設備投資をいかに学習効果で低減できるかが経済的成功の鍵となりますが、将来のコストは不確実性が高い状態です。",
+      "quiz": {
+        "question": "この論文が核融合発電のコスト評価で重要視した点は何でしょう？",
+        "options": [
+          "過去の建設実績データのみを用いること",
+          "不確実性を考慮した確率論的分析を行うこと",
+          "特定の原子炉設計に限定して評価すること"
+        ],
+        "correctIndex": 1,
+        "explanation": "この論文は、従来の決定論的な手法が不確実性を見落としていた点を批判し、確率論的分析によって将来のコストと学習率の不確実性を定量的に評価することの重要性を強調しています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "核融合",
+          "definition": "軽い原子核同士を融合させてエネルギーを生成する反応。"
+        },
+        {
+          "term": "均等化発電原価",
+          "definition": "発電所の建設から廃止までの総費用を総発電量で割った値。"
+        },
+        {
+          "term": "モンテカルロシミュレーション",
+          "definition": "乱数を用いてシミュレーションを繰り返し、近似解を求める手法。"
+        },
+        {
+          "term": "学習率",
+          "definition": "生産量が増えるにつれてコストが減少する割合。"
+        },
+        {
+          "term": "対数正規分布",
+          "definition": "対数をとると正規分布に従う確率分布。"
+        },
+        {
+          "term": "決定論的",
+          "definition": "不確実性を考慮せず、入力値から結果が一意に決まる。"
+        },
+        {
+          "term": "FOAK",
+          "definition": "First-of-a-kindの略で、初号機を指す。"
+        },
+        {
+          "term": "NOAK",
+          "definition": "Nth-of-a-kindの略で、n番目の機体を指す。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "核融合発電の将来コストを確率論的に分析した結果、既存研究のコスト予測は楽観的である可能性が高いと判明しました。",
+      "noveltyContrast": {
+        "before": "これまでの核融合発電コスト研究は、特定の設計に基づく単一点のLCOE（均等化発電原価）推定か、統計的な不確実性を考慮しない調査が主流でした。そのため、技術が未成熟な段階でのコスト変動や学習効果の不確実性が十分に評価されていませんでした。",
+        "after": "本研究は、磁気閉じ込め、慣性閉じ込め、磁気慣性閉じ込めという3つの主要な核融合技術ラインと、異なる技術成熟度レベル（FOAK, NOAKなど）について、過去のコストデータを体系的に統合し、確率論的な分析を行いました。これにより、将来のコストと学習率の不確実性を定量的に評価することを可能にしました。"
+      },
+      "analogy": {
+        "title": "新品種の種まき計画と収穫コスト",
+        "body": "これは、まだ市場に出ていない新しい作物の品種（核融合技術）を大規模に栽培する計画に似ています。最初の収穫（FOAK）は、種まきから栽培、収穫、加工まで全てが手探りで、設備投資も大きく、コストが高くなりがちです。しかし、何回も栽培を繰り返すうちに、効率的な栽培方法や機械の使い方を学び、収穫量が増えたり、コストが下がったりするはずだと期待します。この研究は、その「学習によるコスト削減」（学習率）が、本当に期待通りに進むのか、それとも予想以上にコストがかかる可能性があるのかを、過去の様々な作物のデータ（既存のコスト研究）を統計的に分析して、より現実的な収穫コスト（発電コスト）を予測しようとするようなものです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+30%",
+          "label": "既存研究が想定する学習率"
+        },
+        {
+          "value": "110-144USD/MWh",
+          "label": "成熟技術の平均LCOE予測"
+        }
+      ],
+      "whyYouCare": "核融合発電は、クリーンでほぼ無尽蔵なエネルギー源として、私たちの未来のエネルギー供給を大きく変える可能性を秘めています。しかし、この研究が示すように、その経済性についてはまだ楽観視できない部分が多いことが明らかになりました。もし核融合発電のコストが予想以上に高ければ、電気料金の高騰や、脱炭素社会への移行計画に大きな影響を与える可能性があります。この研究は、政策立案者や投資家が核融合開発への支援を検討する際に、より現実的な視点を持つことの重要性を示唆しています。私たち一般市民にとっても、将来のエネルギー選択や電気料金に直結する重要な情報であり、核融合技術の進展を冷静に見守るための基礎知識となるでしょう。",
+      "takeawayTalk": "核融合発電、夢のエネルギーだけど、コストはまだ楽観できないみたい！",
+      "bodyText": "本研究では、過去数十年にわたる核融合発電コストに関する既存文献を広範に分析し、磁気閉じ込め、慣性閉じ込め、磁気慣性閉じ込めという3つの主要な核融合技術ラインと、異なる技術成熟度レベル（FOAK: 初号機、NOAK: n番目の機体、10th-OAK: 10番目の機体など）に関するデータを収集しました。収集したデータには、建設費（OCC）、運転維持費、プラント寿命などのパラメータが含まれます。これらのデータを用いて、モンテカルロシミュレーションによる確率論的分析を実施し、将来の均等化発電原価（LCOE）と、そこから導かれる学習率を算出しました。特に、建設費のデータ分布が正に歪んでいることを考慮し、対数正規分布を適用しました。これにより、従来の決定論的な手法では捉えきれなかった不確実性を定量的に評価しました。\n\n核融合発電のコスト予測が楽観的である主な理由は、その技術がまだ初期開発段階にあり、実際の運転経験が不足しているため、コストに関するデータが仮説に基づいている点にあります。従来の決定論的なコスト評価では、入力パラメータを固定値として扱うため、商業化前のコストデータに内在する不確実性を見落としがちです。また、核融合技術は非常に複雑であり、市場や政策、材料価格の予期せぬ変動が最終的なプロジェクトコストに大きく影響する可能性があります。本研究が用いた確率論的分析は、これらの不確実性を考慮に入れることで、より現実的なコスト範囲と学習率を導き出し、既存研究の楽観的な見通しを修正する結果となりました。",
+      "bodyGlossary": [
+        {
+          "term": "核融合",
+          "definition": "軽い原子核同士を融合させてエネルギーを生成する反応。",
+          "start": 15,
+          "end": 18
+        },
+        {
+          "term": "FOAK",
+          "definition": "First-of-a-kindの略で、初号機を指す。",
+          "start": 92,
+          "end": 96
+        },
+        {
+          "term": "NOAK",
+          "definition": "Nth-of-a-kindの略で、n番目の機体を指す。",
+          "start": 102,
+          "end": 106
+        },
+        {
+          "term": "モンテカルロシミュレーション",
+          "definition": "乱数を用いてシミュレーションを繰り返し、近似解を求める手法。",
+          "start": 208,
+          "end": 222
+        },
+        {
+          "term": "均等化発電原価",
+          "definition": "発電所の建設から廃止までの総費用を総発電量で割った値。",
+          "start": 239,
+          "end": 246
+        },
+        {
+          "term": "学習率",
+          "definition": "生産量が増えるにつれてコストが減少する割合。",
+          "start": 262,
+          "end": 265
+        },
+        {
+          "term": "対数正規分布",
+          "definition": "対数をとると正規分布に従う確率分布。",
+          "start": 300,
+          "end": 306
+        },
+        {
+          "term": "決定論的",
+          "definition": "不確実性を考慮せず、入力値から結果が一意に決まる。",
+          "start": 323,
+          "end": 327
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "核融合",
+          "definition": "軽い原子核同士を融合させてエネルギーを生成する反応。",
+          "start": 15,
+          "end": 18
+        },
+        {
+          "term": "FOAK",
+          "definition": "First-of-a-kindの略で、初号機を指す。",
+          "start": 92,
+          "end": 96
+        },
+        {
+          "term": "NOAK",
+          "definition": "Nth-of-a-kindの略で、n番目の機体を指す。",
+          "start": 102,
+          "end": 106
+        },
+        {
+          "term": "モンテカルロシミュレーション",
+          "definition": "乱数を用いてシミュレーションを繰り返し、近似解を求める手法。",
+          "start": 208,
+          "end": 222
+        },
+        {
+          "term": "均等化発電原価",
+          "definition": "発電所の建設から廃止までの総費用を総発電量で割った値。",
+          "start": 239,
+          "end": 246
+        },
+        {
+          "term": "学習率",
+          "definition": "生産量が増えるにつれてコストが減少する割合。",
+          "start": 262,
+          "end": 265
+        },
+        {
+          "term": "対数正規分布",
+          "definition": "対数をとると正規分布に従う確率分布。",
+          "start": 300,
+          "end": 306
+        },
+        {
+          "term": "決定論的",
+          "definition": "不確実性を考慮せず、入力値から結果が一意に決まる。",
+          "start": 323,
+          "end": 327
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 304,
+      "keyFigure": {
+        "imagePath": "/figures/2606.26536v1_results.png",
+        "page": 12,
+        "caption": "核融合技術ごとのLCOE予測値の分布を箱ひげ図で示しています。",
+        "label": "Figure 2: Boxplots of LCOE simulations",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-27T23:01:56.341Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.26536v1_results.png",
+          "page": 12,
+          "caption": "核融合技術ごとのLCOE予測値の分布を箱ひげ図で示しています。",
+          "label": "Figure 2: Boxplots of LCOE simulations",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-27T23:01:56.341Z"
+        },
+        {
+          "imagePath": "/figures/2606.26536v1_why.png",
+          "page": 16,
+          "caption": "ICFデバイスの10番目のプラントにおけるLCOE感度分析の結果を示しています。",
+          "label": "Figure 9: Results of sensitivity analysis for 10th OAK ICF devices",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-27T23:01:56.341Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.26974v1",
+      "title": "Hyperiax and Phylogenetic Inference from Shape Data",
+      "authors": [
+        "Gefan Yang",
+        "Marcus Teller",
+        "Christy Hipsley",
+        "Rasmus Nielsen",
+        "Stefan Sommer"
+      ],
+      "publishedAt": "2026-06-25T12:47:32Z",
+      "url": "https://arxiv.org/abs/2606.26974v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.26974v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "q-bio.PE"
+      ],
+      "abstract": "Phylogenetic inference on high-dimensional morphological traits requires algorithms that account for both the nonlinear geometry of the shape data and the phylogenetic tree structure. The Backward Filtering Forward Guiding (BFFG) framework provides smoothing for nonlinear stochastic processes on trees and enables inference of parameters and ancestral states. As practical adoption has been limited by a lack of efficient implementations, we present Hyperiax, an open-source library for tree traversal algorithms and message passing using JAX, designed particularly to support operations needed for BFFG. Hyperiax enables efficient execution of operations on trees with large numbers of nodes and, coupled with the BFFG-specific operations, this allows efficient inference in both discrete-time and stochastic differential equation models. Concretely, we demonstrate that Hyperiax enables parameter inference and ancestral reconstruction for butterfly wing shapes represented by landmarks in two dimensions, and analyses of avian beaks from landmarks in three dimensions. Both cases demonstrate application of BFFG on two substantially larger phylogenetic trees with 850 and 696 nodes with higher resolution shape data (118 two-dimensional landmarks and 79 three-dimensional landmarks, specifically) than previously possible.",
+      "summary": {
+        "gist": "生物の形態がどのように進化してきたかを理解するには、祖先の形質、進化のパラメーター、そしてそれらの不確実性を系統樹上で同時に推論する必要があります。特に、生物学的に意味のある形状を捉える「ランドマークベースの表現」は、強い相関関係を生み出し、従来の統計的推論を困難にしていました。Backward Filtering Forward Guiding (BFFG)フレームワークは、この課題を克服しますが、効率的な実装が不足していたため、実用的な採用が限られていました。",
+        "novelty": "これまでの形状データからの系統推論は、データの非線形性や系統樹の複雑さから計算負荷が高く、特に多数のノードを持つ大規模な系統樹や高解像度の形状データでは、効率的な解析が困難でした。 本研究で開発されたオープンソースライブラリ「Hyperiax」は、JAXを活用した効率的なツリー走査アルゴリズムにより、大規模な系統樹（850ノード、696ノード）と高解像度形状データ（118の2Dランドマーク、79の3Dランドマーク）を用いた解析を可能にしました。",
+        "method": "本研究では、JAXを用いたツリー走査アルゴリズムとメッセージパッシングのためのオープンソースライブラリ「Hyperiax」を開発しました。Hyperiaxは、ツリーアルゴリズムをJAX変換として扱い、ユーザーはローカルな「up」「down」「fusion」操作からアルゴリズムを構成できます。ライブラリは、走査順序、不揃いな子ノードセット、バッチ処理、JITコンパイル、自動微分、アクセラレータ実行を処理します。これにより、BFFGのバックワードフィルタリングとフォワードガイディングの繰り返しパスを、手書きのPythonループではなく、コンパイルされたツリースイープとして実行可能にします。具体的には、蝶の羽の形状（2次元の118ランドマーク）と鳥のクチバシの形状（3次元の79ランドマーク）のデータセットに適用し、それぞれ850ノードと696ノードを持つ大規模な系統樹でパラメーター推論と祖先形状の再構築を行いました。",
+        "results": "Hyperiaxは、BFFGフレームワークを適用することで、これまで不可能だった大規模な系統樹（蝶のデータで850ノード、鳥のクチバシで696ノード）と高解像度形状データ（蝶の羽で118の2Dランドマーク、鳥のクチバシで79の3Dランドマーク）を用いた効率的なパラメーター推論と祖先形状の再構築を可能にしました。これにより、形状進化のモデルパラメーター（拡散振幅、空間相関スケール、観測分散）の事後分布を推定し、信頼性の高い結果を得ることができました。",
+        "why": "Hyperiaxは、JAXの強力な機能（JITコンパイル、自動微分、GPU/TPUアクセラレーション）を活用することで、BFFGの複雑なツリー走査とメッセージパッシング操作を劇的に高速化します。BFFGは、後方情報フィルターと誘導型前方シミュレーションを組み合わせることで、非線形確率過程モデルにおける統計的推論の課題を克服します。Hyperiaxは、このBFFGのバックワードフィルタリング（葉から根への情報伝播）とフォワードガイディング（根から葉への誘導型シミュレーション）の繰り返しを、最適化されたツリースイープとして実行することで、大規模データセットにおける計算効率を向上させます。これにより、近接するランドマーク間の強い相関や、遠隔のランドマーク間の独立した動きといった形状データの特性を、より正確かつ効率的にモデル化できるようになります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.PE）",
+      "field": "食料システム",
+      "categoryL1": "serendipity",
+      "categoryL2": "bioinformatics",
+      "arxivPrimary": "q-bio.PE",
+      "titleJa": "Hyperiaxと形状データからの系統推論",
+      "catchTitle": "進化の謎を解く！形状変化の歴史を高速解析",
+      "hook": "蝶の羽や鳥のクチバシの形が、なぜ今のようになったのか、あなたは考えたことはありますか？",
+      "background": "生物の形態がどのように進化してきたかを理解するには、祖先の形質、進化のパラメーター、そしてそれらの不確実性を系統樹上で同時に推論する必要があります。特に、生物学的に意味のある形状を捉える「ランドマークベースの表現」は、強い相関関係を生み出し、従来の統計的推論を困難にしていました。Backward Filtering Forward Guiding (BFFG)フレームワークは、この課題を克服しますが、効率的な実装が不足していたため、実用的な採用が限られていました。",
+      "quiz": {
+        "question": "Hyperiaxが効率的な系統推論を可能にした主な理由は何でしょう？",
+        "options": [
+          "手書きのPythonループを多用したから",
+          "JAXを活用した最適化されたツリー走査アルゴリズムを採用したから",
+          "系統樹のサイズを大幅に縮小したから"
+        ],
+        "correctIndex": 1,
+        "explanation": "Hyperiaxは、JAXの強力な機能（JITコンパイル、自動微分、GPU/TPUアクセラレーション）を活用し、BFFGの複雑なツリー走査とメッセージパッシング操作を最適化されたツリースイープとして実行することで、劇的な高速化を実現しました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "系統推論",
+          "definition": "生物の進化の歴史や祖先の形質を推定すること"
+        },
+        {
+          "term": "ランドマーク",
+          "definition": "生物の形状を特徴づける特定の点"
+        },
+        {
+          "term": "非線形確率過程",
+          "definition": "時間とともに非線形に変化する確率的な現象"
+        },
+        {
+          "term": "JAX",
+          "definition": "Googleが開発した数値計算ライブラリ"
+        },
+        {
+          "term": "ツリー走査",
+          "definition": "系統樹のノードを順にたどるアルゴリズム"
+        },
+        {
+          "term": "BFFG",
+          "definition": "非線形確率過程の推論フレームワーク"
+        },
+        {
+          "term": "JITコンパイル",
+          "definition": "実行時にコードを最適化して高速化する技術"
+        },
+        {
+          "term": "自動微分",
+          "definition": "関数の導関数を自動で計算する技術"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "生物の形状進化を分析する「系統推論」を、大規模データでも高速・高精度に実行できる新ライブラリが登場しました。",
+      "noveltyContrast": {
+        "before": "これまでの形状データからの系統推論は、データの非線形性や系統樹の複雑さから計算負荷が高く、特に多数のノードを持つ大規模な系統樹や高解像度の形状データでは、効率的な解析が困難でした。",
+        "after": "本研究で開発されたオープンソースライブラリ「Hyperiax」は、JAXを活用した効率的なツリー走査アルゴリズムにより、大規模な系統樹（850ノード、696ノード）と高解像度形状データ（118の2Dランドマーク、79の3Dランドマーク）を用いた解析を可能にしました。"
+      },
+      "analogy": {
+        "title": "畑の土壌分析を効率化する最新農機",
+        "body": "これは、広大な畑の土壌を分析する最新の農機を導入するようなものです。従来は、土壌の複雑な成分（形状データ）と、畑の区画ごとのつながり（系統樹）を考慮すると、分析に膨大な時間がかかり、大規模な畑全体を一度に調べるのは非現実的でした。しかし、この新しい農機（Hyperiax）は、最新のセンサーとAIを搭載し、土壌の非線形な特性を捉えつつ、区画間の関連性も高速に処理できます。これにより、これまで不可能だった大規模な畑全体の土壌状態を、短時間で高精度に把握し、最適な肥料計画を立てられるようになりました。この農機は、複雑な情報を効率的に処理し、大規模な問題解決を可能にする点で、Hyperiaxが形状データからの系統推論を効率化するのと似ています。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "850 nodes",
+          "label": "最大の系統樹ノード数"
+        },
+        {
+          "value": "118 2D landmarks",
+          "label": "最大の形状データ解像度（2D）"
+        }
+      ],
+      "whyYouCare": "この研究は、生物の進化の歴史をより深く理解するための強力なツールを提供します。例えば、農作物の品種改良において、特定の形質がどのように進化してきたかを正確に把握することで、より効率的な育種戦略を立てられるかもしれません。また、病害虫の形態変化の歴史を分析することで、その適応戦略を予測し、対策を講じることにも繋がります。さらに、気候変動が生物の形態に与える影響を大規模データで解析することで、生態系の変化を予測し、保全活動に役立てる可能性も秘めています。これは、私たちの食料安全保障や環境問題への取り組みに、新たな視点と解決策をもたらすでしょう。",
+      "takeawayTalk": "生物の形がどう進化したか、大規模データで超高速に分析できるようになったよ！",
+      "bodyText": "本研究では、JAXを用いたツリー走査アルゴリズムとメッセージパッシングのためのオープンソースライブラリ「Hyperiax」を開発しました。Hyperiaxは、ツリーアルゴリズムをJAX変換として扱い、ユーザーはローカルな「up」「down」「fusion」操作からアルゴリズムを構成できます。ライブラリは、走査順序、不揃いな子ノードセット、バッチ処理、JITコンパイル、自動微分、アクセラレータ実行を処理します。これにより、BFFGのバックワードフィルタリングとフォワードガイディングの繰り返しパスを、手書きのPythonループではなく、コンパイルされたツリースイープとして実行可能にします。具体的には、蝶の羽の形状（2次元の118ランドマーク）と鳥のクチバシの形状（3次元の79ランドマーク）のデータセットに適用し、それぞれ850ノードと696ノードを持つ大規模な系統樹でパラメーター推論と祖先形状の再構築を行いました。\n\nHyperiaxは、JAXの強力な機能（JITコンパイル、自動微分、GPU/TPUアクセラレーション）を活用することで、BFFGの複雑なツリー走査とメッセージパッシング操作を劇的に高速化します。BFFGは、後方情報フィルターと誘導型前方シミュレーションを組み合わせることで、非線形確率過程モデルにおける統計的推論の課題を克服します。Hyperiaxは、このBFFGのバックワードフィルタリング（葉から根への情報伝播）とフォワードガイディング（根から葉への誘導型シミュレーション）の繰り返しを、最適化されたツリースイープとして実行することで、大規模データセットにおける計算効率を向上させます。これにより、近接するランドマーク間の強い相関や、遠隔のランドマーク間の独立した動きといった形状データの特性を、より正確かつ効率的にモデル化できるようになります。",
+      "bodyGlossary": [
+        {
+          "term": "JAX",
+          "definition": "Googleが開発した数値計算ライブラリ",
+          "start": 6,
+          "end": 9
+        },
+        {
+          "term": "ツリー走査",
+          "definition": "系統樹のノードを順にたどるアルゴリズム",
+          "start": 13,
+          "end": 18
+        },
+        {
+          "term": "JITコンパイル",
+          "definition": "実行時にコードを最適化して高速化する技術",
+          "start": 176,
+          "end": 184
+        },
+        {
+          "term": "自動微分",
+          "definition": "関数の導関数を自動で計算する技術",
+          "start": 185,
+          "end": 189
+        },
+        {
+          "term": "BFFG",
+          "definition": "非線形確率過程の推論フレームワーク",
+          "start": 212,
+          "end": 216
+        },
+        {
+          "term": "ランドマーク",
+          "definition": "生物の形状を特徴づける特定の点",
+          "start": 316,
+          "end": 322
+        },
+        {
+          "term": "非線形確率過程",
+          "definition": "時間とともに非線形に変化する確率的な現象",
+          "start": 550,
+          "end": 557
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "JAX",
+          "definition": "Googleが開発した数値計算ライブラリ",
+          "start": 6,
+          "end": 9
+        },
+        {
+          "term": "ツリー走査",
+          "definition": "系統樹のノードを順にたどるアルゴリズム",
+          "start": 13,
+          "end": 18
+        },
+        {
+          "term": "JITコンパイル",
+          "definition": "実行時にコードを最適化して高速化する技術",
+          "start": 176,
+          "end": 184
+        },
+        {
+          "term": "自動微分",
+          "definition": "関数の導関数を自動で計算する技術",
+          "start": 185,
+          "end": 189
+        },
+        {
+          "term": "BFFG",
+          "definition": "非線形確率過程の推論フレームワーク",
+          "start": 212,
+          "end": 216
+        },
+        {
+          "term": "ランドマーク",
+          "definition": "生物の形状を特徴づける特定の点",
+          "start": 316,
+          "end": 322
+        },
+        {
+          "term": "非線形確率過程",
+          "definition": "時間とともに非線形に変化する確率的な現象",
+          "start": 550,
+          "end": 557
+        }
+      ],
+      "agriEconRelevance": "この技術は、農業経済学において、例えば以下のような応用が考えられます。特定の農作物品種の形態的特徴（例：果実の大きさ、葉の形状）が、市場での需要や価格にどのように影響するかを、その品種の系統進化と関連付けて分析できます。これにより、消費者の嗜好に合わせた品種改良の方向性をデータに基づいて決定したり、将来の市場トレンドを予測したりすることが可能になります。また、気候変動や病害虫の発生が、農作物の形態変化を通じて生産性や収益性に与える影響を、より詳細な進化モデルを用いて評価し、リスク管理戦略を策定する上での基礎情報を提供できます。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 303,
+      "keyFigure": {
+        "imagePath": "/figures/2606.26974v1_results.png",
+        "page": 4,
+        "caption": "蝶のデータにおけるパラメーターと祖先形状の推論結果を示しています。",
+        "label": "Figure 2: Inference of parameters and ancestral states for butterfly",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-27T23:02:00.241Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.26974v1_results.png",
+          "page": 4,
+          "caption": "蝶のデータにおけるパラメーターと祖先形状の推論結果を示しています。",
+          "label": "Figure 2: Inference of parameters and ancestral states for butterfly",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-27T23:02:00.241Z"
+        },
+        {
+          "imagePath": "/figures/2606.26974v1_why.png",
+          "page": 4,
+          "caption": "2つの形状データ例におけるデータ規模とMCMCの要約結果を示しています。",
+          "label": "Table 1: Dataset scale and MCMC summaries for the two shape examples. Posterior summaries are reported as posterior mean",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-27T23:02:00.242Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.26673v1",
+      "title": "Semialgebraic Conditions for Identifying Triangles in Phylogenetic Networks",
+      "authors": [
+        "Bryan Currie",
+        "Aviva K. Englander",
+        "Jose A. Esparza-Lozano",
+        "Elizabeth Gross",
+        "Max Hill",
+        "Colby Long",
+        "Devon Olds",
+        "Kawika O'Connor",
+        "Udani Ranasinghe",
+        "Christin Sum"
+      ],
+      "publishedAt": "2026-06-25T07:08:08Z",
+      "url": "https://arxiv.org/abs/2606.26673v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.26673v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "q-bio.PE"
+      ],
+      "abstract": "An important consideration for a model-based method of phylogenetic network inference is the identifiability of the network parameter of the model. A recurring theme in previous works exploring this issue is that it is often difficult to identify the orientation of edges in a triangle of the network. In fact, it has been shown that for some models it is impossible to determine the orientation of triangle edges utilizing the standard algebraic technique of phylogenetic invariants. In this work, we consider one such model with a Jukes-Cantor site-substitution process and no coalescence. We give a complete semialgebraic description of three, 3-leaf Jukes-Cantor phylogenetic network models with embedded triangles. By describing these base cases, we resolve several questions about the identifiability of networks with embedded triangles. We show that for any pair of models, the intersection and set differences of the models are full-dimensional regions of the space of site-pattern probability distributions. Thus, despite being algebraically indistinguishable, these network models are not identical, nor are they identifiable (or generically identifiable). Our results also yield a straightforward biological interpretation--that the signal from a hybridization event may be immediately detectable but decays over time until it is impossible to identify the orientation of edges in the triangle of a network.",
+      "summary": {
+        "gist": "系統ネットワークは、種間の交雑や遺伝子水平伝播といった非樹状進化イベントを表現するモデルです。これらのイベントは多くの種の進化史において一般的であると考えられており、DNA配列データから系統ネットワークを推測する研究が盛んに行われています。しかし、モデルのパラメータがデータから一意に識別できるか（識別可能性）は、正確な推測のために重要な課題です。特に、ネットワーク内の「三角形」構造（交雑イベントを示す）の識別や、そのエッジ（進化の経路）の向きの特定は、従来の手法では困難とされてきました。",
+        "novelty": "これまでの研究では、種間の交雑（ハイブリダイゼーション）のような非樹状進化イベントを示す「系統ネットワークの三角形」を、DNAデータから識別することは代数的手法では困難でした。特に、交雑の向きを特定することは不可能とされていました。 本研究では、Jukes-Cantorモデルを用いた3種の系統ネットワークに焦点を当て、半代数的手法を用いることで、これらのネットワークが代数的に区別できない場合でも、それぞれが固有のDNAパターン分布を持つことを示しました。これにより、交雑イベントの「向き」が時間とともに識別不能になるメカニズムを解明しました。",
+        "method": "本研究では、Jukes-Cantorサイト置換プロセスと合体過程を含まないモデルを対象とし、3つの異なる3葉系統ネットワークモデル（それぞれに三角形が埋め込まれている）を検討しました。これらのモデルのDNAサイトパターン確率分布を、半代数的な条件（多項式不等式）を用いて完全に記述しました。これにより、従来代数的に区別できなかったネットワークモデル間の違いを特定し、各モデルが固有のサイトパターン確率分布の領域を持つことを示しました。",
+        "results": "数値パラメータは単一の3葉三角形ネットワークモデル内でも識別できないことが示されました。しかし、半代数的な記述により、3つの3葉三角形ネットワークモデルのどれもが同一ではないことが判明しました。つまり、各ネットワークモデルは、他の2つのモデルには属さないサイトパターン確率分布を含んでいます。生物学的な解釈として、ハイブリダイゼーションイベントからのシグナルは発生直後には検出可能であるものの、時間が経つにつれて減衰し、最終的にはネットワークの三角形におけるエッジの向きを識別することが不可能になることが示唆されました。",
+        "why": "Jukes-Cantorモデルにおいて、特定の3葉ネットワークは代数的に区別できない（つまり、同じ多項式不変量を持つ）とされてきました。しかし、本研究で用いた半代数的手法（多項式不等式）は、代数的手法では捉えきれない確率分布空間の微妙な違いを捉えることができます。これにより、各ネットワークモデルが確率分布空間内で異なる「領域」を占めることが明らかになりました。この「領域」の違いは、ハイブリダイゼーションイベントの発生からの時間経過とともに、そのイベントの具体的な「向き」を特定する情報が失われていくことに対応します。特に、交雑イベントが起こった直後は明確なシグナルがあるものの、時間が経ち、遺伝的距離が離れると、そのシグナルが他の進化経路のノイズに埋もれてしまい、区別が不可能になるのです。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.PE）",
+      "field": "食料システム",
+      "categoryL1": "serendipity",
+      "categoryL2": "evolutionary-biology",
+      "arxivPrimary": "q-bio.PE",
+      "titleJa": "系統ネットワークにおける三角形識別のための半代数条件",
+      "catchTitle": "進化の「もしも」を見抜く新技術",
+      "hook": "あなたの祖先を辿る時、途中で別の家系が混じった「ハイブリッド」な歴史を見抜くのは難しいと思いませんか？",
+      "background": "系統ネットワークは、種間の交雑や遺伝子水平伝播といった非樹状進化イベントを表現するモデルです。これらのイベントは多くの種の進化史において一般的であると考えられており、DNA配列データから系統ネットワークを推測する研究が盛んに行われています。しかし、モデルのパラメータがデータから一意に識別できるか（識別可能性）は、正確な推測のために重要な課題です。特に、ネットワーク内の「三角形」構造（交雑イベントを示す）の識別や、そのエッジ（進化の経路）の向きの特定は、従来の手法では困難とされてきました。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "系統ネットワーク",
+          "definition": "種間の交雑など非樹状進化を示す図"
+        },
+        {
+          "term": "ハイブリダイゼーション",
+          "definition": "異なる種間の交雑による遺伝子交換"
+        },
+        {
+          "term": "識別可能性",
+          "definition": "モデルのパラメータが一意に特定できるか"
+        },
+        {
+          "term": "Jukes-Cantorモデル",
+          "definition": "DNA塩基置換の確率モデル"
+        },
+        {
+          "term": "半代数的手法",
+          "definition": "多項式不等式を用いる数学的手法"
+        },
+        {
+          "term": "サイトパターン確率分布",
+          "definition": "DNA配列の特定のパターン出現確率"
+        },
+        {
+          "term": "多項式不変量",
+          "definition": "ネットワークモデルで常に成り立つ多項式"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "進化の過程で起こる種間の交雑（ハイブリダイゼーション）は、時間が経つと痕跡が薄れ、その向きを特定できなくなることを数学的に示しました。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、種間の交雑（ハイブリダイゼーション）のような非樹状進化イベントを示す「系統ネットワークの三角形」を、DNAデータから識別することは代数的手法では困難でした。特に、交雑の向きを特定することは不可能とされていました。",
+        "after": "本研究では、Jukes-Cantorモデルを用いた3種の系統ネットワークに焦点を当て、半代数的手法を用いることで、これらのネットワークが代数的に区別できない場合でも、それぞれが固有のDNAパターン分布を持つことを示しました。これにより、交雑イベントの「向き」が時間とともに識別不能になるメカニズムを解明しました。"
+      },
+      "analogy": {
+        "title": "畑の土壌から過去の栽培履歴を読み解く",
+        "body": "これは、まるで畑の土壌サンプルから過去の栽培履歴を読み解くようなものです。土壌には様々な作物の痕跡が残りますが、ある時期に異なる品種が交雑して新しい品種が生まれた場合、その直後であれば「どの品種が親で、どの品種が子か」を土壌の成分から特定できるかもしれません。しかし、何年も経って土壌が混ざり合い、雨風にさらされると、その交雑イベントの「向き」や「どちらが元々の品種か」を正確に特定するのが非常に難しくなるのと似ています。この研究は、その「特定が難しくなる境界線」を数学的に見つけ出したのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、生物の進化の歴史をDNAデータから読み解く上で、非常に重要な示唆を与えます。例えば、作物の品種改良において、過去の交雑イベントがいつ、どの親から子へ遺伝子が伝わったのかを知ることは、より効率的な育種戦略を立てる上で不可欠です。しかし、時間が経つと、その「交雑の向き」が分からなくなるというこの発見は、データの解釈に限界があることを示しています。これは、考古学や人類学で古代の移動経路を遺伝子から辿る際にも、同様の「時間による情報の減衰」を考慮する必要があることを意味します。つまり、過去の出来事を正確に理解するためには、データの「鮮度」や「時間的制約」を意識することが、私たちの生活や社会における意思決定にも影響を与えるでしょう。",
+      "takeawayTalk": "進化の交雑イベントは、時間が経つと誰が親か分からなくなるらしいよ！",
+      "bodyText": "本研究では、Jukes-Cantorサイト置換プロセスと合体過程を含まないモデルを対象とし、3つの異なる3葉系統ネットワークモデル（それぞれに三角形が埋め込まれている）を検討しました。これらのモデルのDNAサイトパターン確率分布を、半代数的な条件（多項式不等式）を用いて完全に記述しました。これにより、従来代数的に区別できなかったネットワークモデル間の違いを特定し、各モデルが固有のサイトパターン確率分布の領域を持つことを示しました。\n\nJukes-Cantorモデルにおいて、特定の3葉ネットワークは代数的に区別できない（つまり、同じ多項式不変量を持つ）とされてきました。しかし、本研究で用いた半代数的手法（多項式不等式）は、代数的手法では捉えきれない確率分布空間の微妙な違いを捉えることができます。これにより、各ネットワークモデルが確率分布空間内で異なる「領域」を占めることが明らかになりました。この「領域」の違いは、ハイブリダイゼーションイベントの発生からの時間経過とともに、そのイベントの具体的な「向き」を特定する情報が失われていくことに対応します。特に、交雑イベントが起こった直後は明確なシグナルがあるものの、時間が経ち、遺伝的距離が離れると、そのシグナルが他の進化経路のノイズに埋もれてしまい、区別が不可能になるのです。",
+      "bodyGlossary": [
+        {
+          "term": "系統ネットワーク",
+          "definition": "種間の交雑など非樹状進化を示す図",
+          "start": 54,
+          "end": 62
+        },
+        {
+          "term": "サイトパターン確率分布",
+          "definition": "DNA配列の特定のパターン出現確率",
+          "start": 103,
+          "end": 114
+        },
+        {
+          "term": "Jukes-Cantorモデル",
+          "definition": "DNA塩基置換の確率モデル",
+          "start": 219,
+          "end": 234
+        },
+        {
+          "term": "多項式不変量",
+          "definition": "ネットワークモデルで常に成り立つ多項式",
+          "start": 268,
+          "end": 274
+        },
+        {
+          "term": "半代数的手法",
+          "definition": "多項式不等式を用いる数学的手法",
+          "start": 298,
+          "end": 304
+        },
+        {
+          "term": "ハイブリダイゼーション",
+          "definition": "異なる種間の交雑による遺伝子交換",
+          "start": 411,
+          "end": 422
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "系統ネットワーク",
+          "definition": "種間の交雑など非樹状進化を示す図",
+          "start": 54,
+          "end": 62
+        },
+        {
+          "term": "サイトパターン確率分布",
+          "definition": "DNA配列の特定のパターン出現確率",
+          "start": 103,
+          "end": 114
+        },
+        {
+          "term": "Jukes-Cantorモデル",
+          "definition": "DNA塩基置換の確率モデル",
+          "start": 219,
+          "end": 234
+        },
+        {
+          "term": "多項式不変量",
+          "definition": "ネットワークモデルで常に成り立つ多項式",
+          "start": 268,
+          "end": 274
+        },
+        {
+          "term": "半代数的手法",
+          "definition": "多項式不等式を用いる数学的手法",
+          "start": 298,
+          "end": 304
+        },
+        {
+          "term": "ハイブリダイゼーション",
+          "definition": "異なる種間の交雑による遺伝子交換",
+          "start": 411,
+          "end": 422
+        }
+      ],
+      "agriEconRelevance": "この研究は、系統進化の識別可能性に関する基礎的な数学的知見を提供しますが、農業経済学にも間接的な示唆を与えます。例えば、新しい作物品種の市場導入や知的財産権の保護において、その品種の起源や交雑履歴を正確に特定することは重要です。しかし、本研究が示すように、時間が経過すると遺伝的シグナルが減衰し、交雑イベントの「向き」が識別不能になる可能性があります。これは、品種の系譜を巡る紛争解決や、過去の育種戦略の評価において、遺伝子データのみに依存することの限界を示唆し、他の歴史的記録や経済的データとの組み合わせの重要性を浮き彫りにします。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 281,
+      "keyFigure": {
+        "imagePath": "/figures/2606.26673v1_results.png",
+        "page": 3,
+        "caption": "3つの3葉レベル1三角形ネットワークを示しており、それぞれが異なる根を持っています。",
+        "label": "Figure 1. The three 3-leaf level-one triangle networks, each rooted on one of",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-27T23:02:02.615Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.26673v1_results.png",
+          "page": 3,
+          "caption": "3つの3葉レベル1三角形ネットワークを示しており、それぞれが異なる根を持っています。",
+          "label": "Figure 1. The three 3-leaf level-one triangle networks, each rooted on one of",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-27T23:02:02.615Z"
+        },
+        {
+          "imagePath": "/figures/2606.26673v1_why.png",
+          "page": 9,
+          "caption": "ネットワーク(A)-(D)は、異なる分岐長が確率分布空間に与える影響を示しています。",
+          "label": "Figure 4. Networks (A)-(D) show four different choices of branch lengths",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-27T23:02:02.615Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.26959v1",
+      "title": "The Shift to Agentic AI: Evidence from Codex",
+      "authors": [
+        "Drew Johnston",
+        "David Holtz",
+        "Alex Martin Richmond",
+        "Christopher Ong",
+        "Prasanna Tambe",
+        "Aaron Chatterji"
+      ],
+      "publishedAt": "2026-06-25T12:32:46Z",
+      "url": "https://arxiv.org/abs/2606.26959v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.26959v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "econ.GN"
+      ],
+      "abstract": "We analyze usage data from OpenAI's Codex tool to present large-scale evidence of how agentic AI technology, which can take actions on a user's behalf, changes how people work. We use an automated, privacy-protecting pipeline to contrast usage across three populations: external personal-account users, external organizational-account users, and workers within OpenAI. We find that agentic AI usage is growing rapidly: the number of active users has grown more than fivefold in the first half of 2026, with the most rapid increase occurring outside the initial audience of software developers. Uptake is uneven: within OpenAI, Codex usage is nearly universal and has largely replaced business usage of ChatGPT. We document a similar shift to agentic tooling outside OpenAI, particularly within organizations, although external adoption remains lower and more uneven. In addition to headline usage figures, we observe measures of sophistication, and find that a growing number of users have used Codex to change their workflows substantially. More than 10% of users manage three or more concurrent Codex agents at some point each week and that 26.6% use skills, which allow users to share instructions for complex workflows. Alongside these changes in usage practices, request complexity has increased: since the start of the year, the share of individual Codex users who submit at least one request for a task estimated to require more than eight hours for an experienced human to complete has increased nearly tenfold. Concurrently, output has grown rapidly -- in June 2026, the median OpenAI employee in a legal role generated 13 times more monthly output tokens across Codex and ChatGPT than they did in November 2025, while the median researcher generated more than 50 times as many. We conclude by discussing the implications of these patterns for productivity, job reorganization, and workforce restructuring.",
+      "summary": {
+        "gist": "生成AIシステムは、ユーザーに代わって行動できる「代理人型」へと進化しています。従来のチャットボットが主に会話型であるのに対し、代理人型AIツールは、ユーザーが多段階のタスクをAIシステムに委任し、AIが自律的に外部ツールを使用したり、ファイルを検査したり、コマンドを実行したり、成果物を作成・修正したりすることを可能にします。本研究は、OpenAIの代理人型コーディング・作業プラットフォームであるCodexの利用データを分析することで、この代理人型AIへの移行を調査しました。",
+        "novelty": "従来のAIは、ユーザーの質問に答えたり指示に基づいてテキストを生成したりする「会話型」が主流でした。AIはあくまでアシスタントであり、ユーザーが主体となって作業を進める必要がありました。 この論文では、AIがユーザーの代わりに外部ツールを使用し、ファイルを検査し、コマンドを実行し、成果物を作成・修正する「代理人型」AIへの移行を、Codexの利用データから大規模に明らかにしました。AIが自律的に仕事を進めることで、ユーザーはより複雑なタスクを委任できるようになっています。",
+        "method": "本研究では、OpenAIの代理人型AIツール「Codex」の利用データを分析しました。このデータは、自動化されたプライバシー保護パイプラインを通じて、個人アカウントユーザー、組織アカウントユーザー、OpenAI社内ワーカーの3つの異なる集団における利用状況を比較するために使用されました。研究者は、AI利用に関する集計され匿名化された洞察を抽出するために、自動分類器を使用し、基礎となるメッセージ自体を読み取ることはありませんでした。分析は、採用状況、タスクの割り当て、利用の深さに焦点を当てて行われました。",
+        "results": "代理人型AIの利用は急速に拡大しており、2026年前半でアクティブユーザー数は5倍以上に増加しました。特に、当初の対象であったソフトウェア開発者以外の層で急速な増加が見られます。利用の浸透度には偏りがあり、OpenAI社内ではCodexの利用がほぼ普遍的で、ChatGPTのビジネス利用をほぼ置き換えています。外部組織でも同様のシフトが見られますが、個人ユーザーでの採用は低く、ばらつきがあります。利用の高度化も進んでおり、ユーザーの10%以上が週に3つ以上のCodexエージェントを同時に管理し、26.6%が複雑なワークフローのための「スキル」を使用しています。リクエストの複雑性も増しており、経験豊富な人間が8時間以上かかるタスクを依頼するユーザーの割合は、年初から約10倍に増加しました。これにより、出力も急速に増加しており、2026年6月には、OpenAIの法務担当者の月間出力トークン数は2025年11月と比較して中央値で13倍、研究者では50倍以上になりました。",
+        "why": "代理人型AIは、単なる会話型AIの高性能版ではありません。ユーザーは、文脈を検査し、ツールを使用し、成果物を修正できるシステムに、より大きな作業を委任できるようになります。この違いが、AIの採用の意味を変えます。代理人型AIの場合、重要なのは、単にツールを使うかどうかだけでなく、どのような仕事を委任するか、システムがどれだけの実行を行うか、そしてユーザーが反復的または並行的な委任を中心にワークフローを組織し始めるかどうかです。これにより、ユーザーはより複雑で時間のかかるタスクをAIに任せ、自身の生産性を大幅に向上させることが可能になります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "labor-productivity",
+      "arxivPrimary": "econ.GN",
+      "titleJa": "エージェントAIへの移行：Codexの利用データからの証拠",
+      "catchTitle": "AIは「おしゃべり」から「仕事の代理」へ",
+      "hook": "あなたはAIを「質問に答えるもの」だと思っていませんか？実はAIは、あなたの代わりに複雑な仕事をこなす「代理人」へと進化しています。",
+      "background": "生成AIシステムは、ユーザーに代わって行動できる「代理人型」へと進化しています。従来のチャットボットが主に会話型であるのに対し、代理人型AIツールは、ユーザーが多段階のタスクをAIシステムに委任し、AIが自律的に外部ツールを使用したり、ファイルを検査したり、コマンドを実行したり、成果物を作成・修正したりすることを可能にします。本研究は、OpenAIの代理人型コーディング・作業プラットフォームであるCodexの利用データを分析することで、この代理人型AIへの移行を調査しました。",
+      "quiz": {
+        "question": "この論文で示された代理人型AIの利用増加に関する最も顕著な傾向は何ですか？",
+        "options": [
+          "個人ユーザーの間で最も急速に普及している。",
+          "ソフトウェア開発者以外の層で急速な増加が見られる。",
+          "OpenAI社内ではChatGPTの利用が大幅に増加した。"
+        ],
+        "correctIndex": 1,
+        "explanation": "論文では「最も急速な増加は、当初の対象であったソフトウェア開発者以外の層で発生している」と述べられています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "代理人型AI",
+          "definition": "ユーザーの代わりに多段階のタスクを自律的に実行するAI。"
+        },
+        {
+          "term": "Codex",
+          "definition": "OpenAIが開発した代理人型コーディング・作業プラットフォーム。"
+        },
+        {
+          "term": "会話型AI",
+          "definition": "ユーザーの質問に答えたり指示に基づいてテキストを生成するAI。"
+        },
+        {
+          "term": "トークン",
+          "definition": "AIモデルが読み書きする情報の基本的な単位。"
+        },
+        {
+          "term": "スキル",
+          "definition": "複雑なワークフローの指示を共有できる機能。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "AIは単なる会話ツールから、ユーザーの代わりに多段階のタスクを自律的に実行する「代理人」へと急速に進化している。",
+      "noveltyContrast": {
+        "before": "従来のAIは、ユーザーの質問に答えたり指示に基づいてテキストを生成したりする「会話型」が主流でした。AIはあくまでアシスタントであり、ユーザーが主体となって作業を進める必要がありました。",
+        "after": "この論文では、AIがユーザーの代わりに外部ツールを使用し、ファイルを検査し、コマンドを実行し、成果物を作成・修正する「代理人型」AIへの移行を、Codexの利用データから大規模に明らかにしました。AIが自律的に仕事を進めることで、ユーザーはより複雑なタスクを委任できるようになっています。"
+      },
+      "analogy": {
+        "title": "農作業の「熟練の番頭さん」",
+        "body": "これまでの会話型AIは、農家さんが「この畑にどの肥料がいい？」と尋ねたら、適切な肥料の種類や量を教えてくれる「相談役」のようなものでした。しかし、代理人型AIは、農家さんが「この畑の土壌を分析して、最適な肥料を自動で散布しておいて」と指示すれば、土壌検査機を使い、データを分析し、農機を操作して実際に肥料を散布してくれる「熟練の番頭さん」のようなものです。単なるアドバイスではなく、具体的な作業まで代行してくれるイメージです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "5倍以上",
+          "label": "アクティブユーザー数（2026年前半）"
+        },
+        {
+          "value": "13倍",
+          "label": "OpenAI法務担当者の月間出力トークン数（2025年11月→2026年6月）"
+        },
+        {
+          "value": "50倍以上",
+          "label": "OpenAI研究者の月間出力トークン数（2025年11月→2026年6月）"
+        }
+      ],
+      "whyYouCare": "あなたの仕事や生活でも、AIが単なる情報検索や文章作成の補助を超え、より複雑なタスクを自律的にこなすようになる未来が近づいています。例えば、あなたが資料作成を依頼すれば、AIが複数のデータソースから情報を集め、分析し、グラフを作成し、最終的なレポートまで仕上げてくれるかもしれません。これにより、あなたはより創造的な業務や意思決定に集中できるようになります。企業にとっては、業務効率の大幅な向上や、従業員のスキルセットの変化に対応するための組織再編が喫緊の課題となるでしょう。",
+      "takeawayTalk": "AIはもう「おしゃべり相手」じゃない、あなたの「仕事の代理人」になるよ！",
+      "bodyText": "本研究では、OpenAIの代理人型AIツール「Codex」の利用データを分析しました。このデータは、自動化されたプライバシー保護パイプラインを通じて、個人アカウントユーザー、組織アカウントユーザー、OpenAI社内ワーカーの3つの異なる集団における利用状況を比較するために使用されました。研究者は、AI利用に関する集計され匿名化された洞察を抽出するために、自動分類器を使用し、基礎となるメッセージ自体を読み取ることはありませんでした。分析は、採用状況、タスクの割り当て、利用の深さに焦点を当てて行われました。\n\n代理人型AIは、単なる会話型AIの高性能版ではありません。ユーザーは、文脈を検査し、ツールを使用し、成果物を修正できるシステムに、より大きな作業を委任できるようになります。この違いが、AIの採用の意味を変えます。代理人型AIの場合、重要なのは、単にツールを使うかどうかだけでなく、どのような仕事を委任するか、システムがどれだけの実行を行うか、そしてユーザーが反復的または並行的な委任を中心にワークフローを組織し始めるかどうかです。これにより、ユーザーはより複雑で時間のかかるタスクをAIに任せ、自身の生産性を大幅に向上させることが可能になります。",
+      "bodyGlossary": [
+        {
+          "term": "代理人型AI",
+          "definition": "ユーザーの代わりに多段階のタスクを自律的に実行するAI。",
+          "start": 13,
+          "end": 19
+        },
+        {
+          "term": "Codex",
+          "definition": "OpenAIが開発した代理人型コーディング・作業プラットフォーム。",
+          "start": 23,
+          "end": 28
+        },
+        {
+          "term": "会話型AI",
+          "definition": "ユーザーの質問に答えたり指示に基づいてテキストを生成するAI。",
+          "start": 267,
+          "end": 272
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "代理人型AI",
+          "definition": "ユーザーの代わりに多段階のタスクを自律的に実行するAI。",
+          "start": 13,
+          "end": 19
+        },
+        {
+          "term": "Codex",
+          "definition": "OpenAIが開発した代理人型コーディング・作業プラットフォーム。",
+          "start": 23,
+          "end": 28
+        },
+        {
+          "term": "会話型AI",
+          "definition": "ユーザーの質問に答えたり指示に基づいてテキストを生成するAI。",
+          "start": 267,
+          "end": 272
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 292,
+      "keyFigure": {
+        "imagePath": "/figures/2606.26959v1_results.png",
+        "page": 8,
+        "caption": "Codexのアクティブユーザー数がアカウントタイプとペルソナ別にどのように増加したかを示しています。",
+        "label": "Fig. 2: Growth in active Codex users by account type and persona",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-27T23:02:06.068Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.26959v1_results.png",
+          "page": 8,
+          "caption": "Codexのアクティブユーザー数がアカウントタイプとペルソナ別にどのように増加したかを示しています。",
+          "label": "Fig. 2: Growth in active Codex users by account type and persona",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-27T23:02:06.068Z"
+        },
+        {
+          "imagePath": "/figures/2606.26959v1_why.png",
+          "page": 9,
+          "caption": "Codexが平均的なユーザーの出力トークンに占める割合を、職種別に示しています。",
+          "label": "Fig. 3: Codex share of output tokens for the average user, by worker type",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-27T23:02:06.068Z"
+        }
+      ]
+    }
+  ]
+}

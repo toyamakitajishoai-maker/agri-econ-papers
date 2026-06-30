@@ -1,0 +1,1103 @@
+{
+  "date": "2026-07-01",
+  "papers": [
+    {
+      "id": "2606.29529v1",
+      "title": "Modeling Protein Evolution with Generative Models: from Extant Sequence Data to Evolutionary Dynamics",
+      "authors": [
+        "Matteo Bisardi",
+        "Leonardo Di Bari",
+        "Saverio Rossi",
+        "Karol Buda",
+        "Francesco Zamponi",
+        "Martin Weigt"
+      ],
+      "publishedAt": "2026-06-28T17:51:13Z",
+      "url": "https://arxiv.org/abs/2606.29529v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.29529v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "q-bio.PE"
+      ],
+      "abstract": "Protein sequences carry a record of evolutionary history shaped by mutation, selection, drift, and epistasis. Recent generative models trained on homologous sequence families offer a new way to read this record: they define probabilistic landscapes that score sequences, generate viable variants, and capture constraints that are difficult to measure experimentally. In this review, we discuss how such landscapes can be used not only for protein design or mutation-effect prediction, but also for modeling evolutionary dynamics. We focus particularly on Direct Coupling Analysis as an interpretable and experimentally validated framework, while placing it in the broader context of generative sequence modeling. We first describe how generative sequence landscapes are inferred and assessed, then review how they can be coupled to population-genetic or substitution-model dynamics to simulate protein evolution across experimental and phylogenetic timescales. Applications include viral evolution, laboratory drift experiments, historical contingency, entrenchment, epistatic drift over time, and long-term sequence-space exploration. We conclude by discussing open challenges, including score-fitness calibration, phylogenetic structure, codon-level mutation biases, indels, and the integration of experimental data.",
+      "summary": {
+        "gist": "数十億年にわたる進化の歴史の中で、生物は常に変化する生態学的ニッチに適応してきました。この過程で、自然選択は環境で遭遇する課題と機会に対して、驚くほど多様な分子ソリューションを生み出しています。その結果、現存するすべての生物は、分子レベルで書かれた進化の歴史の記録を持っています。これらの生体分子の根底にある多様性を研究することで、進化ダイナミクスを支配する基本的な原理を洞察することが可能です。しかし、生物学の理解は、システム固有の複雑さと、進化の過程で生じる歴史的偶発性からくる見かけ上の確率性によって歪められることが多く、物理学の厳密なアプローチを生物学的システムに適用することは困難でした。近年、次世代シーケンシング技術の進歩により、大量のタンパク質配列データが利用可能になり、モデルとアミノ酸配列の実際の進化の歴史との直接的かつ高解像度の比較が可能になりました。これらのデータと機械学習における強力な生成モデルの台頭が、タンパク質の「言語」に応用され始めています。",
+        "novelty": "これまでのタンパク質進化の研究は、実験で一部の変異の影響を調べるか、理論モデルに頼るしかありませんでした。しかし、実験は時間とコストがかかり、広範囲の変異を網羅できないため、複雑な相互作用（エピスタシス）を捉えるのが困難でした。 この論文では、大量のタンパク質配列データからAIの生成モデルを訓練し、「生成配列ランドスケープ」を構築。これにより、実験では不可能な広範囲の進化経路をシミュレーションし、タンパク質の進化ダイナミクスを包括的に理解できるようになりました。",
+        "method": "本研究では、大量の相同タンパク質配列データを用いて、AIの生成モデルを訓練します。これにより、タンパク質の機能と進化の制約を統計的に学習し、「生成配列ランドスケープ」と呼ばれる確率分布を構築します。このランドスケープは、各タンパク質配列がどれだけ機能的に「適切」であるかを示すスコア（対数尤度）を定義します。特に、Direct Coupling Analysis (DCA)という、解釈可能で実験的に検証されたフレームワークに焦点を当て、これを生成シーケンスモデリングの広範な文脈に位置づけます。構築された生成配列ランドスケープは、集団遺伝学モデルや置換モデルと組み合わされ、実験的および系統発生的タイムスケールにわたるタンパク質進化のシミュレーションを可能にします。",
+        "results": "生成配列ランドスケープを用いることで、ウイルス進化、実験室でのドリフト実験、歴史的偶発性、固定化、時間経過に伴うエピスタシス的ドリフト、長期的な配列空間探索など、多岐にわたるタンパク質進化のシナリオをモデル化できることが示されました。特に、短期間の進化ダイナミクス、特に病原性タンパク質のシミュレーションと予測において、合成結果と自然および実験的観察との間に強い相関が確認されています。これにより、実験では到達できない時間スケールを超えて、タンパク質進化の長期的な特徴を洞察することが可能になります。",
+        "why": "生成モデルは、自然界に存在する大量のタンパク質配列データから、その配列が持つ統計的パターンを学習します。これにより、タンパク質の「適応度」を決定する根底にある制約を、生化学的・生物物理学的プロセスを明示的にモデル化することなく推論できます。この学習された確率分布が「生成配列ランドスケープ」となり、各配列の機能的な「適切さ」をスコアとして表現します。高いスコアを持つ配列は、高い生物学的適応度を持つと仮定されます。このランドスケープは、実験的に探索が困難な広大な配列空間において、機能的なタンパク質が存在する領域を効率的に特定し、その進化経路をシミュレートするための効果的な空間を提供します。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.PE）",
+      "field": "食料システム",
+      "categoryL1": "serendipity",
+      "categoryL2": "bioinformatics",
+      "arxivPrimary": "q-bio.PE",
+      "titleJa": "生成モデルによるタンパク質進化のモデリング：現存する配列データから進化ダイナミクスへ",
+      "catchTitle": "タンパク質の進化、AIで再現！",
+      "hook": "あなたの体を作るタンパク質が、どのように形を変え、機能を進化させてきたかご存知ですか？",
+      "background": "数十億年にわたる進化の歴史の中で、生物は常に変化する生態学的ニッチに適応してきました。この過程で、自然選択は環境で遭遇する課題と機会に対して、驚くほど多様な分子ソリューションを生み出しています。その結果、現存するすべての生物は、分子レベルで書かれた進化の歴史の記録を持っています。これらの生体分子の根底にある多様性を研究することで、進化ダイナミクスを支配する基本的な原理を洞察することが可能です。しかし、生物学の理解は、システム固有の複雑さと、進化の過程で生じる歴史的偶発性からくる見かけ上の確率性によって歪められることが多く、物理学の厳密なアプローチを生物学的システムに適用することは困難でした。近年、次世代シーケンシング技術の進歩により、大量のタンパク質配列データが利用可能になり、モデルとアミノ酸配列の実際の進化の歴史との直接的かつ高解像度の比較が可能になりました。これらのデータと機械学習における強力な生成モデルの台頭が、タンパク質の「言語」に応用され始めています。",
+      "quiz": {
+        "question": "この研究で「生成配列ランドスケープ」を構築するために使われる主なデータは何ですか？",
+        "options": [
+          "タンパク質の3D構造データ",
+          "現存する相同タンパク質配列データ",
+          "タンパク質の物理化学的特性データ"
+        ],
+        "correctIndex": 1,
+        "explanation": "生成配列ランドスケープは、大量の現存する相同タンパク質配列データからAIの生成モデルを訓練することで構築されます。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "生成モデル",
+          "definition": "データから新しいデータを生成するAIモデル"
+        },
+        {
+          "term": "相同タンパク質配列",
+          "definition": "共通の祖先を持ち、似た機能を持つタンパク質の配列"
+        },
+        {
+          "term": "生成配列ランドスケープ",
+          "definition": "タンパク質配列の機能的適切さを確率的に示す地図"
+        },
+        {
+          "term": "対数尤度",
+          "definition": "あるデータがモデルによって生成される確率の対数"
+        },
+        {
+          "term": "Direct Coupling Analysis (DCA)",
+          "definition": "タンパク質内のアミノ酸間の直接的な相互作用を推定する手法"
+        },
+        {
+          "term": "集団遺伝学モデル",
+          "definition": "集団内の遺伝子頻度変化を記述するモデル"
+        },
+        {
+          "term": "置換モデル",
+          "definition": "DNAやタンパク質配列の進化における変異パターンを記述するモデル"
+        },
+        {
+          "term": "エピスタシス",
+          "definition": "ある遺伝子の効果が他の遺伝子によって修飾される現象"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "AIの生成モデルを使って、タンパク質の進化の歴史を再現し、未来の進化を予測する研究です。",
+      "noveltyContrast": {
+        "before": "これまでのタンパク質進化の研究は、実験で一部の変異の影響を調べるか、理論モデルに頼るしかありませんでした。しかし、実験は時間とコストがかかり、広範囲の変異を網羅できないため、複雑な相互作用（エピスタシス）を捉えるのが困難でした。",
+        "after": "この論文では、大量のタンパク質配列データからAIの生成モデルを訓練し、「生成配列ランドスケープ」を構築。これにより、実験では不可能な広範囲の進化経路をシミュレーションし、タンパク質の進化ダイナミクスを包括的に理解できるようになりました。"
+      },
+      "analogy": {
+        "title": "畑の土壌分析で未来の作柄を予測する",
+        "body": "これは、まるで長年の栽培データ（現存するタンパク質配列）から、その畑の土壌の特性（タンパク質の機能と進化の制約）をAIで詳細に分析し、仮想の「土壌マップ」（生成配列ランドスケープ）を作るようなものです。このマップがあれば、どの作物をどこに植えればよく育つか（どのタンパク質配列が機能するか）だけでなく、天候の変化（変異）に対して作物がどう適応していくか（タンパク質がどう進化するか）を、実際に植えてみる前にシミュレーションできるようになります。これにより、最適な品種改良の方向性や、病害への耐性進化の予測が可能になるのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、私たちの生活や社会に多大な影響を与える可能性を秘めています。例えば、インフルエンザウイルスや新型コロナウイルスのような病原体のタンパク質が、どのように変異し、新たな感染力を獲得していくかを予測できるようになります。これにより、ワクチンの開発や治療薬の設計をより迅速かつ効果的に進めることが可能になります。また、農業分野では、作物の病害耐性タンパク質や栄養価を高めるタンパク質の進化をシミュレートすることで、気候変動に強い新たな品種の開発に貢献できるかもしれません。さらに、酵素などの産業用タンパク質の機能改良や、新しい機能を持つタンパク質の設計にも応用され、医薬品、食品、環境技術など、幅広い分野でのイノベーションを加速させるでしょう。",
+      "takeawayTalk": "AIでタンパク質の進化をシミュレートして、病気や品種改良に役立てるんだって！",
+      "bodyText": "本研究では、大量の相同タンパク質配列データを用いて、AIの生成モデルを訓練します。これにより、タンパク質の機能と進化の制約を統計的に学習し、「生成配列ランドスケープ」と呼ばれる確率分布を構築します。このランドスケープは、各タンパク質配列がどれだけ機能的に「適切」であるかを示すスコア（対数尤度）を定義します。特に、Direct Coupling Analysis (DCA)という、解釈可能で実験的に検証されたフレームワークに焦点を当て、これを生成シーケンスモデリングの広範な文脈に位置づけます。構築された生成配列ランドスケープは、集団遺伝学モデルや置換モデルと組み合わされ、実験的および系統発生的タイムスケールにわたるタンパク質進化のシミュレーションを可能にします。\n\n生成モデルは、自然界に存在する大量のタンパク質配列データから、その配列が持つ統計的パターンを学習します。これにより、タンパク質の「適応度」を決定する根底にある制約を、生化学的・生物物理学的プロセスを明示的にモデル化することなく推論できます。この学習された確率分布が「生成配列ランドスケープ」となり、各配列の機能的な「適切さ」をスコアとして表現します。高いスコアを持つ配列は、高い生物学的適応度を持つと仮定されます。このランドスケープは、実験的に探索が困難な広大な配列空間において、機能的なタンパク質が存在する領域を効率的に特定し、その進化経路をシミュレートするための効果的な空間を提供します。",
+      "bodyGlossary": [
+        {
+          "term": "相同タンパク質配列",
+          "definition": "共通の祖先を持ち、似た機能を持つタンパク質の配列",
+          "start": 9,
+          "end": 18
+        },
+        {
+          "term": "生成モデル",
+          "definition": "データから新しいデータを生成するAIモデル",
+          "start": 29,
+          "end": 34
+        },
+        {
+          "term": "生成配列ランドスケープ",
+          "definition": "タンパク質配列の機能的適切さを確率的に示す地図",
+          "start": 71,
+          "end": 82
+        },
+        {
+          "term": "対数尤度",
+          "definition": "あるデータがモデルによって生成される確率の対数",
+          "start": 142,
+          "end": 146
+        },
+        {
+          "term": "Direct Coupling Analysis (DCA)",
+          "definition": "タンパク質内のアミノ酸間の直接的な相互作用を推定する手法",
+          "start": 157,
+          "end": 187
+        },
+        {
+          "term": "集団遺伝学モデル",
+          "definition": "集団内の遺伝子頻度変化を記述するモデル",
+          "start": 266,
+          "end": 274
+        },
+        {
+          "term": "置換モデル",
+          "definition": "DNAやタンパク質配列の進化における変異パターンを記述するモデル",
+          "start": 275,
+          "end": 280
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "相同タンパク質配列",
+          "definition": "共通の祖先を持ち、似た機能を持つタンパク質の配列",
+          "start": 9,
+          "end": 18
+        },
+        {
+          "term": "生成モデル",
+          "definition": "データから新しいデータを生成するAIモデル",
+          "start": 29,
+          "end": 34
+        },
+        {
+          "term": "生成配列ランドスケープ",
+          "definition": "タンパク質配列の機能的適切さを確率的に示す地図",
+          "start": 71,
+          "end": 82
+        },
+        {
+          "term": "対数尤度",
+          "definition": "あるデータがモデルによって生成される確率の対数",
+          "start": 142,
+          "end": 146
+        },
+        {
+          "term": "Direct Coupling Analysis (DCA)",
+          "definition": "タンパク質内のアミノ酸間の直接的な相互作用を推定する手法",
+          "start": 157,
+          "end": 187
+        },
+        {
+          "term": "集団遺伝学モデル",
+          "definition": "集団内の遺伝子頻度変化を記述するモデル",
+          "start": 266,
+          "end": 274
+        },
+        {
+          "term": "置換モデル",
+          "definition": "DNAやタンパク質配列の進化における変異パターンを記述するモデル",
+          "start": 275,
+          "end": 280
+        }
+      ],
+      "agriEconRelevance": "このタンパク質進化のモデリング技術は、農業経済学に直接的な応用が可能です。例えば、作物の病害抵抗性に関わるタンパク質の進化経路を予測することで、特定の病原体に対する耐性を高める品種改良の戦略を立てることができます。また、家畜の生産性向上に関わるタンパク質の進化をシミュレートし、最適な育種プログラムを設計することも可能です。これにより、農業生産の効率化、リスク低減、そして新たな高付加価値作物の開発を通じて、農業経済全体のレジリエンスと競争力向上に貢献できるでしょう。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 328,
+      "keyFigure": {
+        "imagePath": "/figures/2606.29529v1_results.jpeg",
+        "page": 16,
+        "caption": "HIV-1の免疫回避の予測と報告されたタイミングを比較した図です。",
+        "label": "Figure 4. Results on experimentally accessible timescales. (a) Predicted versus reported timing of HIV-1 immune escape",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-30T23:11:40.874Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.29529v1_results.jpeg",
+          "page": 16,
+          "caption": "HIV-1の免疫回避の予測と報告されたタイミングを比較した図です。",
+          "label": "Figure 4. Results on experimentally accessible timescales. (a) Predicted versus reported timing of HIV-1 immune escape",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-30T23:11:40.874Z"
+        },
+        {
+          "imagePath": "/figures/2606.29529v1_why.png",
+          "page": 5,
+          "caption": "生成配列ランドスケープの概念図です。タンパク質の進化をモデル化する仕組みを示しています。",
+          "label": "Figure 1.",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-30T23:11:40.874Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.30359v1",
+      "title": "Decision-support strategies for photovoltaic self-consumption under declining electricity prices and limited remuneration of surplus generation",
+      "authors": [
+        "Ana B. Cristóbal",
+        "Daniel Sierra",
+        "Laura Palomino",
+        "Luis Miguel Carrasco",
+        "Luis Narvarte"
+      ],
+      "publishedAt": "2026-06-29T14:25:53Z",
+      "url": "https://arxiv.org/abs/2606.30359v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.30359v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "physics.app-ph",
+        "econ.GN"
+      ],
+      "abstract": "The success of distributed photovoltaics may be undermining its own future. As solar penetration increases, electricity prices decline during periods of peak generation, reducing the value of surplus photovoltaic production. This raises a critical question: can citizen-led energy systems remain economically viable in electricity markets dominated by renewable generation? Rather than exploring technically optimal but institutionally unrealistic solutions, we examine the options available under current regulatory and market conditions. Using high-resolution consumption data from a rural community sharing a PV facility among 24 users, we identify pathways for long-term sustainability. The study makes two contributions. First, it shows that effective internal coordination can mobilize participation and investment as successfully as external subsidies. Second, it compares static, dynamic, and hybrid energy-sharing models, with and without storage, providing a flexible framework that balances efficiency, fairness, and governance. Results show that collective self-consumption reduces required PV capacity, lowers investment costs, and increases annual savings compared with individually operated systems. Alternative allocation schemes further improve benefit distribution and local electricity use, although gains depend on trade-offs between efficiency, fairness, and governance complexity. Under current electricity prices and remuneration schemes, battery storage provides limited additional economic value and becomes attractive only under specific market conditions. Overall, the long-term viability of citizen-led photovoltaic initiatives depends less on technological sophistication than on collective coordination and adaptive governance.",
+      "summary": {
+        "gist": "気候変動やエネルギー安全保障の課題に対応するため、分散型太陽光発電が世界的に普及しています。しかし、太陽光発電の普及が進むにつれて、発電ピーク時の電力価格が下落し、余剰電力の売電価値が低下するという新たな課題が生じています。これにより、市民主導のエネルギーシステムが経済的に持続可能であるかという疑問が浮上しています。特に、個別の太陽光発電システムでは、家庭の電力需要と太陽光発電のピークが一致しにくく、高い自家消費率を達成することが困難です。このような状況下で、市民が太陽光自家消費システムへの投資を継続し、その価値を維持するための運用・組織戦略が求められています。",
+        "novelty": "これまでの太陽光発電に関する研究は、技術的に最適でも現実的ではない解決策や、新規コミュニティ向けの理論的な電力分配モデルが中心でした。また、バッテリー貯蔵の経済的価値も不明瞭でした。 この研究は、既存の規制や市場条件下で、すでに稼働している市民主導の共同太陽光発電施設を対象に、現実的な運用データを用いて、集団での調整がもたらす経済的・運用上のメリットを定量化しました。さらに、効率性、公平性、ガバナンスのバランスを取るための電力分配モデルを比較し、バッテリー貯蔵の経済的価値を評価しました。",
+        "method": "本研究は、スペインの農村地域で24世帯が共同で利用する太陽光発電施設「CERCAエネルギーコミュニティ」の実際の運用データと消費データを用いて分析を行いました。まず、各世帯が個別に太陽光発電システムを運用した場合の仮想シナリオを設定し、現在の共同運用と比較することで、集団での調整がもたらす経済的・運用上のメリットを定量化しました。次に、既存の法規制に準拠しつつ、効率性、公平性、ガバナンスの観点から、静的、動的、ハイブリッドの4つの異なる電力分配モデルを評価しました。最後に、これらの分配モデルの下で共有バッテリーを導入した場合の経済的実行可能性を分析し、バッテリー投資が経済的に魅力的になる条件を特定しました。",
+        "results": "集団での自家消費は、個別のシステムと比較して、必要な太陽光発電容量を削減し、投資コストを低減し、年間貯蓄額を増加させることが示されました。代替的な電力分配スキームは、利益の分配と地域での電力利用をさらに改善しますが、その効果は効率性、公平性、ガバナンスの複雑さとのトレードオフに依存します。現在の電力価格と報酬スキームの下では、バッテリー貯蔵がもたらす追加的な経済的価値は限定的であり、特定の市場条件下でのみ魅力的になることが判明しました。全体として、市民主導の太陽光発電イニシアティブの長期的な持続可能性は、技術的な洗練度よりも、集団での調整と適応的なガバナンスに大きく依存します。",
+        "why": "共同で太陽光発電システムを運用することで、各世帯の電力需要プロファイルの多様性を活用し、発電された電力をより効率的にコミュニティ内で消費できるようになります。これにより、余剰電力の売電に頼る必要が減り、売電価格の下落による影響を緩和できます。また、大規模な共同設備は個別の小規模設備よりも設置コスト効率が高く、メンテナンスも集約できるため、全体的な投資コストと運用コストを削減できます。さらに、柔軟な電力分配モデルを導入することで、各世帯の電力消費パターンや投資額に応じて公平に利益を分配し、コミュニティメンバーの参加意欲と投資を維持することができます。バッテリー貯蔵は自家消費率を高める可能性を秘めていますが、現在の市場価格ではその導入コストに見合う経済的メリットが得られにくい状況です。したがって、技術的な解決策だけでなく、コミュニティ内の合意形成と柔軟な運用ルールが、経済的持続可能性を確保する上でより重要となります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.app-ph）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "energy-community",
+      "arxivPrimary": "physics.app-ph",
+      "titleJa": "電力価格下落と余剰電力報酬制限下での太陽光自家消費に関する意思決定支援戦略",
+      "catchTitle": "太陽光発電、みんなで使えばもっとお得！",
+      "hook": "あなたの家の屋根に太陽光パネルを設置しても、余った電気の売電価格が下がっていたらどうしますか？",
+      "background": "気候変動やエネルギー安全保障の課題に対応するため、分散型太陽光発電が世界的に普及しています。しかし、太陽光発電の普及が進むにつれて、発電ピーク時の電力価格が下落し、余剰電力の売電価値が低下するという新たな課題が生じています。これにより、市民主導のエネルギーシステムが経済的に持続可能であるかという疑問が浮上しています。特に、個別の太陽光発電システムでは、家庭の電力需要と太陽光発電のピークが一致しにくく、高い自家消費率を達成することが困難です。このような状況下で、市民が太陽光自家消費システムへの投資を継続し、その価値を維持するための運用・組織戦略が求められています。",
+      "quiz": {
+        "question": "市民主導の共同太陽光発電の長期的な持続可能性にとって、最も重要な要素は何ですか？",
+        "options": [
+          "最新の高性能バッテリーの導入",
+          "政府からの多額の補助金",
+          "集団での調整と適応的なガバナンス"
+        ],
+        "correctIndex": 2,
+        "explanation": "論文の結果は、市民主導の太陽光発電イニシアティブの長期的な持続可能性は、技術的な洗練度よりも、集団での調整と適応的なガバナンスに大きく依存することを示しています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "分散型太陽光発電",
+          "definition": "大規模発電所ではなく、各家庭や施設に設置する発電"
+        },
+        {
+          "term": "余剰電力",
+          "definition": "自家消費しきれずに電力系統に送られる電気"
+        },
+        {
+          "term": "自家消費率",
+          "definition": "発電した電気を自分で消費する割合"
+        },
+        {
+          "term": "エネルギーコミュニティ",
+          "definition": "市民が共同で再生可能エネルギーを管理・消費する組織"
+        },
+        {
+          "term": "カウンターファクチュアル",
+          "definition": "もし〜だったら、という仮想シナリオ"
+        },
+        {
+          "term": "電力分配モデル",
+          "definition": "共同発電された電力を各参加者に割り当てる方法"
+        },
+        {
+          "term": "ガバナンス",
+          "definition": "組織を管理・運営する仕組み"
+        },
+        {
+          "term": "バッテリー貯蔵",
+          "definition": "発電した電気を蓄電池に貯めておくこと"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "市民が主導する共同太陽光発電は、個別設置よりも経済的で、適切な電力分配方法が長期的な成功の鍵です。",
+      "noveltyContrast": {
+        "before": "これまでの太陽光発電に関する研究は、技術的に最適でも現実的ではない解決策や、新規コミュニティ向けの理論的な電力分配モデルが中心でした。また、バッテリー貯蔵の経済的価値も不明瞭でした。",
+        "after": "この研究は、既存の規制や市場条件下で、すでに稼働している市民主導の共同太陽光発電施設を対象に、現実的な運用データを用いて、集団での調整がもたらす経済的・運用上のメリットを定量化しました。さらに、効率性、公平性、ガバナンスのバランスを取るための電力分配モデルを比較し、バッテリー貯蔵の経済的価値を評価しました。"
+      },
+      "analogy": {
+        "title": "共同菜園での収穫物分配",
+        "body": "これは、まるで複数の農家が共同で大きな菜園を運営し、収穫した野菜をどう分け合うかを決めるようなものです。個々の農家が自分の畑で野菜を育てて売るよりも、みんなで協力して大きな菜園を管理すれば、必要な設備投資を抑えられ、収穫量も増え、市場価格の変動にも強くなります。さらに、収穫した野菜を「誰がどれだけ投資したか」「誰がどれだけ必要としているか」といった基準で公平に分配する方法を工夫すれば、全員が納得して長く共同菜園を続けられるでしょう。この研究は、共同菜園の収穫物を効率的かつ公平に分配し、長期的に運営していくための知恵を探るものです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "削減",
+          "label": "必要なPV容量"
+        },
+        {
+          "value": "削減",
+          "label": "投資コスト"
+        },
+        {
+          "value": "増加",
+          "label": "年間貯蓄額"
+        }
+      ],
+      "whyYouCare": "電力価格の変動や売電収入の減少は、太陽光発電の導入を検討している個人や企業にとって大きな懸念事項です。この研究は、単にパネルを設置するだけでなく、地域コミュニティで協力し、賢く電力を分配する仕組みを構築することで、太陽光発電の経済的なメリットを最大化できる可能性を示しています。これは、あなたの住む地域で再生可能エネルギーを導入する際の新しい選択肢となり、初期投資の負担を軽減し、長期的な電気代の節約にも繋がるかもしれません。また、地域での電力自給率を高め、災害時のレジリエンス向上にも貢献する可能性があります。技術だけでなく、人々の協力と工夫が、持続可能なエネルギー社会を築く鍵となることを教えてくれる研究です。",
+      "takeawayTalk": "太陽光発電は、みんなで協力して使うと、個別よりお得になるらしいよ！",
+      "bodyText": "本研究は、スペインの農村地域で24世帯が共同で利用する太陽光発電施設「CERCAエネルギーコミュニティ」の実際の運用データと消費データを用いて分析を行いました。まず、各世帯が個別に太陽光発電システムを運用した場合の仮想シナリオを設定し、現在の共同運用と比較することで、集団での調整がもたらす経済的・運用上のメリットを定量化しました。次に、既存の法規制に準拠しつつ、効率性、公平性、ガバナンスの観点から、静的、動的、ハイブリッドの4つの異なる電力分配モデルを評価しました。最後に、これらの分配モデルの下で共有バッテリーを導入した場合の経済的実行可能性を分析し、バッテリー投資が経済的に魅力的になる条件を特定しました。\n\n共同で太陽光発電システムを運用することで、各世帯の電力需要プロファイルの多様性を活用し、発電された電力をより効率的にコミュニティ内で消費できるようになります。これにより、余剰電力の売電に頼る必要が減り、売電価格の下落による影響を緩和できます。また、大規模な共同設備は個別の小規模設備よりも設置コスト効率が高く、メンテナンスも集約できるため、全体的な投資コストと運用コストを削減できます。さらに、柔軟な電力分配モデルを導入することで、各世帯の電力消費パターンや投資額に応じて公平に利益を分配し、コミュニティメンバーの参加意欲と投資を維持することができます。バッテリー貯蔵は自家消費率を高める可能性を秘めていますが、現在の市場価格ではその導入コストに見合う経済的メリットが得られにくい状況です。したがって、技術的な解決策だけでなく、コミュニティ内の合意形成と柔軟な運用ルールが、経済的持続可能性を確保する上でより重要となります。",
+      "bodyGlossary": [
+        {
+          "term": "エネルギーコミュニティ",
+          "definition": "市民が共同で再生可能エネルギーを管理・消費する組織",
+          "start": 40,
+          "end": 51
+        },
+        {
+          "term": "ガバナンス",
+          "definition": "組織を管理・運営する仕組み",
+          "start": 190,
+          "end": 195
+        },
+        {
+          "term": "電力分配モデル",
+          "definition": "共同発電された電力を各参加者に割り当てる方法",
+          "start": 220,
+          "end": 227
+        },
+        {
+          "term": "余剰電力",
+          "definition": "自家消費しきれずに電力系統に送られる電気",
+          "start": 394,
+          "end": 398
+        },
+        {
+          "term": "バッテリー貯蔵",
+          "definition": "発電した電気を蓄電池に貯めておくこと",
+          "start": 586,
+          "end": 593
+        },
+        {
+          "term": "自家消費率",
+          "definition": "発電した電気を自分で消費する割合",
+          "start": 594,
+          "end": 599
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "エネルギーコミュニティ",
+          "definition": "市民が共同で再生可能エネルギーを管理・消費する組織",
+          "start": 40,
+          "end": 51
+        },
+        {
+          "term": "ガバナンス",
+          "definition": "組織を管理・運営する仕組み",
+          "start": 190,
+          "end": 195
+        },
+        {
+          "term": "電力分配モデル",
+          "definition": "共同発電された電力を各参加者に割り当てる方法",
+          "start": 220,
+          "end": 227
+        },
+        {
+          "term": "余剰電力",
+          "definition": "自家消費しきれずに電力系統に送られる電気",
+          "start": 394,
+          "end": 398
+        },
+        {
+          "term": "バッテリー貯蔵",
+          "definition": "発電した電気を蓄電池に貯めておくこと",
+          "start": 586,
+          "end": 593
+        },
+        {
+          "term": "自家消費率",
+          "definition": "発電した電気を自分で消費する割合",
+          "start": 594,
+          "end": 599
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 310,
+      "keyFigure": {
+        "imagePath": "/figures/2606.30359v1_results.png",
+        "page": 29,
+        "caption": "バッテリーなしの場合と比較した各モデルの年間貯蓄額を示しています。",
+        "label": "Figure 2. Savings for each model compared to the same energy allocation strategy without battery.",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-30T23:11:43.729Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.30359v1_results.png",
+          "page": 29,
+          "caption": "バッテリーなしの場合と比較した各モデルの年間貯蓄額を示しています。",
+          "label": "Figure 2. Savings for each model compared to the same energy allocation strategy without battery.",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-30T23:11:43.729Z"
+        },
+        {
+          "imagePath": "/figures/2606.30359v1_why.png",
+          "page": 31,
+          "caption": "バッテリーのコストが1kWhあたりいくらであれば、投資が魅力的になるかを示しています。",
+          "label": "Figure 4. Battery IRR vs. Battery Cost per KWh",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-30T23:11:43.729Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.29949v1",
+      "title": "Data-Efficient Multimodal Alignment for Histopathology-based Molecular Prediction",
+      "authors": [
+        "Dominik Winter",
+        "Dominik Vonficht",
+        "Loïc Le Bescond",
+        "Christian Gebbe",
+        "Marco Rosati",
+        "Richard J. Chen",
+        "Markus Schick",
+        "Ross Stewart",
+        "Nicolas Brieu"
+      ],
+      "publishedAt": "2026-06-29T08:24:53Z",
+      "url": "https://arxiv.org/abs/2606.29949v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.29949v1.pdf",
+      "categories": [
+        "topic:genomics",
+        "eess.IV",
+        "cs.AI",
+        "q-bio.GN"
+      ],
+      "abstract": "H&amp;E-stained whole-slide images offer cohort-scale availability and rich spatial context but lack molecular specificity, whereas bulk RNA-seq provides transcriptome-wide resolution at high cost with limited archival availability. We show that training a lightweight alignment module atop frozen histopathology and RNA-Seq foundation models enables open-vocabulary molecular prompting -- querying H&amp;E slides with gene-set signatures to predict pathway activity without sequencing or end-to-end retraining. Using contrastive learning on a multi-cancer cohort (N=1,720), we achieve a 25-fold improvement in retrieval over baseline methods. Systematic analysis reveals a graduated predictability spectrum: morphologically grounded programs (cell-cycle programs, immune-related) are most reliably predicted (R^2&gt;0.5), while predicting pathways with no morphological footprint remains challenging as expected. We validate clinical utility on the POSEIDON clinical trial: H&amp;E-predicted squamous cell carcinoma scores recapitulate NSCLC subtype identity and predicted IFN-gamma mirror PD-L1 tumor-cell expression groups. Furthermore, genesets describing immune activation and fibrosis predict known tumor microenvironment archetypes from histology alone. We further validate generalization of our approach across unseen cohorts and demonstrate data-efficient domain adaptation, establishing a slide-native framework for molecular analysis on H&amp;E images.",
+      "summary": {
+        "gist": "H&E染色された病理組織画像は診断病理学の中心ですが、形態学的情報しか提供せず、分子レベルの特異性に欠けます。一方、RNA-seqはトランスクリプトーム全体の情報を提供しますが、高価で過去のデータには利用できないことが多いです。これまでの研究では、H&E画像から遺伝子シグナルを予測する試みがありましたが、特定の遺伝子セットに限定され、推論時に新しい遺伝子セットをクエリできないという課題がありました。",
+        "novelty": "従来の病理画像からの遺伝子予測は、特定の遺伝子セットに限定され、新しい遺伝子セットを推論時に追加できませんでした。また、高価なRNA-Seq検査が別途必要で、過去のデータには利用できない課題がありました。 この研究では、H&E染色画像とRNA-Seqの基盤モデルを連携させることで、顕微鏡画像から任意の遺伝子セットの活性を予測できるようになりました。これにより、RNA-Seqなしで分子情報を得られ、過去の病理画像も活用可能です。",
+        "method": "本研究では、H&E染色画像とRNA-Seqデータのそれぞれに特化した既存の基盤モデル（Frozen Foundation Models）を活用します。これらのモデルは、それぞれ画像とRNA-Seqの情報を高次元のベクトル（埋め込み空間）に変換します。次に、この2つの異なる種類のデータから得られた埋め込み空間を「マルチモーダルアライメントモジュール」という軽量な追加モジュールを用いて整合させ、共通の潜在空間を構築します。このアライメントモジュールは、マルチキャンサーコホート（N=1,720）のデータを用いて対照学習によって訓練されます。推論時には、H&E画像から得られた埋め込みベクトルを、RNA-Seqの参照データベースと照合することで、任意の遺伝子セットの活性を予測します。これにより、シーケンシングなしで、オープンボキャブラリーな分子プロンプティング（任意の遺伝子セットでのクエリ）が可能になります。",
+        "results": "この手法により、ベースラインと比較して検索性能が25倍向上しました。特に、細胞周期や免疫関連など形態学的特徴と関連の深い遺伝子プログラムは高い精度（R^2>0.5）で予測可能でした。臨床試験（POSEIDON）での検証では、H&E画像から予測された扁平上皮癌スコアがNSCLCのサブタイプを正確に再現し、IFN-γスコアがPD-L1の発現レベルと一致することが示されました。さらに、免疫活性化と線維化に関連する遺伝子セットが、腫瘍微小環境の既知のタイプを組織画像のみから予測できることも確認されました。また、少数のペアデータ（例えばTCGA-LUADの5%）でドメイン適応を行うことで、未見のコホートへの適用における性能低下を大幅に改善できることも示されました。",
+        "why": "この技術の核心は、異なる種類のデータ（H&E画像とRNA-Seq）から得られる情報を、共通の「言語」で表現できるような空間（共通の潜在空間）にマッピングすることにあります。H&E画像は細胞の形や配置といった形態学的特徴を捉え、RNA-Seqは遺伝子の発現パターンという分子レベルの情報を捉えます。それぞれ異なる情報源ですが、病理学的プロセスにおいては密接に関連しています。この研究では、既存の強力な基盤モデルがそれぞれのデータから本質的な特徴を抽出し、その上で軽量なアライメントモジュールが、これら異なる特徴間の対応関係を学習します。これにより、画像から分子レベルの情報を「推測」するのではなく、共通空間内で「関連付ける」ことが可能になり、高精度な予測が実現します。特に、形態学的特徴が明確な遺伝子プログラムは、画像情報との関連性が強いため、より高い精度で予測できると考えられます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / eess.IV）",
+      "field": "遺伝・ゲノム",
+      "categoryL1": "adjacent",
+      "categoryL2": "medical-imaging",
+      "arxivPrimary": "eess.IV",
+      "titleJa": "病理組織画像とRNA-Seqのマルチモーダルアライメントによる分子予測",
+      "catchTitle": "顕微鏡画像から遺伝子活性を読み解く新技術",
+      "hook": "あなたの身近な病院で、病理検査の顕微鏡画像から、がんの遺伝子活性が分かるとしたらどうでしょう？",
+      "background": "H&E染色された病理組織画像は診断病理学の中心ですが、形態学的情報しか提供せず、分子レベルの特異性に欠けます。一方、RNA-seqはトランスクリプトーム全体の情報を提供しますが、高価で過去のデータには利用できないことが多いです。これまでの研究では、H&E画像から遺伝子シグナルを予測する試みがありましたが、特定の遺伝子セットに限定され、推論時に新しい遺伝子セットをクエリできないという課題がありました。",
+      "quiz": {
+        "question": "この研究で、H&E画像から特に予測精度が高かった遺伝子プログラムはどれですか？",
+        "options": [
+          "代謝経路",
+          "細胞周期や免疫関連",
+          "神経伝達物質関連"
+        ],
+        "correctIndex": 1,
+        "explanation": "形態学的特徴と関連の深い細胞周期や免疫関連のプログラムは、H&E画像から高い精度（R^2>0.5）で予測できることが示されています。"
+      },
+      "limitations": "訓練コホートの規模がN=1,720と控えめであること、および臨床試験データでのファインチューニングが規制により実施できなかった点が挙げられます。また、形態学的特徴に乏しい代謝経路などの予測は依然として困難です。",
+      "glossary": [
+        {
+          "term": "H&E染色",
+          "definition": "細胞や組織を観察しやすくする一般的な染色法"
+        },
+        {
+          "term": "RNA-Seq",
+          "definition": "遺伝子の発現量（RNA量）を網羅的に調べる技術"
+        },
+        {
+          "term": "基盤モデル",
+          "definition": "大量のデータで事前学習された汎用性の高いAIモデル"
+        },
+        {
+          "term": "埋め込み空間",
+          "definition": "データを数値ベクトルで表現した多次元空間"
+        },
+        {
+          "term": "マルチモーダルアライメントモジュール",
+          "definition": "異なる種類のデータ間の関係性を学習するAI部品"
+        },
+        {
+          "term": "対照学習",
+          "definition": "似たデータは近く、異なるデータは遠くなるよう学習"
+        },
+        {
+          "term": "分子プロンプティング",
+          "definition": "任意の遺伝子セットで分子情報をクエリする手法"
+        },
+        {
+          "term": "潜在空間",
+          "definition": "データの隠れた特徴を表現する抽象的な空間"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "H&E染色画像とRNA-Seqデータを統合し、顕微鏡画像から遺伝子セットの活性を予測する新手法を開発。",
+      "noveltyContrast": {
+        "before": "従来の病理画像からの遺伝子予測は、特定の遺伝子セットに限定され、新しい遺伝子セットを推論時に追加できませんでした。また、高価なRNA-Seq検査が別途必要で、過去のデータには利用できない課題がありました。",
+        "after": "この研究では、H&E染色画像とRNA-Seqの基盤モデルを連携させることで、顕微鏡画像から任意の遺伝子セットの活性を予測できるようになりました。これにより、RNA-Seqなしで分子情報を得られ、過去の病理画像も活用可能です。"
+      },
+      "analogy": {
+        "title": "畑の土壌から作物の生育状況を予測する",
+        "body": "これは、まるで畑の土壌の見た目（色、粒度、湿り気など）から、そこに植えられた作物がどのような栄養状態にあるか、あるいはどんな病気にかかりやすいかを予測するようなものです。通常、作物の詳細な栄養状態を知るには、土壌分析や葉の成分分析（RNA-Seq）といった専門的で時間のかかる検査が必要です。しかし、この研究では、土壌の見た目（H&E画像）と過去の土壌分析データ（RNA-Seq）を学習したAIが、見た目だけで作物の生育に必要な特定の栄養素（遺伝子セット）がどれくらい活性しているかを教えてくれるようになりました。これにより、高価な分析をせずに、畑の状態を素早く把握し、適切な対策を打てるようになるのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "25倍",
+          "label": "ベースライン比の検索性能向上"
+        },
+        {
+          "value": "R^2 > 0.5",
+          "label": "形態学的特徴を持つ遺伝子プログラムの予測精度"
+        }
+      ],
+      "whyYouCare": "この技術は、医療現場に大きな変革をもたらす可能性があります。高価で時間のかかるRNA-Seq検査なしに、日常的に行われるH&E染色画像から、がんの分子特性や治療薬への反応性を予測できるようになります。これにより、患者さんはより早く、よりパーソナライズされた治療を受けられるようになるかもしれません。また、過去に蓄積された膨大な病理画像データも、新たな分子情報源として活用できるようになり、病気のメカニズム解明や新薬開発にも貢献が期待されます。農業分野では、作物の病害診断や土壌の栄養状態評価に、より安価で迅速な画像解析技術が応用される可能性を秘めています。",
+      "takeawayTalk": "顕微鏡画像から、がんの遺伝子活性がわかる時代が来た！",
+      "bodyText": "本研究では、H&E染色画像とRNA-Seqデータのそれぞれに特化した既存の基盤モデル（Frozen Foundation Models）を活用します。これらのモデルは、それぞれ画像とRNA-Seqの情報を高次元のベクトル（埋め込み空間）に変換します。次に、この2つの異なる種類のデータから得られた埋め込み空間を「マルチモーダルアライメントモジュール」という軽量な追加モジュールを用いて整合させ、共通の潜在空間を構築します。このアライメントモジュールは、マルチキャンサーコホート（N=1,720）のデータを用いて対照学習によって訓練されます。推論時には、H&E画像から得られた埋め込みベクトルを、RNA-Seqの参照データベースと照合することで、任意の遺伝子セットの活性を予測します。これにより、シーケンシングなしで、オープンボキャブラリーな分子プロンプティング（任意の遺伝子セットでのクエリ）が可能になります。\n\nこの技術の核心は、異なる種類のデータ（H&E画像とRNA-Seq）から得られる情報を、共通の「言語」で表現できるような空間（共通の潜在空間）にマッピングすることにあります。H&E画像は細胞の形や配置といった形態学的特徴を捉え、RNA-Seqは遺伝子の発現パターンという分子レベルの情報を捉えます。それぞれ異なる情報源ですが、病理学的プロセスにおいては密接に関連しています。この研究では、既存の強力な基盤モデルがそれぞれのデータから本質的な特徴を抽出し、その上で軽量なアライメントモジュールが、これら異なる特徴間の対応関係を学習します。これにより、画像から分子レベルの情報を「推測」するのではなく、共通空間内で「関連付ける」ことが可能になり、高精度な予測が実現します。特に、形態学的特徴が明確な遺伝子プログラムは、画像情報との関連性が強いため、より高い精度で予測できると考えられます。",
+      "bodyGlossary": [
+        {
+          "term": "H&E染色",
+          "definition": "細胞や組織を観察しやすくする一般的な染色法",
+          "start": 6,
+          "end": 11
+        },
+        {
+          "term": "RNA-Seq",
+          "definition": "遺伝子の発現量（RNA量）を網羅的に調べる技術",
+          "start": 14,
+          "end": 21
+        },
+        {
+          "term": "基盤モデル",
+          "definition": "大量のデータで事前学習された汎用性の高いAIモデル",
+          "start": 37,
+          "end": 42
+        },
+        {
+          "term": "埋め込み空間",
+          "definition": "データを数値ベクトルで表現した多次元空間",
+          "start": 111,
+          "end": 117
+        },
+        {
+          "term": "マルチモーダルアライメントモジュール",
+          "definition": "異なる種類のデータ間の関係性を学習するAI部品",
+          "start": 156,
+          "end": 174
+        },
+        {
+          "term": "潜在空間",
+          "definition": "データの隠れた特徴を表現する抽象的な空間",
+          "start": 200,
+          "end": 204
+        },
+        {
+          "term": "対照学習",
+          "definition": "似たデータは近く、異なるデータは遠くなるよう学習",
+          "start": 255,
+          "end": 259
+        },
+        {
+          "term": "分子プロンプティング",
+          "definition": "任意の遺伝子セットで分子情報をクエリする手法",
+          "start": 370,
+          "end": 380
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "H&E染色",
+          "definition": "細胞や組織を観察しやすくする一般的な染色法",
+          "start": 6,
+          "end": 11
+        },
+        {
+          "term": "RNA-Seq",
+          "definition": "遺伝子の発現量（RNA量）を網羅的に調べる技術",
+          "start": 14,
+          "end": 21
+        },
+        {
+          "term": "基盤モデル",
+          "definition": "大量のデータで事前学習された汎用性の高いAIモデル",
+          "start": 37,
+          "end": 42
+        },
+        {
+          "term": "埋め込み空間",
+          "definition": "データを数値ベクトルで表現した多次元空間",
+          "start": 111,
+          "end": 117
+        },
+        {
+          "term": "マルチモーダルアライメントモジュール",
+          "definition": "異なる種類のデータ間の関係性を学習するAI部品",
+          "start": 156,
+          "end": 174
+        },
+        {
+          "term": "潜在空間",
+          "definition": "データの隠れた特徴を表現する抽象的な空間",
+          "start": 200,
+          "end": 204
+        },
+        {
+          "term": "対照学習",
+          "definition": "似たデータは近く、異なるデータは遠くなるよう学習",
+          "start": 255,
+          "end": 259
+        },
+        {
+          "term": "分子プロンプティング",
+          "definition": "任意の遺伝子セットで分子情報をクエリする手法",
+          "start": 370,
+          "end": 380
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 305,
+      "keyFigure": {
+        "imagePath": "/figures/2606.29949v1_results.jpeg",
+        "page": 8,
+        "caption": "ドメイン適応により、未見のコホートへの適用における性能低下が大幅に改善されることを示しています。",
+        "label": "Fig. 4. Domain adaptation. (A) UMAPs of the multi-cancer dataset, TCGA-BRCA",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-30T23:11:45.607Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.29949v1_results.jpeg",
+          "page": 8,
+          "caption": "ドメイン適応により、未見のコホートへの適用における性能低下が大幅に改善されることを示しています。",
+          "label": "Fig. 4. Domain adaptation. (A) UMAPs of the multi-cancer dataset, TCGA-BRCA",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-30T23:11:45.607Z"
+        },
+        {
+          "imagePath": "/figures/2606.29949v1_why.jpeg",
+          "page": 2,
+          "caption": "H&E画像とRNA-Seqの情報を共通の潜在空間にマッピングするモデルの概要図です。",
+          "label": "Fig. 1. Overview. (top) Frozen foundation models and an alignment module (i-v)",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-30T23:11:45.607Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.30140v1",
+      "title": "DNA Language Models: An Assessment of Pre-Training for Fine-Tuning Tasks",
+      "authors": [
+        "Romain Karpinsky",
+        "Julien Mozziconacci",
+        "Mickaël Delcey"
+      ],
+      "publishedAt": "2026-06-29T11:20:05Z",
+      "url": "https://arxiv.org/abs/2606.30140v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.30140v1.pdf",
+      "categories": [
+        "topic:genomics",
+        "q-bio.GN",
+        "cs.CL"
+      ],
+      "abstract": "Recent breakthroughs in foundation models and Large Language Models (LLMs) have introduced new opportunities for studying and decoding genomic sequences. Several state-of-the-art approaches, such as DNABERT2, rely on transformer-based architectures, while others, such as ConvNova, still build upon more conventional convolutional models. However, systematic benchmark comparisons across these methods remain scarce. Given that transformer-based models require extensive and costly pretraining, it is crucial to evaluate whether their performance gains justify this overhead. Moreover, LLMs such as DNABERT2 typically rely on Byte Pair Encoding (BPE) tokenization, whose relevance for DNA sequence representation is still debated within the genomics community. In this work, we investigate three key questions: (i) do transformer-based models provide sufficient improvements on fine-tuning tasks upon heavy pretraining, (ii) what is the actual contribution of pretraining in this setting, and (iii) how does BPE tokenization impact performance on genomics-related tasks?",
+      "summary": {
+        "gist": "ゲノム科学はDNA配列から生命情報を解読し、表現型と結びつけることを目指しています。近年のハイスループットシーケンシング技術の進歩により、膨大なゲノムデータが生成され、これを活用するためには複雑な配列パターンを捉える計算モデルが不可欠です。深層学習の進展により、DNA配列から直接、調節要素の予測や変異の解釈、合成DNAの設計が可能になりました。特に、自然言語処理のLLMに触発されたTransformerベースのゲノム言語モデル（gLM）が登場し、数十億のヌクレオチドを用いた自己教師あり事前学習を通じてゲノムの調節ロジックを捉えようとしています。しかし、gLMは計算コストが非常に高く、またBPEトークン化のようなデータ処理方法がDNAに適しているか議論されていました。様々なアーキテクチャや手法の体系的な比較研究は不足していました。",
+        "novelty": "従来のDNA解析AIは、大規模な事前学習を行うTransformerモデルが主流で、その計算コストの高さに見合う性能向上が得られるか、またDNA配列に適したデータ処理方法（BPEトークン化）が不明でした。様々なモデルや手法の体系的な比較は不足していました。 本研究は、Transformerモデル、CNNモデル、そしてBPEトークン化と文字レベル表現を、統一された評価基準で比較しました。その結果、Transformerモデルの事前学習は必ずしも性能向上に繋がらず、BPEトークン化は多くのタスクで性能を低下させることが明らかになりました。",
+        "method": "本研究では、TransformerベースのDNABERT-2、古典的なCNNモデルであるU-Net、そしてDNA配列に特化したCNNモデルConvNovaの3つのアーキテクチャを評価しました。これらのモデルは、135種の生物種からなる約325億ヌクレオチドの大規模なデータセットで、マスク言語モデリング（MLM）という手法を用いて事前学習されました。MLMでは、DNA配列の一部をマスクし、モデルがそのマスクされた部分を予測するように学習します。特に、DNABERT-2はBPEトークン化を使用し、U-NetとConvNovaはBPEトークン化と文字レベル表現の両方で評価されました。その後、これらのモデルは、ヒトのプロモーター識別、転写因子結合予測、スプライス部位検出、酵母のエピジェネティックマーク予測、SARS-CoV-2変異分類など、28のデータセットを含むGenome Understanding Evaluation（GUE）ベンチマークでファインチューニングされ、性能が比較されました。",
+        "results": "BPEトークン化は、U-NetとConvNovaの両方で、ウイルス分類タスクを除き、一貫して性能を低下させました。特に、エピジェネティックマーク予測（EMP）ベンチマークでは、U-Netの平均MCCが47.07から35.15へと-11.92ポイント、ConvNovaでは55.03から52.40へと-2.63ポイント減少しました。マウス転写因子結合データセットでは、U-NetのMCCスコアが大幅に低下しました。TransformerベースのDNABERT-2は、一部のタスクで優れた性能を示しましたが、事前学習なしの軽量なCNNモデルが同等かそれ以上の性能を発揮するケースも多く見られました。大規模な事前学習は、必ずしもファインチューニングタスクの性能向上に繋がらないことが示唆されました。",
+        "why": "BPEトークン化が性能を低下させるのは、DNA配列の統計的パターンを効率的に捉えきれないためと考えられます。BPEは自然言語処理で有効ですが、DNA配列の短い繰り返しや特定のモチーフといった生物学的意味を持つパターンを、BPEが生成する可変長のトークンが適切に表現できない可能性があります。また、Transformerモデルの大規模な事前学習が必ずしもファインチューニングタスクで優位性を示さないのは、ゲノムの調節シグナルが疎で、細胞種特異的であり、文脈依存性が高いため、汎用的な事前学習目標が必ずしも生物学的に意味のある理解を付与しないためと考えられます。軽量なCNNモデルは、局所的な配列モチーフを効率的に学習できるため、特定のタスクにおいては事前学習の恩恵を受けにくい場合があります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.GN）",
+      "field": "遺伝・ゲノム",
+      "categoryL1": "adjacent",
+      "categoryL2": "bioinformatics",
+      "arxivPrimary": "q-bio.GN",
+      "titleJa": "DNA言語モデルの事前学習とファインチューニングタスクにおける評価",
+      "catchTitle": "DNA解析AI、事前学習は本当に必要？",
+      "hook": "ゲノム編集や遺伝子診断。最先端のDNA解析AIは、本当に「賢い」のでしょうか？",
+      "background": "ゲノム科学はDNA配列から生命情報を解読し、表現型と結びつけることを目指しています。近年のハイスループットシーケンシング技術の進歩により、膨大なゲノムデータが生成され、これを活用するためには複雑な配列パターンを捉える計算モデルが不可欠です。深層学習の進展により、DNA配列から直接、調節要素の予測や変異の解釈、合成DNAの設計が可能になりました。特に、自然言語処理のLLMに触発されたTransformerベースのゲノム言語モデル（gLM）が登場し、数十億のヌクレオチドを用いた自己教師あり事前学習を通じてゲノムの調節ロジックを捉えようとしています。しかし、gLMは計算コストが非常に高く、またBPEトークン化のようなデータ処理方法がDNAに適しているか議論されていました。様々なアーキテクチャや手法の体系的な比較研究は不足していました。",
+      "quiz": {
+        "question": "この研究で、BPEトークン化が多くのDNA解析タスクで性能を低下させた主な理由は何だと考えられますか？",
+        "options": [
+          "BPEがDNA配列の特定の生物学的モチーフを適切に表現できないため。",
+          "BPEトークン化は計算コストが高すぎるため。",
+          "Transformerモデルとの相性が悪いため。"
+        ],
+        "correctIndex": 0,
+        "explanation": "BPEトークン化は自然言語処理で有効ですが、DNA配列の短い繰り返しや特定のモチーフといった生物学的意味を持つパターンを、BPEが生成する可変長のトークンが適切に表現できない可能性が指摘されています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "Transformer",
+          "definition": "自然言語処理で成功した深層学習モデルの一種。"
+        },
+        {
+          "term": "CNN",
+          "definition": "画像認識などで使われる深層学習モデルの一種。"
+        },
+        {
+          "term": "BPEトークン化",
+          "definition": "頻出する文字のペアを結合して単語を作るデータ圧縮法。"
+        },
+        {
+          "term": "マスク言語モデリング",
+          "definition": "一部を隠したテキストから元の単語を予測する学習法。"
+        },
+        {
+          "term": "ファインチューニング",
+          "definition": "事前学習済みモデルを特定のタスク向けに調整すること。"
+        },
+        {
+          "term": "ゲノム",
+          "definition": "生物が持つ全ての遺伝情報のこと。"
+        },
+        {
+          "term": "モチーフ",
+          "definition": "DNA配列中の特定の機能を持つ短いパターン。"
+        },
+        {
+          "term": "ヌクレオチド",
+          "definition": "DNAを構成する基本単位（A, T, C, G）。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "DNA解析AIの性能は、モデルの種類や事前学習、データ処理方法で大きく変わることが判明。",
+      "noveltyContrast": {
+        "before": "従来のDNA解析AIは、大規模な事前学習を行うTransformerモデルが主流で、その計算コストの高さに見合う性能向上が得られるか、またDNA配列に適したデータ処理方法（BPEトークン化）が不明でした。様々なモデルや手法の体系的な比較は不足していました。",
+        "after": "本研究は、Transformerモデル、CNNモデル、そしてBPEトークン化と文字レベル表現を、統一された評価基準で比較しました。その結果、Transformerモデルの事前学習は必ずしも性能向上に繋がらず、BPEトークン化は多くのタスクで性能を低下させることが明らかになりました。"
+      },
+      "analogy": {
+        "title": "畑の土壌改良、本当に必要？",
+        "body": "これは、まるで新しい品種の作物を育てるために、高価な特殊肥料（大規模な事前学習）を大量に投入するようなものです。その肥料が本当に収穫量（モデル性能）を劇的に増やすのか、それとも普通の堆肥（軽量なモデル）で十分なのか、はたまた土壌の性質（DNA配列の特性）によっては逆効果になることもあるかもしれません。この研究は、どの肥料がどの土壌に最適か、その効果を科学的に検証し、無駄なコストをかけずに最大の収穫を得るための指針を示してくれます。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "-11.92",
+          "label": "U-Netの平均MCC（BPE使用時）"
+        },
+        {
+          "value": "-2.63",
+          "label": "ConvNovaの平均MCC（BPE使用時）"
+        }
+      ],
+      "whyYouCare": "この研究は、AIを導入する際の「本当にその技術が必要か？」「コストに見合う効果があるか？」という問いに答える重要な示唆を与えます。例えば、あなたの会社が膨大なデータを使ってAIモデルを開発しようとしている場合、闇雲に最新・最大規模のモデルや複雑なデータ処理手法を選ぶのではなく、目的とするタスクに最適な、よりシンプルで効率的なアプローチがあるかもしれません。特に、生物情報科学や医療分野でゲノムデータを扱う企業にとっては、どのAIモデルとデータ処理戦略が最も効果的でコスト効率が良いかを判断するための貴重な指針となります。無駄な計算資源の投入を避け、より早く、より正確な解析結果を得るために、この知見は役立つでしょう。",
+      "takeawayTalk": "DNA解析AI、最新モデルや事前学習が必ずしも最高とは限らないらしい！",
+      "bodyText": "本研究では、TransformerベースのDNABERT-2、古典的なCNNモデルであるU-Net、そしてDNA配列に特化したCNNモデルConvNovaの3つのアーキテクチャを評価しました。これらのモデルは、135種の生物種からなる約325億ヌクレオチドの大規模なデータセットで、マスク言語モデリング（MLM）という手法を用いて事前学習されました。MLMでは、DNA配列の一部をマスクし、モデルがそのマスクされた部分を予測するように学習します。特に、DNABERT-2はBPEトークン化を使用し、U-NetとConvNovaはBPEトークン化と文字レベル表現の両方で評価されました。その後、これらのモデルは、ヒトのプロモーター識別、転写因子結合予測、スプライス部位検出、酵母のエピジェネティックマーク予測、SARS-CoV-2変異分類など、28のデータセットを含むGenome Understanding Evaluation（GUE）ベンチマークでファインチューニングされ、性能が比較されました。\n\nBPEトークン化が性能を低下させるのは、DNA配列の統計的パターンを効率的に捉えきれないためと考えられます。BPEは自然言語処理で有効ですが、DNA配列の短い繰り返しや特定のモチーフといった生物学的意味を持つパターンを、BPEが生成する可変長のトークンが適切に表現できない可能性があります。また、Transformerモデルの大規模な事前学習が必ずしもファインチューニングタスクで優位性を示さないのは、ゲノムの調節シグナルが疎で、細胞種特異的であり、文脈依存性が高いため、汎用的な事前学習目標が必ずしも生物学的に意味のある理解を付与しないためと考えられます。軽量なCNNモデルは、局所的な配列モチーフを効率的に学習できるため、特定のタスクにおいては事前学習の恩恵を受けにくい場合があります。",
+      "bodyGlossary": [
+        {
+          "term": "Transformer",
+          "definition": "自然言語処理で成功した深層学習モデルの一種。",
+          "start": 6,
+          "end": 17
+        },
+        {
+          "term": "CNN",
+          "definition": "画像認識などで使われる深層学習モデルの一種。",
+          "start": 35,
+          "end": 38
+        },
+        {
+          "term": "ヌクレオチド",
+          "definition": "DNAを構成する基本単位（A, T, C, G）。",
+          "start": 122,
+          "end": 128
+        },
+        {
+          "term": "マスク言語モデリング",
+          "definition": "一部を隠したテキストから元の単語を予測する学習法。",
+          "start": 141,
+          "end": 151
+        },
+        {
+          "term": "BPEトークン化",
+          "definition": "頻出する文字のペアを結合して単語を作るデータ圧縮法。",
+          "start": 236,
+          "end": 244
+        },
+        {
+          "term": "ファインチューニング",
+          "definition": "事前学習済みモデルを特定のタスク向けに調整すること。",
+          "start": 426,
+          "end": 436
+        },
+        {
+          "term": "モチーフ",
+          "definition": "DNA配列中の特定の機能を持つ短いパターン。",
+          "start": 539,
+          "end": 543
+        },
+        {
+          "term": "ゲノム",
+          "definition": "生物が持つ全ての遺伝情報のこと。",
+          "start": 653,
+          "end": 656
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "Transformer",
+          "definition": "自然言語処理で成功した深層学習モデルの一種。",
+          "start": 6,
+          "end": 17
+        },
+        {
+          "term": "CNN",
+          "definition": "画像認識などで使われる深層学習モデルの一種。",
+          "start": 35,
+          "end": 38
+        },
+        {
+          "term": "ヌクレオチド",
+          "definition": "DNAを構成する基本単位（A, T, C, G）。",
+          "start": 122,
+          "end": 128
+        },
+        {
+          "term": "マスク言語モデリング",
+          "definition": "一部を隠したテキストから元の単語を予測する学習法。",
+          "start": 141,
+          "end": 151
+        },
+        {
+          "term": "BPEトークン化",
+          "definition": "頻出する文字のペアを結合して単語を作るデータ圧縮法。",
+          "start": 236,
+          "end": 244
+        },
+        {
+          "term": "ファインチューニング",
+          "definition": "事前学習済みモデルを特定のタスク向けに調整すること。",
+          "start": 426,
+          "end": 436
+        },
+        {
+          "term": "モチーフ",
+          "definition": "DNA配列中の特定の機能を持つ短いパターン。",
+          "start": 539,
+          "end": 543
+        },
+        {
+          "term": "ゲノム",
+          "definition": "生物が持つ全ての遺伝情報のこと。",
+          "start": 653,
+          "end": 656
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 346,
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.30140v1_why.png",
+          "page": 5,
+          "caption": "GUEベンチマークにおけるデータセットごとの配列長を示しています。",
+          "label": "Figure 2: Sequence length (L) across datasets in the GUE benchmark. Most tasks involve short sequences (70–100",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-30T23:11:47.812Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.30395v1",
+      "title": "Uncovering Salience-Driven Dynamics in Consumer Confidence with Generative Social Simulation",
+      "authors": [
+        "Yixu Huang",
+        "Yunlu Yin",
+        "Jiayu Lin",
+        "Xinnong Zhang",
+        "Jia Wang",
+        "Siyuan Wang",
+        "Xuanjing Huang",
+        "Liyin Jin",
+        "Zhongyu Wei"
+      ],
+      "publishedAt": "2026-06-29T14:46:22Z",
+      "url": "https://arxiv.org/abs/2606.30395v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.30395v1.pdf",
+      "categories": [
+        "topic:innovation",
+        "cs.CY",
+        "cs.CL",
+        "cs.SI"
+      ],
+      "abstract": "Consumer confidence is typically modeled as a persistent macroeconomic index, yet its movements arise from households that interpret economic information through heterogeneous constraints, exposures, prior beliefs, and attention. We introduce ConsumerSim, a generative Human--Environment response framework that reconstructs Consumer Confidence Index (CCI) dynamics from a microdata-calibrated synthetic population, time-stamped macroeconomic, financial, policy, and news signals, survey-like response generation, post-stratified belief expansion, and behavioral inertia alignment. Across U.S., EU27, and Japanese official CCI target series, ConsumerSim ranks first among persistence, time-series, regression, and information-augmented baselines on the reported reconstruction metrics, with clear gains around high-salience shocks. Its reconstructed signal also improves short-horizon prediction of real activity, most consistently for housing outcomes. Mechanism analyses show that CCI movements concentrate around salient events; subgroup trajectories often align in direction while differing in magnitude; and signal sensitivity varies across income, homeownership, education, and political-alignment groups. Population-expansion and ablation results indicate that representative aggregation, situational signals, persona heterogeneity, and inertia are necessary for both accuracy and diagnosis. The findings support a behavioral view of consumer confidence as an interpretable Human--Environment response process rather than a purely aggregate time series.",
+      "summary": {
+        "gist": "消費者信頼感指数（CCI）は、家計が自身の経済状況や将来の経済をどう評価しているかを示す指標であり、消費行動を理解する上で重要です。米国、EU27、日本などで公式に追跡されており、その動きは後の支出や貯蓄行動と関連付けられてきました。しかし、CCIは平穏な時期には安定しているものの、重要な情報が出ると急激に変動することがあります。従来の予測モデルはCCIを単一の集計時系列として扱っており、個々の家計の状況や情報環境がどのように組み合わさって集団的なCCIの動きを生み出すのかという診断的な問いには答えられませんでした。",
+        "novelty": "これまでの消費者信頼感指数（CCI）は、マクロ経済指標として一括りに扱われ、過去のデータや経済指標から予測されていました。しかし、個々の家計がどのような情報にどう反応して、なぜ指数が急変するのかは不明でした。 この研究では、個々の家計の多様な状況（収入、持ち家、教育など）と、経済ニュースや政策などの情報環境を組み合わせたAIシミュレーションモデルを開発。これにより、CCIがなぜ、どのように変化するのかをミクロな視点から診断できるようになりました。",
+        "method": "本研究では、ConsumerSimという生成エージェントシミュレーションフレームワークを導入し、CCIを「人間と環境の応答プロセス」として再構築しました。このフレームワークは、以下の5つの主要な設計選択に基づいています。\n1. マイクロデータで較正された合成家計人口を構築し、CCIの動きを生活状況、経済的露出、行動志向に遡れるようにしました。\n2. 月ごとの情報環境を構築し、異なる種類のシグナルを顕著性と関連性によって整理しました。\n3. 人間と環境の応答カーネルを使用して、調査のようなCCI応答を生成しました。\n4. 固定された高解像度の中核人口からの応答を、事後層化された信念の拡張を通じて、より広範な通常人口に拡張しました。\n5. 拡張された集計値を、観察された行動慣性に合わせて調整し、公共の期待が粘り強く、毎月リセットされるべきではないことを認識しました。\nこれらの選択により、CCIの動きが「顕著性によって引き起こされる、異質な信念更新プロセス」という考えが具体的なモデルになりました。",
+        "results": "ConsumerSimは、米国、欧州、日本の公式CCIターゲット系列において、既存の持続性、時系列、回帰、情報拡張ベースラインモデルを上回る再構築精度を示しました。特に、顕著性の高いショック発生時において明確な改善が見られました。また、ConsumerSimによって再構築されたシグナルは、短期的な実体経済活動の予測、特に住宅関連の成果予測を改善することが示されました。メカニズム分析により、CCIの動きは顕著なイベントの周りに集中し、サブグループの軌跡は方向性では一致するものの、その規模は異なり、シグナルへの感度は収入、持ち家、教育、政治的志向のグループによって異なることが明らかになりました。人口拡張とアブレーションの結果は、代表的な集計、状況的シグナル、ペルソナの異質性、および慣性が、精度と診断の両方に必要であることを示しています。",
+        "why": "消費者信頼感は、単なる集計された時系列ではなく、個々の家計の状況（収入、持ち家、教育、政治的志向など）と、経済ニュース、政策変更、金融市場の変動といった外部の情報環境が相互作用することで形成されます。家計は、自身の生活状況や過去の経験、注意の向け方によって、同じ情報でも異なる意味合いで受け止め、信頼感を更新します。特に、インフレや住宅価格、雇用リスクなどの「顕著なショック」が発生すると、多くの家計が同時に信念を更新し、CCIが急激に変動します。しかし、その変動の大きさは家計の属性によって異なり、例えば持ち家のある人とない人では住宅関連ニュースへの反応が異なります。この研究は、これらのミクロな反応が集計されてマクロなCCIの動きとなるメカニズムを、シミュレーションを通じて解明しました。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.CY）",
+      "field": "イノベーション・技術",
+      "categoryL1": "serendipity",
+      "categoryL2": "consumer-behavior",
+      "arxivPrimary": "cs.CY",
+      "titleJa": "生成社会シミュレーションで消費者信頼感の顕著性駆動ダイナミクスを解明",
+      "catchTitle": "なぜ消費者心理は急変する？AIで解き明かす",
+      "hook": "「最近、景気どう？」と聞かれて、あなたはどう答えますか？消費者心理は、なぜか急に変わることがありますよね。",
+      "background": "消費者信頼感指数（CCI）は、家計が自身の経済状況や将来の経済をどう評価しているかを示す指標であり、消費行動を理解する上で重要です。米国、EU27、日本などで公式に追跡されており、その動きは後の支出や貯蓄行動と関連付けられてきました。しかし、CCIは平穏な時期には安定しているものの、重要な情報が出ると急激に変動することがあります。従来の予測モデルはCCIを単一の集計時系列として扱っており、個々の家計の状況や情報環境がどのように組み合わさって集団的なCCIの動きを生み出すのかという診断的な問いには答えられませんでした。",
+      "quiz": {
+        "question": "この研究で開発されたConsumerSimモデルが、従来の消費者信頼感指数（CCI）予測モデルと最も異なる点は何ですか？",
+        "options": [
+          "過去のCCIデータのみを分析する点",
+          "個々の家計の状況と情報環境の相互作用をシミュレーションする点",
+          "GDP成長率などのマクロ経済指標を重視する点"
+        ],
+        "correctIndex": 1,
+        "explanation": "ConsumerSimは、個々の家計の多様な状況（収入、持ち家、教育など）と、経済ニュースや政策などの情報環境を組み合わせたAIシミュレーションモデルであり、従来のモデルが集計されたCCIを予測するのに対し、CCIがなぜ、どのように変化するのかをミクロな視点から診断できる点が最大の違いです。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "消費者信頼感指数",
+          "definition": "家計が景気や家計の状況をどう見ているかを示す指標。"
+        },
+        {
+          "term": "マクロ経済指標",
+          "definition": "国や地域全体の経済状況を示す統計データ。"
+        },
+        {
+          "term": "生成エージェントシミュレーション",
+          "definition": "個々の主体（エージェント）の行動から全体を再現するシミュレーション。"
+        },
+        {
+          "term": "人間と環境の応答プロセス",
+          "definition": "個人の状況と外部環境の相互作用で行動が決まる仕組み。"
+        },
+        {
+          "term": "マイクロデータ",
+          "definition": "個々の家計や企業の詳細なデータ。"
+        },
+        {
+          "term": "行動慣性",
+          "definition": "人々の行動や考えがすぐに変わらず、持続する傾向。"
+        },
+        {
+          "term": "顕著なショック",
+          "definition": "多くの人が注目し、大きな影響を与える出来事。"
+        },
+        {
+          "term": "アブレーション",
+          "definition": "モデルの一部を取り除き、その影響を評価する手法。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "AIシミュレーションで個々の家計の状況や情報への反応を再現し、消費者信頼感の急激な変化のメカニズムを解明した研究。",
+      "noveltyContrast": {
+        "before": "これまでの消費者信頼感指数（CCI）は、マクロ経済指標として一括りに扱われ、過去のデータや経済指標から予測されていました。しかし、個々の家計がどのような情報にどう反応して、なぜ指数が急変するのかは不明でした。",
+        "after": "この研究では、個々の家計の多様な状況（収入、持ち家、教育など）と、経済ニュースや政策などの情報環境を組み合わせたAIシミュレーションモデルを開発。これにより、CCIがなぜ、どのように変化するのかをミクロな視点から診断できるようになりました。"
+      },
+      "analogy": {
+        "title": "畑の土壌と作物の成長の関係",
+        "body": "消費者信頼感の動きは、まるで畑の作物の成長のようなものです。これまでは、畑全体の収穫量（CCI）だけを見て「今年は豊作だ」「不作だ」と判断していました。しかし、この研究は、畑の土壌（家計の状況）が場所によって異なり、そこに降る雨や日差し（経済情報）が作物（個々の家計の信頼感）にどう影響し、それが全体の収穫量にどうつながるのかを詳細に分析するようなものです。どの区画の土壌が、どの天候の変化に敏感に反応し、全体の収穫量を大きく左右するのかが分かるようになりました。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+3.2pt",
+          "label": "住宅予測のR2改善"
+        }
+      ],
+      "whyYouCare": "この研究は、私たちの生活に密接に関わる「景気の見方」がなぜ、どのように変わるのかを深く理解する手がかりを与えてくれます。例えば、政府が発表する経済対策やニュースが、なぜある人には響き、ある人には響かないのか。また、特定の経済ショック（インフレ、住宅価格変動など）が、なぜ特定の層（持ち家のある人、低所得者など）の心理に強く影響するのかが分かります。これにより、企業はターゲット層に合わせたマーケティング戦略を練りやすくなり、政策立案者はより効果的な経済対策を設計できるようになるでしょう。私たちの社会が、より予測可能で、より公平な経済環境を築くための重要な一歩となる研究です。",
+      "takeawayTalk": "消費者心理の急変は、個々の家計の状況と情報への反応で説明できるんだ！",
+      "bodyText": "本研究では、ConsumerSimという生成エージェントシミュレーションフレームワークを導入し、CCIを「人間と環境の応答プロセス」として再構築しました。このフレームワークは、以下の5つの主要な設計選択に基づいています。\n1. マイクロデータで較正された合成家計人口を構築し、CCIの動きを生活状況、経済的露出、行動志向に遡れるようにしました。\n2. 月ごとの情報環境を構築し、異なる種類のシグナルを顕著性と関連性によって整理しました。\n3. 人間と環境の応答カーネルを使用して、調査のようなCCI応答を生成しました。\n4. 固定された高解像度の中核人口からの応答を、事後層化された信念の拡張を通じて、より広範な通常人口に拡張しました。\n5. 拡張された集計値を、観察された行動慣性に合わせて調整し、公共の期待が粘り強く、毎月リセットされるべきではないことを認識しました。\nこれらの選択により、CCIの動きが「顕著性によって引き起こされる、異質な信念更新プロセス」という考えが具体的なモデルになりました。\n\n消費者信頼感は、単なる集計された時系列ではなく、個々の家計の状況（収入、持ち家、教育、政治的志向など）と、経済ニュース、政策変更、金融市場の変動といった外部の情報環境が相互作用することで形成されます。家計は、自身の生活状況や過去の経験、注意の向け方によって、同じ情報でも異なる意味合いで受け止め、信頼感を更新します。特に、インフレや住宅価格、雇用リスクなどの「顕著なショック」が発生すると、多くの家計が同時に信念を更新し、CCIが急激に変動します。しかし、その変動の大きさは家計の属性によって異なり、例えば持ち家のある人とない人では住宅関連ニュースへの反応が異なります。この研究は、これらのミクロな反応が集計されてマクロなCCIの動きとなるメカニズムを、シミュレーションを通じて解明しました。",
+      "bodyGlossary": [
+        {
+          "term": "生成エージェントシミュレーション",
+          "definition": "個々の主体（エージェント）の行動から全体を再現するシミュレーション。",
+          "start": 20,
+          "end": 36
+        },
+        {
+          "term": "人間と環境の応答プロセス",
+          "definition": "個人の状況と外部環境の相互作用で行動が決まる仕組み。",
+          "start": 53,
+          "end": 65
+        },
+        {
+          "term": "マイクロデータ",
+          "definition": "個々の家計や企業の詳細なデータ。",
+          "start": 114,
+          "end": 121
+        },
+        {
+          "term": "行動慣性",
+          "definition": "人々の行動や考えがすぐに変わらず、持続する傾向。",
+          "start": 337,
+          "end": 341
+        },
+        {
+          "term": "顕著なショック",
+          "definition": "多くの人が注目し、大きな影響を与える出来事。",
+          "start": 634,
+          "end": 641
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "生成エージェントシミュレーション",
+          "definition": "個々の主体（エージェント）の行動から全体を再現するシミュレーション。",
+          "start": 20,
+          "end": 36
+        },
+        {
+          "term": "人間と環境の応答プロセス",
+          "definition": "個人の状況と外部環境の相互作用で行動が決まる仕組み。",
+          "start": 53,
+          "end": 65
+        },
+        {
+          "term": "マイクロデータ",
+          "definition": "個々の家計や企業の詳細なデータ。",
+          "start": 114,
+          "end": 121
+        },
+        {
+          "term": "行動慣性",
+          "definition": "人々の行動や考えがすぐに変わらず、持続する傾向。",
+          "start": 337,
+          "end": 341
+        },
+        {
+          "term": "顕著なショック",
+          "definition": "多くの人が注目し、大きな影響を与える出来事。",
+          "start": 634,
+          "end": 641
+        }
+      ],
+      "agriEconRelevance": "この研究の「人間と環境の応答プロセス」という考え方は、農業経済学においても非常に有用です。例えば、農家の作付け判断や投資行動が、政府の補助金政策、気象情報、市場価格の変動といった外部環境と、農家の年齢、経験、リスク許容度といった個々の属性がどのように相互作用して決定されるのかをシミュレーションで解明できます。これにより、特定の政策や気象変動が、どのような農家に、どれくらいの規模で影響を与えるのかを診断し、より効果的な農業政策やリスク管理戦略の立案に役立てることが可能です。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 316,
+      "keyFigure": {
+        "imagePath": "/figures/2606.30395v1_results.png",
+        "page": 5,
+        "caption": "顕著なショック発生時の消費者信頼感の変化とConsumerSimのモデル性能を示しています。",
+        "label": "Fig. 2: CCI shifts and model performance in high-salience regimes. The official U.S.",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-06-30T23:11:52.477Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.30395v1_results.png",
+          "page": 5,
+          "caption": "顕著なショック発生時の消費者信頼感の変化とConsumerSimのモデル性能を示しています。",
+          "label": "Fig. 2: CCI shifts and model performance in high-salience regimes. The official U.S.",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-06-30T23:11:52.477Z"
+        },
+        {
+          "imagePath": "/figures/2606.30395v1_why.png",
+          "page": 4,
+          "caption": "ConsumerSimの人間と環境の相互作用フレームワークを示し、モデルの概念を説明しています。",
+          "label": "Fig. 1: Human–Environment response framework of ConsumerSim. The Human",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-06-30T23:11:52.477Z"
+        }
+      ]
+    }
+  ]
+}

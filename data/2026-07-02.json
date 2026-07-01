@@ -1,0 +1,1011 @@
+{
+  "date": "2026-07-02",
+  "papers": [
+    {
+      "id": "2602.03228",
+      "title": "Genealogical Expansions of Positive Fredholm Operators via a Reference-Point Method",
+      "authors": [
+        "Ryo Oizumi",
+        "Kensaku Kinjo",
+        "Yuki Chino"
+      ],
+      "publishedAt": "2026-07-01T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2602.03228",
+      "pdfUrl": "https://arxiv.org/pdf/2602.03228.pdf",
+      "categories": [
+        "topic:food-system",
+        "q-bio.PE"
+      ],
+      "abstract": "We study positive Fredholm integral operators that arise as next-generation operators in structured population models. The main problem is to represent the dominant eigenvalue and the associated right and left eigenfunctions without using Fredholm determinants or finite-dimensional discretization. We introduce a reference-point construction: a rank-one correction on the space of kernels, determined by a fixed pair \\((x_0,y_0)\\), which reorganizes iterated kernels into a renewal-type series. Under an explicit dominant spectral separation assumption and a scalar non-resonance condition for the chosen reference pair, the resulting \\(\\Gamma_n\\)-series converges at the spectral radius and gives the leading eigensystem. The coefficients also have a closed combinatorial expression in terms of ordinary partial Bell polynomials. For discrete-time integral projection models and for multi-state McKendrick equations, the same construction yields Euler--Lotka-type characteristic equations and formulas for demographic quantities such as stable distributions, reproductive values, type reproduction numbers, generation intervals, and expected generation numbers. The resulting genealogical expansion resolves the leading eigensystem into successive reproductive and transition contributions encoded by the iterated kernels.",
+      "summary": {
+        "gist": "人口動態における積分射影モデル（IPM）やマッケンドリック方程式のような構造化された人口モデルでは、個体群の長期的な成長率や安定した構造を理解するために、正フレドホルム積分作用素の主要な固有システムを解析することが重要です。この固有システムは、初期の形質や年齢・状態が個体群全体の成果にどのように寄与するかを記述します。しかし、従来のフレドホルム行列式を用いた手法では、多世代にわたる生殖と遷移の寄与を直接的に表現することが困難でした。",
+        "novelty": "従来の人口モデルでは、将来の個体数や安定した構造を予測するために、フレドホルム行列式や数値的な離散化を用いるのが一般的でした。しかし、これらは多世代にわたる個体群の「生殖と遷移の寄与」を直接的に示すものではありませんでした。 この研究では、特定の「参照点」を設定し、そこから世代ごとの生殖や遷移の寄与を直接的に積み重ねることで、行列式を使わずに主要な固有値と固有関数を表現する新しい手法を開発しました。これにより、人口変動のメカニズムをより直感的に理解できるようになります。",
+        "method": "本研究では、フレドホルム積分作用素の主要な固有システムを、行列式を使わずに直接的に表現する「参照点構成」という新しい手法を提案します。これは、カーネル空間にランク1の修正を導入し、特定の参照点 (x0, y0) によって反復カーネルを更新型系列に再編成するものです。具体的には、カーネルレベルで参照点再帰を生成し、反復 {Γn}n≥1 を生成します。この {Γn}n≥1 は、反復カーネルから主要なペロン成分を除去し、固有システムを更新型で系統的な展開へと再編成します。この展開は、連続状態の固有構造を明らかにし、ベル多項式を用いた閉形式で表現されます。このフレームワークは、離散時間IPMや多状態マッケンドリック方程式に適用され、安定分布、生殖価、世代間隔などの人口統計学的指標を、離散化なしに連続状態カーネルを通じて直接導出します。",
+        "results": "提案された参照点構成法は、主要な固有値と関連する右および左固有関数を、フレドホルム行列式や有限次元離散化を用いることなく表現することを可能にしました。特定のスペクトル分離仮定とスカラー非共鳴条件の下で、結果として得られる Γn 系列はスペクトル半径で収束し、主要な固有システムを与えます。係数は、通常の偏ベル多項式で閉じた組み合わせ表現を持ちます。この手法を離散時間積分射影モデルと多状態マッケンドリック方程式に適用した結果、オイラー・ロトカ型の特性方程式と、安定分布、生殖価、型生殖数、世代間隔、期待世代数などの人口統計学的量の公式が導出されました。これにより、主要な固有システムが、反復カーネルによって符号化された連続的な生殖および遷移の寄与へと分解されることが示されました。",
+        "why": "この手法の核心は、「参照点演算子」の導入にあります。これは、カーネル空間における代数的な操作であり、特定の参照点 (x0, y0) でランク1の成分を抽出し、それによって行列式を使わない再帰的な展開を生成します。固有関数は非ゼロのスカラー定数を除いて決定されるため、そのスケールを何らかの参照点で固定する必要があります。この参照点演算子は、この正規化をカーネルレベルで直接組み込み、再帰的な表現を生成します。これにより、多世代にわたる個体群の生殖と遷移の寄与を、より直接的かつ系統的に追跡することが可能になります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.PE）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "population-dynamics",
+      "arxivPrimary": "q-bio.PE",
+      "titleJa": "参照点法による正フレドホルム作用素の系統的展開",
+      "catchTitle": "人口変動の未来を解き明かす新手法",
+      "hook": "あなたの周りの動植物の個体数は、なぜ増えたり減ったりするのでしょうか？その変動の仕組みを、もっと深く理解したいと思いませんか？",
+      "background": "人口動態における積分射影モデル（IPM）やマッケンドリック方程式のような構造化された人口モデルでは、個体群の長期的な成長率や安定した構造を理解するために、正フレドホルム積分作用素の主要な固有システムを解析することが重要です。この固有システムは、初期の形質や年齢・状態が個体群全体の成果にどのように寄与するかを記述します。しかし、従来のフレドホルム行列式を用いた手法では、多世代にわたる生殖と遷移の寄与を直接的に表現することが困難でした。",
+      "quiz": {
+        "question": "この研究の新しい手法が、従来の人口モデルの課題を解決する上で最も貢献する点は何でしょうか？",
+        "options": [
+          "計算速度が飛躍的に向上したこと",
+          "多世代にわたる生殖と遷移の寄与を直接的に表現できるようになったこと",
+          "より多くの種類の生物に適用できるようになったこと"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究の主要な貢献は、フレドホルム行列式や数値離散化では直接的に表現しにくかった、多世代にわたる個体群の「生殖と遷移の寄与」を、参照点法によって直接的に、かつ系統的に展開できるようになった点です。これにより、人口変動のメカニズムをより深く、直感的に理解することが可能になります。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "フレドホルム積分作用素",
+          "definition": "積分方程式を解く際に現れる線形作用素"
+        },
+        {
+          "term": "固有システム",
+          "definition": "固有値と固有関数の組で、線形変換の特性を示す"
+        },
+        {
+          "term": "カーネル",
+          "definition": "積分作用素の核となる関数"
+        },
+        {
+          "term": "ランク1の修正",
+          "definition": "行列や作用素に単純な項を加える操作"
+        },
+        {
+          "term": "ベル多項式",
+          "definition": "組み合わせ論で使われる特殊な多項式"
+        },
+        {
+          "term": "積分射影モデル（IPM）",
+          "definition": "連続的な状態変数を持つ個体群動態モデル"
+        },
+        {
+          "term": "マッケンドリック方程式",
+          "definition": "年齢構造を持つ個体群動態を記述する方程式"
+        },
+        {
+          "term": "参照点演算子",
+          "definition": "特定の参照点で正規化を行うための代数的操作"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "複雑な人口変動モデルの「未来予測」を、特定の基準点から世代ごとの寄与を積み重ねて、より直接的に計算する新しい数学手法です。",
+      "noveltyContrast": {
+        "before": "従来の人口モデルでは、将来の個体数や安定した構造を予測するために、フレドホルム行列式や数値的な離散化を用いるのが一般的でした。しかし、これらは多世代にわたる個体群の「生殖と遷移の寄与」を直接的に示すものではありませんでした。",
+        "after": "この研究では、特定の「参照点」を設定し、そこから世代ごとの生殖や遷移の寄与を直接的に積み重ねることで、行列式を使わずに主要な固有値と固有関数を表現する新しい手法を開発しました。これにより、人口変動のメカニズムをより直感的に理解できるようになります。"
+      },
+      "analogy": {
+        "title": "畑の成長を「特定の苗」から追うようなもの",
+        "body": "これは、広大な畑全体の収穫量を予測する際に、いちいち全ての苗の成長を詳細に記録するのではなく、特定の「基準となる苗」の成長を定点観測し、その苗から派生する全ての「子孫苗」の成長と収穫への寄与を世代ごとに積み上げていくようなものです。この研究は、人口変動という畑の未来を予測する際に、特定の「参照点」から始まる個体の生殖と遷移の連鎖を追うことで、全体の成長率や安定した構造を、より直接的かつ詳細に理解できるようにします。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、農業経済学や生態学において、作物の病害虫の発生予測、家畜の個体数管理、漁業資源の持続可能性評価など、様々な分野に応用可能です。例えば、特定の作物の生育段階や地域の気候条件を「参照点」として設定することで、病害虫の発生パターンや収穫量の変動をより正確に予測できるようになるかもしれません。また、家畜の品種改良や漁業資源の管理においても、世代ごとの生殖や成長の寄与を詳細に分析することで、より効果的な戦略を立てる手助けとなるでしょう。これは、単なる理論的な進歩にとどまらず、私たちの食料生産や自然環境の保全に直結する、実用的な価値を持つ発見です。",
+      "takeawayTalk": "人口変動の未来予測が、特定の基準点から世代ごとの寄与を積み重ねて、もっと分かりやすくなったんだって！",
+      "bodyText": "本研究では、フレドホルム積分作用素の主要な固有システムを、行列式を使わずに直接的に表現する「参照点構成」という新しい手法を提案します。これは、カーネル空間にランク1の修正を導入し、特定の参照点 (x0, y0) によって反復カーネルを更新型系列に再編成するものです。具体的には、カーネルレベルで参照点再帰を生成し、反復 {Γn}n≥1 を生成します。この {Γn}n≥1 は、反復カーネルから主要なペロン成分を除去し、固有システムを更新型で系統的な展開へと再編成します。この展開は、連続状態の固有構造を明らかにし、ベル多項式を用いた閉形式で表現されます。このフレームワークは、離散時間IPMや多状態マッケンドリック方程式に適用され、安定分布、生殖価、世代間隔などの人口統計学的指標を、離散化なしに連続状態カーネルを通じて直接導出します。\n\nこの手法の核心は、「参照点演算子」の導入にあります。これは、カーネル空間における代数的な操作であり、特定の参照点 (x0, y0) でランク1の成分を抽出し、それによって行列式を使わない再帰的な展開を生成します。固有関数は非ゼロのスカラー定数を除いて決定されるため、そのスケールを何らかの参照点で固定する必要があります。この参照点演算子は、この正規化をカーネルレベルで直接組み込み、再帰的な表現を生成します。これにより、多世代にわたる個体群の生殖と遷移の寄与を、より直接的かつ系統的に追跡することが可能になります。",
+      "bodyGlossary": [
+        {
+          "term": "フレドホルム積分作用素",
+          "definition": "積分方程式を解く際に現れる線形作用素",
+          "start": 6,
+          "end": 17
+        },
+        {
+          "term": "固有システム",
+          "definition": "固有値と固有関数の組で、線形変換の特性を示す",
+          "start": 21,
+          "end": 27
+        },
+        {
+          "term": "カーネル",
+          "definition": "積分作用素の核となる関数",
+          "start": 71,
+          "end": 75
+        },
+        {
+          "term": "ランク1の修正",
+          "definition": "行列や作用素に単純な項を加える操作",
+          "start": 78,
+          "end": 85
+        },
+        {
+          "term": "ベル多項式",
+          "definition": "組み合わせ論で使われる特殊な多項式",
+          "start": 257,
+          "end": 262
+        },
+        {
+          "term": "マッケンドリック方程式",
+          "definition": "年齢構造を持つ個体群動態を記述する方程式",
+          "start": 299,
+          "end": 310
+        },
+        {
+          "term": "参照点演算子",
+          "definition": "特定の参照点で正規化を行うための代数的操作",
+          "start": 380,
+          "end": 386
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "フレドホルム積分作用素",
+          "definition": "積分方程式を解く際に現れる線形作用素",
+          "start": 6,
+          "end": 17
+        },
+        {
+          "term": "固有システム",
+          "definition": "固有値と固有関数の組で、線形変換の特性を示す",
+          "start": 21,
+          "end": 27
+        },
+        {
+          "term": "カーネル",
+          "definition": "積分作用素の核となる関数",
+          "start": 71,
+          "end": 75
+        },
+        {
+          "term": "ランク1の修正",
+          "definition": "行列や作用素に単純な項を加える操作",
+          "start": 78,
+          "end": 85
+        },
+        {
+          "term": "ベル多項式",
+          "definition": "組み合わせ論で使われる特殊な多項式",
+          "start": 257,
+          "end": 262
+        },
+        {
+          "term": "マッケンドリック方程式",
+          "definition": "年齢構造を持つ個体群動態を記述する方程式",
+          "start": 299,
+          "end": 310
+        },
+        {
+          "term": "参照点演算子",
+          "definition": "特定の参照点で正規化を行うための代数的操作",
+          "start": 380,
+          "end": 386
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 280
+    },
+    {
+      "id": "2606.30693",
+      "title": "DiSTILL: A Hybrid Cloud-HPC Workflow System for Reproducible Spatial Transcriptomics Analysis",
+      "authors": [
+        "Myles Joshua Toledo Tan",
+        "Vasco Gerardo Hinostroza Fuentes",
+        "Nikhil Yerra",
+        "Maria Kapetanaki",
+        "Parisa Rashidi",
+        "Kejun Huang",
+        "Panayiotis V. Benos"
+      ],
+      "publishedAt": "2026-07-01T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.30693",
+      "pdfUrl": "https://arxiv.org/pdf/2606.30693.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "q-bio.GN"
+      ],
+      "abstract": "Spatial transcriptomics workflows increasingly combine large annotated data objects, notebook-based analyses, and resource-intensive statistical models that must be executed on high-performance computing (HPC) systems. In practice, these workflows are often difficult to reproduce because configuration, validation, stage execution, and artifact handling are fragmented across $\\textit{ad hoc}$ scripts and manually edited notebooks. We present $\\textit{DiSTILL}$ (Disease Diagnosis from Spatial Transcriptomics via Interpretable Latent Learning), a hybrid cloud$-$HPC workflow system for reproducible spatial transcriptomics (ST) analysis. DiSTILL combines an application programming interface (API) backend built with $\\texttt{FastAPI}$, a web frontend, a dataset and preset registry, and a Python pipeline generator that materializes run-specific execution bundles and $\\texttt{SLURM}$ submission scripts. The system supports local, Secure Shell (SSH)-mediated, and pull-based poller execution modes, enabling HPC submission in environments where persistent API-initiated automation is restricted. We describe the system through the lens of an inflammatory bowel disease (IBD) ST workflow that operationalizes the analytical pipeline of Tan $\\textit{et al.}$ into an auditable application layer. Accordingly, the contribution of this paper is a workflow systems contribution centered on reproducible execution, queue-based orchestration, configuration semantics, and deployment across a split cloud$-$HPC architecture. The broader application goal of DiSTILL is to support user-supplied datasets that satisfy the schema assumptions of the wrapped analytical pipeline.",
+      "summary": {
+        "gist": "空間トランスクリプトミクス解析は、大量のデータ、ノートブックベースの解析、高性能計算（HPC）システムでの実行が必要な統計モデルを組み合わせることが増えています。しかし、設定、検証、実行、成果物の処理がアドホックなスクリプトや手動で編集されたノートブックに分散しているため、これらのワークフローの再現が困難でした。",
+        "novelty": "従来の空間トランスクリプトミクス解析は、手動での設定、バラバラのスクリプト、個別編集されたノートブックに依存していました。そのため、設定のズレ、データ形式の不一致、実行履歴の不明瞭さなどにより、解析結果の再現が非常に困難でした。 DiSTILLは、APIバックエンド、ウェブフロントエンド、データセット・プリセットレジストリ、Pythonパイプラインジェネレータを組み合わせることで、これらの問題を解決します。これにより、設定管理、実行前の検証、実行の具体化、キュー処理、結果の取り扱いが明確なソフトウェアコンポーネントとして分離され、再現性と監査可能性が大幅に向上します。",
+        "method": "DiSTILLは、FastAPIで構築されたAPIバックエンド、ウェブフロントエンド、データセットおよびプリセットレジストリ、そして実行固有の実行バンドルとSLURM提出スクリプトを生成するPythonパイプラインジェネレータを組み合わせたハイブリッドクラウド-HPCワークフローシステムです。このシステムは、ローカル、SSH経由、プルベースのポーラー実行モードをサポートし、APIによる自動化が制限される環境でもHPCへのジョブ提出を可能にします。炎症性腸疾患（IBD）の空間トランスクリプトミクスワークフローをケーススタディとして、このシステムを説明しています。",
+        "results": "DiSTILLは、設定管理、実行前の検証、実行の具体化、キュー処理、成果物の公開を明示的なソフトウェアコンポーネントに分離することで、複雑な空間トランスクリプトミクスパイプラインを構造化されたアプリケーションインターフェースを通じて公開し、再現性を確保します。これにより、高価なHPCジョブ提出の前に設定とデータ仮定を検証し、複数のスケジューラ連携パターンをサポートします。",
+        "why": "DiSTILLは、クラウドでホストされるWebフロントエンドとAPIバックエンドからなるコントロールプレーンと、HiPerGatorなどのHPC環境で実行される実行プレーンで構成されます。ユーザーはWebフロントエンドを通じて解析を設定し、APIがその設定を検証し、実行キューに追加します。HPC上のポーラーがキューからジョブを取得し、SLURMを通じてローカルで実行し、結果をAPIに報告します。このアーキテクチャは、コントロールプレーンがHPCクラスターに直接実行権限を持つ必要がなく、API主導の自動化に依存しないため、堅牢性と柔軟性が向上します。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.GN）",
+      "field": "農業経済",
+      "categoryL1": "adjacent",
+      "categoryL2": "bioinformatics",
+      "arxivPrimary": "q-bio.GN",
+      "titleJa": "DiSTILL: 再現性のある空間トランスクリプトミクス解析のためのハイブリッドクラウド-HPCワークフローシステム",
+      "catchTitle": "遺伝子解析の再現性を高めるシステム",
+      "hook": "あなたの研究室では、複雑な遺伝子解析が「再現できない」「設定がバラバラ」といった問題に直面していませんか？",
+      "background": "空間トランスクリプトミクス解析は、大量のデータ、ノートブックベースの解析、高性能計算（HPC）システムでの実行が必要な統計モデルを組み合わせることが増えています。しかし、設定、検証、実行、成果物の処理がアドホックなスクリプトや手動で編集されたノートブックに分散しているため、これらのワークフローの再現が困難でした。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "空間トランスクリプトミクス",
+          "definition": "組織内の遺伝子発現を空間的な位置情報と共に解析する技術"
+        },
+        {
+          "term": "HPC",
+          "definition": "High-Performance Computingの略で、高性能計算システム"
+        },
+        {
+          "term": "API",
+          "definition": "Application Programming Interfaceの略で、ソフトウェア間の接続"
+        },
+        {
+          "term": "FastAPI",
+          "definition": "Python製の高速なWeb APIフレームワーク"
+        },
+        {
+          "term": "SLURM",
+          "definition": "HPCクラスターでジョブを管理・スケジューリングするシステム"
+        },
+        {
+          "term": "ポーラー",
+          "definition": "定期的にサーバーに問い合わせて新しいタスクがないか確認する仕組み"
+        },
+        {
+          "term": "コントロールプレーン",
+          "definition": "システム全体の管理や調整を行う部分"
+        },
+        {
+          "term": "実行プレーン",
+          "definition": "実際の処理や計算を実行する部分"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "複雑な空間トランスクリプトミクス解析を、クラウドとスーパーコンピュータを連携させ、誰でも再現可能にするシステムです。",
+      "noveltyContrast": {
+        "before": "従来の空間トランスクリプトミクス解析は、手動での設定、バラバラのスクリプト、個別編集されたノートブックに依存していました。そのため、設定のズレ、データ形式の不一致、実行履歴の不明瞭さなどにより、解析結果の再現が非常に困難でした。",
+        "after": "DiSTILLは、APIバックエンド、ウェブフロントエンド、データセット・プリセットレジストリ、Pythonパイプラインジェネレータを組み合わせることで、これらの問題を解決します。これにより、設定管理、実行前の検証、実行の具体化、キュー処理、結果の取り扱いが明確なソフトウェアコンポーネントとして分離され、再現性と監査可能性が大幅に向上します。"
+      },
+      "analogy": {
+        "title": "ベテラン農家の「勘」を「レシピ」にする",
+        "body": "これは、まるでベテラン農家が長年の経験と勘で最適な土壌作りや水やりをしていた作業を、誰でも再現できる「詳細な栽培レシピ」と「自動化された農機」に置き換えるようなものです。従来の解析は、農家がその日の天候や土の状態を見て手作業で調整するようなもので、同じ結果を出すには熟練の技が必要でした。DiSTILLは、この「勘」を「レシピ」としてシステムに組み込み、自動で最適な栽培（解析）プロセスを実行し、誰がやっても同じ品質の作物を収穫（結果を再現）できるようにするのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、生命科学分野だけでなく、データ解析を伴うあらゆる分野の社会人にとって重要です。例えば、農業分野で品種改良のためのゲノム解析を行う際、解析手法が複雑で属人化していると、研究の再現が難しく、新しい知見の発見が遅れる可能性があります。DiSTILLのようなシステムがあれば、誰でも同じ条件で解析を実行でき、結果の信頼性が向上します。これにより、研究開発の効率化、共同研究の促進、そして最終的には、より良い品種や栽培方法の迅速な開発に貢献するでしょう。",
+      "takeawayTalk": "複雑な遺伝子解析も、このシステムがあれば誰でも再現できるよ！",
+      "bodyText": "DiSTILLは、FastAPIで構築されたAPIバックエンド、ウェブフロントエンド、データセットおよびプリセットレジストリ、そして実行固有の実行バンドルとSLURM提出スクリプトを生成するPythonパイプラインジェネレータを組み合わせたハイブリッドクラウド-HPCワークフローシステムです。このシステムは、ローカル、SSH経由、プルベースのポーラー実行モードをサポートし、APIによる自動化が制限される環境でもHPCへのジョブ提出を可能にします。炎症性腸疾患（IBD）の空間トランスクリプトミクスワークフローをケーススタディとして、このシステムを説明しています。\n\nDiSTILLは、クラウドでホストされるWebフロントエンドとAPIバックエンドからなるコントロールプレーンと、HiPerGatorなどのHPC環境で実行される実行プレーンで構成されます。ユーザーはWebフロントエンドを通じて解析を設定し、APIがその設定を検証し、実行キューに追加します。HPC上のポーラーがキューからジョブを取得し、SLURMを通じてローカルで実行し、結果をAPIに報告します。このアーキテクチャは、コントロールプレーンがHPCクラスターに直接実行権限を持つ必要がなく、API主導の自動化に依存しないため、堅牢性と柔軟性が向上します。",
+      "bodyGlossary": [
+        {
+          "term": "FastAPI",
+          "definition": "Python製の高速なWeb APIフレームワーク",
+          "start": 9,
+          "end": 16
+        },
+        {
+          "term": "SLURM",
+          "definition": "HPCクラスターでジョブを管理・スケジューリングするシステム",
+          "start": 78,
+          "end": 83
+        },
+        {
+          "term": "HPC",
+          "definition": "High-Performance Computingの略で、高性能計算システム",
+          "start": 131,
+          "end": 134
+        },
+        {
+          "term": "ポーラー",
+          "definition": "定期的にサーバーに問い合わせて新しいタスクがないか確認する仕組み",
+          "start": 172,
+          "end": 176
+        },
+        {
+          "term": "空間トランスクリプトミクス",
+          "definition": "組織内の遺伝子発現を空間的な位置情報と共に解析する技術",
+          "start": 237,
+          "end": 250
+        },
+        {
+          "term": "コントロールプレーン",
+          "definition": "システム全体の管理や調整を行う部分",
+          "start": 329,
+          "end": 339
+        },
+        {
+          "term": "実行プレーン",
+          "definition": "実際の処理や計算を実行する部分",
+          "start": 365,
+          "end": 371
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "FastAPI",
+          "definition": "Python製の高速なWeb APIフレームワーク",
+          "start": 9,
+          "end": 16
+        },
+        {
+          "term": "SLURM",
+          "definition": "HPCクラスターでジョブを管理・スケジューリングするシステム",
+          "start": 78,
+          "end": 83
+        },
+        {
+          "term": "HPC",
+          "definition": "High-Performance Computingの略で、高性能計算システム",
+          "start": 131,
+          "end": 134
+        },
+        {
+          "term": "ポーラー",
+          "definition": "定期的にサーバーに問い合わせて新しいタスクがないか確認する仕組み",
+          "start": 172,
+          "end": 176
+        },
+        {
+          "term": "空間トランスクリプトミクス",
+          "definition": "組織内の遺伝子発現を空間的な位置情報と共に解析する技術",
+          "start": 237,
+          "end": 250
+        },
+        {
+          "term": "コントロールプレーン",
+          "definition": "システム全体の管理や調整を行う部分",
+          "start": 329,
+          "end": 339
+        },
+        {
+          "term": "実行プレーン",
+          "definition": "実際の処理や計算を実行する部分",
+          "start": 365,
+          "end": 371
+        }
+      ],
+      "agriEconRelevance": "DiSTILLの再現性のあるワークフローシステムは、農業経済学におけるデータ駆動型研究に大きく貢献します。例えば、スマート農業におけるセンサーデータ解析、気候変動が作物収量に与える影響のモデル化、農業政策の効果評価など、複雑なデータ処理が必要な研究において、解析の透明性と再現性を確保できます。これにより、研究結果の信頼性が高まり、政策立案者や農業従事者がより確かな根拠に基づいて意思決定を行うことが可能になります。また、異なる研究機関間でのデータ共有や共同研究も促進され、農業経済学全体の発展に寄与するでしょう。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 239,
+      "keyFigure": {
+        "imagePath": "/figures/2606.30693_results.png",
+        "page": 6,
+        "caption": "健康な人、潰瘍性大腸炎、クローン病における細胞ニッチの濃縮度を比較しています。",
+        "label": "Fig. 4: Niche enrichment comparisons across (a) HC, (b) UC, and (c) CD.",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-01T23:16:07.300Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.30693_results.png",
+          "page": 6,
+          "caption": "健康な人、潰瘍性大腸炎、クローン病における細胞ニッチの濃縮度を比較しています。",
+          "label": "Fig. 4: Niche enrichment comparisons across (a) HC, (b) UC, and (c) CD.",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-01T23:16:07.300Z"
+        },
+        {
+          "imagePath": "/figures/2606.30693_why.png",
+          "page": 9,
+          "caption": "DiSTILLの実行設定ユーザーインターフェースのスクリーンショットです。",
+          "label": "Fig. 7: DiSTILL run-configuration user interface screenshot.",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-01T23:16:07.300Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.31768",
+      "title": "Nonlinear Feedbacks Between Host Behavior and Vector Adaptation in a Multi-Host Vector-Borne Disease Model",
+      "authors": [
+        "Shravani Shetgaonkar",
+        "Anupama Sharma"
+      ],
+      "publishedAt": "2026-07-01T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.31768",
+      "pdfUrl": "https://arxiv.org/pdf/2606.31768.pdf",
+      "categories": [
+        "topic:food-system",
+        "q-bio.PE",
+        "math.DS"
+      ],
+      "abstract": "Insecticide-treated nets (ITN) are an effective and low-cost intervention for controlling vector-borne disease (VBD), however, their use depends on individual decisions based on perceived cost and risk of infection. This study investigates a nonlinear multi-host model for the transmission of VBD with endogenous strategic control. We assume that hosts' adoption of ITN emerges from the payoff-based decision-making, creating a nonlinear coupling with disease prevalence. We model vector preference as a function of ITN coverage to probe the complex interplay among individual choices, disease prevalence, and its control in a multi-host setting. The qualitative behavior of the system is characterized by the thresholds $R_0$ and $R_c$, which determine the existence and local stability of the disease-free and endemic equilibria. The system exhibits rich dynamical behavior; hence, we provide a bifurcation analysis identifying the conditions for saddle-node and Hopf bifurcations. Our results demonstrate that the interaction between the perceived cost of ITN and the infection risk can induce critical transitions, including regime shift from stable endemic states to sustained periodic oscillations. Furthermore, we identify a counterintuitive effect whereby complete ITN adoption by the primary host can increase the overall prevalence in the secondary host due to adaptive shifts of vector feeding behavior.",
+      "summary": {
+        "gist": "蚊が媒介する感染症（VBD）は、疫学的なプロセスだけでなく、人間の行動や蚊の吸血パターンによってもその動態が左右されます。殺虫剤処理された蚊帳（ITN）は、VBD対策として効果的かつ低コストな手段ですが、その使用は個人のコスト認識や感染リスクの判断に依存します。ITNの普及率が高いとVBDの有病率は低下しますが、これにより人々は感染リスクが低いと認識し、ITNの使用を中止する可能性があります。このITN使用の減少は、病気の再燃の可能性を高めることがあります。さらに、ITNの使用は蚊の宿主へのアクセスを変化させ、複数の宿主が存在する環境では蚊の吸血を再分配する可能性があります。このような適応的な防御行動と蚊の吸血行動の相互作用が、感染症の動態にどのような影響を与えるかは十分に理解されていませんでした。",
+        "novelty": "これまでの研究では、蚊帳の使用が感染症の減少に寄与すると考えられてきました。また、蚊帳の使用は個人の感染リスクとコストのバランスで決まるとされていましたが、蚊の行動変化との複雑な相互作用は十分に理解されていませんでした。 この研究では、蚊帳の使用という人間の行動が、蚊の吸血パターンを適応的に変化させ、その結果、主要な宿主で蚊帳が完全に普及しても、別の宿主で感染症が拡大するという、直感に反する現象が起こりうることを明らかにしました。",
+        "method": "本研究では、適応的な蚊帳使用と蚊の吸血選好性を結合した多宿主VBDモデルを提案しました。このモデルでは、個人がペイオフに基づいた模倣ダイナミクスに従って、蚊帳を使用するか否かの戦略を動的に切り替えます。ペイオフは有病率と蚊の個体数に依存し、動的に変化します。蚊の吸血パターンは、蚊帳の普及率によって引き起こされる宿主へのアクセシビリティの変化に応じて変動します。これにより、宿主の行動適応、蚊の吸血再分配、および疾患有病率の間のフィードバックが、豊かな非線形ダイナミクスを生み出します。",
+        "results": "本研究の結果は、蚊帳の知覚コストと感染リスクの相互作用が、安定した流行状態から持続的な周期的振動へのレジームシフトを含む、臨界的な遷移を引き起こす可能性があることを示しました。さらに、主要な宿主による蚊帳の完全な採用が、蚊の吸血行動の適応的なシフトにより、副次的な宿主における全体的な有病率を増加させるという、直感に反する効果を特定しました。",
+        "why": "蚊帳の使用が普及すると、主要な宿主への蚊のアクセスが減少します。これにより、蚊は生存のために、蚊帳を使用しない副次的な宿主へと吸血対象をシフトさせます。この蚊の行動変化は、副次的な宿主における感染機会を増加させ、結果としてその宿主集団での感染症の有病率を上昇させる可能性があります。つまり、主要な宿主が自らを保護することで、蚊の適応的な行動が引き起こされ、別の宿主が犠牲になるというメカニズムです。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.PE）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "public-health",
+      "arxivPrimary": "q-bio.PE",
+      "titleJa": "宿主行動とベクター適応の非線形フィードバックが媒介感染症モデルに与える影響",
+      "catchTitle": "蚊帳を使うと別の宿主で病気が増える？",
+      "hook": "あなたは蚊が媒介する感染症の流行地域に住んでいます。蚊帳を使えば安全、そう思っていませんか？",
+      "background": "蚊が媒介する感染症（VBD）は、疫学的なプロセスだけでなく、人間の行動や蚊の吸血パターンによってもその動態が左右されます。殺虫剤処理された蚊帳（ITN）は、VBD対策として効果的かつ低コストな手段ですが、その使用は個人のコスト認識や感染リスクの判断に依存します。ITNの普及率が高いとVBDの有病率は低下しますが、これにより人々は感染リスクが低いと認識し、ITNの使用を中止する可能性があります。このITN使用の減少は、病気の再燃の可能性を高めることがあります。さらに、ITNの使用は蚊の宿主へのアクセスを変化させ、複数の宿主が存在する環境では蚊の吸血を再分配する可能性があります。このような適応的な防御行動と蚊の吸血行動の相互作用が、感染症の動態にどのような影響を与えるかは十分に理解されていませんでした。",
+      "quiz": {
+        "question": "この研究で示された、蚊帳の完全な普及が引き起こす可能性のある「直感に反する効果」とは何でしょう？",
+        "options": [
+          "主要な宿主の感染率がさらに低下する。",
+          "蚊の個体数が大幅に減少する。",
+          "副次的な宿主における感染症の有病率が増加する。"
+        ],
+        "correctIndex": 2,
+        "explanation": "この研究では、主要な宿主による蚊帳の完全な採用が、蚊の吸血行動の適応的なシフトにより、副次的な宿主における全体的な有病率を増加させるという、直感に反する効果が特定されました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "VBD",
+          "definition": "蚊などのベクターが媒介する感染症のこと。"
+        },
+        {
+          "term": "ITN",
+          "definition": "殺虫剤で処理された蚊帳のこと。"
+        },
+        {
+          "term": "ペイオフ",
+          "definition": "ゲーム理論において、ある戦略を選んだ結果得られる利益。"
+        },
+        {
+          "term": "模倣ダイナミクス",
+          "definition": "他者の成功を模倣して行動が変化するプロセス。"
+        },
+        {
+          "term": "吸血選好性",
+          "definition": "蚊がある宿主を吸血対象として選ぶ傾向。"
+        },
+        {
+          "term": "非線形ダイナミクス",
+          "definition": "原因と結果が単純な比例関係にない複雑な挙動。"
+        },
+        {
+          "term": "主要な宿主",
+          "definition": "蚊が本来優先的に吸血する対象となる生物。"
+        },
+        {
+          "term": "副次的な宿主",
+          "definition": "蚊が主要な宿主の代わりに吸血する対象となる生物。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "蚊帳の使用が普及すると、蚊の吸血行動が変化し、別の宿主での感染症が拡大する可能性があることを示唆する研究です。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、蚊帳の使用が感染症の減少に寄与すると考えられてきました。また、蚊帳の使用は個人の感染リスクとコストのバランスで決まるとされていましたが、蚊の行動変化との複雑な相互作用は十分に理解されていませんでした。",
+        "after": "この研究では、蚊帳の使用という人間の行動が、蚊の吸血パターンを適応的に変化させ、その結果、主要な宿主で蚊帳が完全に普及しても、別の宿主で感染症が拡大するという、直感に反する現象が起こりうることを明らかにしました。"
+      },
+      "analogy": {
+        "title": "畑の害虫対策が思わぬ結果を招くように",
+        "body": "これは、ある畑で特定の害虫を駆除するために強力な農薬を撒いたところ、その害虫は減ったものの、農薬の影響を受けにくい別の害虫が繁殖し、結果として畑全体の被害が増えてしまうようなものです。農家（主要宿主）が丹精込めて育てた作物（健康）を守ろうと対策（蚊帳）をしても、害虫（媒介ベクター）が賢く別の作物（副次宿主）に狙いを定め、全体として被害が拡大する。つまり、一つの対策が全体に与える影響を多角的に見ることが重要だということを示しています。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、感染症対策が単一の視点では不十分であることを示唆しています。例えば、ある地域で蚊帳の配布を推進する際、その効果を測る指標が主要な宿主の感染率減少だけでは、全体像を見誤る可能性があります。もしあなたが公衆衛生政策の立案者なら、対策が蚊の行動変化や他の宿主への影響まで考慮した、より包括的なアプローチが必要だと気づくでしょう。また、農業分野でも、特定の害虫対策が別の害虫の増加を招く「代償作用」が起こりうるのと同様に、生態系全体のバランスを考慮した対策の重要性を再認識させられます。",
+      "takeawayTalk": "蚊帳を使いすぎると、別の動物で病気が増えるかもしれないって知ってた？",
+      "bodyText": "本研究では、適応的な蚊帳使用と蚊の吸血選好性を結合した多宿主VBDモデルを提案しました。このモデルでは、個人がペイオフに基づいた模倣ダイナミクスに従って、蚊帳を使用するか否かの戦略を動的に切り替えます。ペイオフは有病率と蚊の個体数に依存し、動的に変化します。蚊の吸血パターンは、蚊帳の普及率によって引き起こされる宿主へのアクセシビリティの変化に応じて変動します。これにより、宿主の行動適応、蚊の吸血再分配、および疾患有病率の間のフィードバックが、豊かな非線形ダイナミクスを生み出します。\n\n蚊帳の使用が普及すると、主要な宿主への蚊のアクセスが減少します。これにより、蚊は生存のために、蚊帳を使用しない副次的な宿主へと吸血対象をシフトさせます。この蚊の行動変化は、副次的な宿主における感染機会を増加させ、結果としてその宿主集団での感染症の有病率を上昇させる可能性があります。つまり、主要な宿主が自らを保護することで、蚊の適応的な行動が引き起こされ、別の宿主が犠牲になるというメカニズムです。",
+      "bodyGlossary": [
+        {
+          "term": "吸血選好性",
+          "definition": "蚊がある宿主を吸血対象として選ぶ傾向。",
+          "start": 17,
+          "end": 22
+        },
+        {
+          "term": "VBD",
+          "definition": "蚊などのベクターが媒介する感染症のこと。",
+          "start": 30,
+          "end": 33
+        },
+        {
+          "term": "ペイオフ",
+          "definition": "ゲーム理論において、ある戦略を選んだ結果得られる利益。",
+          "start": 55,
+          "end": 59
+        },
+        {
+          "term": "模倣ダイナミクス",
+          "definition": "他者の成功を模倣して行動が変化するプロセス。",
+          "start": 64,
+          "end": 72
+        },
+        {
+          "term": "非線形ダイナミクス",
+          "definition": "原因と結果が単純な比例関係にない複雑な挙動。",
+          "start": 226,
+          "end": 235
+        },
+        {
+          "term": "主要な宿主",
+          "definition": "蚊が本来優先的に吸血する対象となる生物。",
+          "start": 257,
+          "end": 262
+        },
+        {
+          "term": "副次的な宿主",
+          "definition": "蚊が主要な宿主の代わりに吸血する対象となる生物。",
+          "start": 300,
+          "end": 306
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "吸血選好性",
+          "definition": "蚊がある宿主を吸血対象として選ぶ傾向。",
+          "start": 17,
+          "end": 22
+        },
+        {
+          "term": "VBD",
+          "definition": "蚊などのベクターが媒介する感染症のこと。",
+          "start": 30,
+          "end": 33
+        },
+        {
+          "term": "ペイオフ",
+          "definition": "ゲーム理論において、ある戦略を選んだ結果得られる利益。",
+          "start": 55,
+          "end": 59
+        },
+        {
+          "term": "模倣ダイナミクス",
+          "definition": "他者の成功を模倣して行動が変化するプロセス。",
+          "start": 64,
+          "end": 72
+        },
+        {
+          "term": "非線形ダイナミクス",
+          "definition": "原因と結果が単純な比例関係にない複雑な挙動。",
+          "start": 226,
+          "end": 235
+        },
+        {
+          "term": "主要な宿主",
+          "definition": "蚊が本来優先的に吸血する対象となる生物。",
+          "start": 257,
+          "end": 262
+        },
+        {
+          "term": "副次的な宿主",
+          "definition": "蚊が主要な宿主の代わりに吸血する対象となる生物。",
+          "start": 300,
+          "end": 306
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 261,
+      "keyFigure": {
+        "imagePath": "/figures/2606.31768_results.jpeg",
+        "page": 24,
+        "caption": "蚊帳のコスト変化が媒介感染症モデルの長期的な挙動に与える影響を示しています。",
+        "label": "Fig. 4",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-01T23:16:09.274Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.31768_results.jpeg",
+          "page": 24,
+          "caption": "蚊帳のコスト変化が媒介感染症モデルの長期的な挙動に与える影響を示しています。",
+          "label": "Fig. 4",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-01T23:16:09.274Z"
+        },
+        {
+          "imagePath": "/figures/2606.31768_why.jpeg",
+          "page": 21,
+          "caption": "主要宿主の戦略構成とベクター個体数に対するパラメータの影響を示しています。",
+          "label": "Fig. 1 Impact of varying Eh1 and m on (a)-(c) strategy composition of h1 population, and (d)-(f) size of vector",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-01T23:16:09.274Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.31740",
+      "title": "The Cooperation Ceiling: Extrinsic Population Dynamics and the Intrinsic Escape",
+      "authors": [
+        "Harry Foster",
+        "Vince Knight",
+        "Sebastian Krapohl"
+      ],
+      "publishedAt": "2026-07-01T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.31740",
+      "pdfUrl": "https://arxiv.org/pdf/2606.31740.pdf",
+      "categories": [
+        "topic:food-system",
+        "cs.GT",
+        "q-bio.PE"
+      ],
+      "abstract": "Evolutionary game theory provides a framework by which to study the emergence of cooperation in a population of self-interested actors. In such a framework, players' decisions on whether or not to cooperate evolve according to decision rules called population dynamics. However, often games are studied under the assumption that all individuals play under the same conditions, and many common choices of update rule are not well suited for a heterogeneous population. In this paper, we categorise and compare four different population dynamics in such a population as ``extrinsic'', where players learn by looking outward at the payoffs of other players, and ``intrinsic'', where players look inwardly at their own attributes or potential payoffs. We show that extrinsic population dynamics admit a ceiling on the rate of cooperation which can be exceeded by intrinsic population dynamics, and demonstrate this using the public goods game with heterogeneous contributions.",
+      "summary": {
+        "gist": "自己中心的な個人が集まる中で、なぜ協力が生まれるのかは、生物学、経済学、社会科学における中心的な問いです。多くの状況は「公共財ゲーム」のような集団行動問題に当てはまり、個人は共通の利益に関心がある一方で、費用は他人に負担させたいと考えがちです。これにより「フリーライド」の誘惑が生まれ、純粋な利己的思考は「共有地の悲劇」につながります。進化ゲーム理論は、合理的な先見性を仮定せずに、自己中心的なアクター間で協力がどのように現れるかを研究する枠組みを提供します。",
+        "novelty": "これまでの研究では、協力行動の進化を考える際、プレイヤーが皆同じ条件で行動すると仮定されることが多く、異質な集団での協力の限界や、戦略更新ルールの違いがどう影響するかは十分に理解されていませんでした。 この論文では、多様なプレイヤーが存在する集団において、他者の成功を模倣する「外部要因型」と、自身の内面的な評価に基づいて行動を変える「内部要因型」という2種類の戦略更新ルールを比較。外部要因型には協力率の「天井」が存在し、内部要因型がそれを超え得ることを示しました。",
+        "method": "本研究では、多様なプレイヤーが存在する集団における協力行動の進化を、進化ゲーム理論を用いて分析しました。特に、プレイヤーが戦略を更新する際の「人口動態（population dynamics）」に注目し、以下の2つのタイプを比較しました。\n\n1. 外部要因型（Extrinsic population dynamics）: プレイヤーが他者の成功（ペイオフ）を見て戦略を模倣するタイプ。モラン過程やフェルミ模倣ダイナミクスなどがこれに該当します。\n2. 内部要因型（Intrinsic population dynamics）: プレイヤーが自身の属性や潜在的なペイオフを内省し、自身の基準（例：目標水準）と比較して戦略を更新するタイプ。願望ダイナミクスや内省ダイナミクスなどがこれに該当します。\n\nこれらの動態を、N人参加の公共財ゲームに応用し、シミュレーションと理論的分析を通じて、協力率の推移を比較しました。特に、プレイヤーがそれぞれ異なる貢献レベルを持つ「異質な公共財ゲーム」の状況で検証しました。",
+        "results": "外部要因型の人口動態では、協力率に「天井」が存在し、それ以上の協力は達成できないことが示されました。一方、内部要因型の人口動態は、この外部要因型の天井を超える協力率を達成できることが明らかになりました。",
+        "why": "外部要因型の動態では、プレイヤーは最も成功している他者の戦略を模倣しようとします。しかし、集団内にフリーライダー（協力しないが利益を得る者）が存在する場合、彼らの成功が目立つことで、協力戦略が十分に広がりきらず、協力率に上限が生まれてしまいます。これは、全員が他者の成功を追うことで、集団全体としての最適解に到達できない状況と言えます。\n\n対照的に、内部要因型の動態では、プレイヤーは他者との比較ではなく、自身の目標達成度や期待値に基づいて戦略を評価します。例えば、目標水準に達していないと感じれば、たとえ他者が成功していても、自身の戦略を変えようとします。この内省的なプロセスが、集団全体としての協力の「天井」を打ち破り、より高い協力率を可能にするメカニズムであると考えられます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.GT）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "behavioral-economics",
+      "arxivPrimary": "cs.GT",
+      "titleJa": "協力の天井：外部要因と内部要因が織りなす進化ゲーム理論",
+      "catchTitle": "「みんなのため」はどこまで続く？協力の限界と突破口",
+      "hook": "あなたは、みんなで協力すればもっと良くなるのに、なぜか協力が進まない…そんな経験はありませんか？",
+      "background": "自己中心的な個人が集まる中で、なぜ協力が生まれるのかは、生物学、経済学、社会科学における中心的な問いです。多くの状況は「公共財ゲーム」のような集団行動問題に当てはまり、個人は共通の利益に関心がある一方で、費用は他人に負担させたいと考えがちです。これにより「フリーライド」の誘惑が生まれ、純粋な利己的思考は「共有地の悲劇」につながります。進化ゲーム理論は、合理的な先見性を仮定せずに、自己中心的なアクター間で協力がどのように現れるかを研究する枠組みを提供します。",
+      "quiz": {
+        "question": "この研究で「協力の天井」を打ち破る可能性を示したのは、どちらの戦略更新タイプでしたか？",
+        "options": [
+          "外部要因型（他者の成功を模倣）",
+          "内部要因型（自身の内面を評価）",
+          "ランダム型（無作為に戦略変更）"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究では、プレイヤーが自身の内面的な評価に基づいて行動を変える「内部要因型」の人口動態が、外部要因型の「協力の天井」を超える協力率を達成できることを示しました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "進化ゲーム理論",
+          "definition": "生物や社会の戦略進化をゲーム理論で分析する枠組み。"
+        },
+        {
+          "term": "人口動態",
+          "definition": "集団内で戦略がどのように変化・更新されるかのルール。"
+        },
+        {
+          "term": "外部要因型",
+          "definition": "他者の成功を模倣して戦略を変えるタイプ。"
+        },
+        {
+          "term": "モラン過程",
+          "definition": "個体の生殖と死滅で集団の戦略が変化するモデル。"
+        },
+        {
+          "term": "フェルミ模倣ダイナミクス",
+          "definition": "成功度に応じて他者の戦略を模倣する確率が変わるモデル。"
+        },
+        {
+          "term": "内部要因型",
+          "definition": "自身の内面評価で戦略を変えるタイプ。"
+        },
+        {
+          "term": "願望ダイナミクス",
+          "definition": "目標水準と現状を比較して戦略を変えるモデル。"
+        },
+        {
+          "term": "内省ダイナミクス",
+          "definition": "自身の異なる戦略の仮想的結果を比較して変えるモデル。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "他人の成功を真似るだけでは協力に限界があるが、自分の内面と向き合うことでその限界を超えられる。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、協力行動の進化を考える際、プレイヤーが皆同じ条件で行動すると仮定されることが多く、異質な集団での協力の限界や、戦略更新ルールの違いがどう影響するかは十分に理解されていませんでした。",
+        "after": "この論文では、多様なプレイヤーが存在する集団において、他者の成功を模倣する「外部要因型」と、自身の内面的な評価に基づいて行動を変える「内部要因型」という2種類の戦略更新ルールを比較。外部要因型には協力率の「天井」が存在し、内部要因型がそれを超え得ることを示しました。"
+      },
+      "analogy": {
+        "title": "畑の作付け、みんなで真似るだけではダメ？",
+        "body": "これは、まるで農家さんが新しい品種を導入する時のようです。隣の畑の農家さんが儲かっているからといって、その品種をただ真似して作付けする（外部要因型）だけでは、その土地の条件や自分の経営状況に合わず、収穫量に限界が来てしまいます。しかし、自分の畑の土壌や気候、過去の経験（内部要因型）を深く分析し、最適な品種や栽培方法を独自に編み出すことで、隣の畑の収穫量をはるかに超える豊作を得られる可能性があります。単に他者を模倣するだけでは、見えない「協力の天井」にぶつかってしまうのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、私たちが日常で直面する「協力」の難しさや、組織運営、地域活動、さらには地球規模の環境問題など、あらゆる集団行動の設計に示唆を与えます。例えば、企業でチームの生産性を上げたい時、単に「成功している部署のやり方を真似ろ」と指示するだけでは、いずれ成長の限界が来るかもしれません。むしろ、各メンバーが自身の目標や役割を深く内省し、自律的に改善策を考える仕組みを導入する方が、持続的かつ高い協力成果につながる可能性を示唆しています。他者との比較だけでなく、自分自身の内面と向き合うことの重要性を教えてくれる研究です。",
+      "takeawayTalk": "他人の真似だけじゃダメ！自分の頭で考えないと協力は伸び悩むよ。",
+      "bodyText": "本研究では、多様なプレイヤーが存在する集団における協力行動の進化を、進化ゲーム理論を用いて分析しました。特に、プレイヤーが戦略を更新する際の「人口動態（population dynamics）」に注目し、以下の2つのタイプを比較しました。\n\n1. 外部要因型（Extrinsic population dynamics）: プレイヤーが他者の成功（ペイオフ）を見て戦略を模倣するタイプ。モラン過程やフェルミ模倣ダイナミクスなどがこれに該当します。\n2. 内部要因型（Intrinsic population dynamics）: プレイヤーが自身の属性や潜在的なペイオフを内省し、自身の基準（例：目標水準）と比較して戦略を更新するタイプ。願望ダイナミクスや内省ダイナミクスなどがこれに該当します。\n\nこれらの動態を、N人参加の公共財ゲームに応用し、シミュレーションと理論的分析を通じて、協力率の推移を比較しました。特に、プレイヤーがそれぞれ異なる貢献レベルを持つ「異質な公共財ゲーム」の状況で検証しました。\n\n外部要因型の動態では、プレイヤーは最も成功している他者の戦略を模倣しようとします。しかし、集団内にフリーライダー（協力しないが利益を得る者）が存在する場合、彼らの成功が目立つことで、協力戦略が十分に広がりきらず、協力率に上限が生まれてしまいます。これは、全員が他者の成功を追うことで、集団全体としての最適解に到達できない状況と言えます。\n\n対照的に、内部要因型の動態では、プレイヤーは他者との比較ではなく、自身の目標達成度や期待値に基づいて戦略を評価します。例えば、目標水準に達していないと感じれば、たとえ他者が成功していても、自身の戦略を変えようとします。この内省的なプロセスが、集団全体としての協力の「天井」を打ち破り、より高い協力率を可能にするメカニズムであると考えられます。",
+      "bodyGlossary": [
+        {
+          "term": "進化ゲーム理論",
+          "definition": "生物や社会の戦略進化をゲーム理論で分析する枠組み。",
+          "start": 34,
+          "end": 41
+        },
+        {
+          "term": "人口動態",
+          "definition": "集団内で戦略がどのように変化・更新されるかのルール。",
+          "start": 71,
+          "end": 75
+        },
+        {
+          "term": "外部要因型",
+          "definition": "他者の成功を模倣して戦略を変えるタイプ。",
+          "start": 124,
+          "end": 129
+        },
+        {
+          "term": "モラン過程",
+          "definition": "個体の生殖と死滅で集団の戦略が変化するモデル。",
+          "start": 193,
+          "end": 198
+        },
+        {
+          "term": "フェルミ模倣ダイナミクス",
+          "definition": "成功度に応じて他者の戦略を模倣する確率が変わるモデル。",
+          "start": 199,
+          "end": 211
+        },
+        {
+          "term": "内部要因型",
+          "definition": "自身の内面評価で戦略を変えるタイプ。",
+          "start": 227,
+          "end": 232
+        },
+        {
+          "term": "願望ダイナミクス",
+          "definition": "目標水準と現状を比較して戦略を変えるモデル。",
+          "start": 319,
+          "end": 327
+        },
+        {
+          "term": "内省ダイナミクス",
+          "definition": "自身の異なる戦略の仮想的結果を比較して変えるモデル。",
+          "start": 328,
+          "end": 336
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "進化ゲーム理論",
+          "definition": "生物や社会の戦略進化をゲーム理論で分析する枠組み。",
+          "start": 34,
+          "end": 41
+        },
+        {
+          "term": "人口動態",
+          "definition": "集団内で戦略がどのように変化・更新されるかのルール。",
+          "start": 71,
+          "end": 75
+        },
+        {
+          "term": "外部要因型",
+          "definition": "他者の成功を模倣して戦略を変えるタイプ。",
+          "start": 124,
+          "end": 129
+        },
+        {
+          "term": "モラン過程",
+          "definition": "個体の生殖と死滅で集団の戦略が変化するモデル。",
+          "start": 193,
+          "end": 198
+        },
+        {
+          "term": "フェルミ模倣ダイナミクス",
+          "definition": "成功度に応じて他者の戦略を模倣する確率が変わるモデル。",
+          "start": 199,
+          "end": 211
+        },
+        {
+          "term": "内部要因型",
+          "definition": "自身の内面評価で戦略を変えるタイプ。",
+          "start": 227,
+          "end": 232
+        },
+        {
+          "term": "願望ダイナミクス",
+          "definition": "目標水準と現状を比較して戦略を変えるモデル。",
+          "start": 319,
+          "end": 327
+        },
+        {
+          "term": "内省ダイナミクス",
+          "definition": "自身の異なる戦略の仮想的結果を比較して変えるモデル。",
+          "start": 328,
+          "end": 336
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 271
+    },
+    {
+      "id": "2606.30987",
+      "title": "Measuring Judgment Quality in Natural-Language Explanations: Evidence from Forecasting Tournaments",
+      "authors": [
+        "Christopher W. Karvetski",
+        "Sheldon S. Huang",
+        "Simas Ku\\v{c}inskas",
+        "Nadja Flechner",
+        "Jingyu Hu",
+        "Philip Tetlock",
+        "Ezra Karger"
+      ],
+      "publishedAt": "2026-07-01T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2606.30987",
+      "pdfUrl": "https://arxiv.org/pdf/2606.30987.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "cs.CL",
+        "econ.GN",
+        "q-fin.EC"
+      ],
+      "abstract": "Decision-makers routinely rely on expert judgments accompanied by written explanations, yet explanation quality is difficult to measure at scale. Forecasting tournaments offer a natural testing ground: probabilistic judgments are paired with natural-language rationales and scored against realized outcomes. We introduce Explanation Quality Markers (EQMs), a set of sixty theory-guided reasoning patterns scored by large language models (LLMs). In a pre-registered analysis of over 55,000 forecast-rationale pairs from a multiyear forecasting tournament, EQMs predict accuracy at both the forecast and forecaster levels, consistently outperforming pre-LLM text-analysis methods. More than 90% of statistically significant pattern-level EQM-accuracy correlations match our directional hypotheses. The signal is asymmetric: EQMs identify likely underperformers more reliably than they distinguish the very best forecasters. Benchmarked against traditional indicators of forecasting skill, EQMs are the strongest predictor at the forecast level and competitive at the forecaster level, though weaker than prior accuracy. Human ratings of rationale quality are less consistently correlated with accuracy and place disproportionate weight on rationale length. Results transfer to an independent forecasting study. EQMs provide a scalable, interpretable method for extracting judgment-relevant information from written explanations.",
+      "summary": {
+        "gist": "意思決定者は日常的に、書面による説明を伴う専門家の判断に依存しています。例えば、インテリジェンスアナリストは地政学的イベントの可能性を予測し、その推論を概説するメモを添付します。投資委員会は、書面による論文に裏打ちされた推奨事項を検討します。プロジェクトマネージャーは、プロジェクトの実現可能性に関する競合する評価を比較検討し、それぞれが物語的な議論によって裏付けられています。意思決定者は、どの判断を信頼し、行動に移すべきかを評価するために、しばしば暗黙のうちにそのような説明を使用します。しかし、説明の質を体系的に、特に大規模に測定することは困難であり、したがって、説明が判断の正確性とどのように関連しているかについてはほとんど知られていませんでした。",
+        "novelty": "これまで、専門家の判断に伴う説明の質を大規模に測定することは困難でした。手作業での評価はコストがかかり、従来のテキスト分析では表面的な情報しか捉えられず、説明の質と予測の正確性の関係は十分に解明されていませんでした。 この研究では、LLMを活用して、判断と意思決定の理論に基づいた60の推論パターンを自動で評価する「EQM」を開発しました。これにより、専門家の説明の質を大規模かつ客観的に測定し、予測精度との関連性を明らかにすることに成功しました。",
+        "method": "本研究では、大規模言語モデル（LLM）を活用し、判断と意思決定に関する文献から導き出された60の推論パターンを「Explanation Quality Markers（EQMs）」として導入しました。これらのパターンは、バイアスと感情、分析的推論、整合性と規律、証拠の出典、統合的推論と認知的枠組み、態度と不確実性管理の6つの理論に基づいたファミリーに分類されます。各パターンは自然言語で定義され、LLM（主にGPT-4o）によって3段階のスケールでスコアリングされます。このフレームワークは、複数年にわたる予測トーナメントから得られた55,000以上の予測と説明のペアでテストされました。EQMスコアはLASSOを用いて単一の複合スコアにマッピングされ、予測精度との相関が分析されました。この複合スコアは、従来のLLM以前のテキスト分析手法や人間の評価と比較されました。",
+        "results": "EQM複合スコアは、予測レベル（r=.19 vs r=.06）と予測者レベル（r=.51 vs r=.39）の両方で、LLM以前の手法よりも予測精度を大幅に上回ることが示されました。統計的に有意なパターンレベルのEQMと精度の相関の90%以上が、研究者の仮説と一致しました。EQMは、優れた予測者を見つけるよりも、パフォーマンスの低い予測者を特定するのに効果的でした。予測レベルでは、EQMは過去の精度よりも強力な予測因子であり、予測者レベルでは、過去の精度に次ぐ競争力のある予測因子でした。人間の説明の質評価は、EQMよりも精度との相関が弱く、説明の長さに不釣り合いな重みを置いていることが判明しました。これらの結果は、独立した予測研究にも転移することが確認されました。",
+        "why": "LLMは、従来の辞書ベースや特徴量エンジニアリングに基づくアプローチとは異なり、非構造化テキストのセマンティックな意味と文脈的な意味を解釈できます。これにより、書面による説明に含まれる複雑な推論パターンを大規模にスコアリングすることが可能になりました。EQMは、判断と意思決定の理論に基づいた60の推論パターンをLLMに評価させることで、説明の表面的な特徴だけでなく、その背後にある思考プロセスや論理の質を捉えることができます。この深い理解が、説明の質と実際の予測精度との間の強い相関関係を明らかにするメカニズムです。特に、LLMは特定の認知バイアスや論理的欠陥を示すパターンを識別する能力に優れており、これがパフォーマンスの低い予測者をより確実に特定できる理由と考えられます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.CL）",
+      "field": "農業経済",
+      "categoryL1": "adjacent",
+      "categoryL2": "decision-making",
+      "arxivPrimary": "cs.CL",
+      "titleJa": "自然言語の説明における判断の質を測定する：予測トーナメントからの証拠",
+      "catchTitle": "AIが「良い説明」を見抜く！予測精度を高める新指標",
+      "hook": "あなたは専門家の意見を聞くとき、その「説明」の質をどう判断していますか？実は、説明の質と予測の正確性には、これまで見えなかった関係がありました。",
+      "background": "意思決定者は日常的に、書面による説明を伴う専門家の判断に依存しています。例えば、インテリジェンスアナリストは地政学的イベントの可能性を予測し、その推論を概説するメモを添付します。投資委員会は、書面による論文に裏打ちされた推奨事項を検討します。プロジェクトマネージャーは、プロジェクトの実現可能性に関する競合する評価を比較検討し、それぞれが物語的な議論によって裏付けられています。意思決定者は、どの判断を信頼し、行動に移すべきかを評価するために、しばしば暗黙のうちにそのような説明を使用します。しかし、説明の質を体系的に、特に大規模に測定することは困難であり、したがって、説明が判断の正確性とどのように関連しているかについてはほとんど知られていませんでした。",
+      "quiz": {
+        "question": "この研究で開発されたEQMは、何を活用して説明の質を評価しましたか？",
+        "options": [
+          "人間の専門家による手動評価",
+          "従来の辞書ベースのテキスト分析ツール",
+          "大規模言語モデル（LLM）"
+        ],
+        "correctIndex": 2,
+        "explanation": "EQMは、大規模言語モデル（LLM）の高度なテキスト解釈能力を活用して、説明の質を評価しました。これにより、従来の分析手法では困難だった複雑な推論パターンの識別が可能になりました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "LLM",
+          "definition": "大量のテキストデータで学習したAIモデル"
+        },
+        {
+          "term": "EQMs",
+          "definition": "説明の質を測る60の推論パターン"
+        },
+        {
+          "term": "LASSO",
+          "definition": "統計モデルの変数選択と正則化手法"
+        },
+        {
+          "term": "セマンティックな意味",
+          "definition": "単語や文が持つ本質的な意味"
+        },
+        {
+          "term": "文脈的な意味",
+          "definition": "文脈によって変化する意味合い"
+        },
+        {
+          "term": "認知バイアス",
+          "definition": "非合理的な判断や意思決定の傾向"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "大規模言語モデル（LLM）が専門家の説明文を分析し、将来の予測精度を高いレベルで予測できる新しい指標「EQM」が開発されました。",
+      "noveltyContrast": {
+        "before": "これまで、専門家の判断に伴う説明の質を大規模に測定することは困難でした。手作業での評価はコストがかかり、従来のテキスト分析では表面的な情報しか捉えられず、説明の質と予測の正確性の関係は十分に解明されていませんでした。",
+        "after": "この研究では、LLMを活用して、判断と意思決定の理論に基づいた60の推論パターンを自動で評価する「EQM」を開発しました。これにより、専門家の説明の質を大規模かつ客観的に測定し、予測精度との関連性を明らかにすることに成功しました。"
+      },
+      "analogy": {
+        "title": "豊作を見抜く「土壌診断AI」",
+        "body": "これはまるで、ベテラン農家が長年の経験と勘で「この畑は豊作になりそうだ」と見抜くように、AIが説明文の「土壌」を詳細に診断し、将来の「収穫量（予測精度）」を予測するようなものです。従来の分析が土の色や匂いといった表面的な情報しか見られなかったのに対し、EQMは土壌の成分や微生物の活動といった、より深い「推論パターン」を分析することで、その畑が持つ潜在的な生産性を見極めます。これにより、どの畑に投資すべきか、どの農家の助言が信頼できるかを、データに基づいて判断できるようになるのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+3.2pt",
+          "label": "予測レベルの精度予測（r値）"
+        }
+      ],
+      "whyYouCare": "この研究は、あなたが日々の仕事や生活で直面する「誰の意見を信じるか」「どの情報に基づいて判断するか」という課題に、新たな視点を提供します。投資判断、プロジェクトの評価、あるいは単にニュース記事の信頼性を測る際など、私たちは常に専門家の説明に触れています。EQMは、説明の「長さ」や「説得力」といった表面的な要素ではなく、その説明がどれだけ論理的で、バイアスがなく、多角的な視点を含んでいるかという「質」を客観的に評価するツールになり得ます。これにより、より正確な判断を下せる専門家や情報を効率的に見つけ出し、あなたの意思決定の質を向上させる手助けとなるでしょう。",
+      "takeawayTalk": "AIが専門家の説明文を分析して、その人の予測精度を驚くほど正確に言い当てられるようになったらしいよ！",
+      "bodyText": "本研究では、大規模言語モデル（LLM）を活用し、判断と意思決定に関する文献から導き出された60の推論パターンを「Explanation Quality Markers（EQMs）」として導入しました。これらのパターンは、バイアスと感情、分析的推論、整合性と規律、証拠の出典、統合的推論と認知的枠組み、態度と不確実性管理の6つの理論に基づいたファミリーに分類されます。各パターンは自然言語で定義され、LLM（主にGPT-4o）によって3段階のスケールでスコアリングされます。このフレームワークは、複数年にわたる予測トーナメントから得られた55,000以上の予測と説明のペアでテストされました。EQMスコアはLASSOを用いて単一の複合スコアにマッピングされ、予測精度との相関が分析されました。この複合スコアは、従来のLLM以前のテキスト分析手法や人間の評価と比較されました。\n\nLLMは、従来の辞書ベースや特徴量エンジニアリングに基づくアプローチとは異なり、非構造化テキストのセマンティックな意味と文脈的な意味を解釈できます。これにより、書面による説明に含まれる複雑な推論パターンを大規模にスコアリングすることが可能になりました。EQMは、判断と意思決定の理論に基づいた60の推論パターンをLLMに評価させることで、説明の表面的な特徴だけでなく、その背後にある思考プロセスや論理の質を捉えることができます。この深い理解が、説明の質と実際の予測精度との間の強い相関関係を明らかにするメカニズムです。特に、LLMは特定の認知バイアスや論理的欠陥を示すパターンを識別する能力に優れており、これがパフォーマンスの低い予測者をより確実に特定できる理由と考えられます。",
+      "bodyGlossary": [
+        {
+          "term": "LLM",
+          "definition": "大量のテキストデータで学習したAIモデル",
+          "start": 15,
+          "end": 18
+        },
+        {
+          "term": "EQMs",
+          "definition": "説明の質を測る60の推論パターン",
+          "start": 84,
+          "end": 88
+        },
+        {
+          "term": "LASSO",
+          "definition": "統計モデルの変数選択と正則化手法",
+          "start": 302,
+          "end": 307
+        },
+        {
+          "term": "セマンティックな意味",
+          "definition": "単語や文が持つ本質的な意味",
+          "start": 437,
+          "end": 447
+        },
+        {
+          "term": "文脈的な意味",
+          "definition": "文脈によって変化する意味合い",
+          "start": 448,
+          "end": 454
+        },
+        {
+          "term": "認知バイアス",
+          "definition": "非合理的な判断や意思決定の傾向",
+          "start": 657,
+          "end": 663
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "LLM",
+          "definition": "大量のテキストデータで学習したAIモデル",
+          "start": 15,
+          "end": 18
+        },
+        {
+          "term": "EQMs",
+          "definition": "説明の質を測る60の推論パターン",
+          "start": 84,
+          "end": 88
+        },
+        {
+          "term": "LASSO",
+          "definition": "統計モデルの変数選択と正則化手法",
+          "start": 302,
+          "end": 307
+        },
+        {
+          "term": "セマンティックな意味",
+          "definition": "単語や文が持つ本質的な意味",
+          "start": 437,
+          "end": 447
+        },
+        {
+          "term": "文脈的な意味",
+          "definition": "文脈によって変化する意味合い",
+          "start": 448,
+          "end": 454
+        },
+        {
+          "term": "認知バイアス",
+          "definition": "非合理的な判断や意思決定の傾向",
+          "start": 657,
+          "end": 663
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 326,
+      "keyFigure": {
+        "imagePath": "/figures/2606.30987_results.png",
+        "page": 15,
+        "caption": "EQM複合スコアの分布全体における平均予測精度を示しています。",
+        "label": "Figure 5: Mean accuracy across the EQM composite score distribution.",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-01T23:16:21.658Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.30987_results.png",
+          "page": 15,
+          "caption": "EQM複合スコアの分布全体における平均予測精度を示しています。",
+          "label": "Figure 5: Mean accuracy across the EQM composite score distribution.",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-01T23:16:21.658Z"
+        },
+        {
+          "imagePath": "/figures/2606.30987_why.png",
+          "page": 14,
+          "caption": "各EQMパターンと予測精度の相関関係を示しており、メカニズムを裏付けます。",
+          "label": "Figure 4: Pattern-level correlations with forecasting accuracy. Each point represents one EQM pattern or",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-01T23:16:21.659Z"
+        }
+      ]
+    }
+  ]
+}

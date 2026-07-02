@@ -1,0 +1,443 @@
+{
+  "date": "2026-07-03",
+  "papers": [
+    {
+      "id": "2607.01198",
+      "title": "When large trades are not news: Liquidity tail risk and price discovery",
+      "authors": [
+        "Umut \\c{C}etin",
+        "Mingwei Lin",
+        "Giulia Livieri"
+      ],
+      "publishedAt": "2026-07-02T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2607.01198",
+      "pdfUrl": "https://arxiv.org/pdf/2607.01198.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "q-fin.TR",
+        "q-fin.MF"
+      ],
+      "abstract": "When is a large trade news, and when is it a liquidity shock? We study this question in a sequential competitive limit order book with asymmetric information. In our model, liquidity suppliers observe aggregate order flow but not its decomposition into informed demand and uninformed liquidity demand. We model uninformed order flow with Student-$t$ tails, interpreted as a reduced form for rare liquidity regimes. The tail index of liquidity demand determines how informative large trades are. With thin-tailed noise, large order imbalances are quickly interpreted as private information. With heavy-tailed liquidity demand, the same imbalances remain plausibly liquidity-driven. This liquidity-tail ambiguity flattens and concavifies price impact, slows learning from order flow, and delays the decline of adverse-selection premia. We characterize equilibrium through a fixed-point equation for the marginal-cost schedule. Heavy-tailed liquidity demand changes the mathematics of equilibrium: the Gaussian monotonicity and compactness arguments fail because remote liquidity states remain pricing-relevant at polynomial order. We construct fixed points on a tail-controlled compact class and study learning and large-order asymptotics along selected monotone branches. Repeated order flow reveals the fundamental value under stable information-rate conditions, but heavier liquidity tails slow finite-horizon price discovery. Large-order impact obeys regular-variation asymptotics whose exponents depend on the liquidity-tail index, informed competition, and posterior beliefs. The model identifies liquidity tail risk as a state variable for market impact, spread resilience, and the informativeness of large trades.",
+      "summary": {
+        "gist": "資産市場において、大口取引は一般的に価格を動かす要因となります。しかし、全ての大口取引が同じ情報内容を持つわけではありません。例えば、大量の買い注文が資産のファンダメンタルな価値に関する私的情報を反映している場合もあれば、ファンドの資金流出や証拠金圧力、ディーラーの在庫調整など、稀な流動性ショックを反映している場合もあります。特に、流動性供給者は集計された注文フローは観察できますが、それが情報に基づく需要なのか、非情報に基づく流動性需要なのかを区別することはできません。本研究は、流動性需要自体が重い裾を持つ場合に、競争的な指値注文板（LOB）がどのように大口取引を価格設定するかを理解することに関心があります。",
+        "novelty": "これまでの市場モデルでは、大口の注文はすぐに「特別な情報に基づいている」と解釈され、価格に迅速に反映されると考えられていました。特に、流動性供給側の「ノイズ」は正規分布に従うと仮定され、非常に大きな注文は情報を持つトレーダーによるものだと見なされがちでした。 この研究では、流動性需要が「重い裾（ヘビーテール）」を持つ分布に従うと仮定することで、大口注文が必ずしも情報に基づくものではなく、稀な流動性ショックである可能性を考慮します。これにより、大口注文が価格に与える影響がより緩やかになり、市場が真の価値を学習する速度が遅くなることを示しました。",
+        "method": "本研究では、非対称情報を持つ逐次的な競争指値注文板（LOB）モデルを開発しました。このモデルでは、流動性供給者は集計された注文フローを観察しますが、それが情報を持つ需要と情報を持たない流動性需要に分解されていることは知りません。情報を持たない注文フローは、稀な流動性体制の簡略化された形として、スチューデントのt分布の裾（テール）を持つものとしてモデル化されています。この流動性需要のテール指数が、大口取引の情報量を決定します。薄い裾を持つノイズの場合、大口の注文不均衡はすぐに私的情報として解釈されます。重い裾を持つ流動性需要の場合、同じ不均衡はもっともらしく流動性主導であると見なされ続けます。この流動性テールに関する曖昧さが、価格への影響を平坦化し、凹状にし、注文フローからの学習を遅らせ、逆選択プレミアムの低下を遅らせます。我々は、限界費用スケジュールに関する不動点方程式を通じて均衡を特徴付けます。",
+        "results": "本研究の結果として、大口取引の情報量は流動性需要のテール指数に依存することが判明しました。重い裾を持つ流動性需要の体制では、大口の注文不均衡は稀な流動性ショックである可能性が高いため、私的情報を示す診断的価値が低くなります。これにより、取引が情報主導である可能性が流動性主導である可能性よりも高くなる注文サイズである「クロスオーバー深度」が大きくなります。また、大口注文の価格設定と情報を持つ需要のテール漸近線を導き出しました。限界費用スケジュールは、深度においてべき乗則型のスケーリングを示し、その指数は流動性リスク、情報を持つトレーダーの数、および事後信念によって明示的に決定されます。重い裾を持つ流動性ショックは、極端な注文フローの情報量を減少させ、価格への影響はより平坦で凹状になります。情報を持つトレーダー間の競争は影響を緩和し、スプレッドを圧縮しますが、大口注文領域における重い裾の特性を排除することはありません。さらに、重い裾を持つ流動性需要は価格発見を遅らせることが示されました。流動性供給者は注文フローから信念を更新しますが、スチューデントのt分布の尤度は極端な観測値を流動性のアウトライアーとして扱うため、注文フローのサプライズはガウスモデルよりも限界情報量が低くなります。信念は長期的に集中しますが、有限期間の逆選択とスプレッドはより長く持続します。",
+        "why": "この現象のメカニズムは、流動性供給者が大口注文を見たときに、それが「情報を持つトレーダーによるもの」なのか、それとも「たまたま発生した稀な流動性ショック」なのかを区別する難しさにあります。従来のモデルでは、稀な流動性ショックの可能性が低い（薄い裾）と仮定されていたため、大口注文はすぐに情報として解釈され、価格に反映されました。しかし、本研究が示すように、流動性ショックが稀に非常に大きくなる可能性が高い（重い裾）場合、流動性供給者は大口注文を見ても、それが情報なのか流動性ショックなのかを判断しにくくなります。この「流動性テールに関する曖昧さ」が、価格への影響を弱め、市場が真の価値を学習する速度を遅らせる原因となります。つまり、市場参加者が「ノイズ」の性質をどのように認識しているかが、情報の伝達速度と価格形成に決定的な影響を与えるのです。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-fin.TR）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "market-dynamics",
+      "arxivPrimary": "q-fin.TR",
+      "titleJa": "大口取引は常にニュースではない：流動性テールリスクと価格発見",
+      "catchTitle": "大口取引、なぜ価格に響かない？",
+      "hook": "あなたは株取引で大口の買い注文を見たら「何か良い情報があるのでは？」と思いますよね？でも、そうとは限らないかもしれません。",
+      "background": "資産市場において、大口取引は一般的に価格を動かす要因となります。しかし、全ての大口取引が同じ情報内容を持つわけではありません。例えば、大量の買い注文が資産のファンダメンタルな価値に関する私的情報を反映している場合もあれば、ファンドの資金流出や証拠金圧力、ディーラーの在庫調整など、稀な流動性ショックを反映している場合もあります。特に、流動性供給者は集計された注文フローは観察できますが、それが情報に基づく需要なのか、非情報に基づく流動性需要なのかを区別することはできません。本研究は、流動性需要自体が重い裾を持つ場合に、競争的な指値注文板（LOB）がどのように大口取引を価格設定するかを理解することに関心があります。",
+      "quiz": {
+        "question": "この研究によると、流動性需要が「重い裾」を持つ場合、大口取引の市場への影響はどうなりますか？",
+        "options": [
+          "価格に迅速に反映され、市場の学習が加速する。",
+          "価格への影響が緩やかになり、市場の学習が遅れる。",
+          "価格への影響は変わらず、市場の学習速度も変化しない。"
+        ],
+        "correctIndex": 1,
+        "explanation": "流動性需要が「重い裾」を持つ場合、大口取引が稀な流動性ショックである可能性が高まるため、情報としての価値が低く評価され、価格への影響が緩やかになり、市場が真の価値を学習する速度が遅れます。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "指値注文板",
+          "definition": "売買注文を価格と数量で並べたリスト"
+        },
+        {
+          "term": "非対称情報",
+          "definition": "市場参加者間で情報量に差がある状態"
+        },
+        {
+          "term": "流動性需要",
+          "definition": "市場で資産を売買したいという需要"
+        },
+        {
+          "term": "テール指数",
+          "definition": "分布の裾の厚さを示す指標"
+        },
+        {
+          "term": "薄い裾",
+          "definition": "極端な値の発生確率が低い分布の特性"
+        },
+        {
+          "term": "重い裾",
+          "definition": "極端な値の発生確率が高い分布の特性"
+        },
+        {
+          "term": "流動性テールに関する曖昧さ",
+          "definition": "大口注文が情報か流動性ショックか不明な状態"
+        },
+        {
+          "term": "逆選択プレミアム",
+          "definition": "情報格差によるリスクに対する上乗せ報酬"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "大口取引が必ずしも市場に情報をもたらすとは限らず、その背景にある流動性リスクの「重い裾」が価格形成を遅らせる。",
+      "noveltyContrast": {
+        "before": "これまでの市場モデルでは、大口の注文はすぐに「特別な情報に基づいている」と解釈され、価格に迅速に反映されると考えられていました。特に、流動性供給側の「ノイズ」は正規分布に従うと仮定され、非常に大きな注文は情報を持つトレーダーによるものだと見なされがちでした。",
+        "after": "この研究では、流動性需要が「重い裾（ヘビーテール）」を持つ分布に従うと仮定することで、大口注文が必ずしも情報に基づくものではなく、稀な流動性ショックである可能性を考慮します。これにより、大口注文が価格に与える影響がより緩やかになり、市場が真の価値を学習する速度が遅くなることを示しました。"
+      },
+      "analogy": {
+        "title": "豊作か不作か、見極めが難しい年の市場",
+        "body": "これは、まるで農家が市場に出す作物の量を見て、それが「今年は豊作だ」という情報なのか、それとも「たまたま特定の農家が大量に出荷した」という一時的な現象なのかを見極めるようなものです。もし市場に「稀に大量出荷する農家」が多い（重い裾）と分かっていれば、大口の出荷があっても「いつものことか」と価格はすぐには大きく動きません。しかし、もしそうした農家が少ない（薄い裾）と分かっていれば、大口出荷はすぐに「市場全体が豊作だ」と解釈され、価格は大きく下がるでしょう。この研究は、市場の参加者が「稀な大量出荷」の可能性をどれだけ織り込んでいるかで、情報の伝わり方が変わることを示しています。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、あなたが投資判断をする上で「大口取引」をどう解釈すべきか、新たな視点を提供します。もしあなたが市場の動きを追っているなら、大口の売買があったからといって、それがすぐに「何か特別な情報がある」と飛びつくのは危険かもしれません。特に、市場に稀な流動性ショックが多い場合、その大口取引は単なる一時的な需給の偏りである可能性も考慮に入れるべきです。これは、企業の資金調達やM&A、あるいは政策変更など、突発的な大きな動きがあった際に、市場がその情報をどれだけ早く、正確に価格に織り込むかを理解する上でも重要です。市場の「深層」を理解することで、より賢明な投資判断やリスク管理に役立つでしょう。",
+      "takeawayTalk": "大口取引が必ずしも市場の真実を語るとは限らないんだ。",
+      "bodyText": "本研究では、非対称情報を持つ逐次的な競争指値注文板（LOB）モデルを開発しました。このモデルでは、流動性供給者は集計された注文フローを観察しますが、それが情報を持つ需要と情報を持たない流動性需要に分解されていることは知りません。情報を持たない注文フローは、稀な流動性体制の簡略化された形として、スチューデントのt分布の裾（テール）を持つものとしてモデル化されています。この流動性需要のテール指数が、大口取引の情報量を決定します。薄い裾を持つノイズの場合、大口の注文不均衡はすぐに私的情報として解釈されます。重い裾を持つ流動性需要の場合、同じ不均衡はもっともらしく流動性主導であると見なされ続けます。この流動性テールに関する曖昧さが、価格への影響を平坦化し、凹状にし、注文フローからの学習を遅らせ、逆選択プレミアムの低下を遅らせます。我々は、限界費用スケジュールに関する不動点方程式を通じて均衡を特徴付けます。\n\nこの現象のメカニズムは、流動性供給者が大口注文を見たときに、それが「情報を持つトレーダーによるもの」なのか、それとも「たまたま発生した稀な流動性ショック」なのかを区別する難しさにあります。従来のモデルでは、稀な流動性ショックの可能性が低い（薄い裾）と仮定されていたため、大口注文はすぐに情報として解釈され、価格に反映されました。しかし、本研究が示すように、流動性ショックが稀に非常に大きくなる可能性が高い（重い裾）場合、流動性供給者は大口注文を見ても、それが情報なのか流動性ショックなのかを判断しにくくなります。この「流動性テールに関する曖昧さ」が、価格への影響を弱め、市場が真の価値を学習する速度を遅らせる原因となります。つまり、市場参加者が「ノイズ」の性質をどのように認識しているかが、情報の伝達速度と価格形成に決定的な影響を与えるのです。",
+      "bodyGlossary": [
+        {
+          "term": "非対称情報",
+          "definition": "市場参加者間で情報量に差がある状態",
+          "start": 6,
+          "end": 11
+        },
+        {
+          "term": "指値注文板",
+          "definition": "売買注文を価格と数量で並べたリスト",
+          "start": 20,
+          "end": 25
+        },
+        {
+          "term": "流動性需要",
+          "definition": "市場で資産を売買したいという需要",
+          "start": 92,
+          "end": 97
+        },
+        {
+          "term": "テール指数",
+          "definition": "分布の裾の厚さを示す指標",
+          "start": 192,
+          "end": 197
+        },
+        {
+          "term": "薄い裾",
+          "definition": "極端な値の発生確率が低い分布の特性",
+          "start": 214,
+          "end": 217
+        },
+        {
+          "term": "重い裾",
+          "definition": "極端な値の発生確率が高い分布の特性",
+          "start": 253,
+          "end": 256
+        },
+        {
+          "term": "流動性テールに関する曖昧さ",
+          "definition": "大口注文が情報か流動性ショックか不明な状態",
+          "start": 301,
+          "end": 314
+        },
+        {
+          "term": "逆選択プレミアム",
+          "definition": "情報格差によるリスクに対する上乗せ報酬",
+          "start": 348,
+          "end": 356
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "非対称情報",
+          "definition": "市場参加者間で情報量に差がある状態",
+          "start": 6,
+          "end": 11
+        },
+        {
+          "term": "指値注文板",
+          "definition": "売買注文を価格と数量で並べたリスト",
+          "start": 20,
+          "end": 25
+        },
+        {
+          "term": "流動性需要",
+          "definition": "市場で資産を売買したいという需要",
+          "start": 92,
+          "end": 97
+        },
+        {
+          "term": "テール指数",
+          "definition": "分布の裾の厚さを示す指標",
+          "start": 192,
+          "end": 197
+        },
+        {
+          "term": "薄い裾",
+          "definition": "極端な値の発生確率が低い分布の特性",
+          "start": 214,
+          "end": 217
+        },
+        {
+          "term": "重い裾",
+          "definition": "極端な値の発生確率が高い分布の特性",
+          "start": 253,
+          "end": 256
+        },
+        {
+          "term": "流動性テールに関する曖昧さ",
+          "definition": "大口注文が情報か流動性ショックか不明な状態",
+          "start": 301,
+          "end": 314
+        },
+        {
+          "term": "逆選択プレミアム",
+          "definition": "情報格差によるリスクに対する上乗せ報酬",
+          "start": 348,
+          "end": 356
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 362,
+      "keyFigure": {
+        "imagePath": "/figures/2607.01198_results.png",
+        "page": 37,
+        "caption": "大口注文の限界費用が流動性リスクや情報を持つトレーダー数によってどのように変化するかを示しています。",
+        "label": "Figure 5: Equilibrium marginal costF ‹",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-02T23:04:20.249Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.01198_results.png",
+          "page": 37,
+          "caption": "大口注文の限界費用が流動性リスクや情報を持つトレーダー数によってどのように変化するかを示しています。",
+          "label": "Figure 5: Equilibrium marginal costF ‹",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-02T23:04:20.249Z"
+        },
+        {
+          "imagePath": "/figures/2607.01198_why.png",
+          "page": 40,
+          "caption": "流動性需要の「重い裾」が、大口注文の情報量を減少させ、価格への影響を平坦にする様子を示しています。",
+          "label": "Figure 9: Log-log plot of log F ‹",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-02T23:04:20.249Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.00883",
+      "title": "Tail Risk Management with Puts and Trend Following: A CVaR Framework for Crashes and Drawdowns",
+      "authors": [
+        "Miquel Noguer I Alonso",
+        "Ali Al Fallouji"
+      ],
+      "publishedAt": "2026-07-02T04:00:00.000Z",
+      "url": "https://arxiv.org/abs/2607.00883",
+      "pdfUrl": "https://arxiv.org/pdf/2607.00883.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "q-fin.MF"
+      ],
+      "abstract": "Tail-risk management is not only an instrument-selection problem. It is an allocation problem across loss mechanisms: abrupt crash states, volatility repricing, and persistent drawdowns require different forms of protection. This paper develops a continuous-time CVaR framework that places two common protection sleeves -- long out-of-the-money put options and systematic trend-following overlays -- inside one coherent tail-risk mandate. The option sleeve is modeled as a marked-to-market traded asset, so premium drag, diffusion exposure, and jump repricing enter through its physical return process rather than through inconsistent terminal-payoff accounting. The resulting Markov state contains wealth, spot, stochastic variance, and an exponentially weighted log-return signal, and we derive the associated Hamilton--Jacobi--Bellman equation in viscosity form. The main analytical separation is temporal: convex insurance reprices immediately on jump impact, whereas trend following is late on the first shock because its signal must cross zero, but becomes increasingly defensive during persistent drawdowns without requiring fresh option premium. We then give sufficient and local conditions for an interior hybrid allocation, derive a CVaR policy-gradient identity, and introduce a four-axis diagnostic layer separating conditional convexity, tail-event reliability, non-stress carry, and drawdown persistence. Stylized Monte Carlo experiments illustrate the mechanism: fixed equal-weight hybrids and grid-optimized hybrids reduce terminal CVaR relative to either pure sleeve in the reported regimes, while the exact weight location remains calibration-dependent. The contribution is a transparent risk-management framework for deciding how much convex crash protection and how much signal-driven drawdown protection a mandate should hold.",
+      "summary": {
+        "gist": "機関投資家は、ポートフォリオの大きな損失（ドローダウン）に直面する際、単一の一般的な問題ではなく、市場の状況に応じた下落リスクの問題に直面しています。損失は、突然の暴落、ボラティリティの急上昇、そして長期にわたる方向性のある下落という様々なメカニズムを通じて発生します。従来の平均分散分析では、上昇と下落のリスクを対称的に扱い、左側のテール（極端な下落）の形状に特別な役割を与えないため、このような状況には対応しきれませんでした。そのため、テールリスク管理は、単なる金融商品の選択ではなく、ポートフォリオ全体を設計する問題として捉える必要があります。",
+        "novelty": "これまでのテールリスク管理は、プットオプションかトレンドフォローのどちらか一方に偏りがちでした。また、オプションのプレミアムコストの扱いに一貫性がなく、両者を統合した最適な戦略を立てるのが困難でした。 この研究では、プットオプションとトレンドフォローを一つの連続時間CVaRフレームワークに統合。オプションを市場で取引される資産として扱い、プレミアムコストも考慮することで、暴落とじわじわ下落の両方に対応できる最適なハイブリッド戦略を提示しました。",
+        "method": "本研究では、連続時間CVaR（条件付きバリュー・アット・リスク）フレームワークを開発し、プットオプションとトレンドフォローという2つの主要な保護戦略を統合しました。プットオプションは、市場で取引される資産としてモデル化され、プレミアムコストやボラティリティへの感応度、価格の急変による再評価が、その物理的なリターンプロセスを通じて考慮されます。これにより、オプションのプレミアム会計における不整合が解消されます。このフレームワークは、富、スポット価格、確率的ボラティリティ、指数平滑化された対数リターンシグナルを含むマルコフ状態を考慮し、ハミルトン・ヤコビ・ベルマン方程式を導出しました。モンテカルロシミュレーションを用いて、固定比率のハイブリッド戦略とグリッド最適化されたハイブリッド戦略が、純粋な単一戦略と比較して、特定の市場レジームにおいて終端CVaRを削減することを示しました。",
+        "results": "モンテカルロシミュレーション実験の結果、固定比率のハイブリッド戦略とグリッド最適化されたハイブリッド戦略は、報告された市場レジームにおいて、プットオプション単独またはトレンドフォロー単独の戦略と比較して、終端CVaR（最悪の損失）を削減することが示されました。この削減効果は、具体的なウェイト配分がキャリブレーションに依存することを示唆しています。分析的な分離として、プットオプションは市場の急落時に即座に再評価されることで機能する一方、トレンドフォローはシグナルがゼロを横切り、ポートフォリオが防御的になるのに十分な期間続く下落に対して効果を発揮することが明らかになりました。",
+        "why": "このハイブリッド戦略のメカニズムは、時間の経過による保護の性質の違いにあります。プットオプションのような凸型保険は、市場の急落（ジャンプインパクト）時に即座に再評価され、損失を限定します。これは、急な価格変動に対して非常に効果的です。一方、トレンドフォローは、最初のショックに対しては反応が遅れるものの、シグナルが変化するのに十分な期間続く持続的な下落局面では、新たなオプションプレミアムを必要とせずに、徐々に防御的なポジションへと移行していきます。つまり、プットオプションは「即効性のある緊急避難」、トレンドフォローは「じわじわと進行するリスクへの長期的な対応」として機能し、両者を組み合わせることで、あらゆるタイプの下落リスクに対して包括的な保護を提供できるのです。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-fin.MF）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "risk-management",
+      "arxivPrimary": "q-fin.MF",
+      "titleJa": "プットとトレンドフォローによるテールリスク管理：暴落とドローダウンのためのCVaRフレームワーク",
+      "catchTitle": "暴落とじわじわ下落、両方から資産を守る秘策",
+      "hook": "あなたの投資ポートフォリオ、突然の暴落とじわじわ続く下落、どちらに強いですか？実は、それぞれ異なる守り方が必要なんです。",
+      "background": "機関投資家は、ポートフォリオの大きな損失（ドローダウン）に直面する際、単一の一般的な問題ではなく、市場の状況に応じた下落リスクの問題に直面しています。損失は、突然の暴落、ボラティリティの急上昇、そして長期にわたる方向性のある下落という様々なメカニズムを通じて発生します。従来の平均分散分析では、上昇と下落のリスクを対称的に扱い、左側のテール（極端な下落）の形状に特別な役割を与えないため、このような状況には対応しきれませんでした。そのため、テールリスク管理は、単なる金融商品の選択ではなく、ポートフォリオ全体を設計する問題として捉える必要があります。",
+      "quiz": {
+        "question": "この研究で提案されている、突然の暴落とじわじわ下落の両方から資産を守るための最適な戦略の組み合わせは何ですか？",
+        "options": [
+          "株式投資と債券投資",
+          "プットオプションとトレンドフォロー",
+          "不動産投資と金投資"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究では、突然の暴落には「プットオプション」、じわじわ続く下落には「トレンドフォロー」を組み合わせることで、あらゆる市場の下落リスクから資産を守る最適なハイブリッド戦略を提案しています。"
+      },
+      "limitations": "本研究は理論先行型であり、モンテカルロシミュレーションによる様式化された証拠に基づいています。完全な歴史的バックテストやオプション曲面の完全なキャリブレーションは行われていません。特に、オプション評価には高速なブラック・ショールズの近似が使用されており、これはハイブリッドヘッジの経済学を説明するのに適切ですが、実際の運用実装とは異なる可能性があります。したがって、提示されたハイブリッドの最適解は、開発された配分ロジックのキャリブレーションされた例として解釈されるべきです。",
+      "glossary": [
+        {
+          "term": "テールリスク",
+          "definition": "発生確率は低いが、発生すると甚大な損失をもたらすリスク。"
+        },
+        {
+          "term": "プットオプション",
+          "definition": "特定の価格で資産を売る権利。市場下落時に価値が上がる。"
+        },
+        {
+          "term": "トレンドフォロー",
+          "definition": "市場のトレンドに追随して売買する投資戦略。"
+        },
+        {
+          "term": "CVaR",
+          "definition": "特定の信頼水準を超える損失の平均値。最悪損失を測る。"
+        },
+        {
+          "term": "プレミアムコスト",
+          "definition": "オプションを購入する際に支払う費用。"
+        },
+        {
+          "term": "マルコフ状態",
+          "definition": "将来の状態が現在の状態のみに依存する性質。"
+        },
+        {
+          "term": "ハミルトン・ヤコビ・ベルマン方程式",
+          "definition": "動的最適化問題を解くための偏微分方程式。"
+        },
+        {
+          "term": "モンテカルロシミュレーション",
+          "definition": "乱数を用いて現象をシミュレートする手法。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "突然の暴落には「プットオプション」、じわじわ下落には「トレンドフォロー」を組み合わせることで、どんな市場の落ち込みからも資産を守る最適な戦略を提案します。",
+      "noveltyContrast": {
+        "before": "これまでのテールリスク管理は、プットオプションかトレンドフォローのどちらか一方に偏りがちでした。また、オプションのプレミアムコストの扱いに一貫性がなく、両者を統合した最適な戦略を立てるのが困難でした。",
+        "after": "この研究では、プットオプションとトレンドフォローを一つの連続時間CVaRフレームワークに統合。オプションを市場で取引される資産として扱い、プレミアムコストも考慮することで、暴落とじわじわ下落の両方に対応できる最適なハイブリッド戦略を提示しました。"
+      },
+      "analogy": {
+        "title": "畑の病害対策：急な嵐と長雨",
+        "body": "あなたの畑が病害に襲われる状況を想像してください。突然の嵐で一気に作物が倒れる「急な暴落」と、長雨でじわじわと病気が広がり収穫が減る「じわじわ下落」では、対策が異なりますよね。\n急な嵐には、頑丈な支柱を立てて一気に作物を守る「プットオプション」が有効です。一方、長雨による病気には、日々の作物の変化を見て、病気の兆候があればすぐに薬剤を散布したり、水はけを良くしたりする「トレンドフォロー」が適しています。この研究は、これら二つの異なる対策を、畑全体の収穫量（資産）を最大化しつつ、最悪の被害（損失）を最小限に抑えるように組み合わせる方法を見つけたようなものです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、あなたの資産を守る上で非常に重要な示唆を与えます。市場の急激な変動や長期的な下落は、いつ起こるか予測できません。しかし、この研究が示すように、それぞれの「下落の仕方」に合わせた対策を事前に組み合わせておくことで、どんな状況でも損失を最小限に抑えることが可能になります。特に、退職後の資産形成や企業の財務リスク管理など、大きな損失を避けたいと考える人にとって、プットオプションとトレンドフォローを組み合わせたハイブリッド戦略は、より安定した資産運用を実現するための強力なツールとなるでしょう。",
+      "takeawayTalk": "暴落にはプット、じわじわ下落にはトレンドフォローで、資産を全方位から守れるって！",
+      "bodyText": "本研究では、連続時間CVaR（条件付きバリュー・アット・リスク）フレームワークを開発し、プットオプションとトレンドフォローという2つの主要な保護戦略を統合しました。プットオプションは、市場で取引される資産としてモデル化され、プレミアムコストやボラティリティへの感応度、価格の急変による再評価が、その物理的なリターンプロセスを通じて考慮されます。これにより、オプションのプレミアム会計における不整合が解消されます。このフレームワークは、富、スポット価格、確率的ボラティリティ、指数平滑化された対数リターンシグナルを含むマルコフ状態を考慮し、ハミルトン・ヤコビ・ベルマン方程式を導出しました。モンテカルロシミュレーションを用いて、固定比率のハイブリッド戦略とグリッド最適化されたハイブリッド戦略が、純粋な単一戦略と比較して、特定の市場レジームにおいて終端CVaRを削減することを示しました。\n\nこのハイブリッド戦略のメカニズムは、時間の経過による保護の性質の違いにあります。プットオプションのような凸型保険は、市場の急落（ジャンプインパクト）時に即座に再評価され、損失を限定します。これは、急な価格変動に対して非常に効果的です。一方、トレンドフォローは、最初のショックに対しては反応が遅れるものの、シグナルが変化するのに十分な期間続く持続的な下落局面では、新たなオプションプレミアムを必要とせずに、徐々に防御的なポジションへと移行していきます。つまり、プットオプションは「即効性のある緊急避難」、トレンドフォローは「じわじわと進行するリスクへの長期的な対応」として機能し、両者を組み合わせることで、あらゆるタイプの下落リスクに対して包括的な保護を提供できるのです。",
+      "bodyGlossary": [
+        {
+          "term": "CVaR",
+          "definition": "特定の信頼水準を超える損失の平均値。最悪損失を測る。",
+          "start": 10,
+          "end": 14
+        },
+        {
+          "term": "プットオプション",
+          "definition": "特定の価格で資産を売る権利。市場下落時に価値が上がる。",
+          "start": 44,
+          "end": 52
+        },
+        {
+          "term": "トレンドフォロー",
+          "definition": "市場のトレンドに追随して売買する投資戦略。",
+          "start": 53,
+          "end": 61
+        },
+        {
+          "term": "プレミアムコスト",
+          "definition": "オプションを購入する際に支払う費用。",
+          "start": 112,
+          "end": 120
+        },
+        {
+          "term": "マルコフ状態",
+          "definition": "将来の状態が現在の状態のみに依存する性質。",
+          "start": 258,
+          "end": 264
+        },
+        {
+          "term": "ハミルトン・ヤコビ・ベルマン方程式",
+          "definition": "動的最適化問題を解くための偏微分方程式。",
+          "start": 269,
+          "end": 286
+        },
+        {
+          "term": "モンテカルロシミュレーション",
+          "definition": "乱数を用いて現象をシミュレートする手法。",
+          "start": 294,
+          "end": 308
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "CVaR",
+          "definition": "特定の信頼水準を超える損失の平均値。最悪損失を測る。",
+          "start": 10,
+          "end": 14
+        },
+        {
+          "term": "プットオプション",
+          "definition": "特定の価格で資産を売る権利。市場下落時に価値が上がる。",
+          "start": 44,
+          "end": 52
+        },
+        {
+          "term": "トレンドフォロー",
+          "definition": "市場のトレンドに追随して売買する投資戦略。",
+          "start": 53,
+          "end": 61
+        },
+        {
+          "term": "プレミアムコスト",
+          "definition": "オプションを購入する際に支払う費用。",
+          "start": 112,
+          "end": 120
+        },
+        {
+          "term": "マルコフ状態",
+          "definition": "将来の状態が現在の状態のみに依存する性質。",
+          "start": 258,
+          "end": 264
+        },
+        {
+          "term": "ハミルトン・ヤコビ・ベルマン方程式",
+          "definition": "動的最適化問題を解くための偏微分方程式。",
+          "start": 269,
+          "end": 286
+        },
+        {
+          "term": "モンテカルロシミュレーション",
+          "definition": "乱数を用いて現象をシミュレートする手法。",
+          "start": 294,
+          "end": 308
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 305,
+      "keyFigure": {
+        "imagePath": "/figures/2607.00883_results.png",
+        "page": 22,
+        "caption": "様々な戦略のパフォーマンスを比較した図です。",
+        "label": "Figure 2:",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-02T23:04:22.304Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.00883_results.png",
+          "page": 22,
+          "caption": "様々な戦略のパフォーマンスを比較した図です。",
+          "label": "Figure 2:",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-02T23:04:22.304Z"
+        },
+        {
+          "imagePath": "/figures/2607.00883_why.png",
+          "page": 25,
+          "caption": "プットオプションのウェイトがCVaRに与える影響を示した図です。",
+          "label": "Figure 4: CVaR as a function of the put weight w in the reduced hybrid class, one panel",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-02T23:04:22.304Z"
+        }
+      ]
+    }
+  ]
+}

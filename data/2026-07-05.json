@@ -1,0 +1,956 @@
+{
+  "date": "2026-07-05",
+  "papers": [
+    {
+      "id": "2607.01561v1",
+      "title": "Decomposing Wage Stagnation: Employment Reallocation, Wage Structure,and Demographics",
+      "authors": [
+        "Ken Yamada"
+      ],
+      "publishedAt": "2026-07-02T00:36:42Z",
+      "url": "https://arxiv.org/abs/2607.01561v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.01561v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "econ.GN"
+      ],
+      "abstract": "Average wages in Japan rose until the mid-1990s but stagnated thereafter. This paper studies Japan's long-run wage stagnation by decomposing changes in average log real hourly wages from 1980 to 2024 into four components: demographic change across worker types, changes in relative employment shares across job types, changes in relative wages across job types, and wage growth within job types. The framework combines a shift-share decomposition across worker types with an extension of the Olley-Pakes decomposition that separates employment reallocation from changes in relative wages across job types. Wage growth within job types contributes positively over the full sample period, but demographic change and employment reallocation partly offset it. Between 1996 and 2014, all four components are negative. The negative contribution from employment reallocation is not limited to the expansion of part-time employment, but reflects broader shifts across job types defined by employment type, establishment size, and industry.",
+      "summary": {
+        "gist": "日本経済は1990年代半ばまで平均賃金が上昇していましたが、それ以降は停滞が続いています。この賃金停滞は、人口構成の変化、非正規雇用の拡大、労働者の職種間移動など、様々な要因と同時に進行してきました。これまでの研究では、これらの要因が個別に分析されることが多かったのですが、実際にはこれらが複合的に作用し、全体の賃金成長を形成しています。本研究は、平均実質時間当たり賃金の変化を、労働者タイプ間の人口構成変化、職種間の相対的雇用シェアの変化、職種間の相対賃金の変化、職種内での賃金成長という4つの要素に分解することで、日本の長期的な賃金停滞の要因を包括的に明らかにすることを目的としています。",
+        "novelty": "これまでの賃金停滞研究は、非正規雇用の増加や労働者の人口構成変化といった個別の要因に焦点を当てがちでした。しかし、これらの要因がどのように組み合わさって全体の賃金に影響しているのか、包括的な視点が不足していました。 この論文では、賃金停滞を「誰が働くか（人口構成）」「どのような仕事に就くか（雇用再配分）」「仕事ごとの賃金格差（相対賃金構造）」「仕事内での賃金上昇（仕事内賃金成長）」の4つの要素に分解する新しい分析フレームワークを開発。これにより、複数の要因が複合的に作用している実態を明らかにしました。",
+        "method": "本研究では、日本の1980年から2024年までの平均実質時間当たり賃金の変化を分解するための新しいフレームワークを開発しました。このフレームワークは、まず労働者タイプ（性別と年齢層で定義）間でシフトシェア分解を適用し、次に各労働者タイプ内で職種（雇用形態、事業所規模、産業で定義）間でOlley-Pakes分解を適用します。さらに、雇用再配分項目の経時変化を相対シェアと相対賃金の成分に分解します。これにより、賃金変化を「人口構成の変化」「職種間の相対的雇用シェアの変化」「職種間の相対賃金構造の変化」「職種内での賃金成長」の4つの要素に分離します。分析には、全国的に代表性のある「賃金構造基本統計調査」と「労働力調査」のデータを使用し、従業員への選択バイアスも考慮に入れています。",
+        "results": "分析の結果、日本の賃金停滞は単一の要因では説明できないことが明らかになりました。長期的には職種内での賃金成長が平均賃金にプラスに寄与しているものの、労働者タイプ間の人口構成変化と職種間の雇用再配分がその寄与を部分的に相殺しています。特に1996年から2014年の停滞期には、これら4つの分解要素全てがマイナスに寄与していました。雇用再配分によるマイナス寄与は、非正規雇用の拡大だけでなく、雇用形態、事業所規模、産業で定義されるより広範な職種間のシフトを反映していることが示されました。",
+        "why": "賃金停滞は、単に個々の仕事の賃金が上がらないだけでなく、低賃金の労働者タイプへのシフト（高齢化や女性の就業増）、低賃金の職種への雇用シフト（非正規雇用や小規模事業所、特定の産業への集中）、そして高賃金な職種の相対賃金が低下するといった複数の経路を通じて発生します。本研究のフレームワークは、これらの異なる経済的解釈を持つ経路が、どのように集合的な賃金指標に影響を与えるかを統合的に示しました。日本の賃金停滞は、労働者構成、雇用配分、賃金構造、そして職種内賃金成長が複合的に進化してきた結果であり、特定の労働者タイプや職種の変化だけでは説明できないのです。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "labor-economics",
+      "arxivPrimary": "econ.GN",
+      "titleJa": "賃金停滞の要因分解：雇用再配分、賃金構造、人口構成",
+      "catchTitle": "日本人の給料が上がらない、本当の理由",
+      "hook": "あなたの給料、なぜか昔より上がりにくいと感じませんか？日本の賃金停滞には、複雑な理由が隠されています。",
+      "background": "日本経済は1990年代半ばまで平均賃金が上昇していましたが、それ以降は停滞が続いています。この賃金停滞は、人口構成の変化、非正規雇用の拡大、労働者の職種間移動など、様々な要因と同時に進行してきました。これまでの研究では、これらの要因が個別に分析されることが多かったのですが、実際にはこれらが複合的に作用し、全体の賃金成長を形成しています。本研究は、平均実質時間当たり賃金の変化を、労働者タイプ間の人口構成変化、職種間の相対的雇用シェアの変化、職種間の相対賃金の変化、職種内での賃金成長という4つの要素に分解することで、日本の長期的な賃金停滞の要因を包括的に明らかにすることを目的としています。",
+      "quiz": {
+        "question": "日本の賃金停滞の要因として、この論文で新たに分解された4つの要素のうち、1996年から2014年の停滞期に全てがマイナスに寄与したものはどれですか？",
+        "options": [
+          "人口構成の変化、雇用再配分、相対賃金構造の変化、職種内での賃金成長",
+          "技術革新の遅れ、グローバル競争の激化、消費税増税、労働組合の弱体化",
+          "少子高齢化、女性の社会進出、非正規雇用の増加、最低賃金の上昇"
+        ],
+        "correctIndex": 0,
+        "explanation": "論文の結果セクションで「Between 1996 and 2014, all four components are negative.」と明記されており、この4つの要素は「demographic change across worker types, changes in relative employment shares across job types, changes in relative wages across job types, and wage growth within job types」です。選択肢1がこれに対応します。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "シフトシェア分解",
+          "definition": "全体の変化を、グループ内変化とグループ間変化に分ける手法。"
+        },
+        {
+          "term": "Olley-Pakes分解",
+          "definition": "平均的な成果を、生産性向上と資源配分に分ける手法。"
+        },
+        {
+          "term": "人口構成の変化",
+          "definition": "労働者の性別や年齢層の割合が変わること。"
+        },
+        {
+          "term": "雇用再配分",
+          "definition": "労働者が異なる職種へ移動すること。"
+        },
+        {
+          "term": "相対賃金構造",
+          "definition": "職種間の賃金格差のパターン。"
+        },
+        {
+          "term": "賃金構造基本統計調査",
+          "definition": "日本の賃金に関する詳細な政府統計調査。"
+        },
+        {
+          "term": "労働力調査",
+          "definition": "日本の労働力人口に関する政府統計調査。"
+        },
+        {
+          "term": "選択バイアス",
+          "definition": "特定の集団に偏りがあることで分析結果が歪むこと。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "日本の賃金停滞は、人口構成の変化、低賃金職への雇用シフト、相対的な賃金構造の変化など、複数の要因が絡み合って生じている。",
+      "noveltyContrast": {
+        "before": "これまでの賃金停滞研究は、非正規雇用の増加や労働者の人口構成変化といった個別の要因に焦点を当てがちでした。しかし、これらの要因がどのように組み合わさって全体の賃金に影響しているのか、包括的な視点が不足していました。",
+        "after": "この論文では、賃金停滞を「誰が働くか（人口構成）」「どのような仕事に就くか（雇用再配分）」「仕事ごとの賃金格差（相対賃金構造）」「仕事内での賃金上昇（仕事内賃金成長）」の4つの要素に分解する新しい分析フレームワークを開発。これにより、複数の要因が複合的に作用している実態を明らかにしました。"
+      },
+      "analogy": {
+        "title": "豊作のはずが、なぜか儲からない農家",
+        "body": "これは、まるで農家が「今年はたくさん野菜が採れたのに、なぜか収入が増えない」と悩んでいるようなものです。個々の畑（仕事タイプ）では良い野菜（賃金）が育っているのに、全体として儲からない。その原因は、①高齢の働き手が増えた（人口構成の変化）、②単価の安い野菜（低賃金な仕事）ばかり作るようになった（雇用再配分）、③特定の野菜だけ異常に安値で取引されるようになった（相対賃金構造の変化）、④そもそも野菜全体の市場価格が上がらない（仕事内賃金成長の鈍化）といった、複数の問題が同時に起きているからかもしれません。この研究は、どの問題がどれくらい影響しているのかを、データで細かく解き明かすことに成功しました。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、なぜあなたの給料がなかなか上がらないのか、その複雑な背景を解き明かすヒントを与えてくれます。単に「景気が悪いから」とか「非正規が増えたから」といった単純な理由だけでなく、社会全体の人口構成の変化や、どの業界・規模の企業に雇用がシフトしているか、さらには職種間の賃金格差がどう変化しているかなど、多角的な視点から賃金停滞を理解できます。これにより、個人のキャリア選択や、企業の人事戦略、さらには政府の労働政策を考える上で、より本質的な議論が可能になるでしょう。",
+      "takeawayTalk": "給料が上がらないのは、人口構成や仕事の選び方、賃金格差など、複数の要因が絡み合ってるんだって！",
+      "bodyText": "本研究では、日本の1980年から2024年までの平均実質時間当たり賃金の変化を分解するための新しいフレームワークを開発しました。このフレームワークは、まず労働者タイプ（性別と年齢層で定義）間でシフトシェア分解を適用し、次に各労働者タイプ内で職種（雇用形態、事業所規模、産業で定義）間でOlley-Pakes分解を適用します。さらに、雇用再配分項目の経時変化を相対シェアと相対賃金の成分に分解します。これにより、賃金変化を「人口構成の変化」「職種間の相対的雇用シェアの変化」「職種間の相対賃金構造の変化」「職種内での賃金成長」の4つの要素に分離します。分析には、全国的に代表性のある「賃金構造基本統計調査」と「労働力調査」のデータを使用し、従業員への選択バイアスも考慮に入れています。\n\n賃金停滞は、単に個々の仕事の賃金が上がらないだけでなく、低賃金の労働者タイプへのシフト（高齢化や女性の就業増）、低賃金の職種への雇用シフト（非正規雇用や小規模事業所、特定の産業への集中）、そして高賃金な職種の相対賃金が低下するといった複数の経路を通じて発生します。本研究のフレームワークは、これらの異なる経済的解釈を持つ経路が、どのように集合的な賃金指標に影響を与えるかを統合的に示しました。日本の賃金停滞は、労働者構成、雇用配分、賃金構造、そして職種内賃金成長が複合的に進化してきた結果であり、特定の労働者タイプや職種の変化だけでは説明できないのです。",
+      "bodyGlossary": [
+        {
+          "term": "シフトシェア分解",
+          "definition": "全体の変化を、グループ内変化とグループ間変化に分ける手法。",
+          "start": 96,
+          "end": 104
+        },
+        {
+          "term": "Olley-Pakes分解",
+          "definition": "平均的な成果を、生産性向上と資源配分に分ける手法。",
+          "start": 142,
+          "end": 155
+        },
+        {
+          "term": "雇用再配分",
+          "definition": "労働者が異なる職種へ移動すること。",
+          "start": 166,
+          "end": 171
+        },
+        {
+          "term": "人口構成の変化",
+          "definition": "労働者の性別や年齢層の割合が変わること。",
+          "start": 211,
+          "end": 218
+        },
+        {
+          "term": "相対賃金構造",
+          "definition": "職種間の賃金格差のパターン。",
+          "start": 241,
+          "end": 247
+        },
+        {
+          "term": "賃金構造基本統計調査",
+          "definition": "日本の賃金に関する詳細な政府統計調査。",
+          "start": 291,
+          "end": 301
+        },
+        {
+          "term": "労働力調査",
+          "definition": "日本の労働力人口に関する政府統計調査。",
+          "start": 304,
+          "end": 309
+        },
+        {
+          "term": "選択バイアス",
+          "definition": "特定の集団に偏りがあることで分析結果が歪むこと。",
+          "start": 324,
+          "end": 330
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "シフトシェア分解",
+          "definition": "全体の変化を、グループ内変化とグループ間変化に分ける手法。",
+          "start": 96,
+          "end": 104
+        },
+        {
+          "term": "Olley-Pakes分解",
+          "definition": "平均的な成果を、生産性向上と資源配分に分ける手法。",
+          "start": 142,
+          "end": 155
+        },
+        {
+          "term": "雇用再配分",
+          "definition": "労働者が異なる職種へ移動すること。",
+          "start": 166,
+          "end": 171
+        },
+        {
+          "term": "人口構成の変化",
+          "definition": "労働者の性別や年齢層の割合が変わること。",
+          "start": 211,
+          "end": 218
+        },
+        {
+          "term": "相対賃金構造",
+          "definition": "職種間の賃金格差のパターン。",
+          "start": 241,
+          "end": 247
+        },
+        {
+          "term": "賃金構造基本統計調査",
+          "definition": "日本の賃金に関する詳細な政府統計調査。",
+          "start": 291,
+          "end": 301
+        },
+        {
+          "term": "労働力調査",
+          "definition": "日本の労働力人口に関する政府統計調査。",
+          "start": 304,
+          "end": 309
+        },
+        {
+          "term": "選択バイアス",
+          "definition": "特定の集団に偏りがあることで分析結果が歪むこと。",
+          "start": 324,
+          "end": 330
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 292
+    },
+    {
+      "id": "2607.01835v1",
+      "title": "Subsoil acidity causes long delays in inorganic carbon sequestration by Enhanced Weathering",
+      "authors": [
+        "Søren Jessen",
+        "Rasmus Jakobsen",
+        "Majken Looms",
+        "Per Ambus",
+        "Dieke Postma"
+      ],
+      "publishedAt": "2026-07-02T07:56:28Z",
+      "url": "https://arxiv.org/abs/2607.01835v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.01835v1.pdf",
+      "categories": [
+        "topic:humanities",
+        "physics.geo-ph",
+        "physics.soc-ph"
+      ],
+      "abstract": "While a looming atmospheric CO$_2$ overshoot calls for immediate carbon sequestration, delays associated to Enhanced Weathering (EW) carbon dioxide removal are being investigated. Topsoil acidity is already known to delay EW carbon sequestration, but subsoil acidity remains underexplored. Using century-long agricultural liming of formerly acidic heathland as a proxy for EW, this study provides empirical evidence of subsoil-imposed delays. Below such limed terrain, we observed a downward-progressing front of topsoil-produced alkalinity that still requires 30-100 years to penetrate the approximately 5 m thick acidic sandy unsaturated zone and reach the groundwater table. Subsoil acidity thus may cause beyond-reasonable delays, prohibiting EW as a viable short-term carbon capture strategy even on topsoils made non-acidic by preceding liming. When planning EW schemes, the amounts of stored acidic cations in top- and subsoil, as well as the rate and composition of infiltrating water, controlling the duration of the delay, require careful assessment.",
+      "summary": {
+        "gist": "地球温暖化を抑制するためには、大気中のCO2を緊急に除去する必要があります。「強化風化（EW）」は、ケイ酸塩鉱物を農地に散布し、CO2と反応させて土壌中の炭酸塩アルカリ度を高め、最終的にCO2を海洋に輸送することで大気から除去する技術です。しかし、この技術によるCO2隔離には遅延が生じることが指摘されており、特に表層土の酸性度がその原因の一つとされていました。",
+        "novelty": "これまでの研究では、CO2を土壌に固定する「強化風化」という技術において、表層土の酸性度が炭素隔離を遅らせることが知られていました。しかし、その下の層、つまり下層土の酸性度がどう影響するかは、ほとんど調べられていませんでした。 本研究は、1世紀にわたる農地の石灰散布を強化風化の代理実験として利用し、下層土の酸性度がCO2隔離を大幅に遅らせることを実証しました。アルカリ性の水が地下水に到達するまでに、30年から100年もの時間がかかることが明らかになりました。",
+        "method": "本研究では、約1世紀にわたって石灰が散布されてきたデンマークの農地を対象に、強化風化の長期的な代理実験として利用しました。この農地は、かつて酸性のヒースランドでしたが、1874年から1897年にかけて開墾され、1906年から1910年にかけて泥灰土が、1930年代からは石灰が散布されてきました。研究チームは、この農地の深さ約5mの不飽和帯から間隙ガスと間隙水をサンプリングし、無機炭素系のパラメータ（間隙ガスPCO2、間隙水中の無機炭酸塩組成、pH、陽イオン交換体組成など）を測定しました。これにより、表層で生成されたアルカリ度が下層土をどのように移動し、どこで消失するのかを追跡しました。",
+        "results": "分析の結果、表層から約2mの深さまでは、石灰散布の影響でpHが高く、陽イオン交換体がCa優勢であることが確認されました。しかし、2mより深い層では、アルカリ度とpHが著しく低下し、陽イオン交換体がAl優勢に変化していました。これは、石灰散布以前の酸性状態を反映していると考えられます。表層で生成されたアルカリ度は、この2mの深さで消失していることが示されました。このアルカリ度の消失は、陽イオン交換反応と鉱物平衡によって引き起こされ、結果としてCO2が土壌ガスとして大気中に再放出されるメカニズムが示唆されました。このアルカリ性の水が約5mの酸性の砂質不飽和帯を通過し、地下水に到達するまでには、30年から100年もの時間がかかると推定されました。",
+        "why": "表層で石灰が溶けて放出されたCaイオンは、土壌中の陽イオン交換体からAlイオンを追い出します。追い出されたAlイオンは水酸化アルミニウムとして沈殿し、この沈殿反応の際にプロトン（H+）を放出します。このH+が、石灰溶解によって生成された炭酸水素イオン（アルカリ度）と反応することで、炭酸（H2CO3*）が生成されます。この炭酸は、土壌ガス中のCO2として大気中に再放出される可能性があります。つまり、下層土が酸性であると、表層でCO2を固定しようと生成されたアルカリ度が、深部に到達する前に中和されてしまい、CO2が再び大気中に戻ってしまうため、炭素隔離が大幅に遅延するのです。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.geo-ph）",
+      "field": "歴史・人文・社会",
+      "categoryL1": "adjacent",
+      "categoryL2": "environmental-science",
+      "arxivPrimary": "physics.geo-ph",
+      "titleJa": "下層土の酸性度が強化風化による無機炭素隔離を大幅に遅らせる",
+      "catchTitle": "土の下の「酸っぱい層」がCO2貯留を邪魔する？",
+      "hook": "地球温暖化対策の切り札「CO2除去技術」。でも、その効果がなかなか現れないとしたら、あなたはどうしますか？",
+      "background": "地球温暖化を抑制するためには、大気中のCO2を緊急に除去する必要があります。「強化風化（EW）」は、ケイ酸塩鉱物を農地に散布し、CO2と反応させて土壌中の炭酸塩アルカリ度を高め、最終的にCO2を海洋に輸送することで大気から除去する技術です。しかし、この技術によるCO2隔離には遅延が生じることが指摘されており、特に表層土の酸性度がその原因の一つとされていました。",
+      "quiz": {
+        "question": "強化風化によるCO2隔離が下層土の酸性度によって遅延する主なメカニズムは何ですか？",
+        "options": [
+          "下層土の微生物がCO2を分解してしまうため。",
+          "表層で生成されたアルカリ度が、下層土の酸性物質と反応して中和され、CO2が再放出されるため。",
+          "下層土が硬すぎて、アルカリ性の水が浸透しないため。"
+        ],
+        "correctIndex": 1,
+        "explanation": "表層で生成されたアルカリ性物質が、下層土の酸性物質（特に陽イオン交換体から放出されるAlイオンが生成するH+）と反応して中和され、CO2が再び大気中に放出されるため、炭素隔離が遅延します。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "強化風化",
+          "definition": "ケイ酸塩鉱物を土壌に散布しCO2を固定する技術"
+        },
+        {
+          "term": "炭素隔離",
+          "definition": "大気中のCO2を貯留・固定すること"
+        },
+        {
+          "term": "アルカリ度",
+          "definition": "水中の酸を中和する能力を示す指標"
+        },
+        {
+          "term": "不飽和帯",
+          "definition": "土壌中の水が完全に飽和していない領域"
+        },
+        {
+          "term": "間隙ガス",
+          "definition": "土壌の隙間に存在するガス"
+        },
+        {
+          "term": "間隙水",
+          "definition": "土壌の隙間に存在する水"
+        },
+        {
+          "term": "陽イオン交換体",
+          "definition": "土壌中で陽イオンを吸着・放出する物質"
+        },
+        {
+          "term": "水酸化アルミニウム",
+          "definition": "アルミニウムの水酸化物で、土壌中で沈殿する"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "土壌にCO2を固定する技術は、下層土が酸性だと効果が出るまでに数十年から100年かかると判明しました。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、CO2を土壌に固定する「強化風化」という技術において、表層土の酸性度が炭素隔離を遅らせることが知られていました。しかし、その下の層、つまり下層土の酸性度がどう影響するかは、ほとんど調べられていませんでした。",
+        "after": "本研究は、1世紀にわたる農地の石灰散布を強化風化の代理実験として利用し、下層土の酸性度がCO2隔離を大幅に遅らせることを実証しました。アルカリ性の水が地下水に到達するまでに、30年から100年もの時間がかかることが明らかになりました。"
+      },
+      "analogy": {
+        "title": "畑の土壌改良、深層まで届くには時間がかかる",
+        "body": "これは、まるで畑の土壌改良に似ています。表層の土はすぐに肥料や石灰が効いて作物の生育が良くなりますが、その効果を畑の深部まで浸透させ、根が深く張るようにするには、雨が降ったり、微生物が活動したりするのを何年も待つ必要があります。この研究は、表面的な改良だけでなく、土壌の奥深くまで効果が届くのに、いかに時間がかかるかを教えてくれる、そんな「土壌改良の深層」を解き明かすようなものです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "30-100年",
+          "label": "CO2隔離の遅延期間"
+        }
+      ],
+      "whyYouCare": "この研究は、地球温暖化対策として注目される「強化風化」が、実は期待通りの短期的な効果を発揮しない可能性があることを示しています。もしあなたの会社がCO2排出量削減のためにこの技術への投資を検討しているなら、土壌の深部の特性まで考慮しないと、投資対効果が大幅に遅れるリスクがあることを示唆しています。また、自治体が地域でのCO2削減目標達成のために強化風化を推進する場合も、長期的な視点と詳細な土壌調査が不可欠です。目先の効果だけでなく、土壌の奥深くに潜む「見えない壁」を理解することが、真に持続可能な地球環境対策への第一歩となるでしょう。",
+      "takeawayTalk": "土の下の酸っぱい層が、CO2を土に閉じ込めるのを邪魔してた！",
+      "bodyText": "本研究では、約1世紀にわたって石灰が散布されてきたデンマークの農地を対象に、強化風化の長期的な代理実験として利用しました。この農地は、かつて酸性のヒースランドでしたが、1874年から1897年にかけて開墾され、1906年から1910年にかけて泥灰土が、1930年代からは石灰が散布されてきました。研究チームは、この農地の深さ約5mの不飽和帯から間隙ガスと間隙水をサンプリングし、無機炭素系のパラメータ（間隙ガスPCO2、間隙水中の無機炭酸塩組成、pH、陽イオン交換体組成など）を測定しました。これにより、表層で生成されたアルカリ度が下層土をどのように移動し、どこで消失するのかを追跡しました。\n\n表層で石灰が溶けて放出されたCaイオンは、土壌中の陽イオン交換体からAlイオンを追い出します。追い出されたAlイオンは水酸化アルミニウムとして沈殿し、この沈殿反応の際にプロトン（H+）を放出します。このH+が、石灰溶解によって生成された炭酸水素イオン（アルカリ度）と反応することで、炭酸（H2CO3*）が生成されます。この炭酸は、土壌ガス中のCO2として大気中に再放出される可能性があります。つまり、下層土が酸性であると、表層でCO2を固定しようと生成されたアルカリ度が、深部に到達する前に中和されてしまい、CO2が再び大気中に戻ってしまうため、炭素隔離が大幅に遅延するのです。",
+      "bodyGlossary": [
+        {
+          "term": "強化風化",
+          "definition": "ケイ酸塩鉱物を土壌に散布しCO2を固定する技術",
+          "start": 38,
+          "end": 42
+        },
+        {
+          "term": "不飽和帯",
+          "definition": "土壌中の水が完全に飽和していない領域",
+          "start": 166,
+          "end": 170
+        },
+        {
+          "term": "間隙ガス",
+          "definition": "土壌の隙間に存在するガス",
+          "start": 172,
+          "end": 176
+        },
+        {
+          "term": "間隙水",
+          "definition": "土壌の隙間に存在する水",
+          "start": 177,
+          "end": 180
+        },
+        {
+          "term": "陽イオン交換体",
+          "definition": "土壌中で陽イオンを吸着・放出する物質",
+          "start": 226,
+          "end": 233
+        },
+        {
+          "term": "アルカリ度",
+          "definition": "水中の酸を中和する能力を示す指標",
+          "start": 260,
+          "end": 265
+        },
+        {
+          "term": "水酸化アルミニウム",
+          "definition": "アルミニウムの水酸化物で、土壌中で沈殿する",
+          "start": 357,
+          "end": 366
+        },
+        {
+          "term": "炭素隔離",
+          "definition": "大気中のCO2を貯留・固定すること",
+          "start": 571,
+          "end": 575
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "強化風化",
+          "definition": "ケイ酸塩鉱物を土壌に散布しCO2を固定する技術",
+          "start": 38,
+          "end": 42
+        },
+        {
+          "term": "不飽和帯",
+          "definition": "土壌中の水が完全に飽和していない領域",
+          "start": 166,
+          "end": 170
+        },
+        {
+          "term": "間隙ガス",
+          "definition": "土壌の隙間に存在するガス",
+          "start": 172,
+          "end": 176
+        },
+        {
+          "term": "間隙水",
+          "definition": "土壌の隙間に存在する水",
+          "start": 177,
+          "end": 180
+        },
+        {
+          "term": "陽イオン交換体",
+          "definition": "土壌中で陽イオンを吸着・放出する物質",
+          "start": 226,
+          "end": 233
+        },
+        {
+          "term": "アルカリ度",
+          "definition": "水中の酸を中和する能力を示す指標",
+          "start": 260,
+          "end": 265
+        },
+        {
+          "term": "水酸化アルミニウム",
+          "definition": "アルミニウムの水酸化物で、土壌中で沈殿する",
+          "start": 357,
+          "end": 366
+        },
+        {
+          "term": "炭素隔離",
+          "definition": "大気中のCO2を貯留・固定すること",
+          "start": 571,
+          "end": 575
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 259,
+      "keyFigure": {
+        "imagePath": "/figures/2607.01835v1_results.jpeg",
+        "page": 3,
+        "caption": "土壌の深さごとのpH値とCa優勢な陽イオン交換体の分布を示しています。",
+        "label": "Fig. 1B; shaded areas), along with a 1-to-2-unit higher pH value (Fig. 1C), and a Ca-",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-04T22:57:54.341Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.01835v1_results.jpeg",
+          "page": 3,
+          "caption": "土壌の深さごとのpH値とCa優勢な陽イオン交換体の分布を示しています。",
+          "label": "Fig. 1B; shaded areas), along with a 1-to-2-unit higher pH value (Fig. 1C), and a Ca-",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-04T22:57:54.341Z"
+        },
+        {
+          "imagePath": "/figures/2607.01835v1_why.jpeg",
+          "page": 26,
+          "caption": "下層土の酸性度が炭素隔離を遅らせるメカニズムを図で説明しています。",
+          "label": "Fig. 2 in the main text.",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-04T22:57:54.342Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.02422v1",
+      "title": "Complex dynamics in the Sherrington-Kirkpatrick game",
+      "authors": [
+        "Desmond Chan",
+        "Tobias Galla"
+      ],
+      "publishedAt": "2026-07-02T16:50:30Z",
+      "url": "https://arxiv.org/abs/2607.02422v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.02422v1.pdf",
+      "categories": [
+        "topic:humanities",
+        "cond-mat.dis-nn",
+        "cs.GT",
+        "physics.soc-ph"
+      ],
+      "abstract": "We study the outcome of adaptive learning of a large number of players engaging in sets of two-strategy two-player games. We are interested in typical games, and generate the payoff matrices at random at the beginning. The payoff matrices then remain fixed during the learning process. This provides a game theoretic foundation for the Sherrington-Kirkpatrick (SK) game, recently introduced by Garnier-Brun, Benzaquen and Bouchaud. The original model by these authors is a special case, with no bias towards any strategy. We here determine stability of learning for SK games with general random bias, and find that the nature of the stable state is affected by random fields. We also introduce a grand-canonical version of the SK game, in which players can choose to abstain. We determine the stability of learning for this game. Our analysis confirms that complex situations involving many players are frequently unlearnable, even if each player only chooses between two different actions. The rate with which players lose memory of past payoffs and the competitiveness of the game emerge as key parameters determining whether learning converges to a unique fixed point, whether there are many fixed points, or if the dynamics remains persistently volatile.",
+      "summary": {
+        "gist": "複雑なシステムでは、個々のシンプルなエージェントの相互作用から予期せぬ、予測不能な振る舞いが出現します。ゲーム理論は、限られた資源を巡る競争や戦略的意思決定、適応を伴うこれらのプロセスをモデル化する上で重要です。しかし、既存のゲーム理論の多くは、少数のプレイヤーと少ない選択肢のシンプルなゲームに焦点を当てており、多数のプレイヤーが関わる複雑な状況での学習ダイナミクスについては、まだ十分に理解されていませんでした。",
+        "novelty": "従来のゲーム理論は、少数のプレイヤーや少ない選択肢のシンプルなゲームに焦点を当て、プレイヤーが常に合理的に行動し、完全な情報を持つと仮定していました。しかし、現実の複雑な状況では、この仮定は成り立ちにくいとされていました。 この研究では、多数のプレイヤーがそれぞれ二つの選択肢を持つ「Sherrington-Kirkpatrickゲーム」を分析。プレイヤーの過去の記憶の喪失率やゲームの競争度といった要因が、学習が安定した状態に収束するか、それとも予測不能な変動を続けるかを決定することを発見しました。",
+        "method": "本研究では、多数のプレイヤーがそれぞれ2つの戦略（行動）から選択する「Sherrington-Kirkpatrick (SK) ゲーム」を分析しました。プレイヤー間の相互作用は、ゲーム開始時にランダムに設定され、学習プロセス中も固定される報酬行列によって決定されます。プレイヤーは、過去の報酬に基づいて行動の傾向を更新する「Sato–Crutchfield学習」という適応的学習ルールに従います。この学習ルールには、過去の記憶の喪失率（α）と選択の強度（β）というパラメータが含まれます。本研究では、動的平均場理論と数値シミュレーションを組み合わせて、これらのパラメータが学習の安定性と収束に与える影響を調査しました。また、プレイヤーがゲームに参加しない選択肢を持つ「大正準SKゲーム」も導入し、分析しました。",
+        "results": "分析の結果、多数のプレイヤーが関わるSKゲームでは、学習がしばしば不安定になり、最適な固定点に収束しないことが確認されました。特に、プレイヤーが過去の報酬を忘れる速度（記憶喪失率α）とゲームの競争度（選択の強度β）が、学習が単一の固定点に収束するか、多数の固定点が存在するか、あるいはダイナミクスが永続的に変動し続けるかを決定する主要なパラメータであることが明らかになりました。外部バイアス（ランダムフィールド）の存在も、安定状態の性質に影響を与えることが示されました。さらに、プレイヤーがゲームへの参加を任意に選択できる大正準SKゲームでは、参加しない選択肢が学習のダイナミクスに新たな複雑性をもたらすことが示されました。",
+        "why": "この複雑なダイナミクスは、多数のプレイヤーが互いの行動を予測し、自身の報酬を最大化しようと適応的に学習する過程で生じます。各プレイヤーの行動選択は、他のプレイヤーの現在の戦略に依存するため、システム全体としてフィードバックループが形成されます。記憶喪失率が高い場合、プレイヤーは過去の経験から十分に学べず、行動が頻繁に変化し、システム全体が不安定になります。また、ゲームの競争度が高い場合、わずかな行動の変化が大きな報酬の変化につながるため、プレイヤーの学習が収束しにくくなります。これらの要因が組み合わさることで、個々のプレイヤーはシンプルなルールに従っているにもかかわらず、システム全体としては予測不能なカオス的振る舞いや、多数の準最適な状態の間をさまようことになります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cond-mat.dis-nn）",
+      "field": "歴史・人文・社会",
+      "categoryL1": "serendipity",
+      "categoryL2": "game-theory",
+      "arxivPrimary": "cond-mat.dis-nn",
+      "titleJa": "Sherrington-Kirkpatrickゲームにおける複雑なダイナミクス",
+      "catchTitle": "多数のプレイヤーが関わるゲームの学習はなぜ難しいのか？",
+      "hook": "あなたは、たくさんの人が関わる複雑な状況で、最適な選択を見つけるのが難しいと感じたことはありませんか？",
+      "background": "複雑なシステムでは、個々のシンプルなエージェントの相互作用から予期せぬ、予測不能な振る舞いが出現します。ゲーム理論は、限られた資源を巡る競争や戦略的意思決定、適応を伴うこれらのプロセスをモデル化する上で重要です。しかし、既存のゲーム理論の多くは、少数のプレイヤーと少ない選択肢のシンプルなゲームに焦点を当てており、多数のプレイヤーが関わる複雑な状況での学習ダイナミクスについては、まだ十分に理解されていませんでした。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "Sherrington-Kirkpatrickゲーム",
+          "definition": "多数のプレイヤーが2つの行動から選択し、相互作用するゲームモデル。"
+        },
+        {
+          "term": "報酬行列",
+          "definition": "プレイヤーの行動の組み合わせに対する報酬を示す表。"
+        },
+        {
+          "term": "Sato–Crutchfield学習",
+          "definition": "過去の報酬に基づいて行動の傾向を更新する適応的学習ルール。"
+        },
+        {
+          "term": "記憶喪失率",
+          "definition": "プレイヤーが過去の経験を忘れる速さを示すパラメータ。"
+        },
+        {
+          "term": "選択の強度",
+          "definition": "プレイヤーがより高い傾向を持つ行動を選ぶ確実性。"
+        },
+        {
+          "term": "動的平均場理論",
+          "definition": "多数の相互作用する要素を持つシステムの挙動を解析する手法。"
+        },
+        {
+          "term": "大正準SKゲーム",
+          "definition": "プレイヤーがゲームに参加しない選択肢を持つSKゲームの拡張版。"
+        },
+        {
+          "term": "固定点",
+          "definition": "システムのダイナミクスが収束し、安定する状態。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "多数のプレイヤーが二択ゲームを繰り返す状況では、学習はしばしば不安定になり、最適な状態に収束しない。",
+      "noveltyContrast": {
+        "before": "従来のゲーム理論は、少数のプレイヤーや少ない選択肢のシンプルなゲームに焦点を当て、プレイヤーが常に合理的に行動し、完全な情報を持つと仮定していました。しかし、現実の複雑な状況では、この仮定は成り立ちにくいとされていました。",
+        "after": "この研究では、多数のプレイヤーがそれぞれ二つの選択肢を持つ「Sherrington-Kirkpatrickゲーム」を分析。プレイヤーの過去の記憶の喪失率やゲームの競争度といった要因が、学習が安定した状態に収束するか、それとも予測不能な変動を続けるかを決定することを発見しました。"
+      },
+      "analogy": {
+        "title": "豊作か不作か？農家の選択と市場の混乱",
+        "body": "これは、多くの農家が「豊作を目指すか、不作に備えるか」の二択を迫られる状況に似ています。各農家は他の農家の選択を予測しながら、自分の収益が最大になるよう学習します。しかし、市場全体の情報が不透明で、過去の経験をすぐに忘れてしまう農家が多いと、市場価格は安定せず、誰もが最適な選択を見つけられないまま、価格が乱高下し続けるようなものです。この研究は、個々の農家の単純な選択が、市場全体としてなぜ複雑で予測不能な動きをするのかを解明しています。",
+        "domain": "farming"
+      },
+      "whyYouCare": "私たちの社会は、株式市場、交通システム、SNSでの情報拡散、さらには農業市場に至るまで、多数の個人が相互作用する複雑なシステムで溢れています。この研究は、個々の参加者がシンプルなルールに従って行動しているにもかかわらず、なぜ全体として予測不能な変動や非効率な状態が生じるのかを理解する手がかりを与えてくれます。例えば、新しい政策を導入しても期待通りの効果が出ない、あるいは市場が予期せぬ混乱に見舞われるといった現象は、この研究が示す「学習の不安定性」が原因かもしれません。この知見は、より効果的な市場設計、政策立案、あるいは組織運営を考える上で、重要な示唆を与えてくれるでしょう。",
+      "takeawayTalk": "大勢が関わるゲームでは、学習は不安定で、最適解にたどり着けないことが多いんだ。",
+      "bodyText": "本研究では、多数のプレイヤーがそれぞれ2つの戦略（行動）から選択する「Sherrington-Kirkpatrick (SK) ゲーム」を分析しました。プレイヤー間の相互作用は、ゲーム開始時にランダムに設定され、学習プロセス中も固定される報酬行列によって決定されます。プレイヤーは、過去の報酬に基づいて行動の傾向を更新する「Sato–Crutchfield学習」という適応的学習ルールに従います。この学習ルールには、過去の記憶の喪失率（α）と選択の強度（β）というパラメータが含まれます。本研究では、動的平均場理論と数値シミュレーションを組み合わせて、これらのパラメータが学習の安定性と収束に与える影響を調査しました。また、プレイヤーがゲームに参加しない選択肢を持つ「大正準SKゲーム」も導入し、分析しました。\n\nこの複雑なダイナミクスは、多数のプレイヤーが互いの行動を予測し、自身の報酬を最大化しようと適応的に学習する過程で生じます。各プレイヤーの行動選択は、他のプレイヤーの現在の戦略に依存するため、システム全体としてフィードバックループが形成されます。記憶喪失率が高い場合、プレイヤーは過去の経験から十分に学べず、行動が頻繁に変化し、システム全体が不安定になります。また、ゲームの競争度が高い場合、わずかな行動の変化が大きな報酬の変化につながるため、プレイヤーの学習が収束しにくくなります。これらの要因が組み合わさることで、個々のプレイヤーはシンプルなルールに従っているにもかかわらず、システム全体としては予測不能なカオス的振る舞いや、多数の準最適な状態の間をさまようことになります。",
+      "bodyGlossary": [
+        {
+          "term": "報酬行列",
+          "definition": "プレイヤーの行動の組み合わせに対する報酬を示す表。",
+          "start": 119,
+          "end": 123
+        },
+        {
+          "term": "Sato–Crutchfield学習",
+          "definition": "過去の報酬に基づいて行動の傾向を更新する適応的学習ルール。",
+          "start": 162,
+          "end": 180
+        },
+        {
+          "term": "選択の強度",
+          "definition": "プレイヤーがより高い傾向を持つ行動を選ぶ確実性。",
+          "start": 221,
+          "end": 226
+        },
+        {
+          "term": "動的平均場理論",
+          "definition": "多数の相互作用する要素を持つシステムの挙動を解析する手法。",
+          "start": 250,
+          "end": 257
+        },
+        {
+          "term": "大正準SKゲーム",
+          "definition": "プレイヤーがゲームに参加しない選択肢を持つSKゲームの拡張版。",
+          "start": 334,
+          "end": 342
+        },
+        {
+          "term": "記憶喪失率",
+          "definition": "プレイヤーが過去の経験を忘れる速さを示すパラメータ。",
+          "start": 479,
+          "end": 484
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "報酬行列",
+          "definition": "プレイヤーの行動の組み合わせに対する報酬を示す表。",
+          "start": 119,
+          "end": 123
+        },
+        {
+          "term": "Sato–Crutchfield学習",
+          "definition": "過去の報酬に基づいて行動の傾向を更新する適応的学習ルール。",
+          "start": 162,
+          "end": 180
+        },
+        {
+          "term": "選択の強度",
+          "definition": "プレイヤーがより高い傾向を持つ行動を選ぶ確実性。",
+          "start": 221,
+          "end": 226
+        },
+        {
+          "term": "動的平均場理論",
+          "definition": "多数の相互作用する要素を持つシステムの挙動を解析する手法。",
+          "start": 250,
+          "end": 257
+        },
+        {
+          "term": "大正準SKゲーム",
+          "definition": "プレイヤーがゲームに参加しない選択肢を持つSKゲームの拡張版。",
+          "start": 334,
+          "end": 342
+        },
+        {
+          "term": "記憶喪失率",
+          "definition": "プレイヤーが過去の経験を忘れる速さを示すパラメータ。",
+          "start": 479,
+          "end": 484
+        }
+      ],
+      "agriEconRelevance": "この研究は、個々の農家や消費者がシンプルな意思決定ルールに従う中で、農業市場全体がなぜ複雑で予測不能な動きをするのかを理解する上で非常に重要です。例えば、特定の作物の価格変動、生産者の行動が環境に与える影響、あるいは新しい農業技術の普及ダイナミクスなどを分析する際に、プレイヤーの記憶喪失率や市場の競争度が、システム全体の安定性や効率性にどのように影響するかを評価するフレームワークを提供します。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 284,
+      "keyFigure": {
+        "imagePath": "/figures/2607.02422v1_results.png",
+        "page": 9,
+        "caption": "記憶喪失率と競争度が学習の安定性にどう影響するかを示す相図です。",
+        "label": "FIG. 5: Empirical phase diagrams for two different choices",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-04T22:57:58.610Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.02422v1_results.png",
+          "page": 9,
+          "caption": "記憶喪失率と競争度が学習の安定性にどう影響するかを示す相図です。",
+          "label": "FIG. 5: Empirical phase diagrams for two different choices",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-04T22:57:58.610Z"
+        },
+        {
+          "imagePath": "/figures/2607.02422v1_why.png",
+          "page": 8,
+          "caption": "プレイヤーの行動が時間とともにどのように変化し、不安定なダイナミクスを示すかをシミュレーションで示しています。",
+          "label": "FIG. 2: Simulated trajectories of a game with no intrinsic",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-04T22:57:58.610Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.01719v1",
+      "title": "Hypergraph Minority Game with Local Hyperedge Payoffs",
+      "authors": [
+        "Yihang Zhu",
+        "Fanyuan Meng"
+      ],
+      "publishedAt": "2026-07-02T05:17:11Z",
+      "url": "https://arxiv.org/abs/2607.01719v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.01719v1.pdf",
+      "categories": [
+        "topic:humanities",
+        "physics.soc-ph"
+      ],
+      "abstract": "We provide a theoretical derivation of the Hypergraph Minority Game with Local Hyperedge Payoffs (HMG-L), in which $N$ adaptive agents compete simultaneously in multiple overlapping groups modeled as hyperedges of a static hypergraph $\\Hyper=(\\Vset,\\Eset)$. Each hyperedge constitutes an independent local minority game, and agents accumulate payoffs across all groups to which they belong. We derive the continuum-time limit of the score dynamics, from which we obtain a set of coupled nonlinear stochastic differential equations for the agents' strategy polarization variables. The deterministic drift is shown to derive from a global cost function that generalizes the standard Minority Game Hamiltonian to hypergraph-structured interactions. We perform a sparse-annealed replica analysis of the stationary state for the case of a $k$-uniform, $d$-regular random hypergraph, obtaining the saddle-point equations within the replica-symmetric ansatz, an explicit replicon stability criterion, and Bethe/cavity equations for sparse corrections. The leading sparse-regime transition occurs on a critical surface $\\alphacrit(k,d)$, while the globally coupled MG value $\\alphacrit\\simeq0.3374$ is recovered only in the separate single-hyperedge limit. We derive expressions for the order parameters -- global volatility $σ^2$, predictability $θ$, hyperedge frustration $F_e$, and frozen fraction $φ$ -- and discuss their scaling behavior near criticality. The Fokker-Planck equation governing finite-$N$ fluctuations is presented, and the noise covariance matrix is computed from the hypergraph structure. Limiting cases ($k\\to N$, $k\\to2$, $d\\to\\infty$) are analyzed in detail, establishing connections to the standard MG, networked MG, and parallel MG models.",
+      "summary": {
+        "gist": "マイノリティゲームは、多数派が損をし、少数派が得をするというシンプルなルールで、金融市場の変動や群集行動など、複雑な適応システムの振る舞いを説明するモデルとして広く研究されてきました。しかし、これまでのモデルは、エージェント間の相互作用が2者間に限定されており、3人以上のグループでの意思決定を伴う現実世界の多くの状況（委員会での投票、共同研究、資源競争など）を捉えることができませんでした。",
+        "novelty": "従来のマイノリティゲームは、参加者が2者間の関係性（ネットワークの「辺」）を通じてのみ相互作用するモデルでした。これは、金融市場や社会現象の一部を説明できましたが、3人以上のグループで意思決定が行われるような、より複雑な現実世界の状況には対応できませんでした。 この論文では、3人以上のグループを表現できる「ハイパーグラフ」という数学的構造を導入し、各グループで少数派が勝つというルールを適用した新しいマイノリティゲームを提案しました。これにより、複数のグループに同時に属する個人の意思決定が、集団全体の振る舞いにどう影響するかを初めて分析しました。",
+        "method": "本研究では、複数のエージェントが同時に参加するグループを「ハイパーエッジ」として表現する「ハイパーグラフ」という数学的構造を導入しました。このハイパーグラフ上で、各ハイパーエッジ（グループ）が独立したマイノリティゲームとして機能し、エージェントは自分が属する全てのハイパーエッジでの報酬を合計して戦略を更新します。エージェントの戦略選択は、過去の仮想スコアに基づいて行われ、ボルツマン（ソフトマックス）ルールに従います。このモデルの振る舞いを解析するために、連続時間極限でのスコアダイナミクスを導出し、非線形確率微分方程式を構築しました。さらに、スピングラス理論から借用したレプリカ解析という統計物理学の手法を用いて、定常状態での秩序変数（グローバルな変動性、予測可能性など）を導き出し、システムの相転移を特定しました。",
+        "results": "ハイパーグラフマイノリティゲーム（HMG-L）の解析により、システムの相転移が、ハイパーエッジのサイズ（k）とエージェントが属するハイパーエッジの数（d）という2つの新しい構造パラメータに依存する臨界曲面αc(k, d)として現れることを発見しました。これは、従来のマイノリティゲームの単一の臨界点αc ≃ 0.3374を一般化するものです。kの増加は臨界閾値を下げ、dの増加は臨界閾値を上げるという、競合する構造的効果が明らかになりました。また、グローバルな変動性、予測可能性、ハイパーエッジのフラストレーション、凍結分数といった秩序変数の表現を導出し、臨界点付近でのそれらのスケーリング挙動を議論しました。",
+        "why": "このモデルでは、各エージェントは自分が属する複数のグループで同時に少数派になろうとします。しかし、あるグループで少数派になる選択が、別のグループでは多数派になる原因となる可能性があります。この「局所的な最適化」と「グローバルな最適化」の間の競合が、システム全体の複雑な振る舞いや相転移を引き起こすメカニズムです。ハイパーグラフ構造は、この競合をより多層的にし、エージェント間の相互作用が単なる2者間ではなく、グループ全体として機能することで、システムの安定性や予測可能性が大きく変化することを示しています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.soc-ph）",
+      "field": "歴史・人文・社会",
+      "categoryL1": "serendipity",
+      "categoryL2": "complex-systems",
+      "arxivPrimary": "physics.soc-ph",
+      "titleJa": "ハイパーグラフマイノリティゲームと局所ハイパーエッジ報酬：複雑な集団意思決定のモデル化",
+      "catchTitle": "多数決の落とし穴？複雑な集団の最適解",
+      "hook": "あなたは会議で多数派に流されがちですか？それとも、あえて少数派を選んで成功した経験がありますか？",
+      "background": "マイノリティゲームは、多数派が損をし、少数派が得をするというシンプルなルールで、金融市場の変動や群集行動など、複雑な適応システムの振る舞いを説明するモデルとして広く研究されてきました。しかし、これまでのモデルは、エージェント間の相互作用が2者間に限定されており、3人以上のグループでの意思決定を伴う現実世界の多くの状況（委員会での投票、共同研究、資源競争など）を捉えることができませんでした。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "マイノリティゲーム",
+          "definition": "多数派が損をし、少数派が得をする意思決定ゲーム。"
+        },
+        {
+          "term": "ハイパーグラフ",
+          "definition": "3つ以上の要素を同時に結びつける「ハイパーエッジ」を持つグラフ。"
+        },
+        {
+          "term": "ハイパーエッジ",
+          "definition": "ハイパーグラフにおいて、複数のノードを同時に結ぶ辺。"
+        },
+        {
+          "term": "ボルツマン（ソフトマックス）ルール",
+          "definition": "戦略のスコアに応じて選択確率が変わる意思決定ルール。"
+        },
+        {
+          "term": "レプリカ解析",
+          "definition": "スピングラス理論で用いられる統計物理学の解析手法。"
+        },
+        {
+          "term": "相転移",
+          "definition": "システムの性質が劇的に変化する現象。"
+        },
+        {
+          "term": "秩序変数",
+          "definition": "システムの巨視的な状態を記述する物理量。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "複数のグループに所属する個人が、各グループで少数派になることを目指す複雑な意思決定モデルを構築し、その振る舞いを解明した研究です。",
+      "noveltyContrast": {
+        "before": "従来のマイノリティゲームは、参加者が2者間の関係性（ネットワークの「辺」）を通じてのみ相互作用するモデルでした。これは、金融市場や社会現象の一部を説明できましたが、3人以上のグループで意思決定が行われるような、より複雑な現実世界の状況には対応できませんでした。",
+        "after": "この論文では、3人以上のグループを表現できる「ハイパーグラフ」という数学的構造を導入し、各グループで少数派が勝つというルールを適用した新しいマイノリティゲームを提案しました。これにより、複数のグループに同時に属する個人の意思決定が、集団全体の振る舞いにどう影響するかを初めて分析しました。"
+      },
+      "analogy": {
+        "title": "複数の畑で「珍しい作物」を育てる農家",
+        "body": "これは、複数の異なる畑（ハイパーエッジ）で同時に作物を育てている農家（エージェント）のようなものです。各畑では、他の農家があまり育てていない「珍しい作物」（少数派の選択）を選んだ農家だけが、良い収穫（報酬）を得られます。農家は過去の収穫実績から、どの畑でどの作物を選ぶかを決めますが、自分が参加している全ての畑での収穫を最大化しようとします。この研究は、農家がどの畑でどんな作物を育てれば、全体として最も効率よく「珍しい作物」を育てられるか、あるいは市場全体がどう動くかを分析しているのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "私たちの社会や経済活動は、常に複数のグループに属しながら意思決定を行う状況に溢れています。例えば、ある部署の目標達成が、会社全体の目標と相反する場合。あるいは、地域コミュニティでの活動が、家族の都合と衝突する場合などです。この研究は、このような複雑な状況下で、個人の選択が集団全体の安定性や予測可能性にどう影響するかを理解する手がかりを与えてくれます。多数派に流されることが必ずしも最適ではない、という直感を、より科学的に裏付けるものであり、組織運営や政策決定、さらにはSNSでの情報拡散といった現象を理解する上でも役立つでしょう。",
+      "takeawayTalk": "複数のグループに属する意思決定は、局所と全体のバランスが鍵になるんだ！",
+      "bodyText": "本研究では、複数のエージェントが同時に参加するグループを「ハイパーエッジ」として表現する「ハイパーグラフ」という数学的構造を導入しました。このハイパーグラフ上で、各ハイパーエッジ（グループ）が独立したマイノリティゲームとして機能し、エージェントは自分が属する全てのハイパーエッジでの報酬を合計して戦略を更新します。エージェントの戦略選択は、過去の仮想スコアに基づいて行われ、ボルツマン（ソフトマックス）ルールに従います。このモデルの振る舞いを解析するために、連続時間極限でのスコアダイナミクスを導出し、非線形確率微分方程式を構築しました。さらに、スピングラス理論から借用したレプリカ解析という統計物理学の手法を用いて、定常状態での秩序変数（グローバルな変動性、予測可能性など）を導き出し、システムの相転移を特定しました。\n\nこのモデルでは、各エージェントは自分が属する複数のグループで同時に少数派になろうとします。しかし、あるグループで少数派になる選択が、別のグループでは多数派になる原因となる可能性があります。この「局所的な最適化」と「グローバルな最適化」の間の競合が、システム全体の複雑な振る舞いや相転移を引き起こすメカニズムです。ハイパーグラフ構造は、この競合をより多層的にし、エージェント間の相互作用が単なる2者間ではなく、グループ全体として機能することで、システムの安定性や予測可能性が大きく変化することを示しています。",
+      "bodyGlossary": [
+        {
+          "term": "ハイパーエッジ",
+          "definition": "ハイパーグラフにおいて、複数のノードを同時に結ぶ辺。",
+          "start": 29,
+          "end": 36
+        },
+        {
+          "term": "ハイパーグラフ",
+          "definition": "3つ以上の要素を同時に結びつける「ハイパーエッジ」を持つグラフ。",
+          "start": 45,
+          "end": 52
+        },
+        {
+          "term": "マイノリティゲーム",
+          "definition": "多数派が損をし、少数派が得をする意思決定ゲーム。",
+          "start": 100,
+          "end": 109
+        },
+        {
+          "term": "ボルツマン（ソフトマックス）ルール",
+          "definition": "戦略のスコアに応じて選択確率が変わる意思決定ルール。",
+          "start": 187,
+          "end": 204
+        },
+        {
+          "term": "レプリカ解析",
+          "definition": "スピングラス理論で用いられる統計物理学の解析手法。",
+          "start": 287,
+          "end": 293
+        },
+        {
+          "term": "秩序変数",
+          "definition": "システムの巨視的な状態を記述する物理量。",
+          "start": 315,
+          "end": 319
+        },
+        {
+          "term": "相転移",
+          "definition": "システムの性質が劇的に変化する現象。",
+          "start": 349,
+          "end": 352
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "ハイパーエッジ",
+          "definition": "ハイパーグラフにおいて、複数のノードを同時に結ぶ辺。",
+          "start": 29,
+          "end": 36
+        },
+        {
+          "term": "ハイパーグラフ",
+          "definition": "3つ以上の要素を同時に結びつける「ハイパーエッジ」を持つグラフ。",
+          "start": 45,
+          "end": 52
+        },
+        {
+          "term": "マイノリティゲーム",
+          "definition": "多数派が損をし、少数派が得をする意思決定ゲーム。",
+          "start": 100,
+          "end": 109
+        },
+        {
+          "term": "ボルツマン（ソフトマックス）ルール",
+          "definition": "戦略のスコアに応じて選択確率が変わる意思決定ルール。",
+          "start": 187,
+          "end": 204
+        },
+        {
+          "term": "レプリカ解析",
+          "definition": "スピングラス理論で用いられる統計物理学の解析手法。",
+          "start": 287,
+          "end": 293
+        },
+        {
+          "term": "秩序変数",
+          "definition": "システムの巨視的な状態を記述する物理量。",
+          "start": 315,
+          "end": 319
+        },
+        {
+          "term": "相転移",
+          "definition": "システムの性質が劇的に変化する現象。",
+          "start": 349,
+          "end": 352
+        }
+      ],
+      "agriEconRelevance": "農業経済学において、このモデルは、複数の生産者グループ（例：地域ブランド組合、特定の作物生産者ネットワーク）に属する農家の意思決定を分析するのに応用できます。例えば、ある農家が特定の作物を生産する選択が、地域の他の農家との競争や協力関係、さらには全国市場での価格形成にどう影響するかをモデル化できます。特に、特定のニッチ作物（少数派の選択）が市場で成功する条件や、複数の流通チャネル（ハイパーエッジ）を介した農産物の価格変動のメカニズム解明に貢献する可能性があります。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 274
+    },
+    {
+      "id": "2607.01967v1",
+      "title": "The ring wants to be broken",
+      "authors": [
+        "Alexei Vazquez"
+      ],
+      "publishedAt": "2026-07-02T09:58:51Z",
+      "url": "https://arxiv.org/abs/2607.01967v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.01967v1.pdf",
+      "categories": [
+        "topic:humanities",
+        "physics.soc-ph",
+        "cond-mat.dis-nn",
+        "math.CO"
+      ],
+      "abstract": "The Ramsey community number $r_κ$ is the minimum network size at which a graph's connectivity is better described by a partition into communities than by no partition, under a prescribed community-detection rule. It was introduced through numerical simulations of networks grown by local rules, which suggested that community structure can emerge without any node heterogeneity. Here I compute $r_κ$ analytically for the simplest homogeneous, locally wired graph: the circulant ring lattice $C_n(1,\\dots,c)$. Using a Bernoulli stochastic block model with symmetric $\\mathrm{Beta}$ priors as the detection rule, the Bayesian evidence for a balanced two-community partition and for the unpartitioned network are both obtained in closed form, so the transition between them can be located exactly. The result is a sharp dependence on the interaction range: the plain cycle ($c=1$) is never partitioned, its two-community posterior decaying as $n^{-(2α+3)}$, so $r_κ=\\infty$; but the next-nearest-neighbour ring ($c=2$) acquires a finite $r_κ\\simeq 35$ nodes, above which the partition is preferred with a log-evidence growing as $(\\ln 2)\\,n$. This provides an exactly solvable instance of community emergence in a network with no built-in communities, and shows that a minimal amount of local connectivity is enough to break the ring.",
+      "summary": {
+        "gist": "ネットワークにおけるコミュニティ構造の検出は、社会システムや生物システムを理解する上で重要な研究分野です。従来、コミュニティはノード（点）の異質性（異なる属性）によって形成されると考えられてきましたが、近年、ノードが均一でもコミュニティが出現する可能性が示唆されていました。この研究は、その現象を厳密に解析することを目的としています。",
+        "novelty": "これまでの研究では、ネットワーク内のコミュニティ構造は、ノード（点）に元々備わっている属性（政治的志向や機能など）が原因で生まれると考えられていました。つまり、最初から異なる性質を持つ人々がいるからグループができる、という前提でした。 この論文は、ノードが完全に均一で、何の属性も持たないネットワークでも、ローカルな接続ルール（隣接ノードとの繋がり方）が少し変わるだけで、コミュニティ構造が自然に「出現する」ことを数学的に厳密に示しました。",
+        "method": "本研究では、最も単純な均一なネットワークである「サーキュラント・リング・ラティス」という、円状に配置されたノードがそれぞれ両隣のc個のノードと接続するモデルを使用しました。このネットワークに対し、コミュニティ検出ルールとして「ベルヌーイ確率ブロックモデル（SBM）」とベイズ推論を適用し、ネットワークが「コミュニティに分割されない」場合と「バランスの取れた2つのコミュニティに分割される」場合のベイズエビデンス（モデルの確からしさ）を、閉形式（解析的な数式）で導出しました。これにより、数値シミュレーションではなく、厳密な計算によってコミュニティ出現の条件を特定しました。特に、接続範囲c=1（単純な環状）とc=2（隣の隣まで接続）の2つのケースを比較しました。",
+        "results": "解析の結果、以下の主要な発見が得られました。(1) 単純な環状ネットワーク（c=1）では、ネットワークサイズnがどれだけ大きくなっても、コミュニティに分割される可能性は常に減少し、ラムゼイ・コミュニティ数rκは無限大となりました。(2) しかし、隣の隣のノードまで接続するネットワーク（c=2）では、有限のラムゼイ・コミュニティ数rκが存在し、約35ノードを超えると、ネットワークはほぼ確実に2つのコミュニティに分割されることが判明しました。この分割の確実性は、ネットワークサイズnに対して指数関数的に増加します。(3) このコミュニティ出現の有無は、接続範囲cという単一の制御パラメータによって決定され、ごくわずかなローカルな接続性の増加が、リングを「壊したい」状態にするのに十分であることが示されました。",
+        "why": "なぜこのような現象が起こるのでしょうか。c=1の単純な環状ネットワークでは、どのノードも同じように接続されており、内部の密度と外部との接続密度に明確なコントラストが生まれません。そのため、コミュニティに分割するメリット（情報量の増加）が、分割によるコスト（余分なパラメータの導入）を上回ることがなく、分割は好まれません。一方、c=2のネットワークでは、ノードが隣の隣まで接続することで、ネットワークを2つのグループに分割した際に、グループ内部の接続密度が顕著に高まり、グループ間の接続密度が相対的に低くなります。この密度のコントラストが、分割によるコストを上回り、ベイズエビデンスがコミュニティ分割を強く支持するようになるため、コミュニティ構造が自然に出現するのです。つまり、ごくわずかな接続範囲の拡大が、ネットワーク全体の情報構造を質的に変化させるトリガーとなります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.soc-ph）",
+      "field": "歴史・人文・社会",
+      "categoryL1": "serendipity",
+      "categoryL2": "network-science",
+      "arxivPrimary": "physics.soc-ph",
+      "titleJa": "リングは壊れたい：単純なネットワークにおけるコミュニティ構造の出現",
+      "catchTitle": "たった1本の線が、集団を分けるカギ",
+      "hook": "あなたの周りの人間関係、なぜか自然とグループに分かれていませんか？実は、そのグループ分けには意外な「最小条件」があるかもしれません。",
+      "background": "ネットワークにおけるコミュニティ構造の検出は、社会システムや生物システムを理解する上で重要な研究分野です。従来、コミュニティはノード（点）の異質性（異なる属性）によって形成されると考えられてきましたが、近年、ノードが均一でもコミュニティが出現する可能性が示唆されていました。この研究は、その現象を厳密に解析することを目的としています。",
+      "quiz": {
+        "question": "この研究で、均一なネットワークにコミュニティ構造が自然発生するカギとなった要素は何でしょう？",
+        "options": [
+          "ノードの属性の多様性",
+          "ネットワークの全体サイズ",
+          "ローカルな接続範囲のわずかな拡大"
+        ],
+        "correctIndex": 2,
+        "explanation": "この研究では、ノードが均一なネットワークにおいて、ローカルな接続範囲（c=1からc=2への変化）がわずかに拡大するだけで、コミュニティ構造が自然発生することが示されました。"
+      },
+      "limitations": "本研究は、最も単純な均一なリングネットワークと、バランスの取れた2つのコミュニティへの分割という特定の検出ルールに焦点を当てています。より複雑なネットワーク構造や、多コミュニティ分割、あるいは異なるコミュニティ検出アルゴリズムを適用した場合に、同様の結果が得られるかは今後の課題です。また、現実世界のネットワークはノードの異質性を持つことが多いため、その影響を考慮したモデル化も必要です。",
+      "glossary": [
+        {
+          "term": "ノード",
+          "definition": "ネットワークを構成する点や要素のこと。"
+        },
+        {
+          "term": "サーキュラント・リング・ラティス",
+          "definition": "円状に並んだノードが、一定範囲の隣接ノードと接続するネットワークモデル。"
+        },
+        {
+          "term": "ベルヌーイ確率ブロックモデル",
+          "definition": "コミュニティ内の接続確率とコミュニティ間の接続確率でネットワークをモデル化する手法。"
+        },
+        {
+          "term": "ベイズエビデンス",
+          "definition": "あるモデルがデータによってどれだけ支持されるかを示す指標。"
+        },
+        {
+          "term": "閉形式",
+          "definition": "解析的に厳密な数式で表現できること。"
+        },
+        {
+          "term": "ラムゼイ・コミュニティ数",
+          "definition": "コミュニティ構造がほぼ確実に出現する最小のネットワークサイズ。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "均一なネットワークでも、ごくわずかな接続範囲の拡大が、コミュニティ構造を自然発生させる。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、ネットワーク内のコミュニティ構造は、ノード（点）に元々備わっている属性（政治的志向や機能など）が原因で生まれると考えられていました。つまり、最初から異なる性質を持つ人々がいるからグループができる、という前提でした。",
+        "after": "この論文は、ノードが完全に均一で、何の属性も持たないネットワークでも、ローカルな接続ルール（隣接ノードとの繋がり方）が少し変わるだけで、コミュニティ構造が自然に「出現する」ことを数学的に厳密に示しました。"
+      },
+      "analogy": {
+        "title": "畑の畝（うね）が自然に分かれる瞬間",
+        "body": "これは、広大な畑に種をまくようなものです。もし、種をただ一列にまっすぐ植える（c=1）だけなら、畑全体はどこまでも均一な一本の畝に見え、特定の区画に分かれることはありません。しかし、もし種を「隣の畝の隣」まで少しだけ広げて植える（c=2）ようにすると、ある程度の広さになったとき、自然と「ここは麦の区画」「あっちは豆の区画」のように、畝が密な部分とそうでない部分が生まれ、畑全体が二つの大きな区画に分かれて見えるようになるのです。この「畝が分かれる」最小の畑の広さが、この研究の「ラムゼイ・コミュニティ数」にあたります。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "35ノード",
+          "label": "コミュニティが出現する最小サイズ"
+        },
+        {
+          "value": "c=1→∞",
+          "label": "コミュニティが出現しないケース"
+        }
+      ],
+      "whyYouCare": "この研究は、一見すると抽象的なネットワーク理論の話に思えるかもしれません。しかし、私たちの社会やビジネスにおける「グループ形成」の根源的なメカニズムを示唆しています。例えば、新しい組織やチームを作る際、あるいは地域コミュニティを活性化させる際に、どのような「つながり方」を設計すれば、自然と協力的なグループが生まれやすくなるのか、そのヒントを与えてくれます。たった1本のつながりの違いが、組織全体の構造を大きく変える可能性があるのです。また、SNSのようなオンラインコミュニティでも、ごくわずかな機能追加（例えば「友達の友達」まで見せる機能）が、ユーザー間のグループ形成に決定的な影響を与えるかもしれません。この発見は、意図せずしてコミュニティが生まれる現象を理解し、より良い社会システムやサービスを設計するための基礎的な知見となるでしょう。",
+      "takeawayTalk": "均一な集団でも、ちょっとしたつながりの広がりがグループを自然に生むんだって！",
+      "bodyText": "本研究では、最も単純な均一なネットワークである「サーキュラント・リング・ラティス」という、円状に配置されたノードがそれぞれ両隣のc個のノードと接続するモデルを使用しました。このネットワークに対し、コミュニティ検出ルールとして「ベルヌーイ確率ブロックモデル（SBM）」とベイズ推論を適用し、ネットワークが「コミュニティに分割されない」場合と「バランスの取れた2つのコミュニティに分割される」場合のベイズエビデンス（モデルの確からしさ）を、閉形式（解析的な数式）で導出しました。これにより、数値シミュレーションではなく、厳密な計算によってコミュニティ出現の条件を特定しました。特に、接続範囲c=1（単純な環状）とc=2（隣の隣まで接続）の2つのケースを比較しました。\n\nなぜこのような現象が起こるのでしょうか。c=1の単純な環状ネットワークでは、どのノードも同じように接続されており、内部の密度と外部との接続密度に明確なコントラストが生まれません。そのため、コミュニティに分割するメリット（情報量の増加）が、分割によるコスト（余分なパラメータの導入）を上回ることがなく、分割は好まれません。一方、c=2のネットワークでは、ノードが隣の隣まで接続することで、ネットワークを2つのグループに分割した際に、グループ内部の接続密度が顕著に高まり、グループ間の接続密度が相対的に低くなります。この密度のコントラストが、分割によるコストを上回り、ベイズエビデンスがコミュニティ分割を強く支持するようになるため、コミュニティ構造が自然に出現するのです。つまり、ごくわずかな接続範囲の拡大が、ネットワーク全体の情報構造を質的に変化させるトリガーとなります。",
+      "bodyGlossary": [
+        {
+          "term": "サーキュラント・リング・ラティス",
+          "definition": "円状に並んだノードが、一定範囲の隣接ノードと接続するネットワークモデル。",
+          "start": 24,
+          "end": 40
+        },
+        {
+          "term": "ノード",
+          "definition": "ネットワークを構成する点や要素のこと。",
+          "start": 53,
+          "end": 56
+        },
+        {
+          "term": "ベルヌーイ確率ブロックモデル",
+          "definition": "コミュニティ内の接続確率とコミュニティ間の接続確率でネットワークをモデル化する手法。",
+          "start": 113,
+          "end": 127
+        },
+        {
+          "term": "ベイズエビデンス",
+          "definition": "あるモデルがデータによってどれだけ支持されるかを示す指標。",
+          "start": 197,
+          "end": 205
+        },
+        {
+          "term": "閉形式",
+          "definition": "解析的に厳密な数式で表現できること。",
+          "start": 218,
+          "end": 221
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "サーキュラント・リング・ラティス",
+          "definition": "円状に並んだノードが、一定範囲の隣接ノードと接続するネットワークモデル。",
+          "start": 24,
+          "end": 40
+        },
+        {
+          "term": "ノード",
+          "definition": "ネットワークを構成する点や要素のこと。",
+          "start": 53,
+          "end": 56
+        },
+        {
+          "term": "ベルヌーイ確率ブロックモデル",
+          "definition": "コミュニティ内の接続確率とコミュニティ間の接続確率でネットワークをモデル化する手法。",
+          "start": 113,
+          "end": 127
+        },
+        {
+          "term": "ベイズエビデンス",
+          "definition": "あるモデルがデータによってどれだけ支持されるかを示す指標。",
+          "start": 197,
+          "end": 205
+        },
+        {
+          "term": "閉形式",
+          "definition": "解析的に厳密な数式で表現できること。",
+          "start": 218,
+          "end": 221
+        }
+      ],
+      "agriEconRelevance": "農業経済学の文脈では、例えば「農家間の情報ネットワーク」や「サプライチェーンの構造」に応用できます。特定の地域で農家間の情報共有が活発なコミュニティが自然発生する条件や、流通ネットワークにおいて生産者グループが形成される最小条件などを分析する際に、このモデルが役立つ可能性があります。また、特定の農産物の市場において、生産者や消費者のグループがどのように形成され、それが市場の効率性や価格形成にどう影響するかを理解する上での基礎的な視点を提供します。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 298
+    }
+  ]
+}

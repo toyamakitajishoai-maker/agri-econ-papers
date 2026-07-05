@@ -1,0 +1,1042 @@
+{
+  "date": "2026-07-06",
+  "papers": [
+    {
+      "id": "2607.00582v1",
+      "title": "How Environment and Urbanization Shape Bird Diversity in Sri Lanka",
+      "authors": [
+        "Dilusha Chandrasiri",
+        "Maneesha Herath",
+        "Yasith Hewarathna",
+        "Muditha Herath",
+        "Gishan Bandara",
+        "Madara Mendis",
+        "Nathali Athukorala",
+        "Nisansa de Silva",
+        "Sandareka Wickramanayake"
+      ],
+      "publishedAt": "2026-07-01T08:06:47Z",
+      "url": "https://arxiv.org/abs/2607.00582v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.00582v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "q-bio.PE",
+        "cs.LG"
+      ],
+      "abstract": "This study presents a comprehensive analysis of bird diversity across Sri Lanka by integrating spatial, temporal, and environmental data. Bird observation records were combined with environmental variables, including weather conditions, air pollution, the Normalized Difference Vegetation Index (NDVI), land cover, elevation, and Artificial Light At Night (ALAN), and rigorously preprocessed to ensure data quality. Spatial analyses were conducted on multiple grid scales (2 km, 5 km, 10 km) to evaluate patterns in species richness while minimizing sampling bias through spatial thinning. Temporal trends were assessed using effort-corrected metrics including rarefied richness and occupancy rates to account for variations in observation effort over time. Environmental drivers of bird diversity were examined using multivariate statistical models, including Poisson Generalized Linear Models (GLMs) and correlation analyses, to identify key associations between ecological factors and species richness. Additionally, community structure, dominance patterns, and beta diversity were analyzed to understand variations in species composition across regions and time. The study found that land-cover type is a stronger predictor of bird diversity than individual continuous variables such as NDVI or temperature alone. Urbanization, measured by ALAN, exhibits nuanced scale-dependent effects, supporting high abundances of a few generalist species while reducing overall richness. The findings provide actionable insights into the patterns and drivers of avian diversity in Sri Lanka, offering a scalable and reproducible framework for biodiversity research and conservation planning.",
+      "summary": {
+        "gist": "急速な土地利用の変化が進む地域において、環境要因と人為的要因が生物多様性をどのように形成するかを理解することは、生態学の中心的な課題です。鳥類は生息地の構造、気候変動、人間活動による攪乱に敏感であるため、効果的な生物指標として広く認識されています。スリランカは、小さな地理的範囲内に高い生態学的多様性を持つ一方で、都市化、農業、気候変動による圧力が増大しており、包括的な鳥類多様性の評価が求められています。",
+        "novelty": "これまでの研究では、鳥の多様性を予測する際に、植生指数（NDVI）や気温といった連続的な環境変数が重視されてきました。しかし、これらの単一要因だけでは、都市化や土地利用の変化が鳥に与える複雑な影響を十分に捉えきれていませんでした。 この論文では、衛星データと市民科学データを統合し、土地被覆の種類、夜間照明（都市化の指標）、気候、大気汚染など多岐にわたる要因を同時に分析しました。その結果、鳥の多様性には「土地の使われ方」が単一の連続変数よりも強く影響し、都市の夜間照明が多様性を減少させる一方で、一部の適応力の高い種を優勢にすることが明らかになりました。",
+        "method": "本研究では、スリランカ全域の鳥類多様性を分析するため、空間、時間、環境データを統合しました。鳥類の観察記録を、気象条件、大気汚染、正規化植生指数（NDVI）、土地被覆、標高、夜間人工光（ALAN）などの環境変数と組み合わせ、データ品質を確保するために厳密な前処理を行いました。サンプリングバイアスを最小限に抑えるため、複数のグリッドスケール（2km、5km、10km）で空間分析を実施し、種の豊富さのパターンを評価しました。時間的傾向は、観察努力の変動を考慮した努力補正指標を用いて評価しました。鳥類多様性の環境要因は、ポアソン一般化線形モデル（GLM）や相関分析を含む多変量統計モデルを用いて調査し、生態学的要因と種の豊富さの間の主要な関連性を特定しました。さらに、群集構造、優占パターン、ベータ多様性を分析し、地域と時間における種構成の変動を理解しました。",
+        "results": "本研究では、土地被覆の種類が、NDVIや気温などの個々の連続変数よりも鳥類多様性の強力な予測因子であることが判明しました。ALANによって測定される都市化は、微妙なスケール依存効果を示し、少数の汎用種の高密度を支持する一方で、全体の種の豊富さを減少させることが明らかになりました。",
+        "why": "土地被覆の種類は、鳥類にとっての食物源、営巣場所、隠れ場所といった生息地の構造を直接的に決定するため、NDVIや気温といった単一の連続変数よりも鳥類多様性に強く影響します。例えば、森林、湿地、農地といった異なる土地被覆は、それぞれ異なる種類の鳥類に適した環境を提供します。都市化の指標である夜間人工光（ALAN）は、夜行性の活動を妨げたり、渡りの経路を混乱させたりすることで、多くの鳥種の生息を困難にします。しかし、一部の適応力の高い汎用種（例：ハトやスズメなど）は、都市環境の食物源や安全な場所を利用して個体数を増やし、結果として全体の種の豊富さは減少するものの、これらの特定の種の個体数は増加するという、スケール依存の複雑な影響が生じます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.PE）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "environmental-economics",
+      "arxivPrimary": "q-bio.PE",
+      "titleJa": "スリランカにおける鳥類の多様性を形成する環境と都市化の要因",
+      "catchTitle": "鳥の楽園スリランカ、多様性を守るカギは「土地の種類」と「夜の光」",
+      "hook": "あなたの身近な場所で、鳥の種類が減っていると感じませんか？都市化が進む中で、鳥たちはどう変化しているのでしょう？",
+      "background": "急速な土地利用の変化が進む地域において、環境要因と人為的要因が生物多様性をどのように形成するかを理解することは、生態学の中心的な課題です。鳥類は生息地の構造、気候変動、人間活動による攪乱に敏感であるため、効果的な生物指標として広く認識されています。スリランカは、小さな地理的範囲内に高い生態学的多様性を持つ一方で、都市化、農業、気候変動による圧力が増大しており、包括的な鳥類多様性の評価が求められています。",
+      "quiz": {
+        "question": "この研究で、スリランカの鳥の多様性にとって最も強力な予測因子として特定されたものは何ですか？",
+        "options": [
+          "正規化植生指数（NDVI）",
+          "気温",
+          "土地被覆の種類"
+        ],
+        "correctIndex": 2,
+        "explanation": "この研究では、土地被覆の種類が、NDVIや気温などの個々の連続変数よりも鳥類多様性の強力な予測因子であることが判明しました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "正規化植生指数",
+          "definition": "植物の活性度を示す指標。NDVIと略される。"
+        },
+        {
+          "term": "夜間人工光",
+          "definition": "夜間の人工的な光。都市化の指標として使われる。"
+        },
+        {
+          "term": "サンプリングバイアス",
+          "definition": "データの収集方法による偏り。"
+        },
+        {
+          "term": "ポアソン一般化線形モデル",
+          "definition": "カウントデータを分析する統計モデル。GLMと略される。"
+        },
+        {
+          "term": "ベータ多様性",
+          "definition": "異なる地域間の種構成の違いを示す指標。"
+        },
+        {
+          "term": "土地被覆",
+          "definition": "地表が何で覆われているかを示す分類。"
+        },
+        {
+          "term": "汎用種",
+          "definition": "様々な環境に適応できる種のこと。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "スリランカの鳥の多様性は、植生指数や気温よりも「土地の使われ方」に強く影響され、都市の夜間照明は特定の鳥を増やす一方で全体の多様性を減らします。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、鳥の多様性を予測する際に、植生指数（NDVI）や気温といった連続的な環境変数が重視されてきました。しかし、これらの単一要因だけでは、都市化や土地利用の変化が鳥に与える複雑な影響を十分に捉えきれていませんでした。",
+        "after": "この論文では、衛星データと市民科学データを統合し、土地被覆の種類、夜間照明（都市化の指標）、気候、大気汚染など多岐にわたる要因を同時に分析しました。その結果、鳥の多様性には「土地の使われ方」が単一の連続変数よりも強く影響し、都市の夜間照明が多様性を減少させる一方で、一部の適応力の高い種を優勢にすることが明らかになりました。"
+      },
+      "analogy": {
+        "title": "畑の多様性を決めるのは、土壌か、それとも作物の種類か？",
+        "body": "これは、まるで農家が畑の豊かさを測るようなものです。これまで、土壌の栄養分や日当たりといった個別の要素が作物の多様性を決めると考えられてきました。しかし、実際には「どんな作物を植えるか」（土地被覆）という選択が、畑全体の生物多様性を大きく左右する。さらに、夜間に煌々と照らされるビニールハウスの光が、特定の害虫を呼び寄せたり、逆に他の益虫を遠ざけたりして、畑全体の生態系バランスを崩すようなものです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、私たちが住む都市やその周辺で、鳥たちの多様性がどのように変化しているかを理解する上で非常に重要です。特に、都市の夜間照明が特定の鳥を増やす一方で、全体の多様性を減らしているという発見は、都市計画や環境政策に具体的な示唆を与えます。例えば、街路灯の設計を見直したり、公園や緑地の管理方法を工夫したりすることで、より多くの種類の鳥が共存できる環境を作れるかもしれません。農業においても、周辺の土地利用や照明が、害虫を食べる鳥の生息に影響を与え、ひいては農薬の使用量などにも関わってくる可能性があります。生物多様性の保全は、私たちの生活の質にも直結する課題であり、この研究は、そのための具体的な行動を考えるきっかけとなるでしょう。",
+      "takeawayTalk": "鳥の多様性は、夜の街の明るさと土地の使われ方で大きく変わるらしいよ！",
+      "bodyText": "本研究では、スリランカ全域の鳥類多様性を分析するため、空間、時間、環境データを統合しました。鳥類の観察記録を、気象条件、大気汚染、正規化植生指数（NDVI）、土地被覆、標高、夜間人工光（ALAN）などの環境変数と組み合わせ、データ品質を確保するために厳密な前処理を行いました。サンプリングバイアスを最小限に抑えるため、複数のグリッドスケール（2km、5km、10km）で空間分析を実施し、種の豊富さのパターンを評価しました。時間的傾向は、観察努力の変動を考慮した努力補正指標を用いて評価しました。鳥類多様性の環境要因は、ポアソン一般化線形モデル（GLM）や相関分析を含む多変量統計モデルを用いて調査し、生態学的要因と種の豊富さの間の主要な関連性を特定しました。さらに、群集構造、優占パターン、ベータ多様性を分析し、地域と時間における種構成の変動を理解しました。\n\n土地被覆の種類は、鳥類にとっての食物源、営巣場所、隠れ場所といった生息地の構造を直接的に決定するため、NDVIや気温といった単一の連続変数よりも鳥類多様性に強く影響します。例えば、森林、湿地、農地といった異なる土地被覆は、それぞれ異なる種類の鳥類に適した環境を提供します。都市化の指標である夜間人工光（ALAN）は、夜行性の活動を妨げたり、渡りの経路を混乱させたりすることで、多くの鳥種の生息を困難にします。しかし、一部の適応力の高い汎用種（例：ハトやスズメなど）は、都市環境の食物源や安全な場所を利用して個体数を増やし、結果として全体の種の豊富さは減少するものの、これらの特定の種の個体数は増加するという、スケール依存の複雑な影響が生じます。",
+      "bodyGlossary": [
+        {
+          "term": "正規化植生指数",
+          "definition": "植物の活性度を示す指標。NDVIと略される。",
+          "start": 65,
+          "end": 72
+        },
+        {
+          "term": "土地被覆",
+          "definition": "地表が何で覆われているかを示す分類。",
+          "start": 79,
+          "end": 83
+        },
+        {
+          "term": "夜間人工光",
+          "definition": "夜間の人工的な光。都市化の指標として使われる。",
+          "start": 87,
+          "end": 92
+        },
+        {
+          "term": "サンプリングバイアス",
+          "definition": "データの収集方法による偏り。",
+          "start": 138,
+          "end": 148
+        },
+        {
+          "term": "ポアソン一般化線形モデル",
+          "definition": "カウントデータを分析する統計モデル。GLMと略される。",
+          "start": 260,
+          "end": 272
+        },
+        {
+          "term": "ベータ多様性",
+          "definition": "異なる地域間の種構成の違いを示す指標。",
+          "start": 346,
+          "end": 352
+        },
+        {
+          "term": "汎用種",
+          "definition": "様々な環境に適応できる種のこと。",
+          "start": 599,
+          "end": 602
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "正規化植生指数",
+          "definition": "植物の活性度を示す指標。NDVIと略される。",
+          "start": 65,
+          "end": 72
+        },
+        {
+          "term": "土地被覆",
+          "definition": "地表が何で覆われているかを示す分類。",
+          "start": 79,
+          "end": 83
+        },
+        {
+          "term": "夜間人工光",
+          "definition": "夜間の人工的な光。都市化の指標として使われる。",
+          "start": 87,
+          "end": 92
+        },
+        {
+          "term": "サンプリングバイアス",
+          "definition": "データの収集方法による偏り。",
+          "start": 138,
+          "end": 148
+        },
+        {
+          "term": "ポアソン一般化線形モデル",
+          "definition": "カウントデータを分析する統計モデル。GLMと略される。",
+          "start": 260,
+          "end": 272
+        },
+        {
+          "term": "ベータ多様性",
+          "definition": "異なる地域間の種構成の違いを示す指標。",
+          "start": 346,
+          "end": 352
+        },
+        {
+          "term": "汎用種",
+          "definition": "様々な環境に適応できる種のこと。",
+          "start": 599,
+          "end": 602
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 272,
+      "keyFigure": {
+        "imagePath": "/figures/2607.00582v1_results.png",
+        "page": 5,
+        "caption": "連続的な環境要因間のスピアマン順位相関行列を示しています。",
+        "label": "Fig. 4.",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-05T23:01:00.170Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.00582v1_results.png",
+          "page": 5,
+          "caption": "連続的な環境要因間のスピアマン順位相関行列を示しています。",
+          "label": "Fig. 4.",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-05T23:01:00.170Z"
+        },
+        {
+          "imagePath": "/figures/2607.00582v1_why.png",
+          "page": 3,
+          "caption": "IGBP土地被覆分類によって分割されたNDVIの分布を示しています。",
+          "label": "Fig. 1. Distribution of NDVI partitioned by IGBP Land Cover classifications,",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-05T23:01:00.170Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.31188v1",
+      "title": "Social Statements: A Proposal for a Social-Value Balance Sheet and Profit-Loss Statement",
+      "authors": [
+        "Takeshi Kato",
+        "Yoshinori Hiroi",
+        "Sae Horiguchi",
+        "Tetsushi Koike",
+        "Shingo Hashimoto"
+      ],
+      "publishedAt": "2026-06-30T06:18:36Z",
+      "url": "https://arxiv.org/abs/2606.31188v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.31188v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "physics.soc-ph",
+        "econ.GN"
+      ],
+      "abstract": "This study proposes a new set of a firm's \"social statements\" that represent social value, in contrast to conventional financial statements that represent economic value. Financial statements externalize social and environmental costs, and this externalization is one of the primary causes of contemporary social problems. Insights from anthropology, philosophy, and sociology suggest that social value is grounded in social relationships, joint actions, and communication. Building on this understanding, we assign numerical indicators of a firm's social relationships with external stakeholders to the items of a balance sheet and a profit-loss statement as social statements. This approach enables unified measurement units and simplified calculation compared with existing methods for evaluating social impact or social value. Moreover, similar to financial statements, social statements allow firms to be assessed using managerial indicators such as equity ratios and profit margins. The significance of social statements lies in incorporating social value--alongside financial value--into corporate decision-making, and in encouraging social transformation as firms publicly articulate their social value.",
+      "summary": {
+        "gist": "世界的な富の不平等や資源の浪費が深刻化する中、企業のウェルビーイングや持続可能性の向上が喫緊の課題となっています。従来の財務諸表は、短期的な企業利益の追求には有効ですが、ブランド価値や顧客基盤といった無形資産を記録せず、労働搾取や環境汚染などの社会的・環境的コストを外部化するため、企業の社会価値や環境価値を適切に評価できませんでした。この欠点を補うため、非財務情報の開示が拡大していますが、社会指標は企業内部の労働条件評価に留まり、外部社会との関係性を示すには不十分でした。",
+        "novelty": "従来の財務諸表は、ブランド価値や顧客基盤といった無形資産を記録せず、人件費をコストとして扱い、労働搾取や環境汚染などの社会的・環境的コストを外部化してきました。これにより、短期的な利益追求に偏り、企業の社会的な価値や環境価値を適切に評価できませんでした。 この研究では、企業と外部ステークホルダー（住民、パートナー、地方自治体など）との「社会関係」を、財務諸表と同じ貸借対照表と損益計算書の形式で数値化する「ソーシャル・ステートメント」を提案。これにより、社会価値を統一的に測定し、財務指標のように経営指標で評価できるようになります。",
+        "method": "本研究は、企業と外部ステークホルダー（住民、パートナー、地方自治体など）との「社会関係」を、従来の財務諸表と同じ貸借対照表（B/S）と損益計算書（P/L）の形式で表現する「ソーシャル・ステートメント」を提案します。社会関係は、共同行動とコミュニケーションに基づくと定義し、その数値は頻度や時間の飽和関数を用いてモデル化されます。例えば、長期的な信頼関係には飽和値が割り当てられます。貸借対照表では、1年以内に現金化可能な資産を「未飽和関係」、1年以上かかる資産を「飽和関係」と定義し、負債や純資産も同様に社会関係で分類します。損益計算書では、売上原価を「パートナーを通じた住民との関係構築」、販売費及び一般管理費を「企業とパートナー、地方自治体、住民との広報を通じた関係構築」などと定義します。これにより、財務諸表と同様に自己資本比率や純利益率といった経営指標を算出可能にします。",
+        "results": "本研究は、社会関係をネットワークグラフで表現し、そこからソーシャル・ステートメントと経営指標を計算する具体例を示しました。これにより、企業が外部ステークホルダーとの関係性を客観的に数値化し、財務諸表と同様の形式で社会価値を可視化できることを実証しました。提案されたソーシャル・ステートメントは、従来の財務諸表では見えなかった企業の社会的な安定性や社会貢献能力を、自己資本比率やROA（総資産利益率）といった指標で評価することを可能にします。",
+        "why": "社会価値は、社会関係、共同行動、コミュニケーションに根ざしているという人類学、哲学、社会学からの知見に基づいています。企業と外部ステークホルダーとのこれらの関係性を数値化し、財務諸表の形式に落とし込むことで、経済価値と同様に社会価値を企業意思決定に組み込むことが可能になります。これにより、企業は社会価値を公に表明し、社会変革を促進するインセンティブが生まれます。また、統一された測定単位と簡素化された計算方法により、既存の社会影響評価手法よりも実用性が高まります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.soc-ph）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "farm-management",
+      "arxivPrimary": "physics.soc-ph",
+      "titleJa": "ソーシャル・ステートメント：企業の社会価値を測る新しい会計報告書の提案",
+      "catchTitle": "「社会関係」を数値化する新会計",
+      "hook": "あなたの会社は「社会貢献」をどう評価していますか？従来の会計では見えなかった企業の真の価値を測る方法があります。",
+      "background": "世界的な富の不平等や資源の浪費が深刻化する中、企業のウェルビーイングや持続可能性の向上が喫緊の課題となっています。従来の財務諸表は、短期的な企業利益の追求には有効ですが、ブランド価値や顧客基盤といった無形資産を記録せず、労働搾取や環境汚染などの社会的・環境的コストを外部化するため、企業の社会価値や環境価値を適切に評価できませんでした。この欠点を補うため、非財務情報の開示が拡大していますが、社会指標は企業内部の労働条件評価に留まり、外部社会との関係性を示すには不十分でした。",
+      "quiz": {
+        "question": "この研究で提案された「ソーシャル・ステートメント」が、従来の財務諸表と最も異なる点は何でしょう？",
+        "options": [
+          "企業の経済価値をより詳細に分析する点",
+          "企業の社会関係を数値化し、会計形式で表現する点",
+          "環境負荷を貨幣価値に換算して表示する点"
+        ],
+        "correctIndex": 1,
+        "explanation": "ソーシャル・ステートメントは、企業と外部ステークホルダーとの社会関係（共同行動やコミュニケーション）を数値化し、貸借対照表や損益計算書と同じ形式で表現することで、社会価値を可視化します。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "財務諸表",
+          "definition": "企業の経済状況を示す貸借対照表や損益計算書などの書類"
+        },
+        {
+          "term": "貸借対照表",
+          "definition": "企業の資産・負債・純資産の状態を示す表"
+        },
+        {
+          "term": "損益計算書",
+          "definition": "企業の収益と費用、利益を示す表"
+        },
+        {
+          "term": "飽和関数",
+          "definition": "ある値を超えると増加が緩やかになる関数"
+        },
+        {
+          "term": "自己資本比率",
+          "definition": "総資産に占める自己資本の割合で企業の安定性を示す"
+        },
+        {
+          "term": "純利益率",
+          "definition": "売上高に占める純利益の割合で収益性を示す"
+        },
+        {
+          "term": "ステークホルダー",
+          "definition": "企業活動に関わる利害関係者"
+        },
+        {
+          "term": "ROA",
+          "definition": "総資産に対する利益の割合で資産の効率性を示す"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "企業の経済価値だけでなく、社会関係を数値化して評価する「ソーシャル・ステートメント」を提案する研究です。",
+      "noveltyContrast": {
+        "before": "従来の財務諸表は、ブランド価値や顧客基盤といった無形資産を記録せず、人件費をコストとして扱い、労働搾取や環境汚染などの社会的・環境的コストを外部化してきました。これにより、短期的な利益追求に偏り、企業の社会的な価値や環境価値を適切に評価できませんでした。",
+        "after": "この研究では、企業と外部ステークホルダー（住民、パートナー、地方自治体など）との「社会関係」を、財務諸表と同じ貸借対照表と損益計算書の形式で数値化する「ソーシャル・ステートメント」を提案。これにより、社会価値を統一的に測定し、財務指標のように経営指標で評価できるようになります。"
+      },
+      "analogy": {
+        "title": "畑の土壌診断と収穫量予測",
+        "body": "これは、まるで農家が畑の土壌を診断し、その質を数値化して将来の収穫量を予測するようなものです。従来の財務諸表が「今年の作物の売上高」だけを見るのに対し、ソーシャル・ステートメントは「土壌の肥沃度（企業と地域住民との信頼関係）」や「水はけの良さ（パートナーとの連携の円滑さ）」など、目には見えないけれど長期的な豊かさにつながる要素を数値化します。これにより、単年度の収穫量だけでなく、来年以降も持続的に豊かな作物を育てるための畑全体の健康状態を把握し、より良い農業経営に繋げられるのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、企業が社会に与える影響を「見える化」し、持続可能な経営を後押しする可能性を秘めています。もしあなたが投資家なら、企業の財務情報だけでなく、社会関係の健全性も評価基準に加えることで、より長期的な視点で企業の価値を見極められます。経営者であれば、従業員や地域社会との関係性を数値で把握し、改善することで、企業のレピュテーション向上や新たなビジネスチャンス創出に繋がるでしょう。消費者としても、社会貢献度の高い企業を応援する際の客観的な指標として活用できるかもしれません。社会全体で、経済的な豊かさだけでなく、社会的な豊かさも追求する未来への一歩となる研究です。",
+      "takeawayTalk": "企業の社会関係を数値化して、財務諸表みたいに評価できるんだって！",
+      "bodyText": "本研究は、企業と外部ステークホルダー（住民、パートナー、地方自治体など）との「社会関係」を、従来の財務諸表と同じ貸借対照表（B/S）と損益計算書（P/L）の形式で表現する「ソーシャル・ステートメント」を提案します。社会関係は、共同行動とコミュニケーションに基づくと定義し、その数値は頻度や時間の飽和関数を用いてモデル化されます。例えば、長期的な信頼関係には飽和値が割り当てられます。貸借対照表では、1年以内に現金化可能な資産を「未飽和関係」、1年以上かかる資産を「飽和関係」と定義し、負債や純資産も同様に社会関係で分類します。損益計算書では、売上原価を「パートナーを通じた住民との関係構築」、販売費及び一般管理費を「企業とパートナー、地方自治体、住民との広報を通じた関係構築」などと定義します。これにより、財務諸表と同様に自己資本比率や純利益率といった経営指標を算出可能にします。\n\n社会価値は、社会関係、共同行動、コミュニケーションに根ざしているという人類学、哲学、社会学からの知見に基づいています。企業と外部ステークホルダーとのこれらの関係性を数値化し、財務諸表の形式に落とし込むことで、経済価値と同様に社会価値を企業意思決定に組み込むことが可能になります。これにより、企業は社会価値を公に表明し、社会変革を促進するインセンティブが生まれます。また、統一された測定単位と簡素化された計算方法により、既存の社会影響評価手法よりも実用性が高まります。",
+      "bodyGlossary": [
+        {
+          "term": "ステークホルダー",
+          "definition": "企業活動に関わる利害関係者",
+          "start": 10,
+          "end": 18
+        },
+        {
+          "term": "財務諸表",
+          "definition": "企業の経済状況を示す貸借対照表や損益計算書などの書類",
+          "start": 49,
+          "end": 53
+        },
+        {
+          "term": "貸借対照表",
+          "definition": "企業の資産・負債・純資産の状態を示す表",
+          "start": 56,
+          "end": 61
+        },
+        {
+          "term": "損益計算書",
+          "definition": "企業の収益と費用、利益を示す表",
+          "start": 67,
+          "end": 72
+        },
+        {
+          "term": "飽和関数",
+          "definition": "ある値を超えると増加が緩やかになる関数",
+          "start": 147,
+          "end": 151
+        },
+        {
+          "term": "自己資本比率",
+          "definition": "総資産に占める自己資本の割合で企業の安定性を示す",
+          "start": 361,
+          "end": 367
+        },
+        {
+          "term": "純利益率",
+          "definition": "売上高に占める純利益の割合で収益性を示す",
+          "start": 368,
+          "end": 372
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "ステークホルダー",
+          "definition": "企業活動に関わる利害関係者",
+          "start": 10,
+          "end": 18
+        },
+        {
+          "term": "財務諸表",
+          "definition": "企業の経済状況を示す貸借対照表や損益計算書などの書類",
+          "start": 49,
+          "end": 53
+        },
+        {
+          "term": "貸借対照表",
+          "definition": "企業の資産・負債・純資産の状態を示す表",
+          "start": 56,
+          "end": 61
+        },
+        {
+          "term": "損益計算書",
+          "definition": "企業の収益と費用、利益を示す表",
+          "start": 67,
+          "end": 72
+        },
+        {
+          "term": "飽和関数",
+          "definition": "ある値を超えると増加が緩やかになる関数",
+          "start": 147,
+          "end": 151
+        },
+        {
+          "term": "自己資本比率",
+          "definition": "総資産に占める自己資本の割合で企業の安定性を示す",
+          "start": 361,
+          "end": 367
+        },
+        {
+          "term": "純利益率",
+          "definition": "売上高に占める純利益の割合で収益性を示す",
+          "start": 368,
+          "end": 372
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 274
+    },
+    {
+      "id": "2606.30987v1",
+      "title": "Measuring Judgment Quality in Natural-Language Explanations: Evidence from Forecasting Tournaments",
+      "authors": [
+        "Christopher W. Karvetski",
+        "Sheldon S. Huang",
+        "Simas Kučinskas",
+        "Nadja Flechner",
+        "Jingyu Hu",
+        "Philip Tetlock",
+        "Ezra Karger"
+      ],
+      "publishedAt": "2026-06-29T23:51:09Z",
+      "url": "https://arxiv.org/abs/2606.30987v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.30987v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "cs.CL",
+        "econ.GN"
+      ],
+      "abstract": "Decision-makers routinely rely on expert judgments accompanied by written explanations, yet explanation quality is difficult to measure at scale. Forecasting tournaments offer a natural testing ground: probabilistic judgments are paired with natural-language rationales and scored against realized outcomes. We introduce Explanation Quality Markers (EQMs), a set of sixty theory-guided reasoning patterns scored by large language models (LLMs). In a pre-registered analysis of over 55,000 forecast-rationale pairs from a multiyear forecasting tournament, EQMs predict accuracy at both the forecast and forecaster levels, consistently outperforming pre-LLM text-analysis methods. More than 90% of statistically significant pattern-level EQM-accuracy correlations match our directional hypotheses. The signal is asymmetric: EQMs identify likely underperformers more reliably than they distinguish the very best forecasters. Benchmarked against traditional indicators of forecasting skill, EQMs are the strongest predictor at the forecast level and competitive at the forecaster level, though weaker than prior accuracy. Human ratings of rationale quality are less consistently correlated with accuracy and place disproportionate weight on rationale length. Results transfer to an independent forecasting study. EQMs provide a scalable, interpretable method for extracting judgment-relevant information from written explanations.",
+      "summary": {
+        "gist": "意思決定者は、専門家による判断とその根拠となる説明に日常的に頼っています。例えば、情報アナリストは地政学的イベントの可能性を予測し、その推論をまとめたメモを添付したり、投資委員会は書面による論文に裏付けられた推奨事項を検討したりします。意思決定者は、どの判断を信頼し、行動に移すべきかを評価するために、このような説明をしばしば無意識のうちに利用しています。しかし、説明の質を大規模に体系的に測定することは困難であり、説明が判断の正確さとどのように関連しているかについてはほとんど知られていませんでした。",
+        "novelty": "これまで、専門家による予測の「説明の質」を大規模かつ体系的に評価することは困難でした。手作業での評価は手間がかかり、従来のテキスト分析は理論に基づかないか、単一の側面しか捉えられませんでした。そのため、説明の質が予測の正確さにどう影響するかの解明は進んでいませんでした。 この研究では、判断・意思決定理論に基づいた60の推論パターン「EQM」を考案し、LLM（GPT-4oなど）を使って大規模に説明の質をスコアリングする手法を開発しました。これにより、説明の質が予測の正確さをどれだけ予測できるかを、従来のどの手法よりも高精度に測定できるようになりました。",
+        "method": "本研究では、大規模言語モデル（LLM）を活用し、自然言語で書かれた説明から判断に関連する情報を抽出するスケーラブルで解釈可能な手法「Explanation Quality Markers (EQMs)」を導入しました。EQMsは、判断と意思決定に関する文献から導き出された60の推論パターンで構成されており、これらをLLM（主にGPT-4o）が3段階でスコアリングします。このフレームワークを、数年にわたる予測トーナメントから得られた55,000以上の予測と説明のペアに適用し、EQMスコアと予測の正確さとの相関を分析しました。EQMの予測精度を、従来のLLM以前のテキスト分析手法や人間の評価と比較し、その優位性を検証しました。",
+        "results": "EQMは、予測レベル（r=.19 vs 従来のr=.06）および予測者レベル（r=.51 vs 従来のr=.39）の両方で、従来のLLM以前のテキスト分析手法を大幅に上回る精度で予測の正確さを予測しました。統計的に有意なパターンレベルのEQMと正確さの相関の90%以上が、研究者の仮説と一致しました。EQMは、成績の低い予測者を特定する方が、最高の予測者を区別するよりも信頼性が高いという非対称な予測シグナルを示しました。また、EQMは予測レベルでは既存の予測スキル指標の中で最も強力な予測因子であり、予測者レベルでも競争力があることが示されました。人間の評価はEQMよりも正確さとの相関が弱く、説明の長さに不釣り合いな重みを置く傾向がありました。これらの結果は、独立した予測研究にも転移することが確認されました。",
+        "why": "EQMが予測の正確さを高精度で予測できるのは、LLMが自然言語のセマンティックな意味と文脈を解釈し、判断・意思決定理論に基づいた複雑な推論パターン（例えば、ベースレートへの注意、反証可能性への開放性、認知バイアスへの抵抗など）を大規模にスコアリングできるためです。従来のテキスト分析手法が単語の頻度や表面的な特徴に限定されていたのに対し、LLMは説明の背後にある思考プロセスをより深く理解し、質の高い推論の兆候を捉えることができます。これにより、単に詳細であったり説得力があるように聞こえる説明ではなく、実際に正確な判断につながる本質的な要素を識別できるようになります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.CL）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "decision-making",
+      "arxivPrimary": "cs.CL",
+      "titleJa": "自然言語の説明における判断の質を測定する：予測トーナメントからの証拠",
+      "catchTitle": "AIが予測の「なぜ？」を評価！",
+      "hook": "あなたは重要な意思決定をするとき、専門家の説明をどこまで信じますか？その説明の質、どう測りますか？",
+      "background": "意思決定者は、専門家による判断とその根拠となる説明に日常的に頼っています。例えば、情報アナリストは地政学的イベントの可能性を予測し、その推論をまとめたメモを添付したり、投資委員会は書面による論文に裏付けられた推奨事項を検討したりします。意思決定者は、どの判断を信頼し、行動に移すべきかを評価するために、このような説明をしばしば無意識のうちに利用しています。しかし、説明の質を大規模に体系的に測定することは困難であり、説明が判断の正確さとどのように関連しているかについてはほとんど知られていませんでした。",
+      "quiz": {
+        "question": "この研究で開発されたEQMは、何を使って専門家の説明の質を評価しましたか？",
+        "options": [
+          "人間の専門家による手動評価",
+          "大規模言語モデル（LLM）",
+          "従来の単語頻度分析ツール"
+        ],
+        "correctIndex": 1,
+        "explanation": "EQMは、大規模言語モデル（LLM）を使って専門家の説明の質をスコアリングしました。これにより、従来のどの手法よりも高精度に評価できるようになりました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "EQMs",
+          "definition": "説明の質を評価する60の推論パターン。"
+        },
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。自然言語を理解・生成するAI。"
+        },
+        {
+          "term": "予測トーナメント",
+          "definition": "現実世界のイベントを予測し、精度を競う大会。"
+        },
+        {
+          "term": "セマンティックな意味",
+          "definition": "言葉や文が持つ本来の意味。"
+        },
+        {
+          "term": "ベースレート",
+          "definition": "ある事象の基本的な発生確率。"
+        },
+        {
+          "term": "反証可能性",
+          "definition": "仮説が誤りであることを示す証拠が存在しうる性質。"
+        },
+        {
+          "term": "認知バイアス",
+          "definition": "非合理的な判断や意思決定につながる思考の偏り。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "大規模言語モデル（LLM）を使って専門家の予測説明の質を評価する新手法「EQM」を開発し、その予測精度を実証しました。",
+      "noveltyContrast": {
+        "before": "これまで、専門家による予測の「説明の質」を大規模かつ体系的に評価することは困難でした。手作業での評価は手間がかかり、従来のテキスト分析は理論に基づかないか、単一の側面しか捉えられませんでした。そのため、説明の質が予測の正確さにどう影響するかの解明は進んでいませんでした。",
+        "after": "この研究では、判断・意思決定理論に基づいた60の推論パターン「EQM」を考案し、LLM（GPT-4oなど）を使って大規模に説明の質をスコアリングする手法を開発しました。これにより、説明の質が予測の正確さをどれだけ予測できるかを、従来のどの手法よりも高精度に測定できるようになりました。"
+      },
+      "analogy": {
+        "title": "豊作を見抜く土壌診断士",
+        "body": "これは、まるで経験豊富な土壌診断士が、畑の土壌サンプル（専門家の説明）を詳細に分析し、その土壌がどれだけ豊かな収穫（正確な予測）をもたらすかを予測するようなものです。従来の診断（既存のテキスト分析）では、土の硬さや色といった表面的な特徴しか見られず、本当に良い土壌かどうかの判断は難しかった。しかし、最新のAI診断機（LLM）と、養分バランス、微生物の多様性、水はけといった60の科学的指標（EQM）を組み合わせることで、目には見えない土壌の潜在能力を正確に評価し、どの畑が豊作になるか、あるいは不作になるかを高い精度で見抜けるようになったのです。これにより、農家はより確実に投資判断を下せるようになります。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "r=.19",
+          "label": "予測レベルでの精度（EQM）"
+        },
+        {
+          "value": "r=.06",
+          "label": "予測レベルでの精度（従来手法）"
+        },
+        {
+          "value": "r=.51",
+          "label": "予測者レベルでの精度（EQM）"
+        },
+        {
+          "value": "r=.39",
+          "label": "予測者レベルでの精度（従来手法）"
+        }
+      ],
+      "whyYouCare": "この研究は、あなたが日々のビジネスや投資、あるいは個人的な意思決定において、専門家の意見や説明を評価する際に役立ちます。これまで「なんとなく説得力がある」と感じていた説明が、実は予測の正確さとは関係ないかもしれません。このEQMのようなAIを活用した評価手法が普及すれば、より客観的かつ効率的に、本当に信頼できる情報源や質の高い説明を見極めることができるようになります。特に、農業分野においても、市場予測や病害予測など、専門家の説明の質を評価する際に活用でき、より良い意思決定を支援する可能性を秘めています。",
+      "takeawayTalk": "AIが専門家の説明の質を評価し、予測の正確さを見抜けるようになったよ！",
+      "bodyText": "本研究では、大規模言語モデル（LLM）を活用し、自然言語で書かれた説明から判断に関連する情報を抽出するスケーラブルで解釈可能な手法「Explanation Quality Markers (EQMs)」を導入しました。EQMsは、判断と意思決定に関する文献から導き出された60の推論パターンで構成されており、これらをLLM（主にGPT-4o）が3段階でスコアリングします。このフレームワークを、数年にわたる予測トーナメントから得られた55,000以上の予測と説明のペアに適用し、EQMスコアと予測の正確さとの相関を分析しました。EQMの予測精度を、従来のLLM以前のテキスト分析手法や人間の評価と比較し、その優位性を検証しました。\n\nEQMが予測の正確さを高精度で予測できるのは、LLMが自然言語のセマンティックな意味と文脈を解釈し、判断・意思決定理論に基づいた複雑な推論パターン（例えば、ベースレートへの注意、反証可能性への開放性、認知バイアスへの抵抗など）を大規模にスコアリングできるためです。従来のテキスト分析手法が単語の頻度や表面的な特徴に限定されていたのに対し、LLMは説明の背後にある思考プロセスをより深く理解し、質の高い推論の兆候を捉えることができます。これにより、単に詳細であったり説得力があるように聞こえる説明ではなく、実際に正確な判断につながる本質的な要素を識別できるようになります。",
+      "bodyGlossary": [
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。自然言語を理解・生成するAI。",
+          "start": 15,
+          "end": 18
+        },
+        {
+          "term": "EQMs",
+          "definition": "説明の質を評価する60の推論パターン。",
+          "start": 95,
+          "end": 99
+        },
+        {
+          "term": "予測トーナメント",
+          "definition": "現実世界のイベントを予測し、精度を競う大会。",
+          "start": 203,
+          "end": 211
+        },
+        {
+          "term": "セマンティックな意味",
+          "definition": "言葉や文が持つ本来の意味。",
+          "start": 349,
+          "end": 359
+        },
+        {
+          "term": "ベースレート",
+          "definition": "ある事象の基本的な発生確率。",
+          "start": 395,
+          "end": 401
+        },
+        {
+          "term": "反証可能性",
+          "definition": "仮説が誤りであることを示す証拠が存在しうる性質。",
+          "start": 406,
+          "end": 411
+        },
+        {
+          "term": "認知バイアス",
+          "definition": "非合理的な判断や意思決定につながる思考の偏り。",
+          "start": 417,
+          "end": 423
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "LLM",
+          "definition": "大規模言語モデル。自然言語を理解・生成するAI。",
+          "start": 15,
+          "end": 18
+        },
+        {
+          "term": "EQMs",
+          "definition": "説明の質を評価する60の推論パターン。",
+          "start": 95,
+          "end": 99
+        },
+        {
+          "term": "予測トーナメント",
+          "definition": "現実世界のイベントを予測し、精度を競う大会。",
+          "start": 203,
+          "end": 211
+        },
+        {
+          "term": "セマンティックな意味",
+          "definition": "言葉や文が持つ本来の意味。",
+          "start": 349,
+          "end": 359
+        },
+        {
+          "term": "ベースレート",
+          "definition": "ある事象の基本的な発生確率。",
+          "start": 395,
+          "end": 401
+        },
+        {
+          "term": "反証可能性",
+          "definition": "仮説が誤りであることを示す証拠が存在しうる性質。",
+          "start": 406,
+          "end": 411
+        },
+        {
+          "term": "認知バイアス",
+          "definition": "非合理的な判断や意思決定につながる思考の偏り。",
+          "start": 417,
+          "end": 423
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 306,
+      "keyFigure": {
+        "imagePath": "/figures/2606.30987v1_results.png",
+        "page": 15,
+        "caption": "EQM総合スコアの分布と予測精度の関係を示し、スコアが高いほど精度が向上することを示しています。",
+        "label": "Figure 5: Mean accuracy across the EQM composite score distribution.",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-05T23:01:11.670Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.30987v1_results.png",
+          "page": 15,
+          "caption": "EQM総合スコアの分布と予測精度の関係を示し、スコアが高いほど精度が向上することを示しています。",
+          "label": "Figure 5: Mean accuracy across the EQM composite score distribution.",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-05T23:01:11.670Z"
+        },
+        {
+          "imagePath": "/figures/2606.30987v1_why.png",
+          "page": 14,
+          "caption": "各EQMパターンと予測精度との相関関係を示し、LLMが捉える推論パターンの有効性を裏付けています。",
+          "label": "Figure 4: Pattern-level correlations with forecasting accuracy. Each point represents one EQM pattern or",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-05T23:01:11.671Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.30359v1",
+      "title": "Decision-support strategies for photovoltaic self-consumption under declining electricity prices and limited remuneration of surplus generation",
+      "authors": [
+        "Ana B. Cristóbal",
+        "Daniel Sierra",
+        "Laura Palomino",
+        "Luis Miguel Carrasco",
+        "Luis Narvarte"
+      ],
+      "publishedAt": "2026-06-29T14:25:53Z",
+      "url": "https://arxiv.org/abs/2606.30359v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.30359v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "physics.app-ph",
+        "econ.GN"
+      ],
+      "abstract": "The success of distributed photovoltaics may be undermining its own future. As solar penetration increases, electricity prices decline during periods of peak generation, reducing the value of surplus photovoltaic production. This raises a critical question: can citizen-led energy systems remain economically viable in electricity markets dominated by renewable generation? Rather than exploring technically optimal but institutionally unrealistic solutions, we examine the options available under current regulatory and market conditions. Using high-resolution consumption data from a rural community sharing a PV facility among 24 users, we identify pathways for long-term sustainability. The study makes two contributions. First, it shows that effective internal coordination can mobilize participation and investment as successfully as external subsidies. Second, it compares static, dynamic, and hybrid energy-sharing models, with and without storage, providing a flexible framework that balances efficiency, fairness, and governance. Results show that collective self-consumption reduces required PV capacity, lowers investment costs, and increases annual savings compared with individually operated systems. Alternative allocation schemes further improve benefit distribution and local electricity use, although gains depend on trade-offs between efficiency, fairness, and governance complexity. Under current electricity prices and remuneration schemes, battery storage provides limited additional economic value and becomes attractive only under specific market conditions. Overall, the long-term viability of citizen-led photovoltaic initiatives depends less on technological sophistication than on collective coordination and adaptive governance.",
+      "summary": {
+        "gist": "気候変動やエネルギー安全保障への対応として、分散型太陽光発電の導入が世界的に進んでいます。しかし、太陽光発電の普及が進むにつれて、発電ピーク時の電力価格が下落し、余剰電力の売電価値が低下するという課題が生じています。これにより、市民参加型のエネルギーシステムが経済的に持続可能であるかという疑問が浮上しています。特に、個別の家庭では需要と発電のタイミングが合わず、バッテリー導入も高コストであるため、新たなアプローチが求められています。",
+        "novelty": "これまでの太陽光発電の経済性研究は、技術的に最適でも現実的でない解決策や、新規コミュニティ向け理論モデルが中心でした。また、バッテリー貯蔵の経済的価値も不明瞭な点が多かったのです。 この論文は、既存の規制や市場条件の下で、既に運営されている市民参加型コミュニティが、いかに経済的存続性を保つかを実データで分析。集団での協調と柔軟な電力シェアモデルが重要であることを示しました。",
+        "method": "本研究では、スペインの農村コミュニティにある24世帯が共有する太陽光発電施設から得られた高解像度の消費データを使用しました。まず、各世帯が個別に太陽光発電システムを運用する仮想シナリオを設定し、現在の共同運用と比較することで、集団的協調による経済的・運用上のメリットを定量化しました。次に、現在の法的枠組みに準拠しつつ、効率性、公平性、ガバナンスの複雑さのトレードオフを考慮した4つの異なる電力配分モデルを評価しました。最後に、バッテリー貯蔵を導入した場合の経済的実行可能性を、異なる配分モデルの下で分析しました。",
+        "results": "集団的な自家消費は、個別のシステムと比較して、必要な太陽光発電容量を削減し、投資コストを低減し、年間節約額を増加させることが示されました。代替的な電力配分スキームは、利益配分と地域での電力利用をさらに改善しますが、その効果は効率性、公平性、ガバナンスの複雑さの間のトレードオフに依存します。現在の電力価格と報酬スキームの下では、バッテリー貯蔵は追加的な経済的価値が限定的であり、特定の市場条件下でのみ魅力的になることが判明しました。全体として、市民参加型太陽光発電イニシアチブの長期的な存続可能性は、技術的な洗練度よりも、集団的な協調と適応的なガバナンスに大きく依存します。",
+        "why": "集団で太陽光発電を運用することで、各家庭の電力需要プロファイルと発電量のミスマッチを、コミュニティ全体で平準化できます。これにより、個々では難しかった高い自家消費率を達成し、余剰電力の売電価値低下の影響を緩和できます。また、多様な電力配分モデルを適用することで、コミュニティ内の公平性を保ちつつ、効率的な電力利用を促進できます。ただし、バッテリー貯蔵は高コストであり、現在の市場環境ではその経済的メリットが限定的であるため、技術導入よりも組織的な調整が重要となります。つまり、技術だけでなく、人々の協力とそれを支える仕組みが、持続可能なエネルギーシステムには不可欠なのです。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.app-ph）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "energy-economics",
+      "arxivPrimary": "physics.app-ph",
+      "titleJa": "電力価格下落と余剰電力報酬制限下における太陽光自家消費の意思決定支援戦略",
+      "catchTitle": "太陽光発電、みんなで賢く使う秘訣",
+      "hook": "あなたの家の屋根に太陽光パネルを設置しても、売電価格が下がると「元が取れるの？」と不安になりませんか？",
+      "background": "気候変動やエネルギー安全保障への対応として、分散型太陽光発電の導入が世界的に進んでいます。しかし、太陽光発電の普及が進むにつれて、発電ピーク時の電力価格が下落し、余剰電力の売電価値が低下するという課題が生じています。これにより、市民参加型のエネルギーシステムが経済的に持続可能であるかという疑問が浮上しています。特に、個別の家庭では需要と発電のタイミングが合わず、バッテリー導入も高コストであるため、新たなアプローチが求められています。",
+      "quiz": {
+        "question": "この研究が示す、市民参加型太陽光発電の長期的な存続可能性を最も左右する要因は何でしょう？",
+        "options": [
+          "最新のバッテリー技術の導入",
+          "政府からの大規模な補助金",
+          "集団的な協調と適応的なガバナンス"
+        ],
+        "correctIndex": 2,
+        "explanation": "論文の結果は、市民参加型太陽光発電の長期的な存続可能性が、技術的な洗練度よりも集団的な協調と適応的なガバナンスに大きく依存することを示しています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "分散型太陽光発電",
+          "definition": "大規模発電所ではなく、各家庭や施設で発電する方式"
+        },
+        {
+          "term": "余剰電力",
+          "definition": "自家消費しきれず電力網に売却する電力"
+        },
+        {
+          "term": "市民参加型エネルギーシステム",
+          "definition": "住民が主体となって運営するエネルギー供給の仕組み"
+        },
+        {
+          "term": "高解像度消費データ",
+          "definition": "時間単位など、詳細な電力消費の記録"
+        },
+        {
+          "term": "仮想シナリオ",
+          "definition": "比較のために仮定した状況"
+        },
+        {
+          "term": "集団的協調",
+          "definition": "コミュニティ全体で協力して行動すること"
+        },
+        {
+          "term": "電力配分モデル",
+          "definition": "発電した電力をコミュニティ内でどう分けるかのルール"
+        },
+        {
+          "term": "バッテリー貯蔵",
+          "definition": "発電した電力を蓄電池に貯めておくこと"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "太陽光発電は個人でなく地域で協力し、電力シェア方法を工夫すれば、経済的なメリットを最大化できる。",
+      "noveltyContrast": {
+        "before": "これまでの太陽光発電の経済性研究は、技術的に最適でも現実的でない解決策や、新規コミュニティ向け理論モデルが中心でした。また、バッテリー貯蔵の経済的価値も不明瞭な点が多かったのです。",
+        "after": "この論文は、既存の規制や市場条件の下で、既に運営されている市民参加型コミュニティが、いかに経済的存続性を保つかを実データで分析。集団での協調と柔軟な電力シェアモデルが重要であることを示しました。"
+      },
+      "analogy": {
+        "title": "共同菜園での野菜の分け方",
+        "body": "これは、まるで地域の人たちと共同で大きな菜園を運営するようなものです。収穫した野菜（太陽光発電の電力）をどう分けるか（電力シェアモデル）で、みんながどれだけ満足して、次の作付け（投資）に意欲的になるかが決まります。たくさん採れても、分け方が不公平だったり、余った野菜を捨ててしまったり（余剰電力の価値低下）では、せっかくの共同作業も長続きしません。この研究は、みんなで協力して野菜を育て、賢く分け合うことで、菜園がずっと豊かになる方法を探しているのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "削減",
+          "label": "必要PV容量"
+        },
+        {
+          "value": "削減",
+          "label": "投資コスト"
+        },
+        {
+          "value": "増加",
+          "label": "年間節約額"
+        }
+      ],
+      "whyYouCare": "電力価格の変動や売電収入の減少は、太陽光発電の導入を検討しているあなたにとって大きな懸念材料でしょう。この研究は、個人で完結するのではなく、地域コミュニティで協力し、電力を賢くシェアする仕組みを導入することで、太陽光発電の経済的なメリットを最大限に引き出せる可能性を示しています。これは、あなたの家の電気代を節約するだけでなく、地域全体のエネルギー自給率を高め、より持続可能な社会を築くための具体的な一歩となり得ます。マンションや集合住宅に住んでいても、地域で連携すれば太陽光発電の恩恵を受けられるかもしれません。",
+      "takeawayTalk": "太陽光発電は個人より地域でシェア！賢い分け方で経済メリット最大化。",
+      "bodyText": "本研究では、スペインの農村コミュニティにある24世帯が共有する太陽光発電施設から得られた高解像度の消費データを使用しました。まず、各世帯が個別に太陽光発電システムを運用する仮想シナリオを設定し、現在の共同運用と比較することで、集団的協調による経済的・運用上のメリットを定量化しました。次に、現在の法的枠組みに準拠しつつ、効率性、公平性、ガバナンスの複雑さのトレードオフを考慮した4つの異なる電力配分モデルを評価しました。最後に、バッテリー貯蔵を導入した場合の経済的実行可能性を、異なる配分モデルの下で分析しました。\n\n集団で太陽光発電を運用することで、各家庭の電力需要プロファイルと発電量のミスマッチを、コミュニティ全体で平準化できます。これにより、個々では難しかった高い自家消費率を達成し、余剰電力の売電価値低下の影響を緩和できます。また、多様な電力配分モデルを適用することで、コミュニティ内の公平性を保ちつつ、効率的な電力利用を促進できます。ただし、バッテリー貯蔵は高コストであり、現在の市場環境ではその経済的メリットが限定的であるため、技術導入よりも組織的な調整が重要となります。つまり、技術だけでなく、人々の協力とそれを支える仕組みが、持続可能なエネルギーシステムには不可欠なのです。",
+      "bodyGlossary": [
+        {
+          "term": "仮想シナリオ",
+          "definition": "比較のために仮定した状況",
+          "start": 86,
+          "end": 92
+        },
+        {
+          "term": "集団的協調",
+          "definition": "コミュニティ全体で協力して行動すること",
+          "start": 113,
+          "end": 118
+        },
+        {
+          "term": "電力配分モデル",
+          "definition": "発電した電力をコミュニティ内でどう分けるかのルール",
+          "start": 195,
+          "end": 202
+        },
+        {
+          "term": "バッテリー貯蔵",
+          "definition": "発電した電力を蓄電池に貯めておくこと",
+          "start": 214,
+          "end": 221
+        },
+        {
+          "term": "余剰電力",
+          "definition": "自家消費しきれず電力網に売却する電力",
+          "start": 346,
+          "end": 350
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "仮想シナリオ",
+          "definition": "比較のために仮定した状況",
+          "start": 86,
+          "end": 92
+        },
+        {
+          "term": "集団的協調",
+          "definition": "コミュニティ全体で協力して行動すること",
+          "start": 113,
+          "end": 118
+        },
+        {
+          "term": "電力配分モデル",
+          "definition": "発電した電力をコミュニティ内でどう分けるかのルール",
+          "start": 195,
+          "end": 202
+        },
+        {
+          "term": "バッテリー貯蔵",
+          "definition": "発電した電力を蓄電池に貯めておくこと",
+          "start": 214,
+          "end": 221
+        },
+        {
+          "term": "余剰電力",
+          "definition": "自家消費しきれず電力網に売却する電力",
+          "start": 346,
+          "end": 350
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 255,
+      "keyFigure": {
+        "imagePath": "/figures/2606.30359v1_results.png",
+        "page": 29,
+        "caption": "バッテリーなしの場合と比較した、各モデルの年間節約額を示しています。",
+        "label": "Figure 2. Savings for each model compared to the same energy allocation strategy without battery.",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-05T23:01:14.873Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2606.30359v1_results.png",
+          "page": 29,
+          "caption": "バッテリーなしの場合と比較した、各モデルの年間節約額を示しています。",
+          "label": "Figure 2. Savings for each model compared to the same energy allocation strategy without battery.",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-05T23:01:14.873Z"
+        },
+        {
+          "imagePath": "/figures/2606.30359v1_why.png",
+          "page": 31,
+          "caption": "バッテリーの内部収益率（IRR）とバッテリー1kWhあたりのコストの関係を示しています。",
+          "label": "Figure 4. Battery IRR vs. Battery Cost per KWh",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-05T23:01:14.873Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.01014v1",
+      "title": "Approximating Peak Prevalence in Multistage SIR Epidemics",
+      "authors": [
+        "Denis Tverskoi",
+        "Andrew Gothard",
+        "Grzegorz A. Rempala"
+      ],
+      "publishedAt": "2026-07-01T14:49:43Z",
+      "url": "https://arxiv.org/abs/2607.01014v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.01014v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "q-bio.PE",
+        "math.DS"
+      ],
+      "abstract": "Estimating peak prevalence is a central problem in epidemic modeling because it determines the period of greatest infectious burden and is closely linked to health-care demand. In multistage SIR models, however, peak prevalence is generally less tractable than in the classical model with exponentially distributed infectious periods. Motivated by the use of weighted infectious-stage aggregates as surrogates for prevalence, we investigate the relationship between the prevalence peak and the maximum of a weighted stage functional in deterministic SI$(k)$R epidemic models. We show that this relationship depends critically on how the stage-progression rate is scaled as the number of infectious stages increases. Under naive scaling, in which the progression rate remains fixed, the weighted peak is asymptotically equivalent to the prevalence peak and the commonly used factor-two approximation fails. Under Erlang scaling, which preserves the mean infectious period, the multistage model converges to a delay formulation in which prevalence and the weighted stage functional become unweighted and triangularly weighted moving averages of incidence. This limiting representation provides a theoretical basis for the factor-two approximation and identifies the regimes in which it is accurate. It also explains why this approximation deteriorates as epidemic waves become more sharply peaked. We derive analytical error bounds and develop curvature-based and parameter-based corrections that substantially improve accuracy. Numerical studies confirm these improvements across a broad range of epidemiological parameters. Overall, the results show when weighted-stage peaks can be used reliably as proxies for peak prevalence and how the resulting estimates can be refined when the standard approximation loses accuracy.",
+      "summary": {
+        "gist": "感染症流行のピーク時有病率を推定することは、医療需要の予測や公衆衛生対策の立案において極めて重要です。しかし、実際の有病率は直接観察が難しく、報告遅延や検査体制の変動によって影響を受けます。そのため、より観察しやすいデータからピーク有病率を近似・推定する解析手法が求められています。特に、より現実的な感染期間分布を考慮した多段階SIRモデルでは、古典的なモデルに比べてピーク推定が困難でした。",
+        "novelty": "従来の感染症モデルでは、感染期間が指数分布に従う単純なケースではピーク有病率の推定が容易でした。しかし、より現実的な多段階モデルでは計算が複雑になり、ピーク予測の精度が課題でした。特に、経験的に使われてきた「加重ピークの2倍が有病率ピーク」という近似式の理論的根拠は不明確でした。 本研究では、多段階モデルにおける感染ステージ進行率のスケール方法によって、ピーク予測の近似式が大きく異なることを明らかにしました。特に、平均感染期間を一定に保つ「アーラン・スケーリング」の下で、従来の2倍近似が理論的に正当化されることを示し、さらにその精度を大幅に向上させる補正方法を開発しました。",
+        "method": "本研究では、多段階SIRモデル（SI(k)Rモデル）を用いて、感染ステージの加重合計（V(k)(t)）のピークと実際の有病率ピーク（I(k)max）の関係を調査しました。特に、感染ステージの進行率（δ）が、ステージ数（k）の増加に伴ってどのようにスケールされるかに着目し、「ナイーブ・スケーリング」（δを固定）と「アーラン・スケーリング」（δ=kγ、平均感染期間を固定）の2つのシナリオで解析を行いました。加重合計のピークは、感受性人口の軌跡から直接計算できるという利点があります。この関係を基に、漸近解析を通じて、従来の近似式（I(k)max ≈ 2W(k)max）の妥当性と、その精度を向上させるための補正式を導き出しました。",
+        "results": "ナイーブ・スケーリング（δ固定）の場合、加重ピークは有病率ピークと漸近的に等しくなり、従来の2倍近似は無効であることが示されました。一方、アーラン・スケーリング（δ=kγ）の場合、多段階モデルは遅延型疫学モデルに収束し、有病率が感染発生率の移動平均、加重ピークが三角加重移動平均に対応することが明らかになりました。この収束により、従来の2倍近似が理論的に正当化され、その精度が疫病の波が鋭くなるにつれて低下する理由も説明されました。さらに、曲率ベースおよびパラメータベースの補正を開発し、幅広い疫学パラメータにおいて近似精度が大幅に向上することを確認しました。",
+        "why": "感染ステージの進行率のスケール方法によって、感染人口がステージ構造内でどのように分布するかが変化します。ナイーブ・スケーリングでは、感染人口はステージチェーンの初期に集中するため、加重合計の重みがほぼ一定となり、有病率ピークと加重ピークがほぼ一致します。一方、アーラン・スケーリングでは、感染人口がステージ全体に広がり、多段階モデルが遅延型モデルに収束します。この収束により、有病率と加重合計がそれぞれ異なる種類の移動平均として表現され、その関係から2倍近似が自然に導き出されます。このメカニズムを理解することで、近似の精度が低下する条件を特定し、より精密な補正を行うことが可能になります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.PE）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "epidemic-modeling",
+      "arxivPrimary": "q-bio.PE",
+      "titleJa": "多段階SIR疫学モデルにおけるピーク有病率の近似",
+      "catchTitle": "感染症流行のピークを正確に予測する新手法",
+      "hook": "インフルエンザや新型コロナなど、感染症の流行ピークを正確に予測できたら、あなたはどんな準備をしますか？",
+      "background": "感染症流行のピーク時有病率を推定することは、医療需要の予測や公衆衛生対策の立案において極めて重要です。しかし、実際の有病率は直接観察が難しく、報告遅延や検査体制の変動によって影響を受けます。そのため、より観察しやすいデータからピーク有病率を近似・推定する解析手法が求められています。特に、より現実的な感染期間分布を考慮した多段階SIRモデルでは、古典的なモデルに比べてピーク推定が困難でした。",
+      "quiz": {
+        "question": "この研究で、従来の「加重ピークの2倍が有病率ピーク」という近似式が理論的に正当化されたのは、どのようなスケーリングの下でしたか？",
+        "options": [
+          "ナイーブ・スケーリング",
+          "アーラン・スケーリング",
+          "ランダム・スケーリング"
+        ],
+        "correctIndex": 1,
+        "explanation": "正解は「アーラン・スケーリング」です。このスケーリングでは、平均感染期間を一定に保ちながらステージ数を増やすことで、多段階モデルが遅延型モデルに収束し、2倍近似が理論的に説明されました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "SIRモデル",
+          "definition": "感染症の広がりを数理的に記述するモデル。"
+        },
+        {
+          "term": "ピーク有病率",
+          "definition": "感染症流行期間中の最大感染者数（割合）。"
+        },
+        {
+          "term": "多段階SIRモデル",
+          "definition": "感染期間を複数のステージに分割したSIRモデル。"
+        },
+        {
+          "term": "ナイーブ・スケーリング",
+          "definition": "感染ステージ進行率を固定したままステージ数を増やす。"
+        },
+        {
+          "term": "アーラン・スケーリング",
+          "definition": "平均感染期間を一定に保ちながらステージ数を増やす。"
+        },
+        {
+          "term": "漸近解析",
+          "definition": "パラメータが無限大に近づくときの挙動を解析する手法。"
+        },
+        {
+          "term": "遅延型疫学モデル",
+          "definition": "感染症の伝播に時間遅れを考慮したモデル。"
+        },
+        {
+          "term": "移動平均",
+          "definition": "時系列データの一定期間の平均を順次計算したもの。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "多段階感染症モデルにおいて、感染症のピークをより正確に予測する新しい近似式と補正方法を開発しました。",
+      "noveltyContrast": {
+        "before": "従来の感染症モデルでは、感染期間が指数分布に従う単純なケースではピーク有病率の推定が容易でした。しかし、より現実的な多段階モデルでは計算が複雑になり、ピーク予測の精度が課題でした。特に、経験的に使われてきた「加重ピークの2倍が有病率ピーク」という近似式の理論的根拠は不明確でした。",
+        "after": "本研究では、多段階モデルにおける感染ステージ進行率のスケール方法によって、ピーク予測の近似式が大きく異なることを明らかにしました。特に、平均感染期間を一定に保つ「アーラン・スケーリング」の下で、従来の2倍近似が理論的に正当化されることを示し、さらにその精度を大幅に向上させる補正方法を開発しました。"
+      },
+      "analogy": {
+        "title": "畑の作物の生育ピークを予測する",
+        "body": "これはまるで、畑で育てている作物の収穫ピークを予測するようなものです。作物の生育は、種まきから発芽、成長、開花、結実と複数の段階を経て進みます。従来の予測は、一つの段階だけを見て「この時期に一番育つだろう」と大まかに判断するようなものでした。しかし、この研究は、それぞれの生育段階の進み方（ステージ進行率）を考慮し、さらに「平均的な生育期間」を一定に保ちながら段階数を増やしていくことで、より正確に「畑全体の作物が最も豊かに実るピーク」を予測できるようになったのです。単に「収穫量の2倍がピーク」と経験的に言われていたものが、なぜそうなるのか、そしてどうすればもっと正確になるのかを解明した、まさに「収穫予測の品種改良」と言えるでしょう。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+3.2pt",
+          "label": "近似精度向上"
+        }
+      ],
+      "whyYouCare": "この研究は、感染症の流行予測精度を飛躍的に向上させる可能性を秘めています。あなたが経営者なら、従業員の感染ピークを予測し、事業継続計画をより現実的に立てられるでしょう。医療従事者なら、病床や医療物資の需要を正確に見積もり、限られたリソースを最適に配分できます。政府や自治体なら、ロックダウンや行動制限のタイミング、ワクチン接種計画などをより科学的な根拠に基づいて決定し、社会経済への影響を最小限に抑えることができるはずです。私たちの生活や社会活動が感染症によって大きく左右される現代において、この予測技術は、よりレジリエントな社会を築くための重要なツールとなるでしょう。",
+      "takeawayTalk": "感染症のピーク予測が、これまでよりずっと正確になるんだって！",
+      "bodyText": "本研究では、多段階SIRモデル（SI(k)Rモデル）を用いて、感染ステージの加重合計（V(k)(t)）のピークと実際の有病率ピーク（I(k)max）の関係を調査しました。特に、感染ステージの進行率（δ）が、ステージ数（k）の増加に伴ってどのようにスケールされるかに着目し、「ナイーブ・スケーリング」（δを固定）と「アーラン・スケーリング」（δ=kγ、平均感染期間を固定）の2つのシナリオで解析を行いました。加重合計のピークは、感受性人口の軌跡から直接計算できるという利点があります。この関係を基に、漸近解析を通じて、従来の近似式（I(k)max ≈ 2W(k)max）の妥当性と、その精度を向上させるための補正式を導き出しました。\n\n感染ステージの進行率のスケール方法によって、感染人口がステージ構造内でどのように分布するかが変化します。ナイーブ・スケーリングでは、感染人口はステージチェーンの初期に集中するため、加重合計の重みがほぼ一定となり、有病率ピークと加重ピークがほぼ一致します。一方、アーラン・スケーリングでは、感染人口がステージ全体に広がり、多段階モデルが遅延型モデルに収束します。この収束により、有病率と加重合計がそれぞれ異なる種類の移動平均として表現され、その関係から2倍近似が自然に導き出されます。このメカニズムを理解することで、近似の精度が低下する条件を特定し、より精密な補正を行うことが可能になります。",
+      "bodyGlossary": [
+        {
+          "term": "多段階SIRモデル",
+          "definition": "感染期間を複数のステージに分割したSIRモデル。",
+          "start": 6,
+          "end": 15
+        },
+        {
+          "term": "ナイーブ・スケーリング",
+          "definition": "感染ステージ進行率を固定したままステージ数を増やす。",
+          "start": 137,
+          "end": 148
+        },
+        {
+          "term": "アーラン・スケーリング",
+          "definition": "平均感染期間を一定に保ちながらステージ数を増やす。",
+          "start": 157,
+          "end": 168
+        },
+        {
+          "term": "漸近解析",
+          "definition": "パラメータが無限大に近づくときの挙動を解析する手法。",
+          "start": 249,
+          "end": 253
+        },
+        {
+          "term": "移動平均",
+          "definition": "時系列データの一定期間の平均を順次計算したもの。",
+          "start": 524,
+          "end": 528
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "多段階SIRモデル",
+          "definition": "感染期間を複数のステージに分割したSIRモデル。",
+          "start": 6,
+          "end": 15
+        },
+        {
+          "term": "ナイーブ・スケーリング",
+          "definition": "感染ステージ進行率を固定したままステージ数を増やす。",
+          "start": 137,
+          "end": 148
+        },
+        {
+          "term": "アーラン・スケーリング",
+          "definition": "平均感染期間を一定に保ちながらステージ数を増やす。",
+          "start": 157,
+          "end": 168
+        },
+        {
+          "term": "漸近解析",
+          "definition": "パラメータが無限大に近づくときの挙動を解析する手法。",
+          "start": 249,
+          "end": 253
+        },
+        {
+          "term": "移動平均",
+          "definition": "時系列データの一定期間の平均を順次計算したもの。",
+          "start": 524,
+          "end": 528
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 283,
+      "keyFigure": {
+        "imagePath": "/figures/2607.01014v1_results.png",
+        "page": 18,
+        "caption": "R0の関数としてのImaxの異なる近似の相対誤差を示しています。",
+        "label": "Fig. 2",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-05T23:01:19.218Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.01014v1_results.png",
+          "page": 18,
+          "caption": "R0の関数としてのImaxの異なる近似の相対誤差を示しています。",
+          "label": "Fig. 2",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-05T23:01:19.218Z"
+        },
+        {
+          "imagePath": "/figures/2607.01014v1_why.png",
+          "page": 15,
+          "caption": "Imax ≈ 2Wmax の近似精度に対する解析的および数値的な制約を示しています。",
+          "label": "Fig. 1",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-05T23:01:19.219Z"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1034 @@
+{
+  "date": "2026-07-07",
+  "papers": [
+    {
+      "id": "2607.00582v1",
+      "title": "How Environment and Urbanization Shape Bird Diversity in Sri Lanka",
+      "authors": [
+        "Dilusha Chandrasiri",
+        "Maneesha Herath",
+        "Yasith Hewarathna",
+        "Muditha Herath",
+        "Gishan Bandara",
+        "Madara Mendis",
+        "Nathali Athukorala",
+        "Nisansa de Silva",
+        "Sandareka Wickramanayake"
+      ],
+      "publishedAt": "2026-07-01T08:06:47Z",
+      "url": "https://arxiv.org/abs/2607.00582v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.00582v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "q-bio.PE",
+        "cs.LG"
+      ],
+      "abstract": "This study presents a comprehensive analysis of bird diversity across Sri Lanka by integrating spatial, temporal, and environmental data. Bird observation records were combined with environmental variables, including weather conditions, air pollution, the Normalized Difference Vegetation Index (NDVI), land cover, elevation, and Artificial Light At Night (ALAN), and rigorously preprocessed to ensure data quality. Spatial analyses were conducted on multiple grid scales (2 km, 5 km, 10 km) to evaluate patterns in species richness while minimizing sampling bias through spatial thinning. Temporal trends were assessed using effort-corrected metrics including rarefied richness and occupancy rates to account for variations in observation effort over time. Environmental drivers of bird diversity were examined using multivariate statistical models, including Poisson Generalized Linear Models (GLMs) and correlation analyses, to identify key associations between ecological factors and species richness. Additionally, community structure, dominance patterns, and beta diversity were analyzed to understand variations in species composition across regions and time. The study found that land-cover type is a stronger predictor of bird diversity than individual continuous variables such as NDVI or temperature alone. Urbanization, measured by ALAN, exhibits nuanced scale-dependent effects, supporting high abundances of a few generalist species while reducing overall richness. The findings provide actionable insights into the patterns and drivers of avian diversity in Sri Lanka, offering a scalable and reproducible framework for biodiversity research and conservation planning.",
+      "summary": {
+        "gist": "急速な土地利用の変化が進む地域において、環境要因と人為的要因が生物多様性をどのように形成するかを理解することは、生態学における重要な課題です。鳥類は、生息地の構造、気候変動、人間活動による攪乱に敏感であるため、効果的な生物指標として広く認識されています。スリランカは、小さな地理的範囲内に高い生態学的多様性を持つ一方で、都市化、農業、気候変動による圧力が増大しており、魅力的なケーススタディとなります。",
+        "novelty": "これまでの研究では、鳥の多様性を予測する際に、植生指数（NDVI）や気温といった連続的な環境変数に焦点が当てられがちでした。また、都市化の影響や複数の要因を統合的に、かつ異なる空間スケールで分析する研究は限られていました。 この研究では、土地の使われ方（森林、農地、都市など）が、植生指数や気温といった個別の連続変数よりも鳥の多様性を強く予測することを発見しました。さらに、都市化の指標である夜間照明が、特定の順応性の高い鳥を増やす一方で、全体の多様性を減少させるという複雑な影響を、複数の空間スケールで明らかにしました。",
+        "method": "本研究では、スリランカ全土の鳥類多様性を包括的に分析するため、空間データ、時間データ、環境データを統合しました。鳥類の観察記録を、気象条件、大気汚染、正規化植生指数（NDVI）、土地被覆、標高、夜間人工光（ALAN）などの環境変数と組み合わせ、データ品質を確保するために厳密な前処理を行いました。サンプリングバイアスを最小限に抑えるため、複数のグリッドスケール（2km、5km、10km）で空間分析を実施し、種の豊富さのパターンを評価しました。また、時間経過に伴う観察努力の変動を考慮するため、努力量補正済みの指標を用いて時間的傾向を評価しました。鳥類多様性の環境要因は、ポアソン一般化線形モデル（GLM）や相関分析などの多変量統計モデルを用いて調査され、生態学的要因と種の豊富さの間の主要な関連性が特定されました。さらに、群集構造、優占パターン、ベータ多様性も分析され、地域や時間による種構成の変動が理解されました。",
+        "results": "本研究の結果、土地被覆タイプが、NDVIや気温といった個別の連続変数よりも鳥類多様性の強力な予測因子であることが判明しました。都市化の指標である夜間人工光（ALAN）は、微妙なスケール依存性の影響を示し、少数の順応性の高い種の個体数を高く維持する一方で、全体の種の豊富さを減少させることが明らかになりました。",
+        "why": "土地被覆タイプは、鳥類にとっての生息地の物理的構造や利用可能な資源（食物、営巣場所など）を直接的に決定するため、NDVIや気温といった単一の環境変数よりも鳥類多様性に強く影響すると考えられます。例えば、森林は多様な樹木や下層植生を提供し、多くの種の鳥が生息できる環境を作り出します。一方、都市化の指標である夜間人工光は、夜行性の活動を妨げたり、渡りの経路を混乱させたりすることで、多くの種の鳥にとってストレス要因となります。しかし、一部の順応性の高い種（ハトやスズメなど）は、都市環境の食物資源や安全な営巣場所を利用し、夜間照明下でも活動できるため、個体数を増やす可能性があります。結果として、都市化は全体の種の多様性を減少させながら、特定の種の優占度を高める「生物的均質化」を引き起こすと考えられます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.PE）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "environmental-economics",
+      "arxivPrimary": "q-bio.PE",
+      "titleJa": "スリランカにおける鳥類の多様性を形成する環境と都市化",
+      "catchTitle": "鳥の楽園スリランカ、多様性を守るカギは「土地の使われ方」",
+      "hook": "あなたの身近な場所で、最近見かける鳥の種類が減ったと感じませんか？都市化が進む中で、鳥たちの暮らしはどう変わっているのでしょうか。",
+      "background": "急速な土地利用の変化が進む地域において、環境要因と人為的要因が生物多様性をどのように形成するかを理解することは、生態学における重要な課題です。鳥類は、生息地の構造、気候変動、人間活動による攪乱に敏感であるため、効果的な生物指標として広く認識されています。スリランカは、小さな地理的範囲内に高い生態学的多様性を持つ一方で、都市化、農業、気候変動による圧力が増大しており、魅力的なケーススタディとなります。",
+      "quiz": {
+        "question": "この研究で、鳥の多様性を最も強く予測する要因として特定されたものは何でしょう？",
+        "options": [
+          "気温",
+          "正規化植生指数（NDVI）",
+          "土地被覆タイプ"
+        ],
+        "correctIndex": 2,
+        "explanation": "研究では、土地被覆タイプがNDVIや気温といった個別の連続変数よりも鳥類多様性の強力な予測因子であることが判明しました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "正規化植生指数",
+          "definition": "植物の活性度を示す指標。NDVIと略される。"
+        },
+        {
+          "term": "夜間人工光",
+          "definition": "夜間の人工的な光。ALANと略され都市化の指標。"
+        },
+        {
+          "term": "サンプリングバイアス",
+          "definition": "データ収集時の偏り。結果の信頼性に影響する。"
+        },
+        {
+          "term": "ポアソン一般化線形モデル",
+          "definition": "カウントデータを分析するための統計モデル。"
+        },
+        {
+          "term": "多変量統計モデル",
+          "definition": "複数の変数間の関係を分析する統計手法。"
+        },
+        {
+          "term": "ベータ多様性",
+          "definition": "異なる地域間の種構成の違いを示す指標。"
+        },
+        {
+          "term": "生物的均質化",
+          "definition": "多様性が減り、特定の種ばかりになる現象。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "スリランカの鳥類多様性研究から、鳥の種類を最も左右するのは「土地の使われ方」であり、都市の夜間照明は特定の鳥を増やす一方で全体の多様性を減らすことが判明しました。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、鳥の多様性を予測する際に、植生指数（NDVI）や気温といった連続的な環境変数に焦点が当てられがちでした。また、都市化の影響や複数の要因を統合的に、かつ異なる空間スケールで分析する研究は限られていました。",
+        "after": "この研究では、土地の使われ方（森林、農地、都市など）が、植生指数や気温といった個別の連続変数よりも鳥の多様性を強く予測することを発見しました。さらに、都市化の指標である夜間照明が、特定の順応性の高い鳥を増やす一方で、全体の多様性を減少させるという複雑な影響を、複数の空間スケールで明らかにしました。"
+      },
+      "analogy": {
+        "title": "畑の作付け計画と鳥の多様性",
+        "body": "これは、農家が畑でどんな作物を育てるかを決める「作付け計画」のようなものです。土壌の質や日当たり（NDVIや気温）も大切ですが、それ以上に「何を植えるか」（土地の使われ方）が、その畑でどれだけ多様な作物が育つかを決めます。都市化による夜間照明は、特定の雑草（順応性の高い鳥）だけが異常に増え、結果として畑全体の作物の種類（鳥の多様性）が減ってしまう状況に似ています。つまり、どんな土地利用をするかが、鳥たちの「豊かな食卓」を左右するのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、私たちが住む都市やその周辺の環境が、鳥たちの多様性にどれほど大きな影響を与えているかを教えてくれます。もしあなたが農業従事者なら、農地の利用方法が地域の生態系、ひいては害虫を食べる鳥の生息にも関わることを示唆します。都市計画に携わる方であれば、夜間照明の設計や緑地の配置が、単に景観だけでなく、生物多様性保全の観点からも重要であることが理解できるでしょう。一般の私たちにとっても、身近な公園や庭の管理、あるいは地域の開発計画への関心が、鳥たちの未来を守る一歩となることを示しています。豊かな自然環境は、私たちの生活の質にも直結しているのです。",
+      "takeawayTalk": "鳥の多様性は、植生より「土地の使われ方」で決まる！都市の夜間照明は要注意。",
+      "bodyText": "本研究では、スリランカ全土の鳥類多様性を包括的に分析するため、空間データ、時間データ、環境データを統合しました。鳥類の観察記録を、気象条件、大気汚染、正規化植生指数（NDVI）、土地被覆、標高、夜間人工光（ALAN）などの環境変数と組み合わせ、データ品質を確保するために厳密な前処理を行いました。サンプリングバイアスを最小限に抑えるため、複数のグリッドスケール（2km、5km、10km）で空間分析を実施し、種の豊富さのパターンを評価しました。また、時間経過に伴う観察努力の変動を考慮するため、努力量補正済みの指標を用いて時間的傾向を評価しました。鳥類多様性の環境要因は、ポアソン一般化線形モデル（GLM）や相関分析などの多変量統計モデルを用いて調査され、生態学的要因と種の豊富さの間の主要な関連性が特定されました。さらに、群集構造、優占パターン、ベータ多様性も分析され、地域や時間による種構成の変動が理解されました。\n\n土地被覆タイプは、鳥類にとっての生息地の物理的構造や利用可能な資源（食物、営巣場所など）を直接的に決定するため、NDVIや気温といった単一の環境変数よりも鳥類多様性に強く影響すると考えられます。例えば、森林は多様な樹木や下層植生を提供し、多くの種の鳥が生息できる環境を作り出します。一方、都市化の指標である夜間人工光は、夜行性の活動を妨げたり、渡りの経路を混乱させたりすることで、多くの種の鳥にとってストレス要因となります。しかし、一部の順応性の高い種（ハトやスズメなど）は、都市環境の食物資源や安全な営巣場所を利用し、夜間照明下でも活動できるため、個体数を増やす可能性があります。結果として、都市化は全体の種の多様性を減少させながら、特定の種の優占度を高める「生物的均質化」を引き起こすと考えられます。",
+      "bodyGlossary": [
+        {
+          "term": "正規化植生指数",
+          "definition": "植物の活性度を示す指標。NDVIと略される。",
+          "start": 75,
+          "end": 82
+        },
+        {
+          "term": "夜間人工光",
+          "definition": "夜間の人工的な光。ALANと略され都市化の指標。",
+          "start": 97,
+          "end": 102
+        },
+        {
+          "term": "サンプリングバイアス",
+          "definition": "データ収集時の偏り。結果の信頼性に影響する。",
+          "start": 148,
+          "end": 158
+        },
+        {
+          "term": "ポアソン一般化線形モデル",
+          "definition": "カウントデータを分析するための統計モデル。",
+          "start": 286,
+          "end": 298
+        },
+        {
+          "term": "多変量統計モデル",
+          "definition": "複数の変数間の関係を分析する統計手法。",
+          "start": 311,
+          "end": 319
+        },
+        {
+          "term": "ベータ多様性",
+          "definition": "異なる地域間の種構成の違いを示す指標。",
+          "start": 374,
+          "end": 380
+        },
+        {
+          "term": "生物的均質化",
+          "definition": "多様性が減り、特定の種ばかりになる現象。",
+          "start": 742,
+          "end": 748
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "正規化植生指数",
+          "definition": "植物の活性度を示す指標。NDVIと略される。",
+          "start": 75,
+          "end": 82
+        },
+        {
+          "term": "夜間人工光",
+          "definition": "夜間の人工的な光。ALANと略され都市化の指標。",
+          "start": 97,
+          "end": 102
+        },
+        {
+          "term": "サンプリングバイアス",
+          "definition": "データ収集時の偏り。結果の信頼性に影響する。",
+          "start": 148,
+          "end": 158
+        },
+        {
+          "term": "ポアソン一般化線形モデル",
+          "definition": "カウントデータを分析するための統計モデル。",
+          "start": 286,
+          "end": 298
+        },
+        {
+          "term": "多変量統計モデル",
+          "definition": "複数の変数間の関係を分析する統計手法。",
+          "start": 311,
+          "end": 319
+        },
+        {
+          "term": "ベータ多様性",
+          "definition": "異なる地域間の種構成の違いを示す指標。",
+          "start": 374,
+          "end": 380
+        },
+        {
+          "term": "生物的均質化",
+          "definition": "多様性が減り、特定の種ばかりになる現象。",
+          "start": 742,
+          "end": 748
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 276,
+      "keyFigure": {
+        "imagePath": "/figures/2607.00582v1_results.png",
+        "page": 5,
+        "caption": "連続的な環境変数のスピアマン順位相関行列を示しています。",
+        "label": "Fig. 4.",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-06T23:06:25.956Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.00582v1_results.png",
+          "page": 5,
+          "caption": "連続的な環境変数のスピアマン順位相関行列を示しています。",
+          "label": "Fig. 4.",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-06T23:06:25.956Z"
+        },
+        {
+          "imagePath": "/figures/2607.00582v1_why.png",
+          "page": 3,
+          "caption": "IGBP土地被覆分類によって分割されたNDVIの分布を示しています。",
+          "label": "Fig. 1. Distribution of NDVI partitioned by IGBP Land Cover classifications,",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-06T23:06:25.957Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.01835v1",
+      "title": "Subsoil acidity causes long delays in inorganic carbon sequestration by Enhanced Weathering",
+      "authors": [
+        "Søren Jessen",
+        "Rasmus Jakobsen",
+        "Majken Looms",
+        "Per Ambus",
+        "Dieke Postma"
+      ],
+      "publishedAt": "2026-07-02T07:56:28Z",
+      "url": "https://arxiv.org/abs/2607.01835v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.01835v1.pdf",
+      "categories": [
+        "topic:urban",
+        "physics.geo-ph",
+        "physics.soc-ph"
+      ],
+      "abstract": "While a looming atmospheric CO$_2$ overshoot calls for immediate carbon sequestration, delays associated to Enhanced Weathering (EW) carbon dioxide removal are being investigated. Topsoil acidity is already known to delay EW carbon sequestration, but subsoil acidity remains underexplored. Using century-long agricultural liming of formerly acidic heathland as a proxy for EW, this study provides empirical evidence of subsoil-imposed delays. Below such limed terrain, we observed a downward-progressing front of topsoil-produced alkalinity that still requires 30-100 years to penetrate the approximately 5 m thick acidic sandy unsaturated zone and reach the groundwater table. Subsoil acidity thus may cause beyond-reasonable delays, prohibiting EW as a viable short-term carbon capture strategy even on topsoils made non-acidic by preceding liming. When planning EW schemes, the amounts of stored acidic cations in top- and subsoil, as well as the rate and composition of infiltrating water, controlling the duration of the delay, require careful assessment.",
+      "summary": {
+        "gist": "地球温暖化の目標達成には、大気中のCO2を緊急に除去する必要があります。強化風化（EW）は、CO2とケイ酸塩鉱物の反応を利用して、土壌中のCO2を炭酸アルカリ度や炭酸塩鉱物に変え、最終的に海洋へ輸送することでCO2を隔離する技術として注目されています。特に土壌酸性度を緩和する必要がある地域では、作物生産の向上という副次的なメリットも期待されています。しかし、これまでの研究では、表層土の酸性度がCO2隔離を遅らせることが指摘されていましたが、下層土の酸性度が与える影響については十分に解明されていませんでした。",
+        "novelty": "これまで、強化風化によるCO2隔離の遅延は、主に表層土の酸性度が原因だと考えられていました。表層土の酸性度を改善すれば、すぐにCO2が吸収されると期待されていたのです。 本研究は、1世紀にわたる農地の石灰施用を「強化風化」のモデルとして調査。その結果、表層土が中和されていても、深さ2m以下の下層土に残る酸性層がCO2吸収成分の移動を妨げ、地下水への到達に30〜100年かかることを実証しました。",
+        "method": "本研究では、1世紀にわたる農業的な石灰施用が行われた、かつて酸性だったヒースランドの農地を強化風化の代理実験として利用しました。約5m厚の不飽和帯を通して、間隙ガスと間隙水をサンプリングし、無機炭酸系のパラメータ（間隙ガスPCO2、間隙水中の無機炭酸種、pH、溶存有機炭素、陽イオン交換体組成）を測定しました。これにより、表層土で生成されたアルカリ度が不飽和帯を通過し、下層の帯水層に到達するまでの挙動を追跡しました。",
+        "results": "調査の結果、表層から2mまでの深さでは、石灰施用の影響でpHが高く、陽イオン交換体がCa優勢であることが確認されました。しかし、2mより深い層では、アルカリ度とpHが著しく低下し、陽イオン交換体がAl優勢に変化していました。これは、石灰施用以前の酸性条件が下層土に残っていることを示唆しています。表層土で生成されたアルカリ度は、この酸性の下層土の層を通過する際に失われ、地下水に到達するまでに30〜100年という長い遅延が生じることが明らかになりました。このアルカリ度の損失は、陽イオン交換と鉱物平衡によって説明され、Caイオンが交換体中のAlを間隙水に排出し、そのAlが水酸化物として沈殿する際にプロトンを放出し、このプロトンがCO2吸収成分である重炭酸イオンを中和することで、CO2が土壌ガスとして大気中に再放出されるメカニズムが示唆されました。",
+        "why": "表層土で生成されたアルカリ度（重炭酸イオン）は、土壌水を介して下層へ浸透します。しかし、下層土が酸性である場合、土壌中の陽イオン交換体（粘土鉱物など）に吸着されていたアルミニウム（Al）が、石灰施用で供給されたカルシウム（Ca）と交換されて間隙水中に溶出します。溶出したアルミニウムは水酸化アルミニウムとして沈殿する際にプロトン（H+）を放出します。このプロトンが、CO2吸収成分である重炭酸イオン（HCO3-）と反応して炭酸（H2CO3*）を生成し、最終的にCO2として土壌ガス中に放出され、大気中に戻ってしまうのです。このように、下層土の酸性度がCO2吸収成分を「消費」してしまうため、地下水に到達するまでに大幅な遅延が生じます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.geo-ph）",
+      "field": "都市・地域",
+      "categoryL1": "agri-econ",
+      "categoryL2": "climate-change-mitigation",
+      "arxivPrimary": "physics.geo-ph",
+      "titleJa": "下層土の酸性度が強化風化による無機炭素隔離を大幅に遅らせる",
+      "catchTitle": "土の下の「酸性層」がCO2吸収を邪魔する！",
+      "hook": "地球温暖化対策の切り札「強化風化」が、実は期待通りにCO2を吸収してくれないかもしれません。なぜでしょうか？",
+      "background": "地球温暖化の目標達成には、大気中のCO2を緊急に除去する必要があります。強化風化（EW）は、CO2とケイ酸塩鉱物の反応を利用して、土壌中のCO2を炭酸アルカリ度や炭酸塩鉱物に変え、最終的に海洋へ輸送することでCO2を隔離する技術として注目されています。特に土壌酸性度を緩和する必要がある地域では、作物生産の向上という副次的なメリットも期待されています。しかし、これまでの研究では、表層土の酸性度がCO2隔離を遅らせることが指摘されていましたが、下層土の酸性度が与える影響については十分に解明されていませんでした。",
+      "quiz": {
+        "question": "強化風化で土壌に投入されたCO2吸収成分が、下層土の酸性層で失われる主な原因は何ですか？",
+        "options": [
+          "微生物による分解",
+          "陽イオン交換と水酸化アルミニウムの沈殿",
+          "土壌中の水分不足"
+        ],
+        "correctIndex": 1,
+        "explanation": "正解は「陽イオン交換と水酸化アルミニウムの沈殿」です。下層土の酸性層では、石灰由来のCaが陽イオン交換体からAlを排出し、Alが水酸化物として沈殿する際にプロトンを放出し、このプロトンがCO2吸収成分である重炭酸イオンを中和してしまいます。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "強化風化",
+          "definition": "ケイ酸塩鉱物を土壌に散布し、CO2を吸収・固定する技術。"
+        },
+        {
+          "term": "アルカリ度",
+          "definition": "水中の酸を中和する能力を示す指標。CO2吸収成分。"
+        },
+        {
+          "term": "不飽和帯",
+          "definition": "地下水面より上で、土壌の孔隙が空気と水で満たされている層。"
+        },
+        {
+          "term": "石灰施用",
+          "definition": "土壌の酸性度を中和するために石灰をまくこと。"
+        },
+        {
+          "term": "陽イオン交換体",
+          "definition": "土壌中の粘土鉱物などで、陽イオンを吸着・放出する部位。"
+        },
+        {
+          "term": "プロトン",
+          "definition": "水素イオン（H+）。酸性を示す物質。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "強化風化で土壌に投入されたCO2吸収成分が、下層土の酸性層に阻まれ、地下水に到達するまでに数十年から百年かかることが判明しました。",
+      "noveltyContrast": {
+        "before": "これまで、強化風化によるCO2隔離の遅延は、主に表層土の酸性度が原因だと考えられていました。表層土の酸性度を改善すれば、すぐにCO2が吸収されると期待されていたのです。",
+        "after": "本研究は、1世紀にわたる農地の石灰施用を「強化風化」のモデルとして調査。その結果、表層土が中和されていても、深さ2m以下の下層土に残る酸性層がCO2吸収成分の移動を妨げ、地下水への到達に30〜100年かかることを実証しました。"
+      },
+      "analogy": {
+        "title": "畑の土壌改良が地下水に届くまでの時間",
+        "body": "これはまるで、畑の表面に肥料をまいて土壌改良をしても、その効果が根の届かない深い層まで浸透するのに時間がかかるようなものです。表面の土はすぐに肥沃になっても、その下の硬い土や酸性の層が邪魔をして、肥料成分が地下水に到達するまでには長い年月がかかります。この研究では、CO2を吸収するアルカリ成分が、畑の深いところにある酸性の土の層に阻まれて、なかなか地下水にたどり着けないことを明らかにしました。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "30-100年",
+          "label": "CO2吸収成分が地下水に到達するまでの遅延"
+        },
+        {
+          "value": "5m",
+          "label": "酸性砂質不飽和帯の厚さ"
+        }
+      ],
+      "whyYouCare": "この研究は、地球温暖化対策として期待される「強化風化」が、実は見かけほど短期間で効果を発揮しない可能性を示唆しています。もしあなたが企業でCO2排出量削減目標を立てているなら、強化風化の導入計画を見直す必要があるかもしれません。また、自治体や政府が気候変動対策の政策を立案する際にも、土壌の深い層まで考慮した長期的な視点と、より詳細な事前調査の重要性を示しています。表面的な対策だけでなく、目に見えない土壌の特性が、環境技術の成否を左右する重要な要素となることを教えてくれます。",
+      "takeawayTalk": "強化風化でCO2吸収しても、土の下の酸性層が邪魔して、効果が出るまで数十年かかるらしいよ！",
+      "bodyText": "本研究では、1世紀にわたる農業的な石灰施用が行われた、かつて酸性だったヒースランドの農地を強化風化の代理実験として利用しました。約5m厚の不飽和帯を通して、間隙ガスと間隙水をサンプリングし、無機炭酸系のパラメータ（間隙ガスPCO2、間隙水中の無機炭酸種、pH、溶存有機炭素、陽イオン交換体組成）を測定しました。これにより、表層土で生成されたアルカリ度が不飽和帯を通過し、下層の帯水層に到達するまでの挙動を追跡しました。\n\n表層土で生成されたアルカリ度（重炭酸イオン）は、土壌水を介して下層へ浸透します。しかし、下層土が酸性である場合、土壌中の陽イオン交換体（粘土鉱物など）に吸着されていたアルミニウム（Al）が、石灰施用で供給されたカルシウム（Ca）と交換されて間隙水中に溶出します。溶出したアルミニウムは水酸化アルミニウムとして沈殿する際にプロトン（H+）を放出します。このプロトンが、CO2吸収成分である重炭酸イオン（HCO3-）と反応して炭酸（H2CO3*）を生成し、最終的にCO2として土壌ガス中に放出され、大気中に戻ってしまうのです。このように、下層土の酸性度がCO2吸収成分を「消費」してしまうため、地下水に到達するまでに大幅な遅延が生じます。",
+      "bodyGlossary": [
+        {
+          "term": "石灰施用",
+          "definition": "土壌の酸性度を中和するために石灰をまくこと。",
+          "start": 17,
+          "end": 21
+        },
+        {
+          "term": "強化風化",
+          "definition": "ケイ酸塩鉱物を土壌に散布し、CO2を吸収・固定する技術。",
+          "start": 45,
+          "end": 49
+        },
+        {
+          "term": "不飽和帯",
+          "definition": "地下水面より上で、土壌の孔隙が空気と水で満たされている層。",
+          "start": 69,
+          "end": 73
+        },
+        {
+          "term": "陽イオン交換体",
+          "definition": "土壌中の粘土鉱物などで、陽イオンを吸着・放出する部位。",
+          "start": 137,
+          "end": 144
+        },
+        {
+          "term": "アルカリ度",
+          "definition": "水中の酸を中和する能力を示す指標。CO2吸収成分。",
+          "start": 170,
+          "end": 175
+        },
+        {
+          "term": "プロトン",
+          "definition": "水素イオン（H+）。酸性を示す物質。",
+          "start": 371,
+          "end": 375
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "石灰施用",
+          "definition": "土壌の酸性度を中和するために石灰をまくこと。",
+          "start": 17,
+          "end": 21
+        },
+        {
+          "term": "強化風化",
+          "definition": "ケイ酸塩鉱物を土壌に散布し、CO2を吸収・固定する技術。",
+          "start": 45,
+          "end": 49
+        },
+        {
+          "term": "不飽和帯",
+          "definition": "地下水面より上で、土壌の孔隙が空気と水で満たされている層。",
+          "start": 69,
+          "end": 73
+        },
+        {
+          "term": "陽イオン交換体",
+          "definition": "土壌中の粘土鉱物などで、陽イオンを吸着・放出する部位。",
+          "start": 137,
+          "end": 144
+        },
+        {
+          "term": "アルカリ度",
+          "definition": "水中の酸を中和する能力を示す指標。CO2吸収成分。",
+          "start": 170,
+          "end": 175
+        },
+        {
+          "term": "プロトン",
+          "definition": "水素イオン（H+）。酸性を示す物質。",
+          "start": 371,
+          "end": 375
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 275,
+      "keyFigure": {
+        "imagePath": "/figures/2607.01835v1_results.jpeg",
+        "page": 3,
+        "caption": "土壌深さごとのpH値と陽イオン交換体の変化を示しています。",
+        "label": "Fig. 1B; shaded areas), along with a 1-to-2-unit higher pH value (Fig. 1C), and a Ca-",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-06T23:06:27.935Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.01835v1_results.jpeg",
+          "page": 3,
+          "caption": "土壌深さごとのpH値と陽イオン交換体の変化を示しています。",
+          "label": "Fig. 1B; shaded areas), along with a 1-to-2-unit higher pH value (Fig. 1C), and a Ca-",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-06T23:06:27.935Z"
+        },
+        {
+          "imagePath": "/figures/2607.01835v1_why.jpeg",
+          "page": 26,
+          "caption": "下層土の酸性度がCO2吸収成分を消費するメカニズムを示しています。",
+          "label": "Fig. 2 in the main text.",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-06T23:06:27.935Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.02321v1",
+      "title": "Value-of-Information Analysis for External Validation of Risk Prediction Models in Multicenter Studies and Systematic Reviews",
+      "authors": [
+        "Laure Wynants",
+        "Kim Zhipei Wang",
+        "Sabine Grimm",
+        "Andrea Gabrio",
+        "Andrew Vickers",
+        "Ewout Steyerberg",
+        "Ben Van Calster",
+        "Mohsen Sadatsafavi"
+      ],
+      "publishedAt": "2026-07-02T15:30:21Z",
+      "url": "https://arxiv.org/abs/2607.02321v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.02321v1.pdf",
+      "categories": [
+        "topic:health",
+        "stat.AP",
+        "stat.ME"
+      ],
+      "abstract": "External validation studies have finite sample sizes, creating uncertainty about whether a prediction model's Net Benefit (NB) exceeds default strategies' NB. The expected value of perfect information (EVPI) quantifies consequences of uncertainty. Current EVPI methods focus on single studies, ignoring between-center heterogeneity. We extend EVPI and expected value of partial perfect information (EVPPI) to account for between-cluster heterogeneity in multicenter studies and meta-analyses. We distinguish between the global and local optimal strategy and between observed and unobserved clusters. We define EVPIglobal, EVPIcluster_j, EVPIcluster, and EVPPIcluster,prevalence, implemented in the MetaNB R package, and illustrate them using a systematic review across 36 centers of the ADNEX model for ovarian cancer diagnosis. Assuming one global decision regarding ADNEX adoption, there is no need for further data to confirm ADNEX is superior overall (EVPIglobal 0). Meta-analysis borrows information across observed clusters, resulting in consistent local superiority of ADNEX and nonzero but typically lower EVPIcluster_j than when considering local data alone. There is 0.03 probability default strategies are superior in unobserved centers. Eliminating uncertainty on performance and prevalence in each (EVPIcluster) would gain 1134 net avoided false positives (FP) per year, assuming 350000 tumors annually with 20% malignancies. Determining only local prevalence with certainty (EVPPIcluster, prevalence) would gain net 158 avoided FP per year. EVPI extensions disentangle sources of uncertainty and quantify the need for further validation to determine the global or locally optimal strategy. Considering uncertainty and heterogeneity in clinical utility across clusters is essential to decide whether additional validation studies are warranted.",
+      "summary": {
+        "gist": "臨床予測モデルは、患者のリスクを予測し、診断や治療の意思決定を支援します。しかし、モデルの性能は開発時とは異なる患者集団に適用すると低下することが多く、そのため「外部妥当性評価」が重要です。この評価は、限られたサンプルサイズや施設間の異質性により不確実性を伴います。この不確実性が、モデルの採用に関する誤った意思決定につながる可能性があります。",
+        "novelty": "これまでの予測モデル評価では、単一の施設での不確実性に着目し、そのモデルを採用すべきか否かを判断していました。しかし、複数の施設や地域でモデルの性能が異なる「異質性」がある場合、その評価は不十分でした。 この研究では、複数の施設や地域にわたる予測モデルの性能の異質性を考慮し、追加のデータ収集がどれだけの価値を持つかを定量化する新しい情報価値分析手法を開発しました。これにより、より賢明な意思決定が可能になります。",
+        "method": "本研究では、予測モデルの臨床的有用性を評価する指標である「純利益（Net Benefit: NB）」に着目し、その不確実性を定量化する「情報価値分析（Value of Information: VoI）」を多施設研究やメタアナリシスに拡張しました。具体的には、グローバルな意思決定とローカルな意思決定のそれぞれに対し、完全情報期待値（EVPI）を定義しました。これは、もし完璧な情報があれば得られるであろう利益と、現在の不確実な情報に基づく利益との差を計算するものです。多施設データでは、各施設のデータと、施設間の異質性を考慮した階層的なベイズメタアナリシスを用いて、NBの事後分布を推定し、そこからVoI指標を算出しました。",
+        "results": "卵巣がん診断モデル（ADNEXモデル）の36施設にわたるシステマティックレビューを例に分析しました。その結果、ADNEXモデルの全体的な優位性を確認するための追加データは不要である（EVPIglobal = 0）ことが示されました。しかし、未観察の施設では、デフォルト戦略が優れている可能性が0.03ありました。各施設でのモデル性能と有病率の不確実性を解消した場合（EVPIcluster）、年間1134件の偽陽性を回避できると推定されました。また、各施設の有病率のみを確定した場合（EVPPIcluster, prevalence）でも、年間158件の偽陽性を回避できると推定されました。",
+        "why": "この情報価値分析の拡張により、不確実性の源泉（例えば、各施設のデータ不足によるものか、施設間の異質性によるものか）を特定し、追加の妥当性評価研究が必要かどうかを定量的に判断できるようになります。多施設データを用いることで、単一施設での評価よりも頑健な結論が得られ、特に施設間の異質性が大きい場合に、どこに焦点を当てて情報を集めるべきかを明確にできます。これにより、限られたリソースを最も効果的なデータ収集に振り向け、より適切な意思決定を支援します。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / stat.AP）",
+      "field": "医学・健康",
+      "categoryL1": "adjacent",
+      "categoryL2": "risk-prediction",
+      "arxivPrimary": "stat.AP",
+      "titleJa": "多施設研究・システマティックレビューにおけるリスク予測モデルの外部妥当性評価のための情報価値分析",
+      "catchTitle": "予測モデル、どこまで信じる？多施設研究での賢い判断",
+      "hook": "あなたの会社で新しいAIツールを導入する際、「本当に効果があるのか？」と迷ったことはありませんか？",
+      "background": "臨床予測モデルは、患者のリスクを予測し、診断や治療の意思決定を支援します。しかし、モデルの性能は開発時とは異なる患者集団に適用すると低下することが多く、そのため「外部妥当性評価」が重要です。この評価は、限られたサンプルサイズや施設間の異質性により不確実性を伴います。この不確実性が、モデルの採用に関する誤った意思決定につながる可能性があります。",
+      "quiz": {
+        "question": "この研究で提案された情報価値分析の拡張が解決しようとしている主な課題は何ですか？",
+        "options": [
+          "予測モデルの計算速度の向上",
+          "単一施設での予測モデルの精度向上",
+          "多施設研究における予測モデル性能の異質性と不確実性の定量化"
+        ],
+        "correctIndex": 2,
+        "explanation": "この研究は、多施設研究やメタアナリシスにおいて、予測モデルの性能が施設間で異なる「異質性」と、データ不足による「不確実性」を定量的に評価し、追加データ収集の価値を測ることを目的としています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "純利益",
+          "definition": "予測モデル使用による臨床的利益を定量化する指標"
+        },
+        {
+          "term": "情報価値分析",
+          "definition": "不確実性解消による意思決定の改善価値を評価"
+        },
+        {
+          "term": "多施設研究",
+          "definition": "複数の医療機関で実施される研究"
+        },
+        {
+          "term": "メタアナリシス",
+          "definition": "複数の研究結果を統合・分析する統計手法"
+        },
+        {
+          "term": "完全情報期待値",
+          "definition": "完璧な情報がある場合の期待利益と現状の差"
+        },
+        {
+          "term": "ベイズメタアナリシス",
+          "definition": "ベイズ統計学を用いたメタアナリシス"
+        },
+        {
+          "term": "事後分布",
+          "definition": "観測データに基づき更新された確率分布"
+        },
+        {
+          "term": "異質性",
+          "definition": "施設や集団間でモデル性能が異なること"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "多施設研究で予測モデルを評価する際、不確実性を数値化し、追加データ収集の価値を測る新手法を提案。",
+      "noveltyContrast": {
+        "before": "これまでの予測モデル評価では、単一の施設での不確実性に着目し、そのモデルを採用すべきか否かを判断していました。しかし、複数の施設や地域でモデルの性能が異なる「異質性」がある場合、その評価は不十分でした。",
+        "after": "この研究では、複数の施設や地域にわたる予測モデルの性能の異質性を考慮し、追加のデータ収集がどれだけの価値を持つかを定量化する新しい情報価値分析手法を開発しました。これにより、より賢明な意思決定が可能になります。"
+      },
+      "analogy": {
+        "title": "品種改良した作物の全国展開、その前に",
+        "body": "これは、新しい品種の作物を開発し、全国の異なる気候や土壌の畑で栽培を検討するようなものです。ある地域の畑では素晴らしい収穫量でも、別の畑ではそうでないかもしれません。この研究は、全国の畑で「この品種を導入すべきか？」、あるいは「特定の地域の畑で最適な品種は何か？」を判断するために、追加の土壌調査や栽培試験がどれほどの価値があるかを数値で教えてくれるようなものです。単に「この品種は良い」と判断するだけでなく、地域ごとの特性を考慮し、どの情報があればより良い決断ができるかを明確にします。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "0",
+          "label": "グローバルな意思決定における追加データ不要"
+        },
+        {
+          "value": "1134",
+          "label": "予測モデルの不確実性解消で年間回避される偽陽性数"
+        },
+        {
+          "value": "158",
+          "label": "地域ごとの疾患有病率の不確実性解消で年間回避される偽陽性数"
+        }
+      ],
+      "whyYouCare": "この研究は、医療現場だけでなく、ビジネスにおけるAI導入や政策決定にも応用可能です。例えば、全国展開を考えているAIサービスが、地域によって異なる効果を示す場合、どこまでデータを集めれば最適な意思決定ができるのかを定量的に判断できます。限られた予算の中で、最も効果的な情報収集戦略を立てるための強力なツールとなるでしょう。これにより、無駄な調査を減らし、より確実性の高い投資判断を下すことが可能になります。",
+      "takeawayTalk": "予測モデルの導入判断、追加データ収集の価値を数値で示せるよ！",
+      "bodyText": "本研究では、予測モデルの臨床的有用性を評価する指標である「純利益（Net Benefit: NB）」に着目し、その不確実性を定量化する「情報価値分析（Value of Information: VoI）」を多施設研究やメタアナリシスに拡張しました。具体的には、グローバルな意思決定とローカルな意思決定のそれぞれに対し、完全情報期待値（EVPI）を定義しました。これは、もし完璧な情報があれば得られるであろう利益と、現在の不確実な情報に基づく利益との差を計算するものです。多施設データでは、各施設のデータと、施設間の異質性を考慮した階層的なベイズメタアナリシスを用いて、NBの事後分布を推定し、そこからVoI指標を算出しました。\n\nこの情報価値分析の拡張により、不確実性の源泉（例えば、各施設のデータ不足によるものか、施設間の異質性によるものか）を特定し、追加の妥当性評価研究が必要かどうかを定量的に判断できるようになります。多施設データを用いることで、単一施設での評価よりも頑健な結論が得られ、特に施設間の異質性が大きい場合に、どこに焦点を当てて情報を集めるべきかを明確にできます。これにより、限られたリソースを最も効果的なデータ収集に振り向け、より適切な意思決定を支援します。",
+      "bodyGlossary": [
+        {
+          "term": "純利益",
+          "definition": "予測モデル使用による臨床的利益を定量化する指標",
+          "start": 29,
+          "end": 32
+        },
+        {
+          "term": "情報価値分析",
+          "definition": "不確実性解消による意思決定の改善価値を評価",
+          "start": 68,
+          "end": 74
+        },
+        {
+          "term": "多施設研究",
+          "definition": "複数の医療機関で実施される研究",
+          "start": 103,
+          "end": 108
+        },
+        {
+          "term": "メタアナリシス",
+          "definition": "複数の研究結果を統合・分析する統計手法",
+          "start": 109,
+          "end": 116
+        },
+        {
+          "term": "完全情報期待値",
+          "definition": "完璧な情報がある場合の期待利益と現状の差",
+          "start": 159,
+          "end": 166
+        },
+        {
+          "term": "異質性",
+          "definition": "施設や集団間でモデル性能が異なること",
+          "start": 257,
+          "end": 260
+        },
+        {
+          "term": "ベイズメタアナリシス",
+          "definition": "ベイズ統計学を用いたメタアナリシス",
+          "start": 269,
+          "end": 279
+        },
+        {
+          "term": "事後分布",
+          "definition": "観測データに基づき更新された確率分布",
+          "start": 287,
+          "end": 291
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "純利益",
+          "definition": "予測モデル使用による臨床的利益を定量化する指標",
+          "start": 29,
+          "end": 32
+        },
+        {
+          "term": "情報価値分析",
+          "definition": "不確実性解消による意思決定の改善価値を評価",
+          "start": 68,
+          "end": 74
+        },
+        {
+          "term": "多施設研究",
+          "definition": "複数の医療機関で実施される研究",
+          "start": 103,
+          "end": 108
+        },
+        {
+          "term": "メタアナリシス",
+          "definition": "複数の研究結果を統合・分析する統計手法",
+          "start": 109,
+          "end": 116
+        },
+        {
+          "term": "完全情報期待値",
+          "definition": "完璧な情報がある場合の期待利益と現状の差",
+          "start": 159,
+          "end": 166
+        },
+        {
+          "term": "異質性",
+          "definition": "施設や集団間でモデル性能が異なること",
+          "start": 257,
+          "end": 260
+        },
+        {
+          "term": "ベイズメタアナリシス",
+          "definition": "ベイズ統計学を用いたメタアナリシス",
+          "start": 269,
+          "end": 279
+        },
+        {
+          "term": "事後分布",
+          "definition": "観測データに基づき更新された確率分布",
+          "start": 287,
+          "end": 291
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 250,
+      "keyFigure": {
+        "imagePath": "/figures/2607.02321v1_results.png",
+        "page": 13,
+        "caption": "ADNEXモデルの性能を、単一施設データと多施設データで比較した結果を示しています。",
+        "label": "Figure 2: Comparison of results in specific observed clusters when data analysis is performed using only data from that ",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-06T23:06:30.216Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.02321v1_results.png",
+          "page": 13,
+          "caption": "ADNEXモデルの性能を、単一施設データと多施設データで比較した結果を示しています。",
+          "label": "Figure 2: Comparison of results in specific observed clusters when data analysis is performed using only data from that ",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-06T23:06:30.216Z"
+        },
+        {
+          "imagePath": "/figures/2607.02321v1_why.png",
+          "page": 9,
+          "caption": "ADNEXモデルのメタアナリシス結果を示しており、多施設研究の全体像を把握できます。",
+          "label": "Figure 1. Meta-analysis results for the ADNEX model",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-06T23:06:30.217Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.01471v1",
+      "title": "Near-Term Emission Targets Need Immediate Attention in the USA",
+      "authors": [
+        "Trevor Barnes",
+        "Kamran Tehranchi",
+        "Brad Reinholz",
+        "Malcolm Metcalfe",
+        "Taco Niet"
+      ],
+      "publishedAt": "2026-07-01T21:03:51Z",
+      "url": "https://arxiv.org/abs/2607.01471v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.01471v1.pdf",
+      "categories": [
+        "topic:urban",
+        "physics.soc-ph"
+      ],
+      "abstract": "Given recent changes in federal climate policy, the United States is unlikely to meet its original 2030 Paris Agreement emission target of a 50-52% reduction from 2005 levels. However, rapid near-term abatement remains achievable through targeted multi-sector energy transitions. Extending the open-source energy system model, PyPSA-USA, to perform multi-sector analysis, we evaluate the primary drivers of USA energy costs and emissions though applying global sensitivity analysis. Our results suggest that fossil fuel price volatility is the dominant driver of marginal electricity and energy costs across most of the nation, however, uncoordinated state-level renewable mandates can induce localized cost spikes due to regional bottlenecks. We find that system climate impact (CO2e) is overwhelming sensitive to fugitive methane leakage rates and global warming potential assumptions. Addressing upstream methane leaks will play a crucial role in abating climate-related damages. Finally, demand-side electrification, specifically light-duty electric vehicles and service sector heating, can act as immediate levers for carbon abatement. The results of this work suggest that many of the Inflation Reduction Act's clean energy initiatives, that have since been repealed, are effective near-term solutions to reduce exposure to fossil fuel price and mitigate future financial penalties associated with the rising social cost of carbon.",
+      "summary": {
+        "gist": "米国はパリ協定の2030年排出削減目標（2005年比50-52%削減）の達成が困難な状況にあります。さらに、インフレ削減法（IRA）のクリーンエネルギー施策が後退したことで、家計や企業のエネルギー支出増加、温室効果ガス排出削減の鈍化が懸念されています。これまでの研究は2050年の脱炭素化経路に焦点を当てていましたが、政策環境の急速な変化に対応するため、短期的な排出削減策の特定が喫緊の課題となっています。",
+        "novelty": "これまでの研究は2050年の脱炭素化経路に焦点を当て、短期的な政策変更の影響や地域ごとの重要性の違いを十分に考慮していませんでした。また、メタン排出の全体像も不明瞭でした。 本研究は、短期的なエネルギー政策の変動と地域ごとの特性を考慮し、米国のエネルギーシステム全体を対象とした多部門モデルで、2030年までの排出削減とコストの主要な要因を特定しました。特にメタン漏出の重要性を強調しています。",
+        "method": "本研究では、オープンソースのエネルギーシステムモデルPyPSA-USAを多部門モデルに拡張し、住宅、商業、産業、運輸部門を明示的に表現しました。また、州レベルの天然ガス供給網を統合し、メタン漏出の影響や貿易フロー制約を考慮しました。このモデルを用いて、米国本土全体でグローバル感度分析（GSA）を実施し、目的コスト、限界電力・エネルギーコスト、CO2排出量、総排出量（CO2とメタン）の5つの主要指標に影響を与える342の不確実性を特定しました。これらの不確実性をモンテカルロ分析で伝播させ、2030年の米国における主要な要因と指標の応答を定量化しました。",
+        "results": "本研究から3つの主要な知見が得られました。第一に、限界コストは化石燃料価格の不確実性に圧倒的に敏感であること。第二に、米国が2030年の排出目標を達成する可能性が極めて低いこと。第三に、短期的な炭素削減には需要側のソリューションが重要であることです。特に、メタン漏出率と地球温暖化係数（GWP）の仮定がシステム全体の気候影響（CO2e）に決定的な影響を与えることが判明しました。また、軽自動車の電化やサービス部門の暖房など、需要側の電化が即座の炭素削減に有効な手段として機能することが示されました。",
+        "why": "限界コストが化石燃料価格に敏感なのは、2030年という短期的な計画期間では、大規模な供給側投資による脱炭素化が難しく、米国が天然ガスや石油などの化石燃料ベースのエネルギー供給に依存し続けるためです。この依存が、化石燃料価格の変動にシステム全体を脆弱にしています。また、再生可能エネルギー導入目標（RPS）が過度に積極的で、周辺インフラを考慮しない場合、地域的なボトルネックにより限界コストが急騰する可能性があります。排出目標達成が困難なのは、現在の排出削減ペースが目標に遠く及ばないためです。メタン漏出が気候影響に決定的なのは、メタンがCO2よりもはるかに強力な温室効果ガスであり、その漏出率やGWPの仮定が総排出量に大きな影響を与えるためです。需要側の電化が有効なのは、電気自動車やヒートポンプなど既存の商業的に実現可能なソリューションの導入を政策が支援することで、迅速な脱炭素化が可能となるためです。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.soc-ph）",
+      "field": "都市・地域",
+      "categoryL1": "serendipity",
+      "categoryL2": "energy-policy",
+      "arxivPrimary": "physics.soc-ph",
+      "titleJa": "米国における短期排出目標は直ちに対応が必要",
+      "catchTitle": "2030年排出目標、達成は絶望的？",
+      "hook": "あなたは地球温暖化対策に貢献したいですか？実は、アメリカの2030年排出削減目標達成は非常に厳しい状況です。",
+      "background": "米国はパリ協定の2030年排出削減目標（2005年比50-52%削減）の達成が困難な状況にあります。さらに、インフレ削減法（IRA）のクリーンエネルギー施策が後退したことで、家計や企業のエネルギー支出増加、温室効果ガス排出削減の鈍化が懸念されています。これまでの研究は2050年の脱炭素化経路に焦点を当てていましたが、政策環境の急速な変化に対応するため、短期的な排出削減策の特定が喫緊の課題となっています。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "PyPSA-USA",
+          "definition": "米国のエネルギーシステムを分析するためのオープンソースモデル。"
+        },
+        {
+          "term": "多部門モデル",
+          "definition": "複数の経済部門を統合して分析するモデル。"
+        },
+        {
+          "term": "グローバル感度分析",
+          "definition": "モデル入力の不確実性が結果に与える影響を評価する手法。"
+        },
+        {
+          "term": "モンテカルロ分析",
+          "definition": "乱数を用いて不確実性を考慮したシミュレーション手法。"
+        },
+        {
+          "term": "限界コスト",
+          "definition": "生産量を1単位増やすのにかかる追加費用。"
+        },
+        {
+          "term": "再生可能エネルギー導入目標",
+          "definition": "電力会社に再生可能エネルギーの導入を義務付ける制度。"
+        },
+        {
+          "term": "メタン漏出",
+          "definition": "天然ガス採掘・輸送過程で大気中に放出されるメタン。"
+        },
+        {
+          "term": "地球温暖化係数",
+          "definition": "温室効果ガスの温暖化能力をCO2と比較した値。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "米国は2030年のパリ協定排出目標達成が困難だが、化石燃料価格変動への対策とメタン漏出削減、電化で短期的な排出削減は可能。",
+      "noveltyContrast": {
+        "before": "これまでの研究は2050年の脱炭素化経路に焦点を当て、短期的な政策変更の影響や地域ごとの重要性の違いを十分に考慮していませんでした。また、メタン排出の全体像も不明瞭でした。",
+        "after": "本研究は、短期的なエネルギー政策の変動と地域ごとの特性を考慮し、米国のエネルギーシステム全体を対象とした多部門モデルで、2030年までの排出削減とコストの主要な要因を特定しました。特にメタン漏出の重要性を強調しています。"
+      },
+      "analogy": {
+        "title": "畑の作付け計画、短期と長期のジレンマ",
+        "body": "これは、農家が今年の収穫目標（短期排出目標）を立てるようなものです。長期的な畑の改良計画（2050年脱炭素化）ばかり考えていると、今年の天候不順（化石燃料価格変動）や病害虫（メタン漏出）への対策が手遅れになり、収穫量が激減してしまいます。目の前の課題に即座に対応する柔軟な作付け計画（短期対策）が、安定した収穫（排出削減）には不可欠なのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、私たちの生活やビジネスに直結するエネルギーコストと気候変動対策の現実を突きつけます。化石燃料価格の変動は、電気代やガソリン代、ひいては物価全体に影響を与え、家計や企業の経営を圧迫する可能性があります。また、メタン漏出の重要性が明らかになったことで、天然ガスを利用する産業や家庭は、その環境負荷を再評価する必要があるでしょう。一方で、電気自動車やヒートポンプといった身近な技術が、短期的な排出削減に大きな効果を持つことが示されており、私たちの選択が未来を変える力を持つことを教えてくれます。政策立案者にとっては、短期的な目標達成に向けた具体的な施策の優先順位付けに役立つ情報であり、企業にとっては、サプライチェーンにおける排出削減の新たな視点を提供するでしょう。",
+      "takeawayTalk": "アメリカの排出目標達成は厳しいけど、化石燃料対策と電化がカギ！",
+      "bodyText": "本研究では、オープンソースのエネルギーシステムモデルPyPSA-USAを多部門モデルに拡張し、住宅、商業、産業、運輸部門を明示的に表現しました。また、州レベルの天然ガス供給網を統合し、メタン漏出の影響や貿易フロー制約を考慮しました。このモデルを用いて、米国本土全体でグローバル感度分析（GSA）を実施し、目的コスト、限界電力・エネルギーコスト、CO2排出量、総排出量（CO2とメタン）の5つの主要指標に影響を与える342の不確実性を特定しました。これらの不確実性をモンテカルロ分析で伝播させ、2030年の米国における主要な要因と指標の応答を定量化しました。\n\n限界コストが化石燃料価格に敏感なのは、2030年という短期的な計画期間では、大規模な供給側投資による脱炭素化が難しく、米国が天然ガスや石油などの化石燃料ベースのエネルギー供給に依存し続けるためです。この依存が、化石燃料価格の変動にシステム全体を脆弱にしています。また、再生可能エネルギー導入目標（RPS）が過度に積極的で、周辺インフラを考慮しない場合、地域的なボトルネックにより限界コストが急騰する可能性があります。排出目標達成が困難なのは、現在の排出削減ペースが目標に遠く及ばないためです。メタン漏出が気候影響に決定的なのは、メタンがCO2よりもはるかに強力な温室効果ガスであり、その漏出率やGWPの仮定が総排出量に大きな影響を与えるためです。需要側の電化が有効なのは、電気自動車やヒートポンプなど既存の商業的に実現可能なソリューションの導入を政策が支援することで、迅速な脱炭素化が可能となるためです。",
+      "bodyGlossary": [
+        {
+          "term": "PyPSA-USA",
+          "definition": "米国のエネルギーシステムを分析するためのオープンソースモデル。",
+          "start": 26,
+          "end": 35
+        },
+        {
+          "term": "多部門モデル",
+          "definition": "複数の経済部門を統合して分析するモデル。",
+          "start": 36,
+          "end": 42
+        },
+        {
+          "term": "メタン漏出",
+          "definition": "天然ガス採掘・輸送過程で大気中に放出されるメタン。",
+          "start": 92,
+          "end": 97
+        },
+        {
+          "term": "グローバル感度分析",
+          "definition": "モデル入力の不確実性が結果に与える影響を評価する手法。",
+          "start": 133,
+          "end": 142
+        },
+        {
+          "term": "モンテカルロ分析",
+          "definition": "乱数を用いて不確実性を考慮したシミュレーション手法。",
+          "start": 232,
+          "end": 240
+        },
+        {
+          "term": "限界コスト",
+          "definition": "生産量を1単位増やすのにかかる追加費用。",
+          "start": 280,
+          "end": 285
+        },
+        {
+          "term": "再生可能エネルギー導入目標",
+          "definition": "電力会社に再生可能エネルギーの導入を義務付ける制度。",
+          "start": 414,
+          "end": 427
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "PyPSA-USA",
+          "definition": "米国のエネルギーシステムを分析するためのオープンソースモデル。",
+          "start": 26,
+          "end": 35
+        },
+        {
+          "term": "多部門モデル",
+          "definition": "複数の経済部門を統合して分析するモデル。",
+          "start": 36,
+          "end": 42
+        },
+        {
+          "term": "メタン漏出",
+          "definition": "天然ガス採掘・輸送過程で大気中に放出されるメタン。",
+          "start": 92,
+          "end": 97
+        },
+        {
+          "term": "グローバル感度分析",
+          "definition": "モデル入力の不確実性が結果に与える影響を評価する手法。",
+          "start": 133,
+          "end": 142
+        },
+        {
+          "term": "モンテカルロ分析",
+          "definition": "乱数を用いて不確実性を考慮したシミュレーション手法。",
+          "start": 232,
+          "end": 240
+        },
+        {
+          "term": "限界コスト",
+          "definition": "生産量を1単位増やすのにかかる追加費用。",
+          "start": 280,
+          "end": 285
+        },
+        {
+          "term": "再生可能エネルギー導入目標",
+          "definition": "電力会社に再生可能エネルギーの導入を義務付ける制度。",
+          "start": 414,
+          "end": 427
+        }
+      ],
+      "agriEconRelevance": "この研究は、農業経済においても重要な示唆を与えます。エネルギーコストの変動は、農業生産コストに直結し、食料価格や農家の経営に大きな影響を与えます。特に、農機具の燃料費や施設園芸の暖房費は、化石燃料価格に左右されやすいです。また、メタン排出は畜産業における重要な課題であり、その漏出削減は農業部門の気候変動対策において不可欠です。本研究の知見は、農業分野における再生可能エネルギー導入の加速、省エネ技術の普及、そしてメタン排出削減技術への投資を促す政策立案に貢献するでしょう。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 267,
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.01471v1_why.png",
+          "page": 14,
+          "caption": "化石燃料価格の変動が、エネルギーの限界コストに大きな影響を与えるメカニズムを示しています。",
+          "label": "Figure 6: Impact of Changing Natural Gas Prices.",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-06T23:06:32.414Z"
+        }
+      ]
+    },
+    {
+      "id": "2606.31188v1",
+      "title": "Social Statements: A Proposal for a Social-Value Balance Sheet and Profit-Loss Statement",
+      "authors": [
+        "Takeshi Kato",
+        "Yoshinori Hiroi",
+        "Sae Horiguchi",
+        "Tetsushi Koike",
+        "Shingo Hashimoto"
+      ],
+      "publishedAt": "2026-06-30T06:18:36Z",
+      "url": "https://arxiv.org/abs/2606.31188v1",
+      "pdfUrl": "https://arxiv.org/pdf/2606.31188v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "physics.soc-ph",
+        "econ.GN"
+      ],
+      "abstract": "This study proposes a new set of a firm's \"social statements\" that represent social value, in contrast to conventional financial statements that represent economic value. Financial statements externalize social and environmental costs, and this externalization is one of the primary causes of contemporary social problems. Insights from anthropology, philosophy, and sociology suggest that social value is grounded in social relationships, joint actions, and communication. Building on this understanding, we assign numerical indicators of a firm's social relationships with external stakeholders to the items of a balance sheet and a profit-loss statement as social statements. This approach enables unified measurement units and simplified calculation compared with existing methods for evaluating social impact or social value. Moreover, similar to financial statements, social statements allow firms to be assessed using managerial indicators such as equity ratios and profit margins. The significance of social statements lies in incorporating social value--alongside financial value--into corporate decision-making, and in encouraging social transformation as firms publicly articulate their social value.",
+      "summary": {
+        "gist": "世界的な格差拡大や資源浪費といった社会課題が深刻化する中、企業の短期的な経済的利益追求がその一因とされています。従来の財務諸表は、ブランド価値や顧客基盤といった無形資産を計上せず、労働搾取や環境汚染といった社会的・環境的コストを外部化するため、企業の真の社会的価値を反映できませんでした。この欠点を補うため、非財務情報開示が進められていますが、社会関係性を統一的に評価する枠組みは未確立でした。",
+        "novelty": "これまでの企業の価値評価は、売上や利益といった経済的価値に偏重していました。ESG投資の広がりで非財務情報開示も進みましたが、社会貢献度は個別の指標に留まり、企業全体の社会との関係性を統一的に捉える枠組みはありませんでした。 本研究は、企業の社会関係性、共同行動、コミュニケーションを数値化し、貸借対照表と損益計算書と同じ形式で「社会計算書」として提示。これにより、社会貢献度を統一的に評価し、財務諸表と同様に経営指標で分析できるようになりました。",
+        "method": "本研究では、企業の社会的価値を「社会関係性」「共同行動」「コミュニケーション」に基づくと定義し、これらを数値化して貸借対照表（B/S）と損益計算書（P/L）の形式で「社会計算書」を構築しました。B/Sでは、企業と外部ステークホルダー（住民、パートナー、地方自治体など）との関係性を「資産」「負債」「純資産」として計上。関係性の深さに応じて「未飽和関係」（流動資産・負債）と「飽和関係」（固定資産・負債）に分類し、長期的な信頼関係は飽和値として扱います。P/Lでは、関係性構築にかかる費用を「売上原価」「販売費及び一般管理費」など、関係性発展を「当期純利益」として計上します。さらに、社会計算書から「自己資本比率」や「ROA（総資産利益率）」といった財務諸表と同様の経営指標を導出し、企業の社会的な安定性や収益性を評価できるようにしました。",
+        "results": "本研究は、企業の社会的価値を財務諸表と同じ形式で統一的に測定・評価できる「社会計算書」の枠組みを提案しました。これにより、企業の社会関係性を可視化し、自己資本比率やROAといった経営指標を用いて、社会的な安定性や効率性を分析することが可能になります。特に、社会計算書における「自己資本比率」は他者への依存度の低さと安定性、「固定資産比率」は安定した信頼関係の確立を示し、「純利益率」は社会的なリターンを生み出す総合的な能力を表します。この新しい会計フレームワークは、企業が経済的価値だけでなく、社会的価値を意思決定に組み込み、社会変革を促進する可能性を示唆しています。",
+        "why": "社会計算書は、企業の活動が社会に与える影響を数値化し、可視化することで、企業が短期的な経済的利益だけでなく、長期的な社会的価値の創造に焦点を当てるよう促します。従来の財務諸表では見過ごされがちだった、地域社会との連携、従業員との良好な関係、環境への配慮といった要素が、具体的な数値として評価されることで、企業の意思決定プロセスに社会的視点が組み込まれます。これにより、企業は社会との関係性を戦略的に管理し、持続可能な成長と社会貢献を両立させるための具体的な目標設定や改善策を立てることが可能になります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.soc-ph）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "farm-management",
+      "arxivPrimary": "physics.soc-ph",
+      "titleJa": "社会計算書：企業の社会的価値を測る新しい会計フレームワークの提案",
+      "catchTitle": "「社会計算書」で企業の真価を見抜く",
+      "hook": "あなたの会社は、本当に社会に貢献していると言えるでしょうか？従来の財務諸表では見えなかった企業の「社会的価値」を測る新たな物差しが登場しました。",
+      "background": "世界的な格差拡大や資源浪費といった社会課題が深刻化する中、企業の短期的な経済的利益追求がその一因とされています。従来の財務諸表は、ブランド価値や顧客基盤といった無形資産を計上せず、労働搾取や環境汚染といった社会的・環境的コストを外部化するため、企業の真の社会的価値を反映できませんでした。この欠点を補うため、非財務情報開示が進められていますが、社会関係性を統一的に評価する枠組みは未確立でした。",
+      "quiz": {
+        "question": "社会計算書において、企業と外部ステークホルダー間の長期的な信頼関係は何に分類されますか？",
+        "options": [
+          "流動資産",
+          "固定資産",
+          "流動負債"
+        ],
+        "correctIndex": 1,
+        "explanation": "社会計算書では、長期的な信頼関係は「飽和関係」として固定資産に分類されます。これは、すぐに現金化できないが、企業の安定した基盤となる資産と見なされるためです。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "財務諸表",
+          "definition": "企業の財政状態や経営成績を示す書類。貸借対照表、損益計算書など。"
+        },
+        {
+          "term": "貸借対照表",
+          "definition": "企業の特定時点の資産、負債、純資産の状態を示す表。"
+        },
+        {
+          "term": "損益計算書",
+          "definition": "企業の一定期間の収益と費用、利益を示す表。"
+        },
+        {
+          "term": "ステークホルダー",
+          "definition": "企業活動によって影響を受ける利害関係者。"
+        },
+        {
+          "term": "無形資産",
+          "definition": "ブランド価値や顧客基盤など、形のない資産。"
+        },
+        {
+          "term": "外部化",
+          "definition": "本来負担すべきコストを他者に転嫁すること。"
+        },
+        {
+          "term": "飽和関係",
+          "definition": "企業とステークホルダー間の長期的な信頼関係。"
+        },
+        {
+          "term": "ROA",
+          "definition": "総資産に対する利益の割合。資産の運用効率を示す。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "企業の社会的価値を、財務諸表と同じ形式で可視化する「社会計算書」を提案し、その具体的な項目と経営指標を示した研究。",
+      "noveltyContrast": {
+        "before": "これまでの企業の価値評価は、売上や利益といった経済的価値に偏重していました。ESG投資の広がりで非財務情報開示も進みましたが、社会貢献度は個別の指標に留まり、企業全体の社会との関係性を統一的に捉える枠組みはありませんでした。",
+        "after": "本研究は、企業の社会関係性、共同行動、コミュニケーションを数値化し、貸借対照表と損益計算書と同じ形式で「社会計算書」として提示。これにより、社会貢献度を統一的に評価し、財務諸表と同様に経営指標で分析できるようになりました。"
+      },
+      "analogy": {
+        "title": "畑の土壌診断と社会計算書",
+        "body": "これはまるで、農家が収穫量だけでなく、畑の「土壌診断」をするようなものです。従来の財務諸表が収穫された作物の量や売上高（経済的価値）を示すのに対し、社会計算書は土壌の質や微生物の多様性、水はけの良さ（社会的価値）を測ります。土壌診断によって、目に見えない土壌の健康状態を把握し、長期的な豊作につながる改善策を立てるように、社会計算書は企業の社会的な健康状態を可視化し、持続可能な成長のための戦略を練る手助けとなります。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、企業が社会に与える影響を「見える化」することで、私たちの生活や社会全体に大きな変化をもたらす可能性を秘めています。例えば、あなたが商品を選ぶ際、価格や品質だけでなく、「この企業は社会にどれだけ貢献しているか」という視点も加わるかもしれません。投資家にとっては、企業の社会的価値を評価する新たな指標となり、より持続可能な企業への投資を促すでしょう。また、企業自身も、社会計算書を通じて自社の強みや改善点を発見し、地域社会との連携強化や従業員満足度の向上など、より良い企業活動へと繋げることができます。結果として、社会全体がより豊かで持続可能な未来へと向かう一歩となるはずです。",
+      "takeawayTalk": "企業の社会的価値を財務諸表と同じ形式で測れるようになったんだ！",
+      "bodyText": "本研究では、企業の社会的価値を「社会関係性」「共同行動」「コミュニケーション」に基づくと定義し、これらを数値化して貸借対照表（B/S）と損益計算書（P/L）の形式で「社会計算書」を構築しました。B/Sでは、企業と外部ステークホルダー（住民、パートナー、地方自治体など）との関係性を「資産」「負債」「純資産」として計上。関係性の深さに応じて「未飽和関係」（流動資産・負債）と「飽和関係」（固定資産・負債）に分類し、長期的な信頼関係は飽和値として扱います。P/Lでは、関係性構築にかかる費用を「売上原価」「販売費及び一般管理費」など、関係性発展を「当期純利益」として計上します。さらに、社会計算書から「自己資本比率」や「ROA（総資産利益率）」といった財務諸表と同様の経営指標を導出し、企業の社会的な安定性や収益性を評価できるようにしました。\n\n社会計算書は、企業の活動が社会に与える影響を数値化し、可視化することで、企業が短期的な経済的利益だけでなく、長期的な社会的価値の創造に焦点を当てるよう促します。従来の財務諸表では見過ごされがちだった、地域社会との連携、従業員との良好な関係、環境への配慮といった要素が、具体的な数値として評価されることで、企業の意思決定プロセスに社会的視点が組み込まれます。これにより、企業は社会との関係性を戦略的に管理し、持続可能な成長と社会貢献を両立させるための具体的な目標設定や改善策を立てることが可能になります。",
+      "bodyGlossary": [
+        {
+          "term": "貸借対照表",
+          "definition": "企業の特定時点の資産、負債、純資産の状態を示す表。",
+          "start": 57,
+          "end": 62
+        },
+        {
+          "term": "損益計算書",
+          "definition": "企業の一定期間の収益と費用、利益を示す表。",
+          "start": 68,
+          "end": 73
+        },
+        {
+          "term": "ステークホルダー",
+          "definition": "企業活動によって影響を受ける利害関係者。",
+          "start": 108,
+          "end": 116
+        },
+        {
+          "term": "飽和関係",
+          "definition": "企業とステークホルダー間の長期的な信頼関係。",
+          "start": 171,
+          "end": 175
+        },
+        {
+          "term": "ROA",
+          "definition": "総資産に対する利益の割合。資産の運用効率を示す。",
+          "start": 308,
+          "end": 311
+        },
+        {
+          "term": "財務諸表",
+          "definition": "企業の財政状態や経営成績を示す書類。貸借対照表、損益計算書など。",
+          "start": 324,
+          "end": 328
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "貸借対照表",
+          "definition": "企業の特定時点の資産、負債、純資産の状態を示す表。",
+          "start": 57,
+          "end": 62
+        },
+        {
+          "term": "損益計算書",
+          "definition": "企業の一定期間の収益と費用、利益を示す表。",
+          "start": 68,
+          "end": 73
+        },
+        {
+          "term": "ステークホルダー",
+          "definition": "企業活動によって影響を受ける利害関係者。",
+          "start": 108,
+          "end": 116
+        },
+        {
+          "term": "飽和関係",
+          "definition": "企業とステークホルダー間の長期的な信頼関係。",
+          "start": 171,
+          "end": 175
+        },
+        {
+          "term": "ROA",
+          "definition": "総資産に対する利益の割合。資産の運用効率を示す。",
+          "start": 308,
+          "end": 311
+        },
+        {
+          "term": "財務諸表",
+          "definition": "企業の財政状態や経営成績を示す書類。貸借対照表、損益計算書など。",
+          "start": 324,
+          "end": 328
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 266
+    }
+  ]
+}

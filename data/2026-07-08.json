@@ -1,0 +1,861 @@
+{
+  "date": "2026-07-08",
+  "papers": [
+    {
+      "id": "2607.04456v1",
+      "title": "Mathematical Model of Evolution of Non-Degenerate Replicator Systems",
+      "authors": [
+        "Alexander S. Bratus",
+        "Sergey Drozhzhin",
+        "Tatiana Yakushkina"
+      ],
+      "publishedAt": "2026-07-05T18:46:49Z",
+      "url": "https://arxiv.org/abs/2607.04456v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.04456v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "q-bio.PE",
+        "math.DS",
+        "math.OC"
+      ],
+      "abstract": "We propose and analyse a mathematical model of evolutionary adaptation for non-degenerate (permanent) replicator systems, in which the fitness landscape matrix evolves on a slow timescale -- the evolutionary time -- while the species dynamics unfold on a fast timescale. Under a two-timescale separation justified by Tikhonov's theorem, the adaptation problem reduces to maximising the mean fitness at steady state over a convex admissible set of fitness landscape matrices. We derive a fitness variation formula and establish necessary and sufficient conditions for a fitness maximum, showing that the optimisation reduces at each step to a linear programming problem. The algorithm is applied to four canonical replicator systems: the hypercycle, the bi-hypercycle, the anthill system, and the RNA molecule network. In all cases the evolutionary process follows a universal three-phase pattern: an initial phase of fitness growth without equilibrium shift, during which purely altruistic replication gives way to mixed altruistic-selfish behaviour; a second phase of dominant species emergence; and a stabilisation phase analogous to the error catastrophe threshold in quasispecies models. A key consequence is that all evolved systems acquire resistance to parasitic species. We further prove that without non-degeneracy constraints the process leads to sequential species annihilation, with a provable spectral lower bound on fitness increase by dimension reduction.",
+      "summary": {
+        "gist": "レプリケーターシステムとは、自己複製し、遺伝的変異を持ち、資源を巡って競争するあらゆる実体を指します。生物の進化を数理的に記述する上で重要な概念ですが、従来のモデルでは、生物の適応度を決定する「適応度景観」が固定されているという仮定が一般的でした。しかし、実際の自然界では、環境自体も時間とともに変化し、生物の進化に影響を与えます。この研究は、この固定された適応度景観の仮定を緩和し、適応度景観自体が進化するモデルを提案することで、より現実に近い進化のダイナミクスを解明しようとしています。",
+        "novelty": "従来のレプリケーター理論では、生物の適応度を決める環境（適応度景観）は固定されていると仮定されていました。そのため、生物がどのように環境に適応していくか、その動的な変化を捉えることが困難でした。 この論文では、適応度景観自体がゆっくりと進化する新しい数理モデルを提案。生物の動態と環境の変化が異なる時間スケールで進行すると仮定し、環境適応が平均適応度を最大化する問題として捉えられることを示しました。",
+        "method": "本研究では、レプリケーターシステムの進化適応を記述する数理モデルを提案しました。このモデルでは、種の動態が「速い時間スケール」で展開する一方で、適応度景観行列が「遅い時間スケール」（進化時間）で進化するという「二つの時間スケール分離」を仮定しています。この分離は、チホノフの定理によって正当化されます。適応問題は、定常状態における平均適応度を、適応度景観行列の凸な許容集合上で最大化することに帰着されます。研究では、適応度変動の公式を導出し、適応度最大化のための必要十分条件を確立しました。これにより、最適化問題は各ステップで線形計画問題に還元されます。このアルゴリズムは、ハイパーサイクル、バイハイパーサイクル、アリ塚システム、RNA分子ネットワークという4つの典型的なレプリケーターシステムに適用されました。",
+        "results": "進化プロセスは普遍的な3段階パターンに従うことが判明しました。第一段階は、平衡状態のシフトを伴わない適応度成長の初期段階で、純粋に利他的な複製が利他的・利己的混合行動へと移行します。第二段階では、優勢種の出現が見られます。そして第三段階は、準種モデルにおけるエラー破局閾値に類似した安定化段階です。重要な結果として、進化するすべてのシステムは寄生種に対する耐性を獲得することが示されました。さらに、非縮退制約がない場合、プロセスは連続的な種の絶滅につながり、次元削減による適応度増加の下限が証明されました。",
+        "why": "適応度景観がゆっくりと変化することで、システムは定常状態での平均適応度を最大化するように進化します。初期段階では、システム全体の適応度を高める「利他的」な振る舞いが有利ですが、環境の変化に適応する中で、より効率的に資源を獲得し自己複製する「利己的」な振る舞いが優勢になります。この移行は、特定の種が環境変化に適応し、他の種を圧倒する「優勢種」として確立されるプロセスを伴います。最終的に、システムは安定した状態に達し、外部からの脅威（寄生種）に対しても耐性を持つようになります。これは、環境変化が生物の相互作用パターンを再構築し、より強靭なシステムを構築するメカニズムを示唆しています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.PE）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "evolutionary-economics",
+      "arxivPrimary": "q-bio.PE",
+      "titleJa": "非縮退レプリケーターシステムの進化の数理モデル",
+      "catchTitle": "環境適応で「利他的」から「利己的」へ？",
+      "hook": "あなたは、競争の激しい市場で生き残るために、戦略をどう進化させますか？この研究は、生物の進化が示す驚くべきパターンを明らかにします。",
+      "background": "レプリケーターシステムとは、自己複製し、遺伝的変異を持ち、資源を巡って競争するあらゆる実体を指します。生物の進化を数理的に記述する上で重要な概念ですが、従来のモデルでは、生物の適応度を決定する「適応度景観」が固定されているという仮定が一般的でした。しかし、実際の自然界では、環境自体も時間とともに変化し、生物の進化に影響を与えます。この研究は、この固定された適応度景観の仮定を緩和し、適応度景観自体が進化するモデルを提案することで、より現実に近い進化のダイナミクスを解明しようとしています。",
+      "quiz": {
+        "question": "この研究で示された進化プロセスの3段階パターンで、最初に起こることは何ですか？",
+        "options": [
+          "優勢種の出現",
+          "純粋に利他的な複製から利他的・利己的混合行動への移行",
+          "安定化段階の開始"
+        ],
+        "correctIndex": 1,
+        "explanation": "進化プロセスの第一段階は、平衡状態のシフトを伴わない適応度成長の初期段階で、純粋に利他的な複製が利他的・利己的混合行動へと移行することです。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "レプリケーターシステム",
+          "definition": "自己複製し、変異し、資源を競争する実体。"
+        },
+        {
+          "term": "適応度景観",
+          "definition": "生物の適応度を決定する環境要因の集合。"
+        },
+        {
+          "term": "二つの時間スケール分離",
+          "definition": "異なる速さで進行するプロセスを区別する。"
+        },
+        {
+          "term": "チホノフの定理",
+          "definition": "多時間スケールシステムを解析する数学的定理。"
+        },
+        {
+          "term": "平均適応度",
+          "definition": "集団全体の適応度の平均値。"
+        },
+        {
+          "term": "線形計画問題",
+          "definition": "線形制約下で線形関数を最適化する問題。"
+        },
+        {
+          "term": "ハイパーサイクル",
+          "definition": "複数の種が互いに触媒し合う複製システム。"
+        },
+        {
+          "term": "非縮退制約",
+          "definition": "全種が長期的に共存するための条件。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "生物の適応進化を数理モデルで解析した結果、環境（適応度景観）が変化する中で、利他的な振る舞いから利己的な振る舞いへと移行し、寄生種への耐性を獲得することが示されました。",
+      "noveltyContrast": {
+        "before": "従来のレプリケーター理論では、生物の適応度を決める環境（適応度景観）は固定されていると仮定されていました。そのため、生物がどのように環境に適応していくか、その動的な変化を捉えることが困難でした。",
+        "after": "この論文では、適応度景観自体がゆっくりと進化する新しい数理モデルを提案。生物の動態と環境の変化が異なる時間スケールで進行すると仮定し、環境適応が平均適応度を最大化する問題として捉えられることを示しました。"
+      },
+      "analogy": {
+        "title": "畑の土壌改良と作物の品種改良",
+        "body": "これは、農家が毎年同じ作物を育て続けるのではなく、土壌（適応度景観）をゆっくりと改良しながら、その土壌に最も適した作物の品種（レプリケーター）を選んでいくようなものです。最初は皆で協力して土壌を豊かにしますが（利他的）、やがて特定の品種がその土壌で圧倒的な収穫を上げ始め（利己的）、病害虫（寄生種）にも強くなる。土壌の変化と品種の進化が、異なる速さで進むことで、全体の収穫量（平均適応度）が最大化されるのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、生物の進化だけでなく、企業戦略や社会システムの変革にも示唆を与えます。競争環境が常に変化する現代において、あなたの会社や組織は、固定された戦略（適応度景観）に固執していませんか？このモデルが示すように、環境の変化に合わせて戦略自体を柔軟に進化させることで、最初は利他的な協力関係から始まり、やがて特定の強みが際立つ「優勢種」のような存在へと成長し、市場の「寄生種」（競合や予期せぬリスク）に対する耐性を高めることができるかもしれません。変化を恐れず、適応度景観を自ら変革していく視点が、持続的な成長には不可欠です。",
+      "takeawayTalk": "環境が変わると、生物は利他的から利己的になり、寄生種に強くなるって！",
+      "bodyText": "本研究では、レプリケーターシステムの進化適応を記述する数理モデルを提案しました。このモデルでは、種の動態が「速い時間スケール」で展開する一方で、適応度景観行列が「遅い時間スケール」（進化時間）で進化するという「二つの時間スケール分離」を仮定しています。この分離は、チホノフの定理によって正当化されます。適応問題は、定常状態における平均適応度を、適応度景観行列の凸な許容集合上で最大化することに帰着されます。研究では、適応度変動の公式を導出し、適応度最大化のための必要十分条件を確立しました。これにより、最適化問題は各ステップで線形計画問題に還元されます。このアルゴリズムは、ハイパーサイクル、バイハイパーサイクル、アリ塚システム、RNA分子ネットワークという4つの典型的なレプリケーターシステムに適用されました。\n\n適応度景観がゆっくりと変化することで、システムは定常状態での平均適応度を最大化するように進化します。初期段階では、システム全体の適応度を高める「利他的」な振る舞いが有利ですが、環境の変化に適応する中で、より効率的に資源を獲得し自己複製する「利己的」な振る舞いが優勢になります。この移行は、特定の種が環境変化に適応し、他の種を圧倒する「優勢種」として確立されるプロセスを伴います。最終的に、システムは安定した状態に達し、外部からの脅威（寄生種）に対しても耐性を持つようになります。これは、環境変化が生物の相互作用パターンを再構築し、より強靭なシステムを構築するメカニズムを示唆しています。",
+      "bodyGlossary": [
+        {
+          "term": "レプリケーターシステム",
+          "definition": "自己複製し、変異し、資源を競争する実体。",
+          "start": 6,
+          "end": 17
+        },
+        {
+          "term": "適応度景観",
+          "definition": "生物の適応度を決定する環境要因の集合。",
+          "start": 72,
+          "end": 77
+        },
+        {
+          "term": "二つの時間スケール分離",
+          "definition": "異なる速さで進行するプロセスを区別する。",
+          "start": 105,
+          "end": 116
+        },
+        {
+          "term": "チホノフの定理",
+          "definition": "多時間スケールシステムを解析する数学的定理。",
+          "start": 132,
+          "end": 139
+        },
+        {
+          "term": "平均適応度",
+          "definition": "集団全体の適応度の平均値。",
+          "start": 165,
+          "end": 170
+        },
+        {
+          "term": "線形計画問題",
+          "definition": "線形制約下で線形関数を最適化する問題。",
+          "start": 263,
+          "end": 269
+        },
+        {
+          "term": "ハイパーサイクル",
+          "definition": "複数の種が互いに触媒し合う複製システム。",
+          "start": 287,
+          "end": 295
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "レプリケーターシステム",
+          "definition": "自己複製し、変異し、資源を競争する実体。",
+          "start": 6,
+          "end": 17
+        },
+        {
+          "term": "適応度景観",
+          "definition": "生物の適応度を決定する環境要因の集合。",
+          "start": 72,
+          "end": 77
+        },
+        {
+          "term": "二つの時間スケール分離",
+          "definition": "異なる速さで進行するプロセスを区別する。",
+          "start": 105,
+          "end": 116
+        },
+        {
+          "term": "チホノフの定理",
+          "definition": "多時間スケールシステムを解析する数学的定理。",
+          "start": 132,
+          "end": 139
+        },
+        {
+          "term": "平均適応度",
+          "definition": "集団全体の適応度の平均値。",
+          "start": 165,
+          "end": 170
+        },
+        {
+          "term": "線形計画問題",
+          "definition": "線形制約下で線形関数を最適化する問題。",
+          "start": 263,
+          "end": 269
+        },
+        {
+          "term": "ハイパーサイクル",
+          "definition": "複数の種が互いに触媒し合う複製システム。",
+          "start": 287,
+          "end": 295
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 274,
+      "keyFigure": {
+        "imagePath": "/figures/2607.04456v1_results.png",
+        "page": 12,
+        "caption": "システム全体の平均適応度が単調に増加する様子を示しています。",
+        "label": "Figure 3: Mean fitness ¯f(τ) of system (18) for n = 9. The fitness increases monotonically",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-07T23:00:23.658Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.04456v1_results.png",
+          "page": 12,
+          "caption": "システム全体の平均適応度が単調に増加する様子を示しています。",
+          "label": "Figure 3: Mean fitness ¯f(τ) of system (18) for n = 9. The fitness increases monotonically",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-07T23:00:23.658Z"
+        },
+        {
+          "imagePath": "/figures/2607.04456v1_why.jpeg",
+          "page": 4,
+          "caption": "平均適応度景観の概念図で、システムが適応度を最大化するように進化する様子を示しています。",
+          "label": "Figure 1: Schematic representation of the mean fitness landscape [24].",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-07T23:00:23.658Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.04753v1",
+      "title": "Fooling Yourself: how narratives shape beliefs",
+      "authors": [
+        "Andrea Albertazzi",
+        "Paolo Pin",
+        "Marco Stimolo",
+        "Alessandro Stringhi"
+      ],
+      "publishedAt": "2026-07-06T07:45:27Z",
+      "url": "https://arxiv.org/abs/2607.04753v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.04753v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "econ.GN"
+      ],
+      "abstract": "Decision-makers usually receive information through narratives that combine diagnostic evidence with nondiagnostic details. In a laboratory experiment, we study how such nondiagnostic clues affect belief updating. Participants repeatedly report beliefs in a Bayesian inference task within a narrative context. Reduced-form estimates and subject-level classifications show that nondiagnostic narrative clues systematically induce belief revision toward maximal uncertainty, weakening previously accumulated diagnostic evidence. This effect is weaker in an equivalent abstract context and disappears in an identical narrative task when nondiagnostic clues are replaced by no-information messages. We assess the economic significance of such return to uncertainty by showing that it delays belief convergence, thereby increasing the amount of information agents require before making a decision.",
+      "summary": {
+        "gist": "私たちは日常生活で、事実だけでなく、一貫した解釈の枠組みを持つ「物語」を通して多くの情報を得ています。これらの物語には、関連性の高い情報（診断的情報）と、無関係な詳細（非診断的情報）が混在していることがよくあります。裁判所での証拠規則や企業の開示情報など、多くの制度では無関係な情報が判断を汚染する可能性を懸念し、排除しようとします。しかし、投資家が企業の開示文書の読みやすさやトーンに反応するように、事実に基づいた物語でさえ、根本的な解釈を形成する可能性があります。本研究は、物語文脈における無関係な情報が、人々の信念形成にどのような影響を与えるかを実験的に検証しました。",
+        "novelty": "これまで、無関係な情報（非診断的情報）が判断を弱める「希薄化効果」は知られていました。しかし、その多くは診断的情報と非診断的情報が同時に提示される静的な状況での研究でした。また、非診断的情報がなぜ信念を歪めるのか、そのメカニズムは不明確でした。 この研究は、物語という文脈で提示された非診断的情報が、ベイジアン更新の原則に反して、人々の信念を「最大の不確実性」へと引き戻すことを実験で明らかにしました。これにより、無関係な情報が意思決定を遅らせる経済的な影響も示しています。",
+        "method": "本研究では、参加者を3つのグループに分け、ベイジアン推論タスクを行いました。参加者は、2つの状態のどちらかについて、一連のシグナルを観察し、主観的な信念を繰り返し報告します。データ生成プロセスは完全に指定され、参加者に知らされています。\n\n1. Urn（抽象的）条件: 参加者は抽象的な壺の問題に直面します。2つの壺のどちらかがランダムに選ばれ、赤と緑のボールの構成が対称的です。白いボールは両方の壺に均等に存在し、非診断的です。\n2. Story（物語）条件: 同じ推論問題が、2人の容疑者が関わる架空の窃盗物語として提示されます。診断的な手がかりは容疑者のどちらか一方を明確に指し示しますが、非診断的な手がかりはどちらの容疑者も有利にしません。\n3. Story No Info（物語・情報なし）条件: 窃盗捜査の枠組みと診断的な手がかりはStory条件と同じですが、非診断的な手がかりは「このラウンドでは新しい手がかりはなかった」というメッセージに置き換えられます。\n\nこれにより、StoryとUrnの比較で物語の枠組みが信念更新に与える影響を、StoryとStory No Infoの比較で物語の枠組み内で非診断的な手がかりが明示的に提示される効果を分離して測定しました。",
+        "results": "物語条件（Story）では、参加者は非診断的な手がかりを観察した後、ベイジアンルールでは更新が不要であるにもかかわらず、体系的に信念を修正しました。この修正はランダムではなく、信念が「最大の不確実性」（0.5）へと引き戻され、それまでに蓄積された診断的証拠の影響を弱めることが示されました。対照的に、同じ物語の枠組みから非診断的な手がかりが取り除かれたStory No Info条件では、信念更新はベイジアンベンチマークに大幅に近づきました。\n\n具体的には、診断的シグナル後の更新は条件間で概ね類似していましたが、非診断的シグナル後の信念修正はStory条件でより頻繁に発生しました。行動モデル分析では、Story条件において非診断的な手がかりが約12%の確率で、あたかも基礎となる状態に関する情報を伝えているかのように処理されていることが示され、これはUrn条件とStory No Info条件ではほとんど見られませんでした。さらに、非診断的な物語の手がかりは信念を最大の不確実性へと引き戻す傾向があり、これは事前信念が0.5から大きく離れていても持続し、無関係な手がかりが蓄積された証拠を無効にしうることを示しています。\n\n経済的意義として、モンテカルロシミュレーションにより、信念の歪みが意思決定を遅らせることを示しました。Story No Info条件と比較して、Story条件では意思決定の閾値に達するまでにより多くのシグナルが必要となり、情報収集が長期化し、行動が遅れることが明らかになりました。",
+        "why": "物語形式で提示された無関係な情報は、人々がすべての要素間のつながりを探そうとする心理を刺激します。特に情報が不完全または曖昧な場合、物語は事実を一貫した解釈の枠組みに整理するため、たとえ非診断的な詳細であっても信念形成に組み込まれてしまいます。このプロセスは、無関係な情報が「何か意味があるのではないか」という認知的な錯覚を引き起こし、それまでの確信を揺るがし、信念を最も不確実な状態（どちらとも言えない状態）へとリセットする効果があると考えられます。これは、特定の方向への説得ではなく、不確実性への回帰という形で信念を歪める、新たな非ベイジアン更新のメカニズムです。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "behavioral-economics",
+      "arxivPrimary": "econ.GN",
+      "titleJa": "物語が信念形成に与える影響：無関係な情報が不確実性を高めるメカニズム",
+      "catchTitle": "物語の「どうでもいい情報」が判断を鈍らせる？",
+      "hook": "あなたは重要な決断を迫られた時、関係ない情報に惑わされて、かえって判断が鈍った経験はありませんか？",
+      "background": "私たちは日常生活で、事実だけでなく、一貫した解釈の枠組みを持つ「物語」を通して多くの情報を得ています。これらの物語には、関連性の高い情報（診断的情報）と、無関係な詳細（非診断的情報）が混在していることがよくあります。裁判所での証拠規則や企業の開示情報など、多くの制度では無関係な情報が判断を汚染する可能性を懸念し、排除しようとします。しかし、投資家が企業の開示文書の読みやすさやトーンに反応するように、事実に基づいた物語でさえ、根本的な解釈を形成する可能性があります。本研究は、物語文脈における無関係な情報が、人々の信念形成にどのような影響を与えるかを実験的に検証しました。",
+      "quiz": {
+        "question": "この研究で、物語形式で提示された「非診断的情報」が人々の信念に与える主な影響は何でしたか？",
+        "options": [
+          "特定の方向へ信念を強く誘導する",
+          "信念を最大の不確実性へと引き戻す",
+          "信念更新には全く影響を与えない"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究では、物語形式で提示された非診断的情報が、ベイジアン更新の原則に反して、人々の信念を「最大の不確実性」へと引き戻すことが示されました。これは、特定の方向への説得ではなく、不確実性への回帰という形で信念を歪めるメカニズムです。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "ベイジアン推論",
+          "definition": "新しい情報に基づいて信念を合理的に更新する数学的手法"
+        },
+        {
+          "term": "診断的情報",
+          "definition": "意思決定に必要な、関連性の高い情報"
+        },
+        {
+          "term": "非診断的情報",
+          "definition": "意思決定に無関係で、証拠価値のない情報"
+        },
+        {
+          "term": "希薄化効果",
+          "definition": "無関係な情報が判断の根拠を弱める現象"
+        },
+        {
+          "term": "信念更新",
+          "definition": "新しい情報を取り入れて考えを修正すること"
+        },
+        {
+          "term": "最大の不確実性",
+          "definition": "どちらの可能性も50%と考える状態"
+        },
+        {
+          "term": "モンテカルロシミュレーション",
+          "definition": "乱数を用いて確率的な現象を再現する手法"
+        },
+        {
+          "term": "ベイジアンベンチマーク",
+          "definition": "ベイジアン推論による理想的な信念更新"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "物語形式で提示された無関係な情報は、人々の信念を不確実な方向へ引き戻し、意思決定を遅らせる。",
+      "noveltyContrast": {
+        "before": "これまで、無関係な情報（非診断的情報）が判断を弱める「希薄化効果」は知られていました。しかし、その多くは診断的情報と非診断的情報が同時に提示される静的な状況での研究でした。また、非診断的情報がなぜ信念を歪めるのか、そのメカニズムは不明確でした。",
+        "after": "この研究は、物語という文脈で提示された非診断的情報が、ベイジアン更新の原則に反して、人々の信念を「最大の不確実性」へと引き戻すことを実験で明らかにしました。これにより、無関係な情報が意思決定を遅らせる経済的な影響も示しています。"
+      },
+      "analogy": {
+        "title": "豊作を願う農家の判断を曇らせる「天気予報の雑談」",
+        "body": "これは、まるで農家が今年の豊作を願って、土壌の状態や過去の収穫量といった「診断的な情報」を丹念に分析している時に、隣の農家が「最近、うちの畑の隅に珍しい鳥が来たんだよ」と、作物の生育には全く関係ない「非診断的な情報」を物語のように語りかけるようなものです。この雑談自体は、豊作になるかどうかの判断には無関係なはずなのに、農家はなぜか「もしかしたら、何か見落としているのでは？」と、それまでの確信が揺らぎ、判断を保留してしまう。結果として、肥料をまくタイミングや品種選びといった重要な意思決定が遅れてしまう、という状況に似ています。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+12%",
+          "label": "物語文脈で非診断的情報が処理される割合"
+        }
+      ],
+      "whyYouCare": "この研究は、私たちが日々触れる情報、特にニュース記事、企業のIR資料、SNSの投稿、あるいは友人との会話など、物語形式で提示される情報が、いかに私たちの判断を無意識のうちに歪めるかを示しています。一見無関係に見える「どうでもいい情報」が、実は私たちの確信を揺るがし、意思決定を遅らせる原因になっているかもしれません。ビジネスの現場で重要な投資判断をする際や、日々の生活で大きな買い物をする際など、情報過多の現代において、何が本当に重要で、何が無関係なのかを見極める力が、これまで以上に求められていることを教えてくれます。情報の受け手として、また発信者として、この「物語の力」を理解することは、より賢明な判断を下す上で不可欠です。",
+      "takeawayTalk": "物語のどうでもいい情報って、判断を鈍らせて決断を遅らせるんだって！",
+      "bodyText": "本研究では、参加者を3つのグループに分け、ベイジアン推論タスクを行いました。参加者は、2つの状態のどちらかについて、一連のシグナルを観察し、主観的な信念を繰り返し報告します。データ生成プロセスは完全に指定され、参加者に知らされています。\n\n1. Urn（抽象的）条件: 参加者は抽象的な壺の問題に直面します。2つの壺のどちらかがランダムに選ばれ、赤と緑のボールの構成が対称的です。白いボールは両方の壺に均等に存在し、非診断的です。\n2. Story（物語）条件: 同じ推論問題が、2人の容疑者が関わる架空の窃盗物語として提示されます。診断的な手がかりは容疑者のどちらか一方を明確に指し示しますが、非診断的な手がかりはどちらの容疑者も有利にしません。\n3. Story No Info（物語・情報なし）条件: 窃盗捜査の枠組みと診断的な手がかりはStory条件と同じですが、非診断的な手がかりは「このラウンドでは新しい手がかりはなかった」というメッセージに置き換えられます。\n\nこれにより、StoryとUrnの比較で物語の枠組みが信念更新に与える影響を、StoryとStory No Infoの比較で物語の枠組み内で非診断的な手がかりが明示的に提示される効果を分離して測定しました。\n\n\n物語形式で提示された無関係な情報は、人々がすべての要素間のつながりを探そうとする心理を刺激します。特に情報が不完全または曖昧な場合、物語は事実を一貫した解釈の枠組みに整理するため、たとえ非診断的な詳細であっても信念形成に組み込まれてしまいます。このプロセスは、無関係な情報が「何か意味があるのではないか」という認知的な錯覚を引き起こし、それまでの確信を揺るがし、信念を最も不確実な状態（どちらとも言えない状態）へとリセットする効果があると考えられます。これは、特定の方向への説得ではなく、不確実性への回帰という形で信念を歪める、新たな非ベイジアン更新のメカニズムです。",
+      "bodyGlossary": [
+        {
+          "term": "ベイジアン推論",
+          "definition": "新しい情報に基づいて信念を合理的に更新する数学的手法",
+          "start": 21,
+          "end": 28
+        },
+        {
+          "term": "信念更新",
+          "definition": "新しい情報を取り入れて考えを修正すること",
+          "start": 464,
+          "end": 468
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "ベイジアン推論",
+          "definition": "新しい情報に基づいて信念を合理的に更新する数学的手法",
+          "start": 21,
+          "end": 28
+        },
+        {
+          "term": "信念更新",
+          "definition": "新しい情報を取り入れて考えを修正すること",
+          "start": 464,
+          "end": 468
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 368
+    },
+    {
+      "id": "2607.04253v1",
+      "title": "Diffusion bridge with randomized initial and terminal times and its application to fish migration",
+      "authors": [
+        "Hidekazu Yoshioka",
+        "Mohammed Louriki"
+      ],
+      "publishedAt": "2026-07-05T12:09:58Z",
+      "url": "https://arxiv.org/abs/2607.04253v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.04253v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "q-bio.PE",
+        "math.PR"
+      ],
+      "abstract": "We mathematically model the dynamics of the number of migratory fish observed at a fixed location along a river in a random environment. Particularly, as a new approach, we construct a stochastic differential equation that incorporates the influence of environmental factors on the fluctuations in the start and end of migration. The model is a diffusion bridge with a non-Lipschitz diffusion coefficient, called the Cox-Ingersoll-Ross bridge, and has random initial and terminal times arising from time-change, so that the influences of environmental factors can be efficiently incorporated. The well-posedness of the model is first established, which is considered novel and significant in applied mathematics. Second, we estimate the parameters of the model based on the latest multiyear daily data set for the upstream migration of Plecoglossus altivelis altivelis (Ayu) by relying on the hypothesis that water temperature affects the migration of the fish, which has been suggested in existing studies. We also explore the application of the proposed model to the challenging task of analyzing environmental DNA data. This study advances the development of a theory of fish migration that is simple yet can take environmental factors into account.",
+      "summary": {
+        "gist": "魚の回遊は、水生生態系の食物連鎖や栄養循環を形成し、漁業資源の豊かさに直接影響を与えるため、その個体群動態を定量的に把握することは重要です。これまで、様々な魚種や環境において回遊の動態に関する知見が蓄積されてきましたが、これらの知見を結びつける統一的な理論の構築はまだ不十分でした。特に、環境要因と回遊動態の関係を数学的に記述する確立された手法が不足していました。",
+        "novelty": "従来の魚の回遊モデルは、回遊の開始・終了時刻が固定されており、実際の環境要因による変動を捉えきれていませんでした。例えば、水温の変化で回遊が早まったり遅れたりする現象を、モデルで直接的に表現するのが困難でした。 この研究では、環境要因（水温など）が回遊の開始・終了時刻に影響を与えることを考慮し、これらの時刻を確率的に変動させる新しい数理モデルを構築しました。これにより、より現実に即した魚の回遊ダイナミクスを予測できるようになりました。",
+        "method": "本研究では、従来のCIRブリッジモデルを拡張し、環境要因の影響を組み込むために「生物学的時計」という概念を導入しました。これは、非負で増加する確率過程として数学的に表現され、回遊の開始・終了時刻をランダムに変動させます。この新しいモデルの数学的な妥当性（解の存在と一意性）を確立しました。さらに、このモデルをアユの遡上データに適用し、水温がアユの遡上開始・終了に影響を与えるという仮説に基づいてパラメータを推定しました。また、環境DNAデータへの応用可能性も探求しました。",
+        "results": "新しいモデルは、環境要因（特に水温）が魚の回遊開始・終了時刻に与える影響を効率的に組み込むことができました。これにより、アユの遡上における年ごとの変動をより現実的に記述し、予測する能力が向上しました。モデルの数学的な妥当性も確立され、応用数学における新規性と重要性が示されました。環境DNAデータへの応用可能性も示唆され、今後の研究の方向性を提供しました。",
+        "why": "魚の回遊は、単に一定期間移動するのではなく、水温などの環境変化に敏感に反応して開始・終了時期を調整しています。このモデルは、回遊の開始・終了時刻を固定せず、環境要因によって確率的に変動する「生物学的時計」として捉えることで、実際の魚の行動をより正確に再現します。これにより、環境変化が回遊パターンにどう影響するかを数理的に解明し、より精密な予測を可能にしています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.PE）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "fishery-management",
+      "arxivPrimary": "q-bio.PE",
+      "titleJa": "ランダムな開始・終了時間を持つ拡散ブリッジと魚の回遊への応用",
+      "catchTitle": "アユの回遊、環境で変わる開始・終了を予測！",
+      "hook": "毎年アユの遡上時期が違うのはなぜだろう？あなたの身近な魚の動きも、実は環境次第で大きく変わっています。",
+      "background": "魚の回遊は、水生生態系の食物連鎖や栄養循環を形成し、漁業資源の豊かさに直接影響を与えるため、その個体群動態を定量的に把握することは重要です。これまで、様々な魚種や環境において回遊の動態に関する知見が蓄積されてきましたが、これらの知見を結びつける統一的な理論の構築はまだ不十分でした。特に、環境要因と回遊動態の関係を数学的に記述する確立された手法が不足していました。",
+      "quiz": {
+        "question": "この研究で提案された新しい数理モデルが、従来のモデルと最も異なる点は何ですか？",
+        "options": [
+          "魚の回遊速度をより正確に計算できる点",
+          "回遊の開始・終了時刻が環境要因によってランダムに変動する点",
+          "魚の個体数を直接数える必要がない点"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究の最大の新規性は、環境要因が回遊の開始・終了時刻に影響を与えることを考慮し、これらの時刻を確率的に変動させるモデルを構築した点です。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "CIRブリッジモデル",
+          "definition": "魚の単位時間あたりの個体数変化を記述する数理モデル。"
+        },
+        {
+          "term": "確率過程",
+          "definition": "時間とともにランダムに変化する現象を数学的に表現したもの。"
+        },
+        {
+          "term": "アユの遡上",
+          "definition": "アユが海から川へ上っていく現象。"
+        },
+        {
+          "term": "環境DNA",
+          "definition": "生物が環境中に残したDNAを分析する手法。"
+        },
+        {
+          "term": "数理モデル",
+          "definition": "現実の現象を数学的な式で表現したもの。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "環境要因で変動する魚の回遊開始・終了時刻を組み込んだ新しい数理モデルを開発し、アユの遡上を予測しました。",
+      "noveltyContrast": {
+        "before": "従来の魚の回遊モデルは、回遊の開始・終了時刻が固定されており、実際の環境要因による変動を捉えきれていませんでした。例えば、水温の変化で回遊が早まったり遅れたりする現象を、モデルで直接的に表現するのが困難でした。",
+        "after": "この研究では、環境要因（水温など）が回遊の開始・終了時刻に影響を与えることを考慮し、これらの時刻を確率的に変動させる新しい数理モデルを構築しました。これにより、より現実に即した魚の回遊ダイナミクスを予測できるようになりました。"
+      },
+      "analogy": {
+        "title": "畑の種まき、天候で変わる時期を予測する",
+        "body": "これは、まるで「畑の種まき時期」を予測するようなものです。従来は「毎年5月1日に種をまく」と固定して計画していましたが、実際にはその年の「気温」や「降水量」といった天候によって、最適な種まき時期は毎年変動します。この研究は、この「天候による最適な種まき時期の変動」を数式で捉え、より正確な計画を立てられるようにする、という研究の何に対応するか明示しています。これにより、いつ種をまけば最も良い収穫が得られるか、という納得の一文が得られるのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、漁業資源の管理や生態系保全に直接役立ちます。例えば、アユの遡上時期をより正確に予測できれば、漁獲量の計画を立てやすくなり、乱獲を防ぐことにも繋がります。また、地球温暖化による水温変化が魚の回遊パターンにどう影響するかを事前にシミュレーションできるようになるため、将来的な漁業戦略や河川環境の保全対策を考える上でも重要な知見となります。あなたの食卓に並ぶ魚の持続可能性にも貢献する研究です。",
+      "takeawayTalk": "環境で変わる魚の回遊時期を予測する新しい数理モデルができたらしいよ！",
+      "bodyText": "本研究では、従来のCIRブリッジモデルを拡張し、環境要因の影響を組み込むために「生物学的時計」という概念を導入しました。これは、非負で増加する確率過程として数学的に表現され、回遊の開始・終了時刻をランダムに変動させます。この新しいモデルの数学的な妥当性（解の存在と一意性）を確立しました。さらに、このモデルをアユの遡上データに適用し、水温がアユの遡上開始・終了に影響を与えるという仮説に基づいてパラメータを推定しました。また、環境DNAデータへの応用可能性も探求しました。\n\n魚の回遊は、単に一定期間移動するのではなく、水温などの環境変化に敏感に反応して開始・終了時期を調整しています。このモデルは、回遊の開始・終了時刻を固定せず、環境要因によって確率的に変動する「生物学的時計」として捉えることで、実際の魚の行動をより正確に再現します。これにより、環境変化が回遊パターンにどう影響するかを数理的に解明し、より精密な予測を可能にしています。",
+      "bodyGlossary": [
+        {
+          "term": "CIRブリッジモデル",
+          "definition": "魚の単位時間あたりの個体数変化を記述する数理モデル。",
+          "start": 9,
+          "end": 19
+        },
+        {
+          "term": "確率過程",
+          "definition": "時間とともにランダムに変化する現象を数学的に表現したもの。",
+          "start": 71,
+          "end": 75
+        },
+        {
+          "term": "アユの遡上",
+          "definition": "アユが海から川へ上っていく現象。",
+          "start": 154,
+          "end": 159
+        },
+        {
+          "term": "環境DNA",
+          "definition": "生物が環境中に残したDNAを分析する手法。",
+          "start": 213,
+          "end": 218
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "CIRブリッジモデル",
+          "definition": "魚の単位時間あたりの個体数変化を記述する数理モデル。",
+          "start": 9,
+          "end": 19
+        },
+        {
+          "term": "確率過程",
+          "definition": "時間とともにランダムに変化する現象を数学的に表現したもの。",
+          "start": 71,
+          "end": 75
+        },
+        {
+          "term": "アユの遡上",
+          "definition": "アユが海から川へ上っていく現象。",
+          "start": 154,
+          "end": 159
+        },
+        {
+          "term": "環境DNA",
+          "definition": "生物が環境中に残したDNAを分析する手法。",
+          "start": 213,
+          "end": 218
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 214,
+      "keyFigure": {
+        "imagePath": "/figures/2607.04253v1_results.png",
+        "page": 12,
+        "caption": "長良川河口堰におけるアユの遡上数（2003年から2025年）の年間変動を示しています。",
+        "label": "Figure 2. Daily data of (a) fish count of Ayu at the Nagara River Estuarine Barrage from 2003 to 2025 and",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-07T23:00:29.118Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.04253v1_results.png",
+          "page": 12,
+          "caption": "長良川河口堰におけるアユの遡上数（2003年から2025年）の年間変動を示しています。",
+          "label": "Figure 2. Daily data of (a) fish count of Ayu at the Nagara River Estuarine Barrage from 2003 to 2025 and",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-07T23:00:29.118Z"
+        },
+        {
+          "imagePath": "/figures/2607.04253v1_why.png",
+          "page": 19,
+          "caption": "水温、生物学的時計、単位時間あたりの魚の数の関係性を示したモデルの概念図です。",
+          "label": "Figure 3. A set of sample paths of WT w , biological clock  , and unit-time fish count X with",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-07T23:00:29.118Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.04204v1",
+      "title": "A loser in both environments can survive by switching between them",
+      "authors": [
+        "Riz Fernando Noronha",
+        "Kunihiko Kaneko"
+      ],
+      "publishedAt": "2026-07-05T09:52:31Z",
+      "url": "https://arxiv.org/abs/2607.04204v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.04204v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "q-bio.PE",
+        "physics.bio-ph"
+      ],
+      "abstract": "How can a species persist in an environment where it is always outcompeted? Using a minimal predator-prey model with environment-dependent parameters, we show that a predator driven to extinction in each of two static environments can survive indefinitely once the environment alternates between them fast enough. We derive the critical switching rate above which persistence occurs, and show that random (Poisson) switching needs to be faster than periodic switching in order to offset prolonged spells in the unfavorable environment. We then generalize the mechanism to any two-species system, and can predict persistence solely based on the sign of a single ``switching rescue function\" assembled from the two boundary vector fields. This general result has broad reaching consequences: for instance, when applied to a standard model of viral dynamics, it predicts that two drugs which each clear a pathogen on their own can fail when alternated, giving a non-resistance-based explanation for the failure of drug-cycling strategies. Our results demonstrate that the tempo of environment change, as opposed to the environments themselves, can lead to species survival.",
+      "summary": {
+        "gist": "生態系には多様な種が共存していますが、そのメカニズムは完全には解明されていません。一般的には、異なる生態的ニッチを占めることや、環境変化によって有利な種が入れ替わることで共存が促進されると考えられてきました。しかし、常に競争に劣る種がどのようにして生き残るのかは、未解明な点が多く残されています。",
+        "novelty": "これまでの生態学では、種が共存するためには、それぞれ異なるニッチを占めるか、環境変化によって有利な種が入れ替わることで多様性が維持されると考えられていました。つまり、常に劣勢な種は淘汰される運命だとされていました。 この研究は、単一の環境下では常に競争に負けてしまう種（捕食者）であっても、環境が十分に速く切り替わることで、その種が永続的に生き残れることを明らかにしました。環境そのものではなく、環境変化の「テンポ」が生存を左右する新たなメカニズムを提唱しています。",
+        "method": "本研究では、捕食者と被食者の最小限のモデル（ロトカ・ヴォルテラモデルをベースに、被食者の成長率、環境収容力、捕食者の死亡率が環境依存的に変化するモデル）を用いました。まず、各静的環境下で捕食者が絶滅する条件を固定点の計算によって導出しました。次に、環境が周期的に切り替わる場合とランダム（ポアソン分布）に切り替わる場合のそれぞれについて、捕食者が生き残るための臨界スイッチング速度をフロケ理論や期待値計算を用いて解析的に導き出しました。さらに、このメカニズムが一般的な2種系に適用可能であることを示すため、「スイッチング救済関数」という概念を導入し、その符号のみに基づいて生存を予測できることを示しました。最後に、この一般化されたメカニズムをウイルス動態の標準モデルに応用し、薬剤サイクリング戦略の失敗を非耐性ベースで説明できることを示しました。",
+        "results": "単一の静的環境下では常に絶滅する捕食者であっても、環境が十分に速く切り替わることで永続的に生存できることが示されました。ランダムな環境切り替えの場合、不利な環境での滞在期間が長くなるリスクを相殺するため、周期的な切り替えよりも速いスイッチング速度が必要であることも判明しました。このメカニズムは、任意の2種系に一般化でき、「スイッチング救済関数」の符号のみで生存を予測可能です。また、ウイルス動態モデルへの応用では、単独ではウイルスを排除できる2種類の薬剤を交互に使用すると、かえってウイルスが排除されなくなる可能性が示唆されました。",
+        "why": "この現象は、各環境下で捕食者が絶滅に向かう過程で、被食者個体数が一時的に増加する「過渡的な増加」を利用することで起こります。環境が素早く切り替わることで、捕食者が絶滅する前に別の環境に移行し、そこで再び被食者の過渡的な増加を利用して個体数を回復させます。これにより、捕食者はどちらの環境でも単独では生き残れないにもかかわらず、環境変化のテンポによって絶滅を回避し、全体として生存を維持できるのです。これは、環境そのものの特性ではなく、環境が変化する「速度」が種の生存に決定的な役割を果たすことを意味します。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.PE）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "ecology",
+      "arxivPrimary": "q-bio.PE",
+      "titleJa": "環境を切り替えることで、どちらの環境でも劣勢な種が生き残る可能性",
+      "catchTitle": "「負け組」でも生き残る！環境スイッチング戦略",
+      "hook": "あなたは、どんな環境でも一番になれない「負け組」でも、生き残る道があるとしたら信じますか？",
+      "background": "生態系には多様な種が共存していますが、そのメカニズムは完全には解明されていません。一般的には、異なる生態的ニッチを占めることや、環境変化によって有利な種が入れ替わることで共存が促進されると考えられてきました。しかし、常に競争に劣る種がどのようにして生き残るのかは、未解明な点が多く残されています。",
+      "quiz": {
+        "question": "この研究で、単独では生き残れない種が生存するために重要だとされた要素は何でしょう？",
+        "options": [
+          "環境の多様性",
+          "環境変化の速度",
+          "種の適応能力"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究では、環境そのものの特性よりも、環境が変化する「速度」が種の生存に決定的な役割を果たすことが示されました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "ロトカ・ヴォルテラモデル",
+          "definition": "捕食者と被食者の個体数変動を記述する数理モデル。"
+        },
+        {
+          "term": "固定点",
+          "definition": "個体数変化がゼロになり安定する状態の点。"
+        },
+        {
+          "term": "フロケ理論",
+          "definition": "周期的な係数を持つ微分方程式の解の安定性を解析する数学手法。"
+        },
+        {
+          "term": "スイッチング救済関数",
+          "definition": "環境切り替えによる種の生存可能性を示す関数。"
+        },
+        {
+          "term": "ウイルス動態モデル",
+          "definition": "ウイルスと宿主細胞の相互作用を記述するモデル。"
+        },
+        {
+          "term": "過渡的な増加",
+          "definition": "一時的に個体数が増加する現象。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "単独では生き残れない種でも、環境が素早く切り替わることで永続的に生存できることを示した研究。",
+      "noveltyContrast": {
+        "before": "これまでの生態学では、種が共存するためには、それぞれ異なるニッチを占めるか、環境変化によって有利な種が入れ替わることで多様性が維持されると考えられていました。つまり、常に劣勢な種は淘汰される運命だとされていました。",
+        "after": "この研究は、単一の環境下では常に競争に負けてしまう種（捕食者）であっても、環境が十分に速く切り替わることで、その種が永続的に生き残れることを明らかにしました。環境そのものではなく、環境変化の「テンポ」が生存を左右する新たなメカニズムを提唱しています。"
+      },
+      "analogy": {
+        "title": "不作の畑を渡り歩く農家",
+        "body": "これは、まるで「どの畑でも単独では良い作物が育たない農家」が、異なる条件の畑を短いサイクルで次々と耕し続けることで、結果的に年間を通して収穫を維持できるようなものです。それぞれの畑（環境）では一時的に作物が育ちにくい時期（捕食者が絶滅に向かう状態）があっても、別の畑に移動することでその状況をリセットし、絶滅を回避します。この「畑を切り替える速さ」が、農家が生き残るための鍵となるのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、農業や漁業における害虫・害獣管理、感染症対策、さらにはビジネス戦略にも応用できる可能性を秘めています。例えば、特定の農薬が効かなくても、異なる種類の農薬を素早く切り替えて使うことで、害虫の完全な駆除はできなくとも、被害を許容範囲に抑え、作物の収穫を維持できるかもしれません。また、市場のトレンドが目まぐるしく変わる現代において、一つの戦略に固執せず、複数の戦略を素早く切り替えることで、競争の激しい環境でも企業が生き残り、成長するヒントを与えてくれるでしょう。常に「勝ち組」になれなくても、環境変化のテンポを味方につけることで、生存の道は開けるのです。",
+      "takeawayTalk": "どんな環境でも「負け組」でも、環境を素早く切り替えれば生き残れる！",
+      "bodyText": "本研究では、捕食者と被食者の最小限のモデル（ロトカ・ヴォルテラモデルをベースに、被食者の成長率、環境収容力、捕食者の死亡率が環境依存的に変化するモデル）を用いました。まず、各静的環境下で捕食者が絶滅する条件を固定点の計算によって導出しました。次に、環境が周期的に切り替わる場合とランダム（ポアソン分布）に切り替わる場合のそれぞれについて、捕食者が生き残るための臨界スイッチング速度をフロケ理論や期待値計算を用いて解析的に導き出しました。さらに、このメカニズムが一般的な2種系に適用可能であることを示すため、「スイッチング救済関数」という概念を導入し、その符号のみに基づいて生存を予測できることを示しました。最後に、この一般化されたメカニズムをウイルス動態の標準モデルに応用し、薬剤サイクリング戦略の失敗を非耐性ベースで説明できることを示しました。\n\nこの現象は、各環境下で捕食者が絶滅に向かう過程で、被食者個体数が一時的に増加する「過渡的な増加」を利用することで起こります。環境が素早く切り替わることで、捕食者が絶滅する前に別の環境に移行し、そこで再び被食者の過渡的な増加を利用して個体数を回復させます。これにより、捕食者はどちらの環境でも単独では生き残れないにもかかわらず、環境変化のテンポによって絶滅を回避し、全体として生存を維持できるのです。これは、環境そのものの特性ではなく、環境が変化する「速度」が種の生存に決定的な役割を果たすことを意味します。",
+      "bodyGlossary": [
+        {
+          "term": "ロトカ・ヴォルテラモデル",
+          "definition": "捕食者と被食者の個体数変動を記述する数理モデル。",
+          "start": 22,
+          "end": 34
+        },
+        {
+          "term": "固定点",
+          "definition": "個体数変化がゼロになり安定する状態の点。",
+          "start": 104,
+          "end": 107
+        },
+        {
+          "term": "フロケ理論",
+          "definition": "周期的な係数を持つ微分方程式の解の安定性を解析する数学手法。",
+          "start": 191,
+          "end": 196
+        },
+        {
+          "term": "スイッチング救済関数",
+          "definition": "環境切り替えによる種の生存可能性を示す関数。",
+          "start": 254,
+          "end": 264
+        },
+        {
+          "term": "過渡的な増加",
+          "definition": "一時的に個体数が増加する現象。",
+          "start": 416,
+          "end": 422
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "ロトカ・ヴォルテラモデル",
+          "definition": "捕食者と被食者の個体数変動を記述する数理モデル。",
+          "start": 22,
+          "end": 34
+        },
+        {
+          "term": "固定点",
+          "definition": "個体数変化がゼロになり安定する状態の点。",
+          "start": 104,
+          "end": 107
+        },
+        {
+          "term": "フロケ理論",
+          "definition": "周期的な係数を持つ微分方程式の解の安定性を解析する数学手法。",
+          "start": 191,
+          "end": 196
+        },
+        {
+          "term": "スイッチング救済関数",
+          "definition": "環境切り替えによる種の生存可能性を示す関数。",
+          "start": 254,
+          "end": 264
+        },
+        {
+          "term": "過渡的な増加",
+          "definition": "一時的に個体数が増加する現象。",
+          "start": 416,
+          "end": 422
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 247
+    },
+    {
+      "id": "2607.04345v1",
+      "title": "Strategic Information Disclosure in Algorithmic Pricing",
+      "authors": [
+        "Chengcheng Wang",
+        "Zexin Ye"
+      ],
+      "publishedAt": "2026-07-05T15:01:19Z",
+      "url": "https://arxiv.org/abs/2607.04345v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.04345v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "econ.GN"
+      ],
+      "abstract": "As firms increasingly adopt AI-powered pricing algorithms, a key and urgent policy concern is how to regulate the potential algorithmic collusion. This paper approaches the regulatory question through the lens of information design and examines how different disclosure rules, committed to by a third-party intermediary, shape learning outcomes when firms delegate pricing to Q-learning algorithms under stochastic demand. We analyze three disclosure rules: no disclosure, full disclosure, and upper censorship. Upper censorship, which truthfully reveals low-demand states while pooling high-demand ones, delivers higher profits than full disclosure, consistent with theoretical predictions. However, we uncover a profit reversal: when the discount factor is high, no disclosure yields higher profits than full disclosure, whereas when the discount factor is low, full disclosure performs better. This pattern is exactly the opposite of what classical collusion theory predicts. Overall, these findings show that Q-learning agents respond systematically to the information structure and further suggest that restricting information sharing may backfire when algorithms are sufficiently patient, highlighting the need to reassess regulatory approaches in AI-mediated markets.",
+      "summary": {
+        "gist": "近年、AIを活用した価格設定アルゴリズムが普及し、企業が明示的なコミュニケーションなしに、競争を上回る利益を維持する「アルゴリズム共謀」の可能性が指摘されています。これは、企業間の明示的な合意を前提とする従来の独占禁止法にとって大きな課題となっており、AIによる価格設定をどのように規制すべきかという喫緊の課題があります。特に、第三者機関による市場情報の開示が、この共謀にどう影響するかが注目されています。",
+        "novelty": "従来の経済学では、企業間の情報共有を制限すれば共謀が弱まり、競争が促進されると考えられてきました。特に、需要が高い状況での情報開示は、企業がより高い価格で共謀するインセンティブを高めるとされていました。 この研究では、AI（Q学習アルゴリズム）が価格設定を行う市場において、情報開示のルールが企業の利益にどう影響するかをシミュレーションしました。その結果、AIが将来の利益を重視する（割引率が高い）場合、情報共有を制限する方が、かえって企業全体の利益が高まるという、従来の予測とは逆の現象を発見しました。",
+        "method": "本研究では、需要が確率的に変動する市場において、2つの企業がQ学習アルゴリズムを用いて価格設定を行うモデルを構築しました。第三者機関が需要状態を観察し、以下の3つの情報開示ルールを適用した場合のアルゴリズムの学習結果と企業利益をシミュレーションで比較しました。\n1. 情報非開示：需要状態を一切開示しない。\n2. 完全開示：需要状態を完全に開示する。\n3. 部分開示（上限検閲）：需要が低い状態は正直に伝え、需要が高い状態はまとめて「需要が高い」とだけ伝える。\n企業は、この情報に基づいて価格を決定し、割引率（将来の利益をどれだけ重視するか）が異なる場合に、各開示ルールが企業利益にどう影響するかを分析しました。",
+        "results": "Q学習アルゴリズムは、情報開示の構造に体系的に反応することが示されました。特に、情報非開示と完全開示の間で、利益の「逆転現象」が発見されました。割引率が低い（将来の利益をあまり重視しない）場合、完全開示の方が高い利益をもたらします。しかし、割引率が高い（将来の利益を重視する）場合、情報非開示の方が高い利益をもたらすことが明らかになりました。これは、従来の共謀理論の予測とは正反対の結果です。また、部分開示（上限検閲）は、常に完全開示よりも高い利益をもたらすことが示されました。",
+        "why": "この逆転現象のメカニズムは、AIアルゴリズムの学習特性と割引率にあります。AIが将来の利益を強く重視する（割引率が高い）場合、情報が少ない（非開示）方が、短期的な逸脱による利益よりも、長期的な共謀による安定した高利益を維持しようとするインセンティブが強まります。需要の変動が不明確なため、AIは「高価格を維持する」という暗黙の共謀戦略から逸脱するリスクを避け、結果として高い利益を維持しやすくなります。一方、割引率が低い場合、AIは短期的な利益を優先するため、情報が完全に開示されている方が、需要に応じた最適な価格設定を行いやすくなり、結果として利益が高まります。つまり、AIの「忍耐力」が高いほど、情報制限が共謀を強化する方向に働くのです。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "market-design",
+      "arxivPrimary": "econ.GN",
+      "titleJa": "アルゴリズム価格設定における戦略的情報開示",
+      "catchTitle": "AI価格競争、情報開示が裏目に？",
+      "hook": "あなたの会社の製品価格、AIが自動で決めていませんか？実は、そのAIが競合と『共謀』しているかもしれません。",
+      "background": "近年、AIを活用した価格設定アルゴリズムが普及し、企業が明示的なコミュニケーションなしに、競争を上回る利益を維持する「アルゴリズム共謀」の可能性が指摘されています。これは、企業間の明示的な合意を前提とする従来の独占禁止法にとって大きな課題となっており、AIによる価格設定をどのように規制すべきかという喫緊の課題があります。特に、第三者機関による市場情報の開示が、この共謀にどう影響するかが注目されています。",
+      "quiz": {
+        "question": "AIが価格設定を行う市場で、AIが将来の利益を強く重視する場合、企業全体の利益を最も高める情報開示ルールは次のうちどれでしょう？",
+        "options": [
+          "完全開示",
+          "情報非開示",
+          "部分開示（上限検閲）"
+        ],
+        "correctIndex": 1,
+        "explanation": "AIが将来の利益を強く重視する（割引率が高い）場合、情報非開示の方が、短期的な逸脱による利益よりも、長期的な共謀による安定した高利益を維持しようとするインセンティブが強まり、結果として高い利益を維持しやすくなります。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "Q学習アルゴリズム",
+          "definition": "AIが試行錯誤を通じて最適な行動を学習する手法"
+        },
+        {
+          "term": "アルゴリズム共謀",
+          "definition": "AIが自律的に価格を調整し、競争を抑制すること"
+        },
+        {
+          "term": "割引率",
+          "definition": "将来の利益を現在価値に換算する際の割合"
+        },
+        {
+          "term": "情報非開示",
+          "definition": "市場の需要状況を企業に伝えないこと"
+        },
+        {
+          "term": "完全開示",
+          "definition": "市場の需要状況を企業に全て伝えること"
+        },
+        {
+          "term": "部分開示（上限検閲）",
+          "definition": "需要が高い情報をまとめて伝える選択的開示"
+        },
+        {
+          "term": "逆転現象",
+          "definition": "従来の予測と異なる結果が生じること"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "AIが価格を決める市場では、情報開示のルールが企業の利益に逆の影響を与える可能性があり、規制の再考が必要です。",
+      "noveltyContrast": {
+        "before": "従来の経済学では、企業間の情報共有を制限すれば共謀が弱まり、競争が促進されると考えられてきました。特に、需要が高い状況での情報開示は、企業がより高い価格で共謀するインセンティブを高めるとされていました。",
+        "after": "この研究では、AI（Q学習アルゴリズム）が価格設定を行う市場において、情報開示のルールが企業の利益にどう影響するかをシミュレーションしました。その結果、AIが将来の利益を重視する（割引率が高い）場合、情報共有を制限する方が、かえって企業全体の利益が高まるという、従来の予測とは逆の現象を発見しました。"
+      },
+      "analogy": {
+        "title": "豊作時の市場情報、隠す方が儲かる？",
+        "body": "これは、まるで農家が市場に出す作物の量を決める際、豊作の情報をあえて隠すようなものです。もし市場全体が豊作だと知れば、各農家は値下げ競争を始めかねません。しかし、情報が制限されていれば、農家は「もしかしたら自分だけが豊作かも」と考え、高値を維持しようとする。結果的に、市場全体の価格が安定し、農家全体の収益が高まる、という状況に似ています。AIが将来の利益を重視するほど、この「情報制限による共謀」が強まるのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "逆転現象",
+          "label": "割引率と情報開示による利益の増減"
+        }
+      ],
+      "whyYouCare": "AIによる価格設定が広がる現代において、この研究は私たちの生活やビジネスに大きな示唆を与えます。もしあなたが消費者なら、情報開示の規制が不適切だと、AIが裏で共謀し、知らないうちに高値で商品を買わされているかもしれません。企業経営者であれば、自社のAIが競合とどう相互作用するかを理解し、適切な情報戦略を立てる必要があります。特に、AIの「忍耐力」（割引率）が高い場合、情報共有を制限する規制が、かえって共謀を強化し、市場競争を阻害する可能性があるため、独占禁止当局はAI市場の特性を踏まえた新たな規制アプローチを検討する必要があるでしょう。",
+      "takeawayTalk": "AI価格設定では、情報隠しが共謀を強めるって知ってた？",
+      "bodyText": "本研究では、需要が確率的に変動する市場において、2つの企業がQ学習アルゴリズムを用いて価格設定を行うモデルを構築しました。第三者機関が需要状態を観察し、以下の3つの情報開示ルールを適用した場合のアルゴリズムの学習結果と企業利益をシミュレーションで比較しました。\n1. 情報非開示：需要状態を一切開示しない。\n2. 完全開示：需要状態を完全に開示する。\n3. 部分開示（上限検閲）：需要が低い状態は正直に伝え、需要が高い状態はまとめて「需要が高い」とだけ伝える。\n企業は、この情報に基づいて価格を決定し、割引率（将来の利益をどれだけ重視するか）が異なる場合に、各開示ルールが企業利益にどう影響するかを分析しました。\n\nこの逆転現象のメカニズムは、AIアルゴリズムの学習特性と割引率にあります。AIが将来の利益を強く重視する（割引率が高い）場合、情報が少ない（非開示）方が、短期的な逸脱による利益よりも、長期的な共謀による安定した高利益を維持しようとするインセンティブが強まります。需要の変動が不明確なため、AIは「高価格を維持する」という暗黙の共謀戦略から逸脱するリスクを避け、結果として高い利益を維持しやすくなります。一方、割引率が低い場合、AIは短期的な利益を優先するため、情報が完全に開示されている方が、需要に応じた最適な価格設定を行いやすくなり、結果として利益が高まります。つまり、AIの「忍耐力」が高いほど、情報制限が共謀を強化する方向に働くのです。",
+      "bodyGlossary": [
+        {
+          "term": "Q学習アルゴリズム",
+          "definition": "AIが試行錯誤を通じて最適な行動を学習する手法",
+          "start": 30,
+          "end": 39
+        },
+        {
+          "term": "情報非開示",
+          "definition": "市場の需要状況を企業に伝えないこと",
+          "start": 134,
+          "end": 139
+        },
+        {
+          "term": "完全開示",
+          "definition": "市場の需要状況を企業に全て伝えること",
+          "start": 157,
+          "end": 161
+        },
+        {
+          "term": "部分開示（上限検閲）",
+          "definition": "需要が高い情報をまとめて伝える選択的開示",
+          "start": 179,
+          "end": 189
+        },
+        {
+          "term": "割引率",
+          "definition": "将来の利益を現在価値に換算する際の割合",
+          "start": 251,
+          "end": 254
+        },
+        {
+          "term": "逆転現象",
+          "definition": "従来の予測と異なる結果が生じること",
+          "start": 310,
+          "end": 314
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "Q学習アルゴリズム",
+          "definition": "AIが試行錯誤を通じて最適な行動を学習する手法",
+          "start": 30,
+          "end": 39
+        },
+        {
+          "term": "情報非開示",
+          "definition": "市場の需要状況を企業に伝えないこと",
+          "start": 134,
+          "end": 139
+        },
+        {
+          "term": "完全開示",
+          "definition": "市場の需要状況を企業に全て伝えること",
+          "start": 157,
+          "end": 161
+        },
+        {
+          "term": "部分開示（上限検閲）",
+          "definition": "需要が高い情報をまとめて伝える選択的開示",
+          "start": 179,
+          "end": 189
+        },
+        {
+          "term": "割引率",
+          "definition": "将来の利益を現在価値に換算する際の割合",
+          "start": 251,
+          "end": 254
+        },
+        {
+          "term": "逆転現象",
+          "definition": "従来の予測と異なる結果が生じること",
+          "start": 310,
+          "end": 314
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 263,
+      "keyFigure": {
+        "imagePath": "/figures/2607.04345v1_results.jpeg",
+        "page": 14,
+        "caption": "割引率（将来の利益の重視度）と情報開示ルールが、企業全体の利益にどう影響するかを示しています。",
+        "label": "Figure 3 displays the normalized joint profit under different disclosure rules across δ. The",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-07T23:00:33.896Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.04345v1_results.jpeg",
+          "page": 14,
+          "caption": "割引率（将来の利益の重視度）と情報開示ルールが、企業全体の利益にどう影響するかを示しています。",
+          "label": "Figure 3 displays the normalized joint profit under different disclosure rules across δ. The",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-07T23:00:33.896Z"
+        }
+      ]
+    }
+  ]
+}

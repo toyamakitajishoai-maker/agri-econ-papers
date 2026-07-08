@@ -1,0 +1,1023 @@
+{
+  "date": "2026-07-09",
+  "papers": [
+    {
+      "id": "2607.06337v1",
+      "title": "OrchardBench: A Physically-Grounded, GPU-Parallel Apple-Orchard Simulation Benchmark for Agricultural Robotics",
+      "authors": [
+        "Humphrey Munn"
+      ],
+      "publishedAt": "2026-07-07T14:34:13Z",
+      "url": "https://arxiv.org/abs/2607.06337v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.06337v1.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "cs.RO",
+        "cs.CV"
+      ],
+      "abstract": "Robotic tree-fruit harvesting is a flagship problem for agricultural automation, but progress is bottlenecked by the cost and irreproducibility of field experiments: an orchard is available only weeks a year, every tree is different, and a control error can permanently damage the crop or the plant. The tree models used in graphics and agronomy are geometrically detailed but physically inert, while the GPU-parallel simulators used in robot learning contain no plausible trees. We present OrchardBench, a physically-grounded, GPU-parallel simulation of apple-orchard trees on the Newton engine. Each tree is grown by a stochastic L-system and instantiated as a fully articulated body: branches are compliant torsional spring-dampers whose stiffness follows Euler-Bernoulli beam theory, they break at a wood modulus of rupture and fall as free hinges, and apples are independent bodies on stem tethers that detach at literature-grounded pull forces and load the branch when pulled. A moving, density-controllable foliage layer occludes the canopy as real leaves do. Every physical parameter is tied to a published source. Per-environment domain randomization makes each batched world a distinct tree, and a mobile manipulator with a wrist depth camera closes the loop with geometric fruit perception and an autonomous harvesting baseline. Careful engineering of the solver and the model lets OrchardBench run many parallel environments at interactive rates on a laptop GPU. We define the tasks and a metric suite spanning harvest completeness, throughput, and plant damage (with a per-canopy-zone breakdown), and report baseline results across foliage, fruit load, terrain, canopy zone, and parallelism. The analytic baseline succeeds on about 40% of the fruit it detects and harvests only about an eighth of the reachable fruit on a tree, leaving clear headroom for novel autonomy approaches.",
+      "summary": {
+        "gist": "リンゴなどの果樹収穫は、農業の中でも特に労働集約的で自動化が遅れています。季節労働者の減少とコスト上昇、そして収穫期間の短さが課題です。ロボット収穫機の研究は20年近く行われていますが、葉による果実の隠蔽、枝を折らずに果実を傷つけない繊細な操作、そして一本一本異なる木の形状が開発を困難にしています。特に、生きた植物との物理的な接触を伴うため、実地試験は高コストで再現性が低く、失敗すると作物や植物に恒久的な損害を与えるリスクがあります。",
+        "novelty": "これまでのシミュレーションは、見た目はリアルでも物理的な動きが不正確だったり、物理は正確でも木が単純な形状だったりして、実際のリンゴ園でのロボット開発には不十分でした。高価な実地試験は年に数週間しかできず、木は一本一本異なり、失敗すると作物や木自体を傷つけるリスクがありました。 この研究では、枝のしなり、折れやすさ、リンゴが枝から離れる力まで、物理法則に基づいて忠実に再現した仮想リンゴ園を開発しました。GPU並列処理により、数千本の異なる木を同時にシミュレーションできるため、ロボットは安全かつ効率的に多様な状況で学習・検証できます。",
+        "method": "本研究では、物理法則に基づいたGPU並列リンゴ園シミュレーション「OrchardBench」を開発しました。各リンゴの木は、確率的Lシステムによって成長させられ、完全に連結された物理ボディとしてインスタンス化されます。枝は、オイラー・ベルヌーイ梁理論に従う剛性を持つ、しなやかなねじりバネ・ダンパーとして機能し、木材の破断係数を超えると折れて自由なヒンジとして落下します。リンゴは独立したボディとして茎のテザーにぶら下がり、文献に基づいた引っ張り力で枝から分離し、引っ張られると枝に荷重をかけます。動的で密度を制御可能な葉の層は、実際の葉のように樹冠を覆い隠します。すべての物理パラメータは公開された情報源に基づいています。環境ごとのドメインランダム化により、バッチ処理された各ワールドは異なる木となり、手首に深度カメラを搭載した移動マニピュレーターが、幾何学的果実認識と自律収穫ベースラインでループを閉じます。ソルバーとモデルの慎重な設計により、OrchardBenchは多くの並列環境をラップトップGPUでインタラクティブな速度で実行できます。",
+        "results": "ベースラインのロボットは、検出した果実の約40%の収穫に成功し、木に到達可能な果実の約8分の1しか収穫できませんでした。これは、新しい自律収穫アプローチの開発に大きな改善の余地があることを示しています。シミュレーションは、収穫の完全性、スループット、植物への損傷（樹冠ゾーンごとの内訳を含む）を網羅するタスクと指標スイートを定義し、葉の密度、果実の負荷、地形、樹冠ゾーン、並列処理に関するベースライン結果を報告しています。",
+        "why": "このシミュレーションの鍵は、植物の物理的忠実性へのこだわりです。OrchardBenchのリンゴの木は、単なる装飾的なメッシュではなく、完全に連結された動的システムです。各節間は剛体リンクであり、各枝の接合部はしなやかなねじりバネ・ダンパーであり、その剛性はオイラー・ベルヌーイ梁理論に従うため、細い外側の小枝は柔らかく、幹は実際の木と同じように硬くなります。枝は、伝達される曲げモーメントが木材の破断係数を超えると破断し、解放されたサブツリーは消滅したり凍結したりすることなく、重力によって本物のヒンジとして落下します。リンゴは、スプリングダンパーの茎テザーによって枝から吊り下げられた独立した剛体です。しっかりとした持続的な引っ張り、そしてしっかりとした持続的な引っ張りだけが、収穫に関する文献から得られた力で茎を折ります。一方、軽い引っ張りは枝を曲げるだけです。これらの数値はすべて、青リンゴの木の密度、弾性率、破断応力から、熟した果実を分離するのに必要な14〜23Nの力まで、公開された情報源に基づいています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.RO）",
+      "field": "AI・データサイエンス",
+      "categoryL1": "agri-econ",
+      "categoryL2": "agricultural-robotics",
+      "arxivPrimary": "cs.RO",
+      "titleJa": "OrchardBench: 農業ロボット向け物理ベースGPU並列リンゴ園シミュレーション",
+      "catchTitle": "ロボットがリンゴを傷つけずに収穫！仮想リンゴ園で賢く練習",
+      "hook": "ロボットがリンゴを収穫する未来、夢のようですが、あなたは「本当に木を傷つけないの？」と心配になりませんか？",
+      "background": "リンゴなどの果樹収穫は、農業の中でも特に労働集約的で自動化が遅れています。季節労働者の減少とコスト上昇、そして収穫期間の短さが課題です。ロボット収穫機の研究は20年近く行われていますが、葉による果実の隠蔽、枝を折らずに果実を傷つけない繊細な操作、そして一本一本異なる木の形状が開発を困難にしています。特に、生きた植物との物理的な接触を伴うため、実地試験は高コストで再現性が低く、失敗すると作物や植物に恒久的な損害を与えるリスクがあります。",
+      "quiz": {
+        "question": "OrchardBenchの最も画期的な点は何でしょう？",
+        "options": [
+          "リンゴの木が本物そっくりに見えること",
+          "リンゴの木の物理的な動きや破壊まで忠実に再現されていること",
+          "ロボットがリンゴを自動で選別してくれること"
+        ],
+        "correctIndex": 1,
+        "explanation": "OrchardBenchは、単なる見た目だけでなく、枝のしなり、折れやすさ、リンゴが枝から離れる力まで、物理法則に基づいて忠実に再現している点が画期的です。これにより、ロボットは現実世界に近い環境で安全に学習・検証できます。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "GPU並列",
+          "definition": "グラフィック処理装置を使い、複数の計算を同時に行うこと"
+        },
+        {
+          "term": "Lシステム",
+          "definition": "植物の成長を数学的に記述するモデル"
+        },
+        {
+          "term": "インスタンス化",
+          "definition": "抽象的なものを具体的な実体として生成すること"
+        },
+        {
+          "term": "オイラー・ベルヌーイ梁理論",
+          "definition": "細長い棒状の構造物の曲がり方を記述する理論"
+        },
+        {
+          "term": "破断係数",
+          "definition": "材料が破壊される限界の応力値"
+        },
+        {
+          "term": "テザー",
+          "definition": "物体をつなぎとめる紐やケーブル"
+        },
+        {
+          "term": "ドメインランダム化",
+          "definition": "シミュレーション環境のパラメータを多様に変化させること"
+        },
+        {
+          "term": "マニピュレーター",
+          "definition": "ロボットのアーム部分"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "物理法則に基づき、枝のしなりやリンゴの取れやすさまで再現した仮想リンゴ園で、収穫ロボットを効率的に開発・検証できます。",
+      "noveltyContrast": {
+        "before": "これまでのシミュレーションは、見た目はリアルでも物理的な動きが不正確だったり、物理は正確でも木が単純な形状だったりして、実際のリンゴ園でのロボット開発には不十分でした。高価な実地試験は年に数週間しかできず、木は一本一本異なり、失敗すると作物や木自体を傷つけるリスクがありました。",
+        "after": "この研究では、枝のしなり、折れやすさ、リンゴが枝から離れる力まで、物理法則に基づいて忠実に再現した仮想リンゴ園を開発しました。GPU並列処理により、数千本の異なる木を同時にシミュレーションできるため、ロボットは安全かつ効率的に多様な状況で学習・検証できます。"
+      },
+      "analogy": {
+        "title": "ベテラン農家が育てる多様な苗床",
+        "body": "これはまるで、ベテラン農家が何千種類ものリンゴの苗木を、土壌や日当たり、風の強さまで変えて同時に育て、それぞれの成長を観察するようなものです。通常、農家は限られた畑でしか試せませんが、この「仮想苗床」では、枝のしなり具合や実のつき方、風による揺れ方まで、現実そっくりに再現された苗木を、何千本も同時に育てて試すことができます。これにより、どの品種がどんな環境で育ちやすいか、どんな手入れをすれば良いかを、短期間で効率的に見極めることができるのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "約40%",
+          "label": "ロボットが検出したリンゴの収穫成功率"
+        },
+        {
+          "value": "約1/8",
+          "label": "ロボットが収穫可能なリンゴの割合"
+        }
+      ],
+      "whyYouCare": "この仮想リンゴ園は、農業ロボット開発のゲームチェンジャーです。これまで高価で時間のかかった実地試験を、パソコン上で何千回も安全に繰り返せるようになります。これにより、ロボットがリンゴを傷つけずに効率よく収穫するための最適な動きや、葉に隠れたリンゴを見つけるAIの精度を、圧倒的なスピードで向上させることが可能になります。労働力不足に悩む農家の方々にとっては、収穫コストの削減や収穫量の安定化に繋がり、消費者にとっては、より安価で高品質なリンゴが手に入る未来が近づくかもしれません。また、ロボット開発企業にとっては、開発期間の短縮とコスト削減、そして市場投入までのスピードアップが期待できます。",
+      "takeawayTalk": "リンゴの木を傷つけずに収穫するロボット、仮想空間で賢く育てる時代！",
+      "bodyText": "本研究では、物理法則に基づいたGPU並列リンゴ園シミュレーション「OrchardBench」を開発しました。各リンゴの木は、確率的Lシステムによって成長させられ、完全に連結された物理ボディとしてインスタンス化されます。枝は、オイラー・ベルヌーイ梁理論に従う剛性を持つ、しなやかなねじりバネ・ダンパーとして機能し、木材の破断係数を超えると折れて自由なヒンジとして落下します。リンゴは独立したボディとして茎のテザーにぶら下がり、文献に基づいた引っ張り力で枝から分離し、引っ張られると枝に荷重をかけます。動的で密度を制御可能な葉の層は、実際の葉のように樹冠を覆い隠します。すべての物理パラメータは公開された情報源に基づいています。環境ごとのドメインランダム化により、バッチ処理された各ワールドは異なる木となり、手首に深度カメラを搭載した移動マニピュレーターが、幾何学的果実認識と自律収穫ベースラインでループを閉じます。ソルバーとモデルの慎重な設計により、OrchardBenchは多くの並列環境をラップトップGPUでインタラクティブな速度で実行できます。\n\nこのシミュレーションの鍵は、植物の物理的忠実性へのこだわりです。OrchardBenchのリンゴの木は、単なる装飾的なメッシュではなく、完全に連結された動的システムです。各節間は剛体リンクであり、各枝の接合部はしなやかなねじりバネ・ダンパーであり、その剛性はオイラー・ベルヌーイ梁理論に従うため、細い外側の小枝は柔らかく、幹は実際の木と同じように硬くなります。枝は、伝達される曲げモーメントが木材の破断係数を超えると破断し、解放されたサブツリーは消滅したり凍結したりすることなく、重力によって本物のヒンジとして落下します。リンゴは、スプリングダンパーの茎テザーによって枝から吊り下げられた独立した剛体です。しっかりとした持続的な引っ張り、そしてしっかりとした持続的な引っ張りだけが、収穫に関する文献から得られた力で茎を折ります。一方、軽い引っ張りは枝を曲げるだけです。これらの数値はすべて、青リンゴの木の密度、弾性率、破断応力から、熟した果実を分離するのに必要な14〜23Nの力まで、公開された情報源に基づいています。",
+      "bodyGlossary": [
+        {
+          "term": "GPU並列",
+          "definition": "グラフィック処理装置を使い、複数の計算を同時に行うこと",
+          "start": 15,
+          "end": 20
+        },
+        {
+          "term": "Lシステム",
+          "definition": "植物の成長を数学的に記述するモデル",
+          "start": 65,
+          "end": 70
+        },
+        {
+          "term": "インスタンス化",
+          "definition": "抽象的なものを具体的な実体として生成すること",
+          "start": 97,
+          "end": 104
+        },
+        {
+          "term": "オイラー・ベルヌーイ梁理論",
+          "definition": "細長い棒状の構造物の曲がり方を記述する理論",
+          "start": 112,
+          "end": 125
+        },
+        {
+          "term": "破断係数",
+          "definition": "材料が破壊される限界の応力値",
+          "start": 159,
+          "end": 163
+        },
+        {
+          "term": "テザー",
+          "definition": "物体をつなぎとめる紐やケーブル",
+          "start": 202,
+          "end": 205
+        },
+        {
+          "term": "ドメインランダム化",
+          "definition": "シミュレーション環境のパラメータを多様に変化させること",
+          "start": 317,
+          "end": 326
+        },
+        {
+          "term": "マニピュレーター",
+          "definition": "ロボットのアーム部分",
+          "start": 367,
+          "end": 375
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "GPU並列",
+          "definition": "グラフィック処理装置を使い、複数の計算を同時に行うこと",
+          "start": 15,
+          "end": 20
+        },
+        {
+          "term": "Lシステム",
+          "definition": "植物の成長を数学的に記述するモデル",
+          "start": 65,
+          "end": 70
+        },
+        {
+          "term": "インスタンス化",
+          "definition": "抽象的なものを具体的な実体として生成すること",
+          "start": 97,
+          "end": 104
+        },
+        {
+          "term": "オイラー・ベルヌーイ梁理論",
+          "definition": "細長い棒状の構造物の曲がり方を記述する理論",
+          "start": 112,
+          "end": 125
+        },
+        {
+          "term": "破断係数",
+          "definition": "材料が破壊される限界の応力値",
+          "start": 159,
+          "end": 163
+        },
+        {
+          "term": "テザー",
+          "definition": "物体をつなぎとめる紐やケーブル",
+          "start": 202,
+          "end": 205
+        },
+        {
+          "term": "ドメインランダム化",
+          "definition": "シミュレーション環境のパラメータを多様に変化させること",
+          "start": 317,
+          "end": 326
+        },
+        {
+          "term": "マニピュレーター",
+          "definition": "ロボットのアーム部分",
+          "start": 367,
+          "end": 375
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 312,
+      "keyFigure": {
+        "imagePath": "/figures/2607.06337v1_results.png",
+        "page": 11,
+        "caption": "ロボットの収穫結果と失敗原因の内訳を示しています。",
+        "label": "Fig. 9: Pooled outcome and failure-reason breakdown. Most",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-08T23:05:40.435Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.06337v1_results.png",
+          "page": 11,
+          "caption": "ロボットの収穫結果と失敗原因の内訳を示しています。",
+          "label": "Fig. 9: Pooled outcome and failure-reason breakdown. Most",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-08T23:05:40.435Z"
+        },
+        {
+          "imagePath": "/figures/2607.06337v1_why.png",
+          "page": 6,
+          "caption": "ロボットが接触した際の枝の折れ方をシミュレーションで示しています。",
+          "label": "Fig. 3: Branch breaking under robot contact. As the manipulator",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-08T23:05:40.435Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.06427v1",
+      "title": "The U.S. Mortality Crisis as a Preston Curve Reversal",
+      "authors": [
+        "Ritikaa Khanna",
+        "Rourke O'Brien",
+        "Andrew Stokes",
+        "Atheendar Venkataramani",
+        "Elizabeth Wrigley-Field"
+      ],
+      "publishedAt": "2026-07-07T15:54:39Z",
+      "url": "https://arxiv.org/abs/2607.06427v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.06427v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "econ.GN"
+      ],
+      "abstract": "U.S. life expectancy stagnated and declined in the 2010s despite continued growth in real per capita income. We use Preston curves to characterize this pattern as a change in the relationship between income and longevity. Using state-level data from 1980 to 2019 and county-level data from 2000 to 2019, we estimate population-weighted Preston curves relating life expectancy to logged real per capita income. From 1980 to 2010, U.S. states followed the classic Preston curve pattern: rising income was accompanied by rising life expectancy. Counties followed the same pattern from 2000 to 2010. From 2010 to 2019, however, states and continued to become richer while life expectancy stagnated or declined. The curves shifted right without shifting up and became steeper, indicating decoupling and divergence: increases in aggregate resources over time no longer produced broad longevity gains, and, in any given year, inequality in life expectancy by income grew. These patterns are robust to alternative temporal anchors around the Great Recession and to substituting education for income. They also appear across sex and racial groups. County-level decompositions are broadly consistent with arguments that longevity has fallen due to widely shared exposure to social deterioration, which may account for the Preston curve reversal. Collectively, we show that the recent U.S. mortality crisis reveals a weakening -- and growing inequality -- in the conversion of aggregate resources into longevity gains. We conclude that the recent U.S. mortality crisis should be understood not only as a story about particular causes of death, but also as a weakening of institutional and social translation.",
+      "summary": {
+        "gist": "20世紀を通じて、経済的豊かさと平均寿命はアメリカをはじめ世界中で共に向上してきました。しかし、2010年代に入り、アメリカの平均寿命は実質一人当たり所得が伸び続けているにもかかわらず、停滞し、下降に転じました。この現象は、薬物過剰摂取や自殺といった特定の死因の増加で説明されてきましたが、なぜ豊かな国で全体的な寿命の伸びが止まったのかという、より根本的な問いが残されていました。",
+        "novelty": "これまでの研究では、薬物過剰摂取や自殺など特定の死因増加がアメリカの平均寿命停滞の原因とされてきました。しかし、なぜ経済的に豊かな国で、全体的な寿命の伸びが止まったのかという、より大きな疑問は未解明でした。 本研究は、所得と平均寿命の関係を示す「プレストン曲線」の動きを分析することで、この謎を解明。2010年以降、所得が増えても寿命が伸びない「デカップリング」と、所得による寿命格差が広がる「ダイバージェンス」が起きていることを明らかにしました。",
+        "method": "本研究では、所得と平均寿命の関係を示す「プレストン曲線」を用いて、このパターンを分析しました。1980年から2019年までの州レベルデータと、2000年から2019年までの郡レベルデータを使用し、人口加重プレストン曲線を推定しました。プレストン曲線は、所得と平均寿命の横断的な関連性だけでなく、集計された資源が人口の長寿にどのように変換されるかを研究するためのツールです。また、大不況の影響を排除するため、異なる時点を基準とした分析や、所得の代わりに教育水準を用いた分析も行い、結果の頑健性を確認しました。",
+        "results": "1980年から2010年まで、アメリカの州はプレストン曲線の古典的なパターンに従い、所得の増加に伴い平均寿命も上昇しました。郡レベルでも2000年から2010年まで同様のパターンが見られました。しかし、2010年から2019年にかけて、州も郡も豊かになり続けたにもかかわらず、平均寿命は停滞または低下しました。曲線は上方にシフトすることなく右にシフトし、さらに傾きが急になりました。これは、集計された資源の増加がもはや広範な長寿の利益を生み出さず（デカップリング）、特定の年において所得による平均寿命の不平等が拡大している（ダイバージェンス）ことを示しています。",
+        "why": "この現象は、特定の死因だけでなく、「制度的・社会的翻訳の弱体化」として理解されるべきだと結論付けています。つまり、豊かな社会が利用可能な資源、柔軟な利点、そして死亡率を減少させる知識を、広く共有される長寿の利益に変換する能力が低下していることを示唆しています。所得が増えても、それが公衆衛生、医療知識の普及、社会インフラの改善といった形で人々の寿命向上に繋がりにくくなっている可能性があります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "public-health",
+      "arxivPrimary": "econ.GN",
+      "titleJa": "プレストン曲線の逆転としてのアメリカの死亡率危機",
+      "catchTitle": "なぜアメリカは豊かになっても長寿にならないのか？",
+      "hook": "あなたは「経済が成長すれば、みんなもっと長生きできるはず」と思っていませんか？実はアメリカで、その常識が覆されています。",
+      "background": "20世紀を通じて、経済的豊かさと平均寿命はアメリカをはじめ世界中で共に向上してきました。しかし、2010年代に入り、アメリカの平均寿命は実質一人当たり所得が伸び続けているにもかかわらず、停滞し、下降に転じました。この現象は、薬物過剰摂取や自殺といった特定の死因の増加で説明されてきましたが、なぜ豊かな国で全体的な寿命の伸びが止まったのかという、より根本的な問いが残されていました。",
+      "quiz": {
+        "question": "2010年以降のアメリカにおける所得と平均寿命の関係で、この論文が指摘する現象はどれでしょう？",
+        "options": [
+          "所得が増えるほど平均寿命も伸びた",
+          "所得が増えても平均寿命が伸びず、格差が拡大した",
+          "所得が減ったため平均寿命も短くなった"
+        ],
+        "correctIndex": 1,
+        "explanation": "2010年以降、アメリカでは所得が増加しても平均寿命が停滞または低下し、所得による寿命の格差が拡大する「デカップリング」と「ダイバージェンス」が観察されました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "プレストン曲線",
+          "definition": "一人当たり所得と平均寿命の関係を示す曲線"
+        },
+        {
+          "term": "デカップリング",
+          "definition": "所得増加と寿命向上が連動しなくなる現象"
+        },
+        {
+          "term": "ダイバージェンス",
+          "definition": "所得による寿命格差が拡大する現象"
+        },
+        {
+          "term": "制度的・社会的翻訳の弱体化",
+          "definition": "社会資源が寿命向上に結びつきにくい状態"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "2010年以降、アメリカでは所得が増えても平均寿命が伸びず、所得と寿命の格差が拡大している。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、薬物過剰摂取や自殺など特定の死因増加がアメリカの平均寿命停滞の原因とされてきました。しかし、なぜ経済的に豊かな国で、全体的な寿命の伸びが止まったのかという、より大きな疑問は未解明でした。",
+        "after": "本研究は、所得と平均寿命の関係を示す「プレストン曲線」の動きを分析することで、この謎を解明。2010年以降、所得が増えても寿命が伸びない「デカップリング」と、所得による寿命格差が広がる「ダイバージェンス」が起きていることを明らかにしました。"
+      },
+      "analogy": {
+        "title": "豊作なのに食卓は貧しい？",
+        "body": "これはまるで、ある農家が毎年記録的な豊作（所得増加）を達成しているのに、家族の食卓には十分な栄養が行き渡らず（平均寿命の停滞）、さらに裕福な家族はより良い食事を得ているのに、貧しい家族は以前より食事が悪化している（所得と寿命の格差拡大）ようなものです。収穫量が増えても、それが家族全員の健康に繋がる「分配の仕組み」がうまく機能しなくなっている状態と言えます。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、経済成長が必ずしも人々の幸福や健康に直結しない現代社会の課題を浮き彫りにします。あなたの会社が従業員の健康増進に投資しても、社会全体の「翻訳機能」が弱まっていれば、期待する効果が得られないかもしれません。また、地域社会の活性化や持続可能な開発目標（SDGs）を考える上で、単なる経済指標の向上だけでなく、その恩恵がどう分配され、人々の生活の質にどう変換されるのかという視点が不可欠であることを示唆しています。私たちの社会が本当に豊かになるためには、経済成長の果実をいかに公平に、そして効果的に人々の健康と長寿に繋げるかを再考する必要があるでしょう。",
+      "takeawayTalk": "アメリカは豊かになっても長生きできなくなってるって知ってた？",
+      "bodyText": "本研究では、所得と平均寿命の関係を示す「プレストン曲線」を用いて、このパターンを分析しました。1980年から2019年までの州レベルデータと、2000年から2019年までの郡レベルデータを使用し、人口加重プレストン曲線を推定しました。プレストン曲線は、所得と平均寿命の横断的な関連性だけでなく、集計された資源が人口の長寿にどのように変換されるかを研究するためのツールです。また、大不況の影響を排除するため、異なる時点を基準とした分析や、所得の代わりに教育水準を用いた分析も行い、結果の頑健性を確認しました。\n\nこの現象は、特定の死因だけでなく、「制度的・社会的翻訳の弱体化」として理解されるべきだと結論付けています。つまり、豊かな社会が利用可能な資源、柔軟な利点、そして死亡率を減少させる知識を、広く共有される長寿の利益に変換する能力が低下していることを示唆しています。所得が増えても、それが公衆衛生、医療知識の普及、社会インフラの改善といった形で人々の寿命向上に繋がりにくくなっている可能性があります。",
+      "bodyGlossary": [
+        {
+          "term": "プレストン曲線",
+          "definition": "一人当たり所得と平均寿命の関係を示す曲線",
+          "start": 20,
+          "end": 27
+        },
+        {
+          "term": "制度的・社会的翻訳の弱体化",
+          "definition": "社会資源が寿命向上に結びつきにくい状態",
+          "start": 273,
+          "end": 286
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "プレストン曲線",
+          "definition": "一人当たり所得と平均寿命の関係を示す曲線",
+          "start": 20,
+          "end": 27
+        },
+        {
+          "term": "制度的・社会的翻訳の弱体化",
+          "definition": "社会資源が寿命向上に結びつきにくい状態",
+          "start": 273,
+          "end": 286
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 236,
+      "keyFigure": {
+        "imagePath": "/figures/2607.06427v1_results.png",
+        "page": 17,
+        "caption": "アメリカの州における所得と平均寿命の関係をプレストン曲線で示しています。",
+        "label": "Figure 1. Preston Curves of Life Expectancy and Real Per Capita Income (Logged) by",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-08T23:05:43.699Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.06427v1_results.png",
+          "page": 17,
+          "caption": "アメリカの州における所得と平均寿命の関係をプレストン曲線で示しています。",
+          "label": "Figure 1. Preston Curves of Life Expectancy and Real Per Capita Income (Logged) by",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-08T23:05:43.699Z"
+        },
+        {
+          "imagePath": "/figures/2607.06427v1_why.png",
+          "page": 19,
+          "caption": "所得に基づいた期待平均寿命と実際の平均寿命を比較しています。",
+          "label": "Figure 4. Observed Life Expectancy Compared with Expected Life Expectancy Based on",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-08T23:05:43.699Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.06461v1",
+      "title": "WordVoice: Explicit and Decoupled Multi-Dimensional Word-Level Control for LLM-Based TTS",
+      "authors": [
+        "Sihang Nie",
+        "Jinxin Ji",
+        "Xiaofen Xing",
+        "Deyi Tuo",
+        "Chengbin Jin",
+        "Jialong Mai",
+        "Xiangmin Xu"
+      ],
+      "publishedAt": "2026-07-07T16:22:59Z",
+      "url": "https://arxiv.org/abs/2607.06461v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.06461v1.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "eess.AS",
+        "cs.CL",
+        "cs.SD"
+      ],
+      "abstract": "While recent Large Language Model (LLM)-based Text-to-Speech (TTS) systems have achieved remarkable naturalness, they predominantly rely on implicit end-to-end generation paradigms, resulting in coarse-grained control. In scenarios demanding precise stylistic interventions and strict temporal alignment, such as audiobook narration and video dubbing, the inability to explicitly manipulate word-level acoustic attributes remains a critical bottleneck. This limitation is primarily amplified by the severe scarcity of fine-grained annotated datasets and the architectural challenge of integrating multi-dimensional control signals into discrete autoregressive generation. To address this, we propose a unified framework for highly precise word-level control. First, we construct WordVoice-5A, a massive 4.7k-hour bilingual dataset featuring five-dimensional word-level annotations (duration, boundary, energy, pitch and tone) developed through a rigorous linguistically-guided pipeline. Second, we introduce WordVoice to transform the implicit generation process into an explicit, highly controllable paradigm. Specifically, we introduce a bound-token mechanism within the LLM to formulate an explicit ``acoustic planning'' process, enabling adaptive multi-task prosodic planning and flexible manual intervention. Furthermore, we augment the token-to-waveform stage with a fine-grained acoustic modulation module, bridging the resolution gap to strictly align word-level attributes between highly compressed discrete tokens and continuous waveforms. Extensive experiments demonstrate that WordVoice achieves superior, decoupled control over multiple acoustic dimensions while maintaining competitive zero-shot synthesis stability. The code and audio samples are publicly available at https://xxh333.github.io/wordvoice-demo/.",
+      "summary": {
+        "gist": "近年の大規模言語モデル（LLM）ベースの音声合成（TTS）システムは、驚くほど自然な音声を生成できるようになりました。しかし、その生成プロセスは「エンドツーエンド」と呼ばれる、テキストから直接音声を生成する暗黙的なものであり、単語レベルでの細かい音響属性の制御が難しいという課題がありました。特にオーディオブックのナレーションや動画の吹き替えなど、正確なスタイルの介入や厳密な時間同期が求められる場面では、この単語レベルでの制御の欠如がボトルネックとなっていました。この制限は、細かいアノテーションが施されたデータセットの不足と、多次元の制御信号を離散的な自己回帰生成に統合するアーキテクチャ上の課題によって増幅されていました。",
+        "novelty": "従来のAI音声合成（TTS）は、文章全体や大まかな感情の指示しかできず、特定の単語の長さ、強さ、高さといった細かい調整は困難でした。特にオーディオブックのナレーションや動画の吹き替えでは、単語レベルでの厳密な感情表現や時間同期が難しく、人間のような自然な表現には限界がありました。 この論文では、単語ごとに「長さ」「区切り」「エネルギー（強さ）」「ピッチ（高さ）」「トーン（抑揚）」の5つの要素を明示的に制御できるWordVoiceを提案。大規模なアノテーションデータセットと、LLM内部で音響計画を行うメカニズムにより、人間が意図する細かいニュアンスをAI音声に反映できるようになりました。",
+        "method": "本研究では、単語レベルでの高精度な制御を可能にする統一フレームワークを提案しました。まず、言語学的に厳密なパイプラインを通じて、単語レベルで5次元（長さ、区切り、エネルギー、ピッチ、トーン）のアノテーションが施された大規模なバイリンガルデータセット「WordVoice-5A」（4.7k時間）を構築しました。次に、LLM内部に「バウンドトークン」メカニズムを導入し、暗黙的な生成プロセスを明示的な「音響計画」プロセスへと変換する「WordVoice」を開発しました。これにより、適応的な多タスク韻律計画と柔軟な手動介入が可能になります。さらに、トークンから波形への変換段階で、きめ細かい音響変調モジュールを追加し、高圧縮された離散トークンと連続波形の間で単語レベルの属性を厳密に整合させることで、解像度のギャップを埋めました。",
+        "results": "WordVoiceは、複数の音響次元において、優れた分離された制御を達成し、競争力のあるゼロショット合成の安定性を維持することを示しました。",
+        "why": "WordVoiceの核となるのは、LLMが音声トークンを生成する前に、各単語の音響属性を明示的に「計画」するプロセスです。特殊なバウンドトークン⟨b⟩が予測されると、LLMの隠れ状態が軽量な単語デコーダーに渡され、その単語の5つの音響属性（長さ、区切り、エネルギー、ピッチ、トーン）が同時に予測されます。これらの予測された属性は、単語の意味埋め込みと結合され、統一された条件表現を形成します。この条件に基づいて、LLMは対応する音声チャンクを自己回帰的に生成します。これにより、単語レベルでの音響属性の明示的な制御が可能になり、さらに、トークンから波形への変換段階でのきめ細かい変調モジュールが、離散的な音声トークンと最終的な連続波形の間で音響属性の厳密な整合を保証します。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / eess.AS）",
+      "field": "AI・データサイエンス",
+      "categoryL1": "adjacent",
+      "categoryL2": "ai-application",
+      "arxivPrimary": "eess.AS",
+      "titleJa": "WordVoice: LLMベースTTSにおける明示的かつ分離された多次元単語レベル制御",
+      "catchTitle": "AI音声に「感情」を込める新技術",
+      "hook": "AIが生成する音声、どこか無機質だと感じませんか？あなたの伝えたいニュアンスを、AIがもっと細かく表現できるようになります。",
+      "background": "近年の大規模言語モデル（LLM）ベースの音声合成（TTS）システムは、驚くほど自然な音声を生成できるようになりました。しかし、その生成プロセスは「エンドツーエンド」と呼ばれる、テキストから直接音声を生成する暗黙的なものであり、単語レベルでの細かい音響属性の制御が難しいという課題がありました。特にオーディオブックのナレーションや動画の吹き替えなど、正確なスタイルの介入や厳密な時間同期が求められる場面では、この単語レベルでの制御の欠如がボトルネックとなっていました。この制限は、細かいアノテーションが施されたデータセットの不足と、多次元の制御信号を離散的な自己回帰生成に統合するアーキテクチャ上の課題によって増幅されていました。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "LLM",
+          "definition": "大量のテキストデータで学習した大規模言語モデル"
+        },
+        {
+          "term": "TTS",
+          "definition": "テキストを音声に変換する技術"
+        },
+        {
+          "term": "エンドツーエンド",
+          "definition": "入力から出力まで一貫して処理するシステム"
+        },
+        {
+          "term": "アノテーション",
+          "definition": "データに意味や情報を付与する作業"
+        },
+        {
+          "term": "バウンドトークン",
+          "definition": "LLM内で音響計画をトリガーする特殊な記号"
+        },
+        {
+          "term": "自己回帰生成",
+          "definition": "前の出力に基づいて次の出力を生成する手法"
+        },
+        {
+          "term": "音響計画",
+          "definition": "音声生成前に音響属性を事前に決定するプロセス"
+        },
+        {
+          "term": "音声チャンク",
+          "definition": "単語やフレーズごとの音声の断片"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "AI音声の「単語ごとの抑揚」を、人間のように自在に操る技術が開発されました。",
+      "noveltyContrast": {
+        "before": "従来のAI音声合成（TTS）は、文章全体や大まかな感情の指示しかできず、特定の単語の長さ、強さ、高さといった細かい調整は困難でした。特にオーディオブックのナレーションや動画の吹き替えでは、単語レベルでの厳密な感情表現や時間同期が難しく、人間のような自然な表現には限界がありました。",
+        "after": "この論文では、単語ごとに「長さ」「区切り」「エネルギー（強さ）」「ピッチ（高さ）」「トーン（抑揚）」の5つの要素を明示的に制御できるWordVoiceを提案。大規模なアノテーションデータセットと、LLM内部で音響計画を行うメカニズムにより、人間が意図する細かいニュアンスをAI音声に反映できるようになりました。"
+      },
+      "analogy": {
+        "title": "畑の作物に合わせた水やりと肥料の調整",
+        "body": "これは、まるで畑で育てる作物に、一つひとつ最適な水やりと肥料の量を調整するようなものです。従来のAI音声は、畑全体に一律に水をまき、肥料を与えるようなものでした。元気な作物もあれば、もっと水が必要な作物、肥料を控えめにした方が良い作物があっても、全体としてしか調整できませんでした。しかしWordVoiceは、個々の作物（単語）の状態を見極め、必要な水（長さ）、肥料（エネルギー）、日当たり（ピッチ）などをピンポイントで与えることで、それぞれの作物が持つ本来の味（ニュアンス）を最大限に引き出すことを可能にします。これにより、畑全体（文章全体）として、より豊かで多様な収穫（表現力豊かな音声）が得られるのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この技術は、単にAIが話すだけでなく、「どのように話すか」を細かくコントロールできるため、私たちの生活や仕事に大きな影響を与えます。例えば、オーディオブックでは、登場人物の感情や状況に応じた自然な声色で物語を語り、より没入感のある体験を提供できます。動画の吹き替えでは、口の動きに合わせた厳密な時間同期が可能になり、不自然さが解消されます。また、教育コンテンツでは、重要な単語を強調したり、ゆっくり話したりすることで、学習効果を高めることができます。ビジネスシーンでは、プレゼンテーションのナレーションや顧客対応のAI音声が、より人間らしく、説得力のあるコミュニケーションを実現するでしょう。AIが感情を込めて話すことで、私たちはより豊かな情報体験を得られるようになります。",
+      "takeawayTalk": "AI音声が単語ごとに感情や抑揚を調整できるようになるんだって！",
+      "bodyText": "本研究では、単語レベルでの高精度な制御を可能にする統一フレームワークを提案しました。まず、言語学的に厳密なパイプラインを通じて、単語レベルで5次元（長さ、区切り、エネルギー、ピッチ、トーン）のアノテーションが施された大規模なバイリンガルデータセット「WordVoice-5A」（4.7k時間）を構築しました。次に、LLM内部に「バウンドトークン」メカニズムを導入し、暗黙的な生成プロセスを明示的な「音響計画」プロセスへと変換する「WordVoice」を開発しました。これにより、適応的な多タスク韻律計画と柔軟な手動介入が可能になります。さらに、トークンから波形への変換段階で、きめ細かい音響変調モジュールを追加し、高圧縮された離散トークンと連続波形の間で単語レベルの属性を厳密に整合させることで、解像度のギャップを埋めました。\n\nWordVoiceの核となるのは、LLMが音声トークンを生成する前に、各単語の音響属性を明示的に「計画」するプロセスです。特殊なバウンドトークン⟨b⟩が予測されると、LLMの隠れ状態が軽量な単語デコーダーに渡され、その単語の5つの音響属性（長さ、区切り、エネルギー、ピッチ、トーン）が同時に予測されます。これらの予測された属性は、単語の意味埋め込みと結合され、統一された条件表現を形成します。この条件に基づいて、LLMは対応する音声チャンクを自己回帰的に生成します。これにより、単語レベルでの音響属性の明示的な制御が可能になり、さらに、トークンから波形への変換段階でのきめ細かい変調モジュールが、離散的な音声トークンと最終的な連続波形の間で音響属性の厳密な整合を保証します。",
+      "bodyGlossary": [
+        {
+          "term": "アノテーション",
+          "definition": "データに意味や情報を付与する作業",
+          "start": 96,
+          "end": 103
+        },
+        {
+          "term": "LLM",
+          "definition": "大量のテキストデータで学習した大規模言語モデル",
+          "start": 157,
+          "end": 160
+        },
+        {
+          "term": "バウンドトークン",
+          "definition": "LLM内で音響計画をトリガーする特殊な記号",
+          "start": 164,
+          "end": 172
+        },
+        {
+          "term": "音響計画",
+          "definition": "音声生成前に音響属性を事前に決定するプロセス",
+          "start": 199,
+          "end": 203
+        },
+        {
+          "term": "音声チャンク",
+          "definition": "単語やフレーズごとの音声の断片",
+          "start": 579,
+          "end": 585
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "アノテーション",
+          "definition": "データに意味や情報を付与する作業",
+          "start": 96,
+          "end": 103
+        },
+        {
+          "term": "LLM",
+          "definition": "大量のテキストデータで学習した大規模言語モデル",
+          "start": 157,
+          "end": 160
+        },
+        {
+          "term": "バウンドトークン",
+          "definition": "LLM内で音響計画をトリガーする特殊な記号",
+          "start": 164,
+          "end": 172
+        },
+        {
+          "term": "音響計画",
+          "definition": "音声生成前に音響属性を事前に決定するプロセス",
+          "start": 199,
+          "end": 203
+        },
+        {
+          "term": "音声チャンク",
+          "definition": "単語やフレーズごとの音声の断片",
+          "start": 579,
+          "end": 585
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 300,
+      "keyFigure": {
+        "imagePath": "/figures/2607.06461v1_results.png",
+        "page": 7,
+        "caption": "中国語と英語のテストセットにおける客観的な評価結果を示しています。",
+        "label": "Table 4: Objective evaluation results on the Chinese and English test sets.",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-08T23:05:45.864Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.06461v1_results.png",
+          "page": 7,
+          "caption": "中国語と英語のテストセットにおける客観的な評価結果を示しています。",
+          "label": "Table 4: Objective evaluation results on the Chinese and English test sets.",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-08T23:05:45.864Z"
+        },
+        {
+          "imagePath": "/figures/2607.06461v1_why.png",
+          "page": 4,
+          "caption": "WordVoiceの全体的なアーキテクチャを示しており、LLMが単語の音響属性を計画するプロセスがわかります。",
+          "label": "Fig. 3: Overall architecture of WordVoice. (a) WordVoice-LLM: During autoregressive decoding, the bound token ⟨b⟩trigger",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-08T23:05:45.864Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.06456v1",
+      "title": "A Hardware-Aware Open-Source Framework for Design Space Exploration of Mixed-Signal Spiking Neural Networks",
+      "authors": [
+        "Sayma Nowshin Chowdhury",
+        "Vineeta Nair",
+        "Taseen Forhad",
+        "Aishwarya Natarajan",
+        "Corey Hart",
+        "Sahil Shah"
+      ],
+      "publishedAt": "2026-07-07T16:15:03Z",
+      "url": "https://arxiv.org/abs/2607.06456v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.06456v1.pdf",
+      "categories": [
+        "topic:ai-tech",
+        "eess.SP",
+        "cs.NE"
+      ],
+      "abstract": "Energy-efficient neuromorphic computing at the edge requires simulation tools that can capture the non-ideal behavior of mixed-signal spiking neural network (SNN) hardware while supporting system-level design exploration. This work presents an open-source hardware-aware simulation framework for mixed-signal SNNs that enables comparative analysis across neuron, synapse and architecture choices. The framework supports multiple neuron models, including Leaky Integrate-and-Fire (LIF), Hodgkin-Huxley (HH) and Axon-Hillock (AH), together with non-volatile analog synapses based on floating-gate transistors and ReRAM devices. By incorporating device-level nonlinearities directly into PyTorch-based training and inference, the tool enables optimization of physical synaptic parameters rather than idealized abstract weights. The framework is evaluated on standard neuromorphic benchmarks, including N-MNIST, DVS Gesture and Spiking Heidelberg Digits (SHD). For each model dataset configuration, it reports classification accuracy together with hardware-oriented metrics such as silicon area, power consumption and quantization sensitivity. These capabilities enable cross-layer design space exploration and help identify neuron-synapse configurations that best satisfy application-specific constraints on accuracy, energy efficiency, area and hardware fidelity.",
+      "summary": {
+        "gist": "エッジデバイス（センサー、ロボットなど）では、限られた電力で大量のデータを効率的に処理する必要があります。脳の仕組みを模倣したスパイクニューラルネットワーク（SNN）は、従来のAIよりも省エネで効率的な処理が期待されています。しかし、SNNを実際の混合信号ニューロモルフィックハードウェアに実装すると、デバイスの非線形性やばらつきにより、ソフトウェアでの理想的な性能が大きく劣化するという課題がありました。このギャップを埋めるツールが求められていました。",
+        "novelty": "従来の脳型AI（SNN）シミュレーションツールは、ニューロンやシナプスの動作を理想的なものとして扱っていました。そのため、実際にチップとして実装すると、デバイスのばらつきや非線形性といった物理的な制約により、期待通りの性能が出ないという問題がありました。 この研究では、ハードウェアの非理想的な特性（浮遊ゲートトランジスタやReRAMなどのアナログシナプスの非線形性、ニューロンの回路レベルの制約）を、学習と推論のプロセスに直接組み込んだシミュレーションフレームワークを開発しました。これにより、実際のチップで高い性能を発揮できるSNNを設計できます。",
+        "method": "本研究は、ハードウェアの非理想性を考慮した混合信号SNNのシミュレーションおよび設計探索フレームワークを開発しました。具体的には、浮遊ゲートトランジスタやReRAMデバイスに基づくアナログシナプスモデルと、複数の混合信号ニューロン実装（LIF、HH、AHなど）を統合しています。PyTorchベースの学習・推論プロセスにデバイスレベルの非線形性を直接組み込むことで、抽象的な重みではなく、物理的なシナプスパラメータ（浮遊ゲート電圧、ReRAMフィラメントギャップなど）を最適化できるようにしました。これにより、分類精度、シリコン面積、消費電力、量子化感度といったハードウェア指向の指標を考慮した設計空間探索が可能になります。",
+        "results": "N-MNIST、DVS Gesture、Spiking Heidelberg Digits (SHD)といった標準的なニューロモルフィックベンチマークデータセットでフレームワークを評価しました。その結果、従来のソフトウェア学習では、ハードウェアに直接展開するとSHDタスクで56.04%の精度劣化が生じることが示されました。本フレームワークは、ハードウェアの非理想性を考慮した学習により、この精度劣化を抑制し、アプリケーション固有の精度、エネルギー効率、面積、ハードウェア忠実度といった制約を最も満たすニューロン-シナプス構成を特定できることを示しました。",
+        "why": "従来のソフトウェアベースのSNN学習は、理想的な線形重みを前提としています。このため、学習された重みを非理想的な物理ハードウェアに直接マッピングすると、デバイスの非線形性やばらつきによって意思決定境界がシフトし、誤分類率が増加します。これは、学習がハードウェアの不整合に敏感な「狭い最適解」に収束するためです。一方、本フレームワークのようにハードウェアの非理想性を学習プロセスに直接組み込むことで、よりロバストな「平坦な最適解」に収束しやすくなります。これにより、物理的なシナプスパラメータを直接最適化できるため、学習後の複雑なキャリブレーションや微調整が不要になり、ハードウェア展開時の性能劣化を抑制できます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / eess.SP）",
+      "field": "AI・データサイエンス",
+      "categoryL1": "adjacent",
+      "categoryL2": "neuromorphic-computing",
+      "arxivPrimary": "eess.SP",
+      "titleJa": "ハードウェア特性を考慮した混合信号SNN設計探索のためのオープンソースフレームワーク",
+      "catchTitle": "脳型AI、現実の壁を乗り越える",
+      "hook": "「脳のように賢く、省エネなAI」が夢物語で終わるかもしれません。なぜなら、理想と現実のギャップがあるからです。",
+      "background": "エッジデバイス（センサー、ロボットなど）では、限られた電力で大量のデータを効率的に処理する必要があります。脳の仕組みを模倣したスパイクニューラルネットワーク（SNN）は、従来のAIよりも省エネで効率的な処理が期待されています。しかし、SNNを実際の混合信号ニューロモルフィックハードウェアに実装すると、デバイスの非線形性やばらつきにより、ソフトウェアでの理想的な性能が大きく劣化するという課題がありました。このギャップを埋めるツールが求められていました。",
+      "quiz": {
+        "question": "この研究が解決しようとしている、従来のSNNシミュレーションの主な課題は何ですか？",
+        "options": [
+          "SNNの学習速度が遅いこと",
+          "SNNのモデルが複雑すぎること",
+          "ハードウェアの非理想性が考慮されていないこと"
+        ],
+        "correctIndex": 2,
+        "explanation": "従来のSNNシミュレーションは、ニューロンやシナプスの動作を理想的なものとして扱っていたため、実際のハードウェアに実装した際に性能が劣化するという課題がありました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "SNN",
+          "definition": "脳の神経回路を模倣した次世代AIモデル。"
+        },
+        {
+          "term": "エッジデバイス",
+          "definition": "センサーやロボットなど、データの発生源に近い場所の機器。"
+        },
+        {
+          "term": "混合信号",
+          "definition": "アナログとデジタルの両方の回路を組み合わせたもの。"
+        },
+        {
+          "term": "ReRAM",
+          "definition": "抵抗変化型メモリ。次世代の不揮発性メモリ。"
+        },
+        {
+          "term": "PyTorch",
+          "definition": "機械学習で広く使われるオープンソースのライブラリ。"
+        },
+        {
+          "term": "シナプス",
+          "definition": "ニューロン間の信号伝達を行う結合部分。"
+        },
+        {
+          "term": "ニューロン",
+          "definition": "脳の神経細胞を模倣した情報処理の基本単位。"
+        },
+        {
+          "term": "量子化感度",
+          "definition": "デジタル表現の精度が性能に与える影響の度合い。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "脳型AIチップの性能劣化を防ぐため、ハードウェアの非理想性を考慮した設計・学習を可能にするフレームワークです。",
+      "noveltyContrast": {
+        "before": "従来の脳型AI（SNN）シミュレーションツールは、ニューロンやシナプスの動作を理想的なものとして扱っていました。そのため、実際にチップとして実装すると、デバイスのばらつきや非線形性といった物理的な制約により、期待通りの性能が出ないという問題がありました。",
+        "after": "この研究では、ハードウェアの非理想的な特性（浮遊ゲートトランジスタやReRAMなどのアナログシナプスの非線形性、ニューロンの回路レベルの制約）を、学習と推論のプロセスに直接組み込んだシミュレーションフレームワークを開発しました。これにより、実際のチップで高い性能を発揮できるSNNを設計できます。"
+      },
+      "analogy": {
+        "title": "理想の畑と現実の畑",
+        "body": "これは、まるで「理想的な土壌と気候を前提に育てた作物が、実際の畑ではうまく育たない」という状況に似ています。研究の多くは、理想的な環境（ソフトウェア）で最高の収穫（AI性能）を目指しますが、現実の畑（ハードウェア）には石があったり、日当たりが悪かったり、土の栄養が偏っていたりします。この研究は、実際の畑の条件（ハードウェアの非理想性）を事前に考慮して、それに合わせて品種改良（SNNの設計・学習）を行うことで、現実の畑でも安定して良い収穫を得られるようにする、というものです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "-56.04%",
+          "label": "精度劣化（従来比）"
+        }
+      ],
+      "whyYouCare": "もしあなたがIoTデバイスや自動運転車、ウェアラブルセンサーなどの開発に携わっているなら、この研究は非常に重要です。省エネで高性能なAIチップは、これらのデバイスのバッテリー寿命を延ばし、リアルタイム処理能力を向上させ、より高度な機能を実現します。また、AIの社会実装を加速させる上で、理論上の性能だけでなく、実際のハードウェアで安定して動作するAIを開発できることは、信頼性の高い製品を生み出すために不可欠です。この技術は、AIが私たちの生活や産業に深く浸透する未来を、より早く、より確実なものにするでしょう。",
+      "takeawayTalk": "脳型AIチップは、ハードウェアの現実を考慮して設計しないと性能が落ちる！",
+      "bodyText": "本研究は、ハードウェアの非理想性を考慮した混合信号SNNのシミュレーションおよび設計探索フレームワークを開発しました。具体的には、浮遊ゲートトランジスタやReRAMデバイスに基づくアナログシナプスモデルと、複数の混合信号ニューロン実装（LIF、HH、AHなど）を統合しています。PyTorchベースの学習・推論プロセスにデバイスレベルの非線形性を直接組み込むことで、抽象的な重みではなく、物理的なシナプスパラメータ（浮遊ゲート電圧、ReRAMフィラメントギャップなど）を最適化できるようにしました。これにより、分類精度、シリコン面積、消費電力、量子化感度といったハードウェア指向の指標を考慮した設計空間探索が可能になります。\n\n従来のソフトウェアベースのSNN学習は、理想的な線形重みを前提としています。このため、学習された重みを非理想的な物理ハードウェアに直接マッピングすると、デバイスの非線形性やばらつきによって意思決定境界がシフトし、誤分類率が増加します。これは、学習がハードウェアの不整合に敏感な「狭い最適解」に収束するためです。一方、本フレームワークのようにハードウェアの非理想性を学習プロセスに直接組み込むことで、よりロバストな「平坦な最適解」に収束しやすくなります。これにより、物理的なシナプスパラメータを直接最適化できるため、学習後の複雑なキャリブレーションや微調整が不要になり、ハードウェア展開時の性能劣化を抑制できます。",
+      "bodyGlossary": [
+        {
+          "term": "混合信号",
+          "definition": "アナログとデジタルの両方の回路を組み合わせたもの。",
+          "start": 21,
+          "end": 25
+        },
+        {
+          "term": "SNN",
+          "definition": "脳の神経回路を模倣した次世代AIモデル。",
+          "start": 25,
+          "end": 28
+        },
+        {
+          "term": "ReRAM",
+          "definition": "抵抗変化型メモリ。次世代の不揮発性メモリ。",
+          "start": 77,
+          "end": 82
+        },
+        {
+          "term": "シナプス",
+          "definition": "ニューロン間の信号伝達を行う結合部分。",
+          "start": 94,
+          "end": 98
+        },
+        {
+          "term": "ニューロン",
+          "definition": "脳の神経細胞を模倣した情報処理の基本単位。",
+          "start": 110,
+          "end": 115
+        },
+        {
+          "term": "PyTorch",
+          "definition": "機械学習で広く使われるオープンソースのライブラリ。",
+          "start": 139,
+          "end": 146
+        },
+        {
+          "term": "量子化感度",
+          "definition": "デジタル表現の精度が性能に与える影響の度合い。",
+          "start": 272,
+          "end": 277
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "混合信号",
+          "definition": "アナログとデジタルの両方の回路を組み合わせたもの。",
+          "start": 21,
+          "end": 25
+        },
+        {
+          "term": "SNN",
+          "definition": "脳の神経回路を模倣した次世代AIモデル。",
+          "start": 25,
+          "end": 28
+        },
+        {
+          "term": "ReRAM",
+          "definition": "抵抗変化型メモリ。次世代の不揮発性メモリ。",
+          "start": 77,
+          "end": 82
+        },
+        {
+          "term": "シナプス",
+          "definition": "ニューロン間の信号伝達を行う結合部分。",
+          "start": 94,
+          "end": 98
+        },
+        {
+          "term": "ニューロン",
+          "definition": "脳の神経細胞を模倣した情報処理の基本単位。",
+          "start": 110,
+          "end": 115
+        },
+        {
+          "term": "PyTorch",
+          "definition": "機械学習で広く使われるオープンソースのライブラリ。",
+          "start": 139,
+          "end": 146
+        },
+        {
+          "term": "量子化感度",
+          "definition": "デジタル表現の精度が性能に与える影響の度合い。",
+          "start": 272,
+          "end": 277
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 277,
+      "keyFigure": {
+        "imagePath": "/figures/2607.06456v1_results.png",
+        "page": 16,
+        "caption": "ハードウェアの非理想性を考慮した学習により、精度劣化を抑制できることを示す図です。",
+        "label": "Figure 10: (a) Hodgkin-Huxley neuron model (b) ISI vs. synaptic current for HH",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-08T23:05:48.885Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.06456v1_results.png",
+          "page": 16,
+          "caption": "ハードウェアの非理想性を考慮した学習により、精度劣化を抑制できることを示す図です。",
+          "label": "Figure 10: (a) Hodgkin-Huxley neuron model (b) ISI vs. synaptic current for HH",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-08T23:05:48.885Z"
+        },
+        {
+          "imagePath": "/figures/2607.06456v1_why.png",
+          "page": 6,
+          "caption": "ハードウェアの非理想性を学習プロセスに組み込む本フレームワークの全体フローを示す図です。",
+          "label": "Figure 2: General flow of the proposed simulation framework for mixed-signal SNNs.",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-08T23:05:48.885Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.06316v1",
+      "title": "Does Financial Trading Smooth Non-Convex Markets?",
+      "authors": [
+        "Nicolas Stevens",
+        "Peter Cramton",
+        "Martial Toniotti"
+      ],
+      "publishedAt": "2026-07-07T14:17:36Z",
+      "url": "https://arxiv.org/abs/2607.06316v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.06316v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "math.OC",
+        "econ.GN",
+        "eess.SY"
+      ],
+      "abstract": "In non-convex markets, a competitive equilibrium may fail to exist. This turns out to be an important issue in real-world non-convex auction markets, such as electricity markets, as it complicates pricing and requires the auctioneer to resort to out-of-market discriminatory side payments to sustain an equilibrium. We investigate whether the introduction of convex financial trading induces a smoothing effect, mitigating the issues arising from non-convexities. We develop a two-stage non-convex market model (a forward market followed by a spot market) in which convex financial traders participate in the forward market. Our model predicts that financial trading reduces the magnitude of side payments required to support the cleared allocation. To test the prediction of our model, we examine the introduction of a transaction fee on financial traders in 2020 by PJM, the US's largest electricity market. We show that the substantial decline in financial trading volume caused by this policy coincided with a significant increase in side payments, in line with our theoretical predictions.",
+      "summary": {
+        "gist": "電力市場は、発電所の起動費用や最低稼働時間といった複雑な制約（非凸性）を持つため、市場価格だけでは需給が一致しないことがあります。この場合、市場運営者は「調整金」と呼ばれる追加の支払いを行うことで、市場を成立させています。この調整金は不透明で、市場参加者の行動を歪める可能性があり、長年の課題でした。",
+        "novelty": "電力市場のような非凸な市場では、発電所の起動費用など複雑な制約から、市場価格だけでは取引が成立しにくい問題がありました。このため、市場運営者が「調整金」という形で追加の支払いを行い、市場を成立させていました。この調整金は不透明で、市場参加者の行動を歪める可能性が指摘されていました。 この研究では、金融トレーダーが市場に参加し、将来の価格を予測して取引を行うことで、市場の非凸性を「ならす」効果があることを発見しました。これにより、市場運営者が支払う調整金の額が減少し、より透明性の高い市場運営が可能になることを理論モデルと実際のデータで示しました。",
+        "method": "本研究では、金融トレーダーが先物市場に参加する2段階の非凸市場モデルを構築しました。このモデルでは、金融トレーダーが凸型の入札を行い、裁定取引を通じて市場の非凸性をならす効果を理論的に分析しました。次に、米国最大の電力市場であるPJMが2020年に金融トレーダーに取引手数料を導入した政策変更を実証分析しました。この政策変更が金融取引量に与えた影響と、それに伴う調整金の変化を検証しました。",
+        "results": "理論モデルは、金融取引が価格収束を改善し、総コストを削減し、市場運営者が必要とする調整金の規模を緩和することを予測しました。実証分析では、PJMが金融トレーダーに取引手数料を導入した結果、金融取引量が大幅に減少し、それに伴いリアルタイム市場の調整金が80%増加し、翌日市場で調整金が発生する確率が10%増加したことを示しました。これは、金融取引が市場の非凸性をならし、調整金を削減するという理論的予測と一致する結果です。",
+        "why": "金融トレーダーは、将来のリアルタイム市場の状況と、発電所の起動費用などの非凸な運用コストを織り込みながら、翌日市場で裁定取引を行います。これにより、翌日市場の価格形成が改善され、調整金が不要になる効果があります。また、金融取引はリアルタイムの状況を予測することで、翌日市場での発電計画（コミットメント決定）をより適切にし、リアルタイムでの急な発電機起動（通常、調整金が必要となる）を減らすことにも貢献します。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / math.OC）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "market-design",
+      "arxivPrimary": "math.OC",
+      "titleJa": "金融取引は非凸市場を円滑にするか？",
+      "catchTitle": "電力市場の「見えないコスト」を金融取引が減らす",
+      "hook": "電力料金の明細を見て、「なぜこの金額？」と疑問に思ったことはありませんか？実は、電力市場には「見えないコスト」が存在します。",
+      "background": "電力市場は、発電所の起動費用や最低稼働時間といった複雑な制約（非凸性）を持つため、市場価格だけでは需給が一致しないことがあります。この場合、市場運営者は「調整金」と呼ばれる追加の支払いを行うことで、市場を成立させています。この調整金は不透明で、市場参加者の行動を歪める可能性があり、長年の課題でした。",
+      "quiz": {
+        "question": "この研究で、金融トレーダーが電力市場に与える主な効果は何でしたか？",
+        "options": [
+          "電力価格を上昇させる",
+          "市場の非凸性をならし、調整金を削減する",
+          "発電所の建設費用を賄う"
+        ],
+        "correctIndex": 1,
+        "explanation": "金融トレーダーは、裁定取引を通じて市場の非凸性をならし、市場運営者が必要とする調整金の規模を緩和する効果があることが示されました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "非凸市場",
+          "definition": "供給曲線が滑らかでなく、価格と数量の関係が複雑な市場。"
+        },
+        {
+          "term": "調整金",
+          "definition": "市場価格だけでは成立しない取引を補うための追加支払い。"
+        },
+        {
+          "term": "先物市場",
+          "definition": "将来の特定の日時に商品を売買する契約を取引する市場。"
+        },
+        {
+          "term": "裁定取引",
+          "definition": "異なる市場間の価格差を利用して利益を得る取引。"
+        },
+        {
+          "term": "PJM",
+          "definition": "米国最大の電力卸売市場を運営する組織。"
+        },
+        {
+          "term": "リアルタイム市場",
+          "definition": "電力の需給をリアルタイムで調整する市場。"
+        },
+        {
+          "term": "翌日市場",
+          "definition": "取引の翌日に受け渡しが行われる電力市場。"
+        },
+        {
+          "term": "コミットメント決定",
+          "definition": "発電所の稼働計画を決定すること。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "金融トレーダーの参加が、電力市場の複雑なコストを減らし、市場を安定させる効果があることを理論と実証で示した研究です。",
+      "noveltyContrast": {
+        "before": "電力市場のような非凸な市場では、発電所の起動費用など複雑な制約から、市場価格だけでは取引が成立しにくい問題がありました。このため、市場運営者が「調整金」という形で追加の支払いを行い、市場を成立させていました。この調整金は不透明で、市場参加者の行動を歪める可能性が指摘されていました。",
+        "after": "この研究では、金融トレーダーが市場に参加し、将来の価格を予測して取引を行うことで、市場の非凸性を「ならす」効果があることを発見しました。これにより、市場運営者が支払う調整金の額が減少し、より透明性の高い市場運営が可能になることを理論モデルと実際のデータで示しました。"
+      },
+      "analogy": {
+        "title": "畑の土壌改良と金融取引",
+        "body": "あなたの畑の土壌が、場所によって栄養分が偏っていたり、石がゴロゴロしていたりする「非凸な状態」だと想像してください。このままでは作物の育ちが悪く、収穫量も安定しません。そこで、あなたは土壌改良剤を投入したり、石を取り除いたりして、土壌全体を均一で肥沃な状態に「ならす」作業をします。この「土壌改良」が、まさに金融トレーダーが電力市場で行うことと同じです。彼らは将来の天候や需要を予測し、電力の取引を前もって行うことで、市場の偏りや不均衡を吸収し、全体としてスムーズな取引を可能にするのです。これにより、市場運営者が作物の育ちを補うために支払っていた「補助金」のような調整金が減る、というわけです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+80%",
+          "label": "リアルタイム調整金増加（取引手数料導入後）"
+        },
+        {
+          "value": "+10%",
+          "label": "翌日市場調整金発生確率増加（取引手数料導入後）"
+        }
+      ],
+      "whyYouCare": "この研究は、一見すると専門的で遠い話に聞こえるかもしれません。しかし、電力市場の安定化は、私たちの日常生活やビジネスに直結する重要なテーマです。金融トレーダーの存在が、電力価格の透明性を高め、私たちが支払う電気料金に隠れた「見えないコスト」を削減する可能性を示しています。もし金融取引が抑制されれば、電力市場は不安定になり、結果として電気料金が上昇したり、電力供給が不安定になったりするかもしれません。この研究は、市場設計の重要性と、金融市場が実体経済に与える影響の大きさを教えてくれます。",
+      "takeawayTalk": "金融トレーダーが電力市場の「見えないコスト」を減らしていた！",
+      "bodyText": "本研究では、金融トレーダーが先物市場に参加する2段階の非凸市場モデルを構築しました。このモデルでは、金融トレーダーが凸型の入札を行い、裁定取引を通じて市場の非凸性をならす効果を理論的に分析しました。次に、米国最大の電力市場であるPJMが2020年に金融トレーダーに取引手数料を導入した政策変更を実証分析しました。この政策変更が金融取引量に与えた影響と、それに伴う調整金の変化を検証しました。\n\n金融トレーダーは、将来のリアルタイム市場の状況と、発電所の起動費用などの非凸な運用コストを織り込みながら、翌日市場で裁定取引を行います。これにより、翌日市場の価格形成が改善され、調整金が不要になる効果があります。また、金融取引はリアルタイムの状況を予測することで、翌日市場での発電計画（コミットメント決定）をより適切にし、リアルタイムでの急な発電機起動（通常、調整金が必要となる）を減らすことにも貢献します。",
+      "bodyGlossary": [
+        {
+          "term": "先物市場",
+          "definition": "将来の特定の日時に商品を売買する契約を取引する市場。",
+          "start": 14,
+          "end": 18
+        },
+        {
+          "term": "非凸市場",
+          "definition": "供給曲線が滑らかでなく、価格と数量の関係が複雑な市場。",
+          "start": 27,
+          "end": 31
+        },
+        {
+          "term": "裁定取引",
+          "definition": "異なる市場間の価格差を利用して利益を得る取引。",
+          "start": 67,
+          "end": 71
+        },
+        {
+          "term": "PJM",
+          "definition": "米国最大の電力卸売市場を運営する組織。",
+          "start": 114,
+          "end": 117
+        },
+        {
+          "term": "調整金",
+          "definition": "市場価格だけでは成立しない取引を補うための追加支払い。",
+          "start": 181,
+          "end": 184
+        },
+        {
+          "term": "リアルタイム市場",
+          "definition": "電力の需給をリアルタイムで調整する市場。",
+          "start": 209,
+          "end": 217
+        },
+        {
+          "term": "翌日市場",
+          "definition": "取引の翌日に受け渡しが行われる電力市場。",
+          "start": 250,
+          "end": 254
+        },
+        {
+          "term": "コミットメント決定",
+          "definition": "発電所の稼働計画を決定すること。",
+          "start": 340,
+          "end": 349
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "先物市場",
+          "definition": "将来の特定の日時に商品を売買する契約を取引する市場。",
+          "start": 14,
+          "end": 18
+        },
+        {
+          "term": "非凸市場",
+          "definition": "供給曲線が滑らかでなく、価格と数量の関係が複雑な市場。",
+          "start": 27,
+          "end": 31
+        },
+        {
+          "term": "裁定取引",
+          "definition": "異なる市場間の価格差を利用して利益を得る取引。",
+          "start": 67,
+          "end": 71
+        },
+        {
+          "term": "PJM",
+          "definition": "米国最大の電力卸売市場を運営する組織。",
+          "start": 114,
+          "end": 117
+        },
+        {
+          "term": "調整金",
+          "definition": "市場価格だけでは成立しない取引を補うための追加支払い。",
+          "start": 181,
+          "end": 184
+        },
+        {
+          "term": "リアルタイム市場",
+          "definition": "電力の需給をリアルタイムで調整する市場。",
+          "start": 209,
+          "end": 217
+        },
+        {
+          "term": "翌日市場",
+          "definition": "取引の翌日に受け渡しが行われる電力市場。",
+          "start": 250,
+          "end": 254
+        },
+        {
+          "term": "コミットメント決定",
+          "definition": "発電所の稼働計画を決定すること。",
+          "start": 340,
+          "end": 349
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 236,
+      "keyFigure": {
+        "imagePath": "/figures/2607.06316v1_results.png",
+        "page": 17,
+        "caption": "PJMにおける金融取引（バーチャル入札）の推移を示しています。金融取引手数料導入後の減少が見て取れます。",
+        "label": "Figure 11: PJM cleared virtual bids (INC, DEC and UTC). The vertical line, on November",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-08T23:05:51.769Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.06316v1_results.png",
+          "page": 17,
+          "caption": "PJMにおける金融取引（バーチャル入札）の推移を示しています。金融取引手数料導入後の減少が見て取れます。",
+          "label": "Figure 11: PJM cleared virtual bids (INC, DEC and UTC). The vertical line, on November",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-08T23:05:51.769Z"
+        },
+        {
+          "imagePath": "/figures/2607.06316v1_why.png",
+          "page": 7,
+          "caption": "PJMの凸型入札量が総負荷量に占める割合を示しており、市場の非凸性に関連するデータです。",
+          "label": "Figure 3: PJM convex bid volume as a percentage of total load.",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-08T23:05:51.769Z"
+        }
+      ]
+    }
+  ]
+}

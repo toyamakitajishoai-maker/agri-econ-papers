@@ -1,0 +1,1015 @@
+{
+  "date": "2026-07-12",
+  "papers": [
+    {
+      "id": "2607.08344v1",
+      "title": "Impact of Nirsevimab prophylaxis on RSV dynamics: a stage-structured modelling study",
+      "authors": [
+        "Anna Autoriello",
+        "Sabrina Averga",
+        "Bruno Buonomo",
+        "Rossella Della Marca",
+        "Alfredo Guarino",
+        "Andrea Lo Vecchio",
+        "Cristina Moracas",
+        "Emanuela Penitente",
+        "Marco Poeta"
+      ],
+      "publishedAt": "2026-07-09T10:43:50Z",
+      "url": "https://arxiv.org/abs/2607.08344v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.08344v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "q-bio.PE",
+        "math.DS"
+      ],
+      "abstract": "Respiratory syncytial virus (RSV) is a leading cause of bronchiolitis and other lower respiratory tract infections in infants. Increased viral circulation in the post-COVID era and heterogeneous prevention strategies across regions have made RSV control more challenging. We develop a stage-structured, age-stratified Susceptible-Infected-Recovered (SIR) compartmental model tailored to the Italian setting to investigate the population-level impact of infant prophylaxis with Nirsevimab, a long-acting monoclonal antibody. Scenario-based simulations over a multi-year horizon show that increasing infant protection coverage substantially reduces RSV incidence among infants and also yields indirect benefits in older age groups. In particular, extending coverage to infants born outside the epidemic season further lowers cumulative incidence, although infant-targeted prophylaxis alone does not reduce the control reproduction number below the epidemic threshold in the parameter range explored. These findings suggest that broader and more consistent infant Nirsevimab coverage may reduce RSV burden and support the evaluation of alternative implementation strategies in the Italian context.",
+      "summary": {
+        "gist": "RSウイルスは乳幼児の細気管支炎などの主要な原因であり、小児医療システムに大きな負担をかけています。COVID-19パンデミック後のウイルス循環の変化や地域ごとの予防戦略のばらつきにより、RSウイルス対策はより複雑になっています。新しい予防介入、特に乳児向けの長時間作用型モノクローナル抗体（ニルセビマブ）の導入により、それが集団レベルにどのような影響を与えるかを評価する緊急の必要性が生じています。",
+        "novelty": "これまでのRSウイルス対策は、感染が重症化しやすい乳児やハイリスクなグループに限定されていました。また、感染状況の監視データだけでは、予防策が社会全体にどう影響するかを予測するのが困難でした。 この研究では、年齢層を考慮した数理モデルを開発し、乳児への新しい予防接種「ニルセビマブ」の普及率や接種時期が、乳児だけでなく他の年齢層へのRSウイルス感染にどう影響するかを定量的に予測しました。",
+        "method": "本研究では、イタリアの状況に合わせた段階構造化・年齢層別SIR（Susceptible-Infected-Recovered）コンパートメントモデルを開発しました。このモデルは、乳児（1歳未満）、小児・成人（1～64歳）、高齢者（65歳以上）の3つの年齢層に人口を分け、各年齢層内でのRSウイルスの感染動態を記述します。特に乳児グループでは、ニルセビマブによる予防接種の効果を組み込み、出生時およびキャッチアップ接種のシナリオをシミュレーションしました。これにより、ニルセビマブの普及率と接種時期が、年間の発生率と年齢分布にどのように影響するかを定量化しました。",
+        "results": "複数年にわたるシナリオベースのシミュレーションの結果、乳児のニルセビマブ予防接種の対象範囲を拡大することで、乳児におけるRSウイルス発生率が大幅に減少することが示されました。さらに、この乳児への予防接種は、高齢者を含む他の年齢層にも間接的な利益をもたらすことが明らかになりました。特に、流行期以外に生まれた乳児にも予防接種を拡大することで、累積発生率がさらに低下することが示唆されました。",
+        "why": "ニルセビマブは乳児に約5ヶ月間持続する受動的な免疫を提供し、RSウイルス感染症から保護します。乳児の感染が減少することで、ウイルスを媒介する「感染源」が減り、結果として他の年齢層へのウイルスの伝播も抑制されます。これは、感染しやすい集団の免疫を高めることで、集団全体の感染リスクを低下させる「集団免疫」効果によるものです。乳児の感染が減ることで、ウイルスが社会全体に広がる機会が減り、間接的に高齢者などの重症化しやすい他の年齢層も守られると考えられます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.PE）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "public-health-economics",
+      "arxivPrimary": "q-bio.PE",
+      "titleJa": "RSウイルス感染症に対するニルセビマブ予防接種の集団レベルでの影響：段階構造化モデル研究",
+      "catchTitle": "赤ちゃんのRSウイルス予防接種、家族みんなを守るカギ",
+      "hook": "あなたの周りで、赤ちゃんがRSウイルスで入院したという話を聞いたことはありませんか？実は、新しい予防接種がその状況を変えるかもしれません。",
+      "background": "RSウイルスは乳幼児の細気管支炎などの主要な原因であり、小児医療システムに大きな負担をかけています。COVID-19パンデミック後のウイルス循環の変化や地域ごとの予防戦略のばらつきにより、RSウイルス対策はより複雑になっています。新しい予防介入、特に乳児向けの長時間作用型モノクローナル抗体（ニルセビマブ）の導入により、それが集団レベルにどのような影響を与えるかを評価する緊急の必要性が生じています。",
+      "quiz": {
+        "question": "この研究で、乳児へのニルセビマブ予防接種がもたらす効果として、最も適切でないものはどれでしょう？",
+        "options": [
+          "乳児のRSウイルス発生率を大幅に減少させる",
+          "高齢者を含む他の年齢層のRSウイルス感染を間接的に減らす",
+          "RSウイルス感染症の基本再生産数を流行閾値以下に確実に下げる"
+        ],
+        "correctIndex": 2,
+        "explanation": "論文の本文抜粋には「乳児を対象とした予防接種だけでは、探索されたパラメータ範囲において、基本再生産数を流行閾値以下に下げることはできない」と明記されています。他の選択肢は、論文の結果と一致しています。"
+      },
+      "limitations": "本研究では、乳児へのニルセビマブ予防接種のみを対象としており、高齢者へのRSウイルスワクチン接種はモデルに明示的に含まれていません。また、イタリアの状況に特化したモデルであるため、他の国や地域にそのまま適用するには追加の検証が必要です。乳児を対象とした予防接種だけでは、基本再生産数を流行閾値以下に下げることはできない可能性も示唆されています。",
+      "glossary": [
+        {
+          "term": "RSウイルス",
+          "definition": "乳幼児の呼吸器感染症の主要な原因ウイルス"
+        },
+        {
+          "term": "ニルセビマブ",
+          "definition": "RSウイルス感染症を予防するモノクローナル抗体"
+        },
+        {
+          "term": "SIRモデル",
+          "definition": "感染症の広がりを予測する数理モデル"
+        },
+        {
+          "term": "コンパートメントモデル",
+          "definition": "人口を区画に分け、移動を数式で表すモデル"
+        },
+        {
+          "term": "キャッチアップ接種",
+          "definition": "定期接種の対象外となった人が後から接種すること"
+        },
+        {
+          "term": "受動的な免疫",
+          "definition": "抗体を直接投与することで得られる免疫"
+        },
+        {
+          "term": "集団免疫",
+          "definition": "集団の多くの人が免疫を持つことで感染拡大を防ぐ効果"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "乳児へのRSウイルス予防接種「ニルセビマブ」の普及が、乳児だけでなく高齢者を含む全年齢層のRSウイルス感染を減らす可能性をモデルで示しました。",
+      "noveltyContrast": {
+        "before": "これまでのRSウイルス対策は、感染が重症化しやすい乳児やハイリスクなグループに限定されていました。また、感染状況の監視データだけでは、予防策が社会全体にどう影響するかを予測するのが困難でした。",
+        "after": "この研究では、年齢層を考慮した数理モデルを開発し、乳児への新しい予防接種「ニルセビマブ」の普及率や接種時期が、乳児だけでなく他の年齢層へのRSウイルス感染にどう影響するかを定量的に予測しました。"
+      },
+      "analogy": {
+        "title": "畑の雑草対策は、隣の畑も守る",
+        "body": "あなたの畑で特定の雑草が大繁殖しているとします。その雑草が特に育ちやすい幼い苗（乳児）に、成長を抑える特別な薬剤（ニルセビマブ）を散布すると、その苗は雑草の被害を受けにくくなります。さらに、その薬剤が風に乗って隣の畑（他の年齢層）にも少し届き、隣の畑の雑草の種（ウイルス）の拡散も抑えられ、結果として地域全体の雑草問題が軽減されるようなものです。特定の場所への対策が、広範囲に良い影響をもたらすことを示しています。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "大幅な減少",
+          "label": "乳児のRSV発生率"
+        },
+        {
+          "value": "間接的利益",
+          "label": "高齢者を含む他年齢層への影響"
+        }
+      ],
+      "whyYouCare": "この研究は、乳児への予防接種が、その子自身だけでなく、家族や社会全体をRSウイルスから守る可能性を示しています。特に、高齢者や基礎疾患を持つ人々はRSウイルスで重症化しやすいため、乳児への予防接種が間接的に彼らの命を守ることにも繋がります。子育て世代にとっては、子どもの健康を守るだけでなく、祖父母や周囲の人々への配慮としても重要です。社会全体でRSウイルスの負担を減らすための、効果的な戦略を考える上で貴重な知見となるでしょう。",
+      "takeawayTalk": "赤ちゃんのRSウイルス予防接種、家族みんなの健康を守るんだって！",
+      "bodyText": "本研究では、イタリアの状況に合わせた段階構造化・年齢層別SIR（Susceptible-Infected-Recovered）コンパートメントモデルを開発しました。このモデルは、乳児（1歳未満）、小児・成人（1～64歳）、高齢者（65歳以上）の3つの年齢層に人口を分け、各年齢層内でのRSウイルスの感染動態を記述します。特に乳児グループでは、ニルセビマブによる予防接種の効果を組み込み、出生時およびキャッチアップ接種のシナリオをシミュレーションしました。これにより、ニルセビマブの普及率と接種時期が、年間の発生率と年齢分布にどのように影響するかを定量化しました。\n\nニルセビマブは乳児に約5ヶ月間持続する受動的な免疫を提供し、RSウイルス感染症から保護します。乳児の感染が減少することで、ウイルスを媒介する「感染源」が減り、結果として他の年齢層へのウイルスの伝播も抑制されます。これは、感染しやすい集団の免疫を高めることで、集団全体の感染リスクを低下させる「集団免疫」効果によるものです。乳児の感染が減ることで、ウイルスが社会全体に広がる機会が減り、間接的に高齢者などの重症化しやすい他の年齢層も守られると考えられます。",
+      "bodyGlossary": [
+        {
+          "term": "コンパートメントモデル",
+          "definition": "人口を区画に分け、移動を数式で表すモデル",
+          "start": 63,
+          "end": 74
+        },
+        {
+          "term": "RSウイルス",
+          "definition": "乳幼児の呼吸器感染症の主要な原因ウイルス",
+          "start": 142,
+          "end": 148
+        },
+        {
+          "term": "ニルセビマブ",
+          "definition": "RSウイルス感染症を予防するモノクローナル抗体",
+          "start": 171,
+          "end": 177
+        },
+        {
+          "term": "キャッチアップ接種",
+          "definition": "定期接種の対象外となった人が後から接種すること",
+          "start": 199,
+          "end": 208
+        },
+        {
+          "term": "受動的な免疫",
+          "definition": "抗体を直接投与することで得られる免疫",
+          "start": 302,
+          "end": 308
+        },
+        {
+          "term": "集団免疫",
+          "definition": "集団の多くの人が免疫を持つことで感染拡大を防ぐ効果",
+          "start": 429,
+          "end": 433
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "コンパートメントモデル",
+          "definition": "人口を区画に分け、移動を数式で表すモデル",
+          "start": 63,
+          "end": 74
+        },
+        {
+          "term": "RSウイルス",
+          "definition": "乳幼児の呼吸器感染症の主要な原因ウイルス",
+          "start": 142,
+          "end": 148
+        },
+        {
+          "term": "ニルセビマブ",
+          "definition": "RSウイルス感染症を予防するモノクローナル抗体",
+          "start": 171,
+          "end": 177
+        },
+        {
+          "term": "キャッチアップ接種",
+          "definition": "定期接種の対象外となった人が後から接種すること",
+          "start": 199,
+          "end": 208
+        },
+        {
+          "term": "受動的な免疫",
+          "definition": "抗体を直接投与することで得られる免疫",
+          "start": 302,
+          "end": 308
+        },
+        {
+          "term": "集団免疫",
+          "definition": "集団の多くの人が免疫を持つことで感染拡大を防ぐ効果",
+          "start": 429,
+          "end": 433
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 236
+    },
+    {
+      "id": "2607.08404v1",
+      "title": "DrugGen 2: A disease-aware language model for enhancing drug discovery",
+      "authors": [
+        "Ali Motahharynia",
+        "Mohammadreza Ghaffarzadeh-Esfahani",
+        "Mahsa Sheikholeslami",
+        "Navid Mazrouei",
+        "Matin Irajpour",
+        "Yousof Gheisari",
+        "Hajar Sirous"
+      ],
+      "publishedAt": "2026-07-09T12:29:33Z",
+      "url": "https://arxiv.org/abs/2607.08404v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.08404v1.pdf",
+      "categories": [
+        "topic:agronomy",
+        "q-bio.QM",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "abstract": "Current computational approaches for drug design typically focus on generating molecules conditioned on specific targets or general molecular properties, often neglecting the influence of disease context on target behavior and therapeutic outcomes. To address this gap, we introduce DrugGen-2, a novel generative model that designs small molecules conditioned on both disease ontology and target protein sequences. DrugGen-2 was developed by fine-tuning a pre-trained GPT-2 model on a curated dataset of approved drugs linked to their diseases and targets, using a two-step strategy of supervised fine-tuning followed by reinforcement learning via group relative policy optimization (GRPO). This process was guided by reward functions optimizing for chemical validity, novelty, diversity, and high predicted binding affinity. When evaluated on five protein targets relevant to diabetic nephropathy, DrugGen-2 significantly outperformed baseline models (DrugGPT and DrugGen). It demonstrated a superior capacity to generate unique molecules, exhibited greater structural similarity to approved drugs, and achieved improved predicted binding affinities across all targets. Molecular docking analyses further supported these findings, identifying candidate ligands with strong binding potential, including compounds with predicted affinities (-9.917, -9.485, and -9.367) exceeding those of reference drugs such as enalapril for angiotensin-converting enzyme (-8.283). By integrating disease-specific context into molecular generation, DrugGen-2 advances AI-assisted drug discovery, offering a powerful tool for de novo design and drug repurposing that accounts for the complex interplay between diseases and molecular targets.",
+      "summary": {
+        "gist": "創薬は時間とコストがかかる複雑なプロセスであり、高品質な分子の設計から臨床応用まで多岐にわたります。従来の手法では、広大な化学空間を効率的に探索する能力に限界がありました。近年、機械学習や深層学習、特に生成モデルの進歩により、分子の特性や生物学的活性をより正確に予測し、効率的に新しい分子を設計できるようになりました。しかし、これらのモデルの多くは、特定のタンパク質や一般的な分子特性に基づいて分子を生成するだけで、疾患の文脈を考慮していませんでした。同じ標的タンパク質でも、病気の状態によって異なる挙動を示すことがあるため、疾患に特化した分子設計が求められていました。",
+        "novelty": "従来の創薬AIは、特定のタンパク質や一般的な分子特性に基づいて新薬候補を生成していましたが、病気の種類が同じタンパク質の働きにどう影響するか、という「疾患の文脈」を考慮していませんでした。そのため、同じタンパク質を標的としても、病気によって薬の効き方が異なるという課題がありました。 この研究では、疾患の文脈（病気の分類情報）と標的タンパク質の配列の両方を考慮して、新薬候補を設計するAIモデル「DrugGen-2」を開発しました。これにより、特定の病気に最適化された、より効果的な分子を効率的に見つけ出すことが可能になりました。",
+        "method": "本研究では、疾患のオントロジー（病気の分類情報）と標的タンパク質の配列の両方を条件として、低分子化合物を設計する新しい生成モデル「DrugGen-2」を開発しました。このモデルは、既存のGPT-2モデルをベースに、承認された薬剤とそれに関連する疾患・標的の情報を集めたデータセットでファインチューニングされました。トレーニングは、まず教師ありファインチューニング（SFT）でドメイン固有のデータに適応させ、次に強化学習の一種であるグループ相対方策最適化（GRPO）を用いて、化学的妥当性、新規性、多様性、高い予測結合親和性を最適化する報酬関数でモデルを洗練させるという2段階の戦略で行われました。糖尿病性腎症に関連する5つのタンパク質標的で評価され、既存のベースラインモデル（DrugGPT、DrugGen）と比較されました。",
+        "results": "DrugGen-2は、糖尿病性腎症に関連する5つのタンパク質標的において、ベースラインモデル（DrugGPTおよびDrugGen）を大幅に上回る性能を示しました。特に、より多くのユニークな分子を生成する能力に優れ、承認された薬剤との構造的類似性が高く、すべての標的で予測結合親和性が向上しました。分子ドッキング解析では、エナラプリルなどの既存薬の結合親和性（-8.283）を超える強力な結合ポテンシャルを持つ候補リガンド（-9.917、-9.485、-9.367）が特定されました。DrugGen-2は、疾患固有の文脈を分子生成に統合することで、AI支援創薬を進化させ、デノボ設計やドラッグリパーパシングのための強力なツールを提供します。",
+        "why": "DrugGen-2が優れた性能を示したのは、疾患の文脈情報を分子生成プロセスに組み込んだためです。従来のモデルが標的タンパク質単体で分子を設計していたのに対し、DrugGen-2は疾患の分類情報（MeSH DAG）と標的タンパク質の配列を同時に考慮することで、より疾患特異的な分子の設計が可能になりました。これにより、同じタンパク質を標的とする場合でも、疾患の状態に応じて最適な分子構造を探索できるようになります。また、教師ありファインチューニングと強化学習を組み合わせた2段階のトレーニング戦略により、化学的妥当性、新規性、多様性、結合親和性といった複数の評価基準を効率的に最適化できたことも、性能向上に寄与しました。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.QM）",
+      "field": "農学・作物科学",
+      "categoryL1": "adjacent",
+      "categoryL2": "drug-discovery",
+      "arxivPrimary": "q-bio.QM",
+      "titleJa": "DrugGen 2: 疾患を考慮した言語モデルによる創薬強化",
+      "catchTitle": "AIが病気に効く薬をピンポイントで設計！",
+      "hook": "「この薬、あの病気には効くけど、別の病気だとイマイチ…」そんな経験、あなたにもありませんか？",
+      "background": "創薬は時間とコストがかかる複雑なプロセスであり、高品質な分子の設計から臨床応用まで多岐にわたります。従来の手法では、広大な化学空間を効率的に探索する能力に限界がありました。近年、機械学習や深層学習、特に生成モデルの進歩により、分子の特性や生物学的活性をより正確に予測し、効率的に新しい分子を設計できるようになりました。しかし、これらのモデルの多くは、特定のタンパク質や一般的な分子特性に基づいて分子を生成するだけで、疾患の文脈を考慮していませんでした。同じ標的タンパク質でも、病気の状態によって異なる挙動を示すことがあるため、疾患に特化した分子設計が求められていました。",
+      "quiz": {
+        "question": "DrugGen-2が従来の創薬AIと最も異なる点は何ですか？",
+        "options": [
+          "より多くの種類の分子を生成できること",
+          "疾患の文脈情報を考慮して分子を設計すること",
+          "既存の薬と全く異なる構造の分子を生成すること"
+        ],
+        "correctIndex": 1,
+        "explanation": "DrugGen-2の最大の新規性は、疾患の文脈（病気の分類情報）と標的タンパク質の配列の両方を考慮して分子を設計する点です。これにより、特定の病気に最適化された薬の候補を効率的に見つけ出すことができます。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "疾患オントロジー",
+          "definition": "病気を体系的に分類し、関係性を定義したもの"
+        },
+        {
+          "term": "低分子化合物",
+          "definition": "分子量が小さく、薬として利用される有機化合物"
+        },
+        {
+          "term": "生成モデル",
+          "definition": "データから新しいデータを生成できるAIモデル"
+        },
+        {
+          "term": "ファインチューニング",
+          "definition": "事前学習済みモデルを特定のタスク向けに再学習"
+        },
+        {
+          "term": "教師ありファインチューニング",
+          "definition": "正解データを用いてモデルを調整する学習方法"
+        },
+        {
+          "term": "強化学習",
+          "definition": "試行錯誤を通じて最適な行動を学習するAI手法"
+        },
+        {
+          "term": "結合親和性",
+          "definition": "薬と標的分子がどれだけ強く結合するか"
+        },
+        {
+          "term": "MeSH DAG",
+          "definition": "疾患の分類を階層的に表現したグラフ構造"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "疾患の情報を考慮して、特定の病気に特化した新薬候補を効率的に設計するAIモデルが開発されました。",
+      "noveltyContrast": {
+        "before": "従来の創薬AIは、特定のタンパク質や一般的な分子特性に基づいて新薬候補を生成していましたが、病気の種類が同じタンパク質の働きにどう影響するか、という「疾患の文脈」を考慮していませんでした。そのため、同じタンパク質を標的としても、病気によって薬の効き方が異なるという課題がありました。",
+        "after": "この研究では、疾患の文脈（病気の分類情報）と標的タンパク質の配列の両方を考慮して、新薬候補を設計するAIモデル「DrugGen-2」を開発しました。これにより、特定の病気に最適化された、より効果的な分子を効率的に見つけ出すことが可能になりました。"
+      },
+      "analogy": {
+        "title": "畑の土壌に合わせた品種改良",
+        "body": "これは、まるで「土壌の質（病気の文脈）と作物の種類（標的タンパク質）の両方を考慮して、その畑に最適な品種（薬の分子）を開発する」ようなものです。従来の品種改良が、ただ「甘いトマト」や「病気に強いイネ」といった作物の一般的な特性だけを見ていたのに対し、DrugGen-2は「この地域のこの土壌で、甘くて病気に強いイネ」というように、より具体的な環境に合わせた最適な品種を生み出すことを目指します。これにより、収穫量や品質が格段に向上するのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+3.2pt",
+          "label": "結合親和性（平均）"
+        }
+      ],
+      "whyYouCare": "この研究は、私たちが病気と闘う方法を根本から変える可能性を秘めています。もしあなたが特定の病気で苦しんでいるなら、この技術はあなたの病気に「特化した」薬が開発される未来を示唆しています。企業にとっては、新薬開発のコストと時間を大幅に削減し、より成功率の高い創薬が可能になるでしょう。社会全体で見れば、難病治療薬の開発が加速し、より多くの人々が健康な生活を送れるようになるかもしれません。まさに、AIが医療の未来を切り開く、画期的な一歩と言えるでしょう。",
+      "takeawayTalk": "病気の文脈を考慮してAIが新薬候補を設計する時代になったよ！",
+      "bodyText": "本研究では、疾患のオントロジー（病気の分類情報）と標的タンパク質の配列の両方を条件として、低分子化合物を設計する新しい生成モデル「DrugGen-2」を開発しました。このモデルは、既存のGPT-2モデルをベースに、承認された薬剤とそれに関連する疾患・標的の情報を集めたデータセットでファインチューニングされました。トレーニングは、まず教師ありファインチューニング（SFT）でドメイン固有のデータに適応させ、次に強化学習の一種であるグループ相対方策最適化（GRPO）を用いて、化学的妥当性、新規性、多様性、高い予測結合親和性を最適化する報酬関数でモデルを洗練させるという2段階の戦略で行われました。糖尿病性腎症に関連する5つのタンパク質標的で評価され、既存のベースラインモデル（DrugGPT、DrugGen）と比較されました。\n\nDrugGen-2が優れた性能を示したのは、疾患の文脈情報を分子生成プロセスに組み込んだためです。従来のモデルが標的タンパク質単体で分子を設計していたのに対し、DrugGen-2は疾患の分類情報（MeSH DAG）と標的タンパク質の配列を同時に考慮することで、より疾患特異的な分子の設計が可能になりました。これにより、同じタンパク質を標的とする場合でも、疾患の状態に応じて最適な分子構造を探索できるようになります。また、教師ありファインチューニングと強化学習を組み合わせた2段階のトレーニング戦略により、化学的妥当性、新規性、多様性、結合親和性といった複数の評価基準を効率的に最適化できたことも、性能向上に寄与しました。",
+      "bodyGlossary": [
+        {
+          "term": "低分子化合物",
+          "definition": "分子量が小さく、薬として利用される有機化合物",
+          "start": 45,
+          "end": 51
+        },
+        {
+          "term": "生成モデル",
+          "definition": "データから新しいデータを生成できるAIモデル",
+          "start": 59,
+          "end": 64
+        },
+        {
+          "term": "ファインチューニング",
+          "definition": "事前学習済みモデルを特定のタスク向けに再学習",
+          "start": 141,
+          "end": 151
+        },
+        {
+          "term": "教師ありファインチューニング",
+          "definition": "正解データを用いてモデルを調整する学習方法",
+          "start": 167,
+          "end": 181
+        },
+        {
+          "term": "強化学習",
+          "definition": "試行錯誤を通じて最適な行動を学習するAI手法",
+          "start": 205,
+          "end": 209
+        },
+        {
+          "term": "結合親和性",
+          "definition": "薬と標的分子がどれだけ強く結合するか",
+          "start": 256,
+          "end": 261
+        },
+        {
+          "term": "MeSH DAG",
+          "definition": "疾患の分類を階層的に表現したグラフ構造",
+          "start": 463,
+          "end": 471
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "低分子化合物",
+          "definition": "分子量が小さく、薬として利用される有機化合物",
+          "start": 45,
+          "end": 51
+        },
+        {
+          "term": "生成モデル",
+          "definition": "データから新しいデータを生成できるAIモデル",
+          "start": 59,
+          "end": 64
+        },
+        {
+          "term": "ファインチューニング",
+          "definition": "事前学習済みモデルを特定のタスク向けに再学習",
+          "start": 141,
+          "end": 151
+        },
+        {
+          "term": "教師ありファインチューニング",
+          "definition": "正解データを用いてモデルを調整する学習方法",
+          "start": 167,
+          "end": 181
+        },
+        {
+          "term": "強化学習",
+          "definition": "試行錯誤を通じて最適な行動を学習するAI手法",
+          "start": 205,
+          "end": 209
+        },
+        {
+          "term": "結合親和性",
+          "definition": "薬と標的分子がどれだけ強く結合するか",
+          "start": 256,
+          "end": 261
+        },
+        {
+          "term": "MeSH DAG",
+          "definition": "疾患の分類を階層的に表現したグラフ構造",
+          "start": 463,
+          "end": 471
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 294,
+      "keyFigure": {
+        "imagePath": "/figures/2607.08404v1_results.png",
+        "page": 4,
+        "caption": "DrugGen-2の評価結果を示しており、特に報酬の進捗状況がわかります。",
+        "label": "Figure 2. Evaluation of the DrugGen-2 algorithm. (A)Reward progression during group",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-11T22:45:56.883Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.08404v1_results.png",
+          "page": 4,
+          "caption": "DrugGen-2の評価結果を示しており、特に報酬の進捗状況がわかります。",
+          "label": "Figure 2. Evaluation of the DrugGen-2 algorithm. (A)Reward progression during group",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-11T22:45:56.883Z"
+        },
+        {
+          "imagePath": "/figures/2607.08404v1_why.png",
+          "page": 3,
+          "caption": "DrugGen-2の開発と評価の全体像を模式的に示しています。",
+          "label": "Figure 1. Schematic representation of DrugGen-2 development and evaluation. The",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-11T22:45:56.883Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.08689v1",
+      "title": "Dynastic dynamics: Modelling powerful naming choices with stochastic prestige",
+      "authors": [
+        "Pablo Rosillo-Rodes",
+        "Santiago Lamata-Otín",
+        "David Soriano-Paños",
+        "Laurent Hébert-Dufresne",
+        "Peter Sheridan Dodds"
+      ],
+      "publishedAt": "2026-07-09T16:50:07Z",
+      "url": "https://arxiv.org/abs/2607.08689v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.08689v1.pdf",
+      "categories": [
+        "topic:urban",
+        "physics.soc-ph"
+      ],
+      "abstract": "The naming choices of powerful rulers encode millennia of cultural, political, and institutional influences. Consequently, the long-term onomastic dynamics within some of the most powerful dynasties cannot be explained by simple mechanisms such as frequency-dependent reinforcement or random name reuse. Here, we propose a minimal model that encapsulates these influences in a single highly stochastic variable, prestige, and assume that name selection is driven by the prestige accumulated by previous rulers bearing the same name within each dynasty. Using an extensive dataset spanning ten dynasties, we show that the model reproduces the pronounced inequalities in name frequencies, the long-term persistence of dominant names, and the abrupt rises in popularity observed in historical records. Our results suggest that the naming traditions of powerful rulers preserve institutional memory through reinforcement while remaining sensitive to rare historical events that can reshape the hierarchy of names across generations.",
+      "summary": {
+        "gist": "政治的・精神的支配者の命名は、数千年にわたる文化的、政治的、制度的影響を反映しています。これらの名前は単なるラベルではなく、社会的記憶、制度的継続性、集合的価値を象徴する資産であり、継承、正当性、変化に関する公的な主張となります。古代エジプトのファラオやローマ皇帝、教皇などが、過去の illustrious な前任者の名前を模倣したり、その遺産を統合するために名前を選んだ例は数多くあります。しかし、これらの命名選択の長期的なダイナミクスは、これまで十分に探求されていませんでした。",
+        "novelty": "これまでの研究では、支配者の命名は単に頻度依存の強化（多く使われる名前がさらに使われる）やランダムな再利用で説明されてきました。しかし、これだけでは、特定の名前が長期にわたって支配的になったり、突然人気が急上昇したりする現象を十分に説明できませんでした。 この論文では、過去の支配者がその名前で築いた「プレステージ（威信）」が、次の命名選択に強く影響するという新しいモデルを提案しました。プレステージは確率的に変動し、稀な歴史的出来事によって大きく変化する可能性も考慮されています。",
+        "method": "本研究では、過去の支配者がその名前で蓄積した「プレステージ」が、次の命名選択を駆動するという最小限の確率モデルを提案しました。このモデルは「ランダムに強化される壺モデル」の枠組みで構築され、プレステージは不均一な重い裾を持つ分布から独立に引き出されるランダムな増分としてモデル化されます。エジプトのファラオ、ローマ皇帝、教皇、ロシアのツァーリなど、10の強力な王朝にわたる広範なデータセットを用いてモデルを検証し、名前の頻度の顕著な不平等、支配的な名前の長期的な持続性、歴史的記録に見られる人気名の突然の急上昇を再現できることを示しました。特に、プレステージの不均一性が非世襲王朝においてより顕著な役割を果たすことを明らかにしました。",
+        "results": "モデルは、名前の頻度の顕著な不平等、支配的な名前の長期的な持続性、そして歴史的記録に見られる人気名の突然の急上昇を再現しました。特に、プレステージの不均一性が非世襲王朝においてより顕著な役割を果たすことが示されました。これは、成功した系統の確立が、王朝内の歴史的な名前の頻度よりも、前任者の個々の実績によってより強く形成されることを意味します。",
+        "why": "支配者の命名は、過去の同じ名前の支配者が蓄積した「プレステージ（威信）」によって選択される確率が高まります。このプレステージは、個々の統治の成功や影響力によってランダムに増加しますが、その増加量は均一ではなく、稀に非常に大きな影響力を持つ統治（高いプレステージ増分）が出現することがあります。これにより、特定の名前が長期にわたって人気を維持したり、あるいは稀な歴史的出来事（例えば、非常に成功した統治）によって、それまで目立たなかった名前が突然人気を博し、既存の階層を再構築したりする現象が起こります。このプロセスは、制度的記憶を強化しつつも、歴史の偶発性にも敏感であることを示唆しています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.soc-ph）",
+      "field": "都市・地域",
+      "categoryL1": "serendipity",
+      "categoryL2": "social-dynamics",
+      "arxivPrimary": "physics.soc-ph",
+      "titleJa": "王朝のダイナミクス：確率的プレステージを伴う強力な命名選択のモデル化",
+      "catchTitle": "なぜ歴史上の偉人は同じ名前を繰り返すのか？",
+      "hook": "歴史上の偉人たちが、なぜ同じ名前を繰り返し使うのか疑問に思ったことはありませんか？その背後には、単なる偶然ではない、奥深い理由が隠されています。",
+      "background": "政治的・精神的支配者の命名は、数千年にわたる文化的、政治的、制度的影響を反映しています。これらの名前は単なるラベルではなく、社会的記憶、制度的継続性、集合的価値を象徴する資産であり、継承、正当性、変化に関する公的な主張となります。古代エジプトのファラオやローマ皇帝、教皇などが、過去の illustrious な前任者の名前を模倣したり、その遺産を統合するために名前を選んだ例は数多くあります。しかし、これらの命名選択の長期的なダイナミクスは、これまで十分に探求されていませんでした。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "プレステージ",
+          "definition": "過去の支配者がその名前で築いた威信や影響力。"
+        },
+        {
+          "term": "壺モデル",
+          "definition": "選択肢が時間とともに変化する確率過程をモデル化する手法。"
+        },
+        {
+          "term": "重い裾を持つ分布",
+          "definition": "稀に非常に大きな値が出現する確率が高い分布。"
+        },
+        {
+          "term": "非世襲王朝",
+          "definition": "世襲ではなく、選挙や任命で支配者が選ばれる王朝。"
+        },
+        {
+          "term": "制度的記憶",
+          "definition": "組織や社会が過去の経験や知識を保持すること。"
+        },
+        {
+          "term": "偶発性",
+          "definition": "予測できない、偶然に起こる出来事。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "歴史上の支配者の命名は、過去の「プレステージ」が蓄積され、時に稀な出来事で一変する、複雑なダイナミクスで決まる。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、支配者の命名は単に頻度依存の強化（多く使われる名前がさらに使われる）やランダムな再利用で説明されてきました。しかし、これだけでは、特定の名前が長期にわたって支配的になったり、突然人気が急上昇したりする現象を十分に説明できませんでした。",
+        "after": "この論文では、過去の支配者がその名前で築いた「プレステージ（威信）」が、次の命名選択に強く影響するという新しいモデルを提案しました。プレステージは確率的に変動し、稀な歴史的出来事によって大きく変化する可能性も考慮されています。"
+      },
+      "analogy": {
+        "title": "畑の土壌と作物の品種選び",
+        "body": "これは、農家が作物の品種を選ぶのに似ています。ある品種が過去に豊かな収穫をもたらし、市場で高い評価を得ていれば（プレステージ）、次の作付けでもその品種を選ぶ可能性が高まります。しかし、予期せぬ天候不順や新しい病害の流行（稀な歴史的出来事）によって、それまで評価の高かった品種が急に不作になり、新しい品種が注目を集めることもあります。このように、過去の成功体験が土壌に蓄積されるように影響しつつも、予測不能な要素で状況が一変するのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、歴史上の支配者の命名という一見特殊な現象を通じて、文化や社会における「流行」や「選択」のメカニズムを解き明かします。あなたの会社の製品名やブランド名、あるいは組織内の役職名が、過去の成功体験や特定の人物の功績によって無意識のうちに選ばれているかもしれません。また、稀な成功事例や失敗事例が、それまでの慣習を大きく変えるきっかけとなることも示唆しています。これは、マーケティング戦略、組織文化の形成、さらには社会全体のトレンドを理解する上で、示唆に富む視点を提供してくれるでしょう。",
+      "takeawayTalk": "偉人の名前の繰り返しは、過去の「威信」と稀な「運」で決まるんだって！",
+      "bodyText": "本研究では、過去の支配者がその名前で蓄積した「プレステージ」が、次の命名選択を駆動するという最小限の確率モデルを提案しました。このモデルは「ランダムに強化される壺モデル」の枠組みで構築され、プレステージは不均一な重い裾を持つ分布から独立に引き出されるランダムな増分としてモデル化されます。エジプトのファラオ、ローマ皇帝、教皇、ロシアのツァーリなど、10の強力な王朝にわたる広範なデータセットを用いてモデルを検証し、名前の頻度の顕著な不平等、支配的な名前の長期的な持続性、歴史的記録に見られる人気名の突然の急上昇を再現できることを示しました。特に、プレステージの不均一性が非世襲王朝においてより顕著な役割を果たすことを明らかにしました。\n\n支配者の命名は、過去の同じ名前の支配者が蓄積した「プレステージ（威信）」によって選択される確率が高まります。このプレステージは、個々の統治の成功や影響力によってランダムに増加しますが、その増加量は均一ではなく、稀に非常に大きな影響力を持つ統治（高いプレステージ増分）が出現することがあります。これにより、特定の名前が長期にわたって人気を維持したり、あるいは稀な歴史的出来事（例えば、非常に成功した統治）によって、それまで目立たなかった名前が突然人気を博し、既存の階層を再構築したりする現象が起こります。このプロセスは、制度的記憶を強化しつつも、歴史の偶発性にも敏感であることを示唆しています。",
+      "bodyGlossary": [
+        {
+          "term": "プレステージ",
+          "definition": "過去の支配者がその名前で築いた威信や影響力。",
+          "start": 23,
+          "end": 29
+        },
+        {
+          "term": "壺モデル",
+          "definition": "選択肢が時間とともに変化する確率過程をモデル化する手法。",
+          "start": 80,
+          "end": 84
+        },
+        {
+          "term": "重い裾を持つ分布",
+          "definition": "稀に非常に大きな値が出現する確率が高い分布。",
+          "start": 106,
+          "end": 114
+        },
+        {
+          "term": "非世襲王朝",
+          "definition": "世襲ではなく、選挙や任命で支配者が選ばれる王朝。",
+          "start": 285,
+          "end": 290
+        },
+        {
+          "term": "制度的記憶",
+          "definition": "組織や社会が過去の経験や知識を保持すること。",
+          "start": 578,
+          "end": 583
+        },
+        {
+          "term": "偶発性",
+          "definition": "予測できない、偶然に起こる出来事。",
+          "start": 594,
+          "end": 597
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "プレステージ",
+          "definition": "過去の支配者がその名前で築いた威信や影響力。",
+          "start": 23,
+          "end": 29
+        },
+        {
+          "term": "壺モデル",
+          "definition": "選択肢が時間とともに変化する確率過程をモデル化する手法。",
+          "start": 80,
+          "end": 84
+        },
+        {
+          "term": "重い裾を持つ分布",
+          "definition": "稀に非常に大きな値が出現する確率が高い分布。",
+          "start": 106,
+          "end": 114
+        },
+        {
+          "term": "非世襲王朝",
+          "definition": "世襲ではなく、選挙や任命で支配者が選ばれる王朝。",
+          "start": 285,
+          "end": 290
+        },
+        {
+          "term": "制度的記憶",
+          "definition": "組織や社会が過去の経験や知識を保持すること。",
+          "start": 578,
+          "end": 583
+        },
+        {
+          "term": "偶発性",
+          "definition": "予測できない、偶然に起こる出来事。",
+          "start": 594,
+          "end": 597
+        }
+      ],
+      "agriEconRelevance": "農業経済学の文脈では、この研究は、特定の作物品種や農法、あるいは農業機械のブランドが、なぜ長期にわたって市場で支配的な地位を維持するのか、または突然新しい品種や技術が普及するのかを理解するのに役立ちます。例えば、過去に高い収益を上げた品種（プレステージの高い名前）は農家に選ばれやすく、一方で、画期的な新品種（稀な高プレステージ増分）の登場が市場の勢力図を塗り替える可能性があります。これは、農業技術普及戦略や新品種開発、ブランド戦略を考える上で重要な示唆を与えます。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 261,
+      "keyFigure": {
+        "imagePath": "/figures/2607.08689v1_results.png",
+        "page": 3,
+        "caption": "モデルが教皇の命名パターンを再現し、王朝の命名の不平等を説明する図です。",
+        "label": "FIG. 1. Innovation and rare but prestigious reigns explain the onomastics of powerful dynasties. a-c Number of popes,",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-11T22:46:00.079Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.08689v1_results.png",
+          "page": 3,
+          "caption": "モデルが教皇の命名パターンを再現し、王朝の命名の不平等を説明する図です。",
+          "label": "FIG. 1. Innovation and rare but prestigious reigns explain the onomastics of powerful dynasties. a-c Number of popes,",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-11T22:46:00.079Z"
+        },
+        {
+          "imagePath": "/figures/2607.08689v1_why.png",
+          "page": 4,
+          "caption": "プレステージが名前の選択に与える影響を、他のモデルと比較して示す図です。",
+          "label": "FIG. 2. Prestige explains what random copying and rich-get-richer dynamics miss about onomastics. a Root mean square",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-11T22:46:00.079Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.08672v1",
+      "title": "Statistical inference of dynamical processes on networks",
+      "authors": [
+        "Javier Ureña-Carrion",
+        "Tiago P. Peixoto",
+        "Gerardo Iñiguez"
+      ],
+      "publishedAt": "2026-07-09T16:36:13Z",
+      "url": "https://arxiv.org/abs/2607.08672v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.08672v1.pdf",
+      "categories": [
+        "topic:urban",
+        "physics.soc-ph"
+      ],
+      "abstract": "Mechanisms of interaction in spreading models are central to our quantitative understanding of networked contagion processes, from disease transmission to opinion dynamics. Yet, while empirical data can reveal who interacts with whom, they rarely provide direct information about how interactions drive spreading, leaving the underlying mechanism to be inferred from observed dynamics, and selected among competing hypotheses. We propose a general framework for model selection in binary-state spreading processes on networks and show that asymptotic approximations in the thermodynamic limit can accurately predict inference outcomes in finite systems. By systematically exploring a broad parameter space, we characterize the detectability of six archetypal spreading mechanisms commonly used in the literature and find that accuracy generally increases in sparse networks, which are prevalent in real-world systems, and near phase transitions, such as the epidemic threshold of simple contagion processes. We further assess the prevalence of these mechanisms across a diverse set of empirical datasets, highlighting the impact of data preprocessing on model recovery. Our results show that statistical model selection can fail under common conditions and suggest new directions for overcoming these limitations.",
+      "summary": {
+        "gist": "パンデミック、情報拡散、生態系の動態、技術採用など、複雑なネットワークシステムにおける伝播プロセスの時間的進化を特徴づけることは、幅広い自然現象を理解する上で極めて重要です。これらの現象は、非線形結合動的システム、確率過程、または（非）マルコフダイナミクスとしてモデル化され、根底にある相互作用パターンがどのように集合的な振る舞いを引き起こすかを示します。しかし、経験的データは通常、「誰が誰と相互作用するか」という構造に関する情報を提供しますが、「相互作用がどのように伝播を駆動するか」という機能に関する直接的な情報を提供することは稀です。",
+        "novelty": "これまで、病気の感染や意見の拡散といったネットワーク上の伝播現象を理解する際、相互作用のメカニズム（どう広がるか）は仮定されることがほとんどでした。データからは「誰が誰と交流したか」は分かっても、「その交流がどう伝播を駆動したか」は直接的に分かりませんでした。 この研究では、ネットワーク構造と観測された動的な変化（誰がいつ状態を変えたか）から、背後にある相互作用のメカニズムを統計的に推論する一般的なフレームワークを開発しました。これにより、複数の仮説の中からデータに最も合致するメカニズムを選び出せるようになりました。",
+        "method": "本研究では、ネットワーク上の二状態（例：感染/非感染）伝播プロセスにおけるモデル選択のための一般的なフレームワークを提案しました。具体的には、静的ネットワーク上での二状態ノードダイナミクスにおいて、真のモデルと競合するモデル間の期待尤度比が、観測データの相対量と、提案されたメカニズム間のカルバック・ライブラー情報量によって表現できることを示しました。そして、大規模システムにおける検出可能性の漸近近似が、有限システムにも適用できることを示しました。さらに、文献で一般的に使用される6つの典型的な伝播メカニズム（Independent, Simple, Voter, Ising, Threshold, Majority）の検出可能性を広範なパラメータ空間で体系的に探索しました。観測データは、すべてのノードの状態X(t)={Xi(t)}と時間ステップt={1,...,T}で構成されます。既知のネットワーク構造A={Aij}がある場合、遷移確率はP[X(t)|X(t-1), A, F, R]として記述され、これは感染率Fk,mと回復率Rk,mに依存します。2つの競合するモデルMaとMbを比較する際、それらの対数尤度比は、時間集計された遷移と状態の発生回数（Sk,m, Ik,m, Yk,m, Hk,m）に基づいて計算されます。",
+        "results": "分析の結果、モデル選択の精度は一般的に、実世界のシステムで多く見られる疎なネットワークや、単純な伝播プロセスの流行閾値のような相転移の近くで向上することが分かりました。また、協力実験、ソーシャルメディア投稿、都市交通、サプライチェーンダイナミクス、動物の相互作用を含む多様な経験的データセットに対してモデル選択を行い、データ前処理がモデル回復に与える影響を明らかにしました。我々の結果は、統計的モデル選択が一般的な条件下で失敗する可能性があり、これらの限界を克服するための新しい方向性を示唆しています。",
+        "why": "モデル選択の成功は、観測された軌跡における「動的範囲」（ダイナミクスによって訪問される異なる(k, m)値）に大きく依存します。データ量が多いほど推論は一般的に改善しますが、遷移確率は固定されているため、モデル選択の成功は、データが動的範囲全体にどのように割り当てられるかにかかっています。これは、メカニズム(F, R)とネットワーク構造が観測期間中に非自明な相互作用をすることによって生じます。ネットワーク構造は潜在的な動的範囲の次数クラスを制約し、全体的な伝播ダイナミクスは多様な巨視的挙動を示す可能性があります。つまり、データがどれだけ多様な状況を捉えているかが、隠れたルールを見抜く鍵となります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.soc-ph）",
+      "field": "都市・地域",
+      "categoryL1": "serendipity",
+      "categoryL2": "network-science",
+      "arxivPrimary": "physics.soc-ph",
+      "titleJa": "ネットワーク上の動的プロセスの統計的推論",
+      "catchTitle": "見えない感染ルールを見破る！",
+      "hook": "あなたはSNSで情報がどう広がるか、病気がどう感染するか、その「見えないルール」を知りたいと思ったことはありませんか？",
+      "background": "パンデミック、情報拡散、生態系の動態、技術採用など、複雑なネットワークシステムにおける伝播プロセスの時間的進化を特徴づけることは、幅広い自然現象を理解する上で極めて重要です。これらの現象は、非線形結合動的システム、確率過程、または（非）マルコフダイナミクスとしてモデル化され、根底にある相互作用パターンがどのように集合的な振る舞いを引き起こすかを示します。しかし、経験的データは通常、「誰が誰と相互作用するか」という構造に関する情報を提供しますが、「相互作用がどのように伝播を駆動するか」という機能に関する直接的な情報を提供することは稀です。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "二状態ノードダイナミクス",
+          "definition": "ネットワーク上の各要素が2つの状態（例：0か1）を取る変化。"
+        },
+        {
+          "term": "尤度比",
+          "definition": "あるデータが特定のモデルの下でどれだけ起こりやすいかを示す比率。"
+        },
+        {
+          "term": "カルバック・ライブラー情報量",
+          "definition": "2つの確率分布がどれだけ異なるかを示す指標。"
+        },
+        {
+          "term": "漸近近似",
+          "definition": "システムが非常に大きい場合に成り立つ近似的な関係。"
+        },
+        {
+          "term": "疎なネットワーク",
+          "definition": "ノード間のつながりが比較的少ないネットワーク。"
+        },
+        {
+          "term": "相転移",
+          "definition": "システムの状態が劇的に変化する臨界点。"
+        },
+        {
+          "term": "動的範囲",
+          "definition": "ダイナミクス中に観測される状態変化の多様性。"
+        },
+        {
+          "term": "巨視的挙動",
+          "definition": "システム全体として観察される大きな振る舞い。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "ネットワーク上で何かが広がる際の「見えない相互作用のルール」を、観測データから統計的に推測する新しい枠組みを提案する研究です。",
+      "noveltyContrast": {
+        "before": "これまで、病気の感染や意見の拡散といったネットワーク上の伝播現象を理解する際、相互作用のメカニズム（どう広がるか）は仮定されることがほとんどでした。データからは「誰が誰と交流したか」は分かっても、「その交流がどう伝播を駆動したか」は直接的に分かりませんでした。",
+        "after": "この研究では、ネットワーク構造と観測された動的な変化（誰がいつ状態を変えたか）から、背後にある相互作用のメカニズムを統計的に推論する一般的なフレームワークを開発しました。これにより、複数の仮説の中からデータに最も合致するメカニズムを選び出せるようになりました。"
+      },
+      "analogy": {
+        "title": "畑の病害虫の広がり方を見抜く",
+        "body": "あなたの畑で、ある病害虫が急速に広がっているとします。どの株がいつ病気になったかは記録されていますが、その病害虫が「隣の株に触れたら必ず移るのか」「一定数以上の病気の株に囲まれたら移るのか」といった、具体的な感染ルールは分かりません。この研究は、まるで畑の病害記録（誰がいつ病気になったか）と、株の配置（ネットワーク構造）から、その病害虫が「どのようなルールで広がっているのか」を統計的に見抜くようなものです。これにより、病害虫の特性に合わせた最適な防除策（モデル）を立てられるようになります。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、私たちが日々直面する様々な「広がり方」の背後にあるルールを解明する手がかりを与えてくれます。例えば、新しい商品が市場にどう浸透するか、デマがSNSでなぜ急速に拡散するのか、あるいは感染症の流行パターンをどう予測するかといった問題に、より科学的なアプローチで挑むことが可能になります。ビジネス戦略を立てる際の情報伝播モデルの精度向上や、公衆衛生政策における感染症対策の最適化、さらには社会現象の理解を深める上で、この「見えないルールを見抜く力」は非常に重要になるでしょう。",
+      "takeawayTalk": "データから「何がどう広がるか」の隠れたルールを見抜けるようになったんだ！",
+      "bodyText": "本研究では、ネットワーク上の二状態（例：感染/非感染）伝播プロセスにおけるモデル選択のための一般的なフレームワークを提案しました。具体的には、静的ネットワーク上での二状態ノードダイナミクスにおいて、真のモデルと競合するモデル間の期待尤度比が、観測データの相対量と、提案されたメカニズム間のカルバック・ライブラー情報量によって表現できることを示しました。そして、大規模システムにおける検出可能性の漸近近似が、有限システムにも適用できることを示しました。さらに、文献で一般的に使用される6つの典型的な伝播メカニズム（Independent, Simple, Voter, Ising, Threshold, Majority）の検出可能性を広範なパラメータ空間で体系的に探索しました。観測データは、すべてのノードの状態X(t)={Xi(t)}と時間ステップt={1,...,T}で構成されます。既知のネットワーク構造A={Aij}がある場合、遷移確率はP[X(t)|X(t-1), A, F, R]として記述され、これは感染率Fk,mと回復率Rk,mに依存します。2つの競合するモデルMaとMbを比較する際、それらの対数尤度比は、時間集計された遷移と状態の発生回数（Sk,m, Ik,m, Yk,m, Hk,m）に基づいて計算されます。\n\nモデル選択の成功は、観測された軌跡における「動的範囲」（ダイナミクスによって訪問される異なる(k, m)値）に大きく依存します。データ量が多いほど推論は一般的に改善しますが、遷移確率は固定されているため、モデル選択の成功は、データが動的範囲全体にどのように割り当てられるかにかかっています。これは、メカニズム(F, R)とネットワーク構造が観測期間中に非自明な相互作用をすることによって生じます。ネットワーク構造は潜在的な動的範囲の次数クラスを制約し、全体的な伝播ダイナミクスは多様な巨視的挙動を示す可能性があります。つまり、データがどれだけ多様な状況を捉えているかが、隠れたルールを見抜く鍵となります。",
+      "bodyGlossary": [
+        {
+          "term": "二状態ノードダイナミクス",
+          "definition": "ネットワーク上の各要素が2つの状態（例：0か1）を取る変化。",
+          "start": 82,
+          "end": 94
+        },
+        {
+          "term": "尤度比",
+          "definition": "あるデータが特定のモデルの下でどれだけ起こりやすいかを示す比率。",
+          "start": 116,
+          "end": 119
+        },
+        {
+          "term": "カルバック・ライブラー情報量",
+          "definition": "2つの確率分布がどれだけ異なるかを示す指標。",
+          "start": 144,
+          "end": 158
+        },
+        {
+          "term": "漸近近似",
+          "definition": "システムが非常に大きい場合に成り立つ近似的な関係。",
+          "start": 197,
+          "end": 201
+        },
+        {
+          "term": "動的範囲",
+          "definition": "ダイナミクス中に観測される状態変化の多様性。",
+          "start": 590,
+          "end": 594
+        },
+        {
+          "term": "巨視的挙動",
+          "definition": "システム全体として観察される大きな振る舞い。",
+          "start": 810,
+          "end": 815
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "二状態ノードダイナミクス",
+          "definition": "ネットワーク上の各要素が2つの状態（例：0か1）を取る変化。",
+          "start": 82,
+          "end": 94
+        },
+        {
+          "term": "尤度比",
+          "definition": "あるデータが特定のモデルの下でどれだけ起こりやすいかを示す比率。",
+          "start": 116,
+          "end": 119
+        },
+        {
+          "term": "カルバック・ライブラー情報量",
+          "definition": "2つの確率分布がどれだけ異なるかを示す指標。",
+          "start": 144,
+          "end": 158
+        },
+        {
+          "term": "漸近近似",
+          "definition": "システムが非常に大きい場合に成り立つ近似的な関係。",
+          "start": 197,
+          "end": 201
+        },
+        {
+          "term": "動的範囲",
+          "definition": "ダイナミクス中に観測される状態変化の多様性。",
+          "start": 590,
+          "end": 594
+        },
+        {
+          "term": "巨視的挙動",
+          "definition": "システム全体として観察される大きな振る舞い。",
+          "start": 810,
+          "end": 815
+        }
+      ],
+      "agriEconRelevance": "農業経済学において、この研究は新品種の普及、農業技術の採用、病害虫の伝播、市場情報の拡散メカニズムの解明に応用できます。例えば、ある農法が農家コミュニティでどのように広がるか、その背後にある「伝播ルール」を特定することで、より効果的な普及戦略を設計できます。また、病害虫の感染メカニズムを正確に推論できれば、ピンポイントでの防除対策や、地域全体の感染拡大予測の精度向上に貢献し、経済的損失の最小化につながります。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 312,
+      "keyFigure": {
+        "imagePath": "/figures/2607.08672v1_results.jpeg",
+        "page": 28,
+        "caption": "最小の分岐を持つメカニズムの代替案を示しています。",
+        "label": "Figure 14.",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-11T22:46:02.326Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.08672v1_results.jpeg",
+          "page": 28,
+          "caption": "最小の分岐を持つメカニズムの代替案を示しています。",
+          "label": "Figure 14.",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-11T22:46:02.326Z"
+        },
+        {
+          "imagePath": "/figures/2607.08672v1_why.jpeg",
+          "page": 28,
+          "caption": "SISモデルのパラメータに対するネットワーク密度の増加の結果を示しています。",
+          "label": "Figure 14 we depict the result of increasing the network density over the parameters (θF , θR) of the SIS model,",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-11T22:46:02.326Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.08706v1",
+      "title": "Directional AI Advice: Experimental Evidence from Healthcare",
+      "authors": [
+        "Yuyu Chen",
+        "Hongbin Li",
+        "Lingsheng Meng",
+        "Xinyao Qiu",
+        "Qingxu Yang"
+      ],
+      "publishedAt": "2026-07-09T17:14:20Z",
+      "url": "https://arxiv.org/abs/2607.08706v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.08706v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "econ.GN"
+      ],
+      "abstract": "Generative AI is fast becoming the first place people turn for expert advice. The advice it provides can be directional rather than neutral, shaped in part by the choices of its designers and regulators. When clients consult AI before meeting an expert, they carry this directional advice into a relationship that once rested on the expert's judgment alone. We study its consequences in healthcare through a large-scale preregistered field experiment at a Chinese hospital, where we randomize patients' access to an AI chatbot before their outpatient visit. Examination of the conversation logs shows that the chatbot routinely cautions against the use of medications, especially Traditional Chinese Medicine and antibiotics, while issuing clean recommendations for diagnostic testing, consistent with the liability-driven guardrails encoded in AI training. This directionality propagates into clinical practice. Prescription rates decline among treated patients while diagnostic testing increases, and these effects are more pronounced among physicians who are receptive to patient input and those with more intensive prescribing styles. Beyond shifting healthcare utilization, survey results show that AI access reduces patient compliance and satisfaction, shifting the balance of authority between patients and physicians.",
+      "summary": {
+        "gist": "生成AIは、専門家のアドバイスを求める際の最初の情報源となりつつあります。しかし、AIの助言は中立ではなく、開発者や規制当局の選択によって特定の方向性を持つことがあります。特に医療のような高リスク分野では、AI開発者は法的責任を回避するため、慎重なガードレールを設ける傾向があります。患者が診察前にAIに相談すると、この方向性のある助言が医師との関係性や実際の医療行為に影響を与える可能性があります。",
+        "novelty": "これまで、生成AIが専門家のアドバイスにどう影響するかは、主にAIが専門家を補助する側面や、情報提供の効率化に焦点が当てられていました。しかし、AIが提供する「方向性のある」アドバイスが、専門家とクライアントの関係性や実際の意思決定にどう影響するかは不明でした。 本研究は、大規模な実地実験を通じて、患者が診察前にAIチャットボットを利用することで、処方薬の減少、検査の増加、そして患者の満足度や医師への信頼の変化といった、具体的な医療行動や関係性の変容が起きることを初めて明らかにしました。これはAIの設計思想が現実世界に伝播するメカニズムを示しています。",
+        "method": "本研究は、中国の大規模公立病院で1万人以上の外来患者を対象とした大規模な実地実験を行いました。患者は診察前にAIチャットボットへのアクセス権を与えられるグループと与えられないグループにランダムに割り当てられました。チャットボットは患者の症状や健康上の懸念について詳細を尋ね、AIが生成したパーソナライズされたガイダンスと一般的な医療情報を提供しました。研究では、チャットボットの利用ログと病院の管理記録を連結し、チャットボットの助言内容、患者の医療利用行動（処方薬、診断検査）、および患者と医師の関係性の変化を分析しました。",
+        "results": "チャットボットの利用ログを分析した結果、チャットボットは薬（特に漢方薬と抗生物質）の使用に対してはほぼ常に注意を促し、診断検査については明確な推奨を行うという、方向性のある助言を提供していることが判明しました。この方向性は、法的責任を回避するためのAIのガードレールと一致しています。この方向性のある助言は実際の臨床診療に伝播し、チャットボットにアクセスした患者では処方薬の受診確率が4.6%減少し、診断検査の受診確率が2.7%増加しました。これらの効果は、患者の意見に耳を傾ける医師や、元々処方量の多い医師の間で顕著でした。また、チャットボットへのアクセスは患者の満足度と医療アドバイスへの遵守意図を低下させ、患者と医師の間の権威のバランスを変化させることも示されました。",
+        "why": "この現象のメカニズムは、主にAIの助言が患者の事前情報と期待を変化させることにあります。AIが薬に対して慎重な姿勢を示し、検査を推奨することで、患者は診察前に特定の情報や期待を持って医師に接するようになります。これにより、医師は患者のインプットに影響され、処方薬を減らし、検査を増やす傾向が強まります。特に、患者の意見を受け入れやすい医師や、元々処方量の多い医師は、患者からの情報や要望によって診療スタイルを変えやすいと考えられます。また、AIの助言が患者の医師に対する情報的優位性を高めることで、患者は医師の専門知識に対する見方を変え、医療アドバイスへの遵守意図が低下すると考えられます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "behavioral-economics",
+      "arxivPrimary": "econ.GN",
+      "titleJa": "AIの方向性アドバイス：医療分野における実験的証拠",
+      "catchTitle": "AIの助言で診察が変わる？患者と医師の関係性",
+      "hook": "あなたは病院に行く前にAIに相談しますか？そのAIの助言が、あなたの診察結果や医師との関係性を大きく変えるとしたらどうでしょう？",
+      "background": "生成AIは、専門家のアドバイスを求める際の最初の情報源となりつつあります。しかし、AIの助言は中立ではなく、開発者や規制当局の選択によって特定の方向性を持つことがあります。特に医療のような高リスク分野では、AI開発者は法的責任を回避するため、慎重なガードレールを設ける傾向があります。患者が診察前にAIに相談すると、この方向性のある助言が医師との関係性や実際の医療行為に影響を与える可能性があります。",
+      "quiz": {
+        "question": "この研究で、AIチャットボットの利用が患者の医療行動に与えた主な影響は何でしたか？",
+        "options": [
+          "処方薬が増え、診断検査が減った",
+          "処方薬が減り、診断検査が増えた",
+          "処方薬も診断検査も変化しなかった"
+        ],
+        "correctIndex": 1,
+        "explanation": "AIチャットボットは薬の使用に注意を促し、診断検査を推奨する傾向があったため、チャットボットにアクセスした患者では処方薬が減少し、診断検査が増加しました。"
+      },
+      "limitations": "本研究は中国の単一病院での実験であり、他の文化圏や医療システムに一般化できるかは不明です。また、短期的なアウトカムに焦点を当てており、長期的な健康状態への影響は評価されていません。患者の満足度や遵守意図に関する調査結果は、サンプルサイズが小さいため、一部の推定値は不正確である可能性があります。",
+      "glossary": [
+        {
+          "term": "生成AI",
+          "definition": "テキストや画像を生成できる人工知能"
+        },
+        {
+          "term": "実地実験",
+          "definition": "実際の環境で行われる大規模な実験"
+        },
+        {
+          "term": "チャットボット",
+          "definition": "会話形式で情報を提供するプログラム"
+        },
+        {
+          "term": "パーソナライズ",
+          "definition": "個人に合わせて最適化すること"
+        },
+        {
+          "term": "管理記録",
+          "definition": "病院の診療データや会計データ"
+        },
+        {
+          "term": "処方薬",
+          "definition": "医師が患者に指示する薬"
+        },
+        {
+          "term": "診断検査",
+          "definition": "病気の特定や状態を調べる検査"
+        },
+        {
+          "term": "遵守意図",
+          "definition": "医療アドバイスに従う意思"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "患者が診察前にAIチャットボットを利用すると、処方薬が減り検査が増え、患者の満足度や医師への信頼も変化することが大規模実験で判明しました。",
+      "noveltyContrast": {
+        "before": "これまで、生成AIが専門家のアドバイスにどう影響するかは、主にAIが専門家を補助する側面や、情報提供の効率化に焦点が当てられていました。しかし、AIが提供する「方向性のある」アドバイスが、専門家とクライアントの関係性や実際の意思決定にどう影響するかは不明でした。",
+        "after": "本研究は、大規模な実地実験を通じて、患者が診察前にAIチャットボットを利用することで、処方薬の減少、検査の増加、そして患者の満足度や医師への信頼の変化といった、具体的な医療行動や関係性の変容が起きることを初めて明らかにしました。これはAIの設計思想が現実世界に伝播するメカニズムを示しています。"
+      },
+      "analogy": {
+        "title": "畑の土壌改良剤が作物の成長を変えるように",
+        "body": "これは、農家が畑に特定の土壌改良剤を撒くようなものです。改良剤（AIの助言）は、土壌（患者の事前情報）のpH値や栄養バランス（患者の期待や知識）を特定の方向に変えます。その結果、同じ種（症状）を植えても、以前とは異なる種類の作物（処方薬や検査）が育ち、収穫量（医療サービス利用）も変わってきます。さらに、農家（医師）が土壌の変化（患者の事前情報）にどう対応するかで、最終的な収穫（診察結果）も変わるのです。AIの助言は、患者という「土壌」を特定の方向に「改良」し、診察という「畑」での「収穫」に影響を与えるのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "-4.6pt",
+          "label": "処方薬の受診確率"
+        },
+        {
+          "value": "+2.7pt",
+          "label": "診断検査の受診確率"
+        },
+        {
+          "value": "-27pt",
+          "label": "チャットボット利用者の処方薬受診確率"
+        },
+        {
+          "value": "+16pt",
+          "label": "チャットボット利用者の診断検査受診確率"
+        }
+      ],
+      "whyYouCare": "この研究は、生成AIが私たちの日常生活に深く浸透する中で、その「助言」がどれほど大きな影響力を持つかを示しています。特に医療のような重要な意思決定を伴う分野では、AIの設計思想が患者の行動や医師の診療スタイル、ひいては医療システム全体の利用状況まで変える可能性があります。もしあなたがAIに健康相談をするなら、そのAIがどのような「方向性」を持っているかを知ることは非常に重要です。また、企業やサービス提供者にとっては、AIの設計がユーザーの行動や満足度にどう影響するかを理解し、倫理的かつ責任あるAI開発を進めるための重要な示唆を与えます。",
+      "takeawayTalk": "AIの健康相談は、薬を減らし検査を増やすって知ってた？",
+      "bodyText": "本研究は、中国の大規模公立病院で1万人以上の外来患者を対象とした大規模な実地実験を行いました。患者は診察前にAIチャットボットへのアクセス権を与えられるグループと与えられないグループにランダムに割り当てられました。チャットボットは患者の症状や健康上の懸念について詳細を尋ね、AIが生成したパーソナライズされたガイダンスと一般的な医療情報を提供しました。研究では、チャットボットの利用ログと病院の管理記録を連結し、チャットボットの助言内容、患者の医療利用行動（処方薬、診断検査）、および患者と医師の関係性の変化を分析しました。\n\nこの現象のメカニズムは、主にAIの助言が患者の事前情報と期待を変化させることにあります。AIが薬に対して慎重な姿勢を示し、検査を推奨することで、患者は診察前に特定の情報や期待を持って医師に接するようになります。これにより、医師は患者のインプットに影響され、処方薬を減らし、検査を増やす傾向が強まります。特に、患者の意見を受け入れやすい医師や、元々処方量の多い医師は、患者からの情報や要望によって診療スタイルを変えやすいと考えられます。また、AIの助言が患者の医師に対する情報的優位性を高めることで、患者は医師の専門知識に対する見方を変え、医療アドバイスへの遵守意図が低下すると考えられます。",
+      "bodyGlossary": [
+        {
+          "term": "実地実験",
+          "definition": "実際の環境で行われる大規模な実験",
+          "start": 36,
+          "end": 40
+        },
+        {
+          "term": "チャットボット",
+          "definition": "会話形式で情報を提供するプログラム",
+          "start": 56,
+          "end": 63
+        },
+        {
+          "term": "パーソナライズ",
+          "definition": "個人に合わせて最適化すること",
+          "start": 144,
+          "end": 151
+        },
+        {
+          "term": "管理記録",
+          "definition": "病院の診療データや会計データ",
+          "start": 197,
+          "end": 201
+        },
+        {
+          "term": "処方薬",
+          "definition": "医師が患者に指示する薬",
+          "start": 229,
+          "end": 232
+        },
+        {
+          "term": "診断検査",
+          "definition": "病気の特定や状態を調べる検査",
+          "start": 233,
+          "end": 237
+        },
+        {
+          "term": "遵守意図",
+          "definition": "医療アドバイスに従う意思",
+          "start": 542,
+          "end": 546
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "実地実験",
+          "definition": "実際の環境で行われる大規模な実験",
+          "start": 36,
+          "end": 40
+        },
+        {
+          "term": "チャットボット",
+          "definition": "会話形式で情報を提供するプログラム",
+          "start": 56,
+          "end": 63
+        },
+        {
+          "term": "パーソナライズ",
+          "definition": "個人に合わせて最適化すること",
+          "start": 144,
+          "end": 151
+        },
+        {
+          "term": "管理記録",
+          "definition": "病院の診療データや会計データ",
+          "start": 197,
+          "end": 201
+        },
+        {
+          "term": "処方薬",
+          "definition": "医師が患者に指示する薬",
+          "start": 229,
+          "end": 232
+        },
+        {
+          "term": "診断検査",
+          "definition": "病気の特定や状態を調べる検査",
+          "start": 233,
+          "end": 237
+        },
+        {
+          "term": "遵守意図",
+          "definition": "医療アドバイスに従う意思",
+          "start": 542,
+          "end": 546
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 286,
+      "keyFigure": {
+        "imagePath": "/figures/2607.08706v1_results.png",
+        "page": 40,
+        "caption": "Figure 1. Medical AI Chatbot User Interfaces and Experimental Design Flowchart Medical AI Chatbot User Interfaces and Experimental Design Flowchart",
+        "label": "Figure 1. Medical AI Chatbot User Interfaces and Experimental Design Flowchart",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-11T22:46:05.306Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.08706v1_results.png",
+          "page": 40,
+          "caption": "Figure 1. Medical AI Chatbot User Interfaces and Experimental Design Flowchart Medical AI Chatbot User Interfaces and Experimental Design Flowchart",
+          "label": "Figure 1. Medical AI Chatbot User Interfaces and Experimental Design Flowchart",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-11T22:46:05.306Z"
+        }
+      ]
+    }
+  ]
+}

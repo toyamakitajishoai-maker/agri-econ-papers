@@ -1,0 +1,1032 @@
+{
+  "date": "2026-07-13",
+  "papers": [
+    {
+      "id": "2607.07768v1",
+      "title": "Cascading Effects of the COVID-19 Pandemic on Barangays in the Philippines",
+      "authors": [
+        "Naomi Ashley Amparo",
+        "John Frederick Muji",
+        "Paul James Montecillo",
+        "Jaymar Soriano",
+        "Vena Pearl Bongolan"
+      ],
+      "publishedAt": "2026-07-08T16:11:06Z",
+      "url": "https://arxiv.org/abs/2607.07768v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.07768v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "econ.GN",
+        "cs.SI"
+      ],
+      "abstract": "The COVID-19 pandemic disrupted socio-economic and healthcare systems in the Philippines, significantly affecting barangays. This study analyzes the cascading effects of the COVID-19 pandemic on key aspects of a barangay, namely mobility, accessibility of public services, economic and financial health, food security, educational engagement, and physical health. It focuses on data from 2,122 Filipino households collected during May to June 2021 as part of the World Bank COVID-19 Households Survey. A Bayesian network model was constructed to programmatically map the conditional dependencies among these variables, utilizing Python libraries. Survey responses were grouped into common variables based on shared characteristics and standardized through z-score normalization to serve as nodes in the Bayesian network. By extending the Bayesian network into an influence diagram, the results will help identify interventions to guide local government units (LGUs) and policymakers in crafting tailored recovery programs and strategies that address impacts on physical health, economic and financial health, food security, public service access, mobility, and educational engagement. These efforts ultimately aim to enhance barangay resilience and preparedness for future public health crises. The results indicate that interventions aimed at boosting food production, stabilizing market prices, and expanding income opportunities are the most effective in improving community outcomes. This highlights the vital role of targeted economic and food security measures in mitigating the socio-economic impacts of the pandemic and offers valuable insights for shaping future response and recovery efforts.",
+      "summary": {
+        "gist": "COVID-19パンデミックは、フィリピンの社会経済システムと医療システムに深刻な影響を与え、特に地方の最小行政単位であるバランガイレベルで広範な失業、公共サービスへのアクセス制限、生活状況の悪化を引き起こしました。これにより、経済的困窮、食料不安、犯罪率の増加、身体的・精神的健康の悪化が蔓延しました。世界銀行の調査によると、失業率が3倍になり、所得損失が発生し、経済が最大9%縮小するなど、フィリピンの家計に多次元的な悪影響が生じました。",
+        "novelty": "これまでの研究では、パンデミックが個人のメンタルヘルスに与える影響に焦点を当てていましたが、地域社会全体への多岐にわたる連鎖的な影響を包括的に分析し、具体的な介入策を特定する研究は不足していました。 この論文は、ベイジアンネットワークと影響図を用いて、コロナ禍が地域の移動、公共サービス、経済、食料安全保障、教育、健康に与える複合的な影響をモデル化。データに基づき、最も効果的な介入策を特定しました。",
+        "method": "本研究では、世界銀行のCOVID-19世帯調査から収集された2,122世帯のデータ（2021年5月〜6月）を使用しました。ベイジアンネットワークモデルを構築し、移動性、公共サービスへのアクセス、経済的・財政的健全性、食料安全保障、教育への参加、身体的健康といった主要な側面間の条件付き依存関係をマッピングしました。さらに、このベイジアンネットワークを影響図に拡張することで、最適な介入戦略を特定しました。調査回答は共通の変数にグループ化され、zスコア正規化によって標準化され、ベイジアンネットワークのノードとして機能しました。意思決定ノードは、COVID-19パンデミック中に実施された介入策、緩和策、政策に直接経験を持つ専門家（労働経済学者、地方政府政策担当者、農業省職員など）との協議から導き出されました。",
+        "results": "分析の結果、地域社会の成果を改善するために最も効果的な介入策は、食料生産の強化、市場価格の安定化、所得機会の拡大であることが示されました。これらの対策は、パンデミックの社会経済的影響を緩和し、将来の危機対応と復旧努力を形成するための貴重な洞察を提供します。",
+        "why": "ベイジアンネットワークと影響図を用いることで、パンデミックがバランガイの様々な側面に与える複雑な連鎖的影響を視覚化し、定量的に評価することが可能になりました。これにより、特定の介入策がネットワーク全体にどのように波及し、最終的な地域社会の「状態」（ユーティリティノード）にどのような影響を与えるかをモデル化できます。食料生産の強化、市場価格の安定化、所得機会の拡大は、食料不安の直接的な軽減だけでなく、家計の所得向上、経済的健全性の改善、ひいては教育や健康といった他の側面にも好影響を与えるため、最も高い期待効用をもたらすと判断されました。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "development-economics",
+      "arxivPrimary": "econ.GN",
+      "titleJa": "COVID-19パンデミックがフィリピンのバランガイに与える連鎖的影響",
+      "catchTitle": "コロナ禍、地域を救う「最強の一手」",
+      "hook": "コロナ禍であなたの生活は大きく変わりましたが、フィリピンの地域社会では何が最も打撃を受け、どうすれば回復できたと思いますか？",
+      "background": "COVID-19パンデミックは、フィリピンの社会経済システムと医療システムに深刻な影響を与え、特に地方の最小行政単位であるバランガイレベルで広範な失業、公共サービスへのアクセス制限、生活状況の悪化を引き起こしました。これにより、経済的困窮、食料不安、犯罪率の増加、身体的・精神的健康の悪化が蔓延しました。世界銀行の調査によると、失業率が3倍になり、所得損失が発生し、経済が最大9%縮小するなど、フィリピンの家計に多次元的な悪影響が生じました。",
+      "quiz": {
+        "question": "この研究で、フィリピンの地域社会の回復に最も効果的とされた介入策は何でしょう？",
+        "options": [
+          "ワクチン接種プログラムの拡大",
+          "食料生産の強化、市場価格の安定、所得機会の拡大",
+          "オンライン教育の推進とデジタルアクセス改善"
+        ],
+        "correctIndex": 1,
+        "explanation": "論文の結果では、食料生産の強化、市場価格の安定、所得機会の拡大が、地域社会の成果を改善するために最も効果的な介入策であると示されています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "バランガイ",
+          "definition": "フィリピンの最小行政単位で、日本の町内会や村に相当。"
+        },
+        {
+          "term": "ベイジアンネットワーク",
+          "definition": "確率的な因果関係をグラフで表現するモデル。"
+        },
+        {
+          "term": "影響図",
+          "definition": "意思決定と不確実性を考慮したベイジアンネットワークの拡張。"
+        },
+        {
+          "term": "zスコア正規化",
+          "definition": "データの平均を0、標準偏差を1に変換する処理。"
+        },
+        {
+          "term": "ノード",
+          "definition": "ネットワーク図における変数や要素を表す点。"
+        },
+        {
+          "term": "意思決定ノード",
+          "definition": "影響図において、選択可能な行動や政策を表す点。"
+        },
+        {
+          "term": "ユーティリティノード",
+          "definition": "影響図において、意思決定の結果として得られる価値や効用を表す点。"
+        },
+        {
+          "term": "期待効用",
+          "definition": "不確実な状況下での意思決定における平均的な価値。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "コロナ禍で打撃を受けたフィリピンの地域社会を救うには、食料生産の強化、市場価格の安定、所得機会の拡大が最も効果的です。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、パンデミックが個人のメンタルヘルスに与える影響に焦点を当てていましたが、地域社会全体への多岐にわたる連鎖的な影響を包括的に分析し、具体的な介入策を特定する研究は不足していました。",
+        "after": "この論文は、ベイジアンネットワークと影響図を用いて、コロナ禍が地域の移動、公共サービス、経済、食料安全保障、教育、健康に与える複合的な影響をモデル化。データに基づき、最も効果的な介入策を特定しました。"
+      },
+      "analogy": {
+        "title": "畑の病害対策、どこに打つ？",
+        "body": "これはまるで、畑に未知の病害が広がり、収穫量減少、土壌の質低下、隣接する畑への影響など、様々な問題が連鎖的に発生している状況に似ています。従来の対策が特定の病害にしか効かない中、この研究は、どの対策（例えば、特定の肥料、品種改良、水やり方法の改善）が、病害の進行を止め、土壌全体を健康にし、最終的に豊かな収穫をもたらすかを、データに基づいて見つけ出すようなものです。単に病気の症状を抑えるだけでなく、根本的な原因に働きかけ、畑全体の回復力を高める「最強の一手」を見つけることに成功したのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "コロナ禍のような大規模な危機は、私たちの生活のあらゆる側面に影響を及ぼします。この研究は、単に感染症対策だけでなく、経済、食料、教育といった多角的な視点から、地域社会のレジリエンス（回復力）を高めるための具体的な戦略を示しています。あなたがもし、地域活性化や災害対策に関わる仕事をしているなら、限られた資源の中でどこに投資すれば最も効果があるのか、この研究は貴重なヒントを与えてくれるでしょう。また、消費者として、食料供給の安定や物価の安定が、いかに私たちの生活の基盤となっているかを再認識させられます。将来の危機に備え、より強靭な社会を築くために、この知見は不可欠です。",
+      "takeawayTalk": "コロナ禍で地域を救うには、食料生産強化と市場安定が最強らしい！",
+      "bodyText": "本研究では、世界銀行のCOVID-19世帯調査から収集された2,122世帯のデータ（2021年5月〜6月）を使用しました。ベイジアンネットワークモデルを構築し、移動性、公共サービスへのアクセス、経済的・財政的健全性、食料安全保障、教育への参加、身体的健康といった主要な側面間の条件付き依存関係をマッピングしました。さらに、このベイジアンネットワークを影響図に拡張することで、最適な介入戦略を特定しました。調査回答は共通の変数にグループ化され、zスコア正規化によって標準化され、ベイジアンネットワークのノードとして機能しました。意思決定ノードは、COVID-19パンデミック中に実施された介入策、緩和策、政策に直接経験を持つ専門家（労働経済学者、地方政府政策担当者、農業省職員など）との協議から導き出されました。\n\nベイジアンネットワークと影響図を用いることで、パンデミックがバランガイの様々な側面に与える複雑な連鎖的影響を視覚化し、定量的に評価することが可能になりました。これにより、特定の介入策がネットワーク全体にどのように波及し、最終的な地域社会の「状態」（ユーティリティノード）にどのような影響を与えるかをモデル化できます。食料生産の強化、市場価格の安定化、所得機会の拡大は、食料不安の直接的な軽減だけでなく、家計の所得向上、経済的健全性の改善、ひいては教育や健康といった他の側面にも好影響を与えるため、最も高い期待効用をもたらすと判断されました。",
+      "bodyGlossary": [
+        {
+          "term": "ベイジアンネットワーク",
+          "definition": "確率的な因果関係をグラフで表現するモデル。",
+          "start": 61,
+          "end": 72
+        },
+        {
+          "term": "影響図",
+          "definition": "意思決定と不確実性を考慮したベイジアンネットワークの拡張。",
+          "start": 175,
+          "end": 178
+        },
+        {
+          "term": "zスコア正規化",
+          "definition": "データの平均を0、標準偏差を1に変換する処理。",
+          "start": 221,
+          "end": 228
+        },
+        {
+          "term": "ノード",
+          "definition": "ネットワーク図における変数や要素を表す点。",
+          "start": 250,
+          "end": 253
+        },
+        {
+          "term": "意思決定ノード",
+          "definition": "影響図において、選択可能な行動や政策を表す点。",
+          "start": 263,
+          "end": 270
+        },
+        {
+          "term": "バランガイ",
+          "definition": "フィリピンの最小行政単位で、日本の町内会や村に相当。",
+          "start": 387,
+          "end": 392
+        },
+        {
+          "term": "ユーティリティノード",
+          "definition": "影響図において、意思決定の結果として得られる価値や効用を表す点。",
+          "start": 481,
+          "end": 491
+        },
+        {
+          "term": "期待効用",
+          "definition": "不確実な状況下での意思決定における平均的な価値。",
+          "start": 609,
+          "end": 613
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "ベイジアンネットワーク",
+          "definition": "確率的な因果関係をグラフで表現するモデル。",
+          "start": 61,
+          "end": 72
+        },
+        {
+          "term": "影響図",
+          "definition": "意思決定と不確実性を考慮したベイジアンネットワークの拡張。",
+          "start": 175,
+          "end": 178
+        },
+        {
+          "term": "zスコア正規化",
+          "definition": "データの平均を0、標準偏差を1に変換する処理。",
+          "start": 221,
+          "end": 228
+        },
+        {
+          "term": "ノード",
+          "definition": "ネットワーク図における変数や要素を表す点。",
+          "start": 250,
+          "end": 253
+        },
+        {
+          "term": "意思決定ノード",
+          "definition": "影響図において、選択可能な行動や政策を表す点。",
+          "start": 263,
+          "end": 270
+        },
+        {
+          "term": "バランガイ",
+          "definition": "フィリピンの最小行政単位で、日本の町内会や村に相当。",
+          "start": 387,
+          "end": 392
+        },
+        {
+          "term": "ユーティリティノード",
+          "definition": "影響図において、意思決定の結果として得られる価値や効用を表す点。",
+          "start": 481,
+          "end": 491
+        },
+        {
+          "term": "期待効用",
+          "definition": "不確実な状況下での意思決定における平均的な価値。",
+          "start": 609,
+          "end": 613
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 253,
+      "keyFigure": {
+        "imagePath": "/figures/2607.07768v1_results.png",
+        "page": 6,
+        "caption": "COVID-19がバランガイに与える連鎖的影響をベイジアンネットワークで示しています。",
+        "label": "Figure 1: Bayesian influence diagram of cascading effects of COVID-19 on the state of a barangay",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-12T22:45:35.628Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.07768v1_results.png",
+          "page": 6,
+          "caption": "COVID-19がバランガイに与える連鎖的影響をベイジアンネットワークで示しています。",
+          "label": "Figure 1: Bayesian influence diagram of cascading effects of COVID-19 on the state of a barangay",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-12T22:45:35.628Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.07543v1",
+      "title": "Equivalence testing in pesticide risk assessment -- Evaluation and practical guidance for design, analysis and interpretation",
+      "authors": [
+        "Dimitry Wintermantel",
+        "Julia Osterman",
+        "Magdalena M. Mair",
+        "Florian Hartig"
+      ],
+      "publishedAt": "2026-07-08T15:42:23Z",
+      "url": "https://arxiv.org/abs/2607.07543v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.07543v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "stat.ME",
+        "q-bio.PE",
+        "q-bio.QM"
+      ],
+      "abstract": "Harmful pesticide effects exceeding specific protection goals (SPG) may go undetected in underpowered experimental designs. Regulatory honeybee field studies have consistently failed to reach the statistical power required under European Food Safety Authority (EFSA) guidance, which may have caused approval of high-risk substances. Therefore, EFSA advised a shift from testing the null hypothesis of 'no effect' to equivalence testing. Under this approach, a pesticide is classified as 'low risk' if the null hypothesis that its effect exceeds the SPG can be rejected. For honeybees, the recommended SPG is a colony size reduction below 10%. Critics have argued that this framework requires excessive site replication to demonstrate pesticide safety and proposed an alternative equivalence test defining treatment effects relative to the lower bound of the 90%-control-group confidence interval. Using simulations mimicking a regulatory honeybee field study, we show that although the two equivalence tests share the same trade-off between false 'low-risk' and false 'high-risk' classifications, only EFSA's original recommendation reliably identifies pesticides with effects &gt; SPG at alpha = 0.2. Our results show that increasing site replication beyond the current practice is unavoidable for a reliable regulatory assessment. However, for pesticides with effect sizes of 5% or less, site requirements remain lower than those implied by the power requirement of the former EFSA guidance. Moreover, covariate adjustment through a model term or balanced colony allocation using anticlustering randomisation can reduce site requirements without losing power and thus save costs. Finally, we provide guidance and R functions for anticlustering randomisation and equivalence testing for pesticide risk assessment.",
+      "summary": {
+        "gist": "農薬は世界中で非標的生物に害を及ぼす可能性がありますが、ほとんどの国で承認前に生態学的リスク評価が行われます。しかし、従来の「差の検定」では、統計的検出力不足により、実際には有害な農薬が見過ごされ、承認されてしまう問題がありました。特にミツバチの野外試験では、必要な検出力に達していないことが多く、高リスク物質が承認される原因となっていました。この問題に対処するため、欧州食品安全機関（EFSA）は2023年に、リスク評価の概念を「差の検定」から「同等性試験」へ移行する改訂ガイダンスを発表しました。これにより、農薬が「低リスク」と判断されるためには、その影響が特定の保護目標（SPG、ミツバチのコロニーサイズ減少10%未満）を超えないことを証明する必要が生じました。",
+        "novelty": "従来の農薬リスク評価では、「効果がない」という仮説を検証する「差の検定」が主流でした。しかし、この方法では統計的検出力不足により、実際には有害な農薬が見過ごされ、「安全」と承認されてしまうリスクがありました。特にミツバチの野外試験では、必要な検出力に達していないことが多く、高リスク物質が承認される原因となっていました。 本研究は、欧州食品安全機関（EFSA）が新たに推奨する「同等性試験」と、その代替案を比較検証しました。シミュレーションにより、EFSAの同等性試験が、有害な農薬を「低リスク」と誤分類するリスクを抑えつつ、信頼性の高い評価を可能にすることを示しました。また、試験地の数を増やしたり、初期のコロニーサイズを調整したりすることで、評価の精度と効率が向上することも明らかにしました。",
+        "method": "本研究では、ネオニコチノイド系殺虫剤の再承認のために提出された実際のミツバチ野外試験データ（Rolke et al., 2016）を基に、シミュレーションを行いました。このシミュレーションでは、ミツバチのコロニーサイズに対する農薬の様々な影響度（効果サイズ）を想定し、EFSAが推奨する同等性試験と、Hotoppらが提案する代替同等性試験の性能を比較しました。具体的には、5,000回の繰り返しシミュレーションを通じて、各試験が農薬を「低リスク」または「高リスク」に分類する割合を推定しました。また、試験地の数を増やすことや、初期のコロニーサイズを統計的に調整すること（共変量調整）や、アンチクラスターランダム化を用いてコロニーの割り当てを最適化することが、検出力向上と試験地要件の削減にどの程度寄与するかを評価しました。",
+        "results": "シミュレーションの結果、EFSAの同等性試験は、Hotoppらの代替案と比較して、有害な農薬を「低リスク」と誤分類するリスクを確実に抑えることが示されました。また、信頼性の高いリスク評価のためには、現在の慣行よりも試験地の数を増やすことが不可欠であると結論付けられました。しかし、効果サイズが5%以下の農薬については、従来のEFSAガイダンスが示唆するよりも少ない試験地数で済むことも判明しました。さらに、初期のコロニーサイズを共変量としてモデルに組み込むか、アンチクラスターランダム化によってバランスの取れたコロニー割り当てを行うことで、検出力を損なうことなく試験地要件を削減し、コストを節約できることが示されました。",
+        "why": "従来の「差の検定」では、「効果がない」という帰無仮説を棄却できない場合、効果がないと判断されがちでした。しかし、これは単に検出力不足で効果を検出できなかっただけかもしれません。一方、「同等性試験」では、「効果が特定の閾値（SPG）を超える」という帰無仮説を棄却することで「低リスク」と判断します。これにより、検出力不足の場合には「低リスク」と判断されにくくなり、有害な農薬が承認されるリスクが低減されます。また、試験地の数を増やすことは、データのばらつきを減らし、統計的検出力を高めることで、より正確な判断を可能にします。初期コロニーサイズのような変動要因を調整することで、試験結果のノイズが減り、真の農薬効果がより明確になるため、少ない試験地数でも高い検出力を維持できます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / stat.ME）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "environmental-impact",
+      "arxivPrimary": "stat.ME",
+      "titleJa": "農薬リスク評価における同等性試験：設計、分析、解釈のための評価と実践的ガイダンス",
+      "catchTitle": "農薬の「安全」は本当に安全？ミツバチ保護の新基準を検証",
+      "hook": "「安全」と承認された農薬が、後になってミツバチに有害だと判明したらどうしますか？",
+      "background": "農薬は世界中で非標的生物に害を及ぼす可能性がありますが、ほとんどの国で承認前に生態学的リスク評価が行われます。しかし、従来の「差の検定」では、統計的検出力不足により、実際には有害な農薬が見過ごされ、承認されてしまう問題がありました。特にミツバチの野外試験では、必要な検出力に達していないことが多く、高リスク物質が承認される原因となっていました。この問題に対処するため、欧州食品安全機関（EFSA）は2023年に、リスク評価の概念を「差の検定」から「同等性試験」へ移行する改訂ガイダンスを発表しました。これにより、農薬が「低リスク」と判断されるためには、その影響が特定の保護目標（SPG、ミツバチのコロニーサイズ減少10%未満）を超えないことを証明する必要が生じました。",
+      "quiz": {
+        "question": "EFSAが新たに推奨する「同等性試験」の主な目的は何でしょう？",
+        "options": [
+          "農薬がミツバチに全く影響を与えないことを証明すること",
+          "農薬がミツバチに与える影響が、特定の許容範囲を超えないことを証明すること",
+          "農薬がミツバチのコロニーサイズを増やす効果があることを証明すること"
+        ],
+        "correctIndex": 1,
+        "explanation": "同等性試験は、農薬がミツバチに与える影響が、特定の保護目標（SPG）で定められた許容範囲（例えばコロニーサイズ減少10%未満）を超えないことを統計的に証明することを目的としています。これにより、検出力不足による有害農薬の見過ごしを防ぎます。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "同等性試験",
+          "definition": "効果が特定の許容範囲内にあることを統計的に証明する手法"
+        },
+        {
+          "term": "効果サイズ",
+          "definition": "農薬がミツバチのコロニーサイズに与える影響の大きさ"
+        },
+        {
+          "term": "共変量調整",
+          "definition": "統計モデルで他の要因の影響を考慮し、結果を補正すること"
+        },
+        {
+          "term": "アンチクラスターランダム化",
+          "definition": "試験群間の初期条件の偏りを最小限にする割り当て方法"
+        },
+        {
+          "term": "検出力",
+          "definition": "統計的検定で、真の効果を正しく検出する確率"
+        },
+        {
+          "term": "帰無仮説",
+          "definition": "統計的検定で、否定されることを期待する仮説"
+        },
+        {
+          "term": "閾値",
+          "definition": "特定の判断基準となる境界値"
+        },
+        {
+          "term": "SPG",
+          "definition": "特定の保護目標。ミツバチのコロニー減少10%など"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "ミツバチ保護のための農薬リスク評価で、新しい「同等性試験」の有効性をシミュレーションで検証し、より信頼性の高い評価方法を提案します。",
+      "noveltyContrast": {
+        "before": "従来の農薬リスク評価では、「効果がない」という仮説を検証する「差の検定」が主流でした。しかし、この方法では統計的検出力不足により、実際には有害な農薬が見過ごされ、「安全」と承認されてしまうリスクがありました。特にミツバチの野外試験では、必要な検出力に達していないことが多く、高リスク物質が承認される原因となっていました。",
+        "after": "本研究は、欧州食品安全機関（EFSA）が新たに推奨する「同等性試験」と、その代替案を比較検証しました。シミュレーションにより、EFSAの同等性試験が、有害な農薬を「低リスク」と誤分類するリスクを抑えつつ、信頼性の高い評価を可能にすることを示しました。また、試験地の数を増やしたり、初期のコロニーサイズを調整したりすることで、評価の精度と効率が向上することも明らかにしました。"
+      },
+      "analogy": {
+        "title": "畑の土壌検査：肥料の安全性を確かめる",
+        "body": "これは、新しい肥料が土壌に与える影響を評価するようなものです。従来の検査では、「この肥料は土壌に悪影響を与えない」ことを証明しようとしていました。しかし、検査の規模が小さいと、実は土壌を痩せさせる肥料でも「悪影響なし」と見過ごしてしまう危険がありました。新しい検査では、「この肥料が土壌を痩せさせる度合いは、許容範囲内である」ことを証明するように変わりました。つまり、悪影響がないことを証明するのではなく、悪影響が一定の基準値を超えないことを証明するのです。これにより、本当に土壌に優しい肥料だけが承認されるようになります。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+3.2pt",
+          "label": "EFSAの同等性試験が、代替案よりも有害な農薬を「低リスク」と誤分類する確率を低減"
+        }
+      ],
+      "whyYouCare": "あなたが消費者なら、スーパーで手にする農産物が、環境や生態系に配慮して生産されているか気になりますよね。この研究は、農薬がミツバチなどの重要な花粉媒介者に与える影響を、より正確に評価するための新しい基準を提案しています。これにより、本当に安全な農薬だけが市場に出回るようになり、私たちの食料生産を支えるミツバチの保護につながります。また、農家の方々にとっては、より信頼性の高い評価基準が導入されることで、安心して使える農薬の選択肢が増え、持続可能な農業経営に貢献するでしょう。社会全体で見ても、生態系の健全性を守りながら、食料安全保障を確保するための重要な一歩となります。",
+      "takeawayTalk": "農薬の「安全」基準が変わり、ミツバチ保護がより厳しくなるよ！",
+      "bodyText": "本研究では、ネオニコチノイド系殺虫剤の再承認のために提出された実際のミツバチ野外試験データ（Rolke et al., 2016）を基に、シミュレーションを行いました。このシミュレーションでは、ミツバチのコロニーサイズに対する農薬の様々な影響度（効果サイズ）を想定し、EFSAが推奨する同等性試験と、Hotoppらが提案する代替同等性試験の性能を比較しました。具体的には、5,000回の繰り返しシミュレーションを通じて、各試験が農薬を「低リスク」または「高リスク」に分類する割合を推定しました。また、試験地の数を増やすことや、初期のコロニーサイズを統計的に調整すること（共変量調整）や、アンチクラスターランダム化を用いてコロニーの割り当てを最適化することが、検出力向上と試験地要件の削減にどの程度寄与するかを評価しました。\n\n従来の「差の検定」では、「効果がない」という帰無仮説を棄却できない場合、効果がないと判断されがちでした。しかし、これは単に検出力不足で効果を検出できなかっただけかもしれません。一方、「同等性試験」では、「効果が特定の閾値（SPG）を超える」という帰無仮説を棄却することで「低リスク」と判断します。これにより、検出力不足の場合には「低リスク」と判断されにくくなり、有害な農薬が承認されるリスクが低減されます。また、試験地の数を増やすことは、データのばらつきを減らし、統計的検出力を高めることで、より正確な判断を可能にします。初期コロニーサイズのような変動要因を調整することで、試験結果のノイズが減り、真の農薬効果がより明確になるため、少ない試験地数でも高い検出力を維持できます。",
+      "bodyGlossary": [
+        {
+          "term": "効果サイズ",
+          "definition": "農薬がミツバチのコロニーサイズに与える影響の大きさ",
+          "start": 123,
+          "end": 128
+        },
+        {
+          "term": "同等性試験",
+          "definition": "効果が特定の許容範囲内にあることを統計的に証明する手法",
+          "start": 143,
+          "end": 148
+        },
+        {
+          "term": "共変量調整",
+          "definition": "統計モデルで他の要因の影響を考慮し、結果を補正すること",
+          "start": 285,
+          "end": 290
+        },
+        {
+          "term": "アンチクラスターランダム化",
+          "definition": "試験群間の初期条件の偏りを最小限にする割り当て方法",
+          "start": 293,
+          "end": 306
+        },
+        {
+          "term": "検出力",
+          "definition": "統計的検定で、真の効果を正しく検出する確率",
+          "start": 329,
+          "end": 332
+        },
+        {
+          "term": "帰無仮説",
+          "definition": "統計的検定で、否定されることを期待する仮説",
+          "start": 385,
+          "end": 389
+        },
+        {
+          "term": "閾値",
+          "definition": "特定の判断基準となる境界値",
+          "start": 471,
+          "end": 473
+        },
+        {
+          "term": "SPG",
+          "definition": "特定の保護目標。ミツバチのコロニー減少10%など",
+          "start": 474,
+          "end": 477
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "効果サイズ",
+          "definition": "農薬がミツバチのコロニーサイズに与える影響の大きさ",
+          "start": 123,
+          "end": 128
+        },
+        {
+          "term": "同等性試験",
+          "definition": "効果が特定の許容範囲内にあることを統計的に証明する手法",
+          "start": 143,
+          "end": 148
+        },
+        {
+          "term": "共変量調整",
+          "definition": "統計モデルで他の要因の影響を考慮し、結果を補正すること",
+          "start": 285,
+          "end": 290
+        },
+        {
+          "term": "アンチクラスターランダム化",
+          "definition": "試験群間の初期条件の偏りを最小限にする割り当て方法",
+          "start": 293,
+          "end": 306
+        },
+        {
+          "term": "検出力",
+          "definition": "統計的検定で、真の効果を正しく検出する確率",
+          "start": 329,
+          "end": 332
+        },
+        {
+          "term": "帰無仮説",
+          "definition": "統計的検定で、否定されることを期待する仮説",
+          "start": 385,
+          "end": 389
+        },
+        {
+          "term": "閾値",
+          "definition": "特定の判断基準となる境界値",
+          "start": 471,
+          "end": 473
+        },
+        {
+          "term": "SPG",
+          "definition": "特定の保護目標。ミツバチのコロニー減少10%など",
+          "start": 474,
+          "end": 477
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 336,
+      "keyFigure": {
+        "imagePath": "/figures/2607.07543v1_results.png",
+        "page": 15,
+        "caption": "EFSAと同等性試験の比較。有害な農薬を低リスクと誤分類するリスクを示しています。",
+        "label": "Fig. 2. Comparison between equivalence tests proposed by EFSA and Hotopp et al. in terms of false",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-12T22:45:38.470Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.07543v1_results.png",
+          "page": 15,
+          "caption": "EFSAと同等性試験の比較。有害な農薬を低リスクと誤分類するリスクを示しています。",
+          "label": "Fig. 2. Comparison between equivalence tests proposed by EFSA and Hotopp et al. in terms of false",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-12T22:45:38.470Z"
+        },
+        {
+          "imagePath": "/figures/2607.07543v1_why.png",
+          "page": 24,
+          "caption": "異なる統計検定に基づく農薬効果の解釈。各行は異なるシナリオを表しています。",
+          "label": "Fig. 4. Interpretation of pesticide effects based on different statistical tests. Each row represents a",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-12T22:45:38.470Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.07852v1",
+      "title": "False Confidence: Automated Labels Confound Fairness Audits in Cervical Spine Segmentation",
+      "authors": [
+        "Linus Juni",
+        "Aasa Feragen",
+        "Aditya Parikh"
+      ],
+      "publishedAt": "2026-07-08T18:30:50Z",
+      "url": "https://arxiv.org/abs/2607.07852v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.07852v1.pdf",
+      "categories": [
+        "topic:education",
+        "eess.IV",
+        "cs.CV",
+        "cs.CY",
+        "cs.LG"
+      ],
+      "abstract": "Automated segmentation of cervical-spine MRI is increasingly used in clinical workflows, yet no fairness audit exists for this anatomy. We show that auditing these segmentation tasks is complicated by a common property of modern segmentation datasets: expert-annotated gold labels are expensive, so abundant machine-generated (silver) labels are added to limit annotation cost. This matters because the reference used to judge a model can itself be biased. In this study, we present the first fairness audit of cervical-spine MRI segmentation across sex, age, and race using the CSpineSeg dataset. We observe that the deployed model is demographically fair, but the choice of reference label, however, is not neutral. Because a dataset's silver labels are generated by a model trained on its gold labels, any new model trained on those same gold labels agrees more with the silver labels than with expert truth: scoring identical predictions against silver rather than gold overestimates performance by ~8 Dice points and turns the fairness verdict for age from non-significant to significant - not by the gap inflation Parikh et al. report (which we term false magnitude) but by collapsing within-group variance (which we term false confidence). Reference-label provenance is thus a first-order confounder in segmentation evaluation: performance and fairness should be reported against expert labels, and any fairness claim stated together with the provenance of its reference.",
+      "summary": {
+        "gist": "医療現場でAIによる画像診断の利用が増える中、その公平性（性別、年齢、人種などによる性能差がないこと）を監査することが不可欠です。しかし、専門家による正確なアノテーション（ゴールドラベル）はコストが高く、多くのデータセットではAIが生成したアノテーション（シルバーラベル）が併用されています。このシルバーラベルが、公平性評価にどのような影響を与えるかは不明でした。",
+        "novelty": "これまでのAIモデルの公平性監査では、専門家が作成した「ゴールドラベル」と、AIが自動生成した「シルバーラベル」を混ぜたデータセットが使われることがありました。しかし、このシルバーラベルが評価結果にどう影響するかは十分に検討されていませんでした。 この研究では、頸椎MRIのAIセグメンテーションにおいて、シルバーラベルが評価に与える影響を初めて詳細に検証しました。その結果、シルバーラベルを使うと、モデルの性能が過大評価され、年齢による公平性の問題が「問題なし」と誤って判断される「偽りの自信」という現象が起きることを発見しました。",
+        "method": "本研究では、頸椎MRIのセグメンテーションモデルを対象に、性別、年齢、人種間の公平性を評価しました。特に、データセットに含まれる専門家によるゴールドラベルと、AIが生成したシルバーラベルが評価結果に与える影響を比較するため、以下の2つの実験を行いました。\n\nE1：実運用に近いモデル（ゴールドとシルバーラベルで学習）を、混合ラベルのテストセットで評価し、公平性を監査しました。\n\nE2：同じモデルの同じ予測結果を、専門家によるゴールドラベルと、別のAIモデルが生成したシルバーラベルのそれぞれで評価し、参照ラベルの違いが公平性の判断にどう影響するかを検証しました。この際、シルバーラベルは、データセットのゴールドラベルで学習したモデルによって生成されました。",
+        "results": "E1の評価では、モデルは性別、年齢、人種において公平であると判断されました。\n\nしかし、E2の評価では、参照ラベルの選択が結果を大きく変えることが判明しました。同じモデルの同じ予測結果でも、ゴールドラベルで評価するとマクロDiceスコアが0.897だったのに対し、シルバーラベルで評価すると0.973と、約8ポイントも性能が過大評価されました。さらに、ゴールドラベルでは年齢による有意な公平性の差は認められなかったのに、シルバーラベルで評価すると年齢による有意な差が検出されました。",
+        "why": "この現象は「偽りの自信」と呼ばれ、シルバーラベルが、ゴールドラベルで学習したモデルによって生成されていることに起因します。学習データが重複しているため、評価対象のモデルとシルバーラベル生成モデルが互いに似たエラーを共有し、シルバーラベルが評価対象モデルを過度に「ひいき」してしまうのです。これにより、グループ内のばらつき（分散）が約4分の1に縮小され、わずかな差でも統計的に有意と判断されてしまうことが明らかになりました。これは、以前の研究で報告された「偽りの大きさ」（実際の差が過大評価される）とは逆のメカニズムです。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / eess.IV）",
+      "field": "教育",
+      "categoryL1": "adjacent",
+      "categoryL2": "medical-ai-ethics",
+      "arxivPrimary": "eess.IV",
+      "titleJa": "自動生成ラベルが公平性監査を欺く：頸椎MRIセグメンテーションにおける偽りの自信",
+      "catchTitle": "AI診断の「公平性」は信じられる？",
+      "hook": "AIによる医療画像診断、その「公平性」を評価する際、あなたは本当に正しい基準で判断しているでしょうか？",
+      "background": "医療現場でAIによる画像診断の利用が増える中、その公平性（性別、年齢、人種などによる性能差がないこと）を監査することが不可欠です。しかし、専門家による正確なアノテーション（ゴールドラベル）はコストが高く、多くのデータセットではAIが生成したアノテーション（シルバーラベル）が併用されています。このシルバーラベルが、公平性評価にどのような影響を与えるかは不明でした。",
+      "quiz": {
+        "question": "AIモデルの公平性監査において、自動生成されたシルバーラベルを使用すると何が起こる可能性が高いですか？",
+        "options": [
+          "モデルの性能が過小評価され、実際よりも不公平に見える。",
+          "モデルの性能が過大評価され、実際には不公平でも公平と誤解される。",
+          "専門家によるゴールドラベルと全く同じ結果が得られる。"
+        ],
+        "correctIndex": 1,
+        "explanation": "本研究では、シルバーラベルを使用するとモデルの性能が過大評価され、グループ内のばらつきが縮小されることで、実際には不公平な状況が「公平」であると誤って判断される「偽りの自信」という現象が報告されています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "セグメンテーション",
+          "definition": "画像内の特定の領域を識別し、ピクセルごとに分類すること。"
+        },
+        {
+          "term": "公平性監査",
+          "definition": "AIモデルが特定のグループに対して不公平な判断をしていないか評価すること。"
+        },
+        {
+          "term": "ゴールドラベル",
+          "definition": "専門家が手作業で作成した、正確なアノテーション。"
+        },
+        {
+          "term": "シルバーラベル",
+          "definition": "AIが自動生成したアノテーション。"
+        },
+        {
+          "term": "アノテーション",
+          "definition": "画像やデータに意味付けやタグ付けをすること。"
+        },
+        {
+          "term": "Diceスコア",
+          "definition": "画像セグメンテーションの精度を評価する指標。"
+        },
+        {
+          "term": "分散",
+          "definition": "データのばらつきの度合いを示す統計量。"
+        },
+        {
+          "term": "有意",
+          "definition": "統計的に偶然ではないと判断される差や関係。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "AI診断の公平性評価で、自動生成された参照ラベルを使うと、実際には公平でない結果が「公平」と誤って判断されることがあります。",
+      "noveltyContrast": {
+        "before": "これまでのAIモデルの公平性監査では、専門家が作成した「ゴールドラベル」と、AIが自動生成した「シルバーラベル」を混ぜたデータセットが使われることがありました。しかし、このシルバーラベルが評価結果にどう影響するかは十分に検討されていませんでした。",
+        "after": "この研究では、頸椎MRIのAIセグメンテーションにおいて、シルバーラベルが評価に与える影響を初めて詳細に検証しました。その結果、シルバーラベルを使うと、モデルの性能が過大評価され、年齢による公平性の問題が「問題なし」と誤って判断される「偽りの自信」という現象が起きることを発見しました。"
+      },
+      "analogy": {
+        "title": "AIの「公平性」を測る、歪んだ物差し",
+        "body": "畑で収穫量を測る際、いつも使っている物差しが実は少し短く作られていた、という状況に似ています。この物差しは、以前に同じ畑で収穫した作物で調整されたもので、その畑の作物にはやけにぴったり合う。すると、今年の収穫量が実際よりも多く見え、さらに、特定の区画の作物の生育差も「誤差の範囲内」と判断されてしまう。これでは、本当に生育が悪い区画を見逃し、来年の対策も立てられません。AIの公平性評価も、自動生成されたラベル（歪んだ物差し）を使うと、モデルの性能を過大評価し、特定のグループにおける不公平さ（生育差）を隠してしまうのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+8 Dice pt",
+          "label": "性能過大評価"
+        },
+        {
+          "value": "4倍",
+          "label": "グループ内分散の縮小"
+        }
+      ],
+      "whyYouCare": "AIが医療診断や採用、融資審査など、私たちの生活に深く関わる意思決定に使われる場面が増えています。もしAIの公平性が誤った基準で評価され、「公平だ」と判断されても、実際には特定の年齢層や人種に対して不利益を与えているとしたらどうでしょうか。この研究は、AIの評価基準そのものが偏っている可能性を指摘しており、AIの導入を検討する企業や政策立案者にとって、評価プロセスの厳格な見直しを促す重要な示唆を与えます。AIの「公平性」を鵜呑みにせず、その評価方法の透明性と信頼性を確保することが、AIと共存する社会において不可欠です。",
+      "takeawayTalk": "AIの公平性評価、自動生成ラベルを使うと「公平」と誤解するかも！",
+      "bodyText": "本研究では、頸椎MRIのセグメンテーションモデルを対象に、性別、年齢、人種間の公平性を評価しました。特に、データセットに含まれる専門家によるゴールドラベルと、AIが生成したシルバーラベルが評価結果に与える影響を比較するため、以下の2つの実験を行いました。\n\nE1：実運用に近いモデル（ゴールドとシルバーラベルで学習）を、混合ラベルのテストセットで評価し、公平性を監査しました。\n\nE2：同じモデルの同じ予測結果を、専門家によるゴールドラベルと、別のAIモデルが生成したシルバーラベルのそれぞれで評価し、参照ラベルの違いが公平性の判断にどう影響するかを検証しました。この際、シルバーラベルは、データセットのゴールドラベルで学習したモデルによって生成されました。\n\n\nこの現象は「偽りの自信」と呼ばれ、シルバーラベルが、ゴールドラベルで学習したモデルによって生成されていることに起因します。学習データが重複しているため、評価対象のモデルとシルバーラベル生成モデルが互いに似たエラーを共有し、シルバーラベルが評価対象モデルを過度に「ひいき」してしまうのです。これにより、グループ内のばらつき（分散）が約4分の1に縮小され、わずかな差でも統計的に有意と判断されてしまうことが明らかになりました。これは、以前の研究で報告された「偽りの大きさ」（実際の差が過大評価される）とは逆のメカニズムです。",
+      "bodyGlossary": [
+        {
+          "term": "セグメンテーション",
+          "definition": "画像内の特定の領域を識別し、ピクセルごとに分類すること。",
+          "start": 12,
+          "end": 21
+        },
+        {
+          "term": "ゴールドラベル",
+          "definition": "専門家が手作業で作成した、正確なアノテーション。",
+          "start": 70,
+          "end": 77
+        },
+        {
+          "term": "シルバーラベル",
+          "definition": "AIが自動生成したアノテーション。",
+          "start": 86,
+          "end": 93
+        },
+        {
+          "term": "分散",
+          "definition": "データのばらつきの度合いを示す統計量。",
+          "start": 493,
+          "end": 495
+        },
+        {
+          "term": "有意",
+          "definition": "統計的に偶然ではないと判断される差や関係。",
+          "start": 519,
+          "end": 521
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "セグメンテーション",
+          "definition": "画像内の特定の領域を識別し、ピクセルごとに分類すること。",
+          "start": 12,
+          "end": 21
+        },
+        {
+          "term": "ゴールドラベル",
+          "definition": "専門家が手作業で作成した、正確なアノテーション。",
+          "start": 70,
+          "end": 77
+        },
+        {
+          "term": "シルバーラベル",
+          "definition": "AIが自動生成したアノテーション。",
+          "start": 86,
+          "end": 93
+        },
+        {
+          "term": "分散",
+          "definition": "データのばらつきの度合いを示す統計量。",
+          "start": 493,
+          "end": 495
+        },
+        {
+          "term": "有意",
+          "definition": "統計的に偶然ではないと判断される差や関係。",
+          "start": 519,
+          "end": 521
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 264,
+      "keyFigure": {
+        "imagePath": "/figures/2607.07852v1_results.png",
+        "page": 8,
+        "caption": "Fig. 1. The variance collapse behind the flip. Macro Dice by age bin for the same 76 The variance collapse behind the flip. Macro Dice by age bin for the same 76",
+        "label": "Fig. 1. The variance collapse behind the flip. Macro Dice by age bin for the same 76",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-12T22:45:39.613Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.07852v1_results.png",
+          "page": 8,
+          "caption": "Fig. 1. The variance collapse behind the flip. Macro Dice by age bin for the same 76 The variance collapse behind the flip. Macro Dice by age bin for the same 76",
+          "label": "Fig. 1. The variance collapse behind the flip. Macro Dice by age bin for the same 76",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-12T22:45:39.613Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.04708v1",
+      "title": "Strategic Buying Agents",
+      "authors": [
+        "Mingyang Fu",
+        "Ming Hu"
+      ],
+      "publishedAt": "2026-07-06T06:24:17Z",
+      "url": "https://arxiv.org/abs/2607.04708v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.04708v1.pdf",
+      "categories": [
+        "topic:education",
+        "econ.TH",
+        "cs.AI",
+        "cs.CY",
+        "cs.GT",
+        "cs.HC"
+      ],
+      "abstract": "Agentic AI is shifting online shopping from search toward delegated purchasing, where autonomous buying agents monitor markets and decide when to buy on a consumer's behalf. We study the design of such strategic buying agents, which must decide when to purchase within a finite shopping window, translating price observations, the remaining time horizon, and beliefs about future price changes into a purchase policy. We formulate this problem across three information regimes: stationary, Bayesian, and robust, and treat the resulting optimal policies as a policy menu for implementation. In the stationary regime, price adjustments follow a Poisson arrival process with a known post-adjustment price distribution; the optimal policy is a dynamic purchase-threshold rule, with the threshold governed by an ordinary differential equation. In the Bayesian regime, the adjustment intensity is known, but the price-adjustment distribution is uncertain; the optimal rule remains threshold-based, now depending on posterior beliefs, and we bound the value of knowing the true distribution. In the robust regime, the agent has only price bounds and seeks worst-case protection; randomized threshold policies achieve optimal competitive-ratio and minimax-regret guarantees. We evaluate the proposed policies on Amazon price histories from Keepa (367 items, 48,933 timestamped observations) and examine their integration into language-model buying agents. The stationary and Bayesian policies perform competitively on mean normalized consumer surplus despite their stylized assumptions, while the robust policy performs best at the distribution's 10th percentile. Results suggest language models are better suited to selecting among regimes and calibration samples than to making buy-or-wait decisions directly.",
+      "summary": {
+        "gist": "AI技術の進化により、オンラインショッピングは検索やレコメンデーションから、AIが消費者に代わって購入を委任される「代理購買」へと移行しつつあります。このような自律的な購買エージェントは、市場を監視し、不確実性を考慮して購入決定を行う必要があります。本研究は、この戦略的購買エージェントが限られた期間内でいつ商品を購入すべきかを決定する問題を扱います。",
+        "novelty": "従来のオンラインショッピングでは、消費者が自ら商品を検索・比較し、価格を評価して購入を決定していました。AIは主に検索補助やレコメンデーションに留まり、購入の最終判断は人間が行うのが一般的でした。 この研究では、AIが市場を監視し、将来の価格変動を予測しながら、消費者に代わって「いつ買うか」を自律的に決定する戦略的購入エージェントを設計しました。価格情報、残り時間、将来の価格に関する信念を統合し、最適な購入方針を導き出します。",
+        "method": "本研究では、戦略的購買エージェントの設計問題を、将来の価格変動に関する情報の確実性に応じて3つの情報レジーム（定常、ベイズ、ロバスト）に分けて定式化しました。定常レジームでは、価格調整が既知のポアソン過程に従い、調整後の価格分布も既知と仮定。ベイズレジームでは、価格調整の頻度は既知だが、価格調整分布は不確実と仮定し、事後信念に基づいて更新します。ロバストレジームでは、価格の変動モデルを仮定せず、価格の上下限のみを考慮し、最悪ケースに対する保護を求めます。これらのレジームごとに最適な購入ポリシーを導出し、Amazonの価格履歴データ（367アイテム、48,933件のタイムスタンプ付き観測値）を用いて提案されたポリシーの性能を評価しました。また、これらのポリシーを言語モデルベースの購買エージェントに統合する方法も検討しました。",
+        "results": "定常およびベイズポリシーは、平均正規化消費者余剰において、単純なベースラインと比較して競争力のある性能を示しました。特にロバストポリシーは、正規化消費者余剰分布の10パーセンタイル（つまり、価格変動が不利な状況）で最高の性能を発揮しました。また、言語モデルは、直接的な購入判断よりも、3つの情報レジームの中から適切なものを選択したり、キャリブレーションのための価格サンプルを選んだりするのに適していることが示唆されました。",
+        "why": "最適な購入ポリシーは、いずれのレジームにおいても「動的な購入閾値ルール」として特徴づけられます。定常レジームでは、閾値は残り時間によって決定される微分方程式に従います。ベイズレジームでは、閾値は事後信念に依存し、価格調整が新たな購入機会を提供するだけでなく、売り手の潜在的な価格設定レジームを示すシグナルとしても機能します。ロバストレジームでは、最悪の価格変動シナリオ（急激な価格上昇など）から保護するため、ランダム化された閾値ポリシーが最適解となります。これにより、エージェントは現在の価格、残り時間、そして将来の価格変動に関する情報（またはその不確実性）を統合し、「待つことの価値」と「今買うことの確実性」を比較して最適な購入判断を下すことができます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.TH）",
+      "field": "教育",
+      "categoryL1": "adjacent",
+      "categoryL2": "e-commerce",
+      "arxivPrimary": "econ.TH",
+      "titleJa": "戦略的購入エージェント：AIがあなたの代わりに賢く買い物をする方法",
+      "catchTitle": "AIが賢く「買い時」を見極める",
+      "hook": "オンラインショッピングで「今買うべきか、もう少し待つべきか」と悩んだことはありませんか？AIがその判断をあなたに代わって最適化します。",
+      "background": "AI技術の進化により、オンラインショッピングは検索やレコメンデーションから、AIが消費者に代わって購入を委任される「代理購買」へと移行しつつあります。このような自律的な購買エージェントは、市場を監視し、不確実性を考慮して購入決定を行う必要があります。本研究は、この戦略的購買エージェントが限られた期間内でいつ商品を購入すべきかを決定する問題を扱います。",
+      "quiz": {
+        "question": "この研究で提案されたAI購買エージェントの最適な購入ポリシーは、主にどのような形式で表現されますか？",
+        "options": [
+          "固定価格での即時購入ルール",
+          "動的な購入閾値ルール",
+          "ランダムな購入日選択ルール"
+        ],
+        "correctIndex": 1,
+        "explanation": "最適な購入ポリシーは、いずれのレジームにおいても「動的な購入閾値ルール」として特徴づけられます。これは、価格が特定の水準以下になった場合に購入するという方針で、その水準は残り時間や価格変動に関する情報によって動的に変化します。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "代理購買",
+          "definition": "消費者に代わってAIが購入プロセスを実行すること"
+        },
+        {
+          "term": "情報レジーム",
+          "definition": "将来の価格変動に関する情報の確実性の分類"
+        },
+        {
+          "term": "定常レジーム",
+          "definition": "価格変動のパターンが既知と仮定される状況"
+        },
+        {
+          "term": "ポアソン過程",
+          "definition": "ある事象が一定の平均発生率でランダムに起こるモデル"
+        },
+        {
+          "term": "ベイズレジーム",
+          "definition": "価格変動の分布が不確実で、学習しながら判断する状況"
+        },
+        {
+          "term": "ロバストレジーム",
+          "definition": "価格変動モデルを仮定せず、最悪ケースに備える状況"
+        },
+        {
+          "term": "購入閾値ルール",
+          "definition": "価格が特定の水準以下になったら購入する方針"
+        },
+        {
+          "term": "事後信念",
+          "definition": "新たな情報に基づいて更新された、不確実性に関する考え"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "AIが市場価格の変動と残り時間を考慮し、最適な購入タイミングを判断する戦略を開発・検証しました。",
+      "noveltyContrast": {
+        "before": "従来のオンラインショッピングでは、消費者が自ら商品を検索・比較し、価格を評価して購入を決定していました。AIは主に検索補助やレコメンデーションに留まり、購入の最終判断は人間が行うのが一般的でした。",
+        "after": "この研究では、AIが市場を監視し、将来の価格変動を予測しながら、消費者に代わって「いつ買うか」を自律的に決定する戦略的購入エージェントを設計しました。価格情報、残り時間、将来の価格に関する信念を統合し、最適な購入方針を導き出します。"
+      },
+      "analogy": {
+        "title": "畑の作物の「収穫時」を見極めるAI農家",
+        "body": "これはまるで、AIが農家として畑の作物の「収穫時」を判断するようなものです。AIは、日々の天候（市場価格の変動）、作物の生育状況（現在の価格）、そして収穫までの残り日数（ショッピング期間）を総合的に観察します。そして、過去のデータや将来の天候予測（価格変動のパターン）に基づいて、「今収穫すれば最高の品質と収益が得られる」と判断した時に、あなたに代わって収穫（購入）を実行するのです。単に育ったから収穫するのではなく、市場の需要や天候リスクまで見越して最適なタイミングを狙う、賢い農家の目利きをAIが再現します。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "10th percentile",
+          "label": "ロバスト戦略で消費者余剰が最も高い"
+        }
+      ],
+      "whyYouCare": "この研究は、私たちの未来の買い物体験を大きく変える可能性を秘めています。AIがあなたの代わりに最適なタイミングで商品を購入してくれるようになれば、セールを逃す心配や、価格変動に一喜一憂するストレスから解放されます。特に、高額な家電や旅行の予約など、価格変動が大きい商品では、AIエージェントが賢く「買い時」を見極めることで、実質的な節約につながるでしょう。企業にとっては、顧客満足度向上や新たなサービス開発のヒントとなり、AIを活用したパーソナライズされた購買体験の提供が可能になります。AIが単なる情報提供者ではなく、あなたの購買パートナーとなる未来が、もうすぐそこまで来ています。",
+      "takeawayTalk": "AIが市場を監視して、一番お得な「買い時」を自動で判断してくれる未来が来るよ！",
+      "bodyText": "本研究では、戦略的購買エージェントの設計問題を、将来の価格変動に関する情報の確実性に応じて3つの情報レジーム（定常、ベイズ、ロバスト）に分けて定式化しました。定常レジームでは、価格調整が既知のポアソン過程に従い、調整後の価格分布も既知と仮定。ベイズレジームでは、価格調整の頻度は既知だが、価格調整分布は不確実と仮定し、事後信念に基づいて更新します。ロバストレジームでは、価格の変動モデルを仮定せず、価格の上下限のみを考慮し、最悪ケースに対する保護を求めます。これらのレジームごとに最適な購入ポリシーを導出し、Amazonの価格履歴データ（367アイテム、48,933件のタイムスタンプ付き観測値）を用いて提案されたポリシーの性能を評価しました。また、これらのポリシーを言語モデルベースの購買エージェントに統合する方法も検討しました。\n\n最適な購入ポリシーは、いずれのレジームにおいても「動的な購入閾値ルール」として特徴づけられます。定常レジームでは、閾値は残り時間によって決定される微分方程式に従います。ベイズレジームでは、閾値は事後信念に依存し、価格調整が新たな購入機会を提供するだけでなく、売り手の潜在的な価格設定レジームを示すシグナルとしても機能します。ロバストレジームでは、最悪の価格変動シナリオ（急激な価格上昇など）から保護するため、ランダム化された閾値ポリシーが最適解となります。これにより、エージェントは現在の価格、残り時間、そして将来の価格変動に関する情報（またはその不確実性）を統合し、「待つことの価値」と「今買うことの確実性」を比較して最適な購入判断を下すことができます。",
+      "bodyGlossary": [
+        {
+          "term": "情報レジーム",
+          "definition": "将来の価格変動に関する情報の確実性の分類",
+          "start": 48,
+          "end": 54
+        },
+        {
+          "term": "定常レジーム",
+          "definition": "価格変動のパターンが既知と仮定される状況",
+          "start": 79,
+          "end": 85
+        },
+        {
+          "term": "ポアソン過程",
+          "definition": "ある事象が一定の平均発生率でランダムに起こるモデル",
+          "start": 96,
+          "end": 102
+        },
+        {
+          "term": "ベイズレジーム",
+          "definition": "価格変動の分布が不確実で、学習しながら判断する状況",
+          "start": 121,
+          "end": 128
+        },
+        {
+          "term": "事後信念",
+          "definition": "新たな情報に基づいて更新された、不確実性に関する考え",
+          "start": 159,
+          "end": 163
+        },
+        {
+          "term": "ロバストレジーム",
+          "definition": "価格変動モデルを仮定せず、最悪ケースに備える状況",
+          "start": 174,
+          "end": 182
+        },
+        {
+          "term": "購入閾値ルール",
+          "definition": "価格が特定の水準以下になったら購入する方針",
+          "start": 396,
+          "end": 403
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "情報レジーム",
+          "definition": "将来の価格変動に関する情報の確実性の分類",
+          "start": 48,
+          "end": 54
+        },
+        {
+          "term": "定常レジーム",
+          "definition": "価格変動のパターンが既知と仮定される状況",
+          "start": 79,
+          "end": 85
+        },
+        {
+          "term": "ポアソン過程",
+          "definition": "ある事象が一定の平均発生率でランダムに起こるモデル",
+          "start": 96,
+          "end": 102
+        },
+        {
+          "term": "ベイズレジーム",
+          "definition": "価格変動の分布が不確実で、学習しながら判断する状況",
+          "start": 121,
+          "end": 128
+        },
+        {
+          "term": "事後信念",
+          "definition": "新たな情報に基づいて更新された、不確実性に関する考え",
+          "start": 159,
+          "end": 163
+        },
+        {
+          "term": "ロバストレジーム",
+          "definition": "価格変動モデルを仮定せず、最悪ケースに備える状況",
+          "start": 174,
+          "end": 182
+        },
+        {
+          "term": "購入閾値ルール",
+          "definition": "価格が特定の水準以下になったら購入する方針",
+          "start": 396,
+          "end": 403
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 269
+    },
+    {
+      "id": "2607.07826v1",
+      "title": "Buffy versus Bella: An archetypometric analysis and comparison",
+      "authors": [
+        "Calla Glavin Beauregard",
+        "Julia Witte Zimmerman",
+        "Ashley M. A. Fehr",
+        "Savannah Hinson Rivas",
+        "Tabia Tanzin Prama",
+        "Tessa Lawler",
+        "Timothy R. Tangherlini",
+        "Christopher M. Danforth",
+        "Peter Sheridan Dodds"
+      ],
+      "publishedAt": "2026-07-08T18:07:28Z",
+      "url": "https://arxiv.org/abs/2607.07826v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.07826v1.pdf",
+      "categories": [
+        "topic:education",
+        "cs.CY"
+      ],
+      "abstract": "Fictional stories and characters embody and encode social norms, and their study is a powerful tool through which to understand culture and society. Vampire stories and folklore, in particular, have long both reflected and refracted people's preoccupation with disease, sexuality, death, and immortality. Here, we explore female main characters from two popular vampire franchises of the 21st century: Buffy Summers from the eponymous Buffy the Vampire Slayer and Bella Swan from the Twilight series. We employ the archetypometrics framework, built from 2,000 characters assesed across 464 semantic differential traits, to understand Buffy's and Bella's archetypes compared to one another and characters in their own stories, as well as within a larger societal context. While Buffy and Bella are female protagonists who share focus on love and romance, they differ broadly on their underlying traits and overall archetypes. Buffy -- presented as a prototypical high school cheerleader -- largely bucks traditional gender norms as an strong Adventurer-Hero. Bella -- stylized as ``not like the other girls'' -- largely conforms to traditional gender norms as a weak Outcast archetype. In each instance, our use of archetypometrics offers a detailed, character-based lens for assessing female protagonists in contemporary vampire narratives, with clear potential for broader application across other storytelling forms.",
+      "summary": {
+        "gist": "フィクションの物語や登場人物は社会規範を体現し、文化や社会を理解するための強力なツールとなります。特にヴァンパイア物語は、病気、セクシュアリティ、死、不死といった人々の関心を長年反映してきました。本研究では、21世紀の人気ヴァンパイアフランチャイズである『バフィー 〜恋する十字架〜』のバフィー・サマーズと、『トワイライト』シリーズのベラ・スワンという2人の女性主人公に焦点を当て、彼女たちの archetypometrics を分析します。",
+        "novelty": "これまでの研究では、フィクションの登場人物が社会規範を反映していることは指摘されていましたが、特定のキャラクターの archetypometrics を定量的に比較し、その違いを詳細に分析する手法は確立されていませんでした。特に、バフィーとベラのフェミニズム的解釈については、研究者間で意見が分かれていました。 この論文では、「archetypometrics」という2,000のキャラクターと464の特性評価に基づく定量的なフレームワークを開発・活用し、バフィーとベラの archetypometrics を詳細に比較しました。これにより、彼女たちがそれぞれ異なる archetypometrics を持ち、社会規範に対する姿勢が対照的であることが明確に示されました。",
+        "method": "本研究では、「archetypometrics」というフレームワークを用いました。これは、2,000の架空のキャラクターを464の異なる意味的特性（例：諦めやすい⇔粘り強い、親切⇔残酷）で評価したデータセットに基づいて構築されています。このフレームワークを使って、バフィーとベラの archetypometrics を、(i)2,000の全キャラクターデータセット内での位置、(ii)それぞれの物語の登場人物の中での位置、(iii)2人の直接的な比較、という3つのレベルで分析しました。キャラクターの archetypometrics 空間での位置を確立するために「キャラクターカード」を使用し、物語内のキャラクター分布を視覚化するために「オウシオグラムカード」を、そして2人のキャラクター間の類似性・非類似性を詳細に分析するために「アロタクソノグラフ」という手法を用いました。",
+        "results": "バフィーは2,000のキャラクターの中で相対的なキャラクターサイズが646位と大きく、 archetypometrics 的には「冒険者ヒーロー」 archetypometrics に大きく寄与していることがわかりました。一方、ベラはキャラクターサイズが1388位と比較的小さく、 archetypometrics 的には「アウトキャスト」 archetypometrics に大きく寄与していることが示されました。バフィーは伝統的なジェンダー規範を打ち破る「強い冒険者ヒーロー」として描かれているのに対し、ベラは「他の女の子とは違う」とされながらも、伝統的なジェンダー規範に適合する「弱いアウトキャスト」 archetypometrics を持っていることが明らかになりました。",
+        "why": "この違いは、それぞれの物語が社会規範をどのように反映し、あるいは挑戦しているかを示しています。バフィーは意図的に古い比喩を覆し、フェミニスト的で啓蒙的なヒーロー像を描いています。対照的に、ベラは「醜いアヒルの子」の非特定的な進化としての「美しい白鳥」という名前からもわかるように、非常に馴染み深いロマンスの型に「自己挿入」されるキャラクターであり、純潔、肉欲の抑制、結婚に重点を置いています。このように、キャラクターの archetypometrics は、物語が提示する価値観や社会規範への姿勢を定量的に捉えるメカニズムとして機能します。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.CY）",
+      "field": "教育",
+      "categoryL1": "serendipity",
+      "categoryL2": "cultural-studies",
+      "arxivPrimary": "cs.CY",
+      "titleJa": "バフィー vs ベラ：アーキタイプ分析と比較",
+      "catchTitle": "人気キャラを科学分析！バフィーとベラ、真逆の魅力",
+      "hook": "あなたは「強い女性」と「守られる女性」、どちらのヒロインに魅力を感じますか？人気作品のヒロイン像が、実は社会の価値観を映し出しているとしたら？",
+      "background": "フィクションの物語や登場人物は社会規範を体現し、文化や社会を理解するための強力なツールとなります。特にヴァンパイア物語は、病気、セクシュアリティ、死、不死といった人々の関心を長年反映してきました。本研究では、21世紀の人気ヴァンパイアフランチャイズである『バフィー 〜恋する十字架〜』のバフィー・サマーズと、『トワイライト』シリーズのベラ・スワンという2人の女性主人公に焦点を当て、彼女たちの archetypometrics を分析します。",
+      "quiz": {
+        "question": "この研究で、バフィーとベラを比較するために使われた分析フレームワークの名前は何でしょう？",
+        "options": [
+          "キャラクタープロファイリング",
+          "archetypometrics",
+          "物語構造分析"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究では、2,000のキャラクターと464の特性評価に基づく「archetypometrics」という定量的なフレームワークが使用されました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "archetypometrics",
+          "definition": "架空のキャラクターを定量的に記述するフレームワーク。"
+        },
+        {
+          "term": "意味的特性",
+          "definition": "キャラクターを評価する際の対義語のセット。"
+        },
+        {
+          "term": "キャラクターカード",
+          "definition": "キャラクターの archetypometrics 分解を要約するツール。"
+        },
+        {
+          "term": "オウシオグラムカード",
+          "definition": "物語のキャラクターが archetypometrics 空間でどう配置されるかを視覚化する。"
+        },
+        {
+          "term": "アロタクソノグラフ",
+          "definition": "高次元特性空間における2キャラ間の類似性を分解する。"
+        },
+        {
+          "term": "冒険者ヒーロー",
+          "definition": "伝統的規範を打ち破る強い archetypometrics。"
+        },
+        {
+          "term": "アウトキャスト",
+          "definition": "伝統的規範に適合する弱い archetypometrics。"
+        },
+        {
+          "term": "自己挿入",
+          "definition": "読者が感情移入しやすいように作られたキャラクター。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "人気ヴァンパイア作品の女性主人公バフィーとベラを定量分析し、バフィーは冒険者ヒーロー、ベラはアウトキャストという対照的な archetypometrics を持つことを発見しました。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、フィクションの登場人物が社会規範を反映していることは指摘されていましたが、特定のキャラクターの archetypometrics を定量的に比較し、その違いを詳細に分析する手法は確立されていませんでした。特に、バフィーとベラのフェミニズム的解釈については、研究者間で意見が分かれていました。",
+        "after": "この論文では、「archetypometrics」という2,000のキャラクターと464の特性評価に基づく定量的なフレームワークを開発・活用し、バフィーとベラの archetypometrics を詳細に比較しました。これにより、彼女たちがそれぞれ異なる archetypometrics を持ち、社会規範に対する姿勢が対照的であることが明確に示されました。"
+      },
+      "analogy": {
+        "title": "品種改良でわかる、ヒロインの「個性」",
+        "body": "これはまるで、新しい品種の野菜を開発するようなものです。例えば、病気に強く収穫量が多い「強いトマト」と、見た目は素朴だけど特定の料理で際立つ「繊細なトマト」を想像してみてください。研究者は、それぞれのトマトが持つ「甘み」「酸味」「皮の厚さ」といった464種類の特性を数値化し、2,000種類の既存品種と比較して、それぞれのトマトがどんな「品種 archetypometrics 」に属するかを明らかにします。バフィーは「強いトマト」のように、従来の型を破る「冒険者ヒーロー」 archetypometrics を持ち、ベラは「繊細なトマト」のように、伝統的な役割に沿う「アウトキャスト」 archetypometrics を持つことが、この分析で明確になったのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "646/2000位",
+          "label": "バフィーのキャラクターサイズ順位"
+        },
+        {
+          "value": "1388/2000位",
+          "label": "ベラのキャラクターサイズ順位"
+        }
+      ],
+      "whyYouCare": "この研究は、私たちが普段何気なく楽しんでいる物語やキャラクターが、実は社会の価値観やジェンダー規範をどのように反映し、あるいは形成しているかを教えてくれます。マーケティング担当者なら、ターゲット層に響くキャラクター像を設計するヒントに。教育関係者なら、メディアリテラシー教育で物語の裏に隠されたメッセージを読み解く教材に。そして、一人の読者として、なぜ特定のキャラクターに惹かれるのか、その理由を深く理解するきっかけになるでしょう。物語が持つ社会的な影響力を再認識し、より意識的にコンテンツと向き合うための視点を提供してくれます。",
+      "takeawayTalk": "バフィーは強い冒険者、ベラは伝統的なアウトキャスト。物語は社会を映す鏡だ！",
+      "bodyText": "本研究では、「archetypometrics」というフレームワークを用いました。これは、2,000の架空のキャラクターを464の異なる意味的特性（例：諦めやすい⇔粘り強い、親切⇔残酷）で評価したデータセットに基づいて構築されています。このフレームワークを使って、バフィーとベラの archetypometrics を、(i)2,000の全キャラクターデータセット内での位置、(ii)それぞれの物語の登場人物の中での位置、(iii)2人の直接的な比較、という3つのレベルで分析しました。キャラクターの archetypometrics 空間での位置を確立するために「キャラクターカード」を使用し、物語内のキャラクター分布を視覚化するために「オウシオグラムカード」を、そして2人のキャラクター間の類似性・非類似性を詳細に分析するために「アロタクソノグラフ」という手法を用いました。\n\nこの違いは、それぞれの物語が社会規範をどのように反映し、あるいは挑戦しているかを示しています。バフィーは意図的に古い比喩を覆し、フェミニスト的で啓蒙的なヒーロー像を描いています。対照的に、ベラは「醜いアヒルの子」の非特定的な進化としての「美しい白鳥」という名前からもわかるように、非常に馴染み深いロマンスの型に「自己挿入」されるキャラクターであり、純潔、肉欲の抑制、結婚に重点を置いています。このように、キャラクターの archetypometrics は、物語が提示する価値観や社会規範への姿勢を定量的に捉えるメカニズムとして機能します。",
+      "bodyGlossary": [
+        {
+          "term": "archetypometrics",
+          "definition": "架空のキャラクターを定量的に記述するフレームワーク。",
+          "start": 7,
+          "end": 23
+        },
+        {
+          "term": "意味的特性",
+          "definition": "キャラクターを評価する際の対義語のセット。",
+          "start": 68,
+          "end": 73
+        },
+        {
+          "term": "キャラクターカード",
+          "definition": "キャラクターの archetypometrics 分解を要約するツール。",
+          "start": 283,
+          "end": 292
+        },
+        {
+          "term": "オウシオグラムカード",
+          "definition": "物語のキャラクターが archetypometrics 空間でどう配置されるかを視覚化する。",
+          "start": 320,
+          "end": 330
+        },
+        {
+          "term": "アロタクソノグラフ",
+          "definition": "高次元特性空間における2キャラ間の類似性を分解する。",
+          "start": 367,
+          "end": 376
+        },
+        {
+          "term": "自己挿入",
+          "definition": "読者が感情移入しやすいように作られたキャラクター。",
+          "start": 547,
+          "end": 551
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "archetypometrics",
+          "definition": "架空のキャラクターを定量的に記述するフレームワーク。",
+          "start": 7,
+          "end": 23
+        },
+        {
+          "term": "意味的特性",
+          "definition": "キャラクターを評価する際の対義語のセット。",
+          "start": 68,
+          "end": 73
+        },
+        {
+          "term": "キャラクターカード",
+          "definition": "キャラクターの archetypometrics 分解を要約するツール。",
+          "start": 283,
+          "end": 292
+        },
+        {
+          "term": "オウシオグラムカード",
+          "definition": "物語のキャラクターが archetypometrics 空間でどう配置されるかを視覚化する。",
+          "start": 320,
+          "end": 330
+        },
+        {
+          "term": "アロタクソノグラフ",
+          "definition": "高次元特性空間における2キャラ間の類似性を分解する。",
+          "start": 367,
+          "end": 376
+        },
+        {
+          "term": "自己挿入",
+          "definition": "読者が感情移入しやすいように作られたキャラクター。",
+          "start": 547,
+          "end": 551
+        }
+      ],
+      "agriEconRelevance": "この archetypometrics 分析は、農業経済学においても応用可能です。例えば、農産物のブランドイメージや生産者の archetypometrics を定量化し、消費者の購買行動や市場での受容性との関連を分析できます。特定の品種や生産方法が持つ「物語」が、消費者にどのような archetypometrics として認識され、それが市場価値にどう影響するかを解明することで、効果的なブランディング戦略や地域振興策の立案に役立つでしょう。また、農業従事者の archetypometrics を分析し、新規就農者の育成や労働力確保の課題解決にも繋がる可能性があります。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 320
+    }
+  ]
+}

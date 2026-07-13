@@ -1,0 +1,991 @@
+{
+  "date": "2026-07-14",
+  "papers": [
+    {
+      "id": "2607.09420v1",
+      "title": "PesTwin: A modular agent-based framework for pest and vector population control",
+      "authors": [
+        "Andrea De Antoni",
+        "Giovanni Iacca",
+        "Andrea Pugliese",
+        "Anna Strampelli",
+        "Gerard Terradas",
+        "Matteo Rucco",
+        "Andrew Hammond"
+      ],
+      "publishedAt": "2026-07-10T13:49:16Z",
+      "url": "https://arxiv.org/abs/2607.09420v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.09420v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "q-bio.PE"
+      ],
+      "abstract": "Species-specific pest and vector control strategies, including the sterile insect technique, Wolbachia-based interventions, and genetic control technologies, offer powerful alternatives to broad-spectrum chemical control, with applications ranging from targeted crop protection to large-scale disease control. Among these, genetic control technologies are advancing rapidly, but the pace of technological development is outstripping the modelling tools needed to predict outcomes, guide technology design and its implementation, compare alternative strategies across different use settings, and support regulatory and operational decision-making. Here we present PesTwin, an agent-based modelling framework for simulating genetic control technologies across species, ecological settings, and deployment strategies within a common computational environment. PesTwin captures stochastic demographic effects, species-specific life-history traits, heterogeneous dispersal, and temporal variation in resource availability and infestation pressure. We validate PesTwin against published laboratory cage data from four genetic control systems, drawn from three studies, in two insect species, showing close agreement between predicted and observed population trajectories, including their replicate-to-replicate variability. We then illustrate how the same validated models extend beyond the cage to spatially explicit, field-scale scenarios, using PesTwin to explore how the timing, density and spatial placement of releases shape suppression and spread across heterogeneous landscapes. By making genetic control systems testable in silico before they are built or released, PesTwin can shorten the path from laboratory construct to field intervention: informing which constructs to prioritise, how to design the experiments that test them, where and when to release, and what evidence is needed to evaluate them.",
+      "summary": {
+        "gist": "病気を媒介するベクターや農業害虫は、人間の健康と食料安全保障に甚大な影響を与えています。毎年70万人がベクター媒介感染症で亡くなり、世界の作物生産の最大40%が害虫によって失われています。しかし、主要な駆除手段である化学殺虫剤は、抵抗性の発達、規制強化、非標的生物への悪影響といった問題に直面しています。不妊虫放飼法やボルバキア菌を利用した介入、そして遺伝子制御技術といった、より標的を絞った新しい駆除戦略が求められています。特に遺伝子制御技術は急速に進歩していますが、その効果を予測し、最適な設計や導入方法を決定するためのモデリングツールが不足していました。",
+        "novelty": "従来の害虫駆除シミュレーションは、特定の種や環境に特化しており、遺伝子操作による複雑な駆除方法を網羅的に評価できませんでした。また、個々の虫の動きや遺伝子の伝わり方を詳細に再現するのが難しく、実際の現場での効果予測には限界がありました。 このPesTwinは、あらゆる遺伝子操作技術に対応し、個々の虫の遺伝子情報、行動、環境要因を詳細にシミュレーションできる汎用性の高いモデルです。これにより、実験室レベルのデータから実際の野外での効果まで、多角的に予測・評価できるようになりました。",
+        "method": "PesTwinは、エージェントベースモデリングフレームワークであり、個々の昆虫を遺伝子状態を持つエージェントとしてモデル化します。このエージェントは、グラフ構造の空間的に明示的な環境内で行動します。これにより、個体群の確率的変動、不均一な分散、種固有の生活史がシミュレーションから自然に導き出されます。このフレームワークは3つの主要なコンポーネントで構成されています。1つ目は、任意の多遺伝子座構造に対する遺伝規則を自動生成する「遺伝キューブジェネレーター」です。2つ目は、モデルを書き換えることなく行動プロセスを組み立て・再構成できるモジュール式のライフサイクルです。3つ目は、不均一な景観と分散経路を表すグラフベースの空間レイヤーです。これらの要素により、異なる設計の遺伝子制御システムを単一の環境でエンコードし、データに対して検証し、比較することが可能になります。GPUアクセラレーションを活用することで、数千万の同時エージェントをシミュレーションでき、数十ヘクタールの圃場規模での応用が可能です。",
+        "results": "PesTwinは、3つの研究から得られた2種の昆虫（Anopheles gambiaeとDrosophila melanogaster）における4つの遺伝子制御システムに関する公開された実験室ケージデータに対して検証されました。予測された個体群の軌跡は、再現実験ごとの変動を含め、観測されたデータと密接に一致しました。さらに、これらの検証済みモデルが、ケージ外の空間的に明示的な野外規模のシナリオに拡張できることを示しました。PesTwinを用いて、放出のタイミング、密度、空間配置が、不均一な景観における個体群抑制と拡散にどのように影響するかを探索しました。",
+        "why": "PesTwinの柔軟性は、そのモジュール設計にあります。遺伝キューブジェネレーターは、複雑な遺伝子構造を持つ昆虫の遺伝子伝達ルールを自動で生成します。これにより、手動での遺伝子型組み合わせの指定という、複雑化するにつれて手に負えなくなる作業が不要になります。また、昆虫のライフサイクルは、移動、死亡、繁殖などの行動プロセスをモジュールとして組み立てることができ、遺伝子型に応じてこれらの行動が変化します。さらに、空間はグラフとして表現され、GIS座標を組み込むことで、現実の環境条件に近いシミュレーションを可能にします。これらの要素が組み合わさることで、遺伝子操作された昆虫がどのように個体群内で広がり、どのような効果をもたらすかを、個々の虫のレベルから詳細に追跡し、予測できるのです。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.PE）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "pest-control",
+      "arxivPrimary": "q-bio.PE",
+      "titleJa": "PesTwin: 害虫・ベクター個体群制御のためのモジュール型エージェントベースフレームワーク",
+      "catchTitle": "遺伝子操作で害虫を賢く駆除！",
+      "hook": "あなたの畑や食卓を脅かす害虫。化学農薬に頼らず、もっと賢く駆除する方法はないかと考えたことはありませんか？",
+      "background": "病気を媒介するベクターや農業害虫は、人間の健康と食料安全保障に甚大な影響を与えています。毎年70万人がベクター媒介感染症で亡くなり、世界の作物生産の最大40%が害虫によって失われています。しかし、主要な駆除手段である化学殺虫剤は、抵抗性の発達、規制強化、非標的生物への悪影響といった問題に直面しています。不妊虫放飼法やボルバキア菌を利用した介入、そして遺伝子制御技術といった、より標的を絞った新しい駆除戦略が求められています。特に遺伝子制御技術は急速に進歩していますが、その効果を予測し、最適な設計や導入方法を決定するためのモデリングツールが不足していました。",
+      "quiz": {
+        "question": "PesTwinが解決しようとしている主な課題は何ですか？",
+        "options": [
+          "化学農薬の製造コストが高いこと",
+          "遺伝子制御技術の効果予測と導入戦略の決定が難しいこと",
+          "害虫の進化速度が速すぎること"
+        ],
+        "correctIndex": 1,
+        "explanation": "PesTwinは、急速に進歩する遺伝子制御技術について、その効果を予測し、最適な設計や導入方法を決定するためのモデリングツールが不足しているという課題を解決するために開発されました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "エージェントベースモデリング",
+          "definition": "個々の要素の行動と相互作用から全体をシミュレートする手法"
+        },
+        {
+          "term": "遺伝キューブジェネレーター",
+          "definition": "遺伝子伝達ルールを自動生成するPesTwinの機能"
+        },
+        {
+          "term": "モジュール式のライフサイクル",
+          "definition": "昆虫の行動プロセスを組み換え可能な部品として扱う"
+        },
+        {
+          "term": "グラフベースの空間レイヤー",
+          "definition": "不均一な環境をグラフ構造で表現する機能"
+        },
+        {
+          "term": "GPUアクセラレーション",
+          "definition": "グラフィック処理装置を使って計算を高速化すること"
+        },
+        {
+          "term": "遺伝子型",
+          "definition": "生物が持つ遺伝子の組み合わせ"
+        },
+        {
+          "term": "GIS座標",
+          "definition": "地理情報システムで使われる位置情報"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "遺伝子操作された害虫の行動をシミュレーションし、最適な駆除戦略を導き出す画期的なモデルです。",
+      "noveltyContrast": {
+        "before": "従来の害虫駆除シミュレーションは、特定の種や環境に特化しており、遺伝子操作による複雑な駆除方法を網羅的に評価できませんでした。また、個々の虫の動きや遺伝子の伝わり方を詳細に再現するのが難しく、実際の現場での効果予測には限界がありました。",
+        "after": "このPesTwinは、あらゆる遺伝子操作技術に対応し、個々の虫の遺伝子情報、行動、環境要因を詳細にシミュレーションできる汎用性の高いモデルです。これにより、実験室レベルのデータから実際の野外での効果まで、多角的に予測・評価できるようになりました。"
+      },
+      "analogy": {
+        "title": "最新品種の種まき計画をAIで最適化",
+        "body": "これは、まるで新しい品種の種を畑にまく前に、AIを使って「いつ、どこに、どれくらいの量をまけば、最も効率よく収穫でき、病害虫のリスクを最小限に抑えられるか」をシミュレーションするようなものです。土壌の質、日当たり、水やり、隣接する作物との相性など、あらゆる条件を考慮して最適な計画を立てることで、実際に種をまく前に成功の確率を高め、無駄な労力やコストを削減できます。PesTwinは、遺伝子操作された「新しい品種の虫」を「畑」に放つ際の、最適な「種まき計画」を立てるための強力なツールなのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、あなたの食卓を守り、健康を脅かす病害虫との戦い方を根本から変える可能性を秘めています。化学農薬の使用を減らし、環境への負荷を低減しながら、より効果的で持続可能な害虫駆除を実現できるかもしれません。特に、農業従事者にとっては、遺伝子制御技術を導入する際の最適な戦略を事前にシミュレーションできるため、無駄な投資や失敗のリスクを大幅に減らせます。また、消費者は、より安全で安定した食料供給を期待できるようになります。将来的に、この技術が普及すれば、デング熱やマラリアといった病気の媒介昆虫の制御にも応用され、世界の公衆衛生に大きく貢献するでしょう。",
+      "takeawayTalk": "遺伝子操作で害虫を賢く駆除するAIシミュレーションができたらしいよ！",
+      "bodyText": "PesTwinは、エージェントベースモデリングフレームワークであり、個々の昆虫を遺伝子状態を持つエージェントとしてモデル化します。このエージェントは、グラフ構造の空間的に明示的な環境内で行動します。これにより、個体群の確率的変動、不均一な分散、種固有の生活史がシミュレーションから自然に導き出されます。このフレームワークは3つの主要なコンポーネントで構成されています。1つ目は、任意の多遺伝子座構造に対する遺伝規則を自動生成する「遺伝キューブジェネレーター」です。2つ目は、モデルを書き換えることなく行動プロセスを組み立て・再構成できるモジュール式のライフサイクルです。3つ目は、不均一な景観と分散経路を表すグラフベースの空間レイヤーです。これらの要素により、異なる設計の遺伝子制御システムを単一の環境でエンコードし、データに対して検証し、比較することが可能になります。GPUアクセラレーションを活用することで、数千万の同時エージェントをシミュレーションでき、数十ヘクタールの圃場規模での応用が可能です。\n\nPesTwinの柔軟性は、そのモジュール設計にあります。遺伝キューブジェネレーターは、複雑な遺伝子構造を持つ昆虫の遺伝子伝達ルールを自動で生成します。これにより、手動での遺伝子型組み合わせの指定という、複雑化するにつれて手に負えなくなる作業が不要になります。また、昆虫のライフサイクルは、移動、死亡、繁殖などの行動プロセスをモジュールとして組み立てることができ、遺伝子型に応じてこれらの行動が変化します。さらに、空間はグラフとして表現され、GIS座標を組み込むことで、現実の環境条件に近いシミュレーションを可能にします。これらの要素が組み合わさることで、遺伝子操作された昆虫がどのように個体群内で広がり、どのような効果をもたらすかを、個々の虫のレベルから詳細に追跡し、予測できるのです。",
+      "bodyGlossary": [
+        {
+          "term": "エージェントベースモデリング",
+          "definition": "個々の要素の行動と相互作用から全体をシミュレートする手法",
+          "start": 9,
+          "end": 23
+        },
+        {
+          "term": "遺伝キューブジェネレーター",
+          "definition": "遺伝子伝達ルールを自動生成するPesTwinの機能",
+          "start": 215,
+          "end": 228
+        },
+        {
+          "term": "モジュール式のライフサイクル",
+          "definition": "昆虫の行動プロセスを組み換え可能な部品として扱う",
+          "start": 268,
+          "end": 282
+        },
+        {
+          "term": "グラフベースの空間レイヤー",
+          "definition": "不均一な環境をグラフ構造で表現する機能",
+          "start": 304,
+          "end": 317
+        },
+        {
+          "term": "GPUアクセラレーション",
+          "definition": "グラフィック処理装置を使って計算を高速化すること",
+          "start": 385,
+          "end": 397
+        },
+        {
+          "term": "遺伝子型",
+          "definition": "生物が持つ遺伝子の組み合わせ",
+          "start": 539,
+          "end": 543
+        },
+        {
+          "term": "GIS座標",
+          "definition": "地理情報システムで使われる位置情報",
+          "start": 674,
+          "end": 679
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "エージェントベースモデリング",
+          "definition": "個々の要素の行動と相互作用から全体をシミュレートする手法",
+          "start": 9,
+          "end": 23
+        },
+        {
+          "term": "遺伝キューブジェネレーター",
+          "definition": "遺伝子伝達ルールを自動生成するPesTwinの機能",
+          "start": 215,
+          "end": 228
+        },
+        {
+          "term": "モジュール式のライフサイクル",
+          "definition": "昆虫の行動プロセスを組み換え可能な部品として扱う",
+          "start": 268,
+          "end": 282
+        },
+        {
+          "term": "グラフベースの空間レイヤー",
+          "definition": "不均一な環境をグラフ構造で表現する機能",
+          "start": 304,
+          "end": 317
+        },
+        {
+          "term": "GPUアクセラレーション",
+          "definition": "グラフィック処理装置を使って計算を高速化すること",
+          "start": 385,
+          "end": 397
+        },
+        {
+          "term": "遺伝子型",
+          "definition": "生物が持つ遺伝子の組み合わせ",
+          "start": 539,
+          "end": 543
+        },
+        {
+          "term": "GIS座標",
+          "definition": "地理情報システムで使われる位置情報",
+          "start": 674,
+          "end": 679
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 308,
+      "keyFigure": {
+        "imagePath": "/figures/2607.09420v1_results.png",
+        "page": 14,
+        "caption": "PesTwinを用いた6ヶ月間の害虫駆除介入シミュレーション結果を示しています。",
+        "label": "Fig 4. Simulation of a six-month pest-control intervention through weekly releases of",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-13T22:55:44.618Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.09420v1_results.png",
+          "page": 14,
+          "caption": "PesTwinを用いた6ヶ月間の害虫駆除介入シミュレーション結果を示しています。",
+          "label": "Fig 4. Simulation of a six-month pest-control intervention through weekly releases of",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-13T22:55:44.618Z"
+        },
+        {
+          "imagePath": "/figures/2607.09420v1_why.png",
+          "page": 14,
+          "caption": "PesTwinのモジュール設計により、遺伝子操作された昆虫の個体群抑制と拡散をシミュレーションした結果です。",
+          "label": "Fig 4. Simulation of a six-month pest-control intervention through weekly releases of",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-13T22:55:44.618Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.07768v1",
+      "title": "Cascading Effects of the COVID-19 Pandemic on Barangays in the Philippines",
+      "authors": [
+        "Naomi Ashley Amparo",
+        "John Frederick Muji",
+        "Paul James Montecillo",
+        "Jaymar Soriano",
+        "Vena Pearl Bongolan"
+      ],
+      "publishedAt": "2026-07-08T16:11:06Z",
+      "url": "https://arxiv.org/abs/2607.07768v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.07768v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "econ.GN",
+        "cs.SI"
+      ],
+      "abstract": "The COVID-19 pandemic disrupted socio-economic and healthcare systems in the Philippines, significantly affecting barangays. This study analyzes the cascading effects of the COVID-19 pandemic on key aspects of a barangay, namely mobility, accessibility of public services, economic and financial health, food security, educational engagement, and physical health. It focuses on data from 2,122 Filipino households collected during May to June 2021 as part of the World Bank COVID-19 Households Survey. A Bayesian network model was constructed to programmatically map the conditional dependencies among these variables, utilizing Python libraries. Survey responses were grouped into common variables based on shared characteristics and standardized through z-score normalization to serve as nodes in the Bayesian network. By extending the Bayesian network into an influence diagram, the results will help identify interventions to guide local government units (LGUs) and policymakers in crafting tailored recovery programs and strategies that address impacts on physical health, economic and financial health, food security, public service access, mobility, and educational engagement. These efforts ultimately aim to enhance barangay resilience and preparedness for future public health crises. The results indicate that interventions aimed at boosting food production, stabilizing market prices, and expanding income opportunities are the most effective in improving community outcomes. This highlights the vital role of targeted economic and food security measures in mitigating the socio-economic impacts of the pandemic and offers valuable insights for shaping future response and recovery efforts.",
+      "summary": {
+        "gist": "COVID-19パンデミックは、フィリピンの社会経済システムとヘルスケアシステムに深刻な影響を与え、特にバランガイ（最小行政区画）レベルで広範な失業、公共サービスへのアクセス制限、地域社会の悪化を引き起こしました。これにより、経済的困窮、食料不安、犯罪率の増加、身体的・精神的健康の悪化が広範な課題となりました。世界銀行の調査によると、パンデミックは雇用、収入、食料安全保障、健康、教育、金融サービスへのアクセスなど、フィリピンの世帯の複数の側面に大きな悪影響を及ぼしました。",
+        "novelty": "これまでの研究では、COVID-19が人々のメンタルヘルスに与える影響に焦点を当てていましたが、地域社会全体への多角的な影響を網羅的に分析し、具体的な介入策を提示するものは少なかったです。 この論文では、フィリピンの2,122世帯のデータに基づき、移動、公共サービス、経済、食料安全保障、教育、身体的健康といった地域社会の主要な側面にCOVID-19が与えた連鎖的な影響を包括的にモデル化し、最も効果的な介入策を特定しました。",
+        "method": "本研究では、世界銀行COVID-19世帯調査のデータ（2021年5月～6月に収集された2,122世帯）を使用し、COVID-19がバランガイに与える連鎖的影響を分析しました。Pythonライブラリを用いてベイジアンネットワークモデルを構築し、移動、公共サービスへのアクセス、経済的・財政的健全性、食料安全保障、教育への参加、身体的健康といった主要な側面間の条件付き依存関係をマッピングしました。さらに、ベイジアンネットワークをインフルエンスダイアグラムに拡張することで、最適な介入戦略を特定しました。調査回答は共通の変数にグループ化され、zスコア正規化によって標準化され、ベイジアンネットワークのノードとして使用されました。意思決定ノードは、COVID-19パンデミック中に実施された介入策、緩和策、政策に直接経験を持つ専門家（労働経済学者、地方政府政策担当者、農業省職員など）との協議から導き出されました。",
+        "results": "分析の結果、コミュニティの成果を改善する上で、食料生産の強化、市場価格の安定化、所得機会の拡大を目的とした介入策が最も効果的であることが示されました。",
+        "why": "ベイジアンネットワークとインフルエンスダイアグラムを用いることで、様々な介入策が地域社会の各側面（移動、公共サービス、経済、食料安全保障、教育、身体的健康）にどのように影響し、最終的なコミュニティの状態（ユーティリティノード）を改善するかを定量的に評価できます。食料生産の強化は直接的に食料不安を軽減し、所得機会を改善します。市場価格の安定化は低所得世帯の食料アクセスを改善し、経済的懸念を軽減します。これらの介入は、食料安全保障と経済的健全性という、パンデミックの影響を緩和する上で最も重要な基盤を強化するため、コミュニティ全体に最も広範でポジティブな連鎖効果をもたらすと推測されます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "food-security",
+      "arxivPrimary": "econ.GN",
+      "titleJa": "フィリピンのバランガイにおけるCOVID-19パンデミックの連鎖的影響",
+      "catchTitle": "コロナ禍、地域社会の回復策は？",
+      "hook": "コロナ禍であなたの生活はどのように変わりましたか？フィリピンの地域社会では、経済、食料、教育など多岐にわたる影響が出ました。",
+      "background": "COVID-19パンデミックは、フィリピンの社会経済システムとヘルスケアシステムに深刻な影響を与え、特にバランガイ（最小行政区画）レベルで広範な失業、公共サービスへのアクセス制限、地域社会の悪化を引き起こしました。これにより、経済的困窮、食料不安、犯罪率の増加、身体的・精神的健康の悪化が広範な課題となりました。世界銀行の調査によると、パンデミックは雇用、収入、食料安全保障、健康、教育、金融サービスへのアクセスなど、フィリピンの世帯の複数の側面に大きな悪影響を及ぼしました。",
+      "quiz": {
+        "question": "この研究で、フィリピンの地域社会の回復に最も効果的だと示された介入策は何でしょう？",
+        "options": [
+          "大規模なワクチン接種プログラム",
+          "食料生産の強化と市場価格の安定化",
+          "オンライン教育の拡充"
+        ],
+        "correctIndex": 1,
+        "explanation": "研究結果によると、食料生産の強化、市場価格の安定化、所得機会の拡大を目的とした介入策が、コミュニティの成果を改善する上で最も効果的であることが示されました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "バランガイ",
+          "definition": "フィリピンにおける最小の地方行政区画。"
+        },
+        {
+          "term": "ベイジアンネットワーク",
+          "definition": "確率的な因果関係をグラフで表現するモデル。"
+        },
+        {
+          "term": "インフルエンスダイアグラム",
+          "definition": "意思決定と不確実性を視覚化するツール。"
+        },
+        {
+          "term": "zスコア正規化",
+          "definition": "データの平均を0、標準偏差を1に変換すること。"
+        },
+        {
+          "term": "ユーティリティノード",
+          "definition": "インフルエンスダイアグラムで評価対象となる結果。"
+        },
+        {
+          "term": "食料不安",
+          "definition": "食料の入手可能性やアクセスが不安定な状態。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "コロナ禍で打撃を受けたフィリピンの地域社会に対し、食料生産や市場安定化が最も効果的な回復策だと判明しました。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、COVID-19が人々のメンタルヘルスに与える影響に焦点を当てていましたが、地域社会全体への多角的な影響を網羅的に分析し、具体的な介入策を提示するものは少なかったです。",
+        "after": "この論文では、フィリピンの2,122世帯のデータに基づき、移動、公共サービス、経済、食料安全保障、教育、身体的健康といった地域社会の主要な側面にCOVID-19が与えた連鎖的な影響を包括的にモデル化し、最も効果的な介入策を特定しました。"
+      },
+      "analogy": {
+        "title": "畑の土壌改良で収穫量アップ",
+        "body": "COVID-19パンデミックが地域社会に与えた影響は、まるで病害が蔓延した畑のようです。病害は作物の成長を阻害し、収穫量を減らし、最終的には農家の収入にまで影響を及ぼします。この研究は、どの病害対策（介入策）が、作物の健康（身体的健康）、土壌の肥沃さ（経済）、水の供給（公共サービス）、そして最終的な収穫量（コミュニティの成果）を最も効率的に改善するかを特定するようなものです。特に、土壌の栄養を直接改善する（食料生産を増やす）ことや、市場での価格を安定させる（市場価格安定化）ことが、最も効果的な対策だと示しています。単に病気の葉を取り除くだけでなく、根本的な土壌改良が持続的な豊作につながるのと同じです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、パンデミックのような大規模な危機が起きた際に、地域社会がどのように影響を受け、どのような対策が最も効果的かを知る上で非常に重要です。あなたの住む地域でも、災害や経済変動が起きたとき、食料供給の安定や物価の抑制が、人々の生活を支える上でいかに重要であるかを教えてくれます。特に、食料生産の強化や市場価格の安定化は、単に経済的な問題だけでなく、人々の健康や教育、ひいては社会全体の安定に繋がることを示唆しています。これは、企業がサプライチェーンを考える際や、自治体が地域防災計画を立てる際にも役立つ視点を提供します。",
+      "takeawayTalk": "コロナ禍のフィリピンでは、食料生産と市場安定が地域回復の鍵だった！",
+      "bodyText": "本研究では、世界銀行COVID-19世帯調査のデータ（2021年5月～6月に収集された2,122世帯）を使用し、COVID-19がバランガイに与える連鎖的影響を分析しました。Pythonライブラリを用いてベイジアンネットワークモデルを構築し、移動、公共サービスへのアクセス、経済的・財政的健全性、食料安全保障、教育への参加、身体的健康といった主要な側面間の条件付き依存関係をマッピングしました。さらに、ベイジアンネットワークをインフルエンスダイアグラムに拡張することで、最適な介入戦略を特定しました。調査回答は共通の変数にグループ化され、zスコア正規化によって標準化され、ベイジアンネットワークのノードとして使用されました。意思決定ノードは、COVID-19パンデミック中に実施された介入策、緩和策、政策に直接経験を持つ専門家（労働経済学者、地方政府政策担当者、農業省職員など）との協議から導き出されました。\n\nベイジアンネットワークとインフルエンスダイアグラムを用いることで、様々な介入策が地域社会の各側面（移動、公共サービス、経済、食料安全保障、教育、身体的健康）にどのように影響し、最終的なコミュニティの状態（ユーティリティノード）を改善するかを定量的に評価できます。食料生産の強化は直接的に食料不安を軽減し、所得機会を改善します。市場価格の安定化は低所得世帯の食料アクセスを改善し、経済的懸念を軽減します。これらの介入は、食料安全保障と経済的健全性という、パンデミックの影響を緩和する上で最も重要な基盤を強化するため、コミュニティ全体に最も広範でポジティブな連鎖効果をもたらすと推測されます。",
+      "bodyGlossary": [
+        {
+          "term": "バランガイ",
+          "definition": "フィリピンにおける最小の地方行政区画。",
+          "start": 65,
+          "end": 70
+        },
+        {
+          "term": "ベイジアンネットワーク",
+          "definition": "確率的な因果関係をグラフで表現するモデル。",
+          "start": 102,
+          "end": 113
+        },
+        {
+          "term": "インフルエンスダイアグラム",
+          "definition": "意思決定と不確実性を視覚化するツール。",
+          "start": 213,
+          "end": 226
+        },
+        {
+          "term": "zスコア正規化",
+          "definition": "データの平均を0、標準偏差を1に変換すること。",
+          "start": 269,
+          "end": 276
+        },
+        {
+          "term": "ユーティリティノード",
+          "definition": "インフルエンスダイアグラムで評価対象となる結果。",
+          "start": 508,
+          "end": 518
+        },
+        {
+          "term": "食料不安",
+          "definition": "食料の入手可能性やアクセスが不安定な状態。",
+          "start": 549,
+          "end": 553
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "バランガイ",
+          "definition": "フィリピンにおける最小の地方行政区画。",
+          "start": 65,
+          "end": 70
+        },
+        {
+          "term": "ベイジアンネットワーク",
+          "definition": "確率的な因果関係をグラフで表現するモデル。",
+          "start": 102,
+          "end": 113
+        },
+        {
+          "term": "インフルエンスダイアグラム",
+          "definition": "意思決定と不確実性を視覚化するツール。",
+          "start": 213,
+          "end": 226
+        },
+        {
+          "term": "zスコア正規化",
+          "definition": "データの平均を0、標準偏差を1に変換すること。",
+          "start": 269,
+          "end": 276
+        },
+        {
+          "term": "ユーティリティノード",
+          "definition": "インフルエンスダイアグラムで評価対象となる結果。",
+          "start": 508,
+          "end": 518
+        },
+        {
+          "term": "食料不安",
+          "definition": "食料の入手可能性やアクセスが不安定な状態。",
+          "start": 549,
+          "end": 553
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 265,
+      "keyFigure": {
+        "imagePath": "/figures/2607.07768v1_results.png",
+        "page": 6,
+        "caption": "COVID-19がバランガイに与える連鎖的影響と介入策を示すベイジアンインフルエンスダイアグラムです。",
+        "label": "Figure 1: Bayesian influence diagram of cascading effects of COVID-19 on the state of a barangay",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-13T22:55:46.812Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.07768v1_results.png",
+          "page": 6,
+          "caption": "COVID-19がバランガイに与える連鎖的影響と介入策を示すベイジアンインフルエンスダイアグラムです。",
+          "label": "Figure 1: Bayesian influence diagram of cascading effects of COVID-19 on the state of a barangay",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-13T22:55:46.812Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.09278v1",
+      "title": "Structural Brain Predictors of Visual Attention Gradient Modulated by Trait Anxiety",
+      "authors": [
+        "Suhail Rafiq Mir",
+        "Dolcy Dhar",
+        "Ishita Singh",
+        "Prakrati Gupta",
+        "Varsha Singh",
+        "Mrinmoy Chakrabarty"
+      ],
+      "publishedAt": "2026-07-10T10:47:18Z",
+      "url": "https://arxiv.org/abs/2607.09278v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.09278v1.pdf",
+      "categories": [
+        "topic:neuroscience",
+        "q-bio.NC"
+      ],
+      "abstract": "Dynamic allocation of attention across the visual field, quantified as a visuospatial attention gradient, is essential for maintaining perceptual breadth. Disruptions to this flexibility may contribute to altered spatial attentional bias and may be influenced by trait anxiety. We investigated whether individual differences in structural brain morphology predict spatial attentional deployment as a function of trait anxiety. Sixty participants, recruited based on an a priori sample size calculation, completed a visuospatial attention gradient task incorporating brief partial facial emotion cues. Although discrete emotional cues did not significantly modulate attention gradients, structural neuroimaging analyses revealed that greater grey matter volume in bilateral cerebellar lobule VI and increased cortical thickness in the left precentral gyrus and paracentral lobule were associated with reduced interaction between the magnitude of the spatial attention gradient (averaged across emotions) and trait anxiety. Machine-learning models further predicted individual attention-anxiety profiles from these neuroanatomical features. These findings suggest that greater structural integrity in cerebellar and sensorimotor regions is associated with more flexible spatial attentional deployment in individuals with lower trait anxiety. Together, the results highlight the contribution of cerebellar and sensorimotor regions, beyond their traditional motor functions, to individual differences in visual spatial attention and cognitive-affective interactions, while demonstrating the predictive utility of structural brain markers.",
+      "summary": {
+        "gist": "視覚的注意は、動的な環境で効率的に視覚刺激を処理するために不可欠です。しかし、不安などの情動特性は、視覚処理を歪め、注意の偏りを引き起こすことが知られています。特に、不安が高い人は、脅威関連の刺激に注意が向きやすく、そこから注意を切り離すのが遅れる傾向があります。これまでの研究では、機能的MRIなどで脳の活動と注意の偏りの関連が調べられてきましたが、脳の構造が、個人の特性としての不安と視覚的注意の柔軟性にどう影響するかは不明でした。",
+        "novelty": "これまで、不安が視覚処理や注意の偏りに影響を与えることは知られていましたが、脳の機能的な活動との関連が主に研究されていました。脳の構造が、個人の持つ特性としての不安と視覚的注意の柔軟性にどう影響するかは不明でした。 この研究では、脳の構造（灰白質体積や皮質厚）が、特性不安のレベルに応じて視覚的注意の柔軟性とどのように関連するかを明らかにしました。特に、小脳と感覚運動野の構造が、不安が高い人ほど注意の柔軟性と強く結びついていることを発見しました。",
+        "method": "本研究では、60名の参加者を対象に、視覚的注意勾配課題と構造的MRIスキャンを実施しました。視覚的注意勾配は、視覚野の近距離と遠距離での注意効率の差として定量化され、勾配が急であるほど注意の狭窄が強いと解釈されます。参加者の特性不安レベルも測定しました。脳の構造的特徴（灰白質体積と皮質厚）と、視覚的注意勾配、および特性不安との関係を、多重回帰分析と機械学習モデルを用いて分析しました。",
+        "results": "感情的な手がかりは注意勾配を直接変えませんでしたが、構造的脳画像分析により、両側小脳の小葉VIの灰白質体積が大きいこと、および左中心前回と傍中心小葉の皮質厚が増加していることが、空間的注意勾配の大きさと特性不安との相互作用の減少と関連していることが示されました。これは、これらの領域の構造的完全性が高いほど、特性不安が低い個人において、より柔軟な空間的注意の展開と関連することを示唆しています。機械学習モデルは、これらの神経解剖学的特徴から個人の注意と不安のプロファイルを予測できることも示しました。",
+        "why": "この結果は、小脳と感覚運動野といった、これまで主に運動機能と関連付けられてきた脳領域が、視覚的空間注意の個人差や認知・情動の相互作用に寄与していることを示唆しています。特に、特性不安が高い人ほど、これらの脳領域の構造が注意の柔軟性との関連を強く調整していると考えられます。不安が、これらの領域の構造と注意の柔軟性の間の「結合」を増幅させることで、注意の偏りが生じやすくなる、あるいはその調整が難しくなる可能性があります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.NC）",
+      "field": "神経・脳科学",
+      "categoryL1": "adjacent",
+      "categoryL2": "neuroscience",
+      "arxivPrimary": "q-bio.NC",
+      "titleJa": "特性不安によって調整される視覚的注意勾配の構造的脳予測因子",
+      "catchTitle": "不安と注意の偏り、脳の構造で予測",
+      "hook": "あなたは、不安を感じると視野が狭くなる、と感じたことはありませんか？",
+      "background": "視覚的注意は、動的な環境で効率的に視覚刺激を処理するために不可欠です。しかし、不安などの情動特性は、視覚処理を歪め、注意の偏りを引き起こすことが知られています。特に、不安が高い人は、脅威関連の刺激に注意が向きやすく、そこから注意を切り離すのが遅れる傾向があります。これまでの研究では、機能的MRIなどで脳の活動と注意の偏りの関連が調べられてきましたが、脳の構造が、個人の特性としての不安と視覚的注意の柔軟性にどう影響するかは不明でした。",
+      "quiz": {
+        "question": "この研究で、特性不安が高い人ほど、視覚的注意の柔軟性と強く関連することが示された脳の領域はどれですか？",
+        "options": [
+          "前頭前野",
+          "海馬",
+          "小脳と感覚運動野"
+        ],
+        "correctIndex": 2,
+        "explanation": "研究結果では、両側小脳の小葉VIの灰白質体積と、左中心前回および傍中心小葉の皮質厚が、特性不安が高い人ほど視覚的注意の柔軟性との相互作用を減少させることが示されました。これらは小脳と感覚運動野に属する領域です。"
+      },
+      "limitations": "本研究の限界は、サンプルサイズが60名と比較的少ないこと、および感情的な手がかりが注意勾配を直接変えなかった点です。また、男女間の違いについては、サンプルサイズが小さいため統計的に有意な差は検出されませんでした。これらの点は、今後の研究でより大規模なコホートや異なる感情刺激を用いて検証される必要があります。",
+      "glossary": [
+        {
+          "term": "視覚的注意勾配",
+          "definition": "視覚野の近距離と遠距離での注意効率の差。"
+        },
+        {
+          "term": "構造的MRI",
+          "definition": "脳の形態を画像化するMRIの一種。"
+        },
+        {
+          "term": "特性不安",
+          "definition": "個人が持続的に感じる不安の傾向。"
+        },
+        {
+          "term": "灰白質体積",
+          "definition": "脳の神経細胞が集まる部分の体積。"
+        },
+        {
+          "term": "皮質厚",
+          "definition": "脳の表面にある大脳皮質の厚さ。"
+        },
+        {
+          "term": "小脳の小葉VI",
+          "definition": "小脳の一部で、運動制御などに関与。"
+        },
+        {
+          "term": "中心前回",
+          "definition": "大脳の一部で、運動機能に関わる。"
+        },
+        {
+          "term": "傍中心小葉",
+          "definition": "大脳の一部で、感覚運動機能に関わる。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "不安レベルが高い人ほど、小脳と感覚運動野の構造が、視覚的注意の柔軟性と強く関連していることが分かりました。",
+      "noveltyContrast": {
+        "before": "これまで、不安が視覚処理や注意の偏りに影響を与えることは知られていましたが、脳の機能的な活動との関連が主に研究されていました。脳の構造が、個人の持つ特性としての不安と視覚的注意の柔軟性にどう影響するかは不明でした。",
+        "after": "この研究では、脳の構造（灰白質体積や皮質厚）が、特性不安のレベルに応じて視覚的注意の柔軟性とどのように関連するかを明らかにしました。特に、小脳と感覚運動野の構造が、不安が高い人ほど注意の柔軟性と強く結びついていることを発見しました。"
+      },
+      "analogy": {
+        "title": "畑の土壌と作物の育ち方",
+        "body": "これは、まるで畑の土壌（脳の構造）が、その年の天候（特性不安）によって、作物の育ち方（視覚的注意の柔軟性）にどう影響するかが変わるようなものです。肥沃な土壌でも、日照り続きの年には作物がうまく育たないかもしれません。しかし、特定の土壌では、日照りでも比較的安定して育つ作物があるように、脳の特定の構造が、不安が高い状況でも注意の柔軟性を保つ役割を果たすのです。特に、不安が強い人ほど、土壌の質が作物の出来に与える影響が大きくなる、というイメージです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、あなたが日々の生活で感じる不安が、どのように視覚的な情報処理に影響を与えるのか、その脳科学的なメカニズムの一端を解明しています。もしあなたがプレゼンテーションで緊張すると視野が狭まる、あるいはストレス下で重要な情報を見落としがちだと感じているなら、それは脳の構造と不安レベルが相互作用している結果かもしれません。この知見は、不安障害の早期発見や、不安を抱える人々の認知機能改善のための介入方法開発に役立つ可能性があります。例えば、特定の脳領域をターゲットにしたトレーニングや、不安を軽減するアプローチが、視覚的注意の柔軟性を高めることにつながるかもしれません。",
+      "takeawayTalk": "不安が高い人ほど、小脳の構造が注意の柔軟性と強く関係するらしいよ！",
+      "bodyText": "本研究では、60名の参加者を対象に、視覚的注意勾配課題と構造的MRIスキャンを実施しました。視覚的注意勾配は、視覚野の近距離と遠距離での注意効率の差として定量化され、勾配が急であるほど注意の狭窄が強いと解釈されます。参加者の特性不安レベルも測定しました。脳の構造的特徴（灰白質体積と皮質厚）と、視覚的注意勾配、および特性不安との関係を、多重回帰分析と機械学習モデルを用いて分析しました。\n\nこの結果は、小脳と感覚運動野といった、これまで主に運動機能と関連付けられてきた脳領域が、視覚的空間注意の個人差や認知・情動の相互作用に寄与していることを示唆しています。特に、特性不安が高い人ほど、これらの脳領域の構造が注意の柔軟性との関連を強く調整していると考えられます。不安が、これらの領域の構造と注意の柔軟性の間の「結合」を増幅させることで、注意の偏りが生じやすくなる、あるいはその調整が難しくなる可能性があります。",
+      "bodyGlossary": [
+        {
+          "term": "視覚的注意勾配",
+          "definition": "視覚野の近距離と遠距離での注意効率の差。",
+          "start": 18,
+          "end": 25
+        },
+        {
+          "term": "構造的MRI",
+          "definition": "脳の形態を画像化するMRIの一種。",
+          "start": 28,
+          "end": 34
+        },
+        {
+          "term": "特性不安",
+          "definition": "個人が持続的に感じる不安の傾向。",
+          "start": 112,
+          "end": 116
+        },
+        {
+          "term": "灰白質体積",
+          "definition": "脳の神経細胞が集まる部分の体積。",
+          "start": 135,
+          "end": 140
+        },
+        {
+          "term": "皮質厚",
+          "definition": "脳の表面にある大脳皮質の厚さ。",
+          "start": 141,
+          "end": 144
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "視覚的注意勾配",
+          "definition": "視覚野の近距離と遠距離での注意効率の差。",
+          "start": 18,
+          "end": 25
+        },
+        {
+          "term": "構造的MRI",
+          "definition": "脳の形態を画像化するMRIの一種。",
+          "start": 28,
+          "end": 34
+        },
+        {
+          "term": "特性不安",
+          "definition": "個人が持続的に感じる不安の傾向。",
+          "start": 112,
+          "end": 116
+        },
+        {
+          "term": "灰白質体積",
+          "definition": "脳の神経細胞が集まる部分の体積。",
+          "start": 135,
+          "end": 140
+        },
+        {
+          "term": "皮質厚",
+          "definition": "脳の表面にある大脳皮質の厚さ。",
+          "start": 141,
+          "end": 144
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 237,
+      "keyFigure": {
+        "imagePath": "/figures/2607.09278v1_results.jpeg",
+        "page": 50,
+        "caption": "小脳の灰白質体積と注意勾配の負の相関を示しています。",
+        "label": "Fig. 3",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-13T22:55:48.687Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.09278v1_results.jpeg",
+          "page": 50,
+          "caption": "小脳の灰白質体積と注意勾配の負の相関を示しています。",
+          "label": "Fig. 3",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-13T22:55:48.687Z"
+        },
+        {
+          "imagePath": "/figures/2607.09278v1_why.jpeg",
+          "page": 51,
+          "caption": "皮質厚と注意勾配の負の相関を示しています。",
+          "label": "Fig. 4",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-13T22:55:48.687Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.09543v1",
+      "title": "CoCoT-EEG: Contrastive-Pretrained Multiscale Convolutional Transformer for EEG Decoding",
+      "authors": [
+        "Gabriel Mahuas",
+        "Victoria Shevchenko",
+        "Ugo Tanielian",
+        "Yassir Bendou",
+        "Richard Gao"
+      ],
+      "publishedAt": "2026-07-10T15:48:15Z",
+      "url": "https://arxiv.org/abs/2607.09543v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.09543v1.pdf",
+      "categories": [
+        "topic:neuroscience",
+        "cs.LG",
+        "q-bio.NC"
+      ],
+      "abstract": "Self-supervised pretrained foundation models (FM) have shown early promise for non-invasive electroencephalogram (EEG) decoding applications. Many recent large-scale models converged on the approach of tokenizing raw EEG followed by masked reconstruction pretraining. However, this recipe has been shown to be suboptimal for data, like EEG, with high noise amplitude and information confined to limited dimensions such as narrow frequency bands. Building on this insight, we develop a novel contrastive-pretrained EEG model with multiscale temporal convolution input layers and Transformer encoder blocks (CoCoT). CoCoT matches or beats state-of-the-art reconstruction-pretrained EEG models on extensive benchmark decoding tasks with heterogeneous electrode configurations. Furthermore, CoCoT trained from scratch outperforms previous single-task decoding models and even rivals pretrained models, showcasing the architecture's flexibility and data efficiency. Through systematic ablations, including model architecture and pretraining objective, we demonstrate the viability of contrastive learning for building EEG FMs while suggesting key architectural design considerations, prompting further investigations in alternative large-scale pretraining strategies.",
+      "summary": {
+        "gist": "脳波（EEG）は、非侵襲的でコストも比較的低いことから、脳とコンピューターを接続するBCIや臨床診断など、様々な分野で活用されています。しかし、脳波データはノイズが多く、限られた周波数帯に情報が集中しているため、そこから意味のある情報を正確に読み取ることは難しい課題でした。近年、大量の教師なしデータから汎用的な特徴を学習する「基盤モデル」が言語や画像分野で成功を収め、脳波解析にも応用され始めています。",
+        "novelty": "従来の脳波AIモデルは、言語や画像AIの成功手法を模倣し、脳波を細かく区切ってから元の信号を再構築する事前学習が主流でした。しかし、脳波はノイズが多く、情報が特定の周波数帯に集中しているため、この方法ではノイズに惑わされやすく、効率が悪いという課題がありました。 この論文では、脳波の特性を考慮し、まず複数の異なるスケールで畳み込み処理を行い、ノイズを除去しつつ意味のある特徴を抽出します。その上で、対照学習という手法で事前学習を行うことで、ノイズに強く、より汎用性の高い脳波AIモデル「CoCoT-EEG」を開発しました。",
+        "method": "CoCoT-EEGは、マルチスケール1D畳み込み層とTransformerエンコーダーブロックを組み合わせた新しいハイブリッドアーキテクチャです。まず、生データである脳波信号に対し、複数の異なるカーネルサイズを持つ1D畳み込みフィルターを並列に適用し、様々な時間スケールの特徴を抽出します。これにより、ノイズを除去しつつ、情報密度の高い特徴マップを生成します。次に、この特徴マップをL2プーリングでパッチ化し、Transformerエンコーダーに入力します。事前学習には、MoCo（Momentum Contrast）スタイルの対照学習フレームワークを採用し、脳波データに特化した多様なデータ拡張（チャネルドロップアウト、ガウスノイズ追加、時間マスキングなど）を施して、ノイズに対するロバスト性を高めました。",
+        "results": "CoCoT-EEGは、多様な電極配置を持つ広範なベンチマークデコーディングタスクにおいて、最先端の再構築型事前学習済みEEGモデルと同等かそれ以上の性能を示しました。さらに、個別のデータセットでゼロから学習させた場合でも、従来の単一タスクデコーディングモデルを上回り、事前学習済みモデルに匹敵する性能を発揮し、そのアーキテクチャの柔軟性とデータ効率の高さが示されました。",
+        "why": "このモデルの鍵は、「畳み込みファースト」のアプローチにあります。従来のモデルがまず生信号をパッチ化していたのに対し、CoCoT-EEGは、パッチ化する前にマルチスケール畳み込みでノイズをフィルタリングし、時間的な連続性を保ちながら、より情報密度の高い特徴をTransformerブロックに提供します。また、再構築学習が低レベルな詳細に偏りがちなのに対し、対照学習はノイズに強く、知覚的な意味合いに依存するタスクに特に有効であることが、ノイズの多い脳波データにおいて優れた性能を発揮する理由です。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.LG）",
+      "field": "神経・脳科学",
+      "categoryL1": "serendipity",
+      "categoryL2": "neuroscience",
+      "arxivPrimary": "cs.LG",
+      "titleJa": "CoCoT-EEG: 対照学習で事前学習されたマルチスケール畳み込みトランスフォーマーによるEEGデコーディング",
+      "catchTitle": "脳波のノイズに強い！新しいAIモデル",
+      "hook": "あなたの脳波から、もっと正確に「考えていること」を読み取れるようになったら、どうなると思いますか？",
+      "background": "脳波（EEG）は、非侵襲的でコストも比較的低いことから、脳とコンピューターを接続するBCIや臨床診断など、様々な分野で活用されています。しかし、脳波データはノイズが多く、限られた周波数帯に情報が集中しているため、そこから意味のある情報を正確に読み取ることは難しい課題でした。近年、大量の教師なしデータから汎用的な特徴を学習する「基盤モデル」が言語や画像分野で成功を収め、脳波解析にも応用され始めています。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "EEG",
+          "definition": "脳の電気活動を頭皮上から記録する非侵襲的な検査。"
+        },
+        {
+          "term": "デコーディング",
+          "definition": "脳波信号から特定の情報や意図を読み解くこと。"
+        },
+        {
+          "term": "基盤モデル",
+          "definition": "大量のデータで事前学習され、多様なタスクに応用可能なAIモデル。"
+        },
+        {
+          "term": "畳み込み",
+          "definition": "データの特徴を抽出する画像処理や信号処理の技術。"
+        },
+        {
+          "term": "Transformer",
+          "definition": "自然言語処理で成功した、自己注意機構に基づくAIモデル。"
+        },
+        {
+          "term": "対照学習",
+          "definition": "似たデータは近く、異なるデータは遠くなるように学習する手法。"
+        },
+        {
+          "term": "MoCo",
+          "definition": "対照学習の一種で、大量の負例を効率的に扱う手法。"
+        },
+        {
+          "term": "データ拡張",
+          "definition": "学習データを人為的に増やし、モデルの汎化性能を高める手法。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "ノイズの多い脳波データから、より効率的に意味のある情報を抽出できる新しいAIモデルが登場しました。",
+      "noveltyContrast": {
+        "before": "従来の脳波AIモデルは、言語や画像AIの成功手法を模倣し、脳波を細かく区切ってから元の信号を再構築する事前学習が主流でした。しかし、脳波はノイズが多く、情報が特定の周波数帯に集中しているため、この方法ではノイズに惑わされやすく、効率が悪いという課題がありました。",
+        "after": "この論文では、脳波の特性を考慮し、まず複数の異なるスケールで畳み込み処理を行い、ノイズを除去しつつ意味のある特徴を抽出します。その上で、対照学習という手法で事前学習を行うことで、ノイズに強く、より汎用性の高い脳波AIモデル「CoCoT-EEG」を開発しました。"
+      },
+      "analogy": {
+        "title": "雑草だらけの畑で宝探し",
+        "body": "これはまるで、雑草だらけの畑で宝を探すようなものです。従来のAIは、畑全体を細かく区切って「ここに宝があったはず」と推測し、元の畑の様子を再現しようとしていました。しかし、雑草（ノイズ）が多すぎて、宝（重要な情報）を見つけるのが困難でした。CoCoT-EEGは、まず様々な大きさのふるい（マルチスケール畳み込み）を使って雑草を丁寧に取り除き、宝のありそうな場所を絞り込みます。その上で、「これは宝の破片、あれはただの石」と対比させながら学習（対照学習）することで、効率的に宝を見つけ出すのです。これにより、雑草に惑わされず、本当に価値のある情報だけを収穫できるようになります。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、脳波からより正確に情報を読み取るAIの可能性を大きく広げます。例えば、脳波でロボットアームを操作するBCI（ブレイン・コンピューター・インターフェース）の精度が向上すれば、身体が不自由な方の生活の質が劇的に改善されるでしょう。また、てんかん発作の早期発見や、睡眠障害のより正確な診断など、医療現場での応用も期待できます。さらに、ノイズの多いデータから効率的に情報を抽出するこの技術は、農業分野におけるセンサーデータ解析など、他の分野にも応用できるかもしれません。あなたの生活や社会が、この新しいAIによってより豊かになる未来が近づいています。",
+      "takeawayTalk": "脳波のノイズに強いAIができて、脳波でできることが増えそうだよ！",
+      "bodyText": "CoCoT-EEGは、マルチスケール1D畳み込み層とTransformerエンコーダーブロックを組み合わせた新しいハイブリッドアーキテクチャです。まず、生データである脳波信号に対し、複数の異なるカーネルサイズを持つ1D畳み込みフィルターを並列に適用し、様々な時間スケールの特徴を抽出します。これにより、ノイズを除去しつつ、情報密度の高い特徴マップを生成します。次に、この特徴マップをL2プーリングでパッチ化し、Transformerエンコーダーに入力します。事前学習には、MoCo（Momentum Contrast）スタイルの対照学習フレームワークを採用し、脳波データに特化した多様なデータ拡張（チャネルドロップアウト、ガウスノイズ追加、時間マスキングなど）を施して、ノイズに対するロバスト性を高めました。\n\nこのモデルの鍵は、「畳み込みファースト」のアプローチにあります。従来のモデルがまず生信号をパッチ化していたのに対し、CoCoT-EEGは、パッチ化する前にマルチスケール畳み込みでノイズをフィルタリングし、時間的な連続性を保ちながら、より情報密度の高い特徴をTransformerブロックに提供します。また、再構築学習が低レベルな詳細に偏りがちなのに対し、対照学習はノイズに強く、知覚的な意味合いに依存するタスクに特に有効であることが、ノイズの多い脳波データにおいて優れた性能を発揮する理由です。",
+      "bodyGlossary": [
+        {
+          "term": "EEG",
+          "definition": "脳の電気活動を頭皮上から記録する非侵襲的な検査。",
+          "start": 6,
+          "end": 9
+        },
+        {
+          "term": "畳み込み",
+          "definition": "データの特徴を抽出する画像処理や信号処理の技術。",
+          "start": 20,
+          "end": 24
+        },
+        {
+          "term": "Transformer",
+          "definition": "自然言語処理で成功した、自己注意機構に基づくAIモデル。",
+          "start": 26,
+          "end": 37
+        },
+        {
+          "term": "MoCo",
+          "definition": "対照学習の一種で、大量の負例を効率的に扱う手法。",
+          "start": 236,
+          "end": 240
+        },
+        {
+          "term": "対照学習",
+          "definition": "似たデータは近く、異なるデータは遠くなるように学習する手法。",
+          "start": 264,
+          "end": 268
+        },
+        {
+          "term": "データ拡張",
+          "definition": "学習データを人為的に増やし、モデルの汎化性能を高める手法。",
+          "start": 293,
+          "end": 298
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "EEG",
+          "definition": "脳の電気活動を頭皮上から記録する非侵襲的な検査。",
+          "start": 6,
+          "end": 9
+        },
+        {
+          "term": "畳み込み",
+          "definition": "データの特徴を抽出する画像処理や信号処理の技術。",
+          "start": 20,
+          "end": 24
+        },
+        {
+          "term": "Transformer",
+          "definition": "自然言語処理で成功した、自己注意機構に基づくAIモデル。",
+          "start": 26,
+          "end": 37
+        },
+        {
+          "term": "MoCo",
+          "definition": "対照学習の一種で、大量の負例を効率的に扱う手法。",
+          "start": 236,
+          "end": 240
+        },
+        {
+          "term": "対照学習",
+          "definition": "似たデータは近く、異なるデータは遠くなるように学習する手法。",
+          "start": 264,
+          "end": 268
+        },
+        {
+          "term": "データ拡張",
+          "definition": "学習データを人為的に増やし、モデルの汎化性能を高める手法。",
+          "start": 293,
+          "end": 298
+        }
+      ],
+      "agriEconRelevance": "農業分野では、土壌センサー、気象データ、ドローンによる作物画像など、多様なセンサーから大量のデータが日々収集されています。これらのデータには、機器のノイズや環境要因による変動が多く含まれており、重要な情報がノイズに埋もれてしまう課題があります。CoCoT-EEGの「ノイズに強く、マルチスケールで特徴を捉える」対照学習アプローチは、農業センサーデータから作物の生育状況、病害虫の兆候、土壌の健康状態などをより正確に抽出するAIモデルの開発に応用できる可能性があります。これにより、精密農業の効率化や、早期の異常検知による収穫量・品質向上に貢献できるでしょう。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 261,
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.09543v1_why.jpeg",
+          "page": 3,
+          "caption": "CoCoT-EEGの全体像を示しており、生EEG信号がどのように処理されるか説明しています。",
+          "label": "Figure 1: CoCoT-EEG. A. Raw EEG signals are processed through a bank of 1D convolutions with",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-13T22:55:50.640Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.07543v1",
+      "title": "Equivalence testing in pesticide risk assessment -- Evaluation and practical guidance for design, analysis and interpretation",
+      "authors": [
+        "Dimitry Wintermantel",
+        "Julia Osterman",
+        "Magdalena M. Mair",
+        "Florian Hartig"
+      ],
+      "publishedAt": "2026-07-08T15:42:23Z",
+      "url": "https://arxiv.org/abs/2607.07543v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.07543v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "stat.ME",
+        "q-bio.PE",
+        "q-bio.QM"
+      ],
+      "abstract": "Harmful pesticide effects exceeding specific protection goals (SPG) may go undetected in underpowered experimental designs. Regulatory honeybee field studies have consistently failed to reach the statistical power required under European Food Safety Authority (EFSA) guidance, which may have caused approval of high-risk substances. Therefore, EFSA advised a shift from testing the null hypothesis of 'no effect' to equivalence testing. Under this approach, a pesticide is classified as 'low risk' if the null hypothesis that its effect exceeds the SPG can be rejected. For honeybees, the recommended SPG is a colony size reduction below 10%. Critics have argued that this framework requires excessive site replication to demonstrate pesticide safety and proposed an alternative equivalence test defining treatment effects relative to the lower bound of the 90%-control-group confidence interval. Using simulations mimicking a regulatory honeybee field study, we show that although the two equivalence tests share the same trade-off between false 'low-risk' and false 'high-risk' classifications, only EFSA's original recommendation reliably identifies pesticides with effects &gt; SPG at alpha = 0.2. Our results show that increasing site replication beyond the current practice is unavoidable for a reliable regulatory assessment. However, for pesticides with effect sizes of 5% or less, site requirements remain lower than those implied by the power requirement of the former EFSA guidance. Moreover, covariate adjustment through a model term or balanced colony allocation using anticlustering randomisation can reduce site requirements without losing power and thus save costs. Finally, we provide guidance and R functions for anticlustering randomisation and equivalence testing for pesticide risk assessment.",
+      "summary": {
+        "gist": "農薬は世界中で非標的生物に害を及ぼす可能性があり、承認前に生態学的リスク評価が行われます。しかし、従来の「差の検定」では、統計的検出力不足により、大きな悪影響が見過ごされ、危険な農薬が承認されてしまう問題がありました。実際に、EUで承認された農薬が後に有害と判明し、規制・禁止された事例も多数あります。この問題に対処するため、欧州食品安全機関（EFSA）は、2023年にミツバチの農薬リスク評価に関するガイダンスを改訂し、「影響がない」ことを証明する差の検定から、「影響が特定の保護目標（SPG）を超えない」ことを証明する「同等性試験」への移行を推奨しました。ミツバチの場合、SPGはコロニーサイズの10%未満の減少とされています。",
+        "novelty": "従来の農薬審査では、「農薬に悪影響がない」ことを証明する「差の検定」が主流でした。しかし、この方法では、統計的な検出力が低い（サンプル数が少ないなど）と、実際には悪影響があっても「影響なし」と誤って判断され、危険な農薬が承認されてしまうリスクがありました。 本研究は、新しい「同等性試験」の有効性をシミュレーションで検証し、EFSAの推奨する方法が、危険な農薬を「安全」と誤認するリスクを低く抑えることを示しました。また、初期のコロニーサイズを調整するなどの工夫で、必要な試験規模を抑えつつ、信頼性の高い評価が可能になることを明らかにしました。",
+        "method": "本研究では、ネオニコチノイド系殺虫剤の再承認のために提出された実際のミツバチ野外試験データ（Rolke et al., 2016）を基に、シミュレーションを行いました。このシミュレーションでは、元のデータから分布パラメータを導出し、コロニーの初期サイズやサイトの識別情報を含む新しいデータセットを生成しました。次に、初期のミツバチ数に基づいてコロニーを再配置するアンチクラスターランダム化をオプションで適用し、農薬処理後のコロニーサイズの変化をシミュレートしました。生成されたデータは一般化混合効果モデル（GLMM）に適合され、EFSAが推奨する同等性試験、Hotoppらが提案する修正同等性試験、および従来の差の検定を用いて、農薬が「低リスク」か「高リスク」かを分類しました。この手順は、各効果サイズと共変量調整戦略ごとに5,000回繰り返され、農薬が「低リスク」と分類される割合が推定されました。",
+        "results": "シミュレーションの結果、EFSAが推奨する同等性試験は、危険な農薬を「低リスク」と誤分類するリスクを確実に低く抑えることが示されました。また、農薬の効果が5%以下の場合、必要な試験サイト数は従来のEFSAガイダンスよりも少なくなることが判明しました。さらに、初期コロニーサイズをモデルに組み込む（共変量調整）か、アンチクラスターランダム化を用いてコロニーの割り当てを最適化することで、検出力を損なわずに必要な試験サイト数を削減できることが明らかになりました。",
+        "why": "従来の「差の検定」は、「効果がない」という帰無仮説を棄却できない場合、「効果がない」と結論づけてしまう傾向がありました。しかし、これは検出力不足による「見落とし」のリスクをはらんでいます。一方、新しい「同等性試験」は、「効果が許容範囲を超える」という帰無仮説を棄却することで「低リスク」と判断するため、危険な農薬を誤って「安全」と判断するリスクを低減します。この試験は、本来リスクが高いと疑われる農薬に対して、より厳格な証明を求めることになります。また、アンチクラスターランダム化や共変量調整は、実験におけるばらつき（ノイズ）を減らすことで、統計的な検出力を高め、より少ないサンプル数で信頼性の高い結果を得ることを可能にします。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / stat.ME）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "regulatory-policy",
+      "arxivPrimary": "stat.ME",
+      "titleJa": "農薬リスク評価における同等性試験：設計、分析、解釈のための評価と実践的ガイダンス",
+      "catchTitle": "農薬の安全審査、本当に大丈夫？",
+      "hook": "「この農薬、本当に安全なの？」あなたはそう思ったことはありませんか？実は、これまでの農薬審査には大きな落とし穴がありました。",
+      "background": "農薬は世界中で非標的生物に害を及ぼす可能性があり、承認前に生態学的リスク評価が行われます。しかし、従来の「差の検定」では、統計的検出力不足により、大きな悪影響が見過ごされ、危険な農薬が承認されてしまう問題がありました。実際に、EUで承認された農薬が後に有害と判明し、規制・禁止された事例も多数あります。この問題に対処するため、欧州食品安全機関（EFSA）は、2023年にミツバチの農薬リスク評価に関するガイダンスを改訂し、「影響がない」ことを証明する差の検定から、「影響が特定の保護目標（SPG）を超えない」ことを証明する「同等性試験」への移行を推奨しました。ミツバチの場合、SPGはコロニーサイズの10%未満の減少とされています。",
+      "quiz": {
+        "question": "従来の農薬リスク評価における「差の検定」が抱えていた主な問題点は何ですか？",
+        "options": [
+          "農薬のコストが高すぎたこと",
+          "統計的検出力不足により、悪影響が見過ごされるリスクがあったこと",
+          "試験期間が長すぎたこと"
+        ],
+        "correctIndex": 1,
+        "explanation": "従来の差の検定では、統計的検出力（サンプル数など）が不足していると、実際には悪影響があっても「影響なし」と誤って判断され、危険な農薬が承認されてしまうリスクがありました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "同等性試験",
+          "definition": "ある処理の効果が、事前に定めた許容範囲内にあることを統計的に証明する手法。"
+        },
+        {
+          "term": "アンチクラスターランダム化",
+          "definition": "実験群間の初期条件のばらつきを最小化するように、対象を割り当てる手法。"
+        },
+        {
+          "term": "一般化混合効果モデル",
+          "definition": "複数の要因が複雑に絡み合うデータを分析するための統計モデル。"
+        },
+        {
+          "term": "差の検定",
+          "definition": "2つのグループ間に統計的に有意な差があるかを評価する手法。"
+        },
+        {
+          "term": "帰無仮説",
+          "definition": "統計的検定において、否定されることを期待する仮説。"
+        },
+        {
+          "term": "検出力",
+          "definition": "統計的検定において、偽の帰無仮説を正しく棄却する確率。"
+        },
+        {
+          "term": "共変量調整",
+          "definition": "分析において、結果に影響を与える可能性のある要因を統計的に考慮すること。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "農薬の安全審査は「影響がない」から「許容範囲内」を証明する同等性試験へ移行するが、その厳格な運用には工夫が必要。",
+      "noveltyContrast": {
+        "before": "従来の農薬審査では、「農薬に悪影響がない」ことを証明する「差の検定」が主流でした。しかし、この方法では、統計的な検出力が低い（サンプル数が少ないなど）と、実際には悪影響があっても「影響なし」と誤って判断され、危険な農薬が承認されてしまうリスクがありました。",
+        "after": "本研究は、新しい「同等性試験」の有効性をシミュレーションで検証し、EFSAの推奨する方法が、危険な農薬を「安全」と誤認するリスクを低く抑えることを示しました。また、初期のコロニーサイズを調整するなどの工夫で、必要な試験規模を抑えつつ、信頼性の高い評価が可能になることを明らかにしました。"
+      },
+      "analogy": {
+        "title": "畑の土壌検査、基準の変更と効率化",
+        "body": "これはまるで、畑の土壌検査で「この土壌には有害物質が全く含まれていない」ことを証明する（従来の差の検定）のが難しすぎたので、「有害物質の量が、作物の生育に影響しない許容範囲内である」ことを証明する（新しい同等性試験）ように基準が変わったようなものです。しかし、新しい基準でも、検査する土壌のサンプル数が少なすぎると、本当は有害物質が多いのに「大丈夫」と誤って判断してしまうリスクがあります。そこで、土壌の初期状態（肥沃度など）を事前にしっかり調べて、均等にサンプリングする（アンチクラスターランダム化）ことで、より少ないサンプル数で信頼性の高い検査ができるようになる、という話です。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+3.2pt",
+          "label": "EFSA推奨の同等性試験は、危険な農薬を「低リスク」と誤分類する確率を低く抑える"
+        }
+      ],
+      "whyYouCare": "この研究は、私たちが口にする農産物の安全性を守る上で非常に重要です。これまで、農薬の安全審査は「影響がない」ことを証明する難しさから、危険な農薬が見過ごされるリスクがありました。しかし、新しい「同等性試験」の導入と、本研究が示す「効率的な試験設計」によって、より少ないコストで、より信頼性の高い安全評価が可能になります。これは、農家が安心して農薬を使用できる環境を整え、消費者が安全な食品を選べるようになるだけでなく、ミツバチなどの非標的生物への影響を最小限に抑え、持続可能な農業の実現にも貢献します。あなたの食卓に並ぶ野菜や果物が、より厳格な基準で安全性が確認される未来へとつながるのです。",
+      "takeawayTalk": "農薬の安全審査、これからは「影響なし」じゃなく「許容範囲内」を科学的に証明する時代に！",
+      "bodyText": "本研究では、ネオニコチノイド系殺虫剤の再承認のために提出された実際のミツバチ野外試験データ（Rolke et al., 2016）を基に、シミュレーションを行いました。このシミュレーションでは、元のデータから分布パラメータを導出し、コロニーの初期サイズやサイトの識別情報を含む新しいデータセットを生成しました。次に、初期のミツバチ数に基づいてコロニーを再配置するアンチクラスターランダム化をオプションで適用し、農薬処理後のコロニーサイズの変化をシミュレートしました。生成されたデータは一般化混合効果モデル（GLMM）に適合され、EFSAが推奨する同等性試験、Hotoppらが提案する修正同等性試験、および従来の差の検定を用いて、農薬が「低リスク」か「高リスク」かを分類しました。この手順は、各効果サイズと共変量調整戦略ごとに5,000回繰り返され、農薬が「低リスク」と分類される割合が推定されました。\n\n従来の「差の検定」は、「効果がない」という帰無仮説を棄却できない場合、「効果がない」と結論づけてしまう傾向がありました。しかし、これは検出力不足による「見落とし」のリスクをはらんでいます。一方、新しい「同等性試験」は、「効果が許容範囲を超える」という帰無仮説を棄却することで「低リスク」と判断するため、危険な農薬を誤って「安全」と判断するリスクを低減します。この試験は、本来リスクが高いと疑われる農薬に対して、より厳格な証明を求めることになります。また、アンチクラスターランダム化や共変量調整は、実験におけるばらつき（ノイズ）を減らすことで、統計的な検出力を高め、より少ないサンプル数で信頼性の高い結果を得ることを可能にします。",
+      "bodyGlossary": [
+        {
+          "term": "アンチクラスターランダム化",
+          "definition": "実験群間の初期条件のばらつきを最小化するように、対象を割り当てる手法。",
+          "start": 181,
+          "end": 194
+        },
+        {
+          "term": "一般化混合効果モデル",
+          "definition": "複数の要因が複雑に絡み合うデータを分析するための統計モデル。",
+          "start": 242,
+          "end": 252
+        },
+        {
+          "term": "同等性試験",
+          "definition": "ある処理の効果が、事前に定めた許容範囲内にあることを統計的に証明する手法。",
+          "start": 273,
+          "end": 278
+        },
+        {
+          "term": "差の検定",
+          "definition": "2つのグループ間に統計的に有意な差があるかを評価する手法。",
+          "start": 305,
+          "end": 309
+        },
+        {
+          "term": "共変量調整",
+          "definition": "分析において、結果に影響を与える可能性のある要因を統計的に考慮すること。",
+          "start": 352,
+          "end": 357
+        },
+        {
+          "term": "帰無仮説",
+          "definition": "統計的検定において、否定されることを期待する仮説。",
+          "start": 423,
+          "end": 427
+        },
+        {
+          "term": "検出力",
+          "definition": "統計的検定において、偽の帰無仮説を正しく棄却する確率。",
+          "start": 469,
+          "end": 472
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "アンチクラスターランダム化",
+          "definition": "実験群間の初期条件のばらつきを最小化するように、対象を割り当てる手法。",
+          "start": 181,
+          "end": 194
+        },
+        {
+          "term": "一般化混合効果モデル",
+          "definition": "複数の要因が複雑に絡み合うデータを分析するための統計モデル。",
+          "start": 242,
+          "end": 252
+        },
+        {
+          "term": "同等性試験",
+          "definition": "ある処理の効果が、事前に定めた許容範囲内にあることを統計的に証明する手法。",
+          "start": 273,
+          "end": 278
+        },
+        {
+          "term": "差の検定",
+          "definition": "2つのグループ間に統計的に有意な差があるかを評価する手法。",
+          "start": 305,
+          "end": 309
+        },
+        {
+          "term": "共変量調整",
+          "definition": "分析において、結果に影響を与える可能性のある要因を統計的に考慮すること。",
+          "start": 352,
+          "end": 357
+        },
+        {
+          "term": "帰無仮説",
+          "definition": "統計的検定において、否定されることを期待する仮説。",
+          "start": 423,
+          "end": 427
+        },
+        {
+          "term": "検出力",
+          "definition": "統計的検定において、偽の帰無仮説を正しく棄却する確率。",
+          "start": 469,
+          "end": 472
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 321,
+      "keyFigure": {
+        "imagePath": "/figures/2607.07543v1_results.png",
+        "page": 17,
+        "caption": "試験サイト数と調整戦略が統計的検出力にどう影響するかを示しています。",
+        "label": "Fig. 3. Statistical power in relation to number of sites and adjustment strategy. Curves show the",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-13T22:55:53.116Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.07543v1_results.png",
+          "page": 17,
+          "caption": "試験サイト数と調整戦略が統計的検出力にどう影響するかを示しています。",
+          "label": "Fig. 3. Statistical power in relation to number of sites and adjustment strategy. Curves show the",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-13T22:55:53.116Z"
+        },
+        {
+          "imagePath": "/figures/2607.07543v1_why.png",
+          "page": 24,
+          "caption": "異なる統計的検定に基づいた農薬効果の解釈の違いを示しています。",
+          "label": "Fig. 4. Interpretation of pesticide effects based on different statistical tests. Each row represents a",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-13T22:55:53.116Z"
+        }
+      ]
+    }
+  ]
+}

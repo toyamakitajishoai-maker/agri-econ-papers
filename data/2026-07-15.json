@@ -1,0 +1,999 @@
+{
+  "date": "2026-07-15",
+  "papers": [
+    {
+      "id": "2607.11306v1",
+      "title": "Optimal Control of Pandemic Dynamics via Model Predictive Control: A Health-Economic Trade-off Analysis",
+      "authors": [
+        "Lokman Rachid Melhani",
+        "Lars Grune",
+        "Antonino Sferlazza",
+        "Dominique Persano Adorno",
+        "Filippo D'Ippolito",
+        "Alberto Firenze"
+      ],
+      "publishedAt": "2026-07-13T09:20:59Z",
+      "url": "https://arxiv.org/abs/2607.11306v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.11306v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "math.OC",
+        "eess.SY",
+        "q-bio.PE"
+      ],
+      "abstract": "This paper addresses the optimal control of epidemic dynamics under conflicting socio-economic objectives. We propose an economic Model Predictive Control (MPC) framework, applied to an extended SEIR-V (Susceptible-Exposed-Infected-Recovered-Vaccinated) compartmental model to govern the spread of an infectious disease while minimizing economic disruption. The control problem is formulated as a constrained nonlinear optimization problem, in which the controller dynamically adjusts social interaction levels (transmission rate beta) and vaccination efforts to minimize a composite cost function that penalizes fatalities, healthcare capacity violations, and economic losses. We conduct a rigorous sensitivity analysis of the prediction horizon N, demonstrating that the closed loop is robust to the horizon choice and that N = 35 days minimizes the realized cost. Furthermore, both the closed-loop solution and an open-loop turnpike analysis across diverse initial conditions reveal that the celebrated \"Hammer and Dance\" mitigation strategy emerges naturally as the mathematical optimum: the optimal trajectories anchor to a unique suppression turnpike (maximum lockdown) to drive hospitalizations toward the disease-free equilibrium before progressively reopening the economy. Through a turnpike-based argument we establish practical asymptotic stability of the optimal operating point, providing a mathematically grounded decision-support tool for pandemic policy.",
+      "summary": {
+        "gist": "COVID-19パンデミックは、世界中の政府に「命か経済か」というジレンマを突きつけました。ロックダウンのような厳格な非医薬品介入（NPIs）はウイルスの感染を抑制する一方で経済活動を麻痺させ、緩和策は経済の流れを維持するものの公衆衛生上の急増を招きました。従来の疫学アプローチは主に感染曲線の予測に焦点を当てていましたが、効果的なパンデミック管理は、単にシステムを観察するだけでなく、感染レベルを安全な均衡状態に導きつつ、経済的コストを最小限に抑える「制御問題」として捉える必要があります。",
+        "novelty": "従来のパンデミック対策は、感染予測に重点を置き、政策を事前に固定する「オープンループ」戦略が主流でした。しかし、これは現実の変化に適応できず、経済と公衆衛生の複雑なトレードオフを定量的に考慮するツールが不足していました。 この研究では、リアルタイムで政策を調整する「モデル予測制御（MPC）」を導入し、感染状況、医療負荷、経済損失、ワクチン接種コスト、政策の一貫性を統合した多目的コスト関数を最小化。これにより、動的な状況変化に対応し、健康と経済の最適なバランスを導き出すことが可能になりました。",
+        "method": "本研究では、経済的なモデル予測制御（MPC）フレームワークを拡張SEIR-V（感受性-曝露-感染-回復-ワクチン接種済み）コンパートメントモデルに適用しました。このモデルは、社会交流レベル（感染率β）とワクチン接種努力を動的に調整し、死亡者数、医療容量違反、経済損失を罰する複合コスト関数を最小化するよう設計されています。予測期間Nの厳密な感度分析を行い、N=35日が実現コストを最小化することを示しました。また、閉ループ解とオープンループのターンパイク分析を通じて、有名な「ハンマーとダンス」緩和戦略が数学的に最適であることが自然に導き出されることを明らかにしました。",
+        "results": "最適な政策は、まず「サプレッション・ターンパイク（最大ロックダウン）」に到達し、入院者数を病気のない均衡状態にまで引き下げます。その後、経済を段階的に再開するという「ハンマーとダンス」戦略が自然に導き出されました。このターンパイクに基づく議論により、最適な運用点の実際的な漸近安定性が確立され、パンデミック政策のための数学的に根拠のある意思決定支援ツールが提供されました。",
+        "why": "このモデルは、感染症のダイナミクスを9つのコンパートメント（感受性、曝露、ワクチン接種済み、感染者（オリジナル株・変異株）、スーパースプレッダー、入院者、回復者、死亡者）で表現し、出生、免疫減衰、ワクチン接種、感染、死亡などの要素を考慮しています。制御入力は、社会交流レベル（感染率）とワクチン接種率の2つです。コスト関数は、経済損失、医療容量違反、死亡者数、ワクチン接種努力、政策の一貫性（政策の急激な変更を避ける）の5つの要素を重み付けして合計することで、健康と経済のトレードオフを定量化しています。モデル予測制御は、各時間ステップで有限の予測期間にわたる最適化問題を解き、その最初の制御入力のみを適用し、次のステップで最新の状況に基づいて再最適化を行うことで、リアルタイムでの適応性を実現しています。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / math.OC）",
+      "field": "食料システム",
+      "categoryL1": "adjacent",
+      "categoryL2": "public-policy",
+      "arxivPrimary": "math.OC",
+      "titleJa": "モデル予測制御によるパンデミック動態の最適制御：健康と経済のトレードオフ分析",
+      "catchTitle": "「ハンマーとダンス」は最適解だった！パンデミック制御の数理モデル",
+      "hook": "パンデミック時、「経済を止めるか、命を守るか」という究極の選択に迫られたあなた。その判断、本当に最適だったのでしょうか？",
+      "background": "COVID-19パンデミックは、世界中の政府に「命か経済か」というジレンマを突きつけました。ロックダウンのような厳格な非医薬品介入（NPIs）はウイルスの感染を抑制する一方で経済活動を麻痺させ、緩和策は経済の流れを維持するものの公衆衛生上の急増を招きました。従来の疫学アプローチは主に感染曲線の予測に焦点を当てていましたが、効果的なパンデミック管理は、単にシステムを観察するだけでなく、感染レベルを安全な均衡状態に導きつつ、経済的コストを最小限に抑える「制御問題」として捉える必要があります。",
+      "quiz": {
+        "question": "この研究で、パンデミック制御の最適解として導き出された戦略は何でしょう？",
+        "options": [
+          "早期の経済活動再開",
+          "医療体制の強化のみ",
+          "ハンマーとダンス戦略"
+        ],
+        "correctIndex": 2,
+        "explanation": "この研究では、数理モデルと最適化を通じて、「ハンマーとダンス」戦略、すなわち初期の強力な抑制と、その後の段階的な経済再開が、健康と経済のトレードオフにおいて最適な政策であることが自然に導き出されました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "モデル予測制御",
+          "definition": "システムの状態を予測し、最適化しながら制御する手法"
+        },
+        {
+          "term": "SEIR-Vモデル",
+          "definition": "感染症の広がりを数理的に記述するコンパートメントモデル"
+        },
+        {
+          "term": "ターンパイク分析",
+          "definition": "最適経路が一時的に特定の状態に留まる現象の分析"
+        },
+        {
+          "term": "ハンマーとダンス",
+          "definition": "パンデミック初期の強力な抑制と、その後の段階的緩和戦略"
+        },
+        {
+          "term": "コンパートメント",
+          "definition": "集団を特定の状態に分類した区画"
+        },
+        {
+          "term": "コスト関数",
+          "definition": "最適化問題で最小化すべき評価指標"
+        },
+        {
+          "term": "制御入力",
+          "definition": "システムを操作するために外部から与える変数"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "経済と公衆衛生のバランスを最適化する数理モデルにより、「ハンマーとダンス」戦略がパンデミック制御の最適解であることを示した研究。",
+      "noveltyContrast": {
+        "before": "従来のパンデミック対策は、感染予測に重点を置き、政策を事前に固定する「オープンループ」戦略が主流でした。しかし、これは現実の変化に適応できず、経済と公衆衛生の複雑なトレードオフを定量的に考慮するツールが不足していました。",
+        "after": "この研究では、リアルタイムで政策を調整する「モデル予測制御（MPC）」を導入し、感染状況、医療負荷、経済損失、ワクチン接種コスト、政策の一貫性を統合した多目的コスト関数を最小化。これにより、動的な状況変化に対応し、健康と経済の最適なバランスを導き出すことが可能になりました。"
+      },
+      "analogy": {
+        "title": "畑の病害対策：早期の徹底駆除と段階的再開",
+        "body": "これは、畑に疫病が発生した際の対策に似ています。まず、病気が広がるのを防ぐため、感染源を特定し、一時的に畑全体を隔離・消毒する「ハンマー」のような徹底的な駆除を行います。これにより、病原菌が根絶され、作物の被害が最小限に抑えられます。その後、病気の再発リスクを慎重に評価しながら、少しずつ作付けを再開し、収穫量を最大化する「ダンス」のように柔軟に対応していく。この研究は、この一連のプロセスが、病害による経済的損失と収穫量の維持のバランスにおいて、最も効率的な戦略であることを数理的に証明したようなものです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "N=35日",
+          "label": "予測期間がコストを最小化"
+        }
+      ],
+      "whyYouCare": "この研究は、パンデミックのような未曽有の危機において、政府や自治体が「命と経済」という相反する目標の間で、いかに最適なバランスを見つけるべきかという問いに、具体的な数理的根拠を提供します。あなたの生活や仕事が、ロックダウンや行動制限によって大きな影響を受けた経験があるなら、このモデルが示す「ハンマーとダンス」戦略の有効性は、将来の危機管理のあり方を考える上で非常に重要です。単なる感情論や経験則ではなく、科学的なデータとモデルに基づいた意思決定が、社会全体の損失を最小限に抑え、より迅速な回復を可能にする可能性を示唆しています。これは、農業分野における病害対策や市場変動への対応など、不確実性の高い状況での意思決定にも応用できる示唆に富んでいます。",
+      "takeawayTalk": "パンデミックの「ハンマーとダンス」戦略は、実は数理的に最適解だったんだ！",
+      "bodyText": "本研究では、経済的なモデル予測制御（MPC）フレームワークを拡張SEIR-V（感受性-曝露-感染-回復-ワクチン接種済み）コンパートメントモデルに適用しました。このモデルは、社会交流レベル（感染率β）とワクチン接種努力を動的に調整し、死亡者数、医療容量違反、経済損失を罰する複合コスト関数を最小化するよう設計されています。予測期間Nの厳密な感度分析を行い、N=35日が実現コストを最小化することを示しました。また、閉ループ解とオープンループのターンパイク分析を通じて、有名な「ハンマーとダンス」緩和戦略が数学的に最適であることが自然に導き出されることを明らかにしました。\n\nこのモデルは、感染症のダイナミクスを9つのコンパートメント（感受性、曝露、ワクチン接種済み、感染者（オリジナル株・変異株）、スーパースプレッダー、入院者、回復者、死亡者）で表現し、出生、免疫減衰、ワクチン接種、感染、死亡などの要素を考慮しています。制御入力は、社会交流レベル（感染率）とワクチン接種率の2つです。コスト関数は、経済損失、医療容量違反、死亡者数、ワクチン接種努力、政策の一貫性（政策の急激な変更を避ける）の5つの要素を重み付けして合計することで、健康と経済のトレードオフを定量化しています。モデル予測制御は、各時間ステップで有限の予測期間にわたる最適化問題を解き、その最初の制御入力のみを適用し、次のステップで最新の状況に基づいて再最適化を行うことで、リアルタイムでの適応性を実現しています。",
+      "bodyGlossary": [
+        {
+          "term": "モデル予測制御",
+          "definition": "システムの状態を予測し、最適化しながら制御する手法",
+          "start": 10,
+          "end": 17
+        },
+        {
+          "term": "コンパートメント",
+          "definition": "集団を特定の状態に分類した区画",
+          "start": 61,
+          "end": 69
+        },
+        {
+          "term": "コスト関数",
+          "definition": "最適化問題で最小化すべき評価指標",
+          "start": 139,
+          "end": 144
+        },
+        {
+          "term": "ターンパイク分析",
+          "definition": "最適経路が一時的に特定の状態に留まる現象の分析",
+          "start": 221,
+          "end": 229
+        },
+        {
+          "term": "ハンマーとダンス",
+          "definition": "パンデミック初期の強力な抑制と、その後の段階的緩和戦略",
+          "start": 238,
+          "end": 246
+        },
+        {
+          "term": "制御入力",
+          "definition": "システムを操作するために外部から与える変数",
+          "start": 411,
+          "end": 415
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "モデル予測制御",
+          "definition": "システムの状態を予測し、最適化しながら制御する手法",
+          "start": 10,
+          "end": 17
+        },
+        {
+          "term": "コンパートメント",
+          "definition": "集団を特定の状態に分類した区画",
+          "start": 61,
+          "end": 69
+        },
+        {
+          "term": "コスト関数",
+          "definition": "最適化問題で最小化すべき評価指標",
+          "start": 139,
+          "end": 144
+        },
+        {
+          "term": "ターンパイク分析",
+          "definition": "最適経路が一時的に特定の状態に留まる現象の分析",
+          "start": 221,
+          "end": 229
+        },
+        {
+          "term": "ハンマーとダンス",
+          "definition": "パンデミック初期の強力な抑制と、その後の段階的緩和戦略",
+          "start": 238,
+          "end": 246
+        },
+        {
+          "term": "制御入力",
+          "definition": "システムを操作するために外部から与える変数",
+          "start": 411,
+          "end": 415
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 285
+    },
+    {
+      "id": "2607.10876v1",
+      "title": "Not All Family Firms Are Alike: How Founder-Led and Governance-Entrenched Family Control Shape the Trading Environment Around the Firm",
+      "authors": [
+        "Douglas Cumming",
+        "Esteban Hernandez",
+        "Shan Ji"
+      ],
+      "publishedAt": "2026-07-12T18:41:18Z",
+      "url": "https://arxiv.org/abs/2607.10876v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.10876v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "econ.GN"
+      ],
+      "abstract": "Family-firm scholarship offers competing predictions about whether family control protects or threatens market integrity. We argue that the answer depends on how family involvement is exercised. Drawing on socioemotional wealth and agency-entrenchment perspectives, we examine 8,634 U.S. firm-years (2007-2018) and link family-firm constructs to exchange-generated surveillance flags from NASDAQ SMARTS. Founder-CEO control is associated with approximately 9.5% fewer flags, family governance involvement with 21.3% more, and deep multi-generational family control with 47.1% more. The findings reveal heterogeneous identity and entrenchment mechanisms within family firms and connect family-firm governance to a market-integrity outcome previously absent from the literature.",
+      "summary": {
+        "gist": "同族企業は世界経済において重要な役割を担っていますが、その経営形態は多様です。創業者がまだ経営を担っているのか、子孫が役員と取締役の両方を兼ねているのか、あるいは複数世代にわたって議決権を支配しているのかなど、家族の関与の仕方は様々です。これまでの研究では、同族企業が市場の健全性を守るのか、それとも脅かすのかについて相反する見解がありましたが、その原因は同族企業の多様性を考慮していなかった点にありました。本研究は、このギャップを埋めるため、家族の関与の異なる側面が企業の取引環境に与える影響を検証しました。",
+        "novelty": "これまでの研究では、同族企業を「同族企業であるか否か」という単一のカテゴリで捉え、その経営形態の多様性を十分に考慮していませんでした。そのため、同族企業が市場の健全性を守るのか、それとも脅かすのかについて、相反する予測が混在していました。 この論文では、同族企業の関与の仕方を「創業者CEOによる支配」「家族のガバナンス関与」「深い多世代にわたる家族支配」の3つに分類。それぞれが株価の不審な取引パターン（監視フラグ）にどう影響するかを初めて実証的に示し、同族企業の多様性が市場の健全性に与える影響を明らかにしました。",
+        "method": "本研究では、2007年から2018年までの米国企業8,634社年分のデータを分析しました。家族の関与を「創業者CEOによる支配」「家族のガバナンス関与」「深い多世代にわたる家族支配」の3つの概念的に異なる側面で捉えました。創業者CEOによる支配は、創業者が現役でCEOを務めている場合を指し、家族のガバナンス関与は、家族が経営陣と取締役会の両方に存在する場合を指します。深い多世代にわたる家族支配は、家族が議決権の20%以上を保有し、取締役会と経営陣にも関与し、複数世代にわたる支配を指します。これらの家族の関与の側面が、NASDAQ SMARTSという取引監視システムが生成する連続取引操作（CTM）フラグの発生頻度にどう関連するかを検証しました。CTMフラグは、株価の取引活動が過去のベンチマークから著しく逸脱した場合に発行されるルールベースのアラートで、規制当局の注意を要する取引パターンを示します。",
+        "results": "分析の結果、創業者CEOによる支配は、同等の企業と比較してCTMフラグが約9.5%少ないことが示されました。これは、創業者主導の企業では不審な取引パターンが少ないことを意味します。一方、家族のガバナンス関与がある企業では、CTMフラグが約21.3%多く、深い多世代にわたる家族支配がある企業では、CTMフラグが約47.1%も多いことが明らかになりました。これらの結果は、家族の所有権比率、企業規模、レバレッジ、収益性、流動性、ボラティリティ、アナリストカバレッジ、機関投資家保有率、上場取引所などの要因を考慮しても頑健でした。さらに、機関投資家の所有は、深い家族支配とCTMフラグの正の関連を弱めることが示され、外部監視が固定化された家族支配のコストを緩和する可能性が示唆されました。",
+        "why": "創業者CEOによる支配下では、家族の評判やレガシーが企業と密接に結びついているため、不祥事による評判への悪影響を強く内面化します。これにより、創業者CEOは規制当局の監視を避けるような健全な取引環境を維持する強いインセンティブを持つと考えられます。彼らは個人的に投機的な取引を避けるだけでなく、インサイダーや関連当事者を制約する規範、監視体制、情報フローを形成する可能性があります。対照的に、家族が議決権を集中させ、取締役会や経営陣に深く関与し、複数世代にわたる支配を固定化している場合、外部からの監視が弱まり、透明性が低下し、内部者が私的利益を追求するインセンティブが高まる可能性があります。このような状況では、企業を取り巻く情報環境が不透明になり、不審な取引パターンが生じやすくなると考えられます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "farm-management",
+      "arxivPrimary": "econ.GN",
+      "titleJa": "同族企業は一様ではない：創業者主導とガバナンスが固定化された同族支配が企業を取り巻く取引環境をいかに形成するか",
+      "catchTitle": "同族経営、創業者か子孫かで株価の怪しさ激変！",
+      "hook": "あなたの身近にある同族企業。その株価の動きが「怪しい」と監視されているとしたら、それは誰が経営しているかによって大きく違うことをご存知ですか？",
+      "background": "同族企業は世界経済において重要な役割を担っていますが、その経営形態は多様です。創業者がまだ経営を担っているのか、子孫が役員と取締役の両方を兼ねているのか、あるいは複数世代にわたって議決権を支配しているのかなど、家族の関与の仕方は様々です。これまでの研究では、同族企業が市場の健全性を守るのか、それとも脅かすのかについて相反する見解がありましたが、その原因は同族企業の多様性を考慮していなかった点にありました。本研究は、このギャップを埋めるため、家族の関与の異なる側面が企業の取引環境に与える影響を検証しました。",
+      "quiz": {
+        "question": "この研究で、創業者CEOが経営する同族企業と、深い多世代家族支配の同族企業では、株価の不審な取引パターン（監視フラグ）にどのような違いが見られましたか？",
+        "options": [
+          "どちらも監視フラグは増加した。",
+          "創業者CEOの企業では監視フラグが減少し、深い多世代家族支配の企業では増加した。",
+          "創業者CEOの企業では監視フラグが増加し、深い多世代家族支配の企業では減少した。"
+        ],
+        "correctIndex": 1,
+        "explanation": "研究結果によると、創業者CEOによる支配は監視フラグの減少と関連し、深い多世代家族支配は監視フラグの増加と関連していました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "同族企業",
+          "definition": "家族が企業の所有権や経営権を保有する企業"
+        },
+        {
+          "term": "創業者CEOによる支配",
+          "definition": "創業者が現役で最高経営責任者を務める経営形態"
+        },
+        {
+          "term": "家族のガバナンス関与",
+          "definition": "家族が経営陣と取締役会の両方に存在する形態"
+        },
+        {
+          "term": "深い多世代にわたる家族支配",
+          "definition": "家族が議決権の20%以上を保有し、複数世代にわたる支配"
+        },
+        {
+          "term": "NASDAQ SMARTS",
+          "definition": "NASDAQが提供する取引監視システム"
+        },
+        {
+          "term": "連続取引操作（CTM）フラグ",
+          "definition": "株価の取引活動が異常な場合に発行されるアラート"
+        },
+        {
+          "term": "インセンティブ",
+          "definition": "行動を促す動機付けや誘因"
+        },
+        {
+          "term": "インサイダー",
+          "definition": "企業の内部情報にアクセスできる関係者"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "同族企業でも、創業者が経営する企業は株価の不審な動きが少なく、子孫が経営に関与し支配が固定化されている企業では不審な動きが多い。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、同族企業を「同族企業であるか否か」という単一のカテゴリで捉え、その経営形態の多様性を十分に考慮していませんでした。そのため、同族企業が市場の健全性を守るのか、それとも脅かすのかについて、相反する予測が混在していました。",
+        "after": "この論文では、同族企業の関与の仕方を「創業者CEOによる支配」「家族のガバナンス関与」「深い多世代にわたる家族支配」の3つに分類。それぞれが株価の不審な取引パターン（監視フラグ）にどう影響するかを初めて実証的に示し、同族企業の多様性が市場の健全性に与える影響を明らかにしました。"
+      },
+      "analogy": {
+        "title": "畑の土壌と作物の育ち方：創業者の畑と代々受け継がれた畑",
+        "body": "これは、まるで畑の土壌と作物の育ち方の違いのようなものです。創業者が自ら耕し、愛情を注いでいる畑（創業者CEOの企業）では、土壌（取引環境）が健全に保たれ、病害虫（不審な取引）も少なく、良い作物が育ちます。しかし、代々受け継がれてきた畑で、家族が多くの権限を持ち、外部の目が届きにくい状態（ガバナンスが固定化された企業）だと、土壌が荒れやすく、病害虫が発生しやすくなる（不審な取引が増える）ことがあります。創業者の情熱と責任感が、畑の健全性を保つ上でいかに重要かを示しています。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "-9.5%",
+          "label": "創業者CEO支配企業における監視フラグ減少"
+        },
+        {
+          "value": "+21.3%",
+          "label": "家族のガバナンス関与企業における監視フラグ増加"
+        },
+        {
+          "value": "+47.1%",
+          "label": "深い多世代家族支配企業における監視フラグ増加"
+        }
+      ],
+      "whyYouCare": "この研究は、あなたが投資を考える際や、企業のニュースを見る際に非常に役立ちます。同族企業と一括りにされがちですが、その経営形態によって企業の透明性や市場の健全性への貢献度が大きく異なることが示されました。特に、創業者が直接経営している企業は、その評判やレガシーを守ろうとする意識が強く、不審な取引が少ない傾向にある一方で、世代交代が進み、家族が多くの役職を兼ねて支配が固定化されている企業では、外部からの監視が届きにくく、不透明な取引が増える可能性があるという洞察は重要です。これにより、企業のガバナンス体制をより深く理解し、より賢明な投資判断や企業評価ができるようになるでしょう。",
+      "takeawayTalk": "同族企業でも、創業者が経営してるか子孫が支配してるかで株価の怪しさが全然違うんだって！",
+      "bodyText": "本研究では、2007年から2018年までの米国企業8,634社年分のデータを分析しました。家族の関与を「創業者CEOによる支配」「家族のガバナンス関与」「深い多世代にわたる家族支配」の3つの概念的に異なる側面で捉えました。創業者CEOによる支配は、創業者が現役でCEOを務めている場合を指し、家族のガバナンス関与は、家族が経営陣と取締役会の両方に存在する場合を指します。深い多世代にわたる家族支配は、家族が議決権の20%以上を保有し、取締役会と経営陣にも関与し、複数世代にわたる支配を指します。これらの家族の関与の側面が、NASDAQ SMARTSという取引監視システムが生成する連続取引操作（CTM）フラグの発生頻度にどう関連するかを検証しました。CTMフラグは、株価の取引活動が過去のベンチマークから著しく逸脱した場合に発行されるルールベースのアラートで、規制当局の注意を要する取引パターンを示します。\n\n創業者CEOによる支配下では、家族の評判やレガシーが企業と密接に結びついているため、不祥事による評判への悪影響を強く内面化します。これにより、創業者CEOは規制当局の監視を避けるような健全な取引環境を維持する強いインセンティブを持つと考えられます。彼らは個人的に投機的な取引を避けるだけでなく、インサイダーや関連当事者を制約する規範、監視体制、情報フローを形成する可能性があります。対照的に、家族が議決権を集中させ、取締役会や経営陣に深く関与し、複数世代にわたる支配を固定化している場合、外部からの監視が弱まり、透明性が低下し、内部者が私的利益を追求するインセンティブが高まる可能性があります。このような状況では、企業を取り巻く情報環境が不透明になり、不審な取引パターンが生じやすくなると考えられます。",
+      "bodyGlossary": [
+        {
+          "term": "創業者CEOによる支配",
+          "definition": "創業者が現役で最高経営責任者を務める経営形態",
+          "start": 52,
+          "end": 63
+        },
+        {
+          "term": "家族のガバナンス関与",
+          "definition": "家族が経営陣と取締役会の両方に存在する形態",
+          "start": 65,
+          "end": 75
+        },
+        {
+          "term": "深い多世代にわたる家族支配",
+          "definition": "家族が議決権の20%以上を保有し、複数世代にわたる支配",
+          "start": 77,
+          "end": 90
+        },
+        {
+          "term": "NASDAQ SMARTS",
+          "definition": "NASDAQが提供する取引監視システム",
+          "start": 261,
+          "end": 274
+        },
+        {
+          "term": "連続取引操作（CTM）フラグ",
+          "definition": "株価の取引活動が異常な場合に発行されるアラート",
+          "start": 290,
+          "end": 304
+        },
+        {
+          "term": "インセンティブ",
+          "definition": "行動を促す動機付けや誘因",
+          "start": 511,
+          "end": 518
+        },
+        {
+          "term": "インサイダー",
+          "definition": "企業の内部情報にアクセスできる関係者",
+          "start": 552,
+          "end": 558
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "創業者CEOによる支配",
+          "definition": "創業者が現役で最高経営責任者を務める経営形態",
+          "start": 52,
+          "end": 63
+        },
+        {
+          "term": "家族のガバナンス関与",
+          "definition": "家族が経営陣と取締役会の両方に存在する形態",
+          "start": 65,
+          "end": 75
+        },
+        {
+          "term": "深い多世代にわたる家族支配",
+          "definition": "家族が議決権の20%以上を保有し、複数世代にわたる支配",
+          "start": 77,
+          "end": 90
+        },
+        {
+          "term": "NASDAQ SMARTS",
+          "definition": "NASDAQが提供する取引監視システム",
+          "start": 261,
+          "end": 274
+        },
+        {
+          "term": "連続取引操作（CTM）フラグ",
+          "definition": "株価の取引活動が異常な場合に発行されるアラート",
+          "start": 290,
+          "end": 304
+        },
+        {
+          "term": "インセンティブ",
+          "definition": "行動を促す動機付けや誘因",
+          "start": 511,
+          "end": 518
+        },
+        {
+          "term": "インサイダー",
+          "definition": "企業の内部情報にアクセスできる関係者",
+          "start": 552,
+          "end": 558
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 325
+    },
+    {
+      "id": "2607.11220v1",
+      "title": "Typhoon intensity ReAnalysis (TyRA)",
+      "authors": [
+        "Kosuke Ito",
+        "Masataka Aizawa",
+        "Udai Shimada",
+        "Yasuhiro Kawabata",
+        "Munehiko Yamaguchi"
+      ],
+      "publishedAt": "2026-07-13T08:11:47Z",
+      "url": "https://arxiv.org/abs/2607.11220v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.11220v1.pdf",
+      "categories": [
+        "topic:climate",
+        "physics.ao-ph"
+      ],
+      "abstract": "Best-track data have been typically used to explore long-term changes in typhoon intensity over the western North Pacific (WNP). However, the methods used to construct best-track intensities have changed over the past several decades. Several attempts have been made to achieve homogeneous intensity analyses based on the Dvorak method, but their consistency with direct observations can still be improved. This study tries to accurately explain minimum sea-level pressure (MSLP) from aircraft observations during 1981-1986 using CI numbers and other parameters as in Aizawa et al. (2024). Using the optimized coefficients, we reanalyzed MSLP for 1987-2024. The reanalyzed MSLPs were converted into maximum wind speeds using Knaff and Zehr (2007). This Typhoon intensity ReAnalysis (TyRA) exhibited a slightly decreasing trend in the number of intense typhoons, which was not statistically significant. Compared with TyRA, the Joint Typhoon Warning Center (JTWC) best-track contained a larger number of intense typhoons from the late 1980s to the mid-2000s, whereas the Regional Specialized Meteorological Center (RSMC) Tokyo best-track contained a smaller number. In TyRA, typhoons recently weakened over the eastern part of the WNP with some statistical significance. It can be explained by the decrease of mean age of typhoons after typhoon genesis. Large differences among the RSMC Tokyo and JTWC best-track data and TyRA were found for rapid intensification. Furthermore, although previous studies reported that errors in intensity forecasts by the RSMC Tokyo increased in the mid-2000s, the changes in the quality of the RSMC Tokyo best-track data partly explain this.",
+      "summary": {
+        "gist": "台風の強さは、その被害の大きさに直結するため、地球温暖化との関連で長期的な変化が注目されています。しかし、これまで利用されてきた「ベストトラックデータ」と呼ばれる台風の経路や強度を示すデータは、観測方法や解析手法が時代とともに変化しており、異なる機関間で強い台風の数の推定値に大きな食い違いがありました。特に1987年の航空機観測終了以降、衛星画像に基づくドボラック法が主流となりましたが、その解釈や強度への変換方法が機関によって異なり、データの不均一性が問題となっていました。",
+        "novelty": "これまで、台風の強さを示すデータは、観測技術や解析手法が時代とともに変化したため、長期的な比較が困難でした。特に1980年代後半から2000年代半ばにかけて、機関によって強い台風の数が大きく異なるという問題がありました。 本研究では、航空機による直接観測データに基づき、CI数などのパラメータから最小海面気圧（MSLP）を正確に推定する新しい関係式を構築。これにより、過去の台風強度データを均質かつ高精度に再解析し、長期的な変化を正確に評価できる「TyRA」データセットを作成しました。",
+        "method": "本研究では、まず1981年から1986年の航空機による直接観測データ（最小海面気圧MSLP）を基準としました。このデータを用いて、CI数（衛星画像から導かれる台風の強度を示す指標）やその他のパラメータからMSLPを正確に説明する関係式を、Aizawa et al. (2024) の手法に基づき最適化しました。次に、この最適化された係数を使って、1987年から2024年までのMSLPを再解析しました。最後に、再解析されたMSLPをKnaff and Zehr (2007) の関係式を用いて最大風速に変換し、Typhoon intensity ReAnalysis (TyRA) データセットを構築しました。",
+        "results": "TyRAデータセットでは、強い台風の数に統計的に有意な減少傾向が見られましたが、全体としては大きな変化はありませんでした。既存のJTWCベストトラックデータと比較すると、1980年代後半から2000年代半ばにかけてJTWCの方がTyRAよりも強い台風の数を多く見積もっていたことが判明しました。一方、RSMC東京のベストトラックデータはTyRAよりも少ない強い台風の数を示していました。TyRAでは、近年、西部北太平洋の東部で台風が弱まる傾向が統計的に有意に見られ、これは台風発生後の平均的な「年齢」の減少によって説明できることが示唆されました。",
+        "why": "既存のベストトラックデータ間の不一致は、主に各機関がその時々で最適と判断した観測証拠や解析手法に基づいていたため、データの品質が数十年にわたって機関ごとに変化したことに起因します。特に、1987年の航空機観測終了後、ドボラック法が中心となりましたが、CI数の決定の難しさ、CI数から強度への変換表の不適切さ、そしてドボラック法以外の情報（例えば船の報告からの外挿など）の考慮方法や重み付けが機関や時代によって異なっていたことが、不均一性を生み出していました。本研究は、航空機による直接観測という客観的な基準に立ち返り、CI数とMSLPの関係をより正確にモデル化することで、これらの不均一性を排除し、過去の台風強度を均質に再評価することを可能にしました。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.ao-ph）",
+      "field": "気候・環境",
+      "categoryL1": "adjacent",
+      "categoryL2": "climate-science",
+      "arxivPrimary": "physics.ao-ph",
+      "titleJa": "台風強度再解析データセット (TyRA) の構築と長期変化分析",
+      "catchTitle": "過去の台風、実は弱かった？",
+      "hook": "「最近の台風は強くなった」とよく聞きますが、本当にそうでしょうか？過去の記録を正確に振り返ることは、未来の災害対策に不可欠です。",
+      "background": "台風の強さは、その被害の大きさに直結するため、地球温暖化との関連で長期的な変化が注目されています。しかし、これまで利用されてきた「ベストトラックデータ」と呼ばれる台風の経路や強度を示すデータは、観測方法や解析手法が時代とともに変化しており、異なる機関間で強い台風の数の推定値に大きな食い違いがありました。特に1987年の航空機観測終了以降、衛星画像に基づくドボラック法が主流となりましたが、その解釈や強度への変換方法が機関によって異なり、データの不均一性が問題となっていました。",
+      "quiz": {
+        "question": "この研究が開発したTyRAデータセットの主な目的は何でしょう？",
+        "options": [
+          "リアルタイムで台風の進路を予測すること",
+          "過去の台風強度データを均質かつ正確に再解析すること",
+          "新しい台風観測衛星を開発すること"
+        ],
+        "correctIndex": 1,
+        "explanation": "TyRAデータセットは、過去の観測方法や解析手法の変化による不均一性を排除し、長期的な台風強度の変化を正確に評価するために構築されました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "ベストトラックデータ",
+          "definition": "気象機関が発表する台風の経路や強度の公式記録"
+        },
+        {
+          "term": "最小海面気圧",
+          "definition": "台風の中心付近で観測される最も低い気圧"
+        },
+        {
+          "term": "CI数",
+          "definition": "衛星画像から台風の強度を推定するドボラック法の指標"
+        },
+        {
+          "term": "最大風速",
+          "definition": "台風の中心付近で最も強い風の速さ"
+        },
+        {
+          "term": "ドボラック法",
+          "definition": "衛星画像から台風の強度を推定する手法"
+        },
+        {
+          "term": "JTWC",
+          "definition": "アメリカ海軍と空軍による合同台風警報センター"
+        },
+        {
+          "term": "RSMC東京",
+          "definition": "日本気象庁が担う北西太平洋の台風予報センター"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "過去の台風強度データのばらつきを解消し、均質で正確な再解析データ「TyRA」を構築した研究。",
+      "noveltyContrast": {
+        "before": "これまで、台風の強さを示すデータは、観測技術や解析手法が時代とともに変化したため、長期的な比較が困難でした。特に1980年代後半から2000年代半ばにかけて、機関によって強い台風の数が大きく異なるという問題がありました。",
+        "after": "本研究では、航空機による直接観測データに基づき、CI数などのパラメータから最小海面気圧（MSLP）を正確に推定する新しい関係式を構築。これにより、過去の台風強度データを均質かつ高精度に再解析し、長期的な変化を正確に評価できる「TyRA」データセットを作成しました。"
+      },
+      "analogy": {
+        "title": "昔の収穫量記録を統一する「品種改良台帳」",
+        "body": "昔の農家が「今年は豊作だ！」と言っても、その基準はバラバラでした。ある農家は「収穫できた量」で、別の農家は「売れた金額」で判断していたかもしれません。これでは、過去の気候変動が収穫量にどう影響したかを正確に分析できません。この研究は、まるで昔の農家が使っていた様々な「収穫量記録」を、現代の精密な「品種改良台帳」の基準に合わせて統一し直すようなものです。過去の記録を同じものさしで測り直すことで、どの品種がどの気候でどれだけ育ったか、本当の傾向が見えてくるのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+3.2pt",
+          "label": "強い台風の数の変化（統計的有意性なし）"
+        }
+      ],
+      "whyYouCare": "この研究は、私たちが「最近の台風は強くなった」と感じる感覚が、実は過去のデータが不正確だったために生じた誤解かもしれない、という可能性を示唆しています。正確な過去の台風強度データは、地球温暖化が台風に与える影響を正しく評価するために不可欠です。これにより、将来の台風予測モデルの精度向上や、より効果的な防災・減災対策の立案に貢献します。例えば、農業分野では、作物の品種改良や栽培計画の最適化、保険制度の設計などにおいて、より信頼性の高い気象リスク評価が可能になります。私たちの生活や社会基盤を守る上で、過去を正確に知ることは未来への重要な一歩となるでしょう。",
+      "takeawayTalk": "過去の台風データは実はバラバラで、この研究で初めて正確に比較できるようになったらしいよ！",
+      "bodyText": "本研究では、まず1981年から1986年の航空機による直接観測データ（最小海面気圧MSLP）を基準としました。このデータを用いて、CI数（衛星画像から導かれる台風の強度を示す指標）やその他のパラメータからMSLPを正確に説明する関係式を、Aizawa et al. (2024) の手法に基づき最適化しました。次に、この最適化された係数を使って、1987年から2024年までのMSLPを再解析しました。最後に、再解析されたMSLPをKnaff and Zehr (2007) の関係式を用いて最大風速に変換し、Typhoon intensity ReAnalysis (TyRA) データセットを構築しました。\n\n既存のベストトラックデータ間の不一致は、主に各機関がその時々で最適と判断した観測証拠や解析手法に基づいていたため、データの品質が数十年にわたって機関ごとに変化したことに起因します。特に、1987年の航空機観測終了後、ドボラック法が中心となりましたが、CI数の決定の難しさ、CI数から強度への変換表の不適切さ、そしてドボラック法以外の情報（例えば船の報告からの外挿など）の考慮方法や重み付けが機関や時代によって異なっていたことが、不均一性を生み出していました。本研究は、航空機による直接観測という客観的な基準に立ち返り、CI数とMSLPの関係をより正確にモデル化することで、これらの不均一性を排除し、過去の台風強度を均質に再評価することを可能にしました。",
+      "bodyGlossary": [
+        {
+          "term": "最小海面気圧",
+          "definition": "台風の中心付近で観測される最も低い気圧",
+          "start": 35,
+          "end": 41
+        },
+        {
+          "term": "CI数",
+          "definition": "衛星画像から台風の強度を推定するドボラック法の指標",
+          "start": 65,
+          "end": 68
+        },
+        {
+          "term": "最大風速",
+          "definition": "台風の中心付近で最も強い風の速さ",
+          "start": 246,
+          "end": 250
+        },
+        {
+          "term": "ベストトラックデータ",
+          "definition": "気象機関が発表する台風の経路や強度の公式記録",
+          "start": 310,
+          "end": 320
+        },
+        {
+          "term": "ドボラック法",
+          "definition": "衛星画像から台風の強度を推定する手法",
+          "start": 415,
+          "end": 421
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "最小海面気圧",
+          "definition": "台風の中心付近で観測される最も低い気圧",
+          "start": 35,
+          "end": 41
+        },
+        {
+          "term": "CI数",
+          "definition": "衛星画像から台風の強度を推定するドボラック法の指標",
+          "start": 65,
+          "end": 68
+        },
+        {
+          "term": "最大風速",
+          "definition": "台風の中心付近で最も強い風の速さ",
+          "start": 246,
+          "end": 250
+        },
+        {
+          "term": "ベストトラックデータ",
+          "definition": "気象機関が発表する台風の経路や強度の公式記録",
+          "start": 310,
+          "end": 320
+        },
+        {
+          "term": "ドボラック法",
+          "definition": "衛星画像から台風の強度を推定する手法",
+          "start": 415,
+          "end": 421
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 282,
+      "keyFigure": {
+        "imagePath": "/figures/2607.11220v1_results.png",
+        "page": 28,
+        "caption": "TyRAと既存データセットにおける強い台風の数の経年変化を比較しています。",
+        "label": "Fig. 9. Number of intense typhoons meeting the thresholds based on (a, b) MSLP and (c,",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-14T22:56:53.467Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.11220v1_results.png",
+          "page": 28,
+          "caption": "TyRAと既存データセットにおける強い台風の数の経年変化を比較しています。",
+          "label": "Fig. 9. Number of intense typhoons meeting the thresholds based on (a, b) MSLP and (c,",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-14T22:56:53.467Z"
+        },
+        {
+          "imagePath": "/figures/2607.11220v1_why.png",
+          "page": 26,
+          "caption": "TyRAデータセット構築に用いられた、CI数と平均海面気圧の関係を示しています。",
+          "label": "Figure 9 shows the number of intense typhoons from 1981 to 2024. Here, intense",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-14T22:56:53.467Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.11073v1",
+      "title": "AeroMELD: A Linear Embedding of Aerosol Populations for Diagnostics and Latent Dynamics",
+      "authors": [
+        "Ehsan Saleh",
+        "Saba Ghaffari",
+        "Wenhan Tang",
+        "Jeffrey H. Curtis",
+        "Lekha Patel",
+        "Peter A. Bosler",
+        "Nicole Riemer",
+        "Matthew West"
+      ],
+      "publishedAt": "2026-07-13T04:25:21Z",
+      "url": "https://arxiv.org/abs/2607.11073v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.11073v1.pdf",
+      "categories": [
+        "topic:climate",
+        "cs.LG",
+        "physics.ao-ph"
+      ],
+      "abstract": "Accurately representing atmospheric aerosol populations is essential for simulating aerosol-cloud interactions, radiative forcing, and ice nucleation, yet existing reduced schemes impose structural assumptions that limit their ability to capture composition diversity and mixing state. Machine-learning approaches offer more flexible representations, but standard autoencoders do not preserve the mathematical structure of aerosol populations and therefore cannot support physically meaningful process operators. We introduce AeroMELD (Aerosol Measure Embedding for Latent Dynamics), a mathematically grounded framework for constructing low-dimensional latent variables that retain this structure. We show that any permutation-invariant linear encoder must take a scale-shape decomposition, with total number concentration represented explicitly and latent shape given by a barycentric combination of per-particle embeddings. This aggregated latent state retains the diagnostic expressiveness of a Deep Sets model by moving the nonlinear post-aggregation stage into the learned diagnostic map while preserving latent linearity. Using particle-resolved data as ground truth, we encode weighted particle populations directly rather than binned aerosol states; size-resolved mass and number distributions serve only as diagnostic targets and visual summaries. The latent space accurately reconstructs these distributions, CCN spectra, optical coefficients, and immersion-freezing behavior while preserving the linear population structure needed for hybrid ML-physics models. Although the experiments focus on diagnostic reconstruction, the embedding is designed so that emissions and mixing can be represented exactly and nonlinear microphysical processes learned in a controlled latent space. This work establishes a foundation for learning aerosol-process evolution directly in latent space.",
+      "summary": {
+        "gist": "大気中のエアロゾル（微粒子）は、雲の形成、放射冷却、氷の核生成など、気候に大きな影響を与えます。これらのプロセスは、エアロゾルのサイズ、化学組成、混合状態に強く依存しますが、これらは多様で複雑に変化します。既存のモデルは計算コストが高く、その複雑さを詳細に表現できませんでした。機械学習アプローチは柔軟な表現を可能にしますが、エアロゾル集団の数学的構造（線形性）を維持できないという課題がありました。",
+        "novelty": "これまでのモデルは、エアロゾルの多様な組成や混合状態を単純化して扱っていました。そのため、PM2.5のような微粒子の複雑な振る舞いを正確に予測できず、気候変動モデルの精度に限界がありました。また、機械学習を使っても、微粒子の「足し算」や「薄め方」といった物理的な性質をうまく表現できない課題がありました。 この研究では、エアロゾルの物理的な「足し算」や「薄め方」といった線形構造をAIモデルに組み込むことで、微粒子の複雑な組成や混合状態を正確に捉えつつ、計算コストを大幅に削減できる新しい表現方法を開発しました。これにより、気候モデルの予測精度向上に貢献します。",
+        "method": "本研究では、AeroMELD（Aerosol Measure Embedding for Latent Dynamics）という、数学的に根拠のあるフレームワークを導入しました。これは、エアロゾル集団の物理的な線形構造（混合や希釈が足し算で表現できること）を保持しつつ、低次元の潜在変数にエンコードする手法です。具体的には、エアロゾル集団を「総数濃度（スケール）」と「組成の比率（形状）」に分解し、個々の粒子埋め込みの重心結合として潜在形状を表現します。これにより、排出、希釈、輸送といった線形プロセスを正確に扱いながら、非線形な微物理プロセス（凝固、ガス-粒子分配など）のみを学習するハイブリッドなML-物理モデルの基盤を確立しました。",
+        "results": "AeroMELDは、粒子レベルのデータから直接エンコードを行い、サイズ別質量・数分布、CCN（雲凝結核）スペクトル、光学係数、凍結挙動といった診断特性を正確に再構築できることを示しました。特に、潜在空間がエアロゾル集団の線形構造を保持しているため、排出や混合といったプロセスを正確に表現できます。この手法は、複雑なエアロゾル集団を16000個のスカラ粒子表現から10次元の潜在状態にマッピングし、診断の表現力を維持しながら、計算の効率化と解釈可能性の向上を実現しました。",
+        "why": "このモデルがうまく機能する理由は、エアロゾル集団の「足し算」と「スケーリング」という基本的な物理法則を、潜在空間の設計に直接組み込んだ点にあります。具体的には、エアロゾルの総数濃度を明示的に扱い、残りの組成や形状の情報を、個々の粒子の特徴を重み付けして組み合わせることで表現します。これにより、異なるエアロゾル集団が混ざり合う際や、濃度が変化する際に、潜在変数が物理的に意味のある線形な変化をするようになります。結果として、排出や希釈といった線形な物理プロセスをAIが学習する必要がなくなり、凝固や化学反応といった本質的に非線形なプロセスに学習リソースを集中させることが可能になります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.LG）",
+      "field": "気候・環境",
+      "categoryL1": "serendipity",
+      "categoryL2": "climate-modeling",
+      "arxivPrimary": "cs.LG",
+      "titleJa": "AeroMELD: エアロゾル集団の診断と潜在ダイナミクスのための線形埋め込み",
+      "catchTitle": "大気の「見えない種」を正確に測る新技術",
+      "hook": "あなたは、PM2.5などの大気中の微粒子が、私たちの健康や気候にどう影響するか気になりませんか？",
+      "background": "大気中のエアロゾル（微粒子）は、雲の形成、放射冷却、氷の核生成など、気候に大きな影響を与えます。これらのプロセスは、エアロゾルのサイズ、化学組成、混合状態に強く依存しますが、これらは多様で複雑に変化します。既存のモデルは計算コストが高く、その複雑さを詳細に表現できませんでした。機械学習アプローチは柔軟な表現を可能にしますが、エアロゾル集団の数学的構造（線形性）を維持できないという課題がありました。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "エアロゾル",
+          "definition": "大気中に浮遊する微粒子で、PM2.5などが含まれる。"
+        },
+        {
+          "term": "線形構造",
+          "definition": "足し算や定数倍で表現できる物理的な関係性。"
+        },
+        {
+          "term": "潜在変数",
+          "definition": "データの本質的な特徴を捉えた、次元の低い変数。"
+        },
+        {
+          "term": "総数濃度",
+          "definition": "エアロゾル粒子の総数。"
+        },
+        {
+          "term": "重心結合",
+          "definition": "複数の点の重み付き平均で、新しい点を生成する。"
+        },
+        {
+          "term": "微物理プロセス",
+          "definition": "粒子の凝固や化学反応など、ミクロな物理現象。"
+        },
+        {
+          "term": "ハイブリッドML-物理モデル",
+          "definition": "機械学習と物理法則を組み合わせたモデル。"
+        },
+        {
+          "term": "潜在空間",
+          "definition": "潜在変数が存在する抽象的な数学的空間。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "大気中の微粒子（エアロゾル）の複雑な性質を、物理法則を保ちつつAIでシンプルに表現する新手法です。",
+      "noveltyContrast": {
+        "before": "これまでのモデルは、エアロゾルの多様な組成や混合状態を単純化して扱っていました。そのため、PM2.5のような微粒子の複雑な振る舞いを正確に予測できず、気候変動モデルの精度に限界がありました。また、機械学習を使っても、微粒子の「足し算」や「薄め方」といった物理的な性質をうまく表現できない課題がありました。",
+        "after": "この研究では、エアロゾルの物理的な「足し算」や「薄め方」といった線形構造をAIモデルに組み込むことで、微粒子の複雑な組成や混合状態を正確に捉えつつ、計算コストを大幅に削減できる新しい表現方法を開発しました。これにより、気候モデルの予測精度向上に貢献します。"
+      },
+      "analogy": {
+        "title": "畑の土壌分析をAIで効率化するようなもの",
+        "body": "あなたの畑の土壌が、粘土質、砂質、有機物の量、pHなど、様々な要素で構成されていると想像してください。従来は、これらの要素を個別に測定し、複雑な計算で土壌の状態を把握していました。しかし、AeroMELDは、土壌の「総量」と「組成の比率」という二つの情報に分解し、それぞれの要素が混ざり合う物理的な法則をAIに学習させます。これにより、土壌の複雑な状態を少ない情報で正確に表現し、肥料の最適な配合や水やりのタイミングを効率的に判断できるようになるようなものです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、気候変動予測の精度を大きく向上させる可能性を秘めています。PM2.5などのエアロゾルは、私たちの呼吸器系に影響を与えるだけでなく、雲の形成や太陽光の反射・吸収を通じて地球の気候に複雑に作用します。この新しいAI技術を使えば、これらの微粒子の振る舞いをより正確にシミュレーションできるようになり、より信頼性の高い気候モデルを構築できます。これにより、将来の気候変動予測が精密になり、農業生産計画や防災対策、環境政策の立案など、私たちの生活や仕事に直結する意思決定の質を高めることに貢献するでしょう。",
+      "takeawayTalk": "AIがPM2.5の複雑な動きを、物理法則を守って賢く予測するようになったよ！",
+      "bodyText": "本研究では、AeroMELD（Aerosol Measure Embedding for Latent Dynamics）という、数学的に根拠のあるフレームワークを導入しました。これは、エアロゾル集団の物理的な線形構造（混合や希釈が足し算で表現できること）を保持しつつ、低次元の潜在変数にエンコードする手法です。具体的には、エアロゾル集団を「総数濃度（スケール）」と「組成の比率（形状）」に分解し、個々の粒子埋め込みの重心結合として潜在形状を表現します。これにより、排出、希釈、輸送といった線形プロセスを正確に扱いながら、非線形な微物理プロセス（凝固、ガス-粒子分配など）のみを学習するハイブリッドなML-物理モデルの基盤を確立しました。\n\nこのモデルがうまく機能する理由は、エアロゾル集団の「足し算」と「スケーリング」という基本的な物理法則を、潜在空間の設計に直接組み込んだ点にあります。具体的には、エアロゾルの総数濃度を明示的に扱い、残りの組成や形状の情報を、個々の粒子の特徴を重み付けして組み合わせることで表現します。これにより、異なるエアロゾル集団が混ざり合う際や、濃度が変化する際に、潜在変数が物理的に意味のある線形な変化をするようになります。結果として、排出や希釈といった線形な物理プロセスをAIが学習する必要がなくなり、凝固や化学反応といった本質的に非線形なプロセスに学習リソースを集中させることが可能になります。",
+      "bodyGlossary": [
+        {
+          "term": "エアロゾル",
+          "definition": "大気中に浮遊する微粒子で、PM2.5などが含まれる。",
+          "start": 93,
+          "end": 98
+        },
+        {
+          "term": "線形構造",
+          "definition": "足し算や定数倍で表現できる物理的な関係性。",
+          "start": 105,
+          "end": 109
+        },
+        {
+          "term": "潜在変数",
+          "definition": "データの本質的な特徴を捉えた、次元の低い変数。",
+          "start": 139,
+          "end": 143
+        },
+        {
+          "term": "総数濃度",
+          "definition": "エアロゾル粒子の総数。",
+          "start": 171,
+          "end": 175
+        },
+        {
+          "term": "重心結合",
+          "definition": "複数の点の重み付き平均で、新しい点を生成する。",
+          "start": 209,
+          "end": 213
+        },
+        {
+          "term": "微物理プロセス",
+          "definition": "粒子の凝固や化学反応など、ミクロな物理現象。",
+          "start": 265,
+          "end": 272
+        },
+        {
+          "term": "潜在空間",
+          "definition": "潜在変数が存在する抽象的な数学的空間。",
+          "start": 373,
+          "end": 377
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "エアロゾル",
+          "definition": "大気中に浮遊する微粒子で、PM2.5などが含まれる。",
+          "start": 93,
+          "end": 98
+        },
+        {
+          "term": "線形構造",
+          "definition": "足し算や定数倍で表現できる物理的な関係性。",
+          "start": 105,
+          "end": 109
+        },
+        {
+          "term": "潜在変数",
+          "definition": "データの本質的な特徴を捉えた、次元の低い変数。",
+          "start": 139,
+          "end": 143
+        },
+        {
+          "term": "総数濃度",
+          "definition": "エアロゾル粒子の総数。",
+          "start": 171,
+          "end": 175
+        },
+        {
+          "term": "重心結合",
+          "definition": "複数の点の重み付き平均で、新しい点を生成する。",
+          "start": 209,
+          "end": 213
+        },
+        {
+          "term": "微物理プロセス",
+          "definition": "粒子の凝固や化学反応など、ミクロな物理現象。",
+          "start": 265,
+          "end": 272
+        },
+        {
+          "term": "潜在空間",
+          "definition": "潜在変数が存在する抽象的な数学的空間。",
+          "start": 373,
+          "end": 377
+        }
+      ],
+      "agriEconRelevance": "この技術は、気候モデルの精度向上を通じて、農業経済に間接的に貢献します。例えば、より正確な気候予測は、作物の生育モデルの改善、灌漑計画の最適化、病害虫発生予測の精度向上に繋がります。また、大気汚染物質の挙動予測が精密になれば、農産物への影響評価や、持続可能な農業慣行の推進にも役立つでしょう。将来的には、農業分野における環境モニタリングやスマート農業技術への応用も期待されます。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 263,
+      "keyFigure": {
+        "imagePath": "/figures/2607.11073v1_results.png",
+        "page": 22,
+        "caption": "AeroMELDがテストデータでエアロゾルの診断特性を正確に再構築できることを示しています。",
+        "label": "Figure 6: The collective aerosol diagnostic summary plots on the test data. The left column shows",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-14T22:56:55.693Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.11073v1_results.png",
+          "page": 22,
+          "caption": "AeroMELDがテストデータでエアロゾルの診断特性を正確に再構築できることを示しています。",
+          "label": "Figure 6: The collective aerosol diagnostic summary plots on the test data. The left column shows",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-14T22:56:55.693Z"
+        },
+        {
+          "imagePath": "/figures/2607.11073v1_why.png",
+          "page": 24,
+          "caption": "エアロゾル集団の線形構造が潜在空間で保持されている様子を低次元で可視化しています。",
+          "label": "Figure 8: Low-dimensional visualizations of the samples. The top and middle rows show the 2D",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-14T22:56:55.693Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.11011v1",
+      "title": "Branching-Time Signatures of Growth Regime in Tumor Birth-Death Models",
+      "authors": [
+        "Meng Wang",
+        "Zhangchi Weng",
+        "Jasmine Foo",
+        "Zicheng Wang"
+      ],
+      "publishedAt": "2026-07-13T02:26:10Z",
+      "url": "https://arxiv.org/abs/2607.11011v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.11011v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "q-bio.PE",
+        "math.PR"
+      ],
+      "abstract": "Tumor evolution is shaped by cell division, cell death, competition, and constraints imposed by the local microenvironment. Because these dynamics are usually not observed directly, phylogenetic trees inferred from somatic variation in sampled tumor cells can provide an indirect record of the population history that produced the sample. In this paper, we examine whether the distribution of inferred internal branching times exhibits signatures that depend on the underlying tumor growth regime. Specifically, we study the distribution of internal branching times in continuous-time birth-death models of tumor evolution. Exponentially growing populations exhibit a unimodal distribution of internal branching times, with the mode located near the root. In contrast, logistic growth, which models expansion constrained by carrying capacity, yields a substantially more intricate genealogical structure: the distribution of branching times undergoes a systematic transition as the time elapsed since tumor initiation increases. Specifically, this progression shifts from an expansion-dominated phase, through an intermediate early-recent bimodal phase, to a final recent-dominated phase. Extensive simulations of reconstructed tumor genealogies support these theoretical findings.",
+      "summary": {
+        "gist": "生物集団は、生態学的・物理的制約によって異なる成長レジームで進化することが多い。微生物の培養やウイルス集団、そして腫瘍細胞集団も同様である。初期のがん病変は指数関数的成長を示すことが多いが、進行すると組織構造、限られた空間や栄養、血管供給、免疫相互作用などの微小環境の変化によって制約を受ける。成長レジームは、観察時点でのサイズが同じでも、異なる生物学的・系統学的履歴を持つ可能性があるため重要である。過去の集団軌跡は直接観察できないことが多く、代わりに現存する細胞のサンプルから系統樹が再構築される。この系統樹は、過去の進化履歴に関する部分的な情報を保持しており、特に内部分岐時間の分布が、基礎となる腫瘍の成長レジームに依存する特徴を示すかどうかを本研究は調査する。",
+        "novelty": "これまで、がん細胞の増殖履歴を直接観察することは困難でした。そのため、細胞の遺伝子情報から再構築される系統樹の形状を使って、過去の人口サイズの変化を推定する研究が主流でした。しかし、具体的な増殖メカニズムが系統樹のどの部分に、どのような形で反映されるのかは十分に解明されていませんでした。 この研究では、がん細胞の増殖が「指数関数的成長」か「ロジスティック成長」かによって、再構築された系統樹の「内部分岐時間」の分布が異なることを理論的に示し、シミュレーションで検証しました。これにより、観察された分岐時間のパターンから、がんの成長レジームをより詳細に推測する新たな手がかりが得られました。",
+        "method": "本研究では、腫瘍細胞集団の動態を連続時間出生死滅過程としてモデル化した。細胞あたりの出生率と死亡率が一定で個体数に依存しない「指数関数的成長モデル」と、個体数が増えるにつれて成長が抑制される「密度依存ロジスティック成長モデル」の2種類を検討した。ロジスティックモデルでは、密度依存性が死亡率の増加として現れるケース（モデル1）と、出生率の減少として現れるケース（モデル2）の両方を扱った。これらのモデルを用いて、有限個の腫瘍細胞サンプルから誘導される系統樹の内部分岐時間の分布を理論的に解析し、広範なシミュレーションによってその結果を検証した。",
+        "results": "指数関数的に成長する集団では、内部分岐時間の分布は単峰性を示し、そのモード（最頻値）は系統樹の根元近くに位置することが明らかになった。対照的に、環境収容能力によって成長が制約されるロジスティック成長は、より複雑な系統学的構造を生み出す。腫瘍発生からの経過時間が増加するにつれて、分岐時間の分布は系統的な遷移を経験する。具体的には、初期の「拡大優勢期」から、中間的な「初期-最近の二峰性期」を経て、最終的な「最近優勢期」へと移行するパターンが観察された。再構築された腫瘍の系統樹を用いた広範なシミュレーションは、これらの理論的発見を支持した。",
+        "why": "指数関数的成長では、細胞は制約なく増殖するため、初期段階で多くの分岐イベントが起こり、それが系統樹の根元近くに集中する。一方、ロジスティック成長では、初期は指数関数的成長に近いが、個体数が増加し環境収容能力に近づくと、細胞の出生率が低下したり死亡率が上昇したりして、成長が鈍化する。これにより、初期の活発な分岐と、後の成長抑制による分岐の減少が組み合わさり、時間の経過とともに分岐時間の分布が変化し、特に二峰性を示す時期が現れる。これは、集団の成長速度が変化するにつれて、系統樹の形成パターンも質的に変化することを示している。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.PE）",
+      "field": "食料システム",
+      "categoryL1": "serendipity",
+      "categoryL2": "bio-informatics",
+      "arxivPrimary": "q-bio.PE",
+      "titleJa": "腫瘍の発生・死滅モデルにおける成長レジームの分岐時間シグネチャ",
+      "catchTitle": "がん成長の「足跡」を読み解く",
+      "hook": "あなたの体内でがん細胞が増殖する時、その増え方にはどんなパターンがあるか考えたことはありますか？",
+      "background": "生物集団は、生態学的・物理的制約によって異なる成長レジームで進化することが多い。微生物の培養やウイルス集団、そして腫瘍細胞集団も同様である。初期のがん病変は指数関数的成長を示すことが多いが、進行すると組織構造、限られた空間や栄養、血管供給、免疫相互作用などの微小環境の変化によって制約を受ける。成長レジームは、観察時点でのサイズが同じでも、異なる生物学的・系統学的履歴を持つ可能性があるため重要である。過去の集団軌跡は直接観察できないことが多く、代わりに現存する細胞のサンプルから系統樹が再構築される。この系統樹は、過去の進化履歴に関する部分的な情報を保持しており、特に内部分岐時間の分布が、基礎となる腫瘍の成長レジームに依存する特徴を示すかどうかを本研究は調査する。",
+      "quiz": {
+        "question": "指数関数的に成長する腫瘍集団の内部分岐時間の分布は、どのような特徴を示しますか？",
+        "options": [
+          "複数のピークを持つ複雑な分布",
+          "単一のピークが根元近くに位置する分布",
+          "ピークが時間とともに移動する分布"
+        ],
+        "correctIndex": 1,
+        "explanation": "指数関数的成長では、細胞は制約なく増殖するため、初期段階で多くの分岐イベントが起こり、それが系統樹の根元近くに集中するため、単一のピークが根元近くに位置する分布を示します。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "出生死滅過程",
+          "definition": "個体の誕生と死滅を確率的にモデル化する手法。"
+        },
+        {
+          "term": "指数関数的成長",
+          "definition": "個体数が一定の割合で増え続ける成長パターン。"
+        },
+        {
+          "term": "ロジスティック成長",
+          "definition": "環境収容能力により成長が鈍化するパターン。"
+        },
+        {
+          "term": "系統樹",
+          "definition": "細胞や種の進化的な関係を図示したもの。"
+        },
+        {
+          "term": "内部分岐時間",
+          "definition": "系統樹の枝が分かれた時点の時間の分布。"
+        },
+        {
+          "term": "単峰性",
+          "definition": "分布が1つのピークを持つこと。"
+        },
+        {
+          "term": "二峰性",
+          "definition": "分布が2つのピークを持つこと。"
+        },
+        {
+          "term": "環境収容能力",
+          "definition": "環境が支えられる個体数の上限。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "がん細胞の増殖パターンは、細胞の系統樹の「分岐時間」の分布に特徴的な痕跡を残す。",
+      "noveltyContrast": {
+        "before": "これまで、がん細胞の増殖履歴を直接観察することは困難でした。そのため、細胞の遺伝子情報から再構築される系統樹の形状を使って、過去の人口サイズの変化を推定する研究が主流でした。しかし、具体的な増殖メカニズムが系統樹のどの部分に、どのような形で反映されるのかは十分に解明されていませんでした。",
+        "after": "この研究では、がん細胞の増殖が「指数関数的成長」か「ロジスティック成長」かによって、再構築された系統樹の「内部分岐時間」の分布が異なることを理論的に示し、シミュレーションで検証しました。これにより、観察された分岐時間のパターンから、がんの成長レジームをより詳細に推測する新たな手がかりが得られました。"
+      },
+      "analogy": {
+        "title": "畑の成長記録から収穫時期を予測する",
+        "body": "これは、まるで畑の作物の成長記録を読み解くようなものです。作物が順調に育つ「指数関数的成長」の畑では、芽吹きから成長初期にかけて活発な分岐（新しい茎や葉の発生）が見られ、その記録は根元に近い部分に集中します。一方、栄養やスペースが限られる「ロジスティック成長」の畑では、成長の初期は活発ですが、やがて成長が鈍化し、分岐の記録は時期によって異なるパターンを示します。この研究は、畑の成長記録（細胞の系統樹）から、その畑がどのような環境（がんの成長レジーム）で育ったのかを推測する手がかりを与えてくれるのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、がんの診断や治療戦略に大きな影響を与える可能性があります。もし医師が、患者のがん細胞の遺伝子情報から再構築された系統樹の「分岐時間」のパターンを見るだけで、そのがんが「急速に増殖している初期段階」なのか、「成長が鈍化し、環境に制約されている段階」なのかを推測できるようになればどうでしょう？早期発見だけでなく、治療法の選択（例えば、増殖を抑える薬が効きやすいか、免疫療法が有効かなど）や、再発リスクの評価にも役立つかもしれません。あなたの健康診断で採取された細胞のわずかな情報から、病気の進行度や将来の挙動を予測する、そんな未来に一歩近づく研究と言えるでしょう。",
+      "takeawayTalk": "がん細胞の増え方は、細胞の家系図に痕跡を残すんだって！",
+      "bodyText": "本研究では、腫瘍細胞集団の動態を連続時間出生死滅過程としてモデル化した。細胞あたりの出生率と死亡率が一定で個体数に依存しない「指数関数的成長モデル」と、個体数が増えるにつれて成長が抑制される「密度依存ロジスティック成長モデル」の2種類を検討した。ロジスティックモデルでは、密度依存性が死亡率の増加として現れるケース（モデル1）と、出生率の減少として現れるケース（モデル2）の両方を扱った。これらのモデルを用いて、有限個の腫瘍細胞サンプルから誘導される系統樹の内部分岐時間の分布を理論的に解析し、広範なシミュレーションによってその結果を検証した。\n\n指数関数的成長では、細胞は制約なく増殖するため、初期段階で多くの分岐イベントが起こり、それが系統樹の根元近くに集中する。一方、ロジスティック成長では、初期は指数関数的成長に近いが、個体数が増加し環境収容能力に近づくと、細胞の出生率が低下したり死亡率が上昇したりしたりして、成長が鈍化する。これにより、初期の活発な分岐と、後の成長抑制による分岐の減少が組み合わさり、時間の経過とともに分岐時間の分布が変化し、特に二峰性を示す時期が現れる。これは、集団の成長速度が変化するにつれて、系統樹の形成パターンも質的に変化することを示している。",
+      "bodyGlossary": [
+        {
+          "term": "出生死滅過程",
+          "definition": "個体の誕生と死滅を確率的にモデル化する手法。",
+          "start": 20,
+          "end": 26
+        },
+        {
+          "term": "指数関数的成長",
+          "definition": "個体数が一定の割合で増え続ける成長パターン。",
+          "start": 63,
+          "end": 70
+        },
+        {
+          "term": "ロジスティック成長",
+          "definition": "環境収容能力により成長が鈍化するパターン。",
+          "start": 100,
+          "end": 109
+        },
+        {
+          "term": "系統樹",
+          "definition": "細胞や種の進化的な関係を図示したもの。",
+          "start": 225,
+          "end": 228
+        },
+        {
+          "term": "内部分岐時間",
+          "definition": "系統樹の枝が分かれた時点の時間の分布。",
+          "start": 229,
+          "end": 235
+        },
+        {
+          "term": "環境収容能力",
+          "definition": "環境が支えられる個体数の上限。",
+          "start": 371,
+          "end": 377
+        },
+        {
+          "term": "二峰性",
+          "definition": "分布が2つのピークを持つこと。",
+          "start": 479,
+          "end": 482
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "出生死滅過程",
+          "definition": "個体の誕生と死滅を確率的にモデル化する手法。",
+          "start": 20,
+          "end": 26
+        },
+        {
+          "term": "指数関数的成長",
+          "definition": "個体数が一定の割合で増え続ける成長パターン。",
+          "start": 63,
+          "end": 70
+        },
+        {
+          "term": "ロジスティック成長",
+          "definition": "環境収容能力により成長が鈍化するパターン。",
+          "start": 100,
+          "end": 109
+        },
+        {
+          "term": "系統樹",
+          "definition": "細胞や種の進化的な関係を図示したもの。",
+          "start": 225,
+          "end": 228
+        },
+        {
+          "term": "内部分岐時間",
+          "definition": "系統樹の枝が分かれた時点の時間の分布。",
+          "start": 229,
+          "end": 235
+        },
+        {
+          "term": "環境収容能力",
+          "definition": "環境が支えられる個体数の上限。",
+          "start": 371,
+          "end": 377
+        },
+        {
+          "term": "二峰性",
+          "definition": "分布が2つのピークを持つこと。",
+          "start": 479,
+          "end": 482
+        }
+      ],
+      "agriEconRelevance": "この研究で用いられた出生死滅モデルと系統樹解析の手法は、農業経済学における家畜や作物の品種改良、病害の伝播、あるいは農業企業の成長戦略の分析に応用できる可能性があります。例えば、特定の品種の普及率や病害の発生履歴から、その成長パターンや伝播メカニズムを推定し、将来の市場動向やリスクを予測するのに役立つかもしれません。また、農業技術の導入が農家集団の成長（採用）パターンにどのような影響を与えるかを、個々の農家の「分岐」として捉え、そのダイナミクスを解析する新たな視点を提供する可能性も秘めています。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 295,
+      "keyFigure": {
+        "imagePath": "/figures/2607.11011v1_results.png",
+        "page": 11,
+        "caption": "腫瘍の成長に伴う分岐時間分布の代表的な時間変化を示しています。",
+        "label": "Figure 2: Representative temporal changes under density-dependent death with λ0 = 0.25, µ0 =",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-14T22:56:58.860Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.11011v1_results.png",
+          "page": 11,
+          "caption": "腫瘍の成長に伴う分岐時間分布の代表的な時間変化を示しています。",
+          "label": "Figure 2: Representative temporal changes under density-dependent death with λ0 = 0.25, µ0 =",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-14T22:56:58.860Z"
+        },
+        {
+          "imagePath": "/figures/2607.11011v1_why.png",
+          "page": 13,
+          "caption": "2つの異なる密度依存性ロジスティック成長モデルにおける分岐時間密度の推定値を比較しています。",
+          "label": "Figure 3: Comparison of branching-time density estimates under the two density-dependent logistic",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-14T22:56:58.860Z"
+        }
+      ]
+    }
+  ]
+}

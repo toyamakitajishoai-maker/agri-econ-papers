@@ -1,0 +1,977 @@
+{
+  "date": "2026-07-16",
+  "papers": [
+    {
+      "id": "2607.11306v1",
+      "title": "Optimal Control of Pandemic Dynamics via Model Predictive Control: A Health-Economic Trade-off Analysis",
+      "authors": [
+        "Lokman Rachid Melhani",
+        "Lars Grune",
+        "Antonino Sferlazza",
+        "Dominique Persano Adorno",
+        "Filippo D'Ippolito",
+        "Alberto Firenze"
+      ],
+      "publishedAt": "2026-07-13T09:20:59Z",
+      "url": "https://arxiv.org/abs/2607.11306v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.11306v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "math.OC",
+        "eess.SY",
+        "q-bio.PE"
+      ],
+      "abstract": "This paper addresses the optimal control of epidemic dynamics under conflicting socio-economic objectives. We propose an economic Model Predictive Control (MPC) framework, applied to an extended SEIR-V (Susceptible-Exposed-Infected-Recovered-Vaccinated) compartmental model to govern the spread of an infectious disease while minimizing economic disruption. The control problem is formulated as a constrained nonlinear optimization problem, in which the controller dynamically adjusts social interaction levels (transmission rate beta) and vaccination efforts to minimize a composite cost function that penalizes fatalities, healthcare capacity violations, and economic losses. We conduct a rigorous sensitivity analysis of the prediction horizon N, demonstrating that the closed loop is robust to the horizon choice and that N = 35 days minimizes the realized cost. Furthermore, both the closed-loop solution and an open-loop turnpike analysis across diverse initial conditions reveal that the celebrated \"Hammer and Dance\" mitigation strategy emerges naturally as the mathematical optimum: the optimal trajectories anchor to a unique suppression turnpike (maximum lockdown) to drive hospitalizations toward the disease-free equilibrium before progressively reopening the economy. Through a turnpike-based argument we establish practical asymptotic stability of the optimal operating point, providing a mathematically grounded decision-support tool for pandemic policy.",
+      "summary": {
+        "gist": "COVID-19パンデミックは、世界中の政府に「命か経済か」という困難な選択を迫りました。厳格なロックダウンは感染を抑制する一方で経済活動を麻痺させ、緩和策は経済を維持するものの公衆衛生上のリスクを高めます。このような相反する社会経済的目標のバランスを取るための、定量的でフィードバックに基づいたツールが不足していました。",
+        "novelty": "従来のパンデミック対策は、感染予測に重点を置き、政策を事前に固定する「オープンループ戦略」が主流でした。しかし、これは刻々と変化する状況や予期せぬ事態に対応できず、経済活動の停滞や医療崩壊を招くリスクがありました。 この研究では、リアルタイムで状況を最適化する「モデル予測制御（MPC）」をパンデミック対策に応用。感染状況、経済損失、医療負荷、死亡者数、ワクチン接種コスト、政策の一貫性を考慮し、動的に介入レベルを調整するAIモデルを開発しました。",
+        "method": "本研究では、拡張されたSEIR-V（感受性者-曝露者-感染者-回復者-ワクチン接種者）モデルに、社会交流レベル（感染率）とワクチン接種努力という2つの制御変数を導入しました。このモデルは、イタリアのCOVID-19パンデミックデータで較正されています。経済的損失、医療キャパシティ違反、死亡者数、ワクチン接種コスト、政策の一貫性という5つの要素を組み合わせた複合コスト関数を最小化するよう、モデル予測制御（MPC）フレームワークを適用しました。MPCは、各時間ステップで有限の予測期間における最適化問題を解き、リアルタイムで政策を調整します。",
+        "results": "モデル予測制御を用いたシミュレーションとターンパイク分析の結果、最適なパンデミック対策として「ハンマー＆ダンス」戦略が自然に導き出されました。これは、まず最大級のロックダウン（ハンマー）によって入院者数を病気のない状態にまで抑制し、その後、段階的に経済活動を再開していく（ダンス）というものです。この戦略は、予測期間Nが35日の場合にコストが最小化されることが示されました。",
+        "why": "この「ハンマー＆ダンス」戦略が最適となるのは、パンデミックの動態が非線形であり、初期の強力な介入がその後のコストを大幅に削減するためです。感染初期に強力な抑制策を講じることで、医療システムの崩壊を防ぎ、死亡者数を最小限に抑えられます。その後、感染状況が落ち着けば、経済活動を徐々に再開し、経済的損失を管理しながら、持続可能な社会運営を目指すことができます。MPCは、刻々と変化する感染状況にリアルタイムで適応し、常に最適なバランスを追求することで、この戦略を数学的に実現します。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / math.OC）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "policy-design",
+      "arxivPrimary": "math.OC",
+      "titleJa": "モデル予測制御によるパンデミック動態の最適制御：健康と経済のトレードオフ分析",
+      "catchTitle": "パンデミック対策は「ハンマー＆ダンス」が最適解だった！",
+      "hook": "パンデミック時、「命か経済か」という究極の選択に迫られたあなた。最適な対策は一体何だったのでしょうか？",
+      "background": "COVID-19パンデミックは、世界中の政府に「命か経済か」という困難な選択を迫りました。厳格なロックダウンは感染を抑制する一方で経済活動を麻痺させ、緩和策は経済を維持するものの公衆衛生上のリスクを高めます。このような相反する社会経済的目標のバランスを取るための、定量的でフィードバックに基づいたツールが不足していました。",
+      "quiz": {
+        "question": "この研究で、パンデミック対策の最適戦略として導き出されたものは何でしょう？",
+        "options": [
+          "常に経済活動を優先する戦略",
+          "常に厳格なロックダウンを維持する戦略",
+          "「ハンマー＆ダンス」戦略"
+        ],
+        "correctIndex": 2,
+        "explanation": "この研究では、モデル予測制御とターンパイク分析により、初期に強力な抑制策（ハンマー）で感染を抑え、その後段階的に経済を再開する（ダンス）「ハンマー＆ダンス」戦略が最適であることが示されました。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "SEIR-Vモデル",
+          "definition": "感染症の広がりを数理的に予測するモデル。感受性者、曝露者、感染者、回復者、ワクチン接種者の5つの集団間の変化を追跡します。"
+        },
+        {
+          "term": "モデル予測制御",
+          "definition": "システムの状態を予測し、将来の目標達成のために最適な制御入力を計算する制御手法。リアルタイムで調整可能です。"
+        },
+        {
+          "term": "複合コスト関数",
+          "definition": "複数の異なるコスト（経済損失、医療負荷など）を統合し、単一の指標として評価するための関数。"
+        },
+        {
+          "term": "ターンパイク分析",
+          "definition": "最適制御理論において、システムが最終目標に向かう途中で一時的に安定する「最適経路」を特定する分析手法。"
+        },
+        {
+          "term": "ハンマー＆ダンス",
+          "definition": "パンデミック対策戦略の一つ。初期に強力な介入で感染を抑制し、その後は状況に応じて柔軟に緩和・強化を繰り返す。"
+        },
+        {
+          "term": "非線形",
+          "definition": "原因と結果が比例しない関係。パンデミックでは感染者数の増加が指数関数的になるなど。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "経済と公衆衛生のバランスを最適化するAIモデルが、パンデミック対策の「ハンマー＆ダンス」戦略を数学的に導き出しました。",
+      "noveltyContrast": {
+        "before": "従来のパンデミック対策は、感染予測に重点を置き、政策を事前に固定する「オープンループ戦略」が主流でした。しかし、これは刻々と変化する状況や予期せぬ事態に対応できず、経済活動の停滞や医療崩壊を招くリスクがありました。",
+        "after": "この研究では、リアルタイムで状況を最適化する「モデル予測制御（MPC）」をパンデミック対策に応用。感染状況、経済損失、医療負荷、死亡者数、ワクチン接種コスト、政策の一貫性を考慮し、動的に介入レベルを調整するAIモデルを開発しました。"
+      },
+      "analogy": {
+        "title": "畑の病害対策は「ハンマー＆ダンス」",
+        "body": "これは、まるで畑に突如現れた病害への対策に似ています。病害が広がり始めたら、まず「ハンマー」のように強力な農薬を散布し、病原菌を徹底的に叩き潰します。これにより、収穫量への壊滅的な影響を防ぎます。病害が収まったら、今度は「ダンス」のように、作物の成長を見守りながら、最小限の予防的散布や土壌管理を柔軟に行い、健全な状態を維持するのです。この研究は、パンデミックという病害に対して、経済と健康のバランスを取りながら、いつ「ハンマー」を振り、いつ「ダンス」を踊るべきかを教えてくれる、賢い農業AIのようなものです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "N=35日",
+          "label": "予測期間でコスト最小化"
+        }
+      ],
+      "whyYouCare": "この研究は、パンデミックのような未曾有の危機において、政府や自治体が「命と経済」のバランスをどう取るべきかという、非常に難しい問いに科学的な根拠を与えます。もしあなたがビジネスパーソンなら、将来のパンデミック発生時にどのような政策が取られるか、その論理的背景を理解することで、事業継続計画やリスク管理に役立てることができます。また、一般市民としても、なぜ特定の時期に厳しい行動制限が課され、その後緩和されるのか、その理由を深く理解し、社会全体の意思決定プロセスに対する信頼を高めることにも繋がるでしょう。",
+      "takeawayTalk": "パンデミック対策は、AIが導き出した「ハンマー＆ダンス」が最適解だった！",
+      "bodyText": "本研究では、拡張されたSEIR-V（感受性者-曝露者-感染者-回復者-ワクチン接種者）モデルに、社会交流レベル（感染率）とワクチン接種努力という2つの制御変数を導入しました。このモデルは、イタリアのCOVID-19パンデミックデータで較正されています。経済的損失、医療キャパシティ違反、死亡者数、ワクチン接種コスト、政策の一貫性という5つの要素を組み合わせた複合コスト関数を最小化するよう、モデル予測制御（MPC）フレームワークを適用しました。MPCは、各時間ステップで有限の予測期間における最適化問題を解き、リアルタイムで政策を調整します。\n\nこの「ハンマー＆ダンス」戦略が最適となるのは、パンデミックの動態が非線形であり、初期の強力な介入がその後のコストを大幅に削減するためです。感染初期に強力な抑制策を講じることで、医療システムの崩壊を防ぎ、死亡者数を最小限に抑えられます。その後、感染状況が落ち着けば、経済活動を徐々に再開し、経済的損失を管理しながら、持続可能な社会運営を目指すことができます。MPCは、刻々と変化する感染状況にリアルタイムで適応し、常に最適なバランスを追求することで、この戦略を数学的に実現します。",
+      "bodyGlossary": [
+        {
+          "term": "複合コスト関数",
+          "definition": "複数の異なるコスト（経済損失、医療負荷など）を統合し、単一の指標として評価するための関数。",
+          "start": 179,
+          "end": 186
+        },
+        {
+          "term": "モデル予測制御",
+          "definition": "システムの状態を予測し、将来の目標達成のために最適な制御入力を計算する制御手法。リアルタイムで調整可能です。",
+          "start": 195,
+          "end": 202
+        },
+        {
+          "term": "ハンマー＆ダンス",
+          "definition": "パンデミック対策戦略の一つ。初期に強力な介入で感染を抑制し、その後は状況に応じて柔軟に緩和・強化を繰り返す。",
+          "start": 276,
+          "end": 284
+        },
+        {
+          "term": "非線形",
+          "definition": "原因と結果が比例しない関係。パンデミックでは感染者数の増加が指数関数的になるなど。",
+          "start": 306,
+          "end": 309
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "複合コスト関数",
+          "definition": "複数の異なるコスト（経済損失、医療負荷など）を統合し、単一の指標として評価するための関数。",
+          "start": 179,
+          "end": 186
+        },
+        {
+          "term": "モデル予測制御",
+          "definition": "システムの状態を予測し、将来の目標達成のために最適な制御入力を計算する制御手法。リアルタイムで調整可能です。",
+          "start": 195,
+          "end": 202
+        },
+        {
+          "term": "ハンマー＆ダンス",
+          "definition": "パンデミック対策戦略の一つ。初期に強力な介入で感染を抑制し、その後は状況に応じて柔軟に緩和・強化を繰り返す。",
+          "start": 276,
+          "end": 284
+        },
+        {
+          "term": "非線形",
+          "definition": "原因と結果が比例しない関係。パンデミックでは感染者数の増加が指数関数的になるなど。",
+          "start": 306,
+          "end": 309
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 235
+    },
+    {
+      "id": "2607.12345v1",
+      "title": "Forecasting Inflation with Microdata: An Adaptive Machine Learning Approach",
+      "authors": [
+        "Catherine Chen",
+        "Chen Gao",
+        "Jonathon Hazell",
+        "Lihua Lei",
+        "Chen Lian"
+      ],
+      "publishedAt": "2026-07-14T04:46:43Z",
+      "url": "https://arxiv.org/abs/2607.12345v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.12345v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "econ.GN",
+        "stat.ME",
+        "stat.ML"
+      ],
+      "abstract": "Does microeconomic heterogeneity help to forecast aggregate inflation in a non-stationary environment? We develop a scan test for whether one forecast outperforms another, over an interval with unknown starting point and duration. To exploit any occasional forecasting power that the scan test detects, we design an adaptive machine learning pipeline. We encode the distribution of price changes into a high-dimensional vector, which we combine with a gradient boosted trees algorithm. We then combine this micro forecast with other benchmark forecasts, using an adaptive algorithm that makes use of the micro forecast only when it performs well. We apply the pipeline to UK microdata, with four main results. First, the micro forecast outperforms a univariate benchmark, but only in the volatile period after 2020. Second, the scan test detects periods of micro outperformance, so the micro forecast enters the combined forecast. Third, the combined forecast performs comparably to the univariate benchmark before 2020 and better at every horizon after 2020. Fourth, the value of microdata for the combined forecast materializes after 2020. We conclude that microdata are valuable for forecasting aggregate inflation, but only after large shocks.",
+      "summary": {
+        "gist": "インフレ予測は、経済政策の立案や企業の経営戦略において極めて重要ですが、その予測は非常に困難です。特に、経済のダイナミクスが時間とともに変化する「非定常環境」では、従来のモデルでは対応しきれない課題がありました。近年、個別の価格変動といった「ミクロデータ」が大量に利用可能になり、これを活用してインフレ予測を改善できる可能性が注目されています。",
+        "novelty": "従来のインフレ予測は、GDPや失業率といったマクロ経済データに依存していました。しかし、インフレのダイナミクスは時間とともに変化（非定常性）するため、特に経済が不安定な時期には、単純なモデルでさえ予測が困難でした。 この研究では、数百万件に及ぶ個別の価格データ（ミクロデータ）を機械学習で分析し、マクロデータと組み合わせることで、特に2020年以降の不安定な時期において、インフレ予測の精度を大幅に向上させることに成功しました。",
+        "method": "本研究では、まず、ある予測がベンチマークを上回る期間を検出するための「スキャンテスト」を開発しました。次に、このスキャンテストで検出された予測力を活用するため、適応型機械学習パイプラインを設計しました。このパイプラインは、個別の価格変動の分布を高次元ベクトルにエンコードし、勾配ブースティングツリーアルゴリズムと組み合わせます。最後に、このミクロデータに基づく予測を、他のベンチマーク予測（マクロデータ予測、単変量予測）と、適応型アルゴリズム（Fixed Shareアルゴリズム）を用いて組み合わせます。このアルゴリズムは、ミクロデータ予測が良好なパフォーマンスを示したときにのみ、その重みを増やすように設計されています。この手法を英国の消費者物価指数（CPI）ミクロデータに適用し、2015年から2024年までの期間で検証しました。",
+        "results": "1. ミクロデータ予測は、2020年以降の不安定な期間にのみ、単変量ベンチマークを上回る性能を示しました。2. スキャンテストは、ミクロデータが優位な期間を検出し、その結果、ミクロデータ予測が結合予測に組み込まれました。3. 結合予測は、2020年以前は単変量ベンチマークと同程度の性能でしたが、2020年以降は全ての予測期間でベンチマークを上回りました。4. 結合予測におけるミクロデータの価値は、2020年以降に顕在化し、特に2023年にはミクロデータへの重みが最大となりました。",
+        "why": "ミクロデータがインフレ予測に役立つのは、特に大きな経済ショックが発生した時です。通常、マクロ経済データは集計されたショックの履歴を捉えますが、個々の企業や製品、セクターに由来する粒状のショックは、マクロデータだけでは完全に捉えきれません。また、構造変化の時期には、マクロショックから価格分布へのマッピングが不安定になることがあります。2020年以降のインフレ高騰期には、このような粒状のショックや非線形性がより顕著になり、ミクロデータがマクロデータだけでは捉えられない重要な情報を提供したと考えられます。適応型機械学習は、予測モデルの最適な組み合わせが時間とともに変化する非定常環境において、その変化をリアルタイムで追跡し、最も性能の良い予測に重みを置くことで、全体の予測精度を向上させます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "macroeconomics",
+      "arxivPrimary": "econ.GN",
+      "titleJa": "ミクロデータと適応型機械学習によるインフレ予測：非定常環境での活用",
+      "catchTitle": "インフレ予測は「個店価格」で劇的に変わる？",
+      "hook": "あなたの家計を直撃する物価上昇。このインフレ、いつまで続くか正確に予測できたらと思いませんか？",
+      "background": "インフレ予測は、経済政策の立案や企業の経営戦略において極めて重要ですが、その予測は非常に困難です。特に、経済のダイナミクスが時間とともに変化する「非定常環境」では、従来のモデルでは対応しきれない課題がありました。近年、個別の価格変動といった「ミクロデータ」が大量に利用可能になり、これを活用してインフレ予測を改善できる可能性が注目されています。",
+      "quiz": {
+        "question": "この研究で、ミクロデータがインフレ予測に特に有効だったのはどのような時期ですか？",
+        "options": [
+          "経済が安定している時期",
+          "大きな経済ショックが発生し、インフレが不安定な時期",
+          "デフレが続いている時期"
+        ],
+        "correctIndex": 1,
+        "explanation": "論文の結果によると、ミクロデータは特に2020年以降の「大きな経済ショックが発生し、インフレが不安定な時期」に予測精度を向上させました。安定期には、従来の予測モデルと同程度の性能でした。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "ミクロデータ",
+          "definition": "個別の商品やサービスの価格変動に関する詳細データ。"
+        },
+        {
+          "term": "非定常環境",
+          "definition": "経済の変動パターンが時間とともに変化する状態。"
+        },
+        {
+          "term": "スキャンテスト",
+          "definition": "ある予測がベンチマークを上回る期間を検出する統計手法。"
+        },
+        {
+          "term": "適応型機械学習",
+          "definition": "環境変化に応じて学習方法やモデルを調整するAI。"
+        },
+        {
+          "term": "勾配ブースティングツリー",
+          "definition": "複数の決定木を組み合わせて予測精度を高める機械学習。"
+        },
+        {
+          "term": "Fixed Shareアルゴリズム",
+          "definition": "複数の予測モデルの重みを適応的に調整する手法。"
+        },
+        {
+          "term": "粒状のショック",
+          "definition": "特定の企業や製品、セクターに限定された経済的影響。"
+        },
+        {
+          "term": "非線形性",
+          "definition": "原因と結果が単純な比例関係にない複雑な関係。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "個別の価格変動データと適応型機械学習を組み合わせることで、大きな経済ショック後のインフレ予測精度が向上する。",
+      "noveltyContrast": {
+        "before": "従来のインフレ予測は、GDPや失業率といったマクロ経済データに依存していました。しかし、インフレのダイナミクスは時間とともに変化（非定常性）するため、特に経済が不安定な時期には、単純なモデルでさえ予測が困難でした。",
+        "after": "この研究では、数百万件に及ぶ個別の価格データ（ミクロデータ）を機械学習で分析し、マクロデータと組み合わせることで、特に2020年以降の不安定な時期において、インフレ予測の精度を大幅に向上させることに成功しました。"
+      },
+      "analogy": {
+        "title": "畑の作柄予測：全体と個別の観察",
+        "body": "広大な畑全体の収穫量を予測する際、これまでは過去の平均的な収穫量や、地域の気候データ（マクロデータ）に頼っていました。しかし、異常気象や病害虫の発生（大きな経済ショック）があると、これまでの予測は全く当てにならなくなります。この研究は、個々の作物の生育状況や土壌の状態（ミクロデータ）を詳細に観察し、その情報をリアルタイムで取り入れながら、最も適した予測方法に切り替えていくようなものです。これにより、全体が不安定な時でも、より正確な収穫量（インフレ）を予測できるようになります。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+3.2pt",
+          "label": "2020年以降の予測精度改善（MAE）"
+        }
+      ],
+      "whyYouCare": "この研究は、私たちの生活に直結するインフレ予測の精度を大きく変える可能性を秘めています。企業にとっては、原材料費や販売価格の変動をより正確に予測できるようになり、経営戦略の最適化に役立ちます。政府や中央銀行にとっては、金融政策の決定において、よりタイムリーで的確な判断を下すための強力なツールとなります。特に、パンデミックや地政学的な要因によるサプライチェーンの混乱など、予測困難な大きな経済ショックが頻発する現代において、個別の価格データからリアルタイムで情報を引き出すこの手法は、経済の安定化に貢献するでしょう。私たち消費者は、より正確なインフレ予測によって、将来の物価変動を見越した家計管理や資産運用が可能になるかもしれません。",
+      "takeawayTalk": "個別の商品価格データを使うと、経済ショック後のインフレ予測が劇的に当たるようになるらしいよ！",
+      "bodyText": "本研究では、まず、ある予測がベンチマークを上回る期間を検出するための「スキャンテスト」を開発しました。次に、このスキャンテストで検出された予測力を活用するため、適応型機械学習パイプラインを設計しました。このパイプラインは、個別の価格変動の分布を高次元ベクトルにエンコードし、勾配ブースティングツリーアルゴリズムと組み合わせます。最後に、このミクロデータに基づく予測を、他のベンチマーク予測（マクロデータ予測、単変量予測）と、適応型アルゴリズム（Fixed Shareアルゴリズム）を用いて組み合わせます。このアルゴリズムは、ミクロデータ予測が良好なパフォーマンスを示したときにのみ、その重みを増やすように設計されています。この手法を英国の消費者物価指数（CPI）ミクロデータに適用し、2015年から2024年までの期間で検証しました。\n\nミクロデータがインフレ予測に役立つのは、特に大きな経済ショックが発生した時です。通常、マクロ経済データは集計されたショックの履歴を捉えますが、個々の企業や製品、セクターに由来する粒状のショックは、マクロデータだけでは完全に捉えきれません。また、構造変化の時期には、マクロショックから価格分布へのマッピングが不安定になることがあります。2020年以降のインフレ高騰期には、このような粒状のショックや非線形性がより顕著になり、ミクロデータがマクロデータだけでは捉えられない重要な情報を提供したと考えられます。適応型機械学習は、予測モデルの最適な組み合わせが時間とともに変化する非定常環境において、その変化をリアルタイムで追跡し、最も性能の良い予測に重みを置くことで、全体の予測精度を向上させます。",
+      "bodyGlossary": [
+        {
+          "term": "スキャンテスト",
+          "definition": "ある予測がベンチマークを上回る期間を検出する統計手法。",
+          "start": 35,
+          "end": 42
+        },
+        {
+          "term": "適応型機械学習",
+          "definition": "環境変化に応じて学習方法やモデルを調整するAI。",
+          "start": 80,
+          "end": 87
+        },
+        {
+          "term": "勾配ブースティングツリー",
+          "definition": "複数の決定木を組み合わせて予測精度を高める機械学習。",
+          "start": 137,
+          "end": 149
+        },
+        {
+          "term": "ミクロデータ",
+          "definition": "個別の商品やサービスの価格変動に関する詳細データ。",
+          "start": 170,
+          "end": 176
+        },
+        {
+          "term": "Fixed Shareアルゴリズム",
+          "definition": "複数の予測モデルの重みを適応的に調整する手法。",
+          "start": 222,
+          "end": 239
+        },
+        {
+          "term": "粒状のショック",
+          "definition": "特定の企業や製品、セクターに限定された経済的影響。",
+          "start": 458,
+          "end": 465
+        },
+        {
+          "term": "非線形性",
+          "definition": "原因と結果が単純な比例関係にない複雑な関係。",
+          "start": 567,
+          "end": 571
+        },
+        {
+          "term": "非定常環境",
+          "definition": "経済の変動パターンが時間とともに変化する状態。",
+          "start": 655,
+          "end": 660
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "スキャンテスト",
+          "definition": "ある予測がベンチマークを上回る期間を検出する統計手法。",
+          "start": 35,
+          "end": 42
+        },
+        {
+          "term": "適応型機械学習",
+          "definition": "環境変化に応じて学習方法やモデルを調整するAI。",
+          "start": 80,
+          "end": 87
+        },
+        {
+          "term": "勾配ブースティングツリー",
+          "definition": "複数の決定木を組み合わせて予測精度を高める機械学習。",
+          "start": 137,
+          "end": 149
+        },
+        {
+          "term": "ミクロデータ",
+          "definition": "個別の商品やサービスの価格変動に関する詳細データ。",
+          "start": 170,
+          "end": 176
+        },
+        {
+          "term": "Fixed Shareアルゴリズム",
+          "definition": "複数の予測モデルの重みを適応的に調整する手法。",
+          "start": 222,
+          "end": 239
+        },
+        {
+          "term": "粒状のショック",
+          "definition": "特定の企業や製品、セクターに限定された経済的影響。",
+          "start": 458,
+          "end": 465
+        },
+        {
+          "term": "非線形性",
+          "definition": "原因と結果が単純な比例関係にない複雑な関係。",
+          "start": 567,
+          "end": 571
+        },
+        {
+          "term": "非定常環境",
+          "definition": "経済の変動パターンが時間とともに変化する状態。",
+          "start": 655,
+          "end": 660
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 274,
+      "keyFigure": {
+        "imagePath": "/figures/2607.12345v1_results.png",
+        "page": 35,
+        "caption": "結合予測と、その中でミクロデータに与えられた重みの推移を12ヶ月先まで示しています。",
+        "label": "Figure 4: Combined Forecast and Combination Weights, 12 Months Ahead",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-15T22:58:33.058Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.12345v1_results.png",
+          "page": 35,
+          "caption": "結合予測と、その中でミクロデータに与えられた重みの推移を12ヶ月先まで示しています。",
+          "label": "Figure 4: Combined Forecast and Combination Weights, 12 Months Ahead",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-15T22:58:33.058Z"
+        },
+        {
+          "imagePath": "/figures/2607.12345v1_why.png",
+          "page": 3,
+          "caption": "2015年から2024年までの米国と英国の消費者物価指数（CPI）の推移を示しています。",
+          "label": "Figure 1: Headline CPI Inflation in the United States and United Kingdom, 2015–2024",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-15T22:58:33.058Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.12930v1",
+      "title": "Optimal photostimulation selection for iterative activity maps",
+      "authors": [
+        "Jacob J. Morra",
+        "Kaitlyn E. Fouke",
+        "Owen Traubert",
+        "Eva A. Naumann"
+      ],
+      "publishedAt": "2026-07-14T16:01:56Z",
+      "url": "https://arxiv.org/abs/2607.12930v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.12930v1.pdf",
+      "categories": [
+        "topic:neuroscience",
+        "q-bio.NC",
+        "q-bio.QM"
+      ],
+      "abstract": "All-optical two-photon holographic optogenetics enables causal circuit mapping by stimulating defined neurons or ensembles while imaging population activity. Yet exhaustive connectivity mapping remains experimentally prohibitive because of combinatorial complexity, tissue heating, photodamage, and experimental time. We present OPhELIA (Optimal Photostimulation sElection for Iterative Activity maps), a Bayesian framework for selecting informative perturbations under limited trial budgets. OPhELIA combines Beta-Bernoulli connectivity inference with an ambiguity-based acquisition heuristic and learned priors derived from pre-stimulation neural activity, augmenting active learning and compressed sensing. In standalone simulations and in vivo larval zebrafish visuomotor experiments, OPhELIA with active learning improves trial-efficient approximation of exhaustive functional connectomes. In combinatorial in vivo experiments, OPhELIA with compressed sensing most closely recovers an exhaustive connectome using only 5% of trials. These results establish OPhELIA as a sample-efficient framework for causal connectomics.",
+      "summary": {
+        "gist": "神経回路がどのように活動を伝播させるかを細胞レベルで解明することは、システム神経科学の基本的な目標です。全光学的生理学により、特定の神経細胞やアンサンブルを刺激しながら、大規模な神経集団の活動を同時に記録することが可能になり、因果的な回路発見が可能になりました。しかし、網羅的な接続マッピングは、組み合わせの複雑さ、組織の加熱、光損傷、実験時間の制約により、実験的に困難な課題でした。",
+        "novelty": "従来の神経回路マッピングでは、全ての可能性を試す必要があり、時間、コスト、組織へのダメージが課題でした。また、接続のパターンを仮定する手法も、実際の脳の複雑な接続には対応しきれない場合がありました。 この論文では、ベイズ統計と機械学習を組み合わせた「OPhELIA」という新しいAIフレームワークを提案。次にどの神経を刺激すれば最も多くの情報が得られるかを予測し、試行回数を大幅に削減しながら、高精度な神経回路図を作成します。",
+        "method": "本研究では、ベイズ推論を用いて反復的な光刺激による神経接続マッピングを行います。各刺激ターゲットと応答神経間の接続確率をベータ分布としてモデル化し、試行データ（刺激に対する応答の有無）に基づいてベイズの定理で確率を更新します。OPhELIAは、このベイズ推論フレームワークと「曖昧さ最大化」という情報獲得ヒューリスティックを組み合わせます。曖昧さ最大化は、後方確率の不確実性が高く、ベルヌーイエントロピーが最大に近い（つまり、接続の有無が最も不明瞭な）ターゲットを選択することで、最も情報量の多い刺激を優先します。さらに、刺激前の神経活動から学習された事前情報（prior）を活用し、次に刺激すべきターゲットを予測します。このOPhELIAは、単独のターゲット選択問題と、複数のターゲットを組み合わせる組合せ最適化問題の両方に対応し、アクティブラーニングや圧縮センシングといった既存の戦略と統合して、限られた試行回数で効率的に接続図を近似します。",
+        "results": "シミュレーションおよび生体内のゼブラフィッシュ幼生の視覚運動実験において、OPhELIAは、網羅的な機能的コネクトームを近似する際の試行効率を向上させました。特に、OPhELIAを圧縮センシングと組み合わせた場合、網羅的な接続図をわずか5%の試行回数で最も正確に回復できることを示しました。",
+        "why": "OPhELIAは、次にどの神経を刺激すれば最も多くの情報が得られるかを、ベイズ統計に基づいて予測することで、効率的なマッピングを実現します。具体的には、まだ接続の有無がはっきりしない（曖昧さの高い）神経ペアを優先的に刺激します。これにより、少ない試行回数で、全体の接続図の不確実性を最も効率的に減らすことができます。事前情報として、刺激前の神経活動パターンを利用することで、どの神経が繋がりやすいかという初期の仮説を立て、さらに効率的な探索を可能にします。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.NC）",
+      "field": "神経・脳科学",
+      "categoryL1": "adjacent",
+      "categoryL2": "neuroscience",
+      "arxivPrimary": "q-bio.NC",
+      "titleJa": "反復活動マップのための最適な光刺激選択",
+      "catchTitle": "脳の配線図を効率的に描くAI",
+      "hook": "脳の神経回路がどう繋がっているか、あなたは効率的に知りたいと思いませんか？",
+      "background": "神経回路がどのように活動を伝播させるかを細胞レベルで解明することは、システム神経科学の基本的な目標です。全光学的生理学により、特定の神経細胞やアンサンブルを刺激しながら、大規模な神経集団の活動を同時に記録することが可能になり、因果的な回路発見が可能になりました。しかし、網羅的な接続マッピングは、組み合わせの複雑さ、組織の加熱、光損傷、実験時間の制約により、実験的に困難な課題でした。",
+      "quiz": {
+        "question": "OPhELIAが神経回路マッピングの効率を向上させる主なメカニズムは何ですか？",
+        "options": [
+          "刺激する神経の数を常に最大化する",
+          "次に刺激すべき神経を、最も情報量が多い（曖昧な）ものから選ぶ",
+          "全ての神経をランダムに刺激し続ける"
+        ],
+        "correctIndex": 1,
+        "explanation": "OPhELIAは「曖昧さ最大化」というヒューリスティックを用いて、次に刺激すべき神経を、最も情報量が多い（接続の有無が不明瞭な）ものから選ぶことで、限られた試行回数で効率的に神経回路図を作成します。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "ベイズ推論",
+          "definition": "事象の確率を事前情報と観測データで更新する統計手法"
+        },
+        {
+          "term": "ベータ分布",
+          "definition": "0から1の範囲の確率を表すのに適した確率分布"
+        },
+        {
+          "term": "曖昧さ最大化",
+          "definition": "最も不確実性の高い情報を優先的に取得する戦略"
+        },
+        {
+          "term": "ベルヌーイエントロピー",
+          "definition": "二値の結果を持つ事象の不確実性の尺度"
+        },
+        {
+          "term": "事前情報",
+          "definition": "実験開始前に利用できる既知の知識や仮説"
+        },
+        {
+          "term": "アクティブラーニング",
+          "definition": "モデルが最も学習効果の高いデータを選択する機械学習"
+        },
+        {
+          "term": "圧縮センシング",
+          "definition": "少ないデータから元の信号を再構成する技術"
+        },
+        {
+          "term": "コネクトーム",
+          "definition": "脳の神経接続の全体図"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "限られた試行回数で脳の神経回路の繋がりを効率的に特定するAIフレームワークです。",
+      "noveltyContrast": {
+        "before": "従来の神経回路マッピングでは、全ての可能性を試す必要があり、時間、コスト、組織へのダメージが課題でした。また、接続のパターンを仮定する手法も、実際の脳の複雑な接続には対応しきれない場合がありました。",
+        "after": "この論文では、ベイズ統計と機械学習を組み合わせた「OPhELIA」という新しいAIフレームワークを提案。次にどの神経を刺激すれば最も多くの情報が得られるかを予測し、試行回数を大幅に削減しながら、高精度な神経回路図を作成します。"
+      },
+      "analogy": {
+        "title": "最適な畑の土壌調査",
+        "body": "広大な畑で、どの区画の土壌が作物の生育に最も影響を与えるかを知りたいとします。従来の調査では、全ての区画をくまなく調べていましたが、時間も労力もかかります。OPhELIAは、まるで経験豊富な農家が「この区画の土壌はまだよく分からないから、次にここを重点的に調べよう」と判断するように、次に刺激すべき神経を効率的に選びます。これにより、限られた時間で畑全体の土壌マップを正確に作成し、最適な作付け計画を立てるようなものです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "5%",
+          "label": "網羅的な接続図を回復するのに必要な試行回数"
+        }
+      ],
+      "whyYouCare": "この研究は、脳科学だけでなく、様々な分野に応用できる可能性を秘めています。例えば、農業分野では、広大な農地のどこに肥料を撒けば最も収穫量が増えるか、どの品種改良の組み合わせが最も効果的かといった、限られたリソースで最適な選択をする問題に応用できるかもしれません。医療分野では、創薬スクリーニングでどの化合物が最も効果的か、製造業では、どの工程を改善すれば最も品質が向上するかなど、試行回数に制約がある中で効率的に最適な解を見つけ出す必要がある場面で、この「OPhELIA」の考え方が役立つでしょう。データが限られる状況での意思決定を最適化する、汎用性の高いアプローチです。",
+      "takeawayTalk": "脳の配線図を、AIが「次にどこを調べればいいか」を教えてくれて、超効率的に描けるようになったんだ！",
+      "bodyText": "本研究では、ベイズ推論を用いて反復的な光刺激による神経接続マッピングを行います。各刺激ターゲットと応答神経間の接続確率をベータ分布としてモデル化し、試行データ（刺激に対する応答の有無）に基づいてベイズの定理で確率を更新します。OPhELIAは、このベイズ推論フレームワークと「曖昧さ最大化」という情報獲得ヒューリスティックを組み合わせます。曖昧さ最大化は、後方確率の不確実性が高く、ベルヌーイエントロピーが最大に近い（つまり、接続の有無が最も不明瞭な）ターゲットを選択することで、最も情報量の多い刺激を優先します。さらに、刺激前の神経活動から学習された事前情報（prior）を活用し、次に刺激すべきターゲットを予測します。このOPhELIAは、単独のターゲット選択問題と、複数のターゲットを組み合わせる組合せ最適化問題の両方に対応し、アクティブラーニングや圧縮センシングといった既存の戦略と統合して、限られた試行回数で効率的に接続図を近似します。\n\nOPhELIAは、次にどの神経を刺激すれば最も多くの情報が得られるかを、ベイズ統計に基づいて予測することで、効率的なマッピングを実現します。具体的には、まだ接続の有無がはっきりしない（曖昧さの高い）神経ペアを優先的に刺激します。これにより、少ない試行回数で、全体の接続図の不確実性を最も効率的に減らすことができます。事前情報として、刺激前の神経活動パターンを利用することで、どの神経が繋がりやすいかという初期の仮説を立て、さらに効率的な探索を可能にします。",
+      "bodyGlossary": [
+        {
+          "term": "ベイズ推論",
+          "definition": "事象の確率を事前情報と観測データで更新する統計手法",
+          "start": 6,
+          "end": 11
+        },
+        {
+          "term": "ベータ分布",
+          "definition": "0から1の範囲の確率を表すのに適した確率分布",
+          "start": 60,
+          "end": 65
+        },
+        {
+          "term": "曖昧さ最大化",
+          "definition": "最も不確実性の高い情報を優先的に取得する戦略",
+          "start": 138,
+          "end": 144
+        },
+        {
+          "term": "ベルヌーイエントロピー",
+          "definition": "二値の結果を持つ事象の不確実性の尺度",
+          "start": 191,
+          "end": 202
+        },
+        {
+          "term": "事前情報",
+          "definition": "実験開始前に利用できる既知の知識や仮説",
+          "start": 276,
+          "end": 280
+        },
+        {
+          "term": "アクティブラーニング",
+          "definition": "モデルが最も学習効果の高いデータを選択する機械学習",
+          "start": 367,
+          "end": 377
+        },
+        {
+          "term": "圧縮センシング",
+          "definition": "少ないデータから元の信号を再構成する技術",
+          "start": 378,
+          "end": 385
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "ベイズ推論",
+          "definition": "事象の確率を事前情報と観測データで更新する統計手法",
+          "start": 6,
+          "end": 11
+        },
+        {
+          "term": "ベータ分布",
+          "definition": "0から1の範囲の確率を表すのに適した確率分布",
+          "start": 60,
+          "end": 65
+        },
+        {
+          "term": "曖昧さ最大化",
+          "definition": "最も不確実性の高い情報を優先的に取得する戦略",
+          "start": 138,
+          "end": 144
+        },
+        {
+          "term": "ベルヌーイエントロピー",
+          "definition": "二値の結果を持つ事象の不確実性の尺度",
+          "start": 191,
+          "end": 202
+        },
+        {
+          "term": "事前情報",
+          "definition": "実験開始前に利用できる既知の知識や仮説",
+          "start": 276,
+          "end": 280
+        },
+        {
+          "term": "アクティブラーニング",
+          "definition": "モデルが最も学習効果の高いデータを選択する機械学習",
+          "start": 367,
+          "end": 377
+        },
+        {
+          "term": "圧縮センシング",
+          "definition": "少ないデータから元の信号を再構成する技術",
+          "start": 378,
+          "end": 385
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 248,
+      "keyFigure": {
+        "imagePath": "/figures/2607.12930v1_results.png",
+        "page": 7,
+        "caption": "OPhELIAが接続推定を改善し、試行回数を減らす効果を示しています。",
+        "label": "Figure 2: An ambiguity heuristic improves connectivity estimates. Performance of OPhELIA,",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-15T22:58:38.429Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.12930v1_results.png",
+          "page": 7,
+          "caption": "OPhELIAが接続推定を改善し、試行回数を減らす効果を示しています。",
+          "label": "Figure 2: An ambiguity heuristic improves connectivity estimates. Performance of OPhELIA,",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-15T22:58:38.429Z"
+        },
+        {
+          "imagePath": "/figures/2607.12930v1_why.png",
+          "page": 7,
+          "caption": "ベイズ統計に基づく接続推論のモンテカルロシミュレーションの例を示しています。",
+          "label": "Figure 1: Monte Carlo simulations for Bayesian connectivity inference. a. Example simulated",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-15T22:58:38.430Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.12382v1",
+      "title": "Differentiable Clone-Structured Causal Graphs for End-to-End Cognitive Map Learning from Image Sequences",
+      "authors": [
+        "Arash Nikzad",
+        "Sasan Sarbishegi",
+        "Ali Dasmeh",
+        "Muhammad Asif",
+        "Parsa Gharavi",
+        "Erik Husom",
+        "Sagar Sen",
+        "Andrew B. Lehr",
+        "Olivier Penacchio",
+        "Ana Clemente",
+        "Tristan M. Stöber"
+      ],
+      "publishedAt": "2026-07-14T05:54:39Z",
+      "url": "https://arxiv.org/abs/2607.12382v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.12382v1.pdf",
+      "categories": [
+        "topic:neuroscience",
+        "cs.LG",
+        "q-bio.NC"
+      ],
+      "abstract": "How can an agent build a structured map of its world from nothing but an ongoing sequence of raw sensory input and its own movements, especially when natural variation means exact sensory patterns rarely repeat? The Clone-Structured Causal Graph algorithm (CSCG), a normative hippocampus model, shows how an interpretable map can be learned from aliased observations. However, CSCG requires a predefined discrete alphabet, and its expectation-maximization formulation is not easily combined with existing neural network modules, preventing the end-to-end processing of raw image sequences. We remove this barrier by reformulating CSCG as a single, fully differentiable module, gradCSCG, and coupling it to a learned vector-quantized variational autoencoder (VQ-VAE) perceptual front-end. A soft emission forward pass allows the map-learning objective to flow back into perception, while a set of loss-balancing mechanisms mitigates module collapse during joint training. We demonstrate, first, that gradient training reproduces CSCG's results on original symbolic grid worlds by recovering room topology from heavily aliased observations. Second, we show that map recovery remains robust on MNIST image sequences, where each visit to a location yields a newly sampled image of its assigned digit. Across four heavily aliased environments, the end-to-end pipeline successfully uncovers the underlying adjacency graph with high edge precision and recall, directly from visual input. This work provides a proof of principle that CSCG can serve as a composable building block in a deep learning architecture.",
+      "summary": {
+        "gist": "生物やAIが、未踏のルートで近道を見つけたり、試行錯誤が致命的になる状況で道案内をしたりするためには、世界を構造的に理解する内部表現が不可欠です。従来のCSCGアルゴリズムは、経験から構造化された表現を生成できますが、固定された離散的な観測アルファベットを必要とするため、複雑な視覚情報には対応できませんでした。",
+        "novelty": "従来のAIは、画像から地図を作る際に、まず画像を「リンゴ」「畑」といった明確なカテゴリに分類する必要がありました。この分類作業が手動だったり、事前に定義されたりするため、複雑な現実世界の画像には対応しづらく、柔軟な地図作成が困難でした。 この論文では、AIが画像から直接、あいまいな情報でも文脈を区別して地図を作成できる、エンドツーエンドの学習パイプラインを開発しました。これにより、AIは事前にカテゴリを与えられなくても、自律的に場所の構造を理解し、より実用的な地図を生成できるようになりました。",
+        "method": "本研究では、従来のCSCGアルゴリズムを、勾配ベースで学習可能な単一の微分可能モジュール「gradCSCG」として再構築しました。これを、生の画像シーケンスを離散的なトークンに変換する「VQ-VAE（Vector-Quantized Variational Autoencoder）」という知覚フロントエンドと結合します。VQ-VAEは画像を潜在空間にエンコードし、最も近いコードブックのエントリに割り当てることで離散化します。この際、勾配が非微分的な量子化ステップを通過できるように「ストレートスルー推定器」を使用します。gradCSCGは、この離散トークンと行動のシーケンスから、隠れマルコフモデル（HMM）の原理に基づいて、環境のトポロジーマップ（隣接グラフ）を学習します。学習は、再構築損失、コミットメント損失、gradCSCG損失、多様性ペナルティを組み合わせた統合目的関数を用いて、エンドツーエンドで行われます。特に、gradCSCGのソフトエミッションフォワードパスにより、マップ学習の目的が知覚モジュールに逆伝播し、知覚とマップ学習が相互に影響し合いながら学習が進みます。また、学習の安定化のために、長さ正規化、重みアニーリング、多様性ペナルティ、アンチコラプスセーフガードといった様々な損失バランスメカニズムを導入しています。",
+        "results": "本研究では、まず、勾配ベースの学習が、元のシンボリックなグリッド世界において、大幅にエイリアシングされた観測から部屋のトポロジーを再現できることを示しました。次に、MNIST画像シーケンスにおいてもマップの回復が堅牢であることを確認しました。この環境では、場所を訪れるたびに、その場所に割り当てられた数字の新しい画像がサンプリングされます。4つの大幅にエイリアシングされた環境において、エンドツーエンドのパイプラインは、視覚入力から直接、高いエッジ精度と再現率で基礎となる隣接グラフを正常に発見しました。これにより、CSCGが深層学習アーキテクチャの構成可能なビルディングブロックとして機能するという原則が実証されました。",
+        "why": "このシステムは、VQ-VAEが複雑な視覚情報を、意味のある離散的な「トークン」に変換することで機能します。このトークンは、一見同じに見える画像でも、文脈によって異なる意味を持つ「クローン」としてgradCSCGに認識されます。例えば、同じ「畑」の画像でも、収穫期と種まき期では異なるクローンとして扱われます。gradCSCGは、これらのクローン間の遷移パターン（行動によってどのように場所が変化するか）を学習することで、環境の隠れた構造（トポロジーマップ）を構築します。ソフトエミッション結合により、マップ学習の目的がVQ-VAEにフィードバックされ、VQ-VAEはマップ作成に最適なトークンを生成するように学習します。これにより、知覚とマップ学習が密接に連携し、あいまいな視覚情報からでも正確な地図を自律的に生成できるのです。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / cs.LG）",
+      "field": "神経・脳科学",
+      "categoryL1": "serendipity",
+      "categoryL2": "machine-learning",
+      "arxivPrimary": "cs.LG",
+      "titleJa": "画像シーケンスからのエンドツーエンド認知マップ学習のための微分可能なクローン構造因果グラフ",
+      "catchTitle": "AIが「場所」を学ぶ、新しい地図作成術",
+      "hook": "あなたは初めて訪れる広大な農園で、道に迷わず目的地へたどり着けますか？AIも同じ課題に直面しています。",
+      "background": "生物やAIが、未踏のルートで近道を見つけたり、試行錯誤が致命的になる状況で道案内をしたりするためには、世界を構造的に理解する内部表現が不可欠です。従来のCSCGアルゴリズムは、経験から構造化された表現を生成できますが、固定された離散的な観測アルファベットを必要とするため、複雑な視覚情報には対応できませんでした。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "CSCG",
+          "definition": "クローン構造因果グラフ。環境の構造を学習するアルゴリズム。"
+        },
+        {
+          "term": "VQ-VAE",
+          "definition": "画像を離散的なコードに変換するニューラルネットワーク。"
+        },
+        {
+          "term": "gradCSCG",
+          "definition": "微分可能に再構築されたCSCGアルゴリズム。"
+        },
+        {
+          "term": "ストレートスルー推定器",
+          "definition": "非微分的な処理で勾配を流すための手法。"
+        },
+        {
+          "term": "隠れマルコフモデル",
+          "definition": "観測されたシーケンスから隠れた状態を推測する統計モデル。"
+        },
+        {
+          "term": "トポロジーマップ",
+          "definition": "場所間の接続関係を示す地図。"
+        },
+        {
+          "term": "エイリアシング",
+          "definition": "異なる場所が同じように見える現象。"
+        },
+        {
+          "term": "ソフトエミッション結合",
+          "definition": "マップ学習と知覚モジュールを連携させる仕組み。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "AIが視覚情報から、あいまいな場所でも正確な地図を自動で作成する新しい学習方法を開発しました。",
+      "noveltyContrast": {
+        "before": "従来のAIは、画像から地図を作る際に、まず画像を「リンゴ」「畑」といった明確なカテゴリに分類する必要がありました。この分類作業が手動だったり、事前に定義されたりするため、複雑な現実世界の画像には対応しづらく、柔軟な地図作成が困難でした。",
+        "after": "この論文では、AIが画像から直接、あいまいな情報でも文脈を区別して地図を作成できる、エンドツーエンドの学習パイプラインを開発しました。これにより、AIは事前にカテゴリを与えられなくても、自律的に場所の構造を理解し、より実用的な地図を生成できるようになりました。"
+      },
+      "analogy": {
+        "title": "畑の土壌分析で隠れた病原菌を見つける",
+        "body": "これは、広大な畑で、一見同じに見える土壌サンプルから、実は異なる種類の病原菌が潜んでいる場所を特定し、それぞれの病原菌に適した対策を打つようなものです。従来の分析では、まず土壌を「粘土質」「砂質」といった大まかなカテゴリに分類してから病原菌を探していました。しかし、この新しい方法では、土壌の微細な成分の違いから直接、病原菌の種類と分布を特定し、畑全体の病原菌マップを作成できます。これにより、病原菌の早期発見と的確な対処が可能になり、作物の収穫量を最大化できるのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、自動運転車やドローン、ロボットが、複雑な現実世界で自律的に行動するための「賢い地図」を作る上で非常に重要です。例えば、農作業ロボットが広大な畑で、季節や天候によって見え方が変わる作物や障害物を正確に認識し、最適なルートで作業を進めることができるようになります。また、災害現場での探索ロボットが、瓦礫や煙で視界が悪い状況でも、周囲の環境構造を素早く理解し、安全な経路を見つける助けとなるでしょう。私たちの生活や産業の様々な場面で、AIがより賢く、自律的に動ける未来を拓く可能性を秘めています。",
+      "takeawayTalk": "AIが自分で「場所」を学び、あいまいな情報から正確な地図を作る技術ができたよ！",
+      "bodyText": "本研究では、従来のCSCGアルゴリズムを、勾配ベースで学習可能な単一の微分可能モジュール「gradCSCG」として再構築しました。これを、生の画像シーケンスを離散的なトークンに変換する「VQ-VAE（Vector-Quantized Variational Autoencoder）」という知覚フロントエンドと結合します。VQ-VAEは画像を潜在空間にエンコードし、最も近いコードブックのエントリに割り当てることで離散化します。この際、勾配が非微分的な量子化ステップを通過できるように「ストレートスルー推定器」を使用します。gradCSCGは、この離散トークンと行動のシーケンスから、隠れマルコフモデル（HMM）の原理に基づいて、環境のトポロジーマップ（隣接グラフ）を学習します。学習は、再構築損失、コミットメント損失、gradCSCG損失、多様性ペナルティを組み合わせた統合目的関数を用いて、エンドツーエンドで行われます。特に、gradCSCGのソフトエミッションフォワードパスにより、マップ学習の目的が知覚モジュールに逆伝播し、知覚とマップ学習が相互に影響し合いながら学習が進みます。また、学習の安定化のために、長さ正規化、重みアニーリング、多様性ペナルティ、アンチコラプスセーフガードといった様々な損失バランスメカニズムを導入しています。\n\nこのシステムは、VQ-VAEが複雑な視覚情報を、意味のある離散的な「トークン」に変換することで機能します。このトークンは、一見同じに見える画像でも、文脈によって異なる意味を持つ「クローン」としてgradCSCGに認識されます。例えば、同じ「畑」の画像でも、収穫期と種まき期では異なるクローンとして扱われます。gradCSCGは、これらのクローン間の遷移パターン（行動によってどのように場所が変化するか）を学習することで、環境の隠れた構造（トポロジーマップ）を構築します。ソフトエミッション結合により、マップ学習の目的がVQ-VAEにフィードバックされ、VQ-VAEはマップ作成に最適なトークンを生成するように学習します。これにより、知覚とマップ学習が密接に連携し、あいまいな視覚情報からでも正確な地図を自律的に生成できるのです。",
+      "bodyGlossary": [
+        {
+          "term": "CSCG",
+          "definition": "クローン構造因果グラフ。環境の構造を学習するアルゴリズム。",
+          "start": 9,
+          "end": 13
+        },
+        {
+          "term": "gradCSCG",
+          "definition": "微分可能に再構築されたCSCGアルゴリズム。",
+          "start": 45,
+          "end": 53
+        },
+        {
+          "term": "VQ-VAE",
+          "definition": "画像を離散的なコードに変換するニューラルネットワーク。",
+          "start": 93,
+          "end": 99
+        },
+        {
+          "term": "ストレートスルー推定器",
+          "definition": "非微分的な処理で勾配を流すための手法。",
+          "start": 243,
+          "end": 254
+        },
+        {
+          "term": "隠れマルコフモデル",
+          "definition": "観測されたシーケンスから隠れた状態を推測する統計モデル。",
+          "start": 292,
+          "end": 301
+        },
+        {
+          "term": "トポロジーマップ",
+          "definition": "場所間の接続関係を示す地図。",
+          "start": 318,
+          "end": 326
+        },
+        {
+          "term": "ソフトエミッション結合",
+          "definition": "マップ学習と知覚モジュールを連携させる仕組み。",
+          "start": 809,
+          "end": 820
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "CSCG",
+          "definition": "クローン構造因果グラフ。環境の構造を学習するアルゴリズム。",
+          "start": 9,
+          "end": 13
+        },
+        {
+          "term": "gradCSCG",
+          "definition": "微分可能に再構築されたCSCGアルゴリズム。",
+          "start": 45,
+          "end": 53
+        },
+        {
+          "term": "VQ-VAE",
+          "definition": "画像を離散的なコードに変換するニューラルネットワーク。",
+          "start": 93,
+          "end": 99
+        },
+        {
+          "term": "ストレートスルー推定器",
+          "definition": "非微分的な処理で勾配を流すための手法。",
+          "start": 243,
+          "end": 254
+        },
+        {
+          "term": "隠れマルコフモデル",
+          "definition": "観測されたシーケンスから隠れた状態を推測する統計モデル。",
+          "start": 292,
+          "end": 301
+        },
+        {
+          "term": "トポロジーマップ",
+          "definition": "場所間の接続関係を示す地図。",
+          "start": 318,
+          "end": 326
+        },
+        {
+          "term": "ソフトエミッション結合",
+          "definition": "マップ学習と知覚モジュールを連携させる仕組み。",
+          "start": 809,
+          "end": 820
+        }
+      ],
+      "agriEconRelevance": "この技術は、農業分野におけるスマート農業の進化に大きく貢献します。例えば、広大な農地を巡回するドローンやロボットが、作物の生育状況や病害虫の発生箇所を、天候や時間帯による視覚変化に左右されずに正確にマッピングできるようになります。これにより、精密農業におけるデータ収集の精度が向上し、肥料や農薬の最適化、収穫時期の予測などがより効率的に行えるようになります。また、新規就農者が不慣れな農地の構造を素早く理解し、効率的な農作業計画を立てるための支援ツールとしても応用が期待されます。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 297,
+      "keyFigure": {
+        "imagePath": "/figures/2607.12382v1_results.png",
+        "page": 9,
+        "caption": "MNIST画像シーケンスから環境の隣接グラフを正確に発見した結果を示しています。",
+        "label": "Figure 5: gradCSCG on raw MNIST observations, one column per environment (aliased, corridors, room, two_rooms).",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-15T22:58:41.238Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.12382v1_results.png",
+          "page": 9,
+          "caption": "MNIST画像シーケンスから環境の隣接グラフを正確に発見した結果を示しています。",
+          "label": "Figure 5: gradCSCG on raw MNIST observations, one column per environment (aliased, corridors, room, two_rooms).",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-15T22:58:41.238Z"
+        },
+        {
+          "imagePath": "/figures/2607.12382v1_why.png",
+          "page": 8,
+          "caption": "勾配降下法で学習されたgradCSCGが、シンボリックなグリッド世界で元のCSCGを再現する様子を示しています。",
+          "label": "Figure 3: gradCSCG reproduces the original CSCG on integer (symbolic) grid-worlds, trained by gradient descent rather",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-15T22:58:41.238Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.12919v1",
+      "title": "On Tree-Network Distinguishability and Full Identifiability of Phylogenetic Networks",
+      "authors": [
+        "Jari Brits",
+        "Niels Holtgrefe",
+        "Leo van Iersel",
+        "Samuel Martin"
+      ],
+      "publishedAt": "2026-07-14T15:54:43Z",
+      "url": "https://arxiv.org/abs/2607.12919v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.12919v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "q-bio.PE"
+      ],
+      "abstract": "Phylogenetic networks generalize phylogenetic trees to evolutionary histories that include reticulate events such as recombination, horizontal gene transfer, and hybridization. Under a Markov model of nucleotide substitution, a phylogenetic network determines a distribution of leaf-patterns. Here, we study the identifiability of the network topology from this distribution under the Jukes-Cantor (JC), Kimura 2-parameter (K2P), and Kimura 3-parameter (K3P) models. Our first result is that the semi-directed network parameter of a level-1 phylogenetic network (modulo redirecting triangles) is fully identifiable under all three models, on a biologically reasonable parameter space in which substitution rates are probabilistic and mixing parameters are non-trivial (i.e., not 0 or 1). In contrast to the generic identifiability established in prior work, this holds at every point of the parameter space, not merely off of a measure-zero subset. Our second result distinguishes phylogenetic networks from phylogenetic trees, on the same parameter space, under JC and K2P. We prove that no phylogenetic network and phylogenetic tree can induce the same leaf-pattern distribution unless the network is a tree, possibly augmented with certain substructures called $2$-blobs. This means the presence of reticulate evolution creates, in most cases, a detectable signature in the leaf-pattern distribution. More broadly, these results have consequences for identifiability beyond the models and network classes studied here, including for several coalescent-based models.",
+      "summary": {
+        "gist": "進化生物学では、生物の進化の歴史を系統樹（枝分かれする木のような図）で表現するのが一般的です。しかし、遺伝子の組換え、水平遺伝子伝達、種間交雑といった「網状進化イベント」は、一本の木では表現できません。これらの複雑な進化を記述するために、系統ネットワークという、枝が合流する（交差点を持つ）グラフが用いられます。DNA配列のパターン（リーフパターン）から、この系統ネットワークの構造を正確に識別できるかどうかが、統計的推論において重要となります。",
+        "novelty": "これまでの研究では、DNAパターンから進化の系統ネットワークを識別できるとされていましたが、それはごく一部の特殊な条件下でのみ可能でした。例えば、特定のパラメータ設定でしか識別できず、現実の生物学的な多様な状況には対応しきれていませんでした。 この論文では、生物学的に妥当な幅広いパラメータ空間において、進化の「交差点」を含む系統ネットワークの構造をDNAパターンから完全に識別できることを示しました。さらに、ネットワークが通常の系統樹とは異なることを、DNAパターンから明確に区別できることも証明しました。",
+        "method": "本研究では、DNAの塩基置換を記述するマルコフモデル（Jukes-Cantor, Kimura 2-parameter, Kimura 3-parameterモデル）を用いて、系統ネットワークが生成するリーフパターンの分布を分析しました。特に、生物学的に妥当なパラメータ空間（置換率が確率的で、混合パラメータが0や1ではない空間）に焦点を当て、レベル1系統ネットワークの半有向ネットワークパラメータが完全に識別可能であることを示しました。また、系統ネットワークと系統樹が同じリーフパターン分布を生成しないことを証明するために、制限ネットワークや2-blobといった概念を用いて、ネットワークと樹形図の区別可能性を数学的に検証しました。",
+        "results": "1. レベル1系統ネットワークの半有向ネットワークパラメータは、Jukes-Cantor, Kimura 2-parameter, Kimura 3-parameterの全てのモデルにおいて、生物学的に妥当なパラメータ空間全体で完全に識別可能であることが示されました。これは、これまでの「一般的な識別可能性」（ごく一部の特殊な条件でしか識別できない）とは異なり、パラメータ空間のあらゆる点で識別可能であることを意味します。\n2. 系統ネットワークと系統樹は、Jukes-CantorおよびKimura 2-parameterモデルの下で、同じリーフパターン分布を生成しないことが証明されました。ただし、ネットワークが特定の「2-blob」と呼ばれる構造を持つ樹形図である場合は例外です。これは、網状進化の存在が、ほとんどの場合、DNAパターンに検出可能な特徴的な痕跡を残すことを意味します。",
+        "why": "系統ネットワークが生成するリーフパターン分布は、そのネットワークの構造（トポロジー）と枝の長さ、塩基置換率などのパラメータによって決まります。本研究では、このリーフパターン分布が、異なるネットワーク構造から生成される場合に、統計的に区別できるかどうかを数学的に解析しました。特に、網状進化イベントを含むネットワークは、単純な樹形図では説明できないような、より複雑なDNAパターン分布を生成するため、その違いを検出することが可能になります。これにより、DNAパターンから逆算して、どのような進化の「交差点」が存在したのかを正確に特定できるようになります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.PE）",
+      "field": "食料システム",
+      "categoryL1": "serendipity",
+      "categoryL2": "evolutionary-biology",
+      "arxivPrimary": "q-bio.PE",
+      "titleJa": "系統ネットワークの識別可能性と系統樹との区別に関する研究",
+      "catchTitle": "進化の「交差点」を見つけるDNA解析",
+      "hook": "あなたのDNAを解析して祖先をたどる時、一本の木のような進化だけでは説明できない「交差点」があるのをご存知ですか？",
+      "background": "進化生物学では、生物の進化の歴史を系統樹（枝分かれする木のような図）で表現するのが一般的です。しかし、遺伝子の組換え、水平遺伝子伝達、種間交雑といった「網状進化イベント」は、一本の木では表現できません。これらの複雑な進化を記述するために、系統ネットワークという、枝が合流する（交差点を持つ）グラフが用いられます。DNA配列のパターン（リーフパターン）から、この系統ネットワークの構造を正確に識別できるかどうかが、統計的推論において重要となります。",
+      "quiz": {
+        "question": "この研究で、系統ネットワークと系統樹がDNAパターンから区別できない唯一のケースは何ですか？",
+        "options": [
+          "ネットワークが非常に複雑な場合",
+          "ネットワークが特定の「2-blob」構造を持つ樹形図である場合",
+          "DNAの塩基置換モデルがJukes-Cantorモデルではない場合"
+        ],
+        "correctIndex": 1,
+        "explanation": "この論文では、系統ネットワークが特定の「2-blob」と呼ばれる構造を持つ樹形図である場合に限り、系統ネットワークと系統樹が同じリーフパターン分布を生成し、区別できないと述べています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "系統ネットワーク",
+          "definition": "遺伝子組換えなど枝が合流する進化を表現するグラフ"
+        },
+        {
+          "term": "リーフパターン",
+          "definition": "DNA配列の特定のパターン"
+        },
+        {
+          "term": "マルコフモデル",
+          "definition": "塩基置換の確率的過程を記述する数学モデル"
+        },
+        {
+          "term": "識別可能性",
+          "definition": "データからモデルのパラメータを特定できる性質"
+        },
+        {
+          "term": "半有向ネットワーク",
+          "definition": "系統ネットワークから根を除き、一部の枝を無向化したもの"
+        },
+        {
+          "term": "2-blob",
+          "definition": "2つの接続枝を持つ網状成分"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "DNAパターンから進化の「交差点」を含むネットワーク構造を正確に識別し、それが通常の樹形図とは異なることを証明しました。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、DNAパターンから進化の系統ネットワークを識別できるとされていましたが、それはごく一部の特殊な条件下でのみ可能でした。例えば、特定のパラメータ設定でしか識別できず、現実の生物学的な多様な状況には対応しきれていませんでした。",
+        "after": "この論文では、生物学的に妥当な幅広いパラメータ空間において、進化の「交差点」を含む系統ネットワークの構造をDNAパターンから完全に識別できることを示しました。さらに、ネットワークが通常の系統樹とは異なることを、DNAパターンから明確に区別できることも証明しました。"
+      },
+      "analogy": {
+        "title": "畑の作物の交配履歴を読み解く",
+        "body": "これは、まるで畑で育った様々な作物のDNAを調べて、どの作物が親から子へ受け継がれたのか、そしてどの作物が異なる品種と交配して新しい品種になったのかを、その作物の葉の模様（DNAパターン）から正確に読み解くようなものです。これまでは、特定の土壌や気候条件でしか交配の痕跡を識別できませんでしたが、この研究では、どんな土壌や気候でも、交配の痕跡をはっきりと見分けられるようになったのです。これにより、作物の複雑な進化の歴史をより深く理解できるようになります。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、DNA解析を通じて生物の進化の歴史をより正確に理解するための基盤を提供します。例えば、農作物の品種改良において、どの品種がどのように交配して現在の形になったのか、病害耐性などの特定の形質がどのように伝達されたのかを、DNAデータから詳細に追跡できるようになります。また、感染症の原因となるウイルスの進化経路や、薬剤耐性菌がどのように広まったかなど、公衆衛生に関わる問題の解明にも役立ちます。私たちの生活を豊かにする生物多様性の理解や、未来の食料安全保障、医療の発展に貢献する可能性を秘めた、非常に重要な発見と言えるでしょう。",
+      "takeawayTalk": "DNA解析で、進化の「交差点」まで正確に読み解けるようになったんだ！",
+      "bodyText": "本研究では、DNAの塩基置換を記述するマルコフモデル（Jukes-Cantor, Kimura 2-parameter, Kimura 3-parameterモデル）を用いて、系統ネットワークが生成するリーフパターンの分布を分析しました。特に、生物学的に妥当なパラメータ空間（置換率が確率的で、混合パラメータが0や1ではない空間）に焦点を当て、レベル1系統ネットワークの半有向ネットワークパラメータが完全に識別可能であることを示しました。また、系統ネットワークと系統樹が同じリーフパターン分布を生成しないことを証明するために、制限ネットワークや2-blobといった概念を用いて、ネットワークと樹形図の区別可能性を数学的に検証しました。\n\n系統ネットワークが生成するリーフパターン分布は、そのネットワークの構造（トポロジー）と枝の長さ、塩基置換率などのパラメータによって決まります。本研究では、このリーフパターン分布が、異なるネットワーク構造から生成される場合に、統計的に区別できるかどうかを数学的に解析しました。特に、網状進化イベントを含むネットワークは、単純な樹形図では説明できないような、より複雑なDNAパターン分布を生成するため、その違いを検出することが可能になります。これにより、DNAパターンから逆算して、どのような進化の「交差点」が存在したのかを正確に特定できるようになります。",
+      "bodyGlossary": [
+        {
+          "term": "マルコフモデル",
+          "definition": "塩基置換の確率的過程を記述する数学モデル",
+          "start": 19,
+          "end": 26
+        },
+        {
+          "term": "系統ネットワーク",
+          "definition": "遺伝子組換えなど枝が合流する進化を表現するグラフ",
+          "start": 88,
+          "end": 96
+        },
+        {
+          "term": "リーフパターン",
+          "definition": "DNA配列の特定のパターン",
+          "start": 101,
+          "end": 108
+        },
+        {
+          "term": "半有向ネットワーク",
+          "definition": "系統ネットワークから根を除き、一部の枝を無向化したもの",
+          "start": 185,
+          "end": 194
+        },
+        {
+          "term": "2-blob",
+          "definition": "2つの接続枝を持つ網状成分",
+          "start": 272,
+          "end": 278
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "マルコフモデル",
+          "definition": "塩基置換の確率的過程を記述する数学モデル",
+          "start": 19,
+          "end": 26
+        },
+        {
+          "term": "系統ネットワーク",
+          "definition": "遺伝子組換えなど枝が合流する進化を表現するグラフ",
+          "start": 88,
+          "end": 96
+        },
+        {
+          "term": "リーフパターン",
+          "definition": "DNA配列の特定のパターン",
+          "start": 101,
+          "end": 108
+        },
+        {
+          "term": "半有向ネットワーク",
+          "definition": "系統ネットワークから根を除き、一部の枝を無向化したもの",
+          "start": 185,
+          "end": 194
+        },
+        {
+          "term": "2-blob",
+          "definition": "2つの接続枝を持つ網状成分",
+          "start": 272,
+          "end": 278
+        }
+      ],
+      "agriEconRelevance": "この研究は、農業経済学において、特に品種改良や遺伝資源管理の分野に応用可能です。例えば、ある作物の品種が持つ特定の有用形質（例：病害耐性、収量性）が、過去のどの交配イベント（網状進化）によって導入されたのかをDNAパターンから正確に特定できるようになります。これにより、より効率的な育種戦略の立案や、絶滅危惧種の遺伝的多様性の保全計画に役立つ可能性があります。また、遺伝子組換え作物やゲノム編集作物のトレーサビリティ確保にも貢献し、市場における消費者の信頼性向上にも寄与するでしょう。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 284
+    }
+  ]
+}

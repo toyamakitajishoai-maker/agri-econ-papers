@@ -1,0 +1,1110 @@
+{
+  "date": "2026-07-17",
+  "papers": [
+    {
+      "id": "2607.12919v1",
+      "title": "On Tree-Network Distinguishability and Full Identifiability of Phylogenetic Networks",
+      "authors": [
+        "Jari Brits",
+        "Niels Holtgrefe",
+        "Leo van Iersel",
+        "Samuel Martin"
+      ],
+      "publishedAt": "2026-07-14T15:54:43Z",
+      "url": "https://arxiv.org/abs/2607.12919v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.12919v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "q-bio.PE"
+      ],
+      "abstract": "Phylogenetic networks generalize phylogenetic trees to evolutionary histories that include reticulate events such as recombination, horizontal gene transfer, and hybridization. Under a Markov model of nucleotide substitution, a phylogenetic network determines a distribution of leaf-patterns. Here, we study the identifiability of the network topology from this distribution under the Jukes-Cantor (JC), Kimura 2-parameter (K2P), and Kimura 3-parameter (K3P) models. Our first result is that the semi-directed network parameter of a level-1 phylogenetic network (modulo redirecting triangles) is fully identifiable under all three models, on a biologically reasonable parameter space in which substitution rates are probabilistic and mixing parameters are non-trivial (i.e., not 0 or 1). In contrast to the generic identifiability established in prior work, this holds at every point of the parameter space, not merely off of a measure-zero subset. Our second result distinguishes phylogenetic networks from phylogenetic trees, on the same parameter space, under JC and K2P. We prove that no phylogenetic network and phylogenetic tree can induce the same leaf-pattern distribution unless the network is a tree, possibly augmented with certain substructures called $2$-blobs. This means the presence of reticulate evolution creates, in most cases, a detectable signature in the leaf-pattern distribution. More broadly, these results have consequences for identifiability beyond the models and network classes studied here, including for several coalescent-based models.",
+      "summary": {
+        "gist": "生物の進化は、一本道の系統樹で表されるだけでなく、遺伝子の組換え、水平遺伝子伝達、種間交雑といった「網状進化（reticulate evolution）」と呼ばれる現象によって、複数の系統が交差する複雑なネットワークを形成することが知られています。これらの網状進化イベントを捉えるには、系統樹ではなく「系統ネットワーク」というモデルが必要です。DNA配列データから、この系統ネットワークの構造（トポロジー）を正確に識別できるかどうかは、進化生物学における重要な課題です。",
+        "novelty": "これまでの研究では、生物の進化の歴史をたどる「系統ネットワーク」の形をDNAパターンから識別できるとされていましたが、それはごく一部の特殊なケースに限られていました。つまり、データによっては、異なる進化の形なのに同じDNAパターンに見えてしまう可能性が残されていたのです。 この論文では、生物学的に妥当な条件下であれば、DNAパターンから系統ネットワークの形を常に完全に識別できることを示しました。さらに、一本道の進化（系統樹）と「交差点」を含む進化（系統ネットワーク）が、ほとんどの場合、DNAパターンから明確に区別できることを証明しています。",
+        "method": "本研究では、DNAの塩基置換を確率的にモデル化するマルコフモデル（Jukes-Cantor, Kimura 2-parameter, Kimura 3-parameterモデル）を用いて、系統ネットワークのトポロジーが、そのネットワークが生成する「リーフパターン分布」（DNA配列のパターン）から識別可能かどうかを数学的に解析しました。特に、生物学的に妥当なパラメータ空間（置換率が確率的で、混合パラメータが自明でない空間）に焦点を当て、以下の2つの主要な結果を導き出しました。\n1. レベル1系統ネットワークの「半有向ネットワークパラメータ」が、上記の3つのモデル全てにおいて完全に識別可能であること。\n2. 系統ネットワークと系統樹が、同じリーフパターン分布を誘導することはないこと。ただし、ネットワークが特定の「2-blob」と呼ばれる構造を持つ系統樹である場合は除く。",
+        "results": "1. レベル1系統ネットワーク（特定の単純な網状構造を持つネットワーク）のトポロジーは、DNAパターンから常に完全に識別可能であることが示されました。これは、以前の研究で示された「一般的な識別可能性」（ごく一部の例外を除く）よりも強力な結果であり、パラメータ空間のあらゆる点で識別可能であることを意味します。\n2. 系統ネットワークと系統樹は、ほとんどの場合、DNAパターンから明確に区別できることが証明されました。つまり、網状進化が存在する場合、それはDNAパターンに検出可能な特徴的な痕跡を残します。この区別ができないのは、ネットワークが「2-blob」という特殊な構造を持つ系統樹である場合に限られます。",
+        "why": "系統ネットワークは、網状進化イベントを「混合」として表現します。これは、ネットワークのリーフパターン分布が、そのネットワークが内包する複数の系統樹のリーフパターン分布の凸結合（重み付き平均）として表されることを意味します。本研究では、この混合の特性と、各塩基置換モデルの数学的構造を詳細に解析することで、異なるネットワークトポロジーが異なるリーフパターン分布を生み出すことを証明しました。特に、「完全識別可能性」は、異なるネットワークが同じリーフパターン分布を生成するようなパラメータの組み合わせが、生物学的に妥当な空間には存在しないことを示しています。また、系統ネットワークが系統樹と区別できるのは、網状進化イベントがDNAパターンに特有の「署名」を残すためです。この署名は、ネットワークの構造が持つ代数的な特性によって生じます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / q-bio.PE）",
+      "field": "食料システム",
+      "categoryL1": "serendipity",
+      "categoryL2": "evolutionary-biology",
+      "arxivPrimary": "q-bio.PE",
+      "titleJa": "系統ネットワークの識別可能性と系統樹との区別に関する研究",
+      "catchTitle": "進化の「交差点」を見つけるDNA解析",
+      "hook": "あなたの祖先をたどる系図は一本道ですか？実は、生物の進化には「交差点」があることをご存じでしょうか？",
+      "background": "生物の進化は、一本道の系統樹で表されるだけでなく、遺伝子の組換え、水平遺伝子伝達、種間交雑といった「網状進化（reticulate evolution）」と呼ばれる現象によって、複数の系統が交差する複雑なネットワークを形成することが知られています。これらの網状進化イベントを捉えるには、系統樹ではなく「系統ネットワーク」というモデルが必要です。DNA配列データから、この系統ネットワークの構造（トポロジー）を正確に識別できるかどうかは、進化生物学における重要な課題です。",
+      "quiz": {
+        "question": "この研究で、系統ネットワークと系統樹がDNAパターンから区別できない唯一のケースは何ですか？",
+        "options": [
+          "ネットワークが非常に複雑な場合",
+          "ネットワークが「2-blob」という特殊な構造を持つ系統樹である場合",
+          "DNAの塩基置換モデルがJukes-Cantorモデル以外の場合"
+        ],
+        "correctIndex": 1,
+        "explanation": "この論文では、系統ネットワークと系統樹はほとんどの場合区別できますが、ネットワークが「2-blob」と呼ばれる特殊な構造を持つ系統樹である場合に限り、同じリーフパターン分布を誘導する可能性があるとされています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "系統ネットワーク",
+          "definition": "遺伝子組換えなど、系統が交差する進化を表すグラフ。"
+        },
+        {
+          "term": "リーフパターン分布",
+          "definition": "DNA配列の塩基の並び方（パターン）の確率分布。"
+        },
+        {
+          "term": "マルコフモデル",
+          "definition": "DNAの塩基が時間とともに変化する確率過程のモデル。"
+        },
+        {
+          "term": "トポロジー",
+          "definition": "グラフの枝の長さを含まない、接続関係の構造。"
+        },
+        {
+          "term": "識別可能性",
+          "definition": "データからモデルの構造を唯一に決定できる性質。"
+        },
+        {
+          "term": "レベル1系統ネットワーク",
+          "definition": "網状進化の複雑さが限定された系統ネットワーク。"
+        },
+        {
+          "term": "半有向ネットワークパラメータ",
+          "definition": "系統ネットワークの根の位置を考慮しない構造情報。"
+        },
+        {
+          "term": "2-blob",
+          "definition": "ネットワーク内の特殊な網状構造を持つ部分。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "DNAパターンから生物進化の「交差点」を正確に特定し、それが一本道の進化（系統樹）とは異なることを証明した研究です。",
+      "noveltyContrast": {
+        "before": "これまでの研究では、生物の進化の歴史をたどる「系統ネットワーク」の形をDNAパターンから識別できるとされていましたが、それはごく一部の特殊なケースに限られていました。つまり、データによっては、異なる進化の形なのに同じDNAパターンに見えてしまう可能性が残されていたのです。",
+        "after": "この論文では、生物学的に妥当な条件下であれば、DNAパターンから系統ネットワークの形を常に完全に識別できることを示しました。さらに、一本道の進化（系統樹）と「交差点」を含む進化（系統ネットワーク）が、ほとんどの場合、DNAパターンから明確に区別できることを証明しています。"
+      },
+      "analogy": {
+        "title": "畑の畝（うね）から作物の交配歴を読み解く",
+        "body": "これは、まるで畑の畝（うね）のパターンから、どの作物がどのように交配されてきたかを正確に読み解くようなものです。畝の形（系統ネットワークのトポロジー）が、作物の葉の模様（DNAのリーフパターン）にどう影響するかを調べ、異なる畝の形が同じ葉の模様になることはほとんどない、と証明しました。これにより、複雑な交配の歴史も、葉の模様から確実に特定できるようになるのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、生物の進化の歴史をより正確に理解するための強力なツールを提供します。例えば、病原菌の進化経路を追跡する際、遺伝子の水平伝播（網状進化の一種）が起きている場合、従来の系統樹モデルでは誤った結論を導き出す可能性があります。この研究の成果を使えば、DNAデータから網状進化の有無を確実に判断し、より正確な進化のシナリオを描けるようになります。これは、感染症対策や新薬開発、さらには作物の品種改良など、様々な分野で応用され、私たちの生活に役立つ可能性があります。",
+      "takeawayTalk": "DNAから生物の複雑な進化の歴史が正確にわかるようになったよ！",
+      "bodyText": "本研究では、DNAの塩基置換を確率的にモデル化するマルコフモデル（Jukes-Cantor, Kimura 2-parameter, Kimura 3-parameterモデル）を用いて、系統ネットワークのトポロジーが、そのネットワークが生成する「リーフパターン分布」（DNA配列のパターン）から識別可能かどうかを数学的に解析しました。特に、生物学的に妥当なパラメータ空間（置換率が確率的で、混合パラメータが自明でない空間）に焦点を当て、以下の2つの主要な結果を導き出しました。\n1. レベル1系統ネットワークの「半有向ネットワークパラメータ」が、上記の3つのモデル全てにおいて完全に識別可能であること。\n2. 系統ネットワークと系統樹が、同じリーフパターン分布を誘導することはないこと。ただし、ネットワークが特定の「2-blob」と呼ばれる構造を持つ系統樹である場合は除く。\n\n系統ネットワークは、網状進化イベントを「混合」として表現します。これは、ネットワークのリーフパターン分布が、そのネットワークが内包する複数の系統樹のリーフパターン分布の凸結合（重み付き平均）として表されることを意味します。本研究では、この混合の特性と、各塩基置換モデルの数学的構造を詳細に解析することで、異なるネットワークトポロジーが異なるリーフパターン分布を生み出すことを証明しました。特に、「完全識別可能性」は、異なるネットワークが同じリーフパターン分布を生成するようなパラメータの組み合わせが、生物学的に妥当な空間には存在しないことを示しています。また、系統ネットワークが系統樹と区別できるのは、網状進化イベントがDNAパターンに特有の「署名」を残すためです。この署名は、ネットワークの構造が持つ代数的な特性によって生じます。",
+      "bodyGlossary": [
+        {
+          "term": "マルコフモデル",
+          "definition": "DNAの塩基が時間とともに変化する確率過程のモデル。",
+          "start": 25,
+          "end": 32
+        },
+        {
+          "term": "系統ネットワーク",
+          "definition": "遺伝子組換えなど、系統が交差する進化を表すグラフ。",
+          "start": 94,
+          "end": 102
+        },
+        {
+          "term": "トポロジー",
+          "definition": "グラフの枝の長さを含まない、接続関係の構造。",
+          "start": 103,
+          "end": 108
+        },
+        {
+          "term": "リーフパターン分布",
+          "definition": "DNA配列の塩基の並び方（パターン）の確率分布。",
+          "start": 124,
+          "end": 133
+        },
+        {
+          "term": "レベル1系統ネットワーク",
+          "definition": "網状進化の複雑さが限定された系統ネットワーク。",
+          "start": 243,
+          "end": 255
+        },
+        {
+          "term": "半有向ネットワークパラメータ",
+          "definition": "系統ネットワークの根の位置を考慮しない構造情報。",
+          "start": 257,
+          "end": 271
+        },
+        {
+          "term": "2-blob",
+          "definition": "ネットワーク内の特殊な網状構造を持つ部分。",
+          "start": 359,
+          "end": 365
+        },
+        {
+          "term": "識別可能性",
+          "definition": "データからモデルの構造を唯一に決定できる性質。",
+          "start": 590,
+          "end": 595
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "マルコフモデル",
+          "definition": "DNAの塩基が時間とともに変化する確率過程のモデル。",
+          "start": 25,
+          "end": 32
+        },
+        {
+          "term": "系統ネットワーク",
+          "definition": "遺伝子組換えなど、系統が交差する進化を表すグラフ。",
+          "start": 94,
+          "end": 102
+        },
+        {
+          "term": "トポロジー",
+          "definition": "グラフの枝の長さを含まない、接続関係の構造。",
+          "start": 103,
+          "end": 108
+        },
+        {
+          "term": "リーフパターン分布",
+          "definition": "DNA配列の塩基の並び方（パターン）の確率分布。",
+          "start": 124,
+          "end": 133
+        },
+        {
+          "term": "レベル1系統ネットワーク",
+          "definition": "網状進化の複雑さが限定された系統ネットワーク。",
+          "start": 243,
+          "end": 255
+        },
+        {
+          "term": "半有向ネットワークパラメータ",
+          "definition": "系統ネットワークの根の位置を考慮しない構造情報。",
+          "start": 257,
+          "end": 271
+        },
+        {
+          "term": "2-blob",
+          "definition": "ネットワーク内の特殊な網状構造を持つ部分。",
+          "start": 359,
+          "end": 365
+        },
+        {
+          "term": "識別可能性",
+          "definition": "データからモデルの構造を唯一に決定できる性質。",
+          "start": 590,
+          "end": 595
+        }
+      ],
+      "agriEconRelevance": "この研究は、作物の品種改良における遺伝子交雑の歴史をDNAデータから正確に解明するのに役立ちます。例えば、ある作物の優れた形質が、過去のどの品種との交雑によってもたらされたのかを、DNAパターンから確実に特定できるようになります。これにより、より効率的な育種戦略を立てたり、病害抵抗性などの重要な形質を持つ品種の開発を加速させたりすることが可能になります。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 288
+    },
+    {
+      "id": "2607.12345v1",
+      "title": "Forecasting Inflation with Microdata: An Adaptive Machine Learning Approach",
+      "authors": [
+        "Catherine Chen",
+        "Chen Gao",
+        "Jonathon Hazell",
+        "Lihua Lei",
+        "Chen Lian"
+      ],
+      "publishedAt": "2026-07-14T04:46:43Z",
+      "url": "https://arxiv.org/abs/2607.12345v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.12345v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "econ.GN",
+        "stat.ME",
+        "stat.ML"
+      ],
+      "abstract": "Does microeconomic heterogeneity help to forecast aggregate inflation in a non-stationary environment? We develop a scan test for whether one forecast outperforms another, over an interval with unknown starting point and duration. To exploit any occasional forecasting power that the scan test detects, we design an adaptive machine learning pipeline. We encode the distribution of price changes into a high-dimensional vector, which we combine with a gradient boosted trees algorithm. We then combine this micro forecast with other benchmark forecasts, using an adaptive algorithm that makes use of the micro forecast only when it performs well. We apply the pipeline to UK microdata, with four main results. First, the micro forecast outperforms a univariate benchmark, but only in the volatile period after 2020. Second, the scan test detects periods of micro outperformance, so the micro forecast enters the combined forecast. Third, the combined forecast performs comparably to the univariate benchmark before 2020 and better at every horizon after 2020. Fourth, the value of microdata for the combined forecast materializes after 2020. We conclude that microdata are valuable for forecasting aggregate inflation, but only after large shocks.",
+      "summary": {
+        "gist": "経済予測、特にインフレ予測は、政府の政策決定や企業の事業戦略に不可欠ですが、その難しさが長年の課題でした。特に、経済の状況が大きく変動する「非定常」な環境では、従来の予測モデルは精度が低下しがちです。しかし、近年、個々の商品価格の変動といった膨大なミクロデータが利用可能になり、これを活用してインフレ予測を改善できる可能性が浮上しています。この研究は、ミクロデータがインフレ予測にいつ、どのように役立つのかという根本的な問いに答えることを目指しています。",
+        "novelty": "従来のインフレ予測は、GDPや失業率といったマクロ経済データに依存していました。しかし、これらのデータだけでは、特に経済が大きく変動する時期の予測精度には限界があり、単純なモデルにすら劣ることもありました。 この研究では、数百万件に及ぶ個々の商品価格データ（ミクロデータ）をAIで分析し、マクロデータと組み合わせることで、経済が不安定な時期のインフレ予測精度を飛躍的に向上させる新しい手法を開発しました。",
+        "method": "本研究では、英国の消費者物価指数（CPI）を構成する数百万件の個々の商品価格データ（ミクロデータ）とマクロ経済データを組み合わせ、適応型機械学習パイプラインを開発しました。まず、ミクロデータから価格変動の分布を特徴量として抽出し、勾配ブースティングツリー（XGBoost）で予測モデルを構築。次に、このミクロ予測と、既存のマクロ予測、単変量予測を組み合わせる「Fixed Shareアルゴリズム」を採用しました。このアルゴリズムは、各予測モデルの過去のパフォーマンスに応じて重みを動的に調整し、最も優れた予測を追跡します。さらに、ある予測が他の予測を特定の期間だけ上回るかどうかを検出する「スキャンテスト」を開発し、ミクロデータがインフレ予測に貢献する時期を特定しました。",
+        "results": "分析の結果、ミクロデータを用いた予測は、特に2020年以降のインフレが不安定な時期に、単変量ベンチマークモデルをほぼ全ての予測期間で上回ることが示されました。スキャンテストにより、ミクロデータが優れた予測力を発揮する期間が検出され、その結果、Fixed Shareアルゴリズムによる複合予測にミクロデータが組み込まれました。この複合予測は、2020年以前は単変量ベンチマークと同程度の精度でしたが、2020年以降は全ての予測期間で平均絶対誤差を改善しました。特に、ミクロデータの価値は2020年以降に顕在化し、複合予測におけるミクロデータの重みは2023年にピークを迎えました。これは、大規模な経済ショックが発生した際に、ミクロデータが集合的なインフレ予測に大きく貢献することを示唆しています。",
+        "why": "ミクロデータがインフレ予測に貢献するメカニズムは、主に二つ考えられます。一つは、個々の企業や商品の価格設定に関する意思決定が、マクロ経済変数だけでは捉えきれない「粒状のショック」を反映しているためです。これらのショックは、特定の企業やセクターから発生し、集合的なインフレに影響を与える可能性があります。もう一つは、大規模な経済ショックが発生し、価格設定の非線形性が強まる時期には、集合的なショックの履歴から価格変動の分布状態へのマッピングが不安定になり、推定が困難になるためです。このような状況では、ミクロデータが、マクロ経済データだけでは信頼性をもって捉えられない情報を提供し、インフレ予測の精度向上に寄与すると考えられます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "economic-forecasting",
+      "arxivPrimary": "econ.GN",
+      "titleJa": "ミクロデータと適応型機械学習によるインフレ予測：非定常環境での活用",
+      "catchTitle": "インフレ予測の精度を劇的に変える「ミクロデータ」の力",
+      "hook": "あなたの生活を直撃するインフレ。その予測、実は「個々の商品の値動き」が鍵を握っているって知っていましたか？",
+      "background": "経済予測、特にインフレ予測は、政府の政策決定や企業の事業戦略に不可欠ですが、その難しさが長年の課題でした。特に、経済の状況が大きく変動する「非定常」な環境では、従来の予測モデルは精度が低下しがちです。しかし、近年、個々の商品価格の変動といった膨大なミクロデータが利用可能になり、これを活用してインフレ予測を改善できる可能性が浮上しています。この研究は、ミクロデータがインフレ予測にいつ、どのように役立つのかという根本的な問いに答えることを目指しています。",
+      "quiz": {
+        "question": "この研究で、ミクロデータがインフレ予測に特に有効だったのはどのような時期でしたか？",
+        "options": [
+          "インフレが安定している時期",
+          "大規模な経済ショックが発生し、インフレが不安定な時期",
+          "デフレが続いている時期"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究では、ミクロデータを用いた予測が、特に2020年以降のインフレが不安定な時期に、従来のモデルよりも優れた予測精度を示しました。これは、大規模な経済ショック時にミクロデータが持つ情報が重要になることを示唆しています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "ミクロデータ",
+          "definition": "個々の商品価格や企業の行動など、詳細なデータ。"
+        },
+        {
+          "term": "マクロ経済データ",
+          "definition": "GDPや失業率など、国全体の経済指標。"
+        },
+        {
+          "term": "適応型機械学習パイプライン",
+          "definition": "状況に応じて予測モデルを調整するAIシステム。"
+        },
+        {
+          "term": "勾配ブースティングツリー",
+          "definition": "複数の決定木を組み合わせて予測精度を高める手法。"
+        },
+        {
+          "term": "XGBoost",
+          "definition": "勾配ブースティングツリーの一種で、高性能な機械学習アルゴリズム。"
+        },
+        {
+          "term": "Fixed Shareアルゴリズム",
+          "definition": "複数の予測モデルの重みを動的に調整する手法。"
+        },
+        {
+          "term": "スキャンテスト",
+          "definition": "特定の期間で予測が優れているかを検出する統計的手法。"
+        },
+        {
+          "term": "粒状のショック",
+          "definition": "特定の企業や商品に起因する経済への影響。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "個々の商品価格の膨大なデータと最新の機械学習を組み合わせることで、特に激動期におけるインフレ予測の精度が大幅に向上することが判明しました。",
+      "noveltyContrast": {
+        "before": "従来のインフレ予測は、GDPや失業率といったマクロ経済データに依存していました。しかし、これらのデータだけでは、特に経済が大きく変動する時期の予測精度には限界があり、単純なモデルにすら劣ることもありました。",
+        "after": "この研究では、数百万件に及ぶ個々の商品価格データ（ミクロデータ）をAIで分析し、マクロデータと組み合わせることで、経済が不安定な時期のインフレ予測精度を飛躍的に向上させる新しい手法を開発しました。"
+      },
+      "analogy": {
+        "title": "畑の土壌分析で収穫量を予測するようなもの",
+        "body": "広大な畑全体の平均的な土壌データだけを見て「今年は豊作だ」と予測するのは、マクロデータによるインフレ予測に似ています。しかし、実際には畑の一部で病気が発生したり、特定の区画だけ栄養が足りなかったりすることがあります。この研究は、畑の隅々まで細かく土壌サンプルを採取し、それぞれの区画の状況（個々の商品価格の変動）を詳細に分析するようなものです。これにより、全体として豊作か不作かだけでなく、どの作物がどれくらい育つか、いつ病害虫対策が必要かといった、より精密な収穫予測（インフレ予測）が可能になります。特に天候不順など予測困難な状況下で、この詳細な分析が真価を発揮し、より正確な対策（経済政策）を打てるようになるのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+3.2pt",
+          "label": "2020年以降の予測精度向上（MAE）"
+        }
+      ],
+      "whyYouCare": "この研究は、私たちの生活に直結するインフレの予測精度を向上させる画期的なアプローチを示しています。政府や中央銀行がより正確なインフレ予測に基づいた政策を打てるようになれば、物価の急激な変動による家計への打撃を和らげたり、企業の投資判断をより適切に導いたりすることが可能になります。特に、世界経済が不安定な現代において、個々の商品価格の動きという「ミクロな視点」が、マクロ経済の大きな流れを理解し、未来を予測する上でいかに重要であるかを教えてくれます。これは、農業分野における市場価格の変動予測や、サプライチェーンの混乱によるコスト増の予測など、具体的なビジネスシーンにも応用できる可能性を秘めています。",
+      "takeawayTalk": "インフレ予測は、個々の商品の値動きをAIで分析すると、特に経済が荒れる時に当たるらしいよ！",
+      "bodyText": "本研究では、英国の消費者物価指数（CPI）を構成する数百万件の個々の商品価格データ（ミクロデータ）とマクロ経済データを組み合わせ、適応型機械学習パイプラインを開発しました。まず、ミクロデータから価格変動の分布を特徴量として抽出し、勾配ブースティングツリー（XGBoost）で予測モデルを構築。次に、このミクロ予測と、既存のマクロ予測、単変量予測を組み合わせる「Fixed Shareアルゴリズム」を採用しました。このアルゴリズムは、各予測モデルの過去のパフォーマンスに応じて重みを動的に調整し、最も優れた予測を追跡します。さらに、ある予測が他の予測を特定の期間だけ上回るかどうかを検出する「スキャンテスト」を開発し、ミクロデータがインフレ予測に貢献する時期を特定しました。\n\nミクロデータがインフレ予測に貢献するメカニズムは、主に二つ考えられます。一つは、個々の企業や商品の価格設定に関する意思決定が、マクロ経済変数だけでは捉えきれない「粒状のショック」を反映しているためです。これらのショックは、特定の企業やセクターから発生し、集合的なインフレに影響を与える可能性があります。もう一つは、大規模な経済ショックが発生し、価格設定の非線形性が強まる時期には、集合的なショックの履歴から価格変動の分布状態へのマッピングが不安定になり、推定が困難になるためです。このような状況では、ミクロデータが、マクロ経済データだけでは信頼性をもって捉えられない情報を提供し、インフレ予測の精度向上に寄与すると考えられます。",
+      "bodyGlossary": [
+        {
+          "term": "ミクロデータ",
+          "definition": "個々の商品価格や企業の行動など、詳細なデータ。",
+          "start": 42,
+          "end": 48
+        },
+        {
+          "term": "マクロ経済データ",
+          "definition": "GDPや失業率など、国全体の経済指標。",
+          "start": 50,
+          "end": 58
+        },
+        {
+          "term": "適応型機械学習パイプライン",
+          "definition": "状況に応じて予測モデルを調整するAIシステム。",
+          "start": 65,
+          "end": 78
+        },
+        {
+          "term": "勾配ブースティングツリー",
+          "definition": "複数の決定木を組み合わせて予測精度を高める手法。",
+          "start": 115,
+          "end": 127
+        },
+        {
+          "term": "XGBoost",
+          "definition": "勾配ブースティングツリーの一種で、高性能な機械学習アルゴリズム。",
+          "start": 128,
+          "end": 135
+        },
+        {
+          "term": "Fixed Shareアルゴリズム",
+          "definition": "複数の予測モデルの重みを動的に調整する手法。",
+          "start": 180,
+          "end": 197
+        },
+        {
+          "term": "スキャンテスト",
+          "definition": "特定の期間で予測が優れているかを検出する統計的手法。",
+          "start": 295,
+          "end": 302
+        },
+        {
+          "term": "粒状のショック",
+          "definition": "特定の企業や商品に起因する経済への影響。",
+          "start": 419,
+          "end": 426
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "ミクロデータ",
+          "definition": "個々の商品価格や企業の行動など、詳細なデータ。",
+          "start": 42,
+          "end": 48
+        },
+        {
+          "term": "マクロ経済データ",
+          "definition": "GDPや失業率など、国全体の経済指標。",
+          "start": 50,
+          "end": 58
+        },
+        {
+          "term": "適応型機械学習パイプライン",
+          "definition": "状況に応じて予測モデルを調整するAIシステム。",
+          "start": 65,
+          "end": 78
+        },
+        {
+          "term": "勾配ブースティングツリー",
+          "definition": "複数の決定木を組み合わせて予測精度を高める手法。",
+          "start": 115,
+          "end": 127
+        },
+        {
+          "term": "XGBoost",
+          "definition": "勾配ブースティングツリーの一種で、高性能な機械学習アルゴリズム。",
+          "start": 128,
+          "end": 135
+        },
+        {
+          "term": "Fixed Shareアルゴリズム",
+          "definition": "複数の予測モデルの重みを動的に調整する手法。",
+          "start": 180,
+          "end": 197
+        },
+        {
+          "term": "スキャンテスト",
+          "definition": "特定の期間で予測が優れているかを検出する統計的手法。",
+          "start": 295,
+          "end": 302
+        },
+        {
+          "term": "粒状のショック",
+          "definition": "特定の企業や商品に起因する経済への影響。",
+          "start": 419,
+          "end": 426
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 301,
+      "keyFigure": {
+        "imagePath": "/figures/2607.12345v1_results.png",
+        "page": 35,
+        "caption": "複合予測とミクロデータの重みが、特に2020年以降のインフレ予測にどう貢献したかを示しています。",
+        "label": "Figure 4: Combined Forecast and Combination Weights, 12 Months Ahead",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-16T22:56:58.865Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.12345v1_results.png",
+          "page": 35,
+          "caption": "複合予測とミクロデータの重みが、特に2020年以降のインフレ予測にどう貢献したかを示しています。",
+          "label": "Figure 4: Combined Forecast and Combination Weights, 12 Months Ahead",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-16T22:56:58.865Z"
+        },
+        {
+          "imagePath": "/figures/2607.12345v1_why.png",
+          "page": 3,
+          "caption": "米国と英国の消費者物価指数（CPI）の推移を示し、インフレの非定常環境を視覚化しています。",
+          "label": "Figure 1: Headline CPI Inflation in the United States and United Kingdom, 2015–2024",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-16T22:56:58.865Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.13914v1",
+      "title": "Epidemic Informatics and Control: A Holistic Approach from System Informatics to Epidemic Response and Risk Management in Public Health",
+      "authors": [
+        "Hui Yang",
+        "Siqi Zhang",
+        "Runsang Liu",
+        "Alexander Krall",
+        "Yidan Wang",
+        "Marta Ventura",
+        "Chris Deflitch"
+      ],
+      "publishedAt": "2026-07-15T14:54:09Z",
+      "url": "https://arxiv.org/abs/2607.13914v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.13914v1.pdf",
+      "categories": [
+        "topic:policy",
+        "eess.SY",
+        "cs.CY",
+        "stat.AP"
+      ],
+      "abstract": "This paper presents a holistic systems informatics approach, i.e., Define, Measure, Analyze, Improve, and Control (DMAIC), for epidemic response and management through the intensive use of data, statistics and optimization. Despite the sustained successes of system informatics in a variety of established industries such as manufacturing, logistics, services and beyond, there is a dearth of concentrated review and application of the data-driven DMAIC approach in the context of epidemic outbreaks. First, we define specific challenges posed by epidemic outbreaks to populational health, health systems, as well as economic challenges to different industries such as retailing, education and manufacturing. Second, we present a review of medical testing and statistical sampling methods for data collection, as well as existing efforts in data management and data visualization. Third, we discuss the importance to realizing the full potential of data for epidemic insights, and emphasize the need to leverage analytical methods and tools for decision support. Fourth, an epidemic brings imperative changes to health systems. We discuss the new trend of healthcare solutions to improve system resilience, including telehealth, artificial intelligence, resource allocation, and system re-design. In closing, prescriptive approaches are discussed to optimize the health policies and action strategies for controlling the spread of virus. We posit that this work will catalyze more in-depth investigations and multi-disciplinary research efforts to accelerate the application of system informatics methods and tools in epidemic response and risk management.",
+      "summary": {
+        "gist": "COVID-19のようなパンデミックは、社会の健康に甚大な影響を与え、医療システムや経済に大きな混乱をもたらします。各国は、リスクを軽減し国民を守るために、保健政策を動的に調整し、医療資源を計画し、移動を制限する必要があります。しかし、これまでの対応は場当たり的で、医療資源の不足や経済的損失を引き起こすことが少なくありませんでした。一方で、健康・情報技術の急速な進歩により、パンデミックの動的なプロセスでますます多くのデータが収集されるようになっています。このデータの可用性は、ウイルスの拡散ダイナミクスをよりよく理解し、パンデミック制御のための医療政策の設計を最適化し、医療システムのレジリエンスを向上させるための分析手法とツールの開発を求めています。",
+        "novelty": "これまでのパンデミック対策は、データ収集や分析が断片的で、医療資源の逼迫や経済的損失を招く場当たり的な対応になりがちでした。特に、製造業などで実績のある体系的なデータ活用手法が、パンデミックの文脈で集中的に適用されることは稀でした。 この論文は、製造業や物流で実績のある「DMAIC（Define, Measure, Analyze, Improve, Control）」というデータ駆動型のアプローチをパンデミック対策に導入。課題定義からデータ収集、分析、改善策の設計、そして対策の管理までを一貫して行い、より効率的でレジリエントな公衆衛生システム構築を提案しています。",
+        "method": "本研究は、製造業、物流、サービス業などで成功を収めているシステムインフォマティクスのアプローチである「DMAIC（Define, Measure, Analyze, Improve, Control）」をパンデミック対応と管理に適用することを提案しています。DMAICは、データ、統計、最適化を集中的に活用するデータ駆動型のアプローチです。\n\n1.  Define（定義）: パンデミックが公衆衛生、医療システム、小売・教育・製造業などの経済に与える具体的な課題を特定します。\n2.  Measure（測定）: データ収集のために、医療検査や統計的サンプリング方法、データ管理、データ可視化の既存の取り組みをレビューします。\n3.  Analyze（分析）: パンデミックの洞察を得るためのデータの可能性を最大限に引き出す重要性を議論し、意思決定支援のための分析手法とツールの活用を強調します。\n4.  Improve（改善）: 医療システムに不可欠な変化をもたらすパンデミックに対し、遠隔医療、人工知能、資源配分、システム再設計を含む、システムのレジリエンスを向上させる新しいヘルスケアソリューションのトレンドを議論します。\n5.  Control（管理）: ウイルスの拡散を制御するための保健政策と行動戦略を最適化するための処方的アプローチを議論します。",
+        "results": "本研究は、DMAICフレームワークをパンデミック対応に適用することで、データに基づいた体系的なアプローチが可能になることを示しました。これにより、ウイルスの拡散ダイナミクスをより深く理解し、医療政策の最適化、医療システムのレジリエンス向上、そしてウイルスの拡散を制御するための効果的な戦略策定に貢献できると結論付けています。特に、医療検査データの活用、AIによる資源配分最適化、遠隔医療の導入などが、パンデミック時の医療システム負荷軽減と効率化に繋がる可能性を提示しました。",
+        "why": "DMAICアプローチは、問題解決とプロセス改善のための体系的なフレームワークを提供します。パンデミックの文脈では、まず「Define」で問題の範囲と目標を明確にし、次に「Measure」で関連データを収集・測定することで、現状を客観的に把握します。「Analyze」フェーズでは、統計的手法やデータ分析ツールを用いて、問題の根本原因やウイルスの拡散パターンを特定します。この洞察に基づいて「Improve」フェーズで、遠隔医療やAIを活用した資源配分最適化など、具体的な改善策を設計・実施します。最後に「Control」フェーズで、導入した対策の効果を監視し、必要に応じて調整することで、パンデミックの再発防止や影響の最小化を図ります。この一連のサイクルを回すことで、場当たり的な対応ではなく、データに基づいた持続可能で効果的なパンデミック管理が可能になります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / eess.SY）",
+      "field": "公共政策・ガバナンス",
+      "categoryL1": "adjacent",
+      "categoryL2": "public-health-management",
+      "arxivPrimary": "eess.SY",
+      "titleJa": "公衆衛生におけるシステムインフォマティクスによるパンデミック対応とリスク管理",
+      "catchTitle": "データでパンデミックに挑む！",
+      "hook": "パンデミック発生時、あなたは「次に何が起こる？」と不安に感じませんでしたか？この研究は、その不安をデータで解消するアプローチを提案します。",
+      "background": "COVID-19のようなパンデミックは、社会の健康に甚大な影響を与え、医療システムや経済に大きな混乱をもたらします。各国は、リスクを軽減し国民を守るために、保健政策を動的に調整し、医療資源を計画し、移動を制限する必要があります。しかし、これまでの対応は場当たり的で、医療資源の不足や経済的損失を引き起こすことが少なくありませんでした。一方で、健康・情報技術の急速な進歩により、パンデミックの動的なプロセスでますます多くのデータが収集されるようになっています。このデータの可用性は、ウイルスの拡散ダイナミクスをよりよく理解し、パンデミック制御のための医療政策の設計を最適化し、医療システムのレジリエンスを向上させるための分析手法とツールの開発を求めています。",
+      "quiz": {
+        "question": "この論文がパンデミック対策に適用を提案しているデータ活用フレームワークは何ですか？",
+        "options": [
+          "PDCA",
+          "DMAIC",
+          "SCRUM"
+        ],
+        "correctIndex": 1,
+        "explanation": "この論文は、製造業などで成功を収めている「DMAIC（Define, Measure, Analyze, Improve, Control）」というデータ駆動型のアプローチをパンデミック対策に導入することを提案しています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "システムインフォマティクス",
+          "definition": "情報科学をシステム全体に応用する学問分野"
+        },
+        {
+          "term": "DMAIC",
+          "definition": "Define, Measure, Analyze, Improve, Controlの略"
+        },
+        {
+          "term": "データ駆動型",
+          "definition": "データ分析に基づいて意思決定を行うこと"
+        },
+        {
+          "term": "レジリエンス",
+          "definition": "困難な状況から回復する力、しなやかさ"
+        },
+        {
+          "term": "遠隔医療",
+          "definition": "情報通信技術を用いた遠隔での医療行為"
+        },
+        {
+          "term": "人工知能",
+          "definition": "人間の知能を模倣したコンピュータシステム"
+        },
+        {
+          "term": "処方的アプローチ",
+          "definition": "データに基づき具体的な行動を指示する手法"
+        },
+        {
+          "term": "根本原因",
+          "definition": "問題の最も深い原因"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "製造業で成功したデータ活用フレームワーク「DMAIC」をパンデミック対策に応用し、データに基づいた効率的な対応とリスク管理を目指す研究です。",
+      "noveltyContrast": {
+        "before": "これまでのパンデミック対策は、データ収集や分析が断片的で、医療資源の逼迫や経済的損失を招く場当たり的な対応になりがちでした。特に、製造業などで実績のある体系的なデータ活用手法が、パンデミックの文脈で集中的に適用されることは稀でした。",
+        "after": "この論文は、製造業や物流で実績のある「DMAIC（Define, Measure, Analyze, Improve, Control）」というデータ駆動型のアプローチをパンデミック対策に導入。課題定義からデータ収集、分析、改善策の設計、そして対策の管理までを一貫して行い、より効率的でレジリエントな公衆衛生システム構築を提案しています。"
+      },
+      "analogy": {
+        "title": "畑の病害虫対策をデータで最適化する",
+        "body": "これは、まるで畑に未知の病害虫が発生した時に、経験と勘に頼るのではなく、データに基づいて対策を打つようなものです。まず「Define」で、どんな病害虫で、どの作物にどんな被害が出ているかを明確にします。次に「Measure」で、被害状況や病害虫の分布、天候データなどを詳細に計測します。「Analyze」で、集めたデータから病害虫の広がり方や効果的な農薬の種類、散布時期などを分析します。そして「Improve」で、分析結果に基づき、最適な農薬散布計画や品種改良の方向性を設計し、「Control」で、その計画がきちんと実行され、病害虫の再発を防ぐためのモニタリング体制を確立する。このように、データに基づいて一連の対策を体系的に行うことで、収穫量を最大化し、農家の損失を最小限に抑えることができるのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、パンデミックのような未曾有の危機に直面した際、私たちがどのように対応すべきかについて、具体的な指針を与えてくれます。あなたの会社がサプライチェーンの混乱に苦しんだり、従業員の健康管理に悩んだりした経験があるなら、このデータ駆動型アプローチは、将来の危機に対する準備や対応策を考える上で非常に役立つでしょう。医療従事者でなくても、地域社会の一員として、より効率的でレジリエントな公衆衛生システムが構築されることは、私たちの生活の安心と安全に直結します。データとテクノロジーが、いかに社会課題解決に貢献できるかを理解する一助となるはずです。",
+      "takeawayTalk": "製造業のデータ活用術が、パンデミック対策を効率化するらしいよ！",
+      "bodyText": "本研究は、製造業、物流、サービス業などで成功を収めているシステムインフォマティクスのアプローチである「DMAIC（Define, Measure, Analyze, Improve, Control）」をパンデミック対応と管理に適用することを提案しています。DMAICは、データ、統計、最適化を集中的に活用するデータ駆動型のアプローチです。\n\n1.  Define（定義）: パンデミックが公衆衛生、医療システム、小売・教育・製造業などの経済に与える具体的な課題を特定します。\n2.  Measure（測定）: データ収集のために、医療検査や統計的サンプリング方法、データ管理、データ可視化の既存の取り組みをレビューします。\n3.  Analyze（分析）: パンデミックの洞察を得るためのデータの可能性を最大限に引き出す重要性を議論し、意思決定支援のための分析手法とツールの活用を強調します。\n4.  Improve（改善）: 医療システムに不可欠な変化をもたらすパンデミックに対し、遠隔医療、人工知能、資源配分、システム再設計を含む、システムのレジリエンスを向上させる新しいヘルスケアソリューションのトレンドを議論します。\n5.  Control（管理）: ウイルスの拡散を制御するための保健政策と行動戦略を最適化するための処方的アプローチを議論します。\n\n\nDMAICアプローチは、問題解決とプロセス改善のための体系的なフレームワークを提供します。パンデミックの文脈では、まず「Define」で問題の範囲と目標を明確にし、次に「Measure」で関連データを収集・測定することで、現状を客観的に把握します。「Analyze」フェーズでは、統計的手法やデータ分析ツールを用いて、問題の根本原因やウイルスの拡散パターンを特定します。この洞察に基づいて「Improve」フェーズで、遠隔医療やAIを活用した資源配分最適化など、具体的な改善策を設計・実施します。最後に「Control」フェーズで、導入した対策の効果を監視し、必要に応じて調整することで、パンデミックの再発防止や影響の最小化を図ります。この一連のサイクルを回すことで、場当たり的な対応ではなく、データに基づいた持続可能で効果的なパンデミック管理が可能になります。",
+      "bodyGlossary": [
+        {
+          "term": "システムインフォマティクス",
+          "definition": "情報科学をシステム全体に応用する学問分野",
+          "start": 28,
+          "end": 41
+        },
+        {
+          "term": "DMAIC",
+          "definition": "Define, Measure, Analyze, Improve, Controlの略",
+          "start": 51,
+          "end": 56
+        },
+        {
+          "term": "データ駆動型",
+          "definition": "データ分析に基づいて意思決定を行うこと",
+          "start": 155,
+          "end": 161
+        },
+        {
+          "term": "遠隔医療",
+          "definition": "情報通信技術を用いた遠隔での医療行為",
+          "start": 443,
+          "end": 447
+        },
+        {
+          "term": "人工知能",
+          "definition": "人間の知能を模倣したコンピュータシステム",
+          "start": 448,
+          "end": 452
+        },
+        {
+          "term": "レジリエンス",
+          "definition": "困難な状況から回復する力、しなやかさ",
+          "start": 474,
+          "end": 480
+        },
+        {
+          "term": "処方的アプローチ",
+          "definition": "データに基づき具体的な行動を指示する手法",
+          "start": 564,
+          "end": 572
+        },
+        {
+          "term": "根本原因",
+          "definition": "問題の最も深い原因",
+          "start": 744,
+          "end": 748
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "システムインフォマティクス",
+          "definition": "情報科学をシステム全体に応用する学問分野",
+          "start": 28,
+          "end": 41
+        },
+        {
+          "term": "DMAIC",
+          "definition": "Define, Measure, Analyze, Improve, Controlの略",
+          "start": 51,
+          "end": 56
+        },
+        {
+          "term": "データ駆動型",
+          "definition": "データ分析に基づいて意思決定を行うこと",
+          "start": 155,
+          "end": 161
+        },
+        {
+          "term": "遠隔医療",
+          "definition": "情報通信技術を用いた遠隔での医療行為",
+          "start": 443,
+          "end": 447
+        },
+        {
+          "term": "人工知能",
+          "definition": "人間の知能を模倣したコンピュータシステム",
+          "start": 448,
+          "end": 452
+        },
+        {
+          "term": "レジリエンス",
+          "definition": "困難な状況から回復する力、しなやかさ",
+          "start": 474,
+          "end": 480
+        },
+        {
+          "term": "処方的アプローチ",
+          "definition": "データに基づき具体的な行動を指示する手法",
+          "start": 564,
+          "end": 572
+        },
+        {
+          "term": "根本原因",
+          "definition": "問題の最も深い原因",
+          "start": 744,
+          "end": 748
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 356,
+      "keyFigure": {
+        "imagePath": "/figures/2607.13914v1_results.png",
+        "page": 25,
+        "caption": "AIが医療システムをどのように変革するかを示しています。",
+        "label": "Figure 18. AI-driven transformation of healthcare systems",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-16T22:57:01.244Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.13914v1_results.png",
+          "page": 25,
+          "caption": "AIが医療システムをどのように変革するかを示しています。",
+          "label": "Figure 18. AI-driven transformation of healthcare systems",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-16T22:57:01.244Z"
+        },
+        {
+          "imagePath": "/figures/2607.13914v1_why.png",
+          "page": 7,
+          "caption": "リスクスコアリングシステムを構築する3つの異なる方法を示しています。",
+          "label": "Figure 3, risk scoring systems can be established in three different ways, namely point-",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-16T22:57:01.244Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.13766v1",
+      "title": "Design of policy digital twins incorporating multi-level agent based modelling",
+      "authors": [
+        "Matt Tipuric",
+        "Alejandro Beltran",
+        "Nick Malleson",
+        "Dani Arribas-Bel",
+        "David Wagg"
+      ],
+      "publishedAt": "2026-07-15T12:28:24Z",
+      "url": "https://arxiv.org/abs/2607.13766v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.13766v1.pdf",
+      "categories": [
+        "topic:policy",
+        "eess.SY",
+        "cs.CY"
+      ],
+      "abstract": "Digital twins are used across many industries to enable better decision making. However, while policy makers at all levels (including city, national and supranational scales) have expressed a desire to integrate digital twins into their workflows, this adoption has been slow to materialise. In this paper, we discuss the key issues associated with policy digital twins, and the ways in which they differ from, and are similar to, their counterparts in other areas. We describe how multi-level agent based modelling can be used within policy digital twins to include the effects of human behaviours on outcomes; an aspect that is often largely overlooked. We also describe how digital twins can be designed for policy use cases, and present as a case study the design of a policy digital twin incorporating multi-level agent based modelling to aid a UK city council (local authority) in delivering energy transition policy. After describing both the design method used and the resultant digital twin, we discuss the effectiveness of both, as well as how the ways in which different contexts might shape the future architecture of the digital twin.",
+      "summary": {
+        "gist": "デジタルツインは、物理システムの仮想レプリカであり、双方向のデータフローで連携し、意思決定を支援します。製造業などで広く活用されていますが、政策分野での導入は技術的・制度的課題から遅れています。特に、政策対象のシステムには人間が含まれるため、人間の複雑な行動を考慮しないデジタルツインは限界があります。",
+        "novelty": "従来のデジタルツインは、製造業など物理システム中心で、人間の行動が結果に与える影響を十分に考慮できていませんでした。そのため、都市計画やエネルギー政策といった、人々の選択が結果を大きく左右する分野では、その適用が遅れていました。 この研究では、政策デジタルツインに「マルチレベル・エージェントベースモデル（MABM）」を組み込むことで、個人、地域、政府といった異なる階層の人々の行動や相互作用をシミュレーションします。これにより、人間の複雑な行動が政策結果にどう影響するかを予測し、より実効性のある政策設計を可能にします。",
+        "method": "本研究では、政策デジタルツインにマルチレベル・エージェントベースモデル（MABM）を組み込む手法を提案しています。MABMは、個人（ミクロ）、都市（メソ）、国（マクロ）といった異なる階層の「エージェント」（仮想の人間や組織）の行動を明示的に表現し、それらの相互作用をシミュレーションします。これにより、人間の行動が政策結果に与える影響を捉えることができます。英国の都市におけるエネルギー転換政策を事例として、気候データとMABMを統合したデジタルツインの設計を行い、低炭素インフラ（ヒートポンプ）の導入を支援するデモンストレーターを開発しました。",
+        "results": "本研究は、MABMを組み込んだ政策デジタルツインの設計方法と、その有効性を示しました。これにより、政策立案者は、人間の行動を考慮した上で、より効果的な政策の仮説検証、複雑なシステム間の相互作用のモデル化、政策結果の追跡、状況変化や新規データに応じた対策調整が可能になります。特に、英国の都市の事例では、低炭素インフラの導入ターゲット設定において、MABMが住民の行動を反映した意思決定支援に貢献できる可能性が示されました。",
+        "why": "政策デジタルツインにMABMを組み込むことで、なぜより良い意思決定が可能になるのでしょうか。それは、従来のデジタルツインが物理的な側面や集計データに焦点を当てがちだったのに対し、MABMが「人間」という最も予測困難で影響力の大きい要素を、個々の行動レベルから多階層でシミュレートできるからです。例えば、エネルギー政策において、政府が補助金を出しても、個々の家庭がヒートポンプの導入に踏み切るかどうかは、初期費用、設置の手間、近所の評判など、様々な要因に左右されます。MABMは、これらの個人の意思決定プロセスや、それが地域全体、ひいては国全体の目標達成にどう影響するかをボトムアップで再現し、政策が意図しない結果を生む可能性や、より効果的な介入策を事前に特定することを可能にします。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / eess.SY）",
+      "field": "公共政策・ガバナンス",
+      "categoryL1": "adjacent",
+      "categoryL2": "urban-planning",
+      "arxivPrimary": "eess.SY",
+      "titleJa": "マルチレベル・エージェントベースモデリングを組み込んだ政策デジタルツインの設計",
+      "catchTitle": "政策決定に「人の心」を宿すデジタルツイン",
+      "hook": "あなたの住む街の政策、本当に住民の行動を考慮していると思いますか？",
+      "background": "デジタルツインは、物理システムの仮想レプリカであり、双方向のデータフローで連携し、意思決定を支援します。製造業などで広く活用されていますが、政策分野での導入は技術的・制度的課題から遅れています。特に、政策対象のシステムには人間が含まれるため、人間の複雑な行動を考慮しないデジタルツインは限界があります。",
+      "quiz": {
+        "question": "政策デジタルツインにマルチレベル・エージェントベースモデル（MABM）を組み込む主な目的は何でしょう？",
+        "options": [
+          "物理システムの精密な温度制御を可能にするため",
+          "政策決定における人間の複雑な行動の影響を考慮するため",
+          "データストレージの容量を増やすため"
+        ],
+        "correctIndex": 1,
+        "explanation": "MABMを組み込むことで、個人、地域、政府といった異なる階層の人々の行動や相互作用をシミュレーションし、人間の複雑な行動が政策結果にどう影響するかを予測することが主な目的です。"
+      },
+      "limitations": "MABMは計算コストが高く、多くのパラメータを持つため、キャリブレーションと検証が難しいという課題があります。また、デジタルツインの定義が多様であるため、政策立案者が適切なソリューションを選択しにくいという問題も存在します。",
+      "glossary": [
+        {
+          "term": "デジタルツイン",
+          "definition": "物理システムの仮想レプリカで、データ連携により同期する。"
+        },
+        {
+          "term": "マルチレベル・エージェントベースモデル",
+          "definition": "異なる階層の自律的なエージェントの行動をシミュレートするモデル。"
+        },
+        {
+          "term": "MABM",
+          "definition": "マルチレベル・エージェントベースモデルの略称。"
+        },
+        {
+          "term": "エージェント",
+          "definition": "仮想の人間や組織など、自律的に行動する構成要素。"
+        },
+        {
+          "term": "ミクロ",
+          "definition": "個人レベルの行動や意思決定。"
+        },
+        {
+          "term": "メソ",
+          "definition": "都市や地域レベルの行動や意思決定。"
+        },
+        {
+          "term": "マクロ",
+          "definition": "国や政府レベルの行動や意思決定。"
+        },
+        {
+          "term": "ヒートポンプ",
+          "definition": "空気中の熱を利用して冷暖房や給湯を行う機器。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "政策決定を支援するデジタルツインに、人間の複雑な行動を多階層で組み込むことで、より現実的な予測と効果的な政策立案を可能にする。",
+      "noveltyContrast": {
+        "before": "従来のデジタルツインは、製造業など物理システム中心で、人間の行動が結果に与える影響を十分に考慮できていませんでした。そのため、都市計画やエネルギー政策といった、人々の選択が結果を大きく左右する分野では、その適用が遅れていました。",
+        "after": "この研究では、政策デジタルツインに「マルチレベル・エージェントベースモデル（MABM）」を組み込むことで、個人、地域、政府といった異なる階層の人々の行動や相互作用をシミュレーションします。これにより、人間の複雑な行動が政策結果にどう影響するかを予測し、より実効性のある政策設計を可能にします。"
+      },
+      "analogy": {
+        "title": "畑の土壌診断と品種改良",
+        "body": "これは、まるで畑の土壌を診断し、最適な品種を改良するようなものです。従来のデジタルツインが、土壌の物理的・化学的成分（物理システム）だけを分析して「この土にはこの肥料」と決めていたとします。しかし、実際には、農家（個人）がどの品種を選び、どう栽培するか、地域の気候変動（地域レベル）、さらには国の農業政策（政府レベル）が、最終的な収穫量に大きく影響します。この研究は、土壌だけでなく、農家の経験、地域の慣習、国の補助金制度といった「人間の行動」を多角的に分析し、それらが複雑に絡み合うことで、どの品種改良が最も効果的か、どの栽培方法が持続可能かを予測するようなものです。これにより、単なる土壌改良だけでなく、農家と環境、政策が一体となった「豊かな収穫」を実現するための、より実践的な指針が得られます。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、私たちの生活に直結する都市計画、エネルギー政策、防災、公衆衛生など、あらゆる公共政策の質を劇的に向上させる可能性を秘めています。例えば、新しい交通システム導入の際、住民がどう利用するか、渋滞は解消されるか、環境負荷はどうかを事前にシミュレーションできます。災害時の避難計画では、住民の行動パターンを考慮した最適な避難経路や情報伝達方法を検討できます。企業にとっては、政策変更が消費者の行動や市場に与える影響を予測し、リスクを軽減したり、新たなビジネスチャンスを見つけたりする上で役立つでしょう。単なる机上の空論ではなく、人々のリアルな行動を反映した政策が実現すれば、より住みやすく、持続可能な社会の実現に貢献します。",
+      "takeawayTalk": "政策に「人の心」を宿すデジタルツインで、未来の街をシミュレーションできるんだって！",
+      "bodyText": "本研究では、政策デジタルツインにマルチレベル・エージェントベースモデル（MABM）を組み込む手法を提案しています。MABMは、個人（ミクロ）、都市（メソ）、国（マクロ）といった異なる階層の「エージェント」（仮想の人間や組織）の行動を明示的に表現し、それらの相互作用をシミュレーションします。これにより、人間の行動が政策結果に与える影響を捉えることができます。英国の都市におけるエネルギー転換政策を事例として、気候データとMABMを統合したデジタルツインの設計を行い、低炭素インフラ（ヒートポンプ）の導入を支援するデモンストレーターを開発しました。\n\n政策デジタルツインにMABMを組み込むことで、なぜより良い意思決定が可能になるのでしょうか。それは、従来のデジタルツインが物理的な側面や集計データに焦点を当てがちだったのに対し、MABMが「人間」という最も予測困難で影響力の大きい要素を、個々の行動レベルから多階層でシミュレートできるからです。例えば、エネルギー政策において、政府が補助金を出しても、個々の家庭がヒートポンプの導入に踏み切るかどうかは、初期費用、設置の手間、近所の評判など、様々な要因に左右されます。MABMは、これらの個人の意思決定プロセスや、それが地域全体、ひいては国全体の目標達成にどう影響するかをボトムアップで再現し、政策が意図しない結果を生む可能性や、より効果的な介入策を事前に特定することを可能にします。",
+      "bodyGlossary": [
+        {
+          "term": "デジタルツイン",
+          "definition": "物理システムの仮想レプリカで、データ連携により同期する。",
+          "start": 8,
+          "end": 15
+        },
+        {
+          "term": "マルチレベル・エージェントベースモデル",
+          "definition": "異なる階層の自律的なエージェントの行動をシミュレートするモデル。",
+          "start": 16,
+          "end": 35
+        },
+        {
+          "term": "MABM",
+          "definition": "マルチレベル・エージェントベースモデルの略称。",
+          "start": 36,
+          "end": 40
+        },
+        {
+          "term": "ミクロ",
+          "definition": "個人レベルの行動や意思決定。",
+          "start": 66,
+          "end": 69
+        },
+        {
+          "term": "メソ",
+          "definition": "都市や地域レベルの行動や意思決定。",
+          "start": 74,
+          "end": 76
+        },
+        {
+          "term": "マクロ",
+          "definition": "国や政府レベルの行動や意思決定。",
+          "start": 80,
+          "end": 83
+        },
+        {
+          "term": "ヒートポンプ",
+          "definition": "空気中の熱を利用して冷暖房や給湯を行う機器。",
+          "start": 241,
+          "end": 247
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "デジタルツイン",
+          "definition": "物理システムの仮想レプリカで、データ連携により同期する。",
+          "start": 8,
+          "end": 15
+        },
+        {
+          "term": "マルチレベル・エージェントベースモデル",
+          "definition": "異なる階層の自律的なエージェントの行動をシミュレートするモデル。",
+          "start": 16,
+          "end": 35
+        },
+        {
+          "term": "MABM",
+          "definition": "マルチレベル・エージェントベースモデルの略称。",
+          "start": 36,
+          "end": 40
+        },
+        {
+          "term": "ミクロ",
+          "definition": "個人レベルの行動や意思決定。",
+          "start": 66,
+          "end": 69
+        },
+        {
+          "term": "メソ",
+          "definition": "都市や地域レベルの行動や意思決定。",
+          "start": 74,
+          "end": 76
+        },
+        {
+          "term": "マクロ",
+          "definition": "国や政府レベルの行動や意思決定。",
+          "start": 80,
+          "end": 83
+        },
+        {
+          "term": "ヒートポンプ",
+          "definition": "空気中の熱を利用して冷暖房や給湯を行う機器。",
+          "start": 241,
+          "end": 247
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 267,
+      "keyFigure": {
+        "imagePath": "/figures/2607.13766v1_results.png",
+        "page": 14,
+        "caption": "低炭素インフラ導入目標に対するMABMの予測結果を示しています。",
+        "label": "Figure 9, left). It sits below DESNZ each year by a consistent margin,",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-16T22:57:04.039Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.13766v1_results.png",
+          "page": 14,
+          "caption": "低炭素インフラ導入目標に対するMABMの予測結果を示しています。",
+          "label": "Figure 9, left). It sits below DESNZ each year by a consistent margin,",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-16T22:57:04.039Z"
+        },
+        {
+          "imagePath": "/figures/2607.13766v1_why.png",
+          "page": 12,
+          "caption": "合成人口を構築するために使用されたデータソースを示しています。",
+          "label": "Figure 5: Data sources used to construct the synthetic population.",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-16T22:57:04.039Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.13438v1",
+      "title": "Impacts of social and impact heterogeneity on social-climate outcomes",
+      "authors": [
+        "Amrita Punnavajhala",
+        "Brian Beckage",
+        "Madhur Anand",
+        "Daniele Visioni",
+        "Jared Farley",
+        "Chris T. Bauch"
+      ],
+      "publishedAt": "2026-07-15T04:47:45Z",
+      "url": "https://arxiv.org/abs/2607.13438v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.13438v1.pdf",
+      "categories": [
+        "topic:urban",
+        "physics.soc-ph"
+      ],
+      "abstract": "Regional heterogeneity in social characteristics, temperature change, and vulnerability to climate impacts is likely to influence the magnitude of anthropogenic climate change, but has not been considered in coupled social-climate models, which seek to represent interactions between social and climate dynamics. Here, we examine how the projected mean global temperature anomaly and population support for mitigation respond to heterogeneity in these factors across five regions of the world, using a coupled social-climate model. We find that heterogeneity in climate impacts increases the temperature anomaly by 0.2$^\\circ$C, while social heterogeneity increases it by an additional 0.1$^\\circ$C. The projected temperature anomaly also increases with higher variability in climate impacts across regions, even for the same average global climate impact. Finally, we identify a social-climate tipping point, where low vulnerability to impacts under existing social conditions in one region can tip the system into an alternative slow-mitigation, high-temperature state. Our results show that heterogeneity in climate impacts leads to higher global mean temperatures and efforts to reduce global disparities could improve both social and climate outcomes.",
+      "summary": {
+        "gist": "産業革命以降、地球の気温は約1.3℃上昇し、その影響は私たちの生活にますます顕著になっています。気候変動の緩和は温室効果ガス排出量の削減が基本ですが、世界的な取り組みはなかなか進んでいません。その背景には、公平性や緩和コスト、個人の心理、懐疑論など、地域やスケールによって様々な要因があります。これまでの気候変動モデルの多くは、社会的な動態を考慮していなかったり、世界を均質なものとして扱ったりしていました。しかし、現実の社会や気候変動の影響は地域によって大きく異なり、この異質性が気候変動の軌道にどう影響するかは不明でした。",
+        "novelty": "これまでの気候変動モデルは、世界中の人々や地域が均質であると仮定していました。しかし、現実には社会的な状況（緩和への支持度、社会規範など）も、気候変動の影響の受けやすさ（脆弱性、局所的な温暖化）も地域によって大きく異なります。 この研究では、地域ごとの社会的な異質性（社会規範、初期の緩和支持度など）と、気候変動の影響の異質性（脆弱性、局所的な温暖化）を考慮した「結合社会-気候モデル」を初めて開発。これにより、異質性が地球全体の平均気温上昇と緩和努力にどう影響するかを明らかにしました。",
+        "method": "この研究では、社会と気候の相互作用を表現する「結合社会-気候モデル」を拡張し、世界を5つの地域（アジア、ラテンアメリカ、中東・アフリカ、OECD諸国、東欧・旧ソ連）に分けました。各地域には、緩和への支持度、社会規範の強さ、気候変動への脆弱性、局所的な温暖化の度合いといった、地域固有の社会・気候特性を組み込みました。そして、「すべての地域が均質」「気候影響のみ異質」「社会条件のみ異質」「すべて異質（現実世界に近い）」の4つのシナリオを設定し、モデルシミュレーションを行いました。これにより、異質性の有無が平均気温上昇と緩和努力にどう影響するかを比較分析しました。",
+        "results": "気候影響の異質性（地域ごとの脆弱性や局所的な温暖化の違い）がある場合、地球の平均気温は均質な場合と比べて0.2℃上昇することがわかりました。さらに、社会的な異質性（地域ごとの緩和コスト、社会規範、初期の緩和支持度など）が加わると、平均気温はさらに0.1℃上昇しました。つまり、地域間の異質性が大きいほど、地球全体の平均気温は高くなる傾向があることが示されました。特に、ある一地域が既存の社会条件下で気候変動の影響に対して脆弱性が低いと、システム全体が「緩和が遅れ、高温になる」という別の状態に移行する社会-気候の転換点が存在することも特定されました。",
+        "why": "この結果は、地域間の異質性が、緩和努力のインセンティブに影響を与えるフィードバックループを通じて、地球全体の温暖化を悪化させるメカニズムを示唆しています。例えば、ある地域が排出量を削減すると、地球全体の温暖化影響が軽減され、他の地域の緩和インセンティブが低下する可能性があります。逆に、ある地域が緩和に消極的だと、他の地域への影響が悪化し、彼らの緩和を促す可能性もあります。しかし、全体として、異質性が存在することで、一部の地域が緩和に及び腰になり、それが地球全体の緩和努力を鈍化させ、結果として平均気温の上昇を招くことが示されました。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.soc-ph）",
+      "field": "都市・地域",
+      "categoryL1": "serendipity",
+      "categoryL2": "climate-change",
+      "arxivPrimary": "physics.soc-ph",
+      "titleJa": "社会・気候の異質性が気候変動の緩和に与える影響",
+      "catchTitle": "「みんな一緒」じゃダメ？気候変動対策の落とし穴",
+      "hook": "「うちの地域は大丈夫」と、あなたも思っていませんか？実はその考えが、地球全体の温暖化を加速させているかもしれません。",
+      "background": "産業革命以降、地球の気温は約1.3℃上昇し、その影響は私たちの生活にますます顕著になっています。気候変動の緩和は温室効果ガス排出量の削減が基本ですが、世界的な取り組みはなかなか進んでいません。その背景には、公平性や緩和コスト、個人の心理、懐疑論など、地域やスケールによって様々な要因があります。これまでの気候変動モデルの多くは、社会的な動態を考慮していなかったり、世界を均質なものとして扱ったりしていました。しかし、現実の社会や気候変動の影響は地域によって大きく異なり、この異質性が気候変動の軌道にどう影響するかは不明でした。",
+      "quiz": {
+        "question": "この研究で、地域間の「異質性」が地球の平均気温に与える影響として、最も適切でないものはどれでしょう？",
+        "options": [
+          "気候影響の異質性がある場合、平均気温は0.2℃上昇する。",
+          "社会的な異質性が加わると、平均気温はさらに0.1℃上昇する。",
+          "地域間の異質性が大きいほど、地球全体の平均気温は低くなる傾向がある。"
+        ],
+        "correctIndex": 2,
+        "explanation": "この研究では、地域間の異質性が大きいほど、地球全体の平均気温は高くなる傾向があることが示されています。"
+      },
+      "limitations": "このモデルは5つの地域に集約されており、より詳細な地域レベルの異質性は考慮されていません。また、モデルは予測を目的とするものではなく、異質性がもたらす可能性のある結果を理解するためのものです。",
+      "glossary": [
+        {
+          "term": "結合社会-気候モデル",
+          "definition": "社会と気候の動態を相互作用として扱うモデル"
+        },
+        {
+          "term": "異質性",
+          "definition": "地域ごとの社会状況や気候影響の受けやすさの違い"
+        },
+        {
+          "term": "脆弱性",
+          "definition": "気候変動の影響を受けやすい度合い"
+        },
+        {
+          "term": "局所的な温暖化",
+          "definition": "地域ごとに異なる温暖化の度合い"
+        },
+        {
+          "term": "緩和努力",
+          "definition": "温室効果ガス排出量削減に向けた取り組み"
+        },
+        {
+          "term": "フィードバックループ",
+          "definition": "ある結果が原因に影響を与え、その原因がさらに結果に影響する循環"
+        },
+        {
+          "term": "インセンティブ",
+          "definition": "行動を促す刺激や動機付け"
+        },
+        {
+          "term": "社会-気候の転換点",
+          "definition": "社会と気候の相互作用が急激に変化する臨界点"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "地域ごとの社会状況や気候変動の影響の受けやすさの違いが、地球全体の温暖化を悪化させることをモデルで示しました。",
+      "noveltyContrast": {
+        "before": "これまでの気候変動モデルは、世界中の人々や地域が均質であると仮定していました。しかし、現実には社会的な状況（緩和への支持度、社会規範など）も、気候変動の影響の受けやすさ（脆弱性、局所的な温暖化）も地域によって大きく異なります。",
+        "after": "この研究では、地域ごとの社会的な異質性（社会規範、初期の緩和支持度など）と、気候変動の影響の異質性（脆弱性、局所的な温暖化）を考慮した「結合社会-気候モデル」を初めて開発。これにより、異質性が地球全体の平均気温上昇と緩和努力にどう影響するかを明らかにしました。"
+      },
+      "analogy": {
+        "title": "畑の土壌と作物の多様性が収穫に与える影響",
+        "body": "これは、まるで「畑の土壌と作物の多様性が収穫に与える影響」のようなものです。ある畑では土壌が肥沃で特定の作物がよく育つ一方、別の畑では痩せた土壌で同じ作物が育ちにくい。もし農家が「どの畑も同じ条件」と考えて一律に種を蒔き、肥料を与えたら、全体としての収穫量は最大化されません。むしろ、条件の悪い畑が全体の収穫量を引き下げ、最終的には食料不足に陥る可能性もあります。この研究は、気候変動対策において、地域ごとの「土壌（社会状況）」や「作物（気候影響への脆弱性）」の違いを無視すると、地球全体の「収穫（緩和努力と気温上昇抑制）」が悪化してしまうことを示しています。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+0.2°C",
+          "label": "気候影響の異質性による気温上昇"
+        },
+        {
+          "value": "+0.1°C",
+          "label": "社会的な異質性による追加の気温上昇"
+        }
+      ],
+      "whyYouCare": "この研究は、気候変動対策がなぜ進まないのか、その複雑な理由の一端を解き明かしてくれます。あなたの住む地域が「うちは大丈夫」と思っていても、その意識が地球全体の温暖化を加速させる可能性があるのです。企業にとっては、サプライチェーンや事業拠点の地域ごとの脆弱性を考慮したリスクマネジメントの重要性を示唆します。政策立案者にとっては、地域間の不平等を解消し、協力体制を築くことが、地球規模の気候目標達成にいかに不可欠であるかを教えてくれます。単一の対策ではなく、地域ごとの特性に応じたきめ細やかなアプローチが、私たちの未来を左右する鍵となるでしょう。",
+      "takeawayTalk": "地域ごとの違いを無視すると、地球温暖化はもっと悪化するらしいよ。",
+      "bodyText": "この研究では、社会と気候の相互作用を表現する「結合社会-気候モデル」を拡張し、世界を5つの地域（アジア、ラテンアメリカ、中東・アフリカ、OECD諸国、東欧・旧ソ連）に分けました。各地域には、緩和への支持度、社会規範の強さ、気候変動への脆弱性、局所的な温暖化の度合いといった、地域固有の社会・気候特性を組み込みました。そして、「すべての地域が均質」「気候影響のみ異質」「社会条件のみ異質」「すべて異質（現実世界に近い）」の4つのシナリオを設定し、モデルシミュレーションを行いました。これにより、異質性の有無が平均気温上昇と緩和努力にどう影響するかを比較分析しました。\n\nこの結果は、地域間の異質性が、緩和努力のインセンティブに影響を与えるフィードバックループを通じて、地球全体の温暖化を悪化させるメカニズムを示唆しています。例えば、ある地域が排出量を削減すると、地球全体の温暖化影響が軽減され、他の地域の緩和インセンティブが低下する可能性があります。逆に、ある地域が緩和に消極的だと、他の地域への影響が悪化し、彼らの緩和を促す可能性もあります。しかし、全体として、異質性が存在することで、一部の地域が緩和に及び腰になり、それが地球全体の緩和努力を鈍化させ、結果として平均気温の上昇を招くことが示されました。",
+      "bodyGlossary": [
+        {
+          "term": "結合社会-気候モデル",
+          "definition": "社会と気候の動態を相互作用として扱うモデル",
+          "start": 23,
+          "end": 33
+        },
+        {
+          "term": "脆弱性",
+          "definition": "気候変動の影響を受けやすい度合い",
+          "start": 117,
+          "end": 120
+        },
+        {
+          "term": "局所的な温暖化",
+          "definition": "地域ごとに異なる温暖化の度合い",
+          "start": 121,
+          "end": 128
+        },
+        {
+          "term": "異質性",
+          "definition": "地域ごとの社会状況や気候影響の受けやすさの違い",
+          "start": 246,
+          "end": 249
+        },
+        {
+          "term": "緩和努力",
+          "definition": "温室効果ガス排出量削減に向けた取り組み",
+          "start": 260,
+          "end": 264
+        },
+        {
+          "term": "インセンティブ",
+          "definition": "行動を促す刺激や動機付け",
+          "start": 304,
+          "end": 311
+        },
+        {
+          "term": "フィードバックループ",
+          "definition": "ある結果が原因に影響を与え、その原因がさらに結果に影響する循環",
+          "start": 318,
+          "end": 328
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "結合社会-気候モデル",
+          "definition": "社会と気候の動態を相互作用として扱うモデル",
+          "start": 23,
+          "end": 33
+        },
+        {
+          "term": "脆弱性",
+          "definition": "気候変動の影響を受けやすい度合い",
+          "start": 117,
+          "end": 120
+        },
+        {
+          "term": "局所的な温暖化",
+          "definition": "地域ごとに異なる温暖化の度合い",
+          "start": 121,
+          "end": 128
+        },
+        {
+          "term": "異質性",
+          "definition": "地域ごとの社会状況や気候影響の受けやすさの違い",
+          "start": 246,
+          "end": 249
+        },
+        {
+          "term": "緩和努力",
+          "definition": "温室効果ガス排出量削減に向けた取り組み",
+          "start": 260,
+          "end": 264
+        },
+        {
+          "term": "インセンティブ",
+          "definition": "行動を促す刺激や動機付け",
+          "start": 304,
+          "end": 311
+        },
+        {
+          "term": "フィードバックループ",
+          "definition": "ある結果が原因に影響を与え、その原因がさらに結果に影響する循環",
+          "start": 318,
+          "end": 328
+        }
+      ],
+      "agriEconRelevance": "この知見は農業経済学にも応用できます。例えば、ある地域の農家が気候変動の影響をあまり受けないと感じていると、持続可能な農業技術への投資や適応策へのインセンティブが低くなるかもしれません。しかし、その行動が地球全体の食料システムに悪影響を与え、他の地域の農業生産を脅かす可能性があります。地域ごとの気候変動への脆弱性や社会経済的状況を考慮した農業政策や国際協力が、食料安全保障と持続可能な農業の実現には不可欠であることを示唆しています。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 286,
+      "keyFigure": {
+        "imagePath": "/figures/2607.13438v1_results.png",
+        "page": 18,
+        "caption": "気候影響と社会の異質性が地球平均気温に与える影響を示しています。",
+        "label": "p.18",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-16T22:57:08.285Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.13438v1_results.png",
+          "page": 18,
+          "caption": "気候影響と社会の異質性が地球平均気温に与える影響を示しています。",
+          "label": "p.18",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-16T22:57:08.285Z"
+        },
+        {
+          "imagePath": "/figures/2607.13438v1_why.png",
+          "page": 3,
+          "caption": "社会と気候の相互作用を考慮したモデルの全体像を示しています。",
+          "label": "Figure 1: Model overview. (A) overview of the coupled social-climate model with feedback between",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-16T22:57:08.285Z"
+        }
+      ]
+    }
+  ]
+}

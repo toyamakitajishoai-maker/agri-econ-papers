@@ -1,0 +1,1016 @@
+{
+  "date": "2026-07-18",
+  "papers": [
+    {
+      "id": "2607.14914v1",
+      "title": "Stochastic ultimatum game: Spite-driven resource feedback fosters fairness",
+      "authors": [
+        "Arunava Patra",
+        "Prosanta Mandal",
+        "Sagar Chakraborty"
+      ],
+      "publishedAt": "2026-07-16T12:33:13Z",
+      "url": "https://arxiv.org/abs/2607.14914v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.14914v1.pdf",
+      "categories": [
+        "topic:food-system",
+        "nlin.AO",
+        "econ.TH",
+        "physics.bio-ph",
+        "q-bio.PE"
+      ],
+      "abstract": "Resource scarcity can fundamentally encourage antisocial behaviour, whereas resource abundance can promote fair behaviour. Experimental evidence indeed suggests that scarcity induces spiteful behaviour, while repeated interactions enhance fairness. However, existing studies of game--environment feedback systems are largely confined to the evolution of cooperation and they overlook the interplay between resources, spite, and fairness. To address this lacuna, we develop a stochastic ultimatum game framework in which an offerer and an accepter repeatedly interact to negotiate exploitation of a self-renewable resource under the ownership of the offerer. Successful agreements deplete the resource, whereas unsuccessful agreements inhibit exploitation and facilitate replenishment. The mutation--selection driven two-species stochastic evolutionary dynamics reveal that the emergence of spite and fairness strongly depends on the resource growth rate. Fairness predominantly prevails for resources with high growth rates. Intriguingly, low resource growth rates give rise to a resource feedback loop driven by spite: spiteful behaviour dominates in the depleted state, facilitating transition of the resource state to replete state which, in turn, promotes fairness through repeated interactions.",
+      "summary": {
+        "gist": "生物は資源を巡って競争し、資源の希少性は反社会的な行動（意地悪）を助長する一方、資源の豊富さは公平な行動を促進すると考えられてきました。しかし、資源の動態と意地悪・公平性の関係は十分に解明されていませんでした。",
+        "novelty": "従来のゲーム理論研究では、資源と意地悪、公平性の相互作用が十分に考慮されていませんでした。特に、資源の枯渇と回復が、人々の行動選択にどう影響するかは不明でした。 この研究は、資源の成長率と枯渇・回復のサイクルが、意地悪な行動と公平な行動のどちらが進化するかを決定する重要な要因であることを明らかにしました。",
+        "method": "本研究では、資源の所有者（提案者）と利用者（受諾者）が、自己再生可能な資源の利用を巡って繰り返し交渉する「確率的最後通牒ゲーム」という枠組みを開発しました。提案者が資源の分け方を提示し、受諾者がそれを受け入れるか拒否するかを決めます。合意が成立すれば資源は減り、拒否すれば資源は利用されず回復します。このゲームを、資源が豊富な「充足状態」と資源が少ない「枯渇状態」の2つの状態を持つシステムとしてモデル化し、突然変異と選択のメカニズムを通じて、意地悪と公平性の進化をシミュレーションしました。",
+        "results": "資源の成長率が高い場合、公平な行動が優勢になることが示されました。しかし、資源の成長率が低い場合、興味深いことに「意地悪による資源フィードバックループ」が観察されました。枯渇状態では意地悪な行動が支配的になり、これが資源の利用を抑制し、資源を充足状態へと回復させます。そして、資源が充足状態になると、繰り返し相互作用を通じて公平な行動が促進されることが明らかになりました。",
+        "why": "資源の成長率が低い環境では、意地悪な行動（提案者の低い提案を受諾者が拒否し、両者が何も得られない状況）が、結果的に資源の利用を停止させ、資源の回復を促します。資源が回復し充足状態になると、将来のより大きな利益を期待して、提案者と受諾者の間で公平な分配を受け入れるインセンティブが高まります。このように、一時的な意地悪が資源の回復を促し、その後の公平な行動へとつながるという、逆説的なフィードバックループが存在するのです。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / nlin.AO）",
+      "field": "食料システム",
+      "categoryL1": "agri-econ",
+      "categoryL2": "resource-economics",
+      "arxivPrimary": "nlin.AO",
+      "titleJa": "確率的最後通牒ゲーム：意地悪が資源フィードバックを介して公平性を育む",
+      "catchTitle": "資源が少ないと意地悪が公平性を生む？",
+      "hook": "あなたは、資源が少ない状況で人々が助け合うか、それとも争うか、考えたことはありますか？",
+      "background": "生物は資源を巡って競争し、資源の希少性は反社会的な行動（意地悪）を助長する一方、資源の豊富さは公平な行動を促進すると考えられてきました。しかし、資源の動態と意地悪・公平性の関係は十分に解明されていませんでした。",
+      "quiz": {
+        "question": "資源の成長率が低い場合、意地悪な行動は最終的にどのような結果をもたらす可能性が高いですか？",
+        "options": [
+          "資源の枯渇を加速させ、不公平な状態が続く",
+          "資源の回復を促し、その後の公平な行動につながる",
+          "公平な行動を直接的に促進する"
+        ],
+        "correctIndex": 1,
+        "explanation": "資源の成長率が低い場合、意地悪な行動（低い提案の拒否）が資源の利用を抑制し、結果的に資源の回復を促します。資源が回復すると、繰り返し相互作用を通じて公平な行動が促進されることが本研究で示されています。"
+      },
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "確率的最後通牒ゲーム",
+          "definition": "資源の分配を巡る交渉を繰り返し行うゲームモデル"
+        },
+        {
+          "term": "提案者",
+          "definition": "資源の分け方を提示する側"
+        },
+        {
+          "term": "受諾者",
+          "definition": "提案された分け方を受け入れるか拒否する側"
+        },
+        {
+          "term": "自己再生可能な資源",
+          "definition": "利用しても自然に回復する資源"
+        },
+        {
+          "term": "充足状態",
+          "definition": "資源が豊富にある状態"
+        },
+        {
+          "term": "枯渇状態",
+          "definition": "資源が少ない状態"
+        },
+        {
+          "term": "突然変異と選択",
+          "definition": "生物の進化メカニズムを模したシミュレーション手法"
+        },
+        {
+          "term": "意地悪による資源フィードバックループ",
+          "definition": "意地悪な行動が資源回復を促し、公平性を生む循環"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "資源の成長率が低いと、意地悪な行動が資源回復を促し、結果的に公平な分配へとつながる。",
+      "noveltyContrast": {
+        "before": "従来のゲーム理論研究では、資源と意地悪、公平性の相互作用が十分に考慮されていませんでした。特に、資源の枯渇と回復が、人々の行動選択にどう影響するかは不明でした。",
+        "after": "この研究は、資源の成長率と枯渇・回復のサイクルが、意地悪な行動と公平な行動のどちらが進化するかを決定する重要な要因であることを明らかにしました。"
+      },
+      "analogy": {
+        "title": "不作の畑で種をまく農夫",
+        "body": "これは、不作の畑で農夫が「今年は収穫が少ないから、自分だけが利益を得よう」と、あえて種まきを拒否するようなものです。一見すると意地悪な行動ですが、この拒否によって畑は休耕状態となり、土壌が回復します。そして、土壌が回復し豊かになった畑では、皆で協力して公平に種をまき、収穫を分かち合うようになるのです。つまり、一時的な意地悪が、長期的な畑の豊かさと公平な関係を育むきっかけになるのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、資源管理や社会の公平性について考える上で重要な示唆を与えます。例えば、漁業資源や森林資源のように自己再生能力を持つ資源の管理において、一時的な過剰利用の抑制（意図的な「意地悪」による利用停止）が、長期的な資源回復と、その後の公平な分配システム構築につながる可能性があります。また、企業間の競争や国際交渉など、限られた資源を巡る駆け引きにおいても、短期的な「意地悪」が、結果的に持続可能な関係性や公平なルール形成に貢献するケースがあるかもしれません。私たちの社会が直面する資源問題や不公平感を解消するための、新たな視点を提供してくれるでしょう。",
+      "takeawayTalk": "資源が少ないと、あえて意地悪することが公平な社会を作るらしいよ！",
+      "bodyText": "本研究では、資源の所有者（提案者）と利用者（受諾者）が、自己再生可能な資源の利用を巡って繰り返し交渉する「確率的最後通牒ゲーム」という枠組みを開発しました。提案者が資源の分け方を提示し、受諾者がそれを受け入れるか拒否するかを決めます。合意が成立すれば資源は減り、拒否すれば資源は利用されず回復します。このゲームを、資源が豊富な「充足状態」と資源が少ない「枯渇状態」の2つの状態を持つシステムとしてモデル化し、突然変異と選択のメカニズムを通じて、意地悪と公平性の進化をシミュレーションしました。\n\n資源の成長率が低い環境では、意地悪な行動（提案者の低い提案を受諾者が拒否し、両者が何も得られない状況）が、結果的に資源の利用を停止させ、資源の回復を促します。資源が回復し充足状態になると、将来のより大きな利益を期待して、提案者と受諾者の間で公平な分配を受け入れるインセンティブが高まります。このように、一時的な意地悪が資源の回復を促し、その後の公平な行動へとつながるという、逆説的なフィードバックループが存在するのです。",
+      "bodyGlossary": [
+        {
+          "term": "提案者",
+          "definition": "資源の分け方を提示する側",
+          "start": 13,
+          "end": 16
+        },
+        {
+          "term": "受諾者",
+          "definition": "提案された分け方を受け入れるか拒否する側",
+          "start": 22,
+          "end": 25
+        },
+        {
+          "term": "自己再生可能な資源",
+          "definition": "利用しても自然に回復する資源",
+          "start": 28,
+          "end": 37
+        },
+        {
+          "term": "確率的最後通牒ゲーム",
+          "definition": "資源の分配を巡る交渉を繰り返し行うゲームモデル",
+          "start": 53,
+          "end": 63
+        },
+        {
+          "term": "充足状態",
+          "definition": "資源が豊富にある状態",
+          "start": 164,
+          "end": 168
+        },
+        {
+          "term": "枯渇状態",
+          "definition": "資源が少ない状態",
+          "start": 177,
+          "end": 181
+        },
+        {
+          "term": "突然変異と選択",
+          "definition": "生物の進化メカニズムを模したシミュレーション手法",
+          "start": 204,
+          "end": 211
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "提案者",
+          "definition": "資源の分け方を提示する側",
+          "start": 13,
+          "end": 16
+        },
+        {
+          "term": "受諾者",
+          "definition": "提案された分け方を受け入れるか拒否する側",
+          "start": 22,
+          "end": 25
+        },
+        {
+          "term": "自己再生可能な資源",
+          "definition": "利用しても自然に回復する資源",
+          "start": 28,
+          "end": 37
+        },
+        {
+          "term": "確率的最後通牒ゲーム",
+          "definition": "資源の分配を巡る交渉を繰り返し行うゲームモデル",
+          "start": 53,
+          "end": 63
+        },
+        {
+          "term": "充足状態",
+          "definition": "資源が豊富にある状態",
+          "start": 164,
+          "end": 168
+        },
+        {
+          "term": "枯渇状態",
+          "definition": "資源が少ない状態",
+          "start": 177,
+          "end": 181
+        },
+        {
+          "term": "突然変異と選択",
+          "definition": "生物の進化メカニズムを模したシミュレーション手法",
+          "start": 204,
+          "end": 211
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 195,
+      "keyFigure": {
+        "imagePath": "/figures/2607.14914v1_results.png",
+        "page": 7,
+        "caption": "資源の成長率に応じた公平性、意地悪さ、資源充足状態のレベルを示しています。",
+        "label": "FIG. 3. The fairness, spite, and replete state levels are shown",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-17T22:48:31.826Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.14914v1_results.png",
+          "page": 7,
+          "caption": "資源の成長率に応じた公平性、意地悪さ、資源充足状態のレベルを示しています。",
+          "label": "FIG. 3. The fairness, spite, and replete state levels are shown",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-17T22:48:31.826Z"
+        },
+        {
+          "imagePath": "/figures/2607.14914v1_why.png",
+          "page": 8,
+          "caption": "意地悪な行動が資源の利用を抑制し、資源回復を促すメカニズムを示しています。",
+          "label": "FIG. 4. Histogram illustrating the distribution of outcome",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-17T22:48:31.826Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.14446v1",
+      "title": "Which Green Technology to Subsidize? Evidence from Electric Vehicles in South Korea",
+      "authors": [
+        "Youngjin Hong",
+        "In Kyung Kim",
+        "Frank Verboven"
+      ],
+      "publishedAt": "2026-07-16T00:43:57Z",
+      "url": "https://arxiv.org/abs/2607.14446v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.14446v1.pdf",
+      "categories": [
+        "topic:agri-econ",
+        "econ.GN"
+      ],
+      "abstract": "We develop a framework to compare the relative effectiveness of subsidizing alternative emission-reducing technologies. We show that an intermediate technology may reduce emissions more effectively than the cleanest technology if it induces sufficiently greater substitution away from the prevailing high-emission technology. We apply the framework to the South Korean passenger vehicle market using a demand model that incorporates mileage heterogeneity, an important determinant of fuel-type choice. First, reallocating existing subsidies from battery electric vehicles (BEVs), the cleanest technology, to hybrid electric vehicles (HEVs), an intermediate technology, would reduce total greenhouse gas emissions by an additional 47%. Second, for a BEV-focused subsidy policy to outperform an HEV-focused policy, the carbon intensity of electricity generation would need to fall by approximately 45%. Our findings suggest that HEV subsidies remain more effective than BEV subsidies until consumers become sufficiently willing to switch to BEVs or electricity generation becomes sufficiently decarbonized.",
+      "summary": {
+        "gist": "気候変動への懸念が高まる中、多くの国が温室効果ガス排出量ネットゼロを目標に掲げ、低排出ガス輸送技術への移行を加速させています。特にバッテリー電気自動車（BEV）は、自動車産業の長期的な方向性として広く認識され、政府は多額の購入補助金や税制優遇措置、充電インフラへの投資を通じてBEVの普及を促進してきました。しかし、高価格や充電の利便性への懸念などから、BEVの普及は政策目標に達していません。一方、ハイブリッド電気自動車（HEV）は、BEVほど政策的な注目を集めていないにもかかわらず、多くの主要経済圏で市場シェアを拡大し、BEVを上回る販売台数を記録しています。この状況は、HEVの普及を促進する政策が、BEVに特化した政策よりも温室効果ガス排出量をより効果的に削減できるのではないかという疑問を提起しています。",
+        "novelty": "これまでの環境政策では、最も排出量の少ない技術（EV）を優先的に補助することが一般的でした。しかし、消費者の行動や電力構成を考慮せず、単に「クリーンな技術＝良い」と判断するだけでは、期待通りの環境効果が得られない可能性がありました。 この研究は、最もクリーンな技術だけでなく、「既存の高排出技術（ガソリン車）からの乗り換えをどれだけ促せるか」という視点から、補助金政策の有効性を比較する新しい枠組みを提示しました。これにより、中間的な技術（ハイブリッド車）がより大きな排出削減効果をもたらす可能性を示しています。",
+        "method": "本研究では、代替的な排出削減技術への補助金の相対的な有効性を比較するための枠組みを開発しました。まず、ある技術は車両あたりの排出量が少ないが、別の技術は既存の高排出技術からの代替をより多く誘発する可能性があるというトレードオフを強調する理論モデルを構築しました。次に、このモデルを韓国の新乗用車市場に適用し、2012年から2023年までの車両販売、価格、特性に関する製品・地域・年次データを用いて、消費者の需要システムを推定しました。この需要モデルには、燃料タイプの選択に重要な決定要因である走行距離の異質性を組み込みました。さらに、企業の価格設定を考慮した均衡モデルを用いて、BEVとHEVへの補助金再配分による排出量への影響を比較しました。この際、燃料サイクル排出量と車両サイクル排出量の両方を含む、個人ごとの走行距離によって異なる包括的なライフサイクル温室効果ガス排出量測定値を構築しました。",
+        "results": "分析の結果、以下の2つの主要な発見が得られました。第一に、既存の補助金予算を最もクリーンな技術であるBEVから中間技術であるHEVに再配分することで、総温室効果ガス排出量をさらに47%削減できることが示されました。これは、HEVが車両あたりの排出量はBEVより多いものの、既存のガソリン車からの乗り換えをBEVよりも多く誘発するためです。第二に、BEVに焦点を当てた補助金政策がHEVに焦点を当てた政策を上回るためには、韓国の電力生産の炭素強度が約45%削減される必要があることが分かりました。これは、ポルトガルで観測されるレベルにほぼ達する水準です。これらの結果は、消費者がBEVへの乗り換えに十分意欲的になるか、または電力生産が十分に脱炭素化されるまで、HEV補助金がBEV補助金よりも効果的である可能性を示唆しています。",
+        "why": "この現象は、消費者の代替行動とライフサイクル排出量の両方によって説明されます。推定された需要モデルでは、消費者は同じ燃料タイプの車両を最も近い代替品と認識しますが、燃料タイプを超えて見ると、HEVはBEVよりもガソリン車に近い代替品と認識されています。これは、HEVがBEVよりも一般的に安価であり、現在の消費者の嗜好により合致しているため、より多くの消費者を高排出のガソリン車から乗り換えさせることができるためです。一方、BEVへの補助金は、主に既存のBEVユーザー内での代替を促す傾向があり、全体的な排出削減効果を弱めてしまいます。また、BEVは走行中の排出量がないものの、多くの国では電力生産が依然として炭素集約的であり、バッテリー生産自体も高い炭素排出量を伴います。このため、現在の電力構成の下では、BEVのライフサイクル排出量優位性はしばしば想定されるよりも小さい可能性があります。これらの要因が組み合わさることで、中間技術であるHEVへの補助金が、最もクリーンな技術であるBEVへの補助金よりも、全体としてより大きな温室効果ガス排出量削減効果をもたらすことが示唆されます。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / econ.GN）",
+      "field": "農業経済",
+      "categoryL1": "agri-econ",
+      "categoryL2": "environmental-economics",
+      "arxivPrimary": "econ.GN",
+      "titleJa": "どのグリーン技術を補助すべきか？韓国の電気自動車の証拠",
+      "catchTitle": "EV補助金、本当に効果的？ハイブリッドが排出削減の近道かも",
+      "hook": "「電気自動車こそエコ」と信じて疑わないあなた。本当にそうでしょうか？実は、意外な選択肢が温室効果ガス削減の切り札になるかもしれません。",
+      "background": "気候変動への懸念が高まる中、多くの国が温室効果ガス排出量ネットゼロを目標に掲げ、低排出ガス輸送技術への移行を加速させています。特にバッテリー電気自動車（BEV）は、自動車産業の長期的な方向性として広く認識され、政府は多額の購入補助金や税制優遇措置、充電インフラへの投資を通じてBEVの普及を促進してきました。しかし、高価格や充電の利便性への懸念などから、BEVの普及は政策目標に達していません。一方、ハイブリッド電気自動車（HEV）は、BEVほど政策的な注目を集めていないにもかかわらず、多くの主要経済圏で市場シェアを拡大し、BEVを上回る販売台数を記録しています。この状況は、HEVの普及を促進する政策が、BEVに特化した政策よりも温室効果ガス排出量をより効果的に削減できるのではないかという疑問を提起しています。",
+      "quiz": {
+        "question": "この研究によると、現在の韓国において、温室効果ガス排出量を最も効果的に削減するために、政府はどの技術への補助金を優先すべきだと示唆されていますか？",
+        "options": [
+          "バッテリー電気自動車（BEV）",
+          "ハイブリッド電気自動車（HEV）",
+          "ガソリン車（ICEV）"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究では、既存の補助金予算をBEVからHEVに再配分することで、総温室効果ガス排出量をさらに47%削減できると結論付けています。これは、HEVが既存のガソリン車からの乗り換えをBEVよりも多く誘発するためです。"
+      },
+      "limitations": "本研究は、現在のBEV補助金システムと単純な均一HEV補助金の比較に焦点を当てており、最適な補助金設計については深く掘り下げていません。また、学習効果やイノベーションインセンティブといった動的な考慮事項は抽象化されています。これらの動的な要素は、長期的な車両あたりの排出量が少ない技術を支援する根拠となる可能性がありますが、中間技術の促進が低排出ガス車のより広範な普及を促進し、技術的・市場的不確実性を低減する可能性も指摘されています。",
+      "glossary": [
+        {
+          "term": "BEV",
+          "definition": "バッテリーのみで走行する電気自動車。"
+        },
+        {
+          "term": "HEV",
+          "definition": "ガソリンエンジンと電気モーターを組み合わせた自動車。"
+        },
+        {
+          "term": "需要システム",
+          "definition": "消費者が製品をどのように選択するかをモデル化したもの。"
+        },
+        {
+          "term": "走行距離の異質性",
+          "definition": "個々のドライバーの年間走行距離の違い。"
+        },
+        {
+          "term": "均衡モデル",
+          "definition": "市場における企業と消費者の相互作用を分析するモデル。"
+        },
+        {
+          "term": "燃料サイクル排出量",
+          "definition": "車両の使用（燃料生産・消費）に伴う排出量。"
+        },
+        {
+          "term": "車両サイクル排出量",
+          "definition": "車両の生産・廃棄に伴う排出量。"
+        },
+        {
+          "term": "ライフサイクル排出量",
+          "definition": "製品の全生涯にわたる排出量の合計。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "最もクリーンなEVより、ハイブリッド車への補助金の方が、現状では温室効果ガス排出量をより多く削減できる可能性がある。",
+      "noveltyContrast": {
+        "before": "これまでの環境政策では、最も排出量の少ない技術（EV）を優先的に補助することが一般的でした。しかし、消費者の行動や電力構成を考慮せず、単に「クリーンな技術＝良い」と判断するだけでは、期待通りの環境効果が得られない可能性がありました。",
+        "after": "この研究は、最もクリーンな技術だけでなく、「既存の高排出技術（ガソリン車）からの乗り換えをどれだけ促せるか」という視点から、補助金政策の有効性を比較する新しい枠組みを提示しました。これにより、中間的な技術（ハイブリッド車）がより大きな排出削減効果をもたらす可能性を示しています。"
+      },
+      "analogy": {
+        "title": "「畑の雑草対策、完璧な除草剤より手軽な草刈りが効く？」",
+        "body": "これは、畑の雑草対策に似ています。完璧に雑草を根絶する最新の強力な除草剤（BEV）は、確かに一本あたりの雑草を最も減らせます。しかし、高価だったり、散布に手間がかかったりして、多くの農家がなかなか手を出せないかもしれません。一方で、手軽に使える草刈り機（HEV）は、一本あたりの効果は除草剤に劣るものの、より多くの農家が導入しやすく、結果として畑全体の雑草の量を大きく減らせる、というようなものです。完璧な解決策よりも、多くの人が取り入れやすい中間的な解決策の方が、全体として大きな効果を生む可能性があるのです。",
+        "domain": "farming"
+      },
+      "kpi": [
+        {
+          "value": "+47%",
+          "label": "追加の温室効果ガス排出量削減"
+        },
+        {
+          "value": "-45%",
+          "label": "EV補助金がHEV補助金を上回るために必要な電力の脱炭素化"
+        }
+      ],
+      "whyYouCare": "この研究は、私たちの税金がどのように使われるべきか、そして地球温暖化対策に本当に効果的な選択は何かを考える上で非常に重要です。もしあなたが「環境に良いから」とEV購入を検討したり、政府のEV補助金政策を支持していたりするなら、この発見はあなたの常識を覆すかもしれません。最もクリーンに見える技術が、必ずしも最大の環境効果をもたらすとは限らないのです。私たちの生活に身近な自動車選びや、企業がどのような環境技術に投資すべきか、そして政府がどのような産業政策を推進すべきかといった意思決定に、この「代替効果」という視点は新たな光を投げかけます。短期的な排出削減効果を最大化するためには、中間的な技術への支援も視野に入れるべきだという示唆は、今後の環境政策や企業の戦略に大きな影響を与えるでしょう。",
+      "takeawayTalk": "EVよりハイブリッドへの補助金の方が、今は地球に優しいかも！",
+      "bodyText": "本研究では、代替的な排出削減技術への補助金の相対的な有効性を比較するための枠組みを開発しました。まず、ある技術は車両あたりの排出量が少ないが、別の技術は既存の高排出技術からの代替をより多く誘発する可能性があるというトレードオフを強調する理論モデルを構築しました。次に、このモデルを韓国の新乗用車市場に適用し、2012年から2023年までの車両販売、価格、特性に関する製品・地域・年次データを用いて、消費者の需要システムを推定しました。この需要モデルには、燃料タイプの選択に重要な決定要因である走行距離の異質性を組み込みました。さらに、企業の価格設定を考慮した均衡モデルを用いて、BEVとHEVへの補助金再配分による排出量への影響を比較しました。この際、燃料サイクル排出量と車両サイクル排出量の両方を含む、個人ごとの走行距離によって異なる包括的なライフサイクル温室効果ガス排出量測定値を構築しました。\n\nこの現象は、消費者の代替行動とライフサイクル排出量の両方によって説明されます。推定された需要モデルでは、消費者は同じ燃料タイプの車両を最も近い代替品と認識しますが、燃料タイプを超えて見ると、HEVはBEVよりもガソリン車に近い代替品と認識されています。これは、HEVがBEVよりも一般的に安価であり、現在の消費者の嗜好により合致しているため、より多くの消費者を高排出のガソリン車から乗り換えさせることができるためです。一方、BEVへの補助金は、主に既存のBEVユーザー内での代替を促す傾向があり、全体的な排出削減効果を弱めてしまいます。また、BEVは走行中の排出量がないものの、多くの国では電力生産が依然として炭素集約的であり、バッテリー生産自体も高い炭素排出量を伴います。このため、現在の電力構成の下では、BEVのライフサイクル排出量優位性はしばしば想定されるよりも小さい可能性があります。これらの要因が組み合わさることで、中間技術であるHEVへの補助金が、最もクリーンな技術であるBEVへの補助金よりも、全体としてより大きな温室効果ガス排出量削減効果をもたらすことが示唆されます。",
+      "bodyGlossary": [
+        {
+          "term": "需要システム",
+          "definition": "消費者が製品をどのように選択するかをモデル化したもの。",
+          "start": 203,
+          "end": 209
+        },
+        {
+          "term": "走行距離の異質性",
+          "definition": "個々のドライバーの年間走行距離の違い。",
+          "start": 246,
+          "end": 254
+        },
+        {
+          "term": "均衡モデル",
+          "definition": "市場における企業と消費者の相互作用を分析するモデル。",
+          "start": 279,
+          "end": 284
+        },
+        {
+          "term": "BEV",
+          "definition": "バッテリーのみで走行する電気自動車。",
+          "start": 289,
+          "end": 292
+        },
+        {
+          "term": "HEV",
+          "definition": "ガソリンエンジンと電気モーターを組み合わせた自動車。",
+          "start": 293,
+          "end": 296
+        },
+        {
+          "term": "燃料サイクル排出量",
+          "definition": "車両の使用（燃料生産・消費）に伴う排出量。",
+          "start": 326,
+          "end": 335
+        },
+        {
+          "term": "車両サイクル排出量",
+          "definition": "車両の生産・廃棄に伴う排出量。",
+          "start": 336,
+          "end": 345
+        },
+        {
+          "term": "ライフサイクル排出量",
+          "definition": "製品の全生涯にわたる排出量の合計。",
+          "start": 416,
+          "end": 426
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "需要システム",
+          "definition": "消費者が製品をどのように選択するかをモデル化したもの。",
+          "start": 203,
+          "end": 209
+        },
+        {
+          "term": "走行距離の異質性",
+          "definition": "個々のドライバーの年間走行距離の違い。",
+          "start": 246,
+          "end": 254
+        },
+        {
+          "term": "均衡モデル",
+          "definition": "市場における企業と消費者の相互作用を分析するモデル。",
+          "start": 279,
+          "end": 284
+        },
+        {
+          "term": "BEV",
+          "definition": "バッテリーのみで走行する電気自動車。",
+          "start": 289,
+          "end": 292
+        },
+        {
+          "term": "HEV",
+          "definition": "ガソリンエンジンと電気モーターを組み合わせた自動車。",
+          "start": 293,
+          "end": 296
+        },
+        {
+          "term": "燃料サイクル排出量",
+          "definition": "車両の使用（燃料生産・消費）に伴う排出量。",
+          "start": 326,
+          "end": 335
+        },
+        {
+          "term": "車両サイクル排出量",
+          "definition": "車両の生産・廃棄に伴う排出量。",
+          "start": 336,
+          "end": 345
+        },
+        {
+          "term": "ライフサイクル排出量",
+          "definition": "製品の全生涯にわたる排出量の合計。",
+          "start": 416,
+          "end": 426
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 371,
+      "keyFigure": {
+        "imagePath": "/figures/2607.14446v1_results.png",
+        "page": 32,
+        "caption": "電力のGHG排出強度を変えた場合の政策比較を示しています。",
+        "label": "Figure 3: Policy comparison with different GHG emission intensity of electricity generation",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-17T22:48:37.149Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.14446v1_results.png",
+          "page": 32,
+          "caption": "電力のGHG排出強度を変えた場合の政策比較を示しています。",
+          "label": "Figure 3: Policy comparison with different GHG emission intensity of electricity generation",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-17T22:48:37.149Z"
+        },
+        {
+          "imagePath": "/figures/2607.14446v1_why.png",
+          "page": 56,
+          "caption": "BEVとHEVのグループ内市場シェアの変化を示しています。",
+          "label": "Table 8.",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-17T22:48:37.149Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.13914v1",
+      "title": "Epidemic Informatics and Control: A Holistic Approach from System Informatics to Epidemic Response and Risk Management in Public Health",
+      "authors": [
+        "Hui Yang",
+        "Siqi Zhang",
+        "Runsang Liu",
+        "Alexander Krall",
+        "Yidan Wang",
+        "Marta Ventura",
+        "Chris Deflitch"
+      ],
+      "publishedAt": "2026-07-15T14:54:09Z",
+      "url": "https://arxiv.org/abs/2607.13914v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.13914v1.pdf",
+      "categories": [
+        "topic:policy",
+        "eess.SY",
+        "cs.CY",
+        "stat.AP"
+      ],
+      "abstract": "This paper presents a holistic systems informatics approach, i.e., Define, Measure, Analyze, Improve, and Control (DMAIC), for epidemic response and management through the intensive use of data, statistics and optimization. Despite the sustained successes of system informatics in a variety of established industries such as manufacturing, logistics, services and beyond, there is a dearth of concentrated review and application of the data-driven DMAIC approach in the context of epidemic outbreaks. First, we define specific challenges posed by epidemic outbreaks to populational health, health systems, as well as economic challenges to different industries such as retailing, education and manufacturing. Second, we present a review of medical testing and statistical sampling methods for data collection, as well as existing efforts in data management and data visualization. Third, we discuss the importance to realizing the full potential of data for epidemic insights, and emphasize the need to leverage analytical methods and tools for decision support. Fourth, an epidemic brings imperative changes to health systems. We discuss the new trend of healthcare solutions to improve system resilience, including telehealth, artificial intelligence, resource allocation, and system re-design. In closing, prescriptive approaches are discussed to optimize the health policies and action strategies for controlling the spread of virus. We posit that this work will catalyze more in-depth investigations and multi-disciplinary research efforts to accelerate the application of system informatics methods and tools in epidemic response and risk management.",
+      "summary": {
+        "gist": "新型コロナウイルス感染症（COVID-19）のようなパンデミックは、社会の健康に甚大な影響を与え、経済にも大きな混乱をもたらします。各国は、リスクを軽減し、国民を守るために、保健政策を動的に調整し、医療資源を計画し、移動を制限する必要があります。しかし、これまでのパンデミック対応は、データ活用が不十分で、後手後手に回ることが多く、経済的損失も大きくなりがちでした。",
+        "novelty": "これまでのパンデミック対策は、医療現場の経験や過去の事例に基づく反応的な政策が中心で、データが十分に活用されていませんでした。そのため、対策が後手に回ったり、経済的損失が大きくなったりする課題がありました。 この論文では、製造業などで成功を収めてきたデータ駆動型のアプローチ「DMAIC」をパンデミック対策に適用することを提案しています。これにより、データ収集から分析、改善、管理までを一貫して行い、より科学的で効率的な対策を可能にします。",
+        "method": "本研究は、製造業やロジスティクス、サービス業などで実績のあるシステムインフォマティクスのアプローチであるDMAIC（Define, Measure, Analyze, Improve, Control）を、パンデミック対応と管理に適用することを提案しています。具体的には、パンデミックがもたらす課題を定義し、医療検査や統計的サンプリングによるデータ収集方法をレビューし、データ管理と可視化の既存の取り組みを紹介します。さらに、データ分析ツールを活用した意思決定支援の重要性を議論し、遠隔医療、AI、資源配分、システム再設計などのヘルスケアソリューションによるシステムレジリエンス向上について考察します。最後に、ウイルスの拡散を制御するための保健政策と行動戦略を最適化する処方的アプローチについて議論しています。",
+        "results": "本研究は、DMAICフレームワークをパンデミック対応に適用することで、データに基づいた課題定義、効果的なデータ収集、情報抽出と予測モデリング、レジリエンス設計とスマートヘルスシステム、そして保健政策とリスク軽減のための介入策を体系的に実施できることを示しました。これにより、パンデミックの動態をより深く理解し、医療政策の設計を最適化し、医療システムのレジリエンスを向上させる可能性を提示しています。",
+        "why": "DMAICは、データと統計、最適化を駆使して、問題解決とプロセス改善を行う体系的なアプローチです。パンデミックにおいては、まず「Define（定義）」フェーズで、社会が直面する課題を明確にします。次に「Measure（測定）」フェーズで、感染状況や医療資源に関するデータを収集します。続く「Analyze（分析）」フェーズで、収集したデータからウイルスの拡散パターンや影響を分析し、有用な情報を抽出します。そして「Improve（改善）」フェーズで、医療システムのレジリエンスを高めるための解決策を設計します。最後に「Control（管理）」フェーズで、感染拡大を抑制するための保健政策や管理計画、介入方法を策定し、継続的に監視・調整します。このサイクルを回すことで、パンデミックに対する迅速かつ効果的な対応が可能になります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / eess.SY）",
+      "field": "公共政策・ガバナンス",
+      "categoryL1": "adjacent",
+      "categoryL2": "public-health",
+      "arxivPrimary": "eess.SY",
+      "titleJa": "公衆衛生におけるシステムインフォマティクスによるパンデミック対応とリスク管理",
+      "catchTitle": "データでパンデミックを乗り越える",
+      "hook": "新型コロナウイルスのようなパンデミックが起きた時、あなたは「もっと早く、もっと効果的な対策はできなかったのか？」と感じませんでしたか？",
+      "background": "新型コロナウイルス感染症（COVID-19）のようなパンデミックは、社会の健康に甚大な影響を与え、経済にも大きな混乱をもたらします。各国は、リスクを軽減し、国民を守るために、保健政策を動的に調整し、医療資源を計画し、移動を制限する必要があります。しかし、これまでのパンデミック対応は、データ活用が不十分で、後手後手に回ることが多く、経済的損失も大きくなりがちでした。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "システムインフォマティクス",
+          "definition": "情報科学をシステム全体に応用する学問分野。"
+        },
+        {
+          "term": "DMAIC",
+          "definition": "Define, Measure, Analyze, Improve, Controlの略。"
+        },
+        {
+          "term": "レジリエンス",
+          "definition": "システムが困難な状況から回復する能力。"
+        },
+        {
+          "term": "処方的アプローチ",
+          "definition": "データに基づき最適な行動を指示する手法。"
+        },
+        {
+          "term": "データ駆動型",
+          "definition": "データ分析に基づいて意思決定を行うこと。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "製造業で実績のあるデータ活用フレームワーク「DMAIC」をパンデミック対策に応用し、データに基づいた迅速な意思決定を可能にする。",
+      "noveltyContrast": {
+        "before": "これまでのパンデミック対策は、医療現場の経験や過去の事例に基づく反応的な政策が中心で、データが十分に活用されていませんでした。そのため、対策が後手に回ったり、経済的損失が大きくなったりする課題がありました。",
+        "after": "この論文では、製造業などで成功を収めてきたデータ駆動型のアプローチ「DMAIC」をパンデミック対策に適用することを提案しています。これにより、データ収集から分析、改善、管理までを一貫して行い、より科学的で効率的な対策を可能にします。"
+      },
+      "analogy": {
+        "title": "畑の病害虫対策をデータで最適化する",
+        "body": "これは、まるで畑に突如発生した病害虫を、経験と勘だけでなく、データに基づいて効率的に駆除し、被害を最小限に抑えるようなものです。①まず、病害虫の種類、発生範囲、被害状況を正確に「定義」し、②ドローンやセンサーで畑全体のデータを「測定」します。③次に、集めたデータを「分析」し、病害虫の拡散パターンや効果的な駆除方法を特定。④そして、最適な農薬散布計画や品種改良などの対策を「改善」し、⑤最終的に、病害虫の再発防止策や監視体制を「管理」する。この一連の流れで、収穫量を最大化し、農家の損失を最小限に抑えることができるのです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、パンデミックのような予測不能な危機に対し、私たちがより賢く、迅速に対応するための道筋を示しています。データに基づいたアプローチは、医療現場の負担軽減、経済活動への影響最小化、そして私たちの日常生活の安定に直結します。例えば、感染拡大の初期段階で適切なデータが収集・分析されれば、より的確な行動制限や医療資源の配分が可能になり、不要な混乱や損失を避けられるかもしれません。これは、単に医療の問題ではなく、社会全体の持続可能性を高めるための重要な視点を提供してくれます。",
+      "takeawayTalk": "データ活用でパンデミック対策を最適化する「DMAIC」がすごい！",
+      "bodyText": "本研究は、製造業やロジスティクス、サービス業などで実績のあるシステムインフォマティクスのアプローチであるDMAIC（Define, Measure, Analyze, Improve, Control）を、パンデミック対応と管理に適用することを提案しています。具体的には、パンデミックがもたらす課題を定義し、医療検査や統計的サンプリングによるデータ収集方法をレビューし、データ管理と可視化の既存の取り組みを紹介します。さらに、データ分析ツールを活用した意思決定支援の重要性を議論し、遠隔医療、AI、資源配分、システム再設計などのヘルスケアソリューションによるシステムレジリエンス向上について考察します。最後に、ウイルスの拡散を制御するための保健政策と行動戦略を最適化する処方的アプローチについて議論しています。\n\nDMAICは、データと統計、最適化を駆使して、問題解決とプロセス改善を行う体系的なアプローチです。パンデミックにおいては、まず「Define（定義）」フェーズで、社会が直面する課題を明確にします。次に「Measure（測定）」フェーズで、感染状況や医療資源に関するデータを収集します。続く「Analyze（分析）」フェーズで、収集したデータからウイルスの拡散パターンや影響を分析し、有用な情報を抽出します。そして「Improve（改善）」フェーズで、医療システムのレジリエンスを高めるための解決策を設計します。最後に「Control（管理）」フェーズで、感染拡大を抑制するための保健政策や管理計画、介入方法を策定し、継続的に監視・調整します。このサイクルを回すことで、パンデミックに対する迅速かつ効果的な対応が可能になります。",
+      "bodyGlossary": [
+        {
+          "term": "システムインフォマティクス",
+          "definition": "情報科学をシステム全体に応用する学問分野。",
+          "start": 30,
+          "end": 43
+        },
+        {
+          "term": "DMAIC",
+          "definition": "Define, Measure, Analyze, Improve, Controlの略。",
+          "start": 52,
+          "end": 57
+        },
+        {
+          "term": "レジリエンス",
+          "definition": "システムが困難な状況から回復する能力。",
+          "start": 283,
+          "end": 289
+        },
+        {
+          "term": "処方的アプローチ",
+          "definition": "データに基づき最適な行動を指示する手法。",
+          "start": 335,
+          "end": 343
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "システムインフォマティクス",
+          "definition": "情報科学をシステム全体に応用する学問分野。",
+          "start": 30,
+          "end": 43
+        },
+        {
+          "term": "DMAIC",
+          "definition": "Define, Measure, Analyze, Improve, Controlの略。",
+          "start": 52,
+          "end": 57
+        },
+        {
+          "term": "レジリエンス",
+          "definition": "システムが困難な状況から回復する能力。",
+          "start": 283,
+          "end": 289
+        },
+        {
+          "term": "処方的アプローチ",
+          "definition": "データに基づき最適な行動を指示する手法。",
+          "start": 335,
+          "end": 343
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 264,
+      "keyFigure": {
+        "imagePath": "/figures/2607.13914v1_results.png",
+        "page": 19,
+        "caption": "固定効果モデルにおける累積応答変数の調整済みR2の変動を示しています。",
+        "label": "Figure 13. The variations of adjusted 𝑹𝟐 for the fixed-effect models with response variables of (a) cumulative",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-17T22:48:39.503Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.13914v1_results.png",
+          "page": 19,
+          "caption": "固定効果モデルにおける累積応答変数の調整済みR2の変動を示しています。",
+          "label": "Figure 13. The variations of adjusted 𝑹𝟐 for the fixed-effect models with response variables of (a) cumulative",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-17T22:48:39.503Z"
+        },
+        {
+          "imagePath": "/figures/2607.13914v1_why.png",
+          "page": 7,
+          "caption": "リスクスコアリングシステムを確立する3つの異なる方法を示しています。",
+          "label": "Figure 3, risk scoring systems can be established in three different ways, namely point-",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-17T22:48:39.504Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.13766v1",
+      "title": "Design of policy digital twins incorporating multi-level agent based modelling",
+      "authors": [
+        "Matt Tipuric",
+        "Alejandro Beltran",
+        "Nick Malleson",
+        "Dani Arribas-Bel",
+        "David Wagg"
+      ],
+      "publishedAt": "2026-07-15T12:28:24Z",
+      "url": "https://arxiv.org/abs/2607.13766v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.13766v1.pdf",
+      "categories": [
+        "topic:policy",
+        "eess.SY",
+        "cs.CY"
+      ],
+      "abstract": "Digital twins are used across many industries to enable better decision making. However, while policy makers at all levels (including city, national and supranational scales) have expressed a desire to integrate digital twins into their workflows, this adoption has been slow to materialise. In this paper, we discuss the key issues associated with policy digital twins, and the ways in which they differ from, and are similar to, their counterparts in other areas. We describe how multi-level agent based modelling can be used within policy digital twins to include the effects of human behaviours on outcomes; an aspect that is often largely overlooked. We also describe how digital twins can be designed for policy use cases, and present as a case study the design of a policy digital twin incorporating multi-level agent based modelling to aid a UK city council (local authority) in delivering energy transition policy. After describing both the design method used and the resultant digital twin, we discuss the effectiveness of both, as well as how the ways in which different contexts might shape the future architecture of the digital twin.",
+      "summary": {
+        "gist": "デジタルツインは、物理システムの仮想レプリカであり、双方向のデータフローで物理世界と連携し、意思決定を支援します。製造業などで広く活用されていますが、都市、国家、超国家レベルの政策立案者への導入は遅れています。これは、政策対象システムが人間行動を複雑に含むため、従来のデジタルツインでは人間の影響を十分に考慮できないことが主な課題でした。",
+        "novelty": "従来のデジタルツインは、製造業など物理システム中心で、人間の行動が結果に与える影響を十分に考慮できていませんでした。そのため、都市計画やエネルギー政策といった、人々の選択が重要な政策分野への適用が遅れていました。 この研究は、政策デジタルツインに「多層エージェントベースモデル（MABM）」を統合することで、個人、地域、政府といった異なるレベルの人間の行動や相互作用をシミュレーションし、政策の効果をより現実的に予測する設計手法を提示しました。",
+        "method": "本研究は、政策デジタルツインに多層エージェントベースモデル（MABM）を統合する設計方法を提案しました。MABMは、個人（ミクロ）、都市（メソ）、政策立案者（マクロ）といった異なるレベルのエージェントの行動と相互作用をシミュレーションできます。英国の都市におけるエネルギー転換政策（ヒートポンプ導入）をケーススタディとして、気候データとMABMを統合したデジタルツインのデモンストレーターを開発し、低炭素インフラの導入目標設定を支援しました。",
+        "results": "本研究は、MABMを組み込んだ政策デジタルツインの設計と、英国の都市におけるエネルギー転換政策への適用可能性を示しました。これにより、政策立案者は、人間の行動が政策結果に与える影響を考慮した上で、より効果的な政策立案と実施が可能になることが示唆されました。",
+        "why": "政策デジタルツインが従来のデジタルツインと異なるのは、政策対象システムに人間が含まれる点です。人間は物理システムと複雑に相互作用するため、単なる物理的なレプリカでは不十分です。MABMを導入することで、個々の意思決定者（エージェント）の行動ルールを定義し、それらが相互作用することでシステム全体にどのような結果が「創発」するかをシミュレーションできます。これにより、政策が人々の行動にどう影響し、その結果として社会全体にどのような変化が起こるかを、より詳細かつ現実的に予測できるようになります。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / eess.SY）",
+      "field": "公共政策・ガバナンス",
+      "categoryL1": "adjacent",
+      "categoryL2": "policy-making",
+      "arxivPrimary": "eess.SY",
+      "titleJa": "政策デジタルツインの設計：多層エージェントベースモデリングの統合",
+      "catchTitle": "政策決定に「人の心」を宿すデジタルツイン",
+      "hook": "政策決定の現場で、「もしこうしたらどうなる？」という問いに、あなたはどれだけ確信を持って答えられますか？",
+      "background": "デジタルツインは、物理システムの仮想レプリカであり、双方向のデータフローで物理世界と連携し、意思決定を支援します。製造業などで広く活用されていますが、都市、国家、超国家レベルの政策立案者への導入は遅れています。これは、政策対象システムが人間行動を複雑に含むため、従来のデジタルツインでは人間の影響を十分に考慮できないことが主な課題でした。",
+      "quiz": {
+        "question": "この研究が提案する政策デジタルツインの最大の特徴は何ですか？",
+        "options": [
+          "物理システムのみを正確に再現すること",
+          "人間の行動を多層的にシミュレーションすること",
+          "リアルタイムの気象データのみを統合すること"
+        ],
+        "correctIndex": 1,
+        "explanation": "この研究の最大の特徴は、多層エージェントベースモデル（MABM）を統合することで、個人、都市、政策立案者といった異なるレベルの人間の行動や相互作用をシミュレーションし、政策の効果をより現実的に予測する点です。"
+      },
+      "limitations": "MABMは計算コストが高く、多くのパラメータを持つため、キャリブレーションと検証が難しいという課題があります。また、現実のシステムからの連続的なデータストリームとモデルを同期させることも困難です。",
+      "glossary": [
+        {
+          "term": "デジタルツイン",
+          "definition": "物理システムの仮想レプリカで、データで連携し、状態を同期。"
+        },
+        {
+          "term": "多層エージェントベースモデル",
+          "definition": "異なる階層の個体（エージェント）の行動をシミュレート。"
+        },
+        {
+          "term": "エージェント",
+          "definition": "シミュレーション内で自律的に行動する仮想の個体。"
+        },
+        {
+          "term": "エネルギー転換政策",
+          "definition": "化石燃料から再生可能エネルギーへの移行を促す政策。"
+        },
+        {
+          "term": "ヒートポンプ",
+          "definition": "熱を移動させて冷暖房や給湯を行う装置。"
+        },
+        {
+          "term": "デモンストレーター",
+          "definition": "技術や製品の機能を示すための試作システム。"
+        },
+        {
+          "term": "創発",
+          "definition": "個々の要素の相互作用から全体として新たな性質が現れること。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "人間の行動を考慮した多層エージェントベースモデルを組み込むことで、政策決定を支援するデジタルツインの設計方法を提案。",
+      "noveltyContrast": {
+        "before": "従来のデジタルツインは、製造業など物理システム中心で、人間の行動が結果に与える影響を十分に考慮できていませんでした。そのため、都市計画やエネルギー政策といった、人々の選択が重要な政策分野への適用が遅れていました。",
+        "after": "この研究は、政策デジタルツインに「多層エージェントベースモデル（MABM）」を統合することで、個人、地域、政府といった異なるレベルの人間の行動や相互作用をシミュレーションし、政策の効果をより現実的に予測する設計手法を提示しました。"
+      },
+      "analogy": {
+        "title": "畑の土壌診断と品種改良",
+        "body": "これは、まるで畑の土壌診断に、農家の経験や地域の気候変動予測、さらには市場の需要動向までを組み込むようなものです。従来の土壌診断が土の成分だけを見ていたとすれば、この研究は、そこに「どんな品種を植えれば、どんな育て方をすれば、最終的にどれだけの収穫が得られ、市場でどう評価されるか」という、農家や消費者の行動、そして天候の変化までを多角的に予測する新たな診断システムを導入するようなもの。単なる土壌のデータだけでなく、人の営みや環境の変化まで見据えることで、より確実な収穫計画を立てられるようになります。",
+        "domain": "farming"
+      },
+      "whyYouCare": "あなたの会社が新規事業を計画する際、市場や顧客の反応を予測するのは至難の業です。この研究で示された「人間行動を組み込むデジタルツイン」は、政策だけでなく、ビジネス戦略にも応用できます。例えば、新製品の価格設定やプロモーションが、消費者の購買行動や競合他社の反応にどう影響するかをシミュレーションし、より成功確率の高い戦略を立てられるようになるでしょう。社会全体で見れば、災害時の避難計画や感染症対策など、人々の行動が結果を大きく左右する分野で、より実効性の高い施策をデザインする上で不可欠なツールとなります。",
+      "takeawayTalk": "政策のデジタルツインは、人の行動を予測して、より良い未来を作るんだって！",
+      "bodyText": "本研究は、政策デジタルツインに多層エージェントベースモデル（MABM）を統合する設計方法を提案しました。MABMは、個人（ミクロ）、都市（メソ）、政策立案者（マクロ）といった異なるレベルのエージェントの行動と相互作用をシミュレーションできます。英国の都市におけるエネルギー転換政策（ヒートポンプ導入）をケーススタディとして、気候データとMABMを統合したデジタルツインのデモンストレーターを開発し、低炭素インフラの導入目標設定を支援しました。\n\n政策デジタルツインが従来のデジタルツインと異なるのは、政策対象システムに人間が含まれる点です。人間は物理システムと複雑に相互作用するため、単なる物理的なレプリカでは不十分です。MABMを導入することで、個々の意思決定者（エージェント）の行動ルールを定義し、それらが相互作用することでシステム全体にどのような結果が「創発」するかをシミュレーションできます。これにより、政策が人々の行動にどう影響し、その結果として社会全体にどのような変化が起こるかを、より詳細かつ現実的に予測できるようになります。",
+      "bodyGlossary": [
+        {
+          "term": "デジタルツイン",
+          "definition": "物理システムの仮想レプリカで、データで連携し、状態を同期。",
+          "start": 7,
+          "end": 14
+        },
+        {
+          "term": "多層エージェントベースモデル",
+          "definition": "異なる階層の個体（エージェント）の行動をシミュレート。",
+          "start": 15,
+          "end": 29
+        },
+        {
+          "term": "エネルギー転換政策",
+          "definition": "化石燃料から再生可能エネルギーへの移行を促す政策。",
+          "start": 131,
+          "end": 140
+        },
+        {
+          "term": "ヒートポンプ",
+          "definition": "熱を移動させて冷暖房や給湯を行う装置。",
+          "start": 141,
+          "end": 147
+        },
+        {
+          "term": "デモンストレーター",
+          "definition": "技術や製品の機能を示すための試作システム。",
+          "start": 185,
+          "end": 194
+        },
+        {
+          "term": "創発",
+          "definition": "個々の要素の相互作用から全体として新たな性質が現れること。",
+          "start": 380,
+          "end": 382
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "デジタルツイン",
+          "definition": "物理システムの仮想レプリカで、データで連携し、状態を同期。",
+          "start": 7,
+          "end": 14
+        },
+        {
+          "term": "多層エージェントベースモデル",
+          "definition": "異なる階層の個体（エージェント）の行動をシミュレート。",
+          "start": 15,
+          "end": 29
+        },
+        {
+          "term": "エネルギー転換政策",
+          "definition": "化石燃料から再生可能エネルギーへの移行を促す政策。",
+          "start": 131,
+          "end": 140
+        },
+        {
+          "term": "ヒートポンプ",
+          "definition": "熱を移動させて冷暖房や給湯を行う装置。",
+          "start": 141,
+          "end": 147
+        },
+        {
+          "term": "デモンストレーター",
+          "definition": "技術や製品の機能を示すための試作システム。",
+          "start": 185,
+          "end": 194
+        },
+        {
+          "term": "創発",
+          "definition": "個々の要素の相互作用から全体として新たな性質が現れること。",
+          "start": 380,
+          "end": 382
+        }
+      ],
+      "agriEconRelevance": "",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 221,
+      "keyFigure": {
+        "imagePath": "/figures/2607.13766v1_results.png",
+        "page": 14,
+        "caption": "SERLのデータと比較した、モデル化された1日の電力消費プロファイルを示しています。",
+        "label": "Figure 8: Modelled within-day profiles against the SERL 10–90 % envelope, electricity across all",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-17T22:48:42.306Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.13766v1_results.png",
+          "page": 14,
+          "caption": "SERLのデータと比較した、モデル化された1日の電力消費プロファイルを示しています。",
+          "label": "Figure 8: Modelled within-day profiles against the SERL 10–90 % envelope, electricity across all",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-17T22:48:42.306Z"
+        },
+        {
+          "imagePath": "/figures/2607.13766v1_why.png",
+          "page": 10,
+          "caption": "MABMとSPDTがモジュール式かつ並行して開発された一般的なアプローチを示しています。",
+          "label": "Figure 4. As a general approach, the MABM and SPDT were developed modularly and in parallel, with",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-17T22:48:42.306Z"
+        }
+      ]
+    },
+    {
+      "id": "2607.14805v1",
+      "title": "RACiMo: Red Ambiental Ciudadana de Monitoreo: A Student-Centred Citizen Science Network for Environmental Monitoring, Data Literacy, and Climate Awareness in Colombia",
+      "authors": [
+        "L. V. Flórez",
+        "G. Sánchez-Ariza",
+        "N. Mantilla-Molina",
+        "J. Pisco-Guabave",
+        "A. Martínez-Méndez",
+        "A. Serrano-Mendoza",
+        "Luis A. Núñez",
+        "H. Asorey",
+        "L. M. Becerra",
+        "J. Grisales-Casadiegos",
+        "A. Núñez-Castiñeyra",
+        "J. Peña-Rodríguez",
+        "J. Salamanca-Coy",
+        "C. Sarmiento-Cano",
+        "D. Sierra-Porta"
+      ],
+      "publishedAt": "2026-07-16T10:21:06Z",
+      "url": "https://arxiv.org/abs/2607.14805v1",
+      "pdfUrl": "https://arxiv.org/pdf/2607.14805v1.pdf",
+      "categories": [
+        "topic:humanities",
+        "physics.soc-ph"
+      ],
+      "abstract": "This paper traces the evolution of Red Ambiental Ciudadana de Monitoreo (RACiMo), a citizen-science and environmental-education initiative developed by Universidad Industrial de Santander in Colombia. RACiMo has evolved through successive editions from a school-based open-hardware programme into a regional environmental monitoring network that integrates meteorological and air-quality data, open-data practices, and student-centred research. The project's central objective is to train citizens, especially secondary-school students, teachers, and university mentors, to record, curate, analyse, interpret, and communicate climate and air-quality data relevant to their local contexts. RACiMo has involved approximately 515 students from urban, metropolitan, rural, and páramo communities in Santander, Colombia. It has progressed from Arduino-Raspberry Pi stations assembled through a Do-It-With-Others approach to low-maintenance commercial instruments and a multi-municipality network of professional weather and air-quality stations. Its pedagogy has shifted from learning by building sensors to learning by analysing real environmental datasets through Python, Jupyter notebooks, visualisation tools, and student-led research projects. The current RACiMo-Orquídeas implementation expands the network across five municipalities, emphasises local environmental issues such as freight traffic and industrial activity, and provides public access to data through repositories and interactive tools. The paper discusses the trade-offs between openness, educational value, reliability, data quality, sustainability, and scalability. It argues that citizen environmental monitoring can strengthen climate awareness and adaptation when local communities are trained not only to collect data, but also to understand and use it critically.",
+      "summary": {
+        "gist": "気候変動は、都市、郊外、農村コミュニティの生活環境を変化させており、気温や降水量の変化だけでなく、大気質、公衆衛生、水資源、農業などにも影響を及ぼしています。特に劣悪な大気質は地球温暖化のリスクを増幅させ、公衆衛生と持続可能性の課題となっています。これまで環境モニタリングは公的機関の役割でしたが、その空間的・時間的カバー範囲は局所的な現象を捉えるには不十分でした。データの有用性は、センサーの存在だけでなく、コミュニティがデータを理解し、活用する能力にかかっています。",
+        "novelty": "これまでの環境モニタリングは、専門機関が設置したセンサーネットワークに依存しており、地方や郊外、農村地域といった局所的な現象を捉えるには不十分でした。また、データが公開されても、一般市民がそれを理解し、活用する能力が不足しているという課題がありました。 この研究では、学生がセンサーの組み立てからデータ収集、そしてPythonやJupyter Notebooksを使った分析・解釈までを実践する市民科学ネットワーク「RACiMo」を構築。地域に根ざした環境課題解決に貢献し、市民のデータリテラシーと気候変動への適応能力を向上させました。",
+        "method": "RACiMoは、コロンビアのサンタンデール県で、学生を中心に環境モニタリングと環境教育を組み合わせた市民科学ネットワークとして展開されました。初期は学生がArduinoやRaspberry Piを使ったセンサーを組み立てる「Do-It-With-Others (DIWO)」アプローチから始まり、徐々に低メンテナンスの商用機器へと移行しました。教育の焦点も、センサーの構築から、PythonやJupyter Notebooks、可視化ツールを用いた実際の環境データ分析へと変化。都市部から農村部まで、多様な地域で気象データや大気質データを収集し、オープンデータとして公開。学生が主導する研究プロジェクトを通じて、地域の環境課題を特定し、解決策を検討しました。",
+        "results": "RACiMoは、コロンビアのサンタンデール県で、都市、郊外、農村、高山地域を含む約515名の学生を巻き込みました。このプロジェクトは、コミュニティがセンサーを構築する初期段階から、より堅牢な商用モニタリングデバイスへの技術的進化を遂げました。教育面では、センサー構築による学習から、実際の環境データ分析による学習へと移行し、地域的にはブカラマンガの学校ベースの活動から、都市と農村コミュニティを含む広範なネットワークへと発展しました。これにより、市民が環境データを収集するだけでなく、それを理解し、批判的に使用する能力を育成することで、気候変動への意識向上と適応能力強化に貢献できることが示されました。",
+        "why": "このプロジェクトの成功は、単にデータを収集するだけでなく、市民、特に学生がデータの生成、整理、分析、解釈、伝達という「環境データサイクル」全体に参加する学習環境を提供したことにあります。これにより、参加者はデータがどこから来るのか、その限界は何か、そして気候変動への意識向上と適応のためにどのようにデータを使うかを深く理解できるようになります。技術の進化と教育アプローチの適応により、参加者の関与を維持しつつ、データの信頼性と持続可能性を高めることが可能になりました。"
+      },
+      "source": "arxiv",
+      "journal": "arXiv（プレプリント / physics.soc-ph）",
+      "field": "歴史・人文・社会",
+      "categoryL1": "serendipity",
+      "categoryL2": "environmental-education",
+      "arxivPrimary": "physics.soc-ph",
+      "titleJa": "RACiMo: 環境モニタリング、データリテラシー、気候変動意識のための学生中心型市民科学ネットワーク",
+      "catchTitle": "市民が「気候変動データ」を使いこなす",
+      "hook": "あなたの住む地域の気候変動や大気汚染のデータ、どうやって手に入れていますか？そして、そのデータを本当に理解し、活用できていますか？",
+      "background": "気候変動は、都市、郊外、農村コミュニティの生活環境を変化させており、気温や降水量の変化だけでなく、大気質、公衆衛生、水資源、農業などにも影響を及ぼしています。特に劣悪な大気質は地球温暖化のリスクを増幅させ、公衆衛生と持続可能性の課題となっています。これまで環境モニタリングは公的機関の役割でしたが、その空間的・時間的カバー範囲は局所的な現象を捉えるには不十分でした。データの有用性は、センサーの存在だけでなく、コミュニティがデータを理解し、活用する能力にかかっています。",
+      "limitations": "",
+      "glossary": [
+        {
+          "term": "市民科学",
+          "definition": "専門家ではない一般市民が科学研究に参加する活動。"
+        },
+        {
+          "term": "Arduino",
+          "definition": "電子工作用のオープンソースのマイクロコントローラ。"
+        },
+        {
+          "term": "Raspberry Pi",
+          "definition": "教育用に開発された小型のシングルボードコンピュータ。"
+        },
+        {
+          "term": "DIWO",
+          "definition": "「Do-It-With-Others」の略で、皆で協力して行うこと。"
+        },
+        {
+          "term": "Jupyter Notebooks",
+          "definition": "コード、テキスト、図などを統合できるWebベースの環境。"
+        },
+        {
+          "term": "データサイクル",
+          "definition": "データの収集から分析、活用までの一連のプロセス。"
+        },
+        {
+          "term": "データリテラシー",
+          "definition": "データを理解し、活用する能力。"
+        }
+      ],
+      "useArticleV2": true,
+      "oneLiner": "コロンビアの学生たちが、環境データの収集から分析、活用までを実践する市民科学ネットワークを構築し、気候変動への適応力を高めています。",
+      "noveltyContrast": {
+        "before": "これまでの環境モニタリングは、専門機関が設置したセンサーネットワークに依存しており、地方や郊外、農村地域といった局所的な現象を捉えるには不十分でした。また、データが公開されても、一般市民がそれを理解し、活用する能力が不足しているという課題がありました。",
+        "after": "この研究では、学生がセンサーの組み立てからデータ収集、そしてPythonやJupyter Notebooksを使った分析・解釈までを実践する市民科学ネットワーク「RACiMo」を構築。地域に根ざした環境課題解決に貢献し、市民のデータリテラシーと気候変動への適応能力を向上させました。"
+      },
+      "analogy": {
+        "title": "地域の気候を読み解く「天気図教室」",
+        "body": "これは、まるで地域の農家や住民が、自分たちの畑の天気や土壌の状態を測るだけでなく、そのデータをみんなで集めて「地域の天気図」を作り、未来の作付け計画や災害対策に役立てる「天気図教室」のようなものです。単に雨量を測るだけでなく、なぜその雨が降るのか、それが作物にどう影響するかまでを理解し、次の収穫に活かす知恵をみんなで育むイメージです。",
+        "domain": "farming"
+      },
+      "whyYouCare": "この研究は、気候変動や環境問題が身近な脅威となる現代において、私たち一人ひとりがどのように問題解決に貢献できるかを示しています。単にニュースで情報を得るだけでなく、自分の地域のデータを理解し、それを基に具体的な行動を起こす力を養うことは、持続可能な社会を築く上で不可欠です。あなたの子供たちが、将来の環境問題を「自分ごと」として捉え、解決策を考えられるようになるための教育モデルとしても、非常に示唆に富んでいます。",
+      "takeawayTalk": "学生が地域の環境データを分析し、気候変動に適応する力を育むんだって！",
+      "bodyText": "RACiMoは、コロンビアのサンタンデール県で、学生を中心に環境モニタリングと環境教育を組み合わせた市民科学ネットワークとして展開されました。初期は学生がArduinoやRaspberry Piを使ったセンサーを組み立てる「Do-It-With-Others (DIWO)」アプローチから始まり、徐々に低メンテナンスの商用機器へと移行しました。教育の焦点も、センサーの構築から、PythonやJupyter Notebooks、可視化ツールを用いた実際の環境データ分析へと変化。都市部から農村部まで、多様な地域で気象データや大気質データを収集し、オープンデータとして公開。学生が主導する研究プロジェクトを通じて、地域の環境課題を特定し、解決策を検討しました。\n\nこのプロジェクトの成功は、単にデータを収集するだけでなく、市民、特に学生がデータの生成、整理、分析、解釈、伝達という「環境データサイクル」全体に参加する学習環境を提供したことにあります。これにより、参加者はデータがどこから来るのか、その限界は何か、そして気候変動への意識向上と適応のためにどのようにデータを使うかを深く理解できるようになります。技術の進化と教育アプローチの適応により、参加者の関与を維持しつつ、データの信頼性と持続可能性を高めることが可能になりました。",
+      "bodyGlossary": [
+        {
+          "term": "市民科学",
+          "definition": "専門家ではない一般市民が科学研究に参加する活動。",
+          "start": 50,
+          "end": 54
+        },
+        {
+          "term": "Arduino",
+          "definition": "電子工作用のオープンソースのマイクロコントローラ。",
+          "start": 77,
+          "end": 84
+        },
+        {
+          "term": "Raspberry Pi",
+          "definition": "教育用に開発された小型のシングルボードコンピュータ。",
+          "start": 85,
+          "end": 97
+        },
+        {
+          "term": "DIWO",
+          "definition": "「Do-It-With-Others」の略で、皆で協力して行うこと。",
+          "start": 131,
+          "end": 135
+        },
+        {
+          "term": "Jupyter Notebooks",
+          "definition": "コード、テキスト、図などを統合できるWebベースの環境。",
+          "start": 196,
+          "end": 213
+        },
+        {
+          "term": "データサイクル",
+          "definition": "データの収集から分析、活用までの一連のプロセス。",
+          "start": 392,
+          "end": 399
+        }
+      ],
+      "glossarySpans": [
+        {
+          "term": "市民科学",
+          "definition": "専門家ではない一般市民が科学研究に参加する活動。",
+          "start": 50,
+          "end": 54
+        },
+        {
+          "term": "Arduino",
+          "definition": "電子工作用のオープンソースのマイクロコントローラ。",
+          "start": 77,
+          "end": 84
+        },
+        {
+          "term": "Raspberry Pi",
+          "definition": "教育用に開発された小型のシングルボードコンピュータ。",
+          "start": 85,
+          "end": 97
+        },
+        {
+          "term": "DIWO",
+          "definition": "「Do-It-With-Others」の略で、皆で協力して行うこと。",
+          "start": 131,
+          "end": 135
+        },
+        {
+          "term": "Jupyter Notebooks",
+          "definition": "コード、テキスト、図などを統合できるWebベースの環境。",
+          "start": 196,
+          "end": 213
+        },
+        {
+          "term": "データサイクル",
+          "definition": "データの収集から分析、活用までの一連のプロセス。",
+          "start": 392,
+          "end": 399
+        }
+      ],
+      "agriEconRelevance": "この市民科学モデルは、農業経済分野にも応用可能です。例えば、農家や地域住民が協力して気象データ、土壌データ、病害虫発生データなどを収集・分析し、共有することで、より精密な農業経営や気候変動適応策を立案できます。データに基づく意思決定能力の向上は、収穫量の安定化やリスク軽減に繋がり、地域農業の持続可能性を高めるでしょう。",
+      "analogyNeedsReview": false,
+      "readingTimeSec": 262,
+      "keyFigure": {
+        "imagePath": "/figures/2607.14805v1_results.png",
+        "page": 11,
+        "caption": "ブカラマンガ都市圏の高校におけるUVA（環境モニタリングユニット）の設置場所を示しています。",
+        "label": "Figure 2. (Left) UVA locations at high schools in the metropolitan area of Bucaramanga. Note. From top to bottom:",
+        "source": "pdf-image",
+        "purpose": "results",
+        "extractedAt": "2026-07-17T22:48:45.049Z"
+      },
+      "keyFigures": [
+        {
+          "imagePath": "/figures/2607.14805v1_results.png",
+          "page": 11,
+          "caption": "ブカラマンガ都市圏の高校におけるUVA（環境モニタリングユニット）の設置場所を示しています。",
+          "label": "Figure 2. (Left) UVA locations at high schools in the metropolitan area of Bucaramanga. Note. From top to bottom:",
+          "source": "pdf-image",
+          "purpose": "results",
+          "extractedAt": "2026-07-17T22:48:45.049Z"
+        },
+        {
+          "imagePath": "/figures/2607.14805v1_why.png",
+          "page": 17,
+          "caption": "RACiMo-Orquídeas版における学生主導プロジェクトの例を示しています。",
+          "label": "Figure 3. Examples from student-driven projects from the RACiMo-Orquídeas edition, representing different",
+          "source": "pdf-image",
+          "purpose": "why",
+          "extractedAt": "2026-07-17T22:48:45.049Z"
+        }
+      ]
+    }
+  ]
+}

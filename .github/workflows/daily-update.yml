@@ -1,9 +1,10 @@
 name: Daily Paper Update
 
 on:
-  schedule:
-    # 毎朝 7:00 JST = 22:00 UTC（前日）
-    - cron: "0 22 * * *"
+  # 一時停止: 自動実行を止める（再開するときは schedule のコメントを外して push）
+  # schedule:
+  #   # 毎朝 7:00 JST = 22:00 UTC（前日）
+  #   - cron: "0 22 * * *"
   workflow_dispatch:
 
 permissions:
